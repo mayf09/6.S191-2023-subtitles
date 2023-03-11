@@ -1192,7 +1192,7 @@ of this amazing advances possible.|
 00:06:13,730 --> 00:06:15,100
 0,365 365,605 605,800 800,1100 1100,1370
 So with that, hopefully now
-有了这些，希望你们现在都对这堂课所教授的内容感到超级兴奋。我想现在基本上从退后一步开始，介绍一些我到目前为止一直在深度学习，人工智能方面抛出的术语。这些东西到底是什么意思？
+有了这些，希望你们现在对这门课所教的内容感到很兴奋，
 
 214
 00:06:15,100 --> 00:06:17,200
@@ -1202,12 +1202,14 @@ you're all super excited about
 215
 00:06:17,200 --> 00:06:18,265
 0,195 195,405 405,630 630,840 840,1065
-what this class will teach.
+what this class will teach,|
+|
 
 216
 00:06:18,265 --> 00:06:19,920
 0,330 330,600 600,765 765,1055 1255,1655
-{And,I,want - -} to basically
+{and,I,want - -} to basically
+我想现在从退后一步开始，
 
 217
 00:06:19,970 --> 00:06:21,220
@@ -1217,12 +1219,14 @@ now just start by taking
 218
 00:06:21,220 --> 00:06:23,220
 0,165 165,330 330,620 1060,1395 1395,2000
-a step back and introducing
+a step back| and introducing
+|介绍一些术语，
 
 219
 00:06:23,270 --> 00:06:24,955
 0,275 275,425 425,695 695,1520 1520,1685
-some of these terminologies that
+some of these terminologies,| that
+|到目前为止我抛出的，
 
 220
 00:06:24,955 --> 00:06:25,750
@@ -1232,24 +1236,26 @@ I've kind of been throwing
 221
 00:06:25,750 --> 00:06:27,295
 0,380 430,735 735,1035 1035,1335 1335,1545
-around so far with deep
+around so far,| with deep
+|深度学习，人工智能，
 
 222
 00:06:27,295 --> 00:06:29,050
 0,305 625,990 990,1355 1375,1635 1635,1755
-learning, artificial {intelligence.,What -} do
+learning, artificial intelligence,| what do
+|这些东西是什么意思。
 
 223
 00:06:29,050 --> 00:06:30,600
 0,150 150,435 435,720 720,1010
-these things actually mean?|
+these things actually mean.|
 |
 
 224
 00:06:30,800 --> 00:06:31,840
 0,380 380,665 665,815 815,920 920,1040
 So first of all, I
-所以首先，我想花点时间。
+所以首先，我想花点时间，
 
 225
 00:06:31,840 --> 00:06:33,520
@@ -1259,24 +1265,26 @@ want to maybe just take
 226
 00:06:33,520 --> 00:06:35,300
 0,150 150,440 610,1010
-a second to.|
+a second to,|
 |
 
 227
 00:06:35,430 --> 00:06:36,400
 0,275 275,380 380,515 515,695 695,970
-Speak a little bit about
-谈一谈智力以及智力的核心含义。所以对我来说，智能仅仅是一种处理信息的能力，这样我们就可以用它来指导我们未来的决定或采取的行动。
+speak a little bit about
+说一下智能，
 
 228
 00:06:36,420 --> 00:06:38,470
 0,400 420,680 680,920 920,1300 1650,2050
-intelligence and what intelligence means
+intelligence| and what intelligence means
+|以及智能的核心含义。
 
 229
 00:06:38,730 --> 00:06:39,875
 0,245 245,425 425,710 710,980 980,1145
-at its core. {So,to -}
+at its core.| {So,to -}
+|对我来说，智能是一种处理信息的能力，
 
 230
 00:06:39,875 --> 00:06:42,260
@@ -1286,7 +1294,8 @@ me, intelligence is simply the
 231
 00:06:42,260 --> 00:06:44,765
 0,350 430,750 750,1070 1300,1700 2200,2505
-ability to process information such
+ability to process information,| such
+|这样我们就可以用它来指导我们未来的决定或采取的行动，
 
 232
 00:06:44,765 --> 00:06:45,560
@@ -1301,14 +1310,14 @@ to inform some future decision
 234
 00:06:47,640 --> 00:06:49,120
 0,290 290,580 720,995 995,1175 1175,1480
-or action that we take.|
+or action that we take,|
 |
 
 235
 00:06:49,810 --> 00:06:51,405
 0,400 420,695 695,875 875,1180 1200,1595
-Now, the field of artificial
-现在，人工智能领域就是我们构建算法的能力，人工算法可以准确地完成这一过程，并为未来的决策提供信息。现在机器学习只是人工智能的一个子集，它特别关注我们如何建造一台机器来教一台机器如何根据一些经验或数据来做到这一点，例如。现在，深度学习更进一步，它是机器学习的一个子集，它明确地关注什么是所谓的神经网络，以及我们如何构建可以从数据中提取特征的神经网络。这些基本上就是您可以认为的在数据中出现的模式，这样它也可以学习完成这些任务。
+now, the field of artificial
+现在，人工智能领域就是我们构建算法的能力，
 
 236
 00:06:51,405 --> 00:06:53,430
@@ -1318,22 +1327,26 @@ intelligence is simply the ability
 237
 00:06:53,430 --> 00:06:55,250
 0,195 195,300 300,450 450,710 1330,1820
-for us to build algorithms,
+for us to build algorithms,|
+|
 
 238
 00:06:55,480 --> 00:06:57,090
 0,400 510,1025 1025,1295 1295,1430 1430,1610
 artificial algorithms that can do
+人工算法，可以完成这个，
 
 239
 00:06:57,090 --> 00:06:59,475
 0,270 270,620 820,1220 1390,1790 2050,2385
-exactly this process information to
+exactly this,| process information, to
+|处理信息，指导未来的决策。
 
 240
 00:06:59,475 --> 00:07:01,940
 0,285 285,540 540,845 985,1385 2065,2465
-inform some future decision. {Now,,machine
+inform some future decision.| {Now\,,machine
+|机器学习是人工智能的一个子集，
 
 241
 00:07:01,960 --> 00:07:03,195
@@ -1343,22 +1356,25 @@ inform some future decision. {Now,,machine
 242
 00:07:03,195 --> 00:07:04,700
 0,315 315,525 525,780 780,960 960,1505
-subset of AI, which focuses
+subset of AI,| which focuses
+|它特别关注，
 
 243
 00:07:04,900 --> 00:07:06,380
 0,400 510,845 845,1055 1055,1205 1205,1480
-specifically on how we can
+specifically on,| how we can
+|我们如何构建一台机器或教一台机器，
 
 244
 00:07:06,490 --> 00:07:09,870
 0,350 350,700 870,1270 1740,2140 3060,3380
-build a machine to teach
+build a machine to {or,teach}
 
 245
 00:07:09,870 --> 00:07:10,965
 0,240 240,525 525,780 780,945 945,1095
-a machine how to do
+a machine,| how to do
+|如何根据一些经验或数据来做到这一点。
 
 246
 00:07:10,965 --> 00:07:12,920
@@ -1368,7 +1384,8 @@ this from some experiences or
 247
 00:07:13,030 --> 00:07:15,405
 0,400 480,815 815,1150 1740,2105 2105,2375
-data, for {example.,Now -} deep
+data, for example.| Now, deep
+|现在，深度学习更进一步，
 
 248
 00:07:15,405 --> 00:07:16,800
@@ -1378,12 +1395,14 @@ learning goes one step beyond
 249
 00:07:16,800 --> 00:07:18,105
 0,320 400,675 675,810 810,945 945,1305
-this and is a subset
+this| and is a subset
+|它是机器学习的一个子集，
 
 250
 00:07:18,105 --> 00:07:19,640
 0,225 225,450 450,690 690,960 960,1535
-of machine learning which focuses
+of machine learning,| which focuses
+|它明确地关注所谓的神经网络，
 
 251
 00:07:19,720 --> 00:07:20,775
@@ -1393,22 +1412,25 @@ explicitly on what are called
 252
 00:07:20,775 --> 00:07:21,900
 0,270 270,545 565,840 840,990 990,1125
-neural networks and how we
+neural networks| and how we
+|以及我们如何构建神经网络，
 
 253
 00:07:21,900 --> 00:07:23,325
 0,105 105,240 240,510 510,770 1120,1425
-can build neural networks that
+can build neural networks,| that
+|可以从数据中提取特征，
 
 254
 00:07:23,325 --> 00:07:24,690
 0,285 285,630 630,990 990,1245 1245,1365
-can extract features in {the,data.
+can extract features in {the,data
 
 255
 00:07:24,690 --> 00:07:25,935
 0,255 255,510 510,675 675,980 1000,1245
--} These are basically what
+-},| these are basically what
+|这些你可以认为是在数据中出现的模式，
 
 256
 00:07:25,935 --> 00:07:26,580
@@ -1418,12 +1440,13 @@ you can think of as
 257
 00:07:26,580 --> 00:07:28,230
 0,350 730,1050 1050,1245 1245,1455 1455,1650
-patterns that occur within the
+patterns, that occur within the
 
 258
 00:07:28,230 --> 00:07:29,205
 0,260 340,600 600,720 720,840 840,975
-data so that it can
+data,| so that it can
+|这样它也可以学习完成这些任务。
 
 259
 00:07:29,205 --> 00:07:30,440
@@ -1440,32 +1463,36 @@ as well.|
 00:07:32,700 --> 00:07:34,450
 0,400 570,995 995,1250 1250,1475 1475,1750
 Now that's exactly what this
-这就是这门课的真正意义所在。在它的核心，我们将尝试教你，并给你基本的理解，以及我们如何建立和教计算机学习任务，许多不同类型的任务直接从原始数据。这就是这门课最简单的形式。我们将通过讲课为你们两位在技术方面提供一个非常坚实的基础，整个课程分两部分进行。第一节课，第二节课，每节课大约一个小时。
+这就是这门课核心的真正意义所在，
 
 262
 00:07:34,620 --> 00:07:35,960
 0,320 320,530 530,755 755,1025 1025,1340
-class is really all about.
+class is really all about
 
 263
 00:07:35,960 --> 00:07:37,265
 0,225 225,420 420,770 850,1185 1185,1305
-{At,its -} core, we're going
+{at,its -} core,| we're going
+|我们将尝试教你，
 
 264
 00:07:37,265 --> 00:07:37,940
 0,135 135,240 240,375 375,555 555,675
-to try and teach you
+to try and teach you|
+|
 
 265
 00:07:37,940 --> 00:07:38,770
 0,90 90,195 195,285 285,390 390,830
 and give you the foundational
+给你基本的理解，
 
 266
 00:07:38,940 --> 00:07:40,490
 0,400 630,950 950,1175 1175,1370 1370,1550
-understanding and how we can
+understanding| and how we can
+|我们如何建立和教计算机学习任务，
 
 267
 00:07:40,490 --> 00:07:43,385
@@ -1475,17 +1502,20 @@ build and teach computers to
 268
 00:07:43,385 --> 00:07:45,140
 0,240 240,605 955,1275 1275,1530 1530,1755
-learn tasks, many different types
+learn tasks,| many different types
+|许多不同类型的任务，
 
 269
 00:07:45,140 --> 00:07:47,135
 0,210 210,530 910,1305 1305,1695 1695,1995
-of tasks directly from raw
+of tasks,| directly from raw
+|直接从原始数据，
 
 270
 00:07:47,135 --> 00:07:48,530
 0,305 565,825 825,1050 1050,1200 1200,1395
-{data.,And -} that's really what
+data,| and that's really what
+|这就是这门课最简单的形式。
 
 271
 00:07:48,530 --> 00:07:49,685
@@ -1495,27 +1525,31 @@ this class boils down to
 272
 00:07:49,685 --> 00:07:51,640
 0,245 415,720 720,1025 1225,1590 1590,1955
-at its most {simple,form. -}
+at its most {simple,form -}.|
+|
 
 273
 00:07:52,140 --> 00:07:53,240
 0,260 260,470 470,695 695,890 890,1100
 And we'll provide a very
+我们将为你提供一个非常坚实的基础，
 
 274
 00:07:53,240 --> 00:07:55,085
 0,285 285,620 880,1140 1140,1400 1540,1845
-solid foundation for you both
+solid foundation for you| both
+|通过课程在技术方面，
 
 275
 00:07:55,085 --> 00:07:56,780
 0,195 195,375 375,665 715,1115 1405,1695
-on the technical side through
+on the technical side, through
 
 276
 00:07:56,780 --> 00:07:58,490
 0,150 150,650 1030,1305 1305,1455 1455,1710
-the lectures, which will happen
+the lectures,| which will happen
+|整个课程分两部分进行，
 
 277
 00:07:58,490 --> 00:07:59,915
@@ -1525,39 +1559,44 @@ in two parts {throughout,the -}
 278
 00:07:59,915 --> 00:08:00,950
 0,240 240,480 480,660 660,885 885,1035
-class. The first lecture, in
+class,| the first lecture and
+|第一节课，第二节课，
 
 279
 00:08:00,950 --> 00:08:02,105
 0,105 105,315 315,645 645,945 945,1155
-the second lecture, each one
+the second lecture,| each one
+|每节课大约一个小时，
 
 280
 00:08:02,105 --> 00:08:03,460
 0,210 210,375 375,585 585,935
-about one hour long.|
+about one hour long,|
 |
 
 281
 00:08:03,500 --> 00:08:05,005
 0,380 380,695 695,905 905,1175 1175,1505
-Followed by a software lab
-紧随其后的是软件实验室，它将试图加强我们在课程的技术部分中所涵盖的许多内容，你知道，给你实践这些想法的经验。所以这个项目分为两部分，技术讲座和软件实验室。我们今年有几个具体的新更新，特别是在后来的许多课程中。第一堂课将讲述深度学习的基础，这将是现在将要进行的。
+followed by a software lab,|
+随后是软件实验，|
 
 282
 00:08:05,005 --> 00:08:06,265
 0,225 225,420 420,725 745,1080 1080,1260
 which will immediately follow the
+紧跟在课程之后，
 
 283
 00:08:06,265 --> 00:08:07,675
 0,485 685,960 960,1125 1125,1290 1290,1410
-lectures, which will try to
+lectures,| which will try to
+|它将试图加强，
 
 284
 00:08:07,675 --> 00:08:08,605
 0,435 435,600 600,705 705,810 810,930
-reinforce a lot of what
+reinforce| a lot of what
+|很多我们在课程的技术部分中所涉及的内容，
 
 285
 00:08:08,605 --> 00:08:10,495
@@ -1572,7 +1611,8 @@ the technical part of the
 287
 00:08:11,725 --> 00:08:13,810
 0,275 775,1175 1495,1740 1740,1905 1905,2085
-class and you know, give
+class,| and you know give
+|给你实践这些想法的经验。
 
 288
 00:08:13,810 --> 00:08:15,280
@@ -1582,7 +1622,8 @@ you hands on experience implementing
 289
 00:08:15,280 --> 00:08:17,220
 0,255 255,650 1210,1455 1455,1620 1620,1940
-those ideas. {So,this -} program
+those ideas.| {So,this -} program
+|所以这个项目分为两部分，
 
 290
 00:08:17,570 --> 00:08:19,150
@@ -1592,12 +1633,14 @@ is split between these two
 291
 00:08:19,150 --> 00:08:20,710
 0,320 430,720 720,990 990,1425 1425,1560
-pieces, the technical lectures and
+pieces,| the technical lectures and
+|技术课程和软件实验，
 
 292
 00:08:20,710 --> 00:08:22,195
 0,135 135,390 390,980 1150,1380 1380,1485
-the software {labs.,We -} have
+the software labs,| we have
+|我们今年有几个具体的新更新，
 
 293
 00:08:22,195 --> 00:08:23,395
@@ -1607,12 +1650,14 @@ several new updates this year
 294
 00:08:23,395 --> 00:08:25,375
 0,210 210,515 895,1295 1345,1725 1725,1980
-in specific, especially in many
+in specific,| especially in many
+|特别是在后面的许多课程中。
 
 295
 00:08:25,375 --> 00:08:27,295
 0,150 150,300 300,525 525,1085 1645,1920
-of the {later,lectures. -} The
+of the {later,lectures -}.| The
+|第一节课将涉及深度学习的基础，
 
 296
 00:08:27,295 --> 00:08:28,480
@@ -1622,7 +1667,8 @@ first lecture will cover the
 297
 00:08:28,480 --> 00:08:29,935
 0,405 405,645 645,825 825,1110 1110,1455
-foundations of deep learning, which
+foundations of deep learning,| which
+|这是现在将要进行的。
 
 298
 00:08:29,935 --> 00:08:30,775
@@ -1639,12 +1685,13 @@ now.|
 00:08:32,090 --> 00:08:33,715
 0,290 290,545 545,950 950,1385 1385,1625
 And finally, we'll conclude the
-最后，我们将以来自学术界和产业界的一些非常令人兴奋的客座演讲结束这门课程，他们真正引领和推动了人工智能和深度学习的发展。当然，我们还有很多令人惊叹的奖品，这些奖品来自所有的软件实验室和课程结束时的项目竞赛。所以，也许每天都要快速地经历这些。就像我说的，我们会有专门的软件实验室，与讲座相结合。
+最后，我们将结束这门课程，
 
 301
 00:08:33,715 --> 00:08:35,370
 0,335 355,660 660,945 945,1290 1290,1655
-course with some very exciting
+course| with some very exciting
+|一些非常令人兴奋来自学术界和产业界的客座演讲，
 
 302
 00:08:35,390 --> 00:08:37,500
@@ -1654,7 +1701,8 @@ guest lectures from both academia
 303
 00:08:37,520 --> 00:08:38,880
 0,400 570,860 860,980 980,1085 1085,1360
-and industry who are really
+and industry,| who are really
+|他们真正引领和推动了人工智能和深度学习的发展。
 
 304
 00:08:39,110 --> 00:08:41,140
@@ -1669,12 +1717,14 @@ state of AI and deep
 306
 00:08:42,550 --> 00:08:44,110
 0,290 580,840 840,975 975,1250 1300,1560
-learning. {And,of -} course, we
+learning,| {And,of -} course, we
+|当然，我们还有很多令人惊叹的奖品，
 
 307
 00:08:44,110 --> 00:08:45,895
 0,225 225,590 790,1110 1110,1560 1560,1785
-have many awesome prizes that
+have many awesome prizes,| that
+|这些奖品来自所有的软件实验，
 
 308
 00:08:45,895 --> 00:08:47,815
@@ -1684,7 +1734,8 @@ go with all of the
 309
 00:08:47,815 --> 00:08:49,560
 0,255 255,810 810,1095 1095,1380 1380,1745
-software labs and the project
+software labs| and the project
+|和课程结束时的项目竞赛，
 
 310
 00:08:49,730 --> 00:08:50,695
@@ -1694,17 +1745,20 @@ competition at the end of
 311
 00:08:50,695 --> 00:08:52,435
 0,150 150,425 535,935 985,1380 1380,1740
-the {course.,So -} maybe quickly
+the course,| so maybe quickly
+|所以，也许每天要快速地经历这些，
 
 312
 00:08:52,435 --> 00:08:53,515
 0,225 225,390 390,585 585,810 810,1080
-to go through these {each,day.,Like
+to go through these {each,day
+|
 
 313
 00:08:53,515 --> 00:08:54,670
 0,335 385,660 660,825 825,990 990,1155
-- -} I said, we'll
+-},| like I said, we'll
+|就像我说的，我们会有专门的软件实验，与课程相结合，
 
 314
 00:08:54,670 --> 00:08:56,110
@@ -1714,34 +1768,38 @@ have dedicated software labs that
 315
 00:08:56,110 --> 00:08:58,280
 0,240 240,480 480,615 615,1100
-couple with the lectures.|
+couple with the lectures,|
 |
 
 316
 00:08:58,290 --> 00:08:59,770
 0,365 365,650 650,860 860,1115 1115,1480
-Starting today, with lab one,
-从今天开始，从第一个实验开始，你将实际建立一个神经网络。遵循生成性人工智能的主题，你将构建一个神经网络，它可以学习、听很多音乐，并真正学习如何在该音乐流派中生成全新的歌曲。
+starting today, with lab one,|
+从今天开始，从实验一开始，|
 
 317
 00:08:59,970 --> 00:09:01,580
 0,520 690,980 980,1205 1205,1400 1400,1610
 you'll actually build a neural
+你将建立一个神经网络，
 
 318
 00:09:01,580 --> 00:09:02,870
 0,240 240,585 585,840 840,1050 1050,1290
-network. {Keeping,with -} the theme
+network,| {keeping,with -} the theme
+|遵循生成性人工智能的主题，
 
 319
 00:09:02,870 --> 00:09:04,280
 0,225 225,735 735,1020 1020,1260 1260,1410
-of generative AI, you'll build
+of generative AI,| you'll build
+|你将构建一个神经网络，
 
 320
 00:09:04,280 --> 00:09:05,270
 0,135 135,330 330,555 555,795 795,990
-a neural network that can
+a neural network,| that can
+|它可以学习、听很多音乐，
 
 321
 00:09:05,270 --> 00:09:06,770
@@ -1751,7 +1809,8 @@ learn, listen to a lot
 322
 00:09:06,770 --> 00:09:08,360
 0,290 310,710 880,1230 1230,1440 1440,1590
-of music, and actually learn
+of music,| and actually learn
+|并学习如何在该音乐流派中生成全新的歌曲。
 
 323
 00:09:08,360 --> 00:09:09,515
@@ -1773,22 +1832,24 @@ music.|
 00:09:12,710 --> 00:09:13,945
 0,275 275,395 395,640 810,1085 1085,1235
 At the end, at the
-最后，在周五课程的下一阶段，我们将举办一场项目推介比赛，你们可以单独或作为小组的一部分参与，并向我们所有人展示一个想法，一个新颖的深度学习想法。这大约是三分钟的时间，我们不会关注太多，因为这是一个一周的计划。我们不会太关注你推销的结果，而是你试图提出的东西的创新、想法和新颖性。
+最后，在课程的下一阶段，在星期五，
 
 327
 00:09:13,945 --> 00:09:14,980
 0,210 210,465 465,660 660,825 825,1035
-next level of the class
+next level of the class,
 
 328
 00:09:14,980 --> 00:09:16,225
 0,270 270,615 615,915 915,1065 1065,1245
-on friday, we'll host a
+on Friday,| we'll host a
+|我们将举办一场项目推介比赛，
 
 329
 00:09:16,225 --> 00:09:17,815
 0,255 255,635 715,1080 1080,1335 1335,1590
-project pitch competition where either
+project pitch competition,| where either
+|你可以单独或作为小组一员，
 
 330
 00:09:17,815 --> 00:09:20,095
@@ -1798,12 +1859,14 @@ you individually or as part
 331
 00:09:20,095 --> 00:09:21,600
 0,90 90,240 240,545 805,1155 1155,1505
-of a group can participate
+of a group| can participate
+|参与并向我们所有人展示一个想法，
 
 332
 00:09:21,800 --> 00:09:23,875
 0,400 420,820 960,1340 1340,1720 1800,2075
-and present an idea, a
+and present an idea,| a
+|一个新颖的深度学习想法，
 
 333
 00:09:23,875 --> 00:09:26,350
@@ -1813,7 +1876,8 @@ novel deep learning idea to
 334
 00:09:26,350 --> 00:09:27,670
 0,225 225,360 360,620 1000,1230 1230,1320
-all of us. {It,will -}
+all of us,| {it,will -}
+|这大约是三分钟的时间，
 
 335
 00:09:27,670 --> 00:09:29,035
@@ -1823,22 +1887,26 @@ be roughly three minutes in
 336
 00:09:29,035 --> 00:09:31,410
 0,335 745,1145 1555,1845 1845,2055 2055,2375
-length and we will focus
+length| and we will focus
+|我们不会关注太多，
 
 337
 00:09:31,850 --> 00:09:32,875
 0,275 275,455 455,695 695,890 890,1025
-not as much because this
+not as much| because this
+|因为这是一个一周的计划，
 
 338
 00:09:32,875 --> 00:09:34,290
 0,135 135,395 415,750 750,1050 1050,1415
-is a one week {program.,We
+is a one week program,|
+|
 
 339
 00:09:34,460 --> 00:09:35,185
 0,230 230,320 320,470 470,620 620,725
--} are not going to
+we are not going to
+我们不会太关注你推介的结果，
 
 340
 00:09:35,185 --> 00:09:36,100
@@ -1848,7 +1916,8 @@ focus so much on the
 341
 00:09:36,100 --> 00:09:37,480
 0,320 400,675 675,855 855,1125 1125,1380
-results of your pitch, but
+results of your pitch,| but
+|而是（关注）你试图提出的东西的创新、想法和新颖性。
 
 342
 00:09:37,480 --> 00:09:38,935
@@ -1869,13 +1938,14 @@ what you're trying to propose.|
 345
 00:09:42,080 --> 00:09:43,315
 0,275 275,545 545,815 815,1010 1010,1235
-The prices here are are
-这里的价格已经相当可观了，一等奖将获得NVIDIA G P U，这真的是一个关键的硬件，是工具性的。如果你想真正建立一个深度学习项目并训练这些神经网络，这些神经网络可能非常大，需要大量的计算，这些奖品将给你这样做的计算。最后，今年我们将为第二和第三个实验室颁发一个大奖，将于周二和周三举行，重点是我认为实际上正在解决深度学习领域中一些最令人兴奋的问题，以及我们如何具体地建立模型，当它们部署时，这些模型可以健壮、不仅准确、健壮、值得信赖和安全，你实际上将获得开发这些类型的解决方案的经验，这些解决方案实际上可以促进最先进的技术和人工智能。
+The prizes here are are
+这里的奖品已经相当可观了，
 
 346
 00:09:43,315 --> 00:09:45,130
 0,210 210,515 775,1110 1110,1445 1465,1815
-quite significant already where first
+quite significant already,| where first
+|一等奖将获得 NVIDIA GPU ，
 
 347
 00:09:45,130 --> 00:09:45,940
@@ -1885,22 +1955,26 @@ prize is going to get
 348
 00:09:45,940 --> 00:09:46,960
 0,120 120,585 585,765 765,900 900,1020
-an Nvidia G P U,
+an NVIDIA {GPU - -},|
+|
 
 349
 00:09:46,960 --> 00:09:48,355
 0,150 150,300 300,555 555,920 1060,1395
 which is really a key
+这是一个关键的硬件，
 
 350
 00:09:48,355 --> 00:09:49,770
 0,225 225,420 420,725 895,1155 1155,1415
-piece of hardware that is
+piece of hardware,| that is
+|这是工具性的，
 
 351
 00:09:50,030 --> 00:09:51,400
 0,635 635,800 800,920 920,1100 1100,1370
-instrumental. {If,you -} want to
+instrumental,| {if,you -} want to
+|如果你想建立一个深度学习项目，
 
 352
 00:09:51,400 --> 00:09:52,645
@@ -1910,12 +1984,14 @@ actually build a deep learning
 353
 00:09:52,645 --> 00:09:54,130
 0,360 360,675 675,930 930,1200 1200,1485
-project and train these neural
+project| and train these neural
+|并训练这些神经网络，
 
 354
 00:09:54,130 --> 00:09:55,030
 0,225 225,465 465,600 600,720 720,900
-networks which can be very
+networks,| which can be very
+|这些神经网络可能非常大，需要大量的计算，
 
 355
 00:09:55,030 --> 00:09:55,990
@@ -1925,7 +2001,8 @@ large and require a lot
 356
 00:09:55,990 --> 00:09:57,670
 0,120 120,530 880,1185 1185,1545 1545,1680
-of compute, these prizes will
+of compute,| these prizes will
+|这些奖品将给你这样做的计算。
 
 357
 00:09:57,670 --> 00:09:58,600
@@ -1935,7 +2012,8 @@ give you the compute to
 358
 00:09:58,600 --> 00:10:00,445
 0,165 165,470 910,1200 1200,1490 1570,1845
-do {so.,And -} finally this
+do so.| And finally this
+|最后，今年我们颁发一个大奖，
 
 359
 00:10:00,445 --> 00:10:01,570
@@ -1945,27 +2023,32 @@ year we'll be awarding a
 360
 00:10:01,570 --> 00:10:03,010
 0,240 240,590 670,945 945,1275 1275,1440
-grand prize for labs two
+grand prize| for labs two
+|为第二和第三个实验，
 
 361
 00:10:03,010 --> 00:10:04,780
 0,150 150,420 420,800 1270,1560 1560,1770
-and three combined, which will
+and three combined,| which will
+|将于周二和周三举行，
 
 362
 00:10:04,780 --> 00:10:06,180
 0,240 240,495 495,825 825,1110 1110,1400
-occur on tuesday and wednesday
+occur on Tuesday and Wednesday,|
+|
 
 363
 00:10:06,320 --> 00:10:07,825
 0,380 380,760 870,1130 1130,1310 1310,1505
-focused on what I believe
+focused on, what I believe
+关注于，我认为是，
 
 364
 00:10:07,825 --> 00:10:08,860
 0,210 210,420 420,795 795,930 930,1035
-is actually solving some of
+is| actually solving some of
+|解决深度学习领域中一些最令人兴奋的问题，
 
 365
 00:10:08,860 --> 00:10:10,975
@@ -1975,12 +2058,14 @@ the most exciting problems in
 366
 00:10:10,975 --> 00:10:12,085
 0,180 180,405 405,615 615,810 810,1110
-this field of deep learning
+this field of deep learning|
+|
 
 367
 00:10:12,085 --> 00:10:13,600
 0,285 285,575 685,1085 1105,1380 1380,1515
-and how specifically how we
+and how, specifically, how we
+以及我们如何具体地建立模型，可以健壮，
 
 368
 00:10:13,600 --> 00:10:15,865
@@ -1990,7 +2075,8 @@ can build models that can
 369
 00:10:15,865 --> 00:10:17,950
 0,275 445,845 1105,1380 1380,1655 1765,2085
-be robust, not only accurate,
+be robust,| not only accurate,
+|不仅准确，而且健壮，值得信赖和安全，
 
 370
 00:10:17,950 --> 00:10:19,495
@@ -2000,12 +2086,14 @@ but robust and trustworthy and
 371
 00:10:19,495 --> 00:10:21,400
 0,305 655,930 930,1200 1200,1620 1620,1905
-safe when they're deployed as
+safe,| when they're deployed as
+|当它们部署时，
 
 372
 00:10:21,400 --> 00:10:22,660
 0,210 210,480 480,885 885,1065 1065,1260
-well and you'll actually get
+well,| and you'll actually get
+|你将获得开发这些类型的解决方案的经验，
 
 373
 00:10:22,660 --> 00:10:24,175
@@ -2015,24 +2103,25 @@ experience developing those types of
 374
 00:10:24,175 --> 00:10:26,130
 0,305 865,1140 1140,1350 1350,1620 1620,1955
-solutions that can actually advance
+solutions,| that can actually advance
+|这些可以促进 AI 中最先进的。
 
 375
 00:10:26,180 --> 00:10:27,025
 0,290 290,440 440,575 575,680 680,845
-the state of the art
+the {state-of-the-art - - -}
 
 376
 00:10:27,025 --> 00:10:28,460
 0,335 355,755
-and AI.|
+in AI.|
 |
 
 377
 00:10:28,600 --> 00:10:29,625
 0,290 290,455 455,590 590,755 755,1025
 Now, all of these labs
-现在，我提到的所有这些实验和竞赛都将在周四晚上11点，也就是最后一天上课前，交上来。我们会一路帮你的。这个奖项，特别是这个比赛，有非常重要的奖项。所以我鼓励你们所有人真正进入这个奖项，并努力尝试。
+我提到的所有这些实验和竞赛，
 
 378
 00:10:29,625 --> 00:10:31,340
@@ -2042,22 +2131,25 @@ that I mentioned and competitions
 379
 00:10:31,420 --> 00:10:33,140
 0,400 660,995 995,1265 1265,1460 1460,1720
-here are going to be
+here| are going to be
+|将在周四晚上 11 点截止，
 
 380
 00:10:33,880 --> 00:10:35,430
 0,305 305,515 515,800 800,1180 1230,1550
-due on thursday night at
+due on Thursday night, at
 
 381
 00:10:35,430 --> 00:10:36,765
 0,285 285,660 660,885 885,1125 1125,1335
-eleven PM, right before the
+{11pm -},| right before the
+|也就是最后一天上课前。
 
 382
 00:10:36,765 --> 00:10:38,390
 0,225 225,420 420,555 555,845 1225,1625
-last day of class. {And,we'll
+last day of class.| {And,we'll
+|我们会一路帮你，
 
 383
 00:10:38,410 --> 00:10:39,420
@@ -2067,7 +2159,8 @@ last day of class. {And,we'll
 384
 00:10:39,420 --> 00:10:40,680
 0,240 240,405 405,585 585,915 915,1260
-along the {way.,This, -} this
+along the way,| this, this
+|这个奖品，特别是这个比赛有很好的奖品，
 
 385
 00:10:40,680 --> 00:10:42,675
@@ -2077,12 +2170,14 @@ prize or this competition in
 386
 00:10:42,675 --> 00:10:45,195
 0,365 775,1175 1405,1710 1710,2015 2065,2520
-particular has very {significant,prizes.,So -
+particular has very {significant,prizes -},|
+|
 
 387
 00:10:45,195 --> 00:10:45,930
 0,105 105,240 240,435 435,600 600,735
--} I encourage all of
+so I encourage all of
+所以我鼓励你们获取奖品，
 
 388
 00:10:45,930 --> 00:10:47,130
@@ -2092,19 +2187,18 @@ you to really enter this
 389
 00:10:47,130 --> 00:10:48,825
 0,225 225,560 580,900 900,1220 1390,1695
-prize and try to try
+prize| and try to, try
+|努力有机会赢得奖品。
 
 390
 00:10:48,825 --> 00:10:49,660
 0,305
-to.|
-|
+to
 
 391
 00:10:49,660 --> 00:10:50,515
 0,120 120,240 240,435 435,630 630,855
-Get a chance to win
-有机会赢得奖品。
+get a chance to win
 
 392
 00:10:50,515 --> 00:10:51,720
@@ -2116,7 +2210,7 @@ the prize.|
 00:10:52,290 --> 00:10:53,315
 0,260 260,395 395,650 650,890 890,1025
 And of course, like I
-当然，就像我说的，我们会一直帮助你。我们在整个课程中提供了许多可用的资源来帮助您实现这一点。如果你有任何问题，请张贴广场，当然，这个项目有一个令人难以置信的团队，你可以随时联系，以防你对材料有任何问题或疑问。我和Ava将是你们的两个主要讲课，在第一节课上，我也会听到，就像我在课程后面部分所说的，从一些客座讲课中，他们将分享一些真正尖端的艺术发展和深度学习的现状。当然，我想要大喊一声，感谢我们所有的赞助商，如果没有他们的支持，这个项目在下一年是不可能的。所以谢谢你们所有人。
+当然，就像我说的，我们会一直帮助你，
 
 394
 00:10:53,315 --> 00:10:53,975
@@ -2131,7 +2225,8 @@ helping you all along the
 396
 00:10:54,905 --> 00:10:56,440
 0,210 210,420 420,615 615,965 1135,1535
-way. {We,are -} many available
+way,| {here -} many available
+|在整个课程中提供了许多可用的资源来帮助你实现这一点，
 
 397
 00:10:56,640 --> 00:10:57,980
@@ -2141,17 +2236,19 @@ resources throughout this class to
 398
 00:10:57,980 --> 00:11:00,200
 0,165 165,470 730,1065 1065,1400 1900,2220
-help you achieve {this.,Please -}
+help you achieve this,| please
+|如果你有任何问题，请发布 Piazza ，
 
 399
 00:11:00,200 --> 00:11:01,505
 0,225 225,405 405,975 975,1200 1200,1305
-post a piazza if you
+post a Piazza, if you
 
 400
 00:11:01,505 --> 00:11:02,825
 0,90 90,270 270,605 835,1125 1125,1320
-have any questions and of
+have any questions,| and of
+|当然，这个项目有一个令人难以置信的团队，
 
 401
 00:11:02,825 --> 00:11:04,565
@@ -2161,7 +2258,8 @@ course this program has an
 402
 00:11:04,565 --> 00:11:06,200
 0,335 355,755 1075,1350 1350,1500 1500,1635
-incredible team that you can
+incredible team,| that you can
+|你可以随时联系，
 
 403
 00:11:06,200 --> 00:11:06,995
@@ -2171,7 +2269,8 @@ reach out to at any
 404
 00:11:06,995 --> 00:11:08,075
 0,335 445,720 720,870 870,990 990,1080
-point in case you have
+point,| in case you have
+|以防你对材料有任何问题或疑问，
 
 405
 00:11:08,075 --> 00:11:09,740
@@ -2181,7 +2280,8 @@ any issues or questions on
 406
 00:11:09,740 --> 00:11:12,040
 0,180 180,500 1120,1520 1540,1830 1830,2300
-{the,materials. -} Myself and ava
+{the,materials -},| myself and Ava
+|我和 Ava 将是你们的两个主要讲课，
 
 407
 00:11:12,060 --> 00:11:12,950
@@ -2191,17 +2291,20 @@ will be your two main
 408
 00:11:12,950 --> 00:11:14,360
 0,500 700,960 960,1080 1080,1245 1245,1410
-lectures for the first part
+lectures,| for the first part
+|在课程的第一部分中，
 
 409
 00:11:14,360 --> 00:11:15,935
 0,135 135,285 285,560 1000,1365 1365,1575
-of the class will also
+of the class,| we'll also
+|我们也会听到，
 
 410
 00:11:15,935 --> 00:11:16,910
 0,165 165,450 450,690 690,840 840,975
-be hearing like I said
+be hearing,| like I said,
+|就像我说的，在课程后面部分，
 
 411
 00:11:16,910 --> 00:11:17,900
@@ -2211,27 +2314,30 @@ in the later part of
 412
 00:11:17,900 --> 00:11:18,860
 0,120 120,315 315,540 540,735 735,960
-the class from some guest
+the class,| from some guest
+|从一些客座讲课中，
 
 413
 00:11:18,860 --> 00:11:20,690
 0,530 790,1065 1065,1320 1320,1635 1635,1830
-lectures who will share some
+lectures,| who will share some
+|他们将分享一些深度学习最先进的发展。
 
 414
 00:11:20,690 --> 00:11:22,100
 0,260 340,645 645,950 1030,1290 1290,1410
-really cutting edge state of
+really cutting edge {state-of-the-art -
 
 415
 00:11:22,100 --> 00:11:23,090
 0,90 90,240 240,555 555,825 825,990
-the art development {and,deep -}
+- -} development {in,deep -}
 
 416
 00:11:23,090 --> 00:11:24,680
 0,290 730,1065 1065,1275 1275,1440 1440,1590
-learning. And of course I
+learning.| And of course I
+|当然，我想要大声说出，
 
 417
 00:11:24,680 --> 00:11:25,360
@@ -2241,17 +2347,20 @@ want to give a huge
 418
 00:11:25,530 --> 00:11:26,510
 0,290 290,455 455,620 620,830 830,980
-shout out and thanks to
+shout out| and thanks to
+|感谢我们所有的赞助商，
 
 419
 00:11:26,510 --> 00:11:27,920
 0,90 90,195 195,360 360,890 1150,1410
-all of our sponsors who
+all of our sponsors,| who
+|如果没有他们的支持，
 
 420
 00:11:27,920 --> 00:11:29,140
 0,195 195,480 480,735 735,930 930,1220
-without their support this program
+without their support,| this program
+|这个项目在另一年是不可能的，
 
 421
 00:11:29,280 --> 00:11:31,330
@@ -2261,7 +2370,8 @@ wouldn't have been possible for
 422
 00:11:31,410 --> 00:11:32,915
 0,305 305,590 590,905 905,1235 1235,1505
-{yet,again -} another year. So
+{yet,again -} another year,| so
+|所以谢谢你们。
 
 423
 00:11:32,915 --> 00:11:33,820
