@@ -1,0 +1,9 @@
+# Lecture 1
+perceptron 感知器
+neuron 神经元
+bias 偏置
+linear algebra 线性代数
+decision boundary 决策边界
+loss 损失
+landscape 图景
+dropout
