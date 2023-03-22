@@ -3543,29 +3543,30 @@ RNN.|
 00:18:58,050 --> 00:18:59,240
 0,275 275,410 410,545 545,820 840,1190
 If we can walk through
-如果我们可以演示如何从头开始在TensorFlow中实现此RNN的示例。
+如果我们可以演示，
 
 622
 00:18:59,240 --> 00:19:00,620
 0,285 285,600 600,900 900,1125 1125,1380
-an example of how we
+an example| of how we
+|如何从头开始在 TensorFlow 中实现这个 RNN ，
 
 623
 00:19:00,620 --> 00:19:02,615
 0,285 285,510 510,1020 1020,1350 1350,1995
-implement this rnn in tensorflow
+implement this RNN in TensorFlow
 
 624
 00:19:02,615 --> 00:19:04,220
 0,270 270,525 525,845
-starting from scratch.|
+starting from scratch,|
 |
 
 625
 00:19:04,410 --> 00:19:05,360
 0,260 260,380 380,485 485,695 695,950
-The r and n can
-R和n可以定义为Alexander在第一堂课中介绍的层操作和层类。
+the {RNN - -} can
+RNN 可以定义为层操作和层类，
 
 626
 00:19:05,360 --> 00:19:06,850
@@ -3575,12 +3576,14 @@ be defined as a layer
 627
 00:19:07,770 --> 00:19:09,350
 0,400 450,770 770,980 980,1250 1250,1580
-operation and a layer class
+operation and a layer class|
+|
 
 628
 00:19:09,350 --> 00:19:10,970
 0,350 490,890 1000,1320 1320,1500 1500,1620
 that Alexander introduced in the
+像 Alexander 在上节课介绍的。
 
 629
 00:19:10,970 --> 00:19:12,240
