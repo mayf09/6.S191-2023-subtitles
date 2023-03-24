@@ -8554,7 +8554,7 @@ together| to create a vector
 00:46:47,465 --> 00:46:50,135
 0,435 435,755 895,1745 2125,2460 2460,2670
 that's effectively concatenated, right,| the
-|时间步长被消除了，只有一个流。
+|时间步长被消除了，只有一个流，
 
 1511
 00:46:50,135 --> 00:46:52,040
@@ -8564,14 +8564,14 @@ time steps are eliminated, there
 1512
 00:46:52,040 --> 00:46:54,500
 0,180 180,500 910,1305 1305,1700
-just one one stream.|
+just one one stream,|
 |
 
 1513
 00:46:54,510 --> 00:46:55,625
 0,275 275,410 410,590 590,845 845,1115
-Where we have now one
-我们现在有一个包含所有时间点数据的矢量输入，然后将其输入到模型中。
+where we have now one
+我们有一个包含所有时间点数据的矢量输入，
 
 1514
 00:46:55,625 --> 00:46:57,515
@@ -8581,41 +8581,44 @@ vector input with the data
 1515
 00:46:57,515 --> 00:46:59,525
 0,330 330,675 675,975 975,1295 1645,2010
-from all time points, that's
+from all time points,| that's
+|然后将其输入到模型中，
 
 1516
 00:46:59,525 --> 00:47:00,520
 0,180 180,390 390,570 570,735 735,995
-then Fed into the model.|
+then fed into the model,|
 |
 
 1517
 00:47:01,290 --> 00:47:02,870
 0,305 305,755 755,965 965,1205 1205,1580
-It calculates some feature vector
-它计算一些特征向量，然后生成一些输出，希望这是有意义的。
+it calculates some feature vector|
+它计算一些特征向量，|
 
 1518
 00:47:02,870 --> 00:47:04,900
 0,255 255,450 450,950 1180,1580 1630,2030
-and then generates some output,
+and then generates some output,|
+然后生成一些输出，|
 
 1519
 00:47:05,010 --> 00:47:07,160
 0,290 290,580 870,1175 1175,1480
-which hopefully makes sense.|
-|
+which hopefully makes sense,|
+希望这是有意义的，|
 
 1520
 00:47:07,280 --> 00:47:08,785
 0,365 365,635 635,935 935,1250 1250,1505
-And because we've squashed all
-因为我们一起挤压了所有这些时间步长，我们可以简单地考虑建立一个前馈网络，可以进行这种计算。
+and because we've squashed all
+因为我们一起挤压了所有这些时间步长，
 
 1521
 00:47:08,785 --> 00:47:10,705
 0,180 180,405 405,675 675,1025 1645,1920
-these time steps together, we
+these time steps together,| we
+|我们可以简单地考虑建立一个前馈网络，
 
 1522
 00:47:10,705 --> 00:47:12,570
@@ -8625,48 +8628,50 @@ could simply think about maybe
 1523
 00:47:12,890 --> 00:47:14,340
 0,365 365,605 605,800 800,1085 1085,1450
-building a feed forward network
+building a feed forward network,|
+|
 
 1524
 00:47:14,600 --> 00:47:16,015
 0,290 290,580 840,1115 1115,1265 1265,1415
 that could, that could do
+可以进行这种计算，
 
 1525
 00:47:16,015 --> 00:47:17,440
 0,165 165,725
-this computation.|
+this computation,|
 |
 
 1526
 00:47:17,450 --> 00:47:19,585
 0,400 630,935 935,1235 1235,1670 1670,2135
-Well, with that, we eliminate
-有了这一点，我们就消除了复发的必要性。
+well, with that, we eliminate
+有了这一点，我们就消除了递归的必要性，
 
 1527
 00:47:19,585 --> 00:47:21,400
 0,165 165,360 360,570 570,1145
-the need for recurrence.|
+the need for recurrence,|
 |
 
 1528
 00:47:21,400 --> 00:47:22,675
 0,260 400,720 720,930 930,1125 1125,1275
-But we still have the
-但我们仍然有这样的问题。
+but we still have the
+但我们仍然有这样的问题，
 
 1529
 00:47:22,675 --> 00:47:24,140
 0,245 265,665
-issues that.|
+issues that,|
 |
 
 1530
 00:47:24,140 --> 00:47:26,180
 0,285 285,495 495,1130 1540,1845 1845,2040
-It's not scalable because the
-它是不可扩展的，因为密集的前馈网络必须非常大，由许多不同的连接定义。
+it's not scalable,| because the
+它是不可扩展的，|因为密集的前馈网络必须非常大，
 
 1531
 00:47:26,180 --> 00:47:28,130
@@ -8676,39 +8681,44 @@ dense feed forward network would
 1532
 00:47:28,130 --> 00:47:29,380
 0,180 180,315 315,495 495,960 960,1250
-have to be immensely large,
+have to be immensely large,|
+|
 
 1533
 00:47:29,490 --> 00:47:31,100
 0,335 335,670 750,1070 1070,1310 1310,1610
 defined by many, many different
+由许多不同的连接定义，
 
 1534
 00:47:31,100 --> 00:47:32,320
 0,380
-connections.|
+connections,|
 |
 
 1535
 00:47:32,360 --> 00:47:34,590
 0,400 420,1010 1010,1475 1475,1850 1850,2230
-And critically, we've completely lost
-更重要的是，我们已经完全失去了我们的有序信息，因为我们只是盲目地将所有东西挤压在一起。没有时间依赖性，我们就会被困在试图建立长期记忆的能力中。
+and critically, we've completely lost
+更重要的是，我们已经完全失去了我们的有序信息，
 
 1536
 00:47:34,610 --> 00:47:36,250
 0,290 290,485 485,790 960,1355 1355,1640
-our in order information by
+our in order information| by
+|因为我们只是盲目地将所有东西挤压在一起，
 
 1537
 00:47:36,250 --> 00:47:38,430
 0,290 340,960 960,1275 1275,1560 1560,2180
-just squashing everything together blindly.
+just squashing everything together blindly,|
+|
 
 1538
 00:47:38,720 --> 00:47:40,980
 0,395 395,590 590,1070 1070,1630 1860,2260
-There's no temporal dependence, and
+there's no temporal dependence,| and
+没有时间依赖性，|我们就会被困在试图建立长期记忆的能力中。
 
 1539
 00:47:41,210 --> 00:47:43,225
@@ -8730,7 +8740,7 @@ long term memory.|
 00:47:48,070 --> 00:47:50,100
 0,400 540,800 800,1040 1040,1420 1740,2030
 So what if instead we
-那么，如果我们仍然可以考虑将这些时间步长集中在一起，但在如何尝试从这些输入数据中提取信息时更聪明一点，那会怎么样？
+那么，如果我们仍然可以考虑将这些时间步长集中在一起，
 
 1543
 00:47:50,100 --> 00:47:52,065
@@ -8740,7 +8750,8 @@ could still think about bringing
 1544
 00:47:52,065 --> 00:47:53,955
 0,270 270,510 510,810 810,1175 1615,1890
-these time steps together, but
+these time steps together,| but
+|但在如何尝试从这些输入数据中提取信息时更聪明一点，
 
 1545
 00:47:53,955 --> 00:47:55,010
@@ -8760,14 +8771,14 @@ extract information from this input
 1548
 00:47:58,425 --> 00:47:59,320
 0,275
-data?|
+data,|
 |
 
 1549
 00:47:59,710 --> 00:48:01,610
 0,320 320,640 690,1090 1110,1505 1505,1900
-The key idea is this
-关键的想法是能够识别和关注潜在顺序信息流中的重要内容。
+the key idea is this
+关键的想法是能够识别和关注，
 
 1550
 00:48:01,660 --> 00:48:04,070
@@ -8777,7 +8788,8 @@ idea of being able to
 1551
 00:48:04,570 --> 00:48:06,495
 0,335 335,670 720,1120 1470,1745 1745,1925
-identify and attend to what
+identify and attend to| what
+|潜在顺序信息流中的重要内容，
 
 1552
 00:48:06,495 --> 00:48:08,210
@@ -8787,26 +8799,26 @@ is important in a potentially
 1553
 00:48:08,290 --> 00:48:11,320
 0,790 960,1340 1340,1720 1740,2140
-sequential stream of information.|
+sequential stream of information,|
 |
 
 1554
 00:48:11,320 --> 00:48:12,270
 0,240 240,405 405,555 555,690 690,950
-And this is the notion
-这就是注意力或自我关注的概念。
+and this is the notion
+这就是注意力或自我注意力的概念，
 
 1555
 00:48:12,290 --> 00:48:14,130
 0,365 365,730 840,1160 1160,1460 1460,1840
-of attention or self attention.|
+of attention or self attention,|
 |
 
 1556
 00:48:14,920 --> 00:48:16,690
 0,225 225,360 360,620 790,1190 1390,1770
-Which is an extremely, extremely
-在现代深度学习和人工智能中，这是一个非常、非常强大的概念。我不能轻描淡写，或者，我不知道，低调，夸大。这个概念有多么强大，我怎么强调都不为过。
+which is an extremely, extremely
+在现代深度学习和人工智能中，这是一个非常、非常强大的概念，
 
 1557
 00:48:16,690 --> 00:48:18,580
@@ -8816,17 +8828,19 @@ powerful concept in modern deep
 1558
 00:48:18,580 --> 00:48:20,100
 0,225 225,510 510,860 940,1230 1230,1520
-learning and AI. {I,cannot -}
+learning and AI,| {I,cannot -}
+|我不能轻描淡写，或者，夸大，
 
 1559
 00:48:20,180 --> 00:48:21,850
 0,710 710,1060 1200,1445 1445,1595 1595,1670
-understate or, I don't know,
+understate or I don't know,
 
 1560
 00:48:21,850 --> 00:48:24,070
 0,405 405,900 900,1220 1330,1650 1650,2220
-understate, {overstate.,I -} cannot emphasize
+understate, overstate,| I cannot emphasize
+|这个概念有多么强大，我怎么强调都不为过，
 
 1561
 00:48:24,070 --> 00:48:25,920
@@ -8836,19 +8850,20 @@ enough how powerful this concept
 1562
 00:48:25,940 --> 00:48:27,360
 0,400
-is.|
+is,|
 |
 
 1563
 00:48:27,640 --> 00:48:29,570
 0,400 450,785 785,980 980,1480 1530,1930
-Attention is the foundational mechanism
-注意是转换器体系结构的基本机制，你们中的许多人可能已经听说过，而转换器的概念通常会非常令人生畏，因为有时它们是用这些非常复杂的图表呈现的，或者部署在复杂的应用程序中。你可能会想，好吧，我怎么才能理解这一点呢？
+attention is the foundational mechanism
+注意力是转换器体系结构的基本机制，
 
 1564
 00:48:29,740 --> 00:48:32,540
 0,400 420,820 840,1400 1400,1780 2400,2800
-of the transformer architecture, which
+of the transformer architecture,| which
+|你们中的许多人可能已经听说过，
 
 1565
 00:48:32,800 --> 00:48:33,765
@@ -8858,7 +8873,8 @@ many of you may have
 1566
 00:48:33,765 --> 00:48:36,950
 0,180 180,485 1075,1475 1915,2465 2785,3185
-heard about, and it's the
+heard about,| and it's, the
+|转换器的概念通常会非常令人生畏，
 
 1567
 00:48:37,600 --> 00:48:38,835
@@ -8868,7 +8884,8 @@ notion of a transformer can
 1568
 00:48:38,835 --> 00:48:40,335
 0,255 255,510 510,705 705,1245 1245,1500
-often be very daunting because
+often be very daunting,| because
+|因为有时它们是用这些非常复杂的图表呈现的，
 
 1569
 00:48:40,335 --> 00:48:41,780
@@ -8878,17 +8895,20 @@ sometimes they're presented with these
 1570
 00:48:41,860 --> 00:48:44,925
 0,400 480,800 800,1625 1625,2020 2700,3065
-really complex diagrams or deployed
+really complex diagrams| or deployed
+|或者部署在复杂的应用程序中，
 
 1571
 00:48:44,925 --> 00:48:47,040
 0,245 265,665 745,1145 1645,1950 1950,2115
-in complex applications. {And,you -}
+in complex applications,| {and,you -}
+|你可能会想，
 
 1572
 00:48:47,040 --> 00:48:48,060
 0,135 135,375 375,690 690,915 915,1020
-may think, okay, how do
+may think,| okay, how do
+|好的，我怎么才能理解这一点，
 
 1573
 00:48:48,060 --> 00:48:48,975
@@ -8898,14 +8918,14 @@ I even start to make
 1574
 00:48:48,975 --> 00:48:50,020
 0,195 195,345 345,605
-sense of this?|
+sense of this,|
 |
 
 1575
 00:48:50,540 --> 00:48:52,030
 0,290 290,485 485,710 710,1030 1110,1490
-At its core, though, attention,
-不过，在它的核心，注意，关键操作是一个非常直观的想法，在这节课的最后一部分，我们将一步一步地分析它，看看为什么它如此强大，以及我们如何将它用作更大的神经网络的一部分，比如变压器。
+at its core, though,| attention,
+不过，在它的核心，|注意力，关键操作是一个非常直观的想法，
 
 1576
 00:48:52,030 --> 00:48:53,320
@@ -8915,7 +8935,8 @@ the key operation is a
 1577
 00:48:53,320 --> 00:48:55,360
 0,270 270,945 945,1310 1570,1860 1860,2040
-very intuitive idea, and we're
+very intuitive idea,| and we're
+|在这节课的最后一部分，
 
 1578
 00:48:55,360 --> 00:48:56,710
@@ -8925,22 +8946,26 @@ going to, in the last
 1579
 00:48:56,710 --> 00:48:58,240
 0,270 270,450 450,600 600,890 1240,1530
-portion of this lecture, break
+portion of this lecture,| break
+|我们将一步一步地分析它，
 
 1580
 00:48:58,240 --> 00:48:59,490
 0,150 150,405 405,690 690,915 915,1250
-it down step by step
+it down step by step,|
+|
 
 1581
 00:48:59,540 --> 00:49:00,985
 0,320 320,640 660,1010 1010,1295 1295,1445
 to see why it's so
+看看为什么它如此强大，
 
 1582
 00:49:00,985 --> 00:49:02,380
 0,305 655,945 945,1125 1125,1275 1275,1395
-powerful and how we can
+powerful| and how we can
+|以及我们如何将它用作更大的神经网络的一部分，比如转换器。
 
 1583
 00:49:02,380 --> 00:49:03,145
@@ -8962,7 +8987,7 @@ a transformer.|
 00:49:07,550 --> 00:49:08,695
 0,400 540,770 770,860 860,1010 1010,1145
 Specifically, {we're -} going to
-具体地说，我们将讨论并关注这种自我关注的概念。
+具体地说，我们将讨论并关注这种自我注意力的概念，
 
 1587
 00:49:08,695 --> 00:49:10,180
@@ -8972,46 +8997,50 @@ be talking and focusing on
 1588
 00:49:10,180 --> 00:49:11,640
 0,285 285,540 540,765 765,1080 1080,1460
-this idea of self attention.|
+this idea of self attention,|
 |
 
 1589
 00:49:12,750 --> 00:49:15,095
 0,610 1110,1415 1415,1580 1580,1840 1980,2345
-Attending to the most important
-注意输入示例中最重要的部分。
+attending to the most important
+注意输入示例中最重要的部分，
 
 1590
 00:49:15,095 --> 00:49:16,690
 0,330 330,645 645,960 960,1260 1260,1595
-parts of an input example.|
+parts of an input example,|
 |
 
 1591
 00:49:17,460 --> 00:49:19,870
 0,400 750,1220 1220,1570 1830,2120 2120,2410
-So let's consider an image.
-那么让我们来考虑一张图片。我认为考虑一幅图像是最直观的。首先，这是一张钢铁侠的照片。如果我们的目标是试图从这张图像中提取重要的信息，我们可以做的也许是用我们的眼睛天真地扫描这张图像，逐个像素，对，只是浏览图像。
+so let's consider an image,|
+那么让我们来考虑一张图片，|
 
 1592
 00:49:20,040 --> 00:49:21,365
 0,260 260,395 395,605 605,815 815,1325
 {I,think -} it's most intuitive
+我认为首先考虑一幅图像是最直观的，
 
 1593
 00:49:21,365 --> 00:49:23,230
 0,210 210,435 435,600 600,875 1465,1865
-to consider an {image.,First, -}
+to consider an image, first,|
+|
 
 1594
 00:49:23,760 --> 00:49:24,560
 0,260 260,365 365,470 470,620 620,800
 this is a picture of
+这是一张钢铁侠的照片，
 
 1595
 00:49:24,560 --> 00:49:26,090
 0,240 240,590 970,1230 1230,1350 1350,1530
-{iron,man. -} And if our
+{iron,man -},| and if our
+|如果我们的目标是试图从这张图像中提取重要的信息，
 
 1596
 00:49:26,090 --> 00:49:27,230
@@ -9026,7 +9055,8 @@ extract information from this image
 1598
 00:49:28,775 --> 00:49:31,025
 0,210 210,540 540,875 1765,2070 2070,2250
-of what's important, what we
+of what's important,| what we
+|我们可以做的也许是用我们的眼睛天真地扫描这张图像，
 
 1599
 00:49:31,025 --> 00:49:32,330
@@ -9041,7 +9071,8 @@ our eyes naively scan over
 1601
 00:49:34,355 --> 00:49:36,185
 0,255 255,545 835,1275 1275,1440 1440,1830
-this image, pixel by pixel,
+this image,| pixel by pixel,
+|逐个像素，只是浏览图像，
 
 1602
 00:49:36,185 --> 00:49:37,565
@@ -9051,14 +9082,14 @@ right, just going across the
 1603
 00:49:37,565 --> 00:49:38,360
 0,245
-image.|
+image,|
 |
 
 1604
 00:49:39,360 --> 00:49:41,890
 0,380 380,680 680,1000 1740,2135 2135,2530
-However, our brains maybe, maybe
-然而，我们的大脑可能，也许在内部进行某种类型的计算，就像这样，但你和我，我们可以简单地看着这张图像，并能够关注重要的部分。
+however, our brains maybe, maybe
+然而，我们的大脑可能在内部进行某种类型的计算，
 
 1605
 00:49:41,970 --> 00:49:43,370
@@ -9068,7 +9099,8 @@ internally they're doing some type
 1606
 00:49:43,370 --> 00:49:45,185
 0,195 195,690 690,915 915,1220 1540,1815
-of computation like this, but
+of computation like this,| but
+|但你和我，我们可以简单地看着这张图像，
 
 1607
 00:49:45,185 --> 00:49:45,890
@@ -9078,24 +9110,26 @@ you and I, we can
 1608
 00:49:45,890 --> 00:49:46,990
 0,270 270,525 525,660 660,810 810,1100
-simply look at this image
+simply look at this image|
+|
 
 1609
 00:49:47,280 --> 00:49:48,770
 0,380 380,650 650,905 905,1205 1205,1490
 and be able to attend
+并能够关注重要的部分，
 
 1610
 00:49:48,770 --> 00:49:50,520
 0,195 195,390 390,720 720,1100
-to the important parts.|
+to the important parts,|
 |
 
 1611
 00:49:50,590 --> 00:49:51,660
 0,260 260,425 425,635 635,815 815,1070
-We can see that it's
-我们可以看到钢铁侠在图像中向你走来，然后我们可以更进一步地关注，好的，关于钢铁侠的哪些细节可能是重要的。
+we can see that it's
+我们可以看到钢铁侠在图像中向你走来，
 
 1612
 00:49:51,660 --> 00:49:52,920
@@ -9105,7 +9139,8 @@ iron man coming at you
 1613
 00:49:52,920 --> 00:49:54,525
 0,240 240,450 450,570 570,800 1300,1605
-right in the image and
+right in the image| and
+|然后我们可以更进一步地关注，
 
 1614
 00:49:54,525 --> 00:49:55,500
@@ -9115,12 +9150,14 @@ then we can focus in
 1615
 00:49:55,500 --> 00:49:56,490
 0,120 120,315 315,585 585,795 795,990
-a little further and say,
+a little further and say,|
+|
 
 1616
 00:49:56,490 --> 00:49:57,525
 0,225 225,405 405,540 540,750 750,1035
 okay, what are the details
+好的，关于钢铁侠的哪些细节可能是重要的，
 
 1617
 00:49:57,525 --> 00:49:58,650
@@ -9130,19 +9167,20 @@ about iron man that may
 1618
 00:49:58,650 --> 00:49:59,940
 0,210 210,530
-be important.|
+be important,|
 |
 
 1619
 00:50:00,170 --> 00:50:01,855
 0,260 260,470 470,820 1170,1460 1460,1685
-What is key? What you're
-什么是关键？你所做的是，你的大脑正在识别哪些部分正在关注，哪些部分需要关注，然后提取那些值得最高关注的特征。
+what is key,| what you're
+什么是关键，|你所做的是，
 
 1620
 00:50:01,855 --> 00:50:03,325
 0,240 240,570 570,825 825,1110 1110,1470
-doing is your brain is
+doing is,| your brain is
+|你的大脑正在识别哪些部分正在关注，
 
 1621
 00:50:03,325 --> 00:50:05,620
@@ -9152,7 +9190,8 @@ identifying which parts are attending
 1622
 00:50:05,620 --> 00:50:07,735
 0,290 1000,1350 1350,1620 1620,1890 1890,2115
-to, to attend to, and
+to, to attend to,| and
+|然后提取那些值得最高关注的特征，
 
 1623
 00:50:07,735 --> 00:50:09,900
@@ -9162,14 +9201,14 @@ then extracting those features that
 1624
 00:50:10,280 --> 00:50:12,580
 0,400 510,800 800,1090 1140,1540
-deserve the highest attention.|
+deserve the highest attention,|
 |
 
 1625
 00:50:13,060 --> 00:50:14,055
 0,290 290,515 515,710 710,830 830,995
-The first part of this
-这个问题的第一部分确实是最有趣和最具挑战性的。
+the first part of this
+这个问题的第一部分确实是最有趣和最具挑战性的，
 
 1626
 00:50:14,055 --> 00:50:15,740
@@ -9179,34 +9218,38 @@ problem is really the most
 1627
 00:50:16,360 --> 00:50:18,060
 0,290 290,485 485,790 810,1210
-interesting and challenging one.|
+interesting and challenging one,|
 |
 
 1628
 00:50:18,060 --> 00:50:20,115
 0,380 550,945 945,1230 1230,1610 1690,2055
-And it's very similar to
-它与搜索的概念非常相似。实际上，这就是搜索正在做的事情，获取一些更大的信息主体，并试图提取和识别重要的部分。
+and it's very similar to
+它与搜索的概念非常相似，
 
 1629
 00:50:20,115 --> 00:50:22,160
 0,255 255,540 540,855 855,1175 1645,2045
-the concept of search. {Effectively,,that's
+the concept of search,| {effectively\,,that's
+|实际上，这就是搜索做的事情，
 
 1630
 00:50:22,210 --> 00:50:23,420
 0,395 395,545 545,740 740,920 920,1210
--} what search is doing,
+-} what search is doing,|
+|
 
 1631
 00:50:23,800 --> 00:50:26,240
 0,395 395,755 755,1120 1710,2075 2075,2440
 taking some larger body of
+获取一些更大的信息主体，
 
 1632
 00:50:26,260 --> 00:50:27,890
 0,380 380,695 695,965 965,1265 1265,1630
-information and trying to extract
+information| and trying to extract
+|并试图提取和识别重要的部分。
 
 1633
 00:50:28,180 --> 00:50:30,020
@@ -9217,40 +9260,44 @@ and identify the important parts.|
 1634
 00:50:30,810 --> 00:50:31,595
 0,275 275,380 380,485 485,635 635,785
-So {let's -} go {there,next.
-接下来我们就去那里吧。搜索是如何工作的？
+So {let's -} go {there,next
+所以，我们我们去那里，搜索是如何工作的，
 
 1635
 00:50:31,595 --> 00:50:33,070
 0,275 445,735 735,915 915,1140 1140,1475
--} How does search work?|
+-}, how does search work,|
 |
 
 1636
 00:50:33,670 --> 00:50:34,800
 0,350 350,560 560,830 830,935 935,1130
-You're thinking you're in this
-你认为你是这个班的学生。我如何才能了解更多关于神经网络的知识？嗯，在这个时代，除了来到这里加入我们之外，你可能会做的一件事就是上网，把所有的视频都放在网上，试图找到匹配的东西，进行搜索操作。所以你有一个像YouTube这样的巨型数据库，你想找到一段视频。
+you're thinking you're in this
+你认为你是这个班的学生，
 
 1637
 00:50:34,800 --> 00:50:36,000
 0,320 460,735 735,855 855,990 990,1200
-class. {How,can -} I learn
+class,| {how,can -} I learn
+|我如何才能了解更多关于神经网络的知识，
 
 1638
 00:50:36,000 --> 00:50:37,730
 0,240 240,450 450,690 690,950 1330,1730
-more about neural networks? Well,
+more about neural networks,| well,
+|嗯，在这个时代，
 
 1639
 00:50:38,080 --> 00:50:38,960
 0,275 275,425 425,545 545,635 635,880
-in this day and age,
+in this day and age,|
+|
 
 1640
 00:50:38,980 --> 00:50:40,100
 0,305 305,500 500,665 665,830 830,1120
 one thing you may do
+除了来到这里加入我们之外，
 
 1641
 00:50:40,270 --> 00:50:41,415
@@ -9260,78 +9307,86 @@ besides coming here and joining
 1642
 00:50:41,415 --> 00:50:42,870
 0,335 505,810 810,1065 1065,1245 1245,1455
-us is going to the
+us| is going to the
+|你可能会做的一件事就是上网，
 
 1643
 00:50:42,870 --> 00:50:44,570
 0,380 730,1065 1065,1305 1305,1455 1455,1700
-Internet, having all the videos
+Internet,| having all the videos
+|把所有的视频都放在网上，
 
 1644
 00:50:44,590 --> 00:50:45,840
 0,305 305,590 590,875 875,1040 1040,1250
-out there, trying to find
+out there,| trying to find
+|试图找到匹配的东西，
 
 1645
 00:50:45,840 --> 00:50:47,835
 0,350 430,720 720,1010 1510,1815 1815,1995
-something that matches, doing a
+something that matches,| doing a
+|进行搜索操作，
 
 1646
 00:50:47,835 --> 00:50:50,085
 0,270 270,665 1495,1860 1860,2100 2100,2250
-search {operation.,So -} you have
+search operation,| so you have
+|所以你有一个巨型数据库，比如 YouTube ，
 
 1647
 00:50:50,085 --> 00:50:51,620
 0,135 135,330 330,665 895,1215 1215,1535
-a giant database like Youtube,
+a giant database, like YouTube,|
+|
 
 1648
 00:50:51,700 --> 00:50:52,575
 0,275 275,455 455,605 605,740 740,875
 you want to find a
+你想找到一段视频，
 
 1649
 00:50:52,575 --> 00:50:53,520
 0,245
-video.|
+video,|
 |
 
 1650
 00:50:53,700 --> 00:50:55,360
 0,290 290,545 545,910 990,1310 1310,1660
-You enter in your query,
-你输入你的问题，深度学习。
+you enter in your query,
+你输入你的问题，深度学习，
 
 1651
 00:50:55,560 --> 00:50:57,020
 0,305 305,610
-deep learning.|
+deep learning,|
 |
 
 1652
 00:50:57,560 --> 00:50:59,170
 0,395 395,790 810,1100 1100,1340 1340,1610
-And what comes out are
-结果是一些可能的结果，对吗？
+and what comes out are
+结果是一些可能的结果，
 
 1653
 00:50:59,170 --> 00:51:01,780
 0,270 270,620 1060,1580 1870,2270
-some possible outputs, right?|
+some possible outputs, right,|
 |
 
 1654
 00:51:02,200 --> 00:51:03,390
 0,275 275,500 500,800 800,1040 1040,1190
-For every video in the
-对于数据库中的每个视频，都会有一些与该视频相关的关键信息，比如标题。
+for every video in the
+对于数据库中的每个视频，
 
 1655
 00:51:03,390 --> 00:51:04,965
 0,260 850,1110 1110,1260 1260,1440 1440,1575
-database, there is going to
+database,| there is going to
+|都会有一些与该视频相关的关键信息，
 
 1656
 00:51:04,965 --> 00:51:06,600
@@ -9341,24 +9396,26 @@ be some key information related
 1657
 00:51:06,600 --> 00:51:08,750
 0,350 1150,1530 1530,1740 1740,1860 1860,2150
-to that to that video,
+to that to that video,|
+|
 
 1658
 00:51:09,160 --> 00:51:10,780
 0,335 335,455 455,620 620,910
-let's say the title.|
-|
+let's say the title,|
+比如标题，|
 
 1659
 00:51:11,160 --> 00:51:12,700
 0,400 540,815 815,980 980,1205 1205,1540
-Now to do the search,
-现在要进行搜索，任务是找到您的查询和这些标题之间的重叠部分，对吗？数据库中的密钥。
+now to do the search,|
+现在要进行搜索，|
 
 1660
 00:51:13,710 --> 00:51:15,760
 0,400 660,950 950,1220 1220,1600 1650,2050
 what the task is to
+任务是找到你的查询和这些标题之间的重叠部分，
 
 1661
 00:51:16,140 --> 00:51:18,275
@@ -9373,19 +9430,20 @@ query and each of these
 1663
 00:51:19,955 --> 00:51:21,935
 0,480 480,825 825,1125 1125,1445 1675,1980
-titles right? The keys in
+titles, right,| the keys in
+|数据库中的键，
 
 1664
 00:51:21,935 --> 00:51:23,160
 0,165 165,425
-the database.|
+the database,|
 |
 
 1665
 00:51:23,230 --> 00:51:24,360
 0,290 290,455 455,620 620,770 770,1130
-What we want to compute
-我们要计算的是查询和这些键之间的相似性和相关性的度量。
+what we want to compute
+我们要计算的是查询和这些键之间的相似性和相关性的度量，
 
 1666
 00:51:24,360 --> 00:51:26,025
@@ -9400,31 +9458,32 @@ and relevance between the query
 1668
 00:51:28,570 --> 00:51:30,220
 0,335 335,620 620,970
-and these keys.|
+and these keys,|
 |
 
 1669
 00:51:30,520 --> 00:51:32,220
 0,335 335,650 650,950 950,1270 1410,1700
-How similar are they to
-它们与我们所需的查询有多相似？
+how similar are they to
+它们与我们所需的查询有多相似，
 
 1670
 00:51:32,220 --> 00:51:33,800
 0,195 195,570 570,950
-our desired query?|
+our desired query,|
 |
 
 1671
 00:51:33,840 --> 00:51:34,730
 0,275 275,410 410,545 545,695 695,890
-And we can do this
-我们可以一步一步地做到这一点，让我们来看一段关于优雅的巨型海龟的视频的第一个选项。与我们对深度学习的质疑不太相似，深度学习是我们的第二个选择。
+and we can do this
+我们可以一步一步地做到这一点，
 
 1672
 00:51:34,730 --> 00:51:36,485
 0,210 210,435 435,770 1270,1635 1635,1755
-step by step, let's say
+step by step,| let's say
+|让我们来看一段关于优雅的巨型海龟的视频的第一个选项，
 
 1673
 00:51:36,485 --> 00:51:38,290
@@ -9439,7 +9498,8 @@ video about the elegant giant
 1675
 00:51:40,355 --> 00:51:42,125
 0,255 255,665 955,1260 1260,1470 1470,1770
-sea turtles. {Not,that -} similar
+sea turtles,| {not,that -} similar
+|与我们对深度学习的查询不太相似，
 
 1676
 00:51:42,125 --> 00:51:43,220
@@ -9449,14 +9509,14 @@ to our query about deep
 1677
 00:51:43,220 --> 00:51:46,140
 0,290 1150,1455 1455,1710 1710,2060
-learning, our second option.|
-|
+learning,| our second option,
+|我们的第二个选项，深度学习入门，
 
 1678
 00:51:46,150 --> 00:51:48,045
 0,400 540,800 800,965 965,1270 1590,1895
-Introduction to deep learning, the
-深度学习入门，这堂课的第一堂入门课？是的，非常相关。第三个选项，一段关于已故伟大的科比的视频。并不是很相关。
+introduction to deep learning,| the
+|这节课的第一节入门课，
 
 1679
 00:51:48,045 --> 00:51:49,455
@@ -9466,7 +9526,8 @@ first introductory lecture on this
 1680
 00:51:49,455 --> 00:51:52,770
 0,305 505,905 1075,1440 1440,1805 3025,3315
-class? Yes, highly relevant. {The,third
+class,| yes, highly relevant,| {The,third
+|是的，非常相关，|第三个选项，一段关于已故伟大的科比的视频，
 
 1681
 00:51:52,770 --> 00:51:54,450
@@ -9481,19 +9542,20 @@ the late and great Kobe
 1683
 00:51:55,920 --> 00:51:58,020
 0,470 550,855 855,1050 1050,1340
-{Bryant.,Not -} that relevant.|
-|
+Bryant,| not that relevant,|
+|并不是很相关，|
 
 1684
 00:51:58,020 --> 00:51:59,430
 0,240 240,525 525,900 900,1200 1200,1410
-The key operation here is
-这里的关键操作是进行相似性计算，将查询和关键字结合在一起。
+the key operation here is
+这里的关键操作是，
 
 1685
 00:51:59,430 --> 00:52:00,780
 0,180 180,330 330,480 480,690 690,1350
-that there is this similarity
+that,| there is this similarity
+|进行相似性计算，将查询和关键字结合在一起，
 
 1686
 00:52:00,780 --> 00:52:02,985
@@ -9503,14 +9565,14 @@ computation bringing the query and
 1687
 00:52:02,985 --> 00:52:04,640
 0,150 150,425 505,905
-the key together.|
+the key together,|
 |
 
 1688
 00:52:05,000 --> 00:52:06,775
 0,290 290,575 575,970 1260,1565 1565,1775
-The final step is now
-最后一步是我们已经确定了哪些关键是相关的，提取相关信息，我们想要关注的是什么，那就是视频本身。我们称这为价值，因为搜索执行得很好，我们已经成功地确定了您将想要关注的关于深度学习的相关视频。
+the final step is| now
+最后一步是，|我们已经确定了哪些关键是相关的，
 
 1689
 00:52:06,775 --> 00:52:08,290
@@ -9520,12 +9582,14 @@ that we've identified what key
 1690
 00:52:08,290 --> 00:52:10,710
 0,150 150,440 1390,1995 1995,2160 2160,2420
-is relevant, extracting the relevant
+is relevant,| extracting the relevant
+|提取相关信息，
 
 1691
 00:52:11,030 --> 00:52:12,205
 0,395 395,695 695,860 860,1010 1010,1175
-information, what we want to
+information,| what we want to
+|我们想要关注的是什么，那就是视频本身，
 
 1692
 00:52:12,205 --> 00:52:13,885
@@ -9535,27 +9599,32 @@ pay attention to, and that's
 1693
 00:52:13,885 --> 00:52:15,640
 0,90 90,335 385,785 1225,1530 1530,1755
-the video itself. {We,call -}
+the video itself,| {we,call -}
+|我们称这为值，
 
 1694
 00:52:15,640 --> 00:52:17,425
 0,210 210,360 360,620 1150,1515 1515,1785
-this the value, and because
+this the value,| and because
+|因为搜索执行得很好，
 
 1695
 00:52:17,425 --> 00:52:19,290
 0,180 180,375 375,695 1045,1445 1465,1865
-the search is implemented well,
+the search is implemented well,|
+|
 
 1696
 00:52:19,610 --> 00:52:21,720
 0,455 455,790 1380,1685 1685,1850 1850,2110
 we've successfully identified the relevant
+我们已经成功地确定了深度学习相关的视频，
 
 1697
 00:52:21,740 --> 00:52:23,335
 0,365 365,650 650,860 860,1150 1290,1595
-video on deep learning that
+video on deep learning,| that
+|你将想要关注的。
 
 1698
 00:52:23,335 --> 00:52:24,055
@@ -9572,56 +9641,61 @@ to pay attention to.|
 00:52:26,140 --> 00:52:27,765
 0,260 260,500 500,790 960,1340 1340,1625
 And it's this, this idea,
-正是这种，这种想法，这种直觉，提出一个问题，试图找到相似之处，试图提取相关的价值观，形成自我关注的基础。
+正是这种，这种想法，这种直觉，
 
 1701
 00:52:27,765 --> 00:52:29,850
 0,180 180,695 775,1140 1140,1505 1795,2085
-this intuition of giving a
+this intuition| of giving a
+|提出一个问题，试图找到相似之处，
 
 1702
 00:52:29,850 --> 00:52:31,730
 0,320 430,750 750,930 930,1125 1125,1880
-query, trying to find similarity,
+query, trying to find similarity,|
+|
 
 1703
 00:52:31,750 --> 00:52:33,150
 0,335 335,620 620,890 890,1130 1130,1400
 trying to extract the related
+试图提取相关的值，
 
 1704
 00:52:33,150 --> 00:52:35,000
 0,350 790,1125 1125,1395 1395,1590 1590,1850
-values that form the basis
+values,| that form the basis
+|形成自我注意力的基础，
 
 1705
 00:52:35,050 --> 00:52:36,720
 0,305 305,590 590,970
-of self attention.|
+of self attention,|
 |
 
 1706
 00:52:37,040 --> 00:52:38,260
 0,305 305,485 485,635 635,875 875,1220
-And how it works in
-以及它如何在像变压器这样的神经网络中工作。
+and how it works in
+以及它如何在神经网络中工作，比如转换器。
 
 1707
 00:52:38,260 --> 00:52:40,520
 0,315 315,585 585,980 1060,1610
-neural networks like transformers.|
+neural networks, like transformers.|
 |
 
 1708
 00:52:40,520 --> 00:52:42,635
 0,350 400,660 660,920 1510,1920 1920,2115
 So to go concretely into
-具体来说，让我们回到我们的课文，我们的语言例子。
+所以具体来说，
 
 1709
 00:52:42,635 --> 00:52:44,410
 0,285 285,635 1015,1380 1380,1500 1500,1775
-this, right, let's go back
+this, right,| let's go back
+|让我们回到我们的文本，我们的语言例子，
 
 1710
 00:52:44,430 --> 00:52:45,830
@@ -9631,14 +9705,14 @@ now to our text, our
 1711
 00:52:45,830 --> 00:52:47,300
 0,290 400,800
-language example.|
+language example,|
 |
 
 1712
 00:52:47,770 --> 00:52:50,210
 0,290 290,455 455,730 1800,2120 2120,2440
-With the sentence, our goal
-对于句子，我们的目标是识别和注意输入中与句子语义相关的特征。
+with the sentence,| our goal
+对于句子，|我们的目标是识别和注意输入中的特征，
 
 1713
 00:52:50,260 --> 00:52:52,005
@@ -9648,12 +9722,14 @@ is to identify and attend
 1714
 00:52:52,005 --> 00:52:53,600
 0,240 240,545 595,900 900,1200 1200,1595
-to features in this input
+to features in this input|
+|
 
 1715
 00:52:53,830 --> 00:52:55,545
 0,260 260,500 500,880 1260,1550 1550,1715
 that are relevant to the
+与句子语义相关的。
 
 1716
 00:52:55,545 --> 00:52:57,140
@@ -9665,17 +9741,19 @@ semantic meaning of the sentence.|
 00:52:58,670 --> 00:53:00,865
 0,400 870,1205 1205,1540 1590,1910 1910,2195
 Now, first step, we have
-现在，第一步，我们有顺序了。我们有秩序。我们已经消除了复发，对吧？我们一下子把所有的时间步调都输入进去。
+现在，第一步，我们有顺序，
 
 1718
 00:53:00,865 --> 00:53:03,070
 0,365 595,885 885,1110 1110,1445 1735,2205
-sequence. {We,have -} order. We've
+sequence, {we,have -} order,| we've
+|我们已经消除了递归，
 
 1719
 00:53:03,070 --> 00:53:05,275
 0,555 555,1140 1140,1460 1510,1890 1890,2205
-eliminated recurrence, right? We're feeding
+eliminated recurrence, right,| we're feeding
+|我们把所有的时间步长都输入进去，
 
 1720
 00:53:05,275 --> 00:53:06,730
@@ -9685,14 +9763,14 @@ in all the time steps
 1721
 00:53:06,730 --> 00:53:08,080
 0,255 255,420 420,710
-all at once.|
+all at once,|
 |
 
 1722
 00:53:08,080 --> 00:53:09,055
 0,210 210,435 435,600 600,735 735,975
-We still need a way
-我们仍然需要一种方法来编码和捕获关于顺序和位置依赖的信息。
+we still need a way
+我们仍然需要一种方法来编码和捕获关于顺序和位置依赖的信息，
 
 1723
 00:53:09,055 --> 00:53:10,980
@@ -9707,39 +9785,44 @@ information about order and this
 1725
 00:53:12,920 --> 00:53:14,600
 0,545 545,1060
-positional dependence.|
+positional dependence,|
 |
 
 1726
 00:53:14,850 --> 00:53:16,070
 0,290 290,440 440,590 590,880 930,1220
-How this is done is
-如何做到这一点是位置编码的想法，它捕获了序列中存在的一些固有顺序信息。我只想简单地谈一下这一点，但这个想法与我之前介绍过的嵌入的想法有关。
+how this is done, is
+如何做到这一点，是位置编码的想法，
 
 1727
 00:53:16,070 --> 00:53:19,120
 0,285 285,600 600,920 1810,2325 2325,3050
-this idea of positional encoding,
+this idea of positional encoding,|
+|
 
 1728
 00:53:19,380 --> 00:53:21,940
 0,350 350,845 845,1150 1590,2180 2180,2560
 which captures some inherent order
+它捕获了序列中存在的一些固有顺序信息，
 
 1729
 00:53:22,140 --> 00:53:24,010
 0,400 720,1120 1140,1430 1430,1595 1595,1870
-information present in the sequence.
+information present in the sequence,|
+|
 
 1730
 00:53:24,570 --> 00:53:25,445
 0,350 350,455 455,605 605,740 740,875
 I'm just going to touch
+我只想简单地谈一下这一点，
 
 1731
 00:53:25,445 --> 00:53:27,185
 0,150 150,375 375,660 660,995 1465,1740
-on this very briefly, but
+on this very briefly,| but
+|但这个想法与我之前介绍过的嵌入的想法有关，
 
 1732
 00:53:27,185 --> 00:53:28,640
@@ -9754,14 +9837,14 @@ this idea of embeddings, which
 1734
 00:53:30,050 --> 00:53:31,960
 0,240 240,540 540,860
-I introduced earlier.|
+I introduced earlier,|
 |
 
 1735
 00:53:32,060 --> 00:53:33,445
 0,290 290,470 470,760 900,1205 1205,1385
-What is done is a
-所做的是使用神经网络层来编码位置信息，该位置信息根据本文中的顺序捕获相对关系。
+what is done is a
+所做的是使用神经网络层来编码位置信息，
 
 1736
 00:53:33,445 --> 00:53:34,980
@@ -9771,7 +9854,8 @@ neural network layer is used
 1737
 00:53:35,270 --> 00:53:37,855
 0,260 260,905 905,1480 1500,1900 2250,2585
-to encode positional information that
+to encode positional information,| that
+|位置信息根据本文中的顺序捕获相对关系，
 
 1738
 00:53:37,855 --> 00:53:41,185
@@ -9781,31 +9865,31 @@ captures the relative relationships in
 1739
 00:53:41,185 --> 00:53:43,195
 0,180 180,375 375,695 1105,1505 1675,2010
-terms of order within within
+terms of order within, within
 
 1740
 00:53:43,195 --> 00:53:44,300
 0,255 255,575
-this text.|
+this text,|
 |
 
 1741
 00:53:45,440 --> 00:53:46,590
 0,365 365,500 500,635 635,830 830,1150
-That the high level concept,
-这是高层次的概念，对吗？
+that the high level concept,
+这是高层次的概念，
 
 1742
 00:53:46,880 --> 00:53:48,100
 0,400
-right?|
+right,|
 |
 
 1743
 00:53:48,100 --> 00:53:49,350
 0,225 225,390 390,600 600,885 885,1250
-We're still being able to
-我们仍然能够一次处理所有这些时间步长。没有时间、步骤或其他的概念。数据是单一的，但我们仍然了解到这种捕获位置顺序信息的编码。现在，我们的下一步是采用这种编码，并找出要注意的内容，就像我在YouTube示例中介绍的搜索操作一样。
+we're still being able to
+我们仍然能够一次处理所有这些时间步长，
 
 1744
 00:53:49,400 --> 00:53:51,070
@@ -9815,7 +9899,8 @@ process these time steps all
 1745
 00:53:51,070 --> 00:53:52,375
 0,180 180,470 730,990 990,1140 1140,1305
-at once. {There,is -} no
+at once,| {there,is -} no
+|没有时间、步骤或其他的概念，数据是单一的，
 
 1746
 00:53:52,375 --> 00:53:53,200
@@ -9825,12 +9910,14 @@ notion of time, step or
 1747
 00:53:53,200 --> 00:53:54,510
 0,195 195,420 420,630 630,870 870,1310
-{other.,The -} data is singular,
+other, the data is singular,|
+|
 
 1748
 00:53:54,890 --> 00:53:56,560
 0,335 335,670 750,1130 1130,1445 1445,1670
 but still we learn this
+但我们仍然了解到这种捕获位置顺序信息的编码，
 
 1749
 00:53:56,560 --> 00:53:58,830
@@ -9840,7 +9927,8 @@ encoding that captures the positional
 1750
 00:53:58,880 --> 00:54:02,185
 0,400 630,1030 2220,2620 2760,3065 3065,3305
-{order,information. -} Now our next
+{order,information -},| now our next
+|现在，我们的下一步是采用这种编码，
 
 1751
 00:54:02,185 --> 00:54:03,175
@@ -9850,12 +9938,14 @@ step is to take this
 1752
 00:54:03,175 --> 00:54:04,855
 0,495 495,705 705,945 945,1265 1375,1680
-encoding and figure out what
+encoding| and figure out what
+|并找出要注意的内容，
 
 1753
 00:54:04,855 --> 00:54:06,670
 0,225 225,465 465,785 1075,1475 1495,1815
-to attend to exactly like
+to attend to,| exactly like
+|就像我在 YouTube 示例中介绍的搜索操作一样，
 
 1754
 00:54:06,670 --> 00:54:08,365
@@ -9865,14 +9955,14 @@ that search operation that I
 1755
 00:54:08,365 --> 00:54:09,780
 0,330 330,540 540,675 675,935 1015,1415
-introduced with the Youtube example.|
+introduced with the YouTube example,|
 |
 
 1756
 00:54:10,630 --> 00:54:12,390
 0,500 500,650 650,970 1110,1610 1610,1760
-Extracting a query, extracting a
-提取查询、提取关键字、提取值并将它们彼此关联。
+extracting a query, extracting a
+提取查询，提取关键字，提取值，并将它们彼此关联。
 
 1757
 00:54:12,390 --> 00:54:14,130
@@ -9889,19 +9979,19 @@ relating them to each other.|
 00:54:15,960 --> 00:54:17,645
 0,400 690,965 965,1160 1160,1430 1430,1685
 So we use neural network
-因此，我们使用神经网络层来准确地实现这一点。
+因此，我们使用神经网络层来实现这一点，
 
 1760
 00:54:17,645 --> 00:54:19,270
 0,450 450,615 615,875 895,1260 1260,1625
-layers to do exactly this.|
+layers to do exactly this,|
 |
 
 1761
 00:54:19,900 --> 00:54:22,345
 0,240 240,525 525,930 930,1520 2080,2445
-Given this positional encoding, what
-对于这种位置编码，需要注意的是应用一个神经网络层，首先对其进行转换，生成查询。
+given this positional encoding,| what
+对于这种位置编码，|需要注意的是应用一个神经网络层，
 
 1762
 00:54:22,345 --> 00:54:24,535
@@ -9911,29 +10001,32 @@ attention does is applies a
 1763
 00:54:24,535 --> 00:54:27,090
 0,210 210,480 480,875 1855,2280 2280,2555
-neural network layer, transforming that
+neural network layer,| transforming that,
+|对其进行转换，首先生成查询，
 
 1764
 00:54:27,410 --> 00:54:30,140
 0,350 350,910 1080,1355 1355,1660
-first, generating the query.|
+first generating the query,|
 |
 
 1765
 00:54:30,420 --> 00:54:32,150
 0,290 290,455 455,730 930,1330 1380,1730
-We do this again using
-我们使用单独的神经网络层再次这样做，这是一组不同的权重，一组不同的参数，然后以不同的方式转换位置嵌入，生成第二个输出，即密钥。
+we do this again using
+我们使用单独的神经网络层再次这样做，
 
 1766
 00:54:32,150 --> 00:54:33,820
 0,270 270,570 570,900 900,1160 1270,1670
-a separate neural network layer
+a separate neural network layer|
+|
 
 1767
 00:54:34,230 --> 00:54:35,240
 0,320 320,515 515,635 635,755 755,1010
 and this is a different
+这是一组不同的权重，一组不同的参数，
 
 1768
 00:54:35,240 --> 00:54:36,275
@@ -9943,7 +10036,8 @@ set of weights, a different
 1769
 00:54:36,275 --> 00:54:37,990
 0,210 210,345 345,875 1165,1440 1440,1715
-set of parameters that then
+set of parameters,| that then
+|然后以不同的方式转换位置嵌入，
 
 1770
 00:54:38,160 --> 00:54:40,115
@@ -9953,29 +10047,32 @@ transform that positional embedding in
 1771
 00:54:40,115 --> 00:54:42,740
 0,105 105,300 300,635 1075,1655 2335,2625
-a different way, generating a
+a different way,| generating a
+|生成第二个输出，即关键字，
 
 1772
 00:54:42,740 --> 00:54:45,340
 0,290 1120,1425 1425,1635 1635,1940
-second output, the key.|
+second output, the key,|
 |
 
 1773
 00:54:45,340 --> 00:54:47,680
 0,270 270,585 585,980 1690,2040 2040,2340
-And finally, this operation is
-最后，对第三层重复该操作，第三组权重生成值。
+and finally, this operation is
+最后，对第三层重复该操作，
 
 1774
 00:54:47,680 --> 00:54:49,740
 0,350 550,825 825,1020 1020,1340 1660,2060
-repeated with a third layer,
+repeated with a third layer,|
+|
 
 1775
 00:54:49,880 --> 00:54:51,180
 0,305 305,560 560,755 755,875 875,1300
 a third set of weights
+第三组权重生成值。
 
 1776
 00:54:51,260 --> 00:54:53,060
@@ -9987,7 +10084,7 @@ generating the value.|
 00:54:53,260 --> 00:54:54,645
 0,400 510,800 800,1040 1040,1235 1235,1385
 Now, with these three in
-现在，有了这三个关键字、查询、关键字和值，我们可以将它们相互比较，试图找出网络应该在自我输入中关注什么是重要的。
+现在，有了这三个，查询、关键字和值，
 
 1778
 00:54:54,645 --> 00:54:56,760
@@ -9997,22 +10094,26 @@ hand, the key, the query,
 1779
 00:54:56,760 --> 00:54:57,710
 0,255 255,435 435,570 570,690 690,950
-the key and the value,
+the key and the value,|
+|
 
 1780
 00:54:58,120 --> 00:54:59,475
 0,260 260,520 720,1040 1040,1235 1235,1355
 we can compare them to
+我们可以将它们相互比较，
 
 1781
 00:54:59,475 --> 00:55:00,780
 0,120 120,395 595,900 900,1125 1125,1305
-each other to try to
+each other,| to try to
+|试图找出，
 
 1782
 00:55:00,780 --> 00:55:02,595
 0,165 165,470 790,1190 1240,1545 1545,1815
-figure out where in that
+figure out,| where in that
+|网络应该在自我输入中关注什么是重要的，
 
 1783
 00:55:02,595 --> 00:55:04,590
@@ -10022,19 +10123,20 @@ self input the network should
 1784
 00:55:04,590 --> 00:55:05,990
 0,270 270,555 555,810 810,1050 1050,1400
-attend to what is important.|
+attend to what is important,|
 |
 
 1785
 00:55:07,040 --> 00:55:08,460
 0,290 290,620 620,755 755,1025 1025,1420
-And that's the key idea
-这就是这个相似性度量背后的关键思想，或者说你可以认为是注意力得分。
+and that's the key idea
+这就是这个相似性度量背后的关键思想，
 
 1786
 00:55:08,690 --> 00:55:11,005
 0,335 335,650 650,1340 1340,1810 2010,2315
-behind this similarity metric, or
+behind this similarity metric,| or
+|或者说你可以认为是注意力得分，
 
 1787
 00:55:11,005 --> 00:55:11,845
@@ -10044,14 +10146,14 @@ what you can think of
 1788
 00:55:11,845 --> 00:55:13,760
 0,240 240,495 495,845 895,1295
-as an attention score.|
+as an attention score,|
 |
 
 1789
 00:55:13,760 --> 00:55:15,095
 0,255 255,495 495,720 720,990 990,1335
-What we're doing is we're
-我们所做的是计算查询和键之间的相似性分数。
+what we're doing is,| we're
+我们所做的是，|我们计算查询和键之间的相似性分数，
 
 1790
 00:55:15,095 --> 00:55:17,140
@@ -10061,14 +10163,14 @@ computing a similarity score between
 1791
 00:55:17,250 --> 00:55:18,970
 0,290 290,610 870,1205 1205,1430 1430,1720
-a query and the key.|
+a query and the key,|
 |
 
 1792
 00:55:19,690 --> 00:55:21,300
 0,350 350,700 780,1055 1055,1295 1295,1610
-And remember that these query
-请记住，这些查询值和键值只是数字的数组。我们可以将它们定义为数字数组，您可以将其视为空间中的矢量。
+and remember that these query
+记住，这些查询值和键值只是数字的数组，
 
 1793
 00:55:21,300 --> 00:55:23,910
@@ -10078,7 +10180,8 @@ and key values are just
 1794
 00:55:23,910 --> 00:55:25,635
 0,435 435,600 600,890 1270,1530 1530,1725
-arrays of numbers. {We,can -}
+arrays of numbers,| {we,can -}
+|我们可以将它们定义为数字数组，
 
 1795
 00:55:25,635 --> 00:55:27,195
@@ -10088,43 +10191,43 @@ define them as arrays of
 1796
 00:55:27,195 --> 00:55:28,680
 0,275 745,1035 1035,1185 1185,1320 1320,1485
-numbers, which you can think
+numbers,| which you can think
+|你可以将其视为空间中的向量，
 
 1797
 00:55:28,680 --> 00:55:31,040
 0,290 400,800 910,1550 1720,2040 2040,2360
-of as vectors in space.|
+of as vectors in space,|
 |
 
 1798
 00:55:31,950 --> 00:55:33,770
 0,290 290,610 960,1235 1235,1490 1490,1820
-The query, the query values
-这个查询，查询值是不是一些向量的关键？
+the query, the query values
+查询值是一些向量，
 
 1799
 00:55:33,770 --> 00:55:35,590
 0,285 285,480 480,830 1180,1500 1500,1820
-are some vector the key?|
-|
+are some vector,| the key,
+|键值是其他一些向量，
 
 1800
 00:55:36,600 --> 00:55:37,710
 0,240 240,420 420,675 675,930 930,1110
-The key values are some
-关键字值是其他一些向量。
+the key values are some
 
 1801
 00:55:37,710 --> 00:55:38,980
 0,225 225,590
-other vector.|
+other vector,|
 |
 
 1802
 00:55:38,980 --> 00:55:40,630
 0,180 180,710 1030,1305 1305,1485 1485,1650
-And mathematically, the way that
-在数学上，我们可以比较这两个向量，以了解它们有多相似，是通过点积和比例来实现的。它捕捉到这些向量有多相似，它们是否指向同一个方向，对吧。
+and mathematically, the way that
+在数学上，我们可以比较这两个向量，
 
 1803
 00:55:40,630 --> 00:55:41,710
@@ -10134,27 +10237,31 @@ we can compare these two
 1804
 00:55:41,710 --> 00:55:43,675
 0,420 420,740 760,1160 1300,1635 1635,1965
-vectors to understand how similar
+vectors| to understand how similar
+|以了解它们有多相似，
 
 1805
 00:55:43,675 --> 00:55:45,445
 0,255 255,515 835,1125 1125,1395 1395,1770
-they are is by taking
+they are| is by taking
+|是通过点积和比例来实现的，
 
 1806
 00:55:45,445 --> 00:55:47,635
 0,270 270,480 480,815 1465,1800 1800,2190
-the dot product and scaling.
+the dot product and scaling
 
 1807
 00:55:47,635 --> 00:55:50,140
 0,275 415,975 975,1230 1230,1565 2215,2505
-{It,captures -} how similar these
+it,| captures how similar these
+|捕捉到这些向量有多相似，
 
 1808
 00:55:50,140 --> 00:55:52,030
 0,345 345,540 540,860 1420,1725 1725,1890
-vectors are, how whether or
+vectors are,| how whether or
+|它们是否指向同一个方向，
 
 1809
 00:55:52,030 --> 00:55:53,095
@@ -10164,19 +10271,20 @@ not they're pointing in the
 1810
 00:55:53,095 --> 00:55:54,680
 0,225 225,570 570,965
-same direction, right.|
+same direction, right,|
 |
 
 1811
 00:55:55,720 --> 00:55:57,615
 0,350 350,665 665,935 935,1490 1490,1895
-This is the similarity metric,
-这是相似性度量，如果你熟悉一点线性代数，这也被称为余弦相似性。
+this is the similarity metric,|
+这是相似性度量，|
 
 1812
 00:55:57,615 --> 00:55:59,160
 0,335 715,1005 1005,1140 1140,1275 1275,1545
 and if you are familiar
+如果你熟悉一点线性代数，
 
 1813
 00:55:59,160 --> 00:56:00,110
@@ -10186,24 +10294,26 @@ with a little bit of
 1814
 00:56:00,160 --> 00:56:01,800
 0,410 410,920 920,1100 1100,1355 1355,1640
-linear algebra, this is also
+linear algebra,| this is also
+|这也被称为余弦相似性，
 
 1815
 00:56:01,800 --> 00:56:03,710
 0,240 240,540 540,765 765,1170 1170,1910
-known as the cosine similarity.|
+known as the cosine similarity,|
 |
 
 1816
 00:56:04,160 --> 00:56:06,395
 0,350 370,770 1030,1430 1600,1980 1980,2235
-The operation functions exactly the
-该运算对矩阵的作用与此完全相同。如果我们将这个点积运算应用于键矩阵、键矩阵中的查询，我们就得到了这个相似性度量。
+the operation functions exactly the
+这个运算对矩阵的作用与此完全相同，
 
 1817
 00:56:06,395 --> 00:56:08,735
 0,195 195,495 495,875 925,1685 2035,2340
-same way for matrices. {If,we
+same way for matrices,| {if,we
+|如果我们将这个点积运算应用于查询和键矩阵，
 
 1818
 00:56:08,735 --> 00:56:10,210
@@ -10218,7 +10328,8 @@ operation to our query in
 1820
 00:56:12,125 --> 00:56:14,885
 0,210 210,845 925,1325 1465,2225 2455,2760
-key matrices, key matrices, we
+key matrices, key matrices,| we
+|我们就得到了这个相似性度量。
 
 1821
 00:56:14,885 --> 00:56:16,630
@@ -10229,24 +10340,25 @@ get this similarity metric out.|
 1822
 00:56:18,130 --> 00:56:19,240
 0,400
-Now.|
-现在。|
+Now,
+现在，在定义我们的下一步时，这是非常非常关键的，
 
 1823
 00:56:19,280 --> 00:56:20,670
 0,275 275,485 485,755 755,1040 1040,1390
-This is very, very key
-在定义我们的下一步时，这是非常非常关键的，根据网络在这一输入中应该实际关注的内容来计算注意力权重。
+this is very, very key
 
 1824
 00:56:20,810 --> 00:56:22,650
 0,400 570,1070 1070,1250 1250,1490 1490,1840
-in defining our next step,
+in defining our next step,|
+|
 
 1825
 00:56:23,330 --> 00:56:25,645
 0,500 500,850 930,1325 1325,1900 2010,2315
-computing the attention weighting in
+computing the attention weighting| in
+计算注意力权重，|根据网络在这一输入中应该实际关注的内容，
 
 1826
 00:56:25,645 --> 00:56:26,860
@@ -10261,26 +10373,25 @@ should actually attend to within
 1828
 00:56:28,465 --> 00:56:29,960
 0,330 330,725
-this input.|
+this input,|
 |
 
 1829
 00:56:30,460 --> 00:56:31,800
 0,395 395,770 770,1025 1025,1160 1160,1340
-This operation gives us a
-这个操作给了我们一个定义如何操作的分数。
+this operation gives us a
+这个操作给了我们一个分数，
 
 1830
 00:56:31,800 --> 00:56:35,440
 0,320 910,1230 1230,1730 2260,2660
-score which defines how.|
-|
+score,| which defines how,
+|定义输入数据的组件如何相互关联，
 
 1831
 00:56:35,670 --> 00:56:38,135
 0,400 1170,1570 1650,2030 2030,2270 2270,2465
-How the components of the
-输入数据的组件如何相互关联。
+how the components of the
 
 1832
 00:56:38,135 --> 00:56:40,175
@@ -10290,34 +10401,38 @@ input data are related to
 1833
 00:56:40,175 --> 00:56:41,160
 0,120 120,395
-each other.|
+each other,|
 |
 
 1834
 00:56:41,650 --> 00:56:43,220
 0,350 350,620 620,815 815,1090 1170,1570
-So, given a sentence, right
-因此，给出一个句子，当我们计算这个相似性得分度量时，我们就可以开始考虑权重，这些权重定义了序列数据的组成部分之间的关系。
+so, given a sentence, right,|
+因此，给出一个句子，|
 
 1835
 00:56:43,330 --> 00:56:45,600
 0,290 290,455 455,860 860,1180 1560,2270
 when we compute this similarity
+当我们计算这个相似性得分度量时，
 
 1836
 00:56:45,600 --> 00:56:47,565
 0,315 315,950 1300,1560 1560,1710 1710,1965
-score metric, we can then
+score metric,| we can then
+|我们就可以开始考虑权重，
 
 1837
 00:56:47,565 --> 00:56:49,815
 0,315 315,615 615,900 900,1235 1645,2250
-begin to think of weights
+begin to think of weights,|
+|
 
 1838
 00:56:49,815 --> 00:56:52,430
 0,375 375,690 690,960 960,1295 2215,2615
 that define the relationship between
+这些权重定义了序列数据的组成部分之间的关系，
 
 1839
 00:56:52,450 --> 00:56:54,480
@@ -10332,41 +10447,44 @@ the sequential data to each
 1841
 00:56:55,770 --> 00:56:56,620
 0,290
-other.|
+other,|
 |
 
 1842
 00:56:56,750 --> 00:56:58,690
 0,290 290,470 470,760 870,1270 1590,1940
-So, for example, in this
-例如，在这个带有文本句子的例子中，他抛出了网球发球。
+so, for example, in this
+例如，在这个带有文本句子的例子中，
 
 1843
 00:56:58,690 --> 00:57:00,510
 0,315 315,615 615,855 855,1160 1420,1820
-example with a text sentence,
+example with a text sentence,|
+|
 
 1844
 00:57:01,010 --> 00:57:02,395
 0,320 320,680 680,815 815,1040 1040,1385
 he tossed the tennis ball
+他抛出了网球发球，
 
 1845
 00:57:02,395 --> 00:57:03,860
 0,285 285,575
-to serve.|
+to serve,|
 |
 
 1846
 00:57:04,080 --> 00:57:05,510
 0,365 365,680 680,920 920,1145 1145,1430
-The goal with the score
-得分的目标是，序列中相互关联的单词应该具有较高的关注度，与网球相关的掷球相关。
+the goal with the score
+得分的目标是，
 
 1847
 00:57:05,510 --> 00:57:07,205
 0,225 225,500 610,1010 1210,1500 1500,1695
-is that words in the
+is that| words in the
+|序列中相互关联的单词应该具有较高的关注度，
 
 1848
 00:57:07,205 --> 00:57:08,435
@@ -10381,31 +10499,32 @@ each other should have high
 1850
 00:57:10,050 --> 00:57:12,605
 0,380 380,910 1200,1600 1920,2300 2300,2555
-attention weights ball related to
+attention weights,| ball related to
+|球与掷球相关，与网球相关。
 
 1851
 00:57:12,605 --> 00:57:14,860
 0,455 685,1035 1035,1245 1245,1505
-toss related to tennis.|
+toss, related to tennis.|
 |
 
 1852
 00:57:14,970 --> 00:57:17,300
 0,335 335,670 750,1340 1340,1720 2010,2330
 And this metric itself is
-而这一指标本身就是我们正在等待的关注。
+这一指标本身就是我们正在等待的关注，
 
 1853
 00:57:17,300 --> 00:57:19,060
 0,285 285,630 630,1010
-our attention waiting.|
+our attention waiting,|
 |
 
 1854
 00:57:19,060 --> 00:57:19,960
 0,150 150,255 255,375 375,600 600,900
-What we have done is
-我们所做的是通过软最大函数传递相似性分数，它所做的就是将这些值限制在0到1之间，因此您可以将这些值视为相对关注度的相对分数。
+what we have done is
+我们所做的是通过 softmax 函数传递相似性分数，
 
 1855
 00:57:19,960 --> 00:57:22,690
@@ -10415,12 +10534,14 @@ passed that similarity score through
 1856
 00:57:22,690 --> 00:57:25,615
 0,225 225,480 480,830 1840,2240 2620,2925
-a soft Max function, which
+a {softmax -} function,| which
+|它所做的就是，
 
 1857
 00:57:25,615 --> 00:57:26,875
 0,195 195,360 360,600 600,915 915,1260
-all it does is it
+all it does is,| it
+|将这些值限制在 0 到 1 之间，
 
 1858
 00:57:26,875 --> 00:57:28,495
@@ -10430,7 +10551,8 @@ constrains those values to be
 1859
 00:57:28,495 --> 00:57:30,250
 0,365 385,720 720,945 945,1235 1465,1755
-between zero and one, and
+between zero and one,| and
+|因此你可以将这些值视为相对关注度的相对分数。
 
 1860
 00:57:30,250 --> 00:57:31,045
@@ -10452,31 +10574,30 @@ relative attention weights.|
 00:57:35,880 --> 00:57:37,790
 0,400 1080,1385 1385,1565 1565,1730 1730,1910
 Finally, now that we have
-最后，现在我们有了这个指标，就可以了。
+最后，现在我们有了这个指标，
 
 1864
 00:57:37,790 --> 00:57:39,560
 0,195 195,645 645,870 870,1160
-this metric, that can.|
-|
+this metric,| that can
+|它可以捕捉到这种相似性的概念和这些内在的自我关系，
 
 1865
 00:57:39,930 --> 00:57:42,245
 0,530 530,725 725,995 995,1360 1560,2315
-Captures this notion of similarity
-捕捉到了这种相似性的概念和这些内在的自我关系。
+captures this notion of similarity
 
 1866
 00:57:42,245 --> 00:57:44,260
 0,165 165,455 775,1175 1195,1595 1615,2015
-and these internal self relationships.|
+and these internal self relationships,|
 |
 
 1867
 00:57:45,240 --> 00:57:46,755
 0,225 225,390 390,680 910,1260 1260,1515
-We can finally use this
-我们终于可以使用这个度量来提取值得高度关注的特征。
+we can finally use this
+我们终于可以使用这个度量来提取值得高度关注的特征，
 
 1868
 00:57:46,755 --> 00:57:49,425
@@ -10486,14 +10607,14 @@ metric to extract features that
 1869
 00:57:49,425 --> 00:57:51,500
 0,305 415,1095 1095,1335 1335,1655 1675,2075
-are deserving of high attention.|
+are deserving of high attention,|
 |
 
 1870
 00:57:52,570 --> 00:57:54,080
 0,275 275,410 410,670 840,1175 1175,1510
-And {that's -} the exact
-而这正是自我注意机制的最后一步。
+and {that's -} the exact
+这正是自我注意力机制的最后一步。
 
 1871
 00:57:54,160 --> 00:57:55,785
@@ -10510,34 +10631,36 @@ attention mechanism.|
 00:57:57,300 --> 00:57:59,040
 0,150 150,440 460,780 780,1100 1360,1740
 In that, we take that
-在这种情况下，我们采用关注度加权矩阵，将其乘以该值，得到的变换。
+在这种情况下，我们采用关注度加权矩阵，
 
 1874
 00:57:59,040 --> 00:58:01,710
 0,345 345,860 910,1640 1900,2520 2520,2670
-attention weighting matrix, multiply it
+attention weighting matrix,| multiply it
+|将其乘以该值，
 
 1875
 00:58:01,710 --> 00:58:03,060
 0,150 150,285 285,530 880,1170 1170,1350
-by the value and get
+by the value| and get
+|得到的原始数据的变换，
 
 1876
 00:58:03,060 --> 00:58:06,940
 0,290 460,860 2050,2450 2800,3200
-a transformed transformation of.|
-|
+a transformed transformation of
 
 1877
 00:58:07,130 --> 00:58:08,785
 0,290 290,470 470,710 710,1060 1350,1655
-Of the initial data as
-作为我们的输出，这反过来又反映了与高度关注相对应的特征。
+of the initial data| as
+|作为我们的输出，
 
 1878
 00:58:08,785 --> 00:58:10,410
 0,285 285,665 805,1095 1095,1305 1305,1625
-our output, which in turn
+our output,| which in turn
+|这反过来又反映了与高度关注相对应的特征。
 
 1879
 00:58:10,460 --> 00:58:12,330
@@ -10554,12 +10677,13 @@ to high attention.|
 00:58:15,960 --> 00:58:17,090
 0,245 245,490 630,890 890,1010 1010,1130
 All right, {let's -} take
-好了，让我们深呼吸。让我们回顾一下我们到目前为止所讨论的内容。
+好的，让我们深呼吸，
 
 1882
 00:58:17,090 --> 00:58:18,995
 0,120 120,380 760,1155 1155,1635 1635,1905
-a breath. Let's recap what
+a breath,| Let's recap what
+|让我们回顾一下我们到目前为止所讨论的内容。
 
 1883
 00:58:18,995 --> 00:58:20,150
@@ -10576,7 +10700,7 @@ far.|
 00:58:21,380 --> 00:58:22,870
 0,275 275,485 485,695 695,970 1230,1490
 The goal with this idea
-自我注意是变压器的支柱，这种想法的目标是消除重复，注意输入数据中最重要的特征。
+自我注意力的想法是转换器的支柱，
 
 1886
 00:58:22,870 --> 00:58:24,385
@@ -10586,12 +10710,14 @@ of self attention, the backbone
 1887
 00:58:24,385 --> 00:58:26,680
 0,270 270,875 895,1245 1245,1595 1825,2295
-of transformers, is to eliminate
+of transformers,| is to eliminate
+|目标是消除递归，
 
 1888
 00:58:26,680 --> 00:58:28,285
 0,620 820,1110 1110,1245 1245,1350 1350,1605
-recurrence, attend to the most
+recurrence,| attend to the most
+|注意输入数据中最重要的特征。
 
 1889
 00:58:28,285 --> 00:58:30,205
@@ -10608,34 +10734,37 @@ data.|
 00:58:31,210 --> 00:58:32,760
 0,275 275,425 425,700 1050,1370 1370,1550
 In an architecture, how this
-在架构中，它的实际部署方式是首先获取我们的输入数据，然后计算这些位置编码。
+在架构中，它的实际部署方式是，
 
 1892
 00:58:32,760 --> 00:58:35,810
 0,255 255,650 760,1310 1720,2120 2650,3050
-is actually deployed is first
+is actually deployed is,| first
+|首先获取我们的输入数据，
 
 1893
 00:58:35,950 --> 00:58:37,130
 0,305 305,470 470,680 680,905 905,1180
-we take our input data,
+we take our input data,|
+|
 
 1894
 00:58:37,570 --> 00:58:40,070
 0,290 290,710 710,1010 1010,1600 1740,2500
-we compute these positional encodings.|
-|
+we compute these positional encodings,|
+然后计算这些位置编码，|
 
 1895
 00:58:40,880 --> 00:58:42,990
 0,380 380,725 725,995 995,1570 1710,2110
-The neural network layers are
-神经网络层被三次应用，以将位置编码转换为每个关键查询和值矩阵。
+the neural network layers are
+神经网络层被三次应用，
 
 1896
 00:58:43,490 --> 00:58:46,195
 0,400 630,1240 1620,2020 2130,2450 2450,2705
-applied threefold to transform the
+applied threefold| to transform the
+|以将位置编码转换为每个键查询和值矩阵，
 
 1897
 00:58:46,195 --> 00:58:48,030
@@ -10650,19 +10779,20 @@ the key query and value
 1899
 00:58:50,840 --> 00:58:52,280
 0,730
-matrices.|
+matrices,|
 |
 
 1900
 00:58:52,290 --> 00:58:54,710
 0,260 260,410 410,700 1500,2120 2120,2420
-We can then compute the
-然后，我们可以根据之前进行的点积操作来计算自我注意权重分数，然后对这些特征进行自我关注。
+we can then compute the
+然后，我们可以计算自我注意力权重分数，
 
 1901
 00:58:54,710 --> 00:58:57,050
 0,320 340,705 705,1070 1090,1490 1960,2340
-self attention weight score according
+self attention weight score| according
+|根据之前进行的点积操作，
 
 1902
 00:58:57,050 --> 00:58:58,880
@@ -10672,46 +10802,49 @@ to the dot product operation
 1903
 00:58:58,880 --> 00:58:59,920
 0,210 210,345 345,510 510,720 720,1040
-that we went through prior
+that we went through prior|
+|
 
 1904
 00:59:00,540 --> 00:59:02,630
 0,305 305,610 690,1090 1140,1540 1800,2090
 and then self attend to
+然后对这些特征，对这些信息进行自我关注，
 
 1905
 00:59:02,630 --> 00:59:05,480
 0,210 210,530 670,945 945,1220
-these features to these.|
-|
+these features to these
 
 1906
 00:59:05,820 --> 00:59:08,195
 0,400 540,940 990,1390 1620,2015 2015,2375
-Information to extract features that
-提取值得高度关注的特征的信息这种方法在承担这种关注权重方面有什么强大的作用？
+information,| to extract features that
+|提取值得高度关注的特征，
 
 1907
 00:59:08,195 --> 00:59:12,170
 0,365 595,975 975,1355 3505,3795 3795,3975
-deserve high attention what is
+deserve high attention,| what is
+|这种方法有什么强大的作用，
 
 1908
 00:59:12,170 --> 00:59:13,960
 0,210 210,530 880,1200 1200,1455 1455,1790
-so powerful about this approach
+so powerful about this approach,|
+|
 
 1909
 00:59:14,460 --> 00:59:16,150
 0,380 380,725 725,1025 1025,1325 1325,1690
-in taking this attention weight?|
-|
+in taking this attention weight,|
+在获取注意力权重方面，|
 
 1910
 00:59:16,820 --> 00:59:17,825
 0,255 255,465 465,690 690,870 870,1005
-Putting it together with the
-把它和提取高注意力特征的价值放在一起，这个操作，我在右边展示的方案，定义了一个单独的自我注意头部，多个这些自我注意力头部可以链接在一起，形成更大的网络架构，你可以思考这些不同的头部，试图提取不同的信息，输入的不同相关部分，现在把我们正在处理的数据的非常非常丰富的编码和表示放在一起，直观地回到我们的铁人例子。这种多个自我注意头部的想法可能相当于提取数据中不同的显著特征和显著信息。
+putting it together with the
+把它和提取高注意力特征的价值放在一起，
 
 1911
 00:59:17,825 --> 00:59:20,045
@@ -10721,7 +10854,8 @@ value to extract high attention
 1912
 00:59:20,045 --> 00:59:22,930
 0,365 955,1245 1245,1515 1515,1895 2485,2885
-features is that this operation,
+features,| is that this operation,
+|这个操作，我在右边展示的方案，
 
 1913
 00:59:23,130 --> 00:59:24,350
@@ -10731,12 +10865,14 @@ the scheme that I'm showing
 1914
 00:59:24,350 --> 00:59:26,000
 0,225 225,360 360,620 880,1380 1380,1650
-on the right, defines a
+on the right,| defines a
+|定义了一个单独的自我注意头部，
 
 1915
 00:59:26,000 --> 00:59:28,385
 0,320 340,735 735,1125 1125,1520 2050,2385
-single self attention head and
+single self attention head| and
+|多个这些自我注意力头部可以链接在一起，
 
 1916
 00:59:28,385 --> 00:59:29,960
@@ -10746,32 +10882,38 @@ multiple of these self attention
 1917
 00:59:29,960 --> 00:59:31,690
 0,380 610,900 900,1080 1080,1350 1350,1730
-heads can be linked together
+heads can be linked together|
+|
 
 1918
 00:59:31,920 --> 00:59:34,420
 0,290 290,580 720,1120 1200,1595 1595,2500
-to form larger network architectures
+to form larger network architectures,|
+形成更大的网络架构，|
 
 1919
 00:59:34,680 --> 00:59:35,735
 0,290 290,440 440,590 590,800 800,1055
 where you can think about
+你可以思考这些不同的头部，
 
 1920
 00:59:35,735 --> 00:59:37,520
 0,240 240,525 525,905 1165,1500 1500,1785
-these different heads, trying to
+these different heads,| trying to
+|试图提取不同的信息，
 
 1921
 00:59:37,520 --> 00:59:39,970
 0,350 520,920 1120,1520 1720,2085 2085,2450
-extract different information, different relevant
+extract different information,| different relevant
+|输入的不同相关部分，
 
 1922
 00:59:40,020 --> 00:59:41,450
 0,320 320,500 500,710 710,1060 1170,1430
-parts of the input, to
+parts of the input,| to
+|现在把我们正在处理的数据的非常非常丰富的编码和表示放在一起，
 
 1923
 00:59:41,450 --> 00:59:42,695
@@ -10791,12 +10933,14 @@ of the data that we're
 1926
 00:59:46,970 --> 00:59:49,670
 0,225 225,590 1270,2190 2190,2520 2520,2700
-working with intuitively back to
+working with,| intuitively back to
+|直观地回到我们的钢铁侠例子，
 
 1927
 00:59:49,670 --> 00:59:51,485
 0,105 105,380 460,855 855,1250 1540,1815
-our iron man example. {What,this
+our iron man example,| {what,this
+|这种多个自我注意头部的想法，
 
 1928
 00:59:51,485 --> 00:59:52,820
@@ -10806,7 +10950,8 @@ our iron man example. {What,this
 1929
 00:59:52,820 --> 00:59:55,145
 0,350 550,950 1270,1665 1665,2025 2025,2325
-attention heads can amount to
+attention heads| can amount to
+|可能相当于提取数据中不同的显著特征和显著信息，
 
 1930
 00:59:55,145 --> 00:59:57,730
@@ -10821,19 +10966,20 @@ and salient information in the
 1932
 00:59:59,645 --> 01:00:01,500
 0,275 445,840 840,1475
-data is extracted.|
+data is extracted,|
 |
 
 1933
 01:00:01,510 --> 01:00:03,210
 0,400 480,800 800,1115 1115,1430 1430,1700
-First, maybe you consider iron
-首先，也许你认为钢铁侠的注意力是第一，你可能有额外的注意力头脑，他们正在挑选数据的其他相关部分，这可能是我们之前没有意识到的。例如，背景中正在追逐钢铁侠的建筑或宇宙飞船。
+first, maybe you consider iron
+首先，也许你认为钢铁侠的注意力一，
 
 1934
 01:00:03,210 --> 01:00:05,820
 0,350 910,1260 1260,1515 1515,1820 2320,2610
-man attention head one, and
+man attention head one,| and
+|你可能有额外的注意力头，
 
 1935
 01:00:05,820 --> 01:00:07,130
@@ -10843,7 +10989,8 @@ you may have additional attention
 1936
 01:00:07,420 --> 01:00:08,835
 0,400 540,785 785,920 920,1145 1145,1415
-heads that are picking out
+heads| that are picking out
+|他们正在挑选数据的其他相关部分，
 
 1937
 01:00:08,835 --> 01:00:10,680
@@ -10853,12 +11000,14 @@ other relevant parts of the
 1938
 01:00:10,680 --> 01:00:12,015
 0,195 195,435 435,740 970,1230 1230,1335
-data, which maybe we did
+data,| which maybe we did
+|这可能是我们之前没有意识到的，
 
 1939
 01:00:12,015 --> 01:00:13,635
 0,225 225,525 525,845 1105,1395 1395,1620
-not realize before. {For,example, -}
+not realize before,| {for,example -},
+|例如，建筑或背景中正在追逐钢铁侠的宇宙飞船，
 
 1940
 01:00:13,635 --> 01:00:15,225
@@ -10873,14 +11022,14 @@ in the background that's chasing
 1942
 01:00:16,515 --> 01:00:17,460
 0,210 210,545
-iron man.|
+iron man,|
 |
 
 1943
 01:00:17,770 --> 01:00:20,730
 0,305 305,610 1410,1810 2220,2615 2615,2960
-And so this is a
-因此，这是当今许多功能强大的架构的关键组成部分。今天，我再一次无法强调这一机制是多么足够、多么强大。
+and so this is a
+因此，这是当今许多功能强大的架构的关键组成部分，
 
 1944
 01:00:20,730 --> 01:00:22,830
@@ -10895,12 +11044,14 @@ many, many, many powerful architectures
 1946
 01:00:25,215 --> 01:00:26,115
 0,120 120,225 225,375 375,585 585,900
-that are out there today.
+that are out there today,|
+|
 
 1947
 01:00:26,115 --> 01:00:28,280
 0,330 330,660 660,1055 1195,1545 1545,2165
-{Today,,I,again - -} cannot emphasize
+{today\,,I,again - -} cannot emphasize
+我再一次无法强调这一机制是多么多么强大。
 
 1948
 01:00:28,600 --> 01:00:30,420
@@ -10917,12 +11068,13 @@ mechanism is.|
 01:00:32,330 --> 01:00:35,230
 0,350 350,700 720,1120 1920,2590 2610,2900
 And indeed, this backbone idea
-事实上，你刚刚建立起来的自我注意的主干概念是当今一些最强大的神经网络和深度学习模型的关键操作，从像G-P-T-Three这样非常强大的语言模型，它能够以非常人性化的方式合成自然语言，消化大量的文本信息来理解关系和文本。
+事实上，自我注意的主干概念，
 
 1951
 01:00:35,230 --> 01:00:36,730
 0,195 195,465 465,795 795,1160 1210,1500
-of self attention that you
+of self attention| that you
+|你刚刚建立起来的是，
 
 1952
 01:00:36,730 --> 01:00:38,250
@@ -10932,7 +11084,8 @@ just built up understanding of
 1953
 01:00:38,570 --> 01:00:40,420
 0,400 480,830 830,1180 1200,1565 1565,1850
-is the key operation of
+is| the key operation of
+|当今一些最强大的神经网络和深度学习模型的关键操作，
 
 1954
 01:00:40,420 --> 01:00:41,520
@@ -10947,7 +11100,8 @@ neural networks and deep learning
 1956
 01:00:43,615 --> 01:00:45,835
 0,330 330,615 615,810 810,1115 1645,2220
-models out there today, ranging
+models out there today,| ranging
+|从像 GPT 3 这样非常强大的语言模型，
 
 1957
 01:00:45,835 --> 01:00:47,820
@@ -10957,12 +11111,13 @@ from the very powerful language
 1958
 01:00:47,870 --> 01:00:49,255
 0,400 450,830 830,1070 1070,1205 1205,1385
-models like G P T
+models like {GPT - -}
 
 1959
 01:00:49,255 --> 01:00:51,000
 0,305 565,840 840,1020 1020,1325 1345,1745
-three, which are capable of
+3,| which are capable of
+|它能够以非常人性化的方式合成自然语言，
 
 1960
 01:00:51,320 --> 01:00:54,310
@@ -10972,7 +11127,8 @@ synthesizing natural language in a
 1961
 01:00:54,310 --> 01:00:56,740
 0,225 225,525 525,860 970,1370 1690,2430
-very human like fashion, digesting
+very human like fashion,| digesting
+|消化大量的文本信息来理解关系和文本，
 
 1962
 01:00:56,740 --> 01:00:58,410
@@ -10982,14 +11138,14 @@ large bodies of text information
 1963
 01:00:58,430 --> 01:01:01,020
 0,400 930,1330 1440,1840 2010,2300 2300,2590
-to understand relationships and text.|
+to understand relationships and text,|
 |
 
 1964
 01:01:02,000 --> 01:01:03,690
 0,400 600,1000 1020,1265 1265,1400 1400,1690
-To models that are being
-到在生物学和医学中部署的极具影响力的应用程序的模型，例如Alpha Full Two，它使用自我注意力的概念来查看蛋白质序列的数据，并能够预测蛋白质的三维结构，只需给定序列信息，甚至一直到计算机视觉，这将是我们明天下一堂课的主题，在那里，最初在顺序数据应用程序中开发的相同的注意力概念现在已经改变了计算机视觉领域，并再次使用关注输入中重要特征的关键概念来构建复杂高维数据的这些非常丰富的表示形式。
+to models that are being
+到在生物学和医学中部署的极具影响力的应用程序的模型，
 
 1965
 01:01:03,710 --> 01:01:07,170
@@ -10999,12 +11155,13 @@ deployed for extremely impactful applications
 1966
 01:01:07,310 --> 01:01:09,490
 0,290 290,580 780,1055 1055,1330 1890,2180
-in biology and medicine such
+in biology and medicine,| such
+|例如 AlphaFold2 ，它使用自我注意力的概念来查看蛋白质序列的数据，
 
 1967
 01:01:09,490 --> 01:01:11,305
 0,225 225,600 600,795 795,1130 1450,1815
-as Alpha full two, which
+as {AlphaFold2 - -}, which
 
 1968
 01:01:11,305 --> 01:01:12,850
@@ -11019,7 +11176,8 @@ attention to look at data
 1970
 01:01:14,995 --> 01:01:16,885
 0,285 285,600 600,1295 1435,1725 1725,1890
-of protein sequences and be
+of protein sequences| and be
+|并能够预测蛋白质的三维结构，
 
 1971
 01:01:16,885 --> 01:01:18,460
@@ -11029,22 +11187,26 @@ able to predict the three
 1972
 01:01:18,460 --> 01:01:19,890
 0,585 585,840 840,1035 1035,1155 1155,1430
-dimensional structure of a protein
+dimensional structure of a protein|
+|
 
 1973
 01:01:20,270 --> 01:01:22,530
 0,320 320,640 870,1270 1440,1840 1860,2260
-just given sequence information alone
+just given sequence information alone|
+只需给定序列信息，|
 
 1974
 01:01:23,090 --> 01:01:24,235
 0,305 305,515 515,680 680,845 845,1145
 and all the way even
+甚至一直到计算机视觉，
 
 1975
 01:01:24,235 --> 01:01:26,365
 0,395 415,810 810,1125 1125,1445 1795,2130
-now to computer vision, which
+now to computer vision,| which
+|这将是我们明天下一节课的主题，
 
 1976
 01:01:26,365 --> 01:01:27,565
@@ -11054,7 +11216,8 @@ will be the topic of
 1977
 01:01:27,565 --> 01:01:29,455
 0,135 135,345 345,665 715,1115 1585,1890
-our next lecture tomorrow where
+our next lecture tomorrow,| where
+|在那里，最初在顺序数据应用程序中开发的相同的注意力概念
 
 1978
 01:01:29,455 --> 01:01:31,140
@@ -11069,7 +11232,8 @@ that was initially developed in
 1980
 01:01:32,920 --> 01:01:35,730
 0,740 850,1250 1420,1820 2170,2490 2490,2810
-sequential data applications has now
+sequential data applications| has now
+|现在已经改变了计算机视觉领域，
 
 1981
 01:01:35,870 --> 01:01:37,525
@@ -11079,7 +11243,8 @@ transformed the field of computer
 1982
 01:01:37,525 --> 01:01:39,715
 0,305 625,945 945,1265 1525,1905 1905,2190
-vision and again using this
+vision| and again using this
+|并再次使用关注输入中重要特征的关键概念
 
 1983
 01:01:39,715 --> 01:01:41,935
@@ -11094,7 +11259,8 @@ the important features in an
 1985
 01:01:43,300 --> 01:01:45,220
 0,380 550,840 840,1130 1270,1620 1620,1920
-input to build these very
+input| to build these very
+|来构建复杂高维数据的这些非常丰富的表示形式。
 
 1986
 01:01:45,220 --> 01:01:47,710
@@ -11111,12 +11277,13 @@ dimensional data.|
 01:01:50,100 --> 01:01:52,820
 0,400 900,1160 1160,1420 1440,2020 2190,2720
 Okay, so that concludes lectures
-好了，今天的课程到此结束。我知道我们在相当短的时间内覆盖了很多领域，但这就是这个新兵训练营计划的全部意义所在。所以希望今天你已经对神经网络的基础有了一个了解。在与Alexander的讲座中，我们讨论了r和n，它们如何很好地适应序列数据，以及我们如何使用反向传播来训练它们。
+好的，今天的课程到此结束，
 
 1989
 01:01:52,820 --> 01:01:54,530
 0,165 165,440 1060,1335 1335,1515 1515,1710
-for today. {I,know -} we
+for today,| {I,know -} we
+|我知道我们在相当短的时间内覆盖了很多领域，
 
 1990
 01:01:54,530 --> 01:01:55,685
@@ -11131,7 +11298,8 @@ territory in a pretty short
 1992
 01:01:57,020 --> 01:01:58,385
 0,210 210,390 390,680 880,1170 1170,1365
-amount of time, but that
+amount of time,| but that
+|但这就是这个新兵训练营计划的全部意义所在，
 
 1993
 01:01:58,385 --> 01:01:59,525
@@ -11141,7 +11309,8 @@ is what this boot camp
 1994
 01:01:59,525 --> 01:02:01,655
 0,365 475,750 750,960 960,1295 1825,2130
-program is all {about.,So -}
+program is all about,| so
+|所以希望今天你已经对神经网络的基础有了一个了解，
 
 1995
 01:02:01,655 --> 01:02:02,885
@@ -11156,44 +11325,50 @@ sense of the foundations of
 1997
 01:02:04,505 --> 01:02:05,975
 0,225 225,485 895,1170 1170,1290 1290,1470
-{neural,networks. -} In the lecture
+{neural,networks -},| in the lecture
+|在 Alexander 的讲座中，
 
 1998
 01:02:05,975 --> 01:02:08,030
 0,330 330,725 1285,1590 1590,1830 1830,2055
-with Alexander, we talked about
+with Alexander,| we talked about
+|我们讨论了 RNN ，
 
 1999
 01:02:08,030 --> 01:02:09,590
 0,165 165,285 285,770 940,1260 1260,1560
-r and n's, how they're
+{RNNs - -},| how they're
+|它们如何很好地适应序列数据，
 
 2000
 01:02:09,590 --> 01:02:10,990
 0,195 195,525 525,675 675,1125 1125,1400
-well suited for sequential data,
+well suited for sequential data,|
+|
 
 2001
 01:02:11,310 --> 01:02:12,305
 0,290 290,455 455,635 635,830 830,995
 how we can train them
+以及我们如何使用反向传播来训练它们，
 
 2002
 01:02:12,305 --> 01:02:14,300
 0,225 225,465 465,995
-using back propagation.|
+using back propagation,|
 |
 
 2003
 01:02:14,300 --> 01:02:15,320
 0,240 240,360 360,570 570,825 825,1020
-How we can deploy them
-我们如何将它们部署到不同的应用程序中，最后，我们如何超越重复，以构建自我关注的概念，以构建越来越强大的模型，以便在序列建模中进行深度学习。
+how we can deploy them
+我们如何将它们部署到不同的应用程序中，
 
 2004
 01:02:15,320 --> 01:02:16,900
 0,150 150,410 520,920 940,1260 1260,1580
-for different applications, and finally,
+for different applications,| and finally,
+|最后，我们如何超越递归，
 
 2005
 01:02:17,310 --> 01:02:18,500
@@ -11203,17 +11378,20 @@ how we can move beyond
 2006
 01:02:18,500 --> 01:02:20,330
 0,650 820,1095 1095,1275 1275,1560 1560,1830
-recurrence to build this idea
+recurrence| to build this idea
+|以构建自我注意力的概念，
 
 2007
 01:02:20,330 --> 01:02:22,180
 0,195 195,465 465,830 1150,1500 1500,1850
-of self attention for building
+of self attention| for building
+|以构建越来越强大的模型，
 
 2008
 01:02:22,560 --> 01:02:25,190
 0,400 480,880 900,1300 2100,2420 2420,2630
-increasingly powerful models for deep
+increasingly powerful models| for deep
+|以便在序列建模中进行深度学习。
 
 2009
 01:02:25,190 --> 01:02:27,040
@@ -11224,18 +11402,20 @@ learning in sequence modeling.|
 2010
 01:02:27,800 --> 01:02:29,850
 0,245 245,490 1080,1430 1430,1715 1715,2050
-All right, hopefully you enjoyed.
-好的，希望你喜欢。我们还有大约45分钟用于实验部分和开放办公时间，我们欢迎您向我们和助教提问并开始实验室工作。实验室的信息就在上面。非常感谢您的关注。
+All right, hopefully you enjoyed,|
+好的，希望你喜欢，|
 
 2011
 01:02:29,990 --> 01:02:32,845
 0,350 350,700 1800,2120 2120,2570 2570,2855
-{We,have -} about 45 minutes
+{we,have -} about 45 minutes
+我们还有大约 45 分钟，
 
 2012
 01:02:32,845 --> 01:02:33,970
 0,345 345,600 600,810 810,1005 1005,1125
-left for the for the
+left,| for the, for the
+|用于实验部分和开放办公时间，
 
 2013
 01:02:33,970 --> 01:02:35,650
@@ -11245,7 +11425,8 @@ lab portion and open office
 2014
 01:02:35,650 --> 01:02:37,120
 0,290 610,885 885,1050 1050,1215 1215,1470
-hours in which we welcome
+hours,| in which we welcome
+|我们欢迎你向我们和助教提问，
 
 2015
 01:02:37,120 --> 01:02:38,730
@@ -11255,30 +11436,34 @@ you to ask us questions
 2016
 01:02:39,440 --> 01:02:40,555
 0,275 275,470 470,650 650,815 815,1115
-of us and the tas
+of us and the TAs|
+|
 
 2017
 01:02:40,555 --> 01:02:42,025
 0,255 255,405 405,630 630,965 1165,1470
 and to start work on
+并开始实验，
 
 2018
 01:02:42,025 --> 01:02:44,005
 0,165 165,665 1045,1440 1440,1785 1785,1980
-the {labs.,The -} information for
+the labs,| the -} information for
+|实验的信息就在上面，
 
 2019
 01:02:44,005 --> 01:02:45,450
 0,105 105,390 390,635 805,1125 1125,1445
-the labs is {up,there. -}
+the labs is {up,there -},|
+|
 
 2020
 01:02:45,830 --> 01:02:46,885
 0,290 290,455 455,590 590,770 770,1055
-Thank you so much for
+thank you so much for
+非常感谢你的关注。
 
 2021
 01:02:46,885 --> 01:02:49,968
 0,285 285,605
-your attention.|
-|
+your attention.
