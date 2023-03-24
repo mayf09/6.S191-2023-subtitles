@@ -7,3 +7,6 @@ decision boundary 决策边界
 loss 损失
 landscape 图景
 dropout
+
+# Lecture 2
+sequence modeling 序列建模
