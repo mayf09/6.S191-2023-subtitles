@@ -8338,7 +8338,7 @@ we had these key three
 1472
 00:45:40,055 --> 00:45:42,660
 0,615 615,750 750,870 870,1145
-bottlenecks to RNN,|
+bottlenecks to {RNN -},|
 |
 
 1473
@@ -11448,7 +11448,7 @@ and to start work on
 2018
 01:02:42,025 --> 01:02:44,005
 0,165 165,665 1045,1440 1440,1785 1785,1980
-the labs,| the -} information for
+the labs,| the information for
 |实验的信息就在上面，
 
 2019
