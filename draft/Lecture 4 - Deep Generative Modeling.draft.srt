@@ -2,17 +2,19 @@
 00:00:09,460 --> 00:00:11,025
 0,380 380,560 560,860 860,1235 1235,1565
 I'm really, really excited about
-我对这次演讲非常非常兴奋，因为正如Alexander昨天介绍的那样，现在我们正处于一个生成性人工智能的巨大时代，今天我们将学习深度生成性建模的基础，在那里我们将讨论建立系统，不仅可以在数据中寻找模式，而且实际上可以更进一步，基于这些学习的模式生成全新的数据实例。
+我对这次演讲非常兴奋，
 
 2
 00:00:11,025 --> 00:00:13,040
 0,300 300,665 805,1170 1170,1535 1615,2015
-this lecture because as Alexander
+this lecture,| because as Alexander
+|因为正如 Alexander 昨天介绍的那样，
 
 3
 00:00:13,150 --> 00:00:16,380
 0,400 900,1300 2430,2735 2735,2990 2990,3230
-introduced yesterday, right now we're
+introduced yesterday,| right now we're
+|现在我们正处于一个生成性人工智能的巨大时代，
 
 4
 00:00:16,380 --> 00:00:17,955
@@ -22,7 +24,8 @@ in this tremendous age of
 5
 00:00:17,955 --> 00:00:20,310
 0,645 645,1025 1465,1770 1770,2055 2055,2355
-generative AI, and today we're
+generative AI,| and today we're
+|今天我们将学习深度生成性建模的基础，
 
 6
 00:00:20,310 --> 00:00:21,650
@@ -32,7 +35,8 @@ going to learn the foundations
 7
 00:00:21,850 --> 00:00:24,180
 0,380 380,710 710,1220 1220,1780 2040,2330
-of deep generative modeling, where
+of deep generative modeling,| where
+|在那里我们将讨论建立系统，
 
 8
 00:00:24,180 --> 00:00:25,290
@@ -42,7 +46,8 @@ we're going to talk about
 9
 00:00:25,290 --> 00:00:27,210
 0,315 315,710 1300,1590 1590,1740 1740,1920
-building systems that can not
+building systems,| that can not
+|不仅可以在数据中寻找模式，
 
 10
 00:00:27,210 --> 00:00:28,890
@@ -52,12 +57,14 @@ only look for patterns in
 11
 00:00:28,890 --> 00:00:30,630
 0,290 820,1095 1095,1335 1335,1590 1590,1740
-data, but can actually go
+data,| but can actually go
+|而且实际上可以更进一步，
 
 12
 00:00:30,630 --> 00:00:32,355
 0,150 150,405 405,720 720,1070 1420,1725
-a step beyond this to
+a step beyond this| to
+|基于这些学习的模式生成全新的数据实例，
 
 13
 00:00:32,355 --> 00:00:34,970
@@ -67,29 +74,32 @@ generate brand new data instances
 14
 00:00:35,080 --> 00:00:36,530
 0,380 380,650 650,845 845,1100 1100,1450
-based on those learned patterns.|
+based on those learned patterns,|
 |
 
 15
 00:00:37,690 --> 00:00:39,645
 0,350 350,560 560,820 960,1360 1590,1955
-This is an incredibly complex
-这是一个令人难以置信的复杂和强大的想法，就像我提到的，这是深度学习的一个特殊子集，实际上在过去几年里真的发生了爆炸式的增长，特别是今年。
+this is an incredibly complex
+这是一个令人难以置信的复杂和强大的想法，
 
 16
 00:00:39,645 --> 00:00:41,220
 0,270 270,575 835,1185 1185,1425 1425,1575
-and powerful idea, and as
+and powerful idea,| and as
+|就像我提到的，
 
 17
 00:00:41,220 --> 00:00:42,440
 0,135 135,390 390,675 675,855 855,1220
-I mentioned, it's a particular
+I mentioned,| it's a particular
+|这是深度学习的一个特殊子集，
 
 18
 00:00:42,490 --> 00:00:44,295
 0,470 470,620 620,815 815,1120 1500,1805
-subset of deep learning that
+subset of deep learning,| that
+|在过去几年里真的发生了爆炸式的增长，特别是今年。
 
 19
 00:00:44,295 --> 00:00:47,040
@@ -111,7 +121,7 @@ and this year in particular.|
 00:00:50,540 --> 00:00:52,350
 0,400 750,1040 1040,1280 1280,1520 1520,1810
 So to start, and to
-因此，首先，为了演示这些算法的强大功能，让我向你们展示一下。
+所以，为了演示这些算法的强大功能，
 
 23
 00:00:52,430 --> 00:00:54,250
@@ -121,80 +131,80 @@ demonstrate how powerful these algorithms
 24
 00:00:54,250 --> 00:00:56,130
 0,320 880,1155 1155,1350 1350,1575 1575,1880
-are, let me show you.|
-|
+are,| let me show you
+|让我向你们展示一下这三张不同的脸，
 
 25
 00:00:57,290 --> 00:01:00,300
 0,400 720,1120 1320,1700 1700,2080
-These three different faces.|
-这三张不同的脸。|
+these three different faces,|
+|
 
 26
 00:01:01,010 --> 00:01:01,870
 0,275 275,425 425,575 575,725 725,860
 I want you to take
-我想让你想一想。
+我想让你想一想，
 
 27
 00:01:01,870 --> 00:01:04,400
 0,105 105,350 790,1190
-a minute think.|
+a minute think,|
 |
 
 28
 00:01:04,400 --> 00:01:05,780
 0,210 210,450 450,720 720,1070 1090,1380
-Think about which face you
-想想你认为哪张脸是真的。
+think about which face you
+想想你认为哪张脸是真的，
 
 29
 00:01:05,780 --> 00:01:07,420
 0,225 225,495 495,830
-think is real.|
+think is real,|
 |
 
 30
 00:01:07,420 --> 00:01:08,365
 0,240 240,405 405,615 615,825 825,945
-Raise your hand if you
-如果你认为那是一张脸，请举手。
+raise your hand, if you
+如果你认为是脸 A ，请举手，
 
 31
 00:01:08,365 --> 00:01:09,210
 0,120 120,210 210,300 300,510 510,845
-think {it's -} face a.|
+think {it's -} face A,|
 |
 
 32
 00:01:10,730 --> 00:01:11,725
 0,380 380,590 590,680 680,830 830,995
-Okay, see a couple of
-好的，看到几个人面对着B。
+okay, see a couple of
+好的，看到几个人，
 
 33
 00:01:11,725 --> 00:01:14,080
 0,275 835,1185 1185,1535
-people face b.|
-|
+people,| Face B,|
+|脸 B ，|
 
 34
 00:01:15,340 --> 00:01:17,060
 0,305 305,530 530,850
-Many more people.|
-更多的人。|
+many more people,|
+更多的人，|
 
 35
 00:01:17,320 --> 00:01:18,860
 0,350 350,700
-Face c.|
-面c。|
+face C,|
+脸 C ，|
 
 36
 00:01:21,060 --> 00:01:23,345
 0,365 365,730 1560,1865 1865,2075 2075,2285
-Second place? Well, the truth
-第二名？好吧，事实是你们都错了。这三张脸都是假的。
+second place,| well, the truth
+第二名，|好的，事实是你们都错了，
 
 37
 00:01:23,345 --> 00:01:24,905
@@ -204,34 +214,38 @@ is that all of you
 38
 00:01:24,905 --> 00:01:27,350
 0,315 315,635 1765,2115 2115,2325 2325,2445
-are wrong. {All,three -} of
+are wrong,| {all,three -} of
+|这三张脸都是假的，
 
 39
 00:01:27,350 --> 00:01:29,600
 0,180 180,500 730,1065 1065,1400
-these faces are fake.|
+these faces are fake,|
 |
 
 40
 00:01:29,820 --> 00:01:31,510
 0,380 380,740 740,1010 1010,1295 1295,1690
-These people do not exist.
-这些人并不存在。这些图像是由深度生成模型合成的，基于人脸数据进行训练，并要求生成新的实例。
+these people do not exist,|
+这些人并不存在，|
 
 41
 00:01:31,830 --> 00:01:33,965
 0,320 320,640 750,1070 1070,1780 1800,2135
-{These,images -} were synthesized by
+{these,images -} were synthesized by
+这些图像是由深度生成模型合成的，
 
 42
 00:01:33,965 --> 00:01:36,320
 0,255 255,705 705,995 1525,1925 2035,2355
-deep generative models, trained on
+deep generative models,| trained on
+|基于人脸数据进行训练，
 
 43
 00:01:36,320 --> 00:01:38,105
 0,300 300,570 570,825 825,1190 1480,1785
-data of human faces and
+data of human faces| and
+|并要求生成新的实例。
 
 44
 00:01:38,105 --> 00:01:40,660
@@ -243,7 +257,7 @@ asked to produce new instances.|
 00:01:41,650 --> 00:01:42,855
 0,305 305,515 515,725 725,920 920,1205
 Now, I think that this
-现在，我认为这个演示展示了这些想法的力量和生成性建模概念的力量。因此，让我们更具体地了解如何将这件事正规化。
+现在，我认为这个演示展示了这些想法的力量，
 
 46
 00:01:42,855 --> 00:01:45,240
@@ -253,7 +267,8 @@ demonstration kind of demonstrates the
 47
 00:01:45,240 --> 00:01:47,160
 0,320 370,660 660,945 945,1340 1660,1920
-power of these ideas and
+power of these ideas| and
+|和生成性建模概念的力量。
 
 48
 00:01:47,160 --> 00:01:48,105
@@ -263,7 +278,8 @@ the power of this notion
 49
 00:01:48,105 --> 00:01:50,580
 0,240 240,660 660,1205 1735,2115 2115,2475
-of generative modeling. {So,let's -}
+of generative modeling.| {So,let's -}
+|所以，让我们更具体地了解如何将这件事正规化。
 
 50
 00:01:50,580 --> 00:01:52,005
@@ -284,13 +300,14 @@ this.|
 53
 00:01:54,690 --> 00:01:55,780
 0,290 290,455 455,590 590,770 770,1090
-So far in this course,
-到目前为止，在这门课程中，我们一直在研究我们所说的监督学习问题，这意味着我们得到了数据，并与这些数据相关联的是一组标签。我们的目标是学习映射该数据的函数。
+So far in this course,|
+到目前为止，在这门课程中，|
 
 54
 00:01:55,950 --> 00:01:57,170
 0,335 335,485 485,755 755,1025 1025,1220
 we've been looking at what
+我们一直在研究我们所说的监督学习问题，
 
 55
 00:01:57,170 --> 00:01:59,230
@@ -300,12 +317,14 @@ we call problems of supervised
 56
 00:01:59,250 --> 00:02:01,445
 0,400 1140,1505 1505,1760 1760,2000 2000,2195
-learning, meaning that we're given
+learning,| meaning that we're given
+|这意味着我们给出数据，
 
 57
 00:02:01,445 --> 00:02:03,755
 0,335 925,1305 1305,1685 1825,2115 2115,2310
-data and associated with that
+data| and associated with that
+|并与这些数据相关联的是一组标签，
 
 58
 00:02:03,755 --> 00:02:04,655
@@ -315,7 +334,8 @@ data is a set of
 59
 00:02:04,655 --> 00:02:07,025
 0,485 1285,1620 1620,1920 1920,2190 2190,2370
-labels. {Our,goal -} is to
+labels,| {our,goal -} is to
+|我们的目标是学习映射该数据的标签的函数，
 
 60
 00:02:07,025 --> 00:02:08,780
@@ -325,14 +345,13 @@ learn a function that maps
 61
 00:02:08,780 --> 00:02:10,080
 0,285 285,590
-that data.|
-|
+that data
 
 62
 00:02:10,080 --> 00:02:12,690
 0,380 400,645 645,1100 1690,2090 2290,2610
-To the labels. {Now,,we're -}
-到唱片公司。现在我们正在上一门关于深度学习的课程，所以我们一直关注由深度神经网络定义的函数映射。但实际上，这个函数可以是任何东西。神经网络很强大，但我们也可以使用其他技术。
+to the labels,| {Now\,,we're -}
+|现在我们在一门关于深度学习的课程，
 
 63
 00:02:12,690 --> 00:02:13,770
@@ -342,7 +361,8 @@ in a course on deep
 64
 00:02:13,770 --> 00:02:15,330
 0,290 370,690 690,945 945,1185 1185,1560
-learning, so we've been concerned
+learning,| so we've been concerned
+|所以我们一直关注由深度神经网络定义的函数映射，
 
 65
 00:02:15,330 --> 00:02:17,085
@@ -352,22 +372,26 @@ with functional mappings that are
 66
 00:02:17,085 --> 00:02:18,500
 0,330 330,645 645,900 900,1155 1155,1415
-defined by deep neural {networks.,But
+defined by deep neural networks,|
+|
 
 67
 00:02:19,180 --> 00:02:20,610
 0,275 275,530 530,830 830,1150 1170,1430
--} really, that function could
+but really, that function could
+但实际上，这个函数可以是任何东西，
 
 68
 00:02:20,610 --> 00:02:22,140
 0,240 240,620 670,1035 1035,1275 1275,1530
-{be,anything. -} Neural networks are
+{be,anything -},| neural networks are
+|神经网络很强大，
 
 69
 00:02:22,140 --> 00:02:23,745
 0,290 370,770 1030,1305 1305,1440 1440,1605
-powerful, but we could use
+powerful,| but we could use
+|但我们也可以使用其他技术。
 
 70
 00:02:23,745 --> 00:02:25,600
@@ -379,32 +403,37 @@ other techniques as well.|
 00:02:26,620 --> 00:02:28,530
 0,335 335,670 900,1295 1295,1595 1595,1910
 In contrast, there's another class
-相比之下，在机器学习中还有另一类问题，我们称之为无监督学习，我们获取数据，但现在我们只得到数据，没有标签，我们的目标是试图建立某种方法，可以理解这些数据的隐藏的底层结构。
+相比之下，在机器学习中还有另一类问题，
 
 72
 00:02:28,530 --> 00:02:30,110
 0,225 225,530 670,1020 1020,1275 1275,1580
-of problems in machine learning
+of problems in machine learning,|
+|
 
 73
 00:02:30,580 --> 00:02:31,875
 0,305 305,470 470,730 750,1040 1040,1295
 that we refer to as
+我们称之为无监督学习，
 
 74
 00:02:31,875 --> 00:02:35,180
 0,870 870,1205 1825,2225 2665,2985 2985,3305
-unsupervised learning, where we take
+unsupervised learning,| where we take
+|我们获取数据，
 
 75
 00:02:35,290 --> 00:02:37,575
 0,400 840,1145 1145,1450 1740,2075 2075,2285
-data, but now we're given
+data,| but now we're given
+|但现在我们只给出数据，没有标签，
 
 76
 00:02:37,575 --> 00:02:40,350
 0,345 345,725 1255,1560 1560,2045 2485,2775
-only data, no labels, and
+only data, no labels,| and
+|我们的目标是试图建立某种方法，
 
 77
 00:02:40,350 --> 00:02:41,720
@@ -414,7 +443,8 @@ our goal is to try
 78
 00:02:41,740 --> 00:02:43,665
 0,365 365,695 695,950 950,1240 1650,1925
-to build some method that
+to build some method,| that
+|可以理解这些数据的隐藏的底层结构，
 
 79
 00:02:43,665 --> 00:02:45,920
@@ -424,19 +454,20 @@ can understand the hidden underlying
 80
 00:02:46,300 --> 00:02:48,100
 0,380 380,635 635,815 815,1120
-structure of that data.|
+structure of that data,|
 |
 
 81
 00:02:48,590 --> 00:02:49,780
 0,305 305,545 545,800 800,1025 1025,1190
-What this allows us to
-这使我们能够做的是，它让我们对数据的基本表示形式有了新的见解，并且正如我们稍后将看到的那样，实际上使我们能够生成新的数据实例。
+what this allows us to
+这使我们能够做的是，
 
 82
 00:02:49,780 --> 00:02:50,920
 0,225 225,465 465,630 630,855 855,1140
-do is it gives us
+do is,| it gives us
+|它让我们对数据的基本表示形式有了新的见解，
 
 83
 00:02:50,920 --> 00:02:53,040
@@ -446,12 +477,14 @@ new insights into the foundational
 84
 00:02:53,060 --> 00:02:56,065
 0,940 1350,1655 1655,1820 1820,2080 2640,3005
-representation of the data and
+representation of the data| and
+|并且正如我们稍后将看到的那样，
 
 85
 00:02:56,065 --> 00:02:58,285
 0,270 270,525 525,690 690,995 1945,2220
-as we'll see later, actually
+as we'll see later,| actually
+|使我们能够生成新的数据实例。
 
 86
 00:02:58,285 --> 00:02:59,905
@@ -467,18 +500,20 @@ data instances.|
 88
 00:03:01,790 --> 00:03:03,090
 0,290 290,530 530,785 785,995 995,1300
-Now, this class of problems,
-现在，这类问题，无监督学习的定义，抓住了我们今天要讨论的模型类型，重点是生成性建模。
+Now, this class of problems,|
+现在，这类问题，|
 
 89
 00:03:03,530 --> 00:03:06,210
 0,400 630,1030 1290,1580 1580,2345 2345,2680
-this definition of unsupervised learning,
+this definition of unsupervised learning,|
+无监督学习的定义，|
 
 90
 00:03:06,710 --> 00:03:08,485
 0,710 710,1055 1055,1325 1325,1505 1505,1775
 captures the types of models
+抓住了我们今天要讨论的模型类型，
 
 91
 00:03:08,485 --> 00:03:09,415
@@ -488,24 +523,26 @@ that we're going to talk
 92
 00:03:09,415 --> 00:03:10,920
 0,225 225,545 835,1110 1110,1245 1245,1505
-about today in the focus
+about today| in the focus
+|重点是生成性建模，
 
 93
 00:03:10,970 --> 00:03:13,040
 0,400 540,1100 1100,1600
-on generative modeling.|
+on generative modeling,|
 |
 
 94
 00:03:13,700 --> 00:03:14,950
 0,275 275,410 410,635 635,995 995,1250
-Which is an example of
-这是无监督学习的一个例子，它与这个问题的目标相一致，在这个问题中，我们只得到训练集中的样本。
+which is an example of
+这是无监督学习的一个例子，
 
 95
 00:03:14,950 --> 00:03:17,290
 0,690 690,1010 1270,1620 1620,1965 1965,2340
-unsupervised learning and is united
+unsupervised learning| and is united
+|它与这个问题的目标相一致，
 
 96
 00:03:17,290 --> 00:03:19,360
@@ -515,24 +552,26 @@ by this goal of the
 97
 00:03:19,360 --> 00:03:20,880
 0,290 310,630 630,885 885,1125 1125,1520
-problem where we're given only
+problem,| where we're given only
+|在这个问题中，我们只得到训练集中的样本，
 
 98
 00:03:20,900 --> 00:03:22,530
 0,605 605,830 830,980 980,1250 1250,1630
-samples from a training set.|
+samples from a training set,|
 |
 
 99
 00:03:23,120 --> 00:03:24,260
 0,300 300,495 495,690 690,900 900,1140
-And we want to learn
-我们想要学习一种模型，该模型表示该模型所看到的数据的分布。
+and we want to learn
+我们想要学习一种模型，
 
 100
 00:03:24,260 --> 00:03:26,315
 0,255 255,560 640,945 945,1250 1660,2055
-a model that represents the
+a model,| that represents the
+|表示该模型所看到的数据的分布。
 
 101
 00:03:26,315 --> 00:03:28,175
@@ -549,44 +588,49 @@ the model is seeing.|
 00:03:30,270 --> 00:03:33,305
 0,545 545,1060 1230,1630 2220,2620 2640,3035
 Generative modeling takes two general
-产生式建模一般有两种形式：第一次密度估计和第二次样本生成。
+生成式建模一般有两种形式，
 
 104
 00:03:33,305 --> 00:03:37,115
 0,395 1345,1745 1975,2685 2685,3125 3445,3810
-forms, first density estimation and
+forms,| first, density estimation| and
+|第一种是密度估计，|第二种是样本生成。
 
 105
 00:03:37,115 --> 00:03:39,520
 0,365 535,930 930,1325
-second sample generation.|
+second, sample generation.|
 |
 
 106
 00:03:39,760 --> 00:03:41,720
 0,290 290,890 890,1330 1350,1655 1655,1960
-In density estimation, the task
-在密度估计中，给出了一些数据实例。我们的目标是训练一个模型，该模型学习描述数据来源的潜在概率分布。
+In density estimation,| the task
+在密度估计中，|任务是给出一些数据实例，
 
 107
 00:03:41,740 --> 00:03:44,630
 0,400 1080,1475 1475,1870 2070,2470 2490,2890
-is given some data examples.
+is given some data examples,|
+|
 
 108
 00:03:45,490 --> 00:03:47,115
 0,335 335,670 690,1055 1055,1370 1370,1625
-{Our,goal -} is to train
+{our,goal -} is to train
+我们的目标是训练一个模型，
 
 109
 00:03:47,115 --> 00:03:49,170
 0,180 180,455 925,1290 1290,1800 1800,2055
-a model that learns an
+a model,| that learns an
+|学习潜在概率分布，
 
 110
 00:03:49,170 --> 00:03:53,390
 0,350 970,1670 1900,2300 3010,3410 3490,4220
-underlying probability distribution that describes
+underlying probability distribution,| that describes
+|描述了数据来源。
 
 111
 00:03:54,040 --> 00:03:55,700
@@ -597,13 +641,14 @@ where the data came from.|
 112
 00:03:57,080 --> 00:03:59,530
 0,350 350,695 695,1090 1770,2135 2135,2450
-With sample generation, the idea
-对于样本生成，想法是相似的，但重点更多地放在实际生成新实例上。我们生成样本的目标是，再次学习这种潜在概率分布的模型，然后使用该模型对其进行采样，并生成新的实例，这些实例类似于我们看到的大致下降的数据。理想情况下，相同的真实数据分布。
+With sample generation,| the idea
+对于样本生成，|想法是相似的，
 
 113
 00:03:59,530 --> 00:04:01,350
 0,350 520,920 1030,1350 1350,1545 1545,1820
-is similar, but the focus
+is similar,| but the focus
+|但重点更多地放在生成新实例上，
 
 114
 00:04:01,370 --> 00:04:03,280
@@ -613,12 +658,14 @@ is more on actually generating
 115
 00:04:03,280 --> 00:04:05,890
 0,270 270,1010 1840,2145 2145,2370 2370,2610
-new instances. {Our,goal -} with
+new instances,| {our,goal -} with
+|我们生成样本的目标是，
 
 116
 00:04:05,890 --> 00:04:08,070
 0,315 315,710 1090,1380 1380,1670 1780,2180
-sample generation is to, again,
+sample generation is to,| again,
+|再次，学习这种潜在概率分布的模型，
 
 117
 00:04:08,300 --> 00:04:09,595
@@ -628,7 +675,8 @@ learn this model of this
 118
 00:04:09,595 --> 00:04:12,835
 0,305 655,1325 1465,1865 2755,3030 3030,3240
-underlying probability distribution, but then
+underlying probability distribution,| but then
+|然后使用该模型对其进行采样，
 
 119
 00:04:12,835 --> 00:04:14,670
@@ -638,22 +686,26 @@ use that model to sample
 120
 00:04:14,720 --> 00:04:16,180
 0,275 275,455 455,680 680,1000 1140,1460
-from it and generate new
+from it| and generate new
+|并生成新的实例，
 
 121
 00:04:16,180 --> 00:04:19,090
 0,800 1150,1500 1500,1845 1845,2240 2560,2910
-instances that are similar to
+instances,| that are similar to
+|类似于我们看到的数据，
 
 122
 00:04:19,090 --> 00:04:20,280
 0,210 210,420 420,660 660,915 915,1190
-the data that we've seen
+the data that we've seen,|
+|
 
 123
 00:04:20,870 --> 00:04:23,635
 0,400 660,1060 1260,1660 1830,2495 2495,2765
-approximately falling {along.,Ideally -} that
+approximately falling along, ideally that
+大致下降，理想情况下，相同的真实数据分布。|
 
 124
 00:04:23,635 --> 00:04:26,180
@@ -665,7 +717,7 @@ same real data distribution.|
 00:04:27,060 --> 00:04:28,300
 0,290 290,470 470,680 680,920 920,1240
 Now, in both these cases
-现在，在密度估计和样本生成这两种情况下，潜在的问题都是相同的。我们的学习任务是尝试建立一个模型，学习这种概率分布，尽可能接近真实的数据分布。
+现在，在密度估计和样本生成这两种情况下，
 
 126
 00:04:28,320 --> 00:04:30,125
@@ -675,12 +727,14 @@ of density estimation and sample
 127
 00:04:30,125 --> 00:04:32,585
 0,395 1135,1410 1410,1685 1885,2235 2235,2460
-generation, the underlying question is
+generation,| the underlying question is
+|潜在的问题都是相同的，
 
 128
 00:04:32,585 --> 00:04:34,870
 0,150 150,425 1165,1515 1515,1865 1885,2285
-the same. {Our,learning -} task
+the same,| {our,learning -} task
+|我们的学习任务是尝试建立一个模型，
 
 129
 00:04:34,920 --> 00:04:36,575
@@ -690,12 +744,14 @@ is to try to build
 130
 00:04:36,575 --> 00:04:38,120
 0,180 180,455 595,930 930,1350 1350,1545
-a model that learns this
+a model,| that learns this
+|学习这种概率分布，
 
 131
 00:04:38,120 --> 00:04:40,730
 0,590 1060,1460 1870,2145 2145,2325 2325,2610
-probability distribution that is as
+probability distribution,| that is as
+|尽可能接近真实的数据分布。
 
 132
 00:04:40,730 --> 00:04:42,800
@@ -712,7 +768,7 @@ true data distribution.|
 00:04:46,540 --> 00:04:48,680
 0,400 870,1270 1350,1640 1640,1835 1835,2140
 Okay, so with this definition
-好的，有了这个定义和生成性建模的概念，我们可以用什么方法在现实世界中为高影响的应用程序部署生成性建模？产生式模型之所以如此强大，部分原因在于它们有能力发现数据集中的底层特征，并以有效的方式对其进行编码。
+好的，有了这个生成性建模的定义和概念，
 
 135
 00:04:48,820 --> 00:04:50,325
@@ -722,7 +778,8 @@ and this concept of generative
 136
 00:04:50,325 --> 00:04:52,485
 0,545 1105,1365 1365,1545 1545,1845 1845,2160
-modeling, what are some ways
+modeling,| what are some ways
+|我们可以用什么方法部署生成式模型，
 
 137
 00:04:52,485 --> 00:04:54,045
@@ -732,7 +789,8 @@ that we can actually deploy
 138
 00:04:54,045 --> 00:04:56,085
 0,450 450,870 870,1205 1585,1875 1875,2040
-generative modeling forward in the
+generative modeling| forward in the
+|在现实世界中为高影响的应用程序，
 
 139
 00:04:56,085 --> 00:04:57,740
@@ -742,7 +800,8 @@ real world for high impact
 140
 00:04:58,030 --> 00:05:01,170
 0,400 1740,2140 2610,2885 2885,3020 3020,3140
-applications? Well, part of the
+applications,| well, part of the
+|好的，生成式模型是如此强大的部分原因是，
 
 141
 00:05:01,170 --> 00:05:03,060
@@ -752,7 +811,8 @@ reason that generative models are
 142
 00:05:03,060 --> 00:05:04,530
 0,255 255,590 850,1125 1125,1275 1275,1470
-so powerful is that they
+so powerful is,| that they
+|它们有能力发现数据集中的底层特征，
 
 143
 00:05:04,530 --> 00:05:06,870
@@ -767,7 +827,8 @@ the underlying features in a
 145
 00:05:08,835 --> 00:05:10,560
 0,575 655,945 945,1425 1425,1560 1560,1725
-dataset and encode it in
+dataset| and encode it in
+|并以有效的方式对其进行编码。
 
 146
 00:05:10,560 --> 00:05:12,060
@@ -779,7 +840,7 @@ an efficient way.|
 00:05:12,190 --> 00:05:13,590
 0,275 275,425 425,700 780,1070 1070,1400
 So, for example, if we're
-例如，如果我们正在考虑面部检测问题，我们得到了一个包含许多不同人脸的数据集，而没有检查这些数据，我们可能不知道这个数据集中人脸的分布相对于我们可能关心的特征是什么。例如，头部的姿势、衣服、眼镜、肤色、头发等。
+例如，如果我们考虑面部检测问题，
 
 148
 00:05:13,590 --> 00:05:15,315
@@ -789,22 +850,25 @@ considering the problem of facial
 149
 00:05:15,315 --> 00:05:17,085
 0,575 955,1245 1245,1440 1440,1590 1590,1770
-detection and we're given a
+detection| and we're given a
+|我们得到一个包含许多不同人脸的数据集，
 
 150
 00:05:17,085 --> 00:05:18,615
 0,225 225,555 555,930 930,1260 1260,1530
-data set with many, many
+{dataset -} with many, many
 
 151
 00:05:18,615 --> 00:05:21,200
 0,285 285,635 1615,1965 1965,2250 2250,2585
-different faces starting out without
+different faces,| starting out without
+|而没有检查这些数据，
 
 152
 00:05:21,340 --> 00:05:22,785
 0,515 515,695 695,965 965,1235 1235,1445
-inspecting this data, we may
+inspecting this data,| we may
+|我们可能不知道这个数据集中人脸的分布是什么，
 
 153
 00:05:22,785 --> 00:05:24,620
@@ -814,12 +878,13 @@ not know what the distribution
 154
 00:05:24,640 --> 00:05:25,935
 0,275 275,550 630,890 890,1055 1055,1295
-of faces in this data
+of faces in this {dataset
 
 155
 00:05:25,935 --> 00:05:27,750
 0,255 255,575 775,1170 1170,1515 1515,1815
-set is with respect to
+-} is,| with respect to
+|相对于我们可能关心的特征，
 
 156
 00:05:27,750 --> 00:05:29,220
@@ -829,7 +894,8 @@ features we may be caring
 157
 00:05:29,220 --> 00:05:30,930
 0,290 550,840 840,1130 1180,1455 1455,1710
-about. {For,example, -} the pose
+about,| {for,example, -} the pose
+|例如，头部的姿势、衣服、眼镜、肤色、头发等，
 
 158
 00:05:30,930 --> 00:05:33,170
@@ -839,19 +905,20 @@ of the head, clothing, glasses,
 159
 00:05:33,490 --> 00:05:36,860
 0,335 335,670 930,1330 1590,2140
-skin tone, hair, etc.|
+skin tone, hair, etc,|
 |
 
 160
 00:05:36,860 --> 00:05:37,715
 0,105 105,300 300,540 540,705 705,855
-And it can be the
-情况可能是，我们的训练数据可能在我们甚至没有意识到这一点的情况下，对特定的特征非常、非常有偏见。
+and it can be the
+情况可能是，
 
 161
 00:05:37,715 --> 00:05:39,080
 0,225 225,465 465,705 705,1020 1020,1365
-case that our training data
+case,| that our training data
+|我们的训练数据可能对特定的特征非常有偏见，
 
 162
 00:05:39,080 --> 00:05:40,690
@@ -861,19 +928,20 @@ may be very, very biased
 163
 00:05:41,010 --> 00:05:43,490
 0,400 480,880 930,1330 1680,2080 2130,2480
-towards particular features without us
+towards particular features| without us
+|在我们甚至没有意识到的情况下，
 
 164
 00:05:43,490 --> 00:05:45,400
 0,330 330,855 855,1250
-even realizing this.|
+even realizing this,|
 |
 
 165
 00:05:45,700 --> 00:05:47,600
 0,395 395,980 980,1270 1410,1655 1655,1900
-Using generative models, we can
-使用生成模型，我们实际上可以完全自动地识别这些潜在特征的分布，而不需要任何标记。
+using generative models,| we can
+使用生成模型，|我们可以识别这些潜在特征的分布，
 
 166
 00:05:47,680 --> 00:05:50,085
@@ -883,7 +951,8 @@ actually identify the distributions of
 167
 00:05:50,085 --> 00:05:51,765
 0,180 180,485 775,1175 1195,1440 1440,1680
-these underlying features in a
+these underlying features| in a
+|以一种完全自动的方式，而不需要任何标记，
 
 168
 00:05:51,765 --> 00:05:54,690
@@ -893,14 +962,14 @@ completely automatic way without any
 169
 00:05:54,690 --> 00:05:55,980
 0,620
-labeling.|
+labeling,|
 |
 
 170
 00:05:55,980 --> 00:05:57,570
 0,165 165,465 465,830 880,1275 1275,1590
-In order to understand what
-为了了解哪些特征在数据中可能被高估，哪些特征在数据中可能被低估？
+in order to understand what
+为了了解哪些特征在数据中可能被高估，
 
 171
 00:05:57,570 --> 00:05:59,400
@@ -910,19 +979,20 @@ features may be overrepresented in
 172
 00:05:59,400 --> 00:06:01,455
 0,150 150,410 1060,1380 1380,1700 1780,2055
-the data, what features may
+the data,| what features may
+|哪些特征在数据中可能被低估。
 
 173
 00:06:01,455 --> 00:06:03,200
 0,210 210,1110 1110,1350 1350,1485 1485,1745
-be underrepresented in the data?|
+be underrepresented in the data.|
 |
 
 174
 00:06:04,050 --> 00:06:05,350
 0,290 290,575 575,845 845,1010 1010,1300
 And this is the focus
-这是今天和明天软件实验室的重点，这些实验室将成为软件实验室竞争的一部分，开发可以完成这项任务的生成性模型，并使用它来发现和诊断面部检测模型中可能存在的偏差。
+这是今天和明天软件实验的重点，
 
 175
 00:06:05,520 --> 00:06:07,990
@@ -932,7 +1002,8 @@ of today and tomorrow's software
 176
 00:06:08,040 --> 00:06:09,875
 0,575 575,830 830,1150 1320,1655 1655,1835
-labs, which are going to
+labs,| which are going to
+|将成为软件实验竞争的一部分，
 
 177
 00:06:09,875 --> 00:06:11,240
@@ -942,22 +1013,26 @@ be part of the software
 178
 00:06:11,240 --> 00:06:14,690
 0,380 550,950 1690,2090 2620,3180 3180,3450
-lab competition, developing generative models
+lab competition,| developing generative models
+|开发可以完成这项任务的生成性模型，
 
 179
 00:06:14,690 --> 00:06:15,880
 0,255 255,435 435,645 645,870 870,1190
-that can do this task
+that can do this task|
+|
 
 180
 00:06:16,200 --> 00:06:17,810
 0,305 305,575 575,815 815,950 950,1610
 and using it to uncover
+并使用它来发现和诊断偏差，
 
 181
 00:06:17,810 --> 00:06:20,210
 0,195 195,800 940,1730 1870,2145 2145,2400
-and diagnose biases that can
+and diagnose biases,| that can
+|面部检测模型中可能存在的（偏差）。
 
 182
 00:06:20,210 --> 00:06:22,630
@@ -968,18 +1043,20 @@ exist within facial detection models.|
 183
 00:06:25,050 --> 00:06:26,975
 0,350 350,650 650,1000 1170,1570 1590,1925
-Another really powerful example is,
-另一个真正强大的例子是，在异常值检测的情况下，识别罕见事件。因此，让我们来考虑自动驾驶汽车的例子。
+Another really powerful example is,|
+另一个真正强大的例子是，|
 
 184
 00:06:26,975 --> 00:06:28,685
 0,210 210,375 375,630 630,975 975,1710
 in the case of outlier
+在异常值检测的情况下，识别罕见事件。
 
 185
 00:06:28,685 --> 00:06:32,645
 0,605 1375,2115 2115,2475 2475,2855 3655,3960
-detection, identifying rare events. {So,let's
+detection, identifying rare events.| {So\,,let's
+|所以，让我们来考虑自动驾驶汽车的例子，
 
 186
 00:06:32,645 --> 00:06:34,330
@@ -989,14 +1066,14 @@ detection, identifying rare events. {So,let's
 187
 00:06:34,440 --> 00:06:36,940
 0,335 335,670 720,1445 1445,1780
-self driving autonomous cars.|
+self driving autonomous cars,|
 |
 
 188
 00:06:37,040 --> 00:06:38,695
 0,260 260,380 380,890 890,1180 1320,1655
-With an autonomous car, let's
-有了自动驾驶汽车，我们可以说它正在现实世界中行驶。我们真的很想确保这辆车能够处理所有可能的情况和它可能遇到的所有可能的情况，包括像鹿走到车前这样的边缘情况或一些意想不到的罕见事件，而不仅仅是它可能会在大部分时间看到的典型的直线行驶。
+with an autonomous car, let's
+有了自动驾驶汽车，假设它正在现实世界中行驶，
 
 189
 00:06:38,695 --> 00:06:39,670
@@ -1006,7 +1083,8 @@ say it's driving out in
 190
 00:06:39,670 --> 00:06:41,440
 0,120 120,300 300,620 1120,1470 1470,1770
-the real world. {We,really, -}
+the real world,| {we,really, -}
+|我们真的很想确保，
 
 191
 00:06:41,440 --> 00:06:42,610
@@ -1016,7 +1094,8 @@ really want to make sure
 192
 00:06:42,610 --> 00:06:44,155
 0,210 210,465 465,830 1090,1380 1380,1545
-that that car can be
+that,| that car can be
+|这辆车能够处理所有可能的情况，
 
 193
 00:06:44,155 --> 00:06:45,655
@@ -1026,17 +1105,20 @@ able to handle all the
 194
 00:06:45,655 --> 00:06:47,215
 0,275 355,990 990,1170 1170,1380 1380,1560
-possible scenarios and all the
+possible scenarios| and all the
+|和它可能遇到的所有可能的情况，
 
 195
 00:06:47,215 --> 00:06:49,110
 0,275 355,735 735,990 990,1245 1245,1895
-possible cases it may encounter,
+possible cases it may encounter,|
+|
 
 196
 00:06:49,700 --> 00:06:51,835
 0,400 420,770 770,1120 1260,1660 1830,2135
 including edge cases like a
+包括边缘情况，比如鹿走到车前面，
 
 197
 00:06:51,835 --> 00:06:52,960
@@ -1046,12 +1128,14 @@ deer coming in front of
 198
 00:06:52,960 --> 00:06:54,630
 0,165 165,470 700,1005 1005,1290 1290,1670
-the car or some unexpected
+the car| or some unexpected
+|或一些意想不到的罕见事件，
 
 199
 00:06:55,010 --> 00:06:57,220
 0,365 365,730 1290,1625 1625,1955 1955,2210
-rare events, not just, you
+rare events,| not just, you
+|而不仅仅是典型的直线行驶，
 
 200
 00:06:57,220 --> 00:06:59,020
@@ -1061,7 +1145,8 @@ know, the typical straight freeway
 201
 00:06:59,020 --> 00:07:00,810
 0,320 430,830 910,1185 1185,1425 1425,1790
-driving that it may see
+driving,| that it may see
+|它可能会在大部分时间看到的。
 
 202
 00:07:01,070 --> 00:07:02,280
@@ -1072,8 +1157,8 @@ the majority of the time.|
 203
 00:07:03,250 --> 00:07:05,055
 0,350 350,860 860,1150 1350,1625 1625,1805
-With generative models, we can
-对于生成模型，我们可以使用这种密度估计的思想来识别训练数据中的罕见和异常事件，以及当它们发生时，就像模型第一次看到它们一样。
+With generative models,| we can
+对于生成模型，|我们可以使用这种密度估计的思想
 
 204
 00:07:05,055 --> 00:07:06,975
@@ -1083,7 +1168,8 @@ use this idea of density
 205
 00:07:06,975 --> 00:07:08,840
 0,485 655,930 930,1095 1095,1385 1465,1865
-estimation to be able to
+estimation| to be able to
+|来识别训练数据中的罕见和异常事件，
 
 206
 00:07:09,520 --> 00:07:12,110
@@ -1093,12 +1179,14 @@ identify rare and anomalous events
 207
 00:07:12,820 --> 00:07:14,660
 0,400 420,695 695,935 935,1300 1440,1840
-within the training data and
+within the training data| and
+|以及当它们发生时，
 
 208
 00:07:14,800 --> 00:07:16,260
 0,320 320,695 695,1100 1100,1310 1310,1460
-as they're occurring, as the
+as they're occurring,| as the
+|就像模型第一次看到它们一样。
 
 209
 00:07:16,260 --> 00:07:17,340
@@ -1115,7 +1203,7 @@ first time.|
 00:07:19,490 --> 00:07:21,115
 0,400 420,800 800,1130 1130,1460 1460,1625
 So hopefully this paints this
-希望这幅图描绘了什么是生成性建模的基本概念，以及几种不同的方式，我们可以将这些想法实际部署到强大而有效的现实世界应用程序中。
+希望这幅图描绘了什么是生成性建模的基本概念，
 
 212
 00:07:21,115 --> 00:07:23,755
@@ -1125,17 +1213,20 @@ picture of what generative modeling
 213
 00:07:23,755 --> 00:07:25,660
 0,150 150,425 655,1055 1135,1535 1555,1905
-the underlying concept is, and
+the underlying concept is,| and
+|以及几种不同的方式，
 
 214
 00:07:25,660 --> 00:07:26,815
 0,225 225,420 420,615 615,840 840,1155
-a couple of different ways
+a couple of different ways|
+|
 
 215
 00:07:26,815 --> 00:07:28,110
 0,240 240,405 405,555 555,815 895,1295
 in which we can actually
+我们可以将这些想法实际部署到强大而有效的现实世界应用程序中。
 
 216
 00:07:28,340 --> 00:07:30,660
@@ -1152,7 +1243,7 @@ and impactful real world applications.|
 00:07:35,060 --> 00:07:36,400
 0,305 305,710 710,935 935,1220 1220,1340
 In today's lecture, we're going
-在今天的课程中，我们将重点介绍一大类生成性模型，我们称之为潜变量模型，具体分为两种类型的潜变量模型。
+在今天的课程中，我们将重点介绍一大类生成性模型，
 
 219
 00:07:36,400 --> 00:07:38,280
@@ -1162,17 +1253,20 @@ to focus on a broad
 220
 00:07:38,300 --> 00:07:39,820
 0,350 350,590 590,995 995,1250 1250,1520
-class of generative models that
+class of generative models,| that
+|我们称之为隐变量模型，
 
 221
 00:07:39,820 --> 00:07:41,520
 0,195 195,450 450,915 915,1220 1300,1700
-we call latent variable models
+we call latent variable models|
+|
 
 222
 00:07:42,050 --> 00:07:44,130
 0,320 320,640 930,1430 1430,1715 1715,2080
 and specifically distill down into
+具体分为两种类型的隐变量模型。
 
 223
 00:07:44,210 --> 00:07:46,770
@@ -1188,13 +1282,14 @@ models.|
 225
 00:07:48,740 --> 00:07:50,965
 0,320 320,560 560,880 1410,1925 1925,2225
-First things first. I've introduced
-先做最重要的事。我已经引入了潜变量这个术语，但是我还没有告诉你们或者描述它到底是什么。
+First things, first, I've introduced
+首先，我已经引入了隐变量这个术语，
 
 226
 00:07:50,965 --> 00:07:53,005
 0,240 240,525 525,900 900,1175 1735,2040
-this term latent variable, but
+this term latent variable,| but
+|但是我还没有告诉你们或者描述它到底是什么，
 
 227
 00:07:53,005 --> 00:07:54,670
@@ -1209,93 +1304,103 @@ described to you what that
 229
 00:07:56,420 --> 00:07:57,680
 0,305 305,610
-actually is.|
+actually is,|
 |
 
 230
 00:07:58,350 --> 00:07:59,660
 0,305 305,485 485,665 665,965 965,1310
-I think a great example,
-我认为一个很好的例子，也是我在整个课程中最喜欢的一个例子，就是这个来自柏拉图的共和国的小故事。
+I think a great example,|
+我认为一个很好的例子，|
 
 231
 00:07:59,660 --> 00:08:00,670
 0,240 240,390 390,525 525,705 705,1010
 and one of my favorite
+也是我在整个课程中最喜欢的一个例子，
 
 232
 00:08:00,690 --> 00:08:02,830
 0,400 780,1085 1085,1370 1370,1745 1745,2140
-examples throughout this entire course
+examples throughout this entire course,|
+|
 
 233
 00:08:03,600 --> 00:08:05,090
 0,400 540,845 845,1025 1025,1265 1265,1490
 that gets at this idea
+获得隐变量的思想，
 
 234
 00:08:05,090 --> 00:08:06,740
 0,135 135,285 285,615 615,890 1360,1650
-of the latent variable is
+of the latent variable,| is
+|就是这个来自柏拉图的理想国的小故事，
 
 235
 00:08:06,740 --> 00:08:08,770
 0,210 210,510 510,890 910,1275 1275,2030
-this little story from plato's
+this little story from Plato's
 
 236
 00:08:08,820 --> 00:08:09,920
 0,400
-republic.|
+republic,|
 |
 
 237
 00:08:09,960 --> 00:08:11,465
 0,335 335,590 590,860 860,1210 1230,1505
-Which is known as the
-这就是众所周知的洞穴神话。
+which is known as the
+这就是众所周知的洞穴寓言，
 
 238
 00:08:11,465 --> 00:08:13,180
 0,225 225,435 435,585 585,875
-myth of the cave.|
+myth of the cave,|
 |
 
 239
 00:08:13,410 --> 00:08:14,735
 0,290 290,485 485,790 930,1190 1190,1325
-In this myth, there is
-在这个神话中，有一群囚犯，作为惩罚的一部分，他们被迫面对一堵墙。现在囚犯们唯一能观察到的东西是在他们身后的火堆前经过的物体的阴影，他们正在观察这个洞穴墙上的阴影的投射。
+in this myth,| there is
+在这个寓言中，|有一群囚犯，
 
 240
 00:08:14,735 --> 00:08:16,685
 0,165 165,375 375,615 615,1145 1645,1950
-a group of prisoners, and
+a group of prisoners,| and
+|作为惩罚的一部分，
 
 241
 00:08:16,685 --> 00:08:18,125
 0,225 225,435 435,600 600,810 810,1440
-as part of their punishment,
+as part of their punishment,|
+|
 
 242
 00:08:18,125 --> 00:08:19,820
 0,345 345,875 985,1320 1320,1545 1545,1695
 they're constrained to face a
+他们被迫面对一堵墙，
 
 243
 00:08:19,820 --> 00:08:22,475
 0,260 1150,1550 1750,2025 2025,2295 2295,2655
-wall. {Now,the -} only things
+wall,| {now,the -} only things
+|现在囚犯们唯一能观察到的东西是，
 
 244
 00:08:22,475 --> 00:08:24,700
 0,285 285,750 750,1050 1050,1415 1825,2225
-that prisoners can observe are
+that prisoners can observe are|
+|
 
 245
 00:08:24,810 --> 00:08:27,520
 0,640 660,1060 1230,1630 2070,2390 2390,2710
 shadows of objects that are
+在他们身后的火堆前经过的物体的阴影，
 
 246
 00:08:27,660 --> 00:08:28,895
@@ -1305,7 +1410,8 @@ passing in front of a
 247
 00:08:28,895 --> 00:08:30,875
 0,300 300,720 720,990 990,1325 1705,1980
-fire that's behind them, and
+fire that's behind them,| and
+|他们观察这个洞穴墙上的阴影的投射，
 
 248
 00:08:30,875 --> 00:08:32,690
@@ -1320,14 +1426,14 @@ the shadows on the wall
 250
 00:08:34,655 --> 00:08:36,080
 0,240 240,450 450,785
-of this cave.|
+of this cave,|
 |
 
 251
 00:08:36,780 --> 00:08:38,390
 0,245 245,365 365,830 830,1115 1115,1610
-To the prisoners, those shadows
-对于囚犯来说，这些阴影是他们唯一看到的东西，他们的观察，他们可以测量他们。他们可以给他们起名字，因为对他们来说，这就是他们的现实。但他们不能直接看到潜在的物体，真实的因素本身，这些因素正在投射那些阴影。
+to the prisoners,| those shadows
+对于囚犯来说，|这些阴影是他们唯一看到的东西，
 
 252
 00:08:38,390 --> 00:08:39,485
@@ -1337,22 +1443,26 @@ are the only things they
 253
 00:08:39,485 --> 00:08:41,465
 0,315 315,690 690,1235 1555,1830 1830,1980
-see, their observations, they can
+see,| their observations, they can
+|他们的观察，他们可以测量他们，
 
 254
 00:08:41,465 --> 00:08:42,455
 0,225 225,495 495,675 675,825 825,990
-measure them. {They,can -} give
+measure them,| {they,can -} give
+|他们可以给他们起名字，
 
 255
 00:08:42,455 --> 00:08:44,170
 0,165 165,455 955,1275 1275,1455 1455,1715
-them names, because to them
+them names,| because to them
+|因为对他们来说，这就是他们的现实，
 
 256
 00:08:44,220 --> 00:08:47,255
 0,500 500,740 740,1060 2160,2560 2580,3035
-that's their {reality.,But -} they're
+that's their reality,| but they're
+|但他们不能直接看到潜在的物体，
 
 257
 00:08:47,255 --> 00:08:49,220
@@ -1362,7 +1472,8 @@ unable to directly see the
 258
 00:08:49,220 --> 00:08:51,700
 0,290 1210,1590 1590,1905 1905,2160 2160,2480
-underlying objects, the true factors
+underlying objects,| the true factors
+|真实的因素本身，这些因素投射那些阴影，
 
 259
 00:08:51,960 --> 00:08:53,570
@@ -1372,26 +1483,26 @@ themselves, that are casting those
 260
 00:08:53,570 --> 00:08:54,620
 0,500
-shadows.|
+shadows,|
 |
 
 261
 00:08:55,180 --> 00:08:57,350
 0,400 600,995 995,1370 1370,1750 1770,2170
-Those objects here are like
-这里的这些对象就像机器学习中的潜在变量。
+those objects here are like
+这里的这些对象就像机器学习中的隐变量，
 
 262
 00:08:57,460 --> 00:08:59,150
 0,455 455,920 920,1160 1160,1400 1400,1690
-latent variables in machine learning.|
+latent variables in machine learning,|
 |
 
 263
 00:09:00,030 --> 00:09:02,510
 0,335 335,545 545,910 960,1660 2130,2480
-They're not directly observable, but
-它们不是直接可见的，但它们是真正的潜在特征或解释因素，它们创造了我们可以看到和观察到的观察到的差异和变量。
+they're not directly observable,| but
+它们不是直接可见的，|但它们是真正的潜在特征或解释因素，
 
 264
 00:09:02,510 --> 00:09:03,910
@@ -1401,7 +1512,8 @@ they are the true underlying
 265
 00:09:04,200 --> 00:09:07,120
 0,400 690,1090 1320,2045 2045,2380 2520,2920
-features or explanatory factors that
+features or explanatory factors,| that
+|它们创造了我们可以看到和观察到的差异和变量。
 
 266
 00:09:07,560 --> 00:09:10,240
@@ -1423,12 +1535,13 @@ and observe.|
 00:09:15,030 --> 00:09:17,030
 0,290 290,580 1050,1340 1340,1630 1710,2000
 And this gets at the
-这就达到了生成性建模的目标，即找到方法让我们能够真正学习这些隐藏的特征，这些潜在的潜在变量，即使我们只得到了观察到的数据。
+这就达到了生成性建模的目标，
 
 270
 00:09:17,030 --> 00:09:19,220
 0,290 340,645 645,1095 1095,1610 1900,2190
-goal of generative modeling, which
+goal of generative modeling,| which
+|即找到方法让我们能够真正学习这些隐藏的特征，
 
 271
 00:09:19,220 --> 00:09:20,360
@@ -1443,12 +1556,14 @@ we can actually learn these
 273
 00:09:21,680 --> 00:09:23,750
 0,285 285,650 760,1080 1080,1400 1630,2070
-hidden features, these underlying latent
+hidden features,| these underlying latent
+|这些潜在的隐变量，
 
 274
 00:09:23,750 --> 00:09:25,805
 0,590 910,1290 1290,1575 1575,1815 1815,2055
-variables, even when we're only
+variables,| even when we're only
+|即使我们只得到了观察到的数据。
 
 275
 00:09:25,805 --> 00:09:28,330
@@ -9085,4 +9200,3 @@ here as well.|
 0,290 290,455 455,590 590,850
 Thank you so much.|
 非常感谢。|
-
