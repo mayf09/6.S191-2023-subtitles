@@ -10,3 +10,10 @@ dropout
 
 # Lecture 2
 sequence modeling 序列建模
+
+# Lecture 3
+receptive field 感受野
+convolution 卷积
+pooling 池化
+local connectivity 局部连接
+segmentation 分割
