@@ -23,3 +23,4 @@ generative modeling 生成式建模
 density estimation 密度估计
 sample generation 样本生成
 latent variable model 隐变量模型
+autoencoder 自编码器
