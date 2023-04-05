@@ -5977,8 +5977,8 @@ the standard VAE.|
 1055
 00:36:26,210 --> 00:36:27,760
 0,260 260,520 870,1175 1175,1370 1370,1550
-All right, so this is
-好的，这就是所有的核心数学，核心运算，a的核心架构，我们将在今天的课程中讨论，在这节课结束之前。作为最后一个注解，我想提醒大家回到我在本课开始时介绍的鼓舞人心的例子，面部检测。
+{Alright -}, so this is
+好的，这就是所有的核心数学，核心运算，
 
 1056
 00:36:27,760 --> 00:36:29,610
@@ -5988,12 +5988,14 @@ really all the core math,
 1057
 00:36:29,720 --> 00:36:32,005
 0,305 305,610 1290,1690 1800,2090 2090,2285
-the core operations, the core
+the core operations,| the core
+|VAE 的核心架构，
 
 1058
 00:36:32,005 --> 00:36:33,835
 0,305 595,995 1015,1260 1260,1515 1515,1830
-architecture of the a that
+architecture of the VAE,| that
+|我们将在今天的课程中讨论。
 
 1059
 00:36:33,835 --> 00:36:35,260
@@ -6008,17 +6010,19 @@ today's lecture and in this
 1061
 00:36:36,535 --> 00:36:39,370
 0,335 385,675 675,965 2215,2565 2565,2835
-class in general to close
+class in general.| To close
+|在这节课结束之前。作为最后一个注解，
 
 1062
 00:36:39,370 --> 00:36:41,680
 0,225 225,530 760,1160 1840,2130 2130,2310
-this section. {And,as -} a
+this section, {and,as -} a
 
 1063
 00:36:41,680 --> 00:36:42,850
 0,255 255,555 555,780 780,960 960,1170
-final note, I want to
+final note,| I want to
+|我想提醒大家回到鼓舞人心的例子，
 
 1064
 00:36:42,850 --> 00:36:44,005
@@ -6028,7 +6032,8 @@ remind you back to the
 1065
 00:36:44,005 --> 00:36:46,450
 0,545 595,995 1435,1785 1785,2135 2155,2445
-motivating example that I introduced
+motivating example,| that I introduced
+|我在本课开始时介绍的，面部检测。
 
 1066
 00:36:46,450 --> 00:36:47,350
@@ -6045,7 +6050,7 @@ lecture, facial detection.|
 00:36:49,750 --> 00:36:51,860
 0,305 305,610 660,1060 1110,1630 1710,2110
 Where now hopefully you've understood
-现在，希望你已经理解了潜变量学习和编码的概念，以及这对于面部检测这样的任务是多么有用，我们可能想要了解数据中潜在特征的分布，实际上，你将在软件实验室中亲身实践，建立可以自动发现的变化自动编码器。
+现在，希望你已经理解了隐变量学习和编码的概念，
 
 1069
 00:36:51,970 --> 00:36:53,690
@@ -6055,7 +6060,8 @@ this concept of latent variable
 1070
 00:36:53,770 --> 00:36:55,860
 0,400 450,710 710,1390 1530,1850 1850,2090
-learning and encoding, and how
+learning and encoding,| and how
+|以及这对于面部检测这样的任务是多么有用，
 
 1071
 00:36:55,860 --> 00:36:57,180
@@ -6065,12 +6071,14 @@ this may be useful for
 1072
 00:36:57,180 --> 00:36:59,060
 0,225 225,525 525,855 855,1305 1305,1880
-a task like facial detection,
+a task like facial detection,|
+|
 
 1073
 00:36:59,380 --> 00:37:00,660
 0,290 290,485 485,740 740,1025 1025,1280
 where we may want to
+我们可能想要了解数据中隐特征的分布，
 
 1074
 00:37:00,660 --> 00:37:02,925
@@ -6080,12 +6088,14 @@ learn those distributions of the
 1075
 00:37:02,925 --> 00:37:04,610
 0,275 625,1020 1020,1290 1290,1425 1425,1685
-underlying features in the data,
+underlying features in the data,|
+|
 
 1076
 00:37:05,320 --> 00:37:06,495
 0,365 365,635 635,875 875,1025 1025,1175
 and indeed, you're going to
+实际上，你将在软件实验中亲身实践，
 
 1077
 00:37:06,495 --> 00:37:08,370
@@ -6095,29 +6105,30 @@ get hands on practice in
 1078
 00:37:08,370 --> 00:37:11,360
 0,380 400,795 795,1430 2260,2625 2625,2990
-the software labs to build
+the software labs| to build
+|建立变化自编码器，
 
 1079
 00:37:11,770 --> 00:37:13,760
 0,635 635,950 950,1475 1475,1685 1685,1990
-variational auto encoders that can
+variational {autoencoders -},| that can
+|可以自动发现面部检测数据集的隐特征，
 
 1080
 00:37:13,870 --> 00:37:15,780
 0,400 570,1390
-automatically uncover.|
-|
+automatically uncover
 
 1081
 00:37:16,170 --> 00:37:18,470
 0,400 480,880 1140,1670 1670,2075 2075,2300
-Features underlying facial detection data
-面部检测数据集的潜在特征，并使用这一点来实际了解这些数据和模型可能存在的潜在和隐藏的偏见。
+features underlying facial detection data
 
 1082
 00:37:18,470 --> 00:37:20,380
 0,350 700,1050 1050,1350 1350,1605 1605,1910
-sets and use this to
+sets| and use this to
+|并使用这一点来了解潜在和隐藏的偏见，
 
 1083
 00:37:20,460 --> 00:37:23,210
@@ -6127,7 +6138,8 @@ actually understand underlying and hidden
 1084
 00:37:23,210 --> 00:37:25,325
 0,770 910,1215 1215,1520 1570,1905 1905,2115
-biases that may exist with
+biases,| that may exist with
+|可能来自这些数据和模型。
 
 1085
 00:37:25,325 --> 00:37:26,615
@@ -6144,32 +6156,37 @@ models.|
 00:37:27,890 --> 00:37:28,945
 0,245 245,350 350,635 635,815 815,1055
 And it doesn't just stop
-而且它并不只是止步于此。明天，我们将有一个非常非常令人兴奋的客座讲座，关于稳健和值得信赖的深度学习，它将使这个概念更进一步，认识到我们如何使用生成模型和潜在变量学习的想法，不仅发现和诊断偏见，而且实际上解决和减轻这些偏见的一些有害影响。
+而且它并不只是止步于此，
 
 1088
 00:37:28,945 --> 00:37:30,655
 0,335 565,960 960,1275 1275,1485 1485,1710
-there. {Tomorrow,we'll -} have a
+there,| {tomorrow,we'll -} have a
+|明天我们将有一个非常令人兴奋的客座讲座，
 
 1089
 00:37:30,655 --> 00:37:32,490
 0,225 225,555 555,935 1165,1500 1500,1835
-very, very exciting guest lecture
+very, very exciting guest lecture|
+|
 
 1090
 00:37:33,170 --> 00:37:35,215
 0,400 450,830 830,1175 1175,1850 1850,2045
 on robust and trustworthy deep
+关于稳健和值得信赖的深度学习，
 
 1091
 00:37:35,215 --> 00:37:36,850
 0,305 655,960 960,1170 1170,1395 1395,1635
-learning, which will take this
+learning,| which will take this
+|它将使这个概念更进一步，
 
 1092
 00:37:36,850 --> 00:37:38,920
 0,320 340,630 630,855 855,1190 1690,2070
-concept a step further to
+concept a step further| to
+|认识到我们如何使用生成模型和隐变量学习的想法，
 
 1093
 00:37:38,920 --> 00:37:40,390
@@ -6184,7 +6201,8 @@ this idea of generative models
 1095
 00:37:42,140 --> 00:37:44,170
 0,305 305,680 680,970 990,1390 1770,2030
-and latent variable learning to
+and latent variable learning| to
+|不仅发现和诊断偏见，
 
 1096
 00:37:44,170 --> 00:37:46,375
@@ -6194,7 +6212,8 @@ not only uncover and diagnose
 1097
 00:37:46,375 --> 00:37:49,360
 0,725 1045,1445 1615,2015 2245,2645 2665,2985
-biases, but actually solve and
+biases,| but actually solve and
+|而且实际上解决和减轻这些偏见的一些有害影响，
 
 1098
 00:37:49,360 --> 00:37:51,055
@@ -6204,14 +6223,13 @@ mitigate some of those harmful
 1099
 00:37:51,055 --> 00:37:52,920
 0,270 270,480 480,660 660,1295 1465,1865
-effects of those biases in.|
-|
+effects of those biases| in
+|在用于面部检测和其他应用的神经网络中。
 
 1100
 00:37:53,380 --> 00:37:55,195
 0,270 270,530 610,885 885,1275 1275,1815
-Neural networks for facial detection
-用于面部检测和其他应用的神经网络。
+neural networks for facial detection
 
 1101
 00:37:55,195 --> 00:37:57,520
@@ -6222,8 +6240,8 @@ and other applications.|
 1102
 00:37:57,830 --> 00:37:59,875
 0,275 275,550 930,1325 1325,1610 1610,2045
-All right, so to summarize
-好了，简单地总结一下VAS的要点，我们已经了解了它们是如何将数据压缩到这个紧凑的编码表示中的。从这个表示中，我们可以以完全无监督的方式生成输入的重构。
+{Alright -}, so to summarize
+好的，简单总结一下 VAE 的要点，
 
 1103
 00:37:59,875 --> 00:38:01,300
@@ -6233,7 +6251,8 @@ quickly the key points of
 1104
 00:38:01,300 --> 00:38:03,535
 0,380 940,1320 1320,1560 1560,1920 1920,2235
-vas we've gone through how
+VAEs,| we've gone through how
+|我们已经了解了它们是如何将数据压缩到这个紧凑的编码表示中的，
 
 1105
 00:38:03,535 --> 00:38:05,665
@@ -6243,12 +6262,14 @@ they're able to compress data
 1106
 00:38:05,665 --> 00:38:08,400
 0,390 390,705 705,1265 1405,1995 1995,2735
-into this compact encoded representation.
+into this compact encoded representation,|
+|
 
 1107
 00:38:09,140 --> 00:38:10,855
 0,320 320,530 530,1295 1295,1535 1535,1715
-{From,this -} representation, we can
+{from,this -} representation,| we can
+从这个表示中，|我们可以以完全无监督的方式生成输入的重构，
 
 1108
 00:38:10,855 --> 00:38:12,840
@@ -6258,24 +6279,25 @@ generate reconstructions of the input
 1109
 00:38:13,340 --> 00:38:15,240
 0,260 260,485 485,800 800,1550 1550,1900
-in a completely unsupervised fashion.|
+in a completely unsupervised fashion,|
 |
 
 1110
 00:38:17,160 --> 00:38:19,325
 0,290 290,580 1410,1730 1730,1955 1955,2165
-We can train them end
-我们可以使用参数化技巧对它们进行端到端的训练。我们可以通过扰动个体潜变量的值来理解它们的语义解释。最后，我们可以从潜在空间中进行采样，通过解码器向上传递来生成新的示例。
+we can train them end
+我们可以使用重新参数化技巧对它们进行端到端的训练，
 
 1111
 00:38:19,325 --> 00:38:21,400
 0,165 165,420 420,795 795,1140 1140,2075
-to end using the parameterurization
+to end using the reparameterization
 
 1112
 00:38:21,450 --> 00:38:23,975
 0,400 1230,1490 1490,1750 1950,2300 2300,2525
-trick. {We,can -} understand the
+trick,| {we,can -} understand the
+|我们可以通过扰动个体隐变量的值来理解它们的语义解释，
 
 1113
 00:38:23,975 --> 00:38:27,500
@@ -6285,17 +6307,20 @@ semantic interpretation of individual latent
 1114
 00:38:27,500 --> 00:38:29,740
 0,510 510,830 1000,1740 1740,1950 1950,2240
-variables by perturbing their {values.,And
+variables by perturbing their values,|
+|
 
 1115
 00:38:30,630 --> 00:38:32,080
 0,305 305,610 660,935 935,1130 1130,1450
--} finally, we can sample
+and finally, we can sample
+最后，我们可以从潜在空间中进行采样，
 
 1116
 00:38:32,250 --> 00:38:34,520
 0,400 630,1030 1140,1640 1640,1960 1980,2270
-from the latent space to
+from the latent space| to
+|通过解码器向上传递来生成新的示例。
 
 1117
 00:38:34,520 --> 00:38:36,640
@@ -6311,8 +6336,8 @@ back up through the decoder.|
 1119
 00:38:40,050 --> 00:38:41,990
 0,400 600,1000 1140,1460 1460,1715 1715,1940
-So v are looking at
-所以v把潜变量编码和密度估计作为他们的核心问题。如果现在我们只关注生成样本的质量，这是我们更关心的任务。
+So VAE are looking at
+所以 VAE 把隐变量编码和密度估计作为他们的核心问题，
 
 1120
 00:38:41,990 --> 00:38:43,445
@@ -6327,7 +6352,8 @@ encoding and density estimation as
 1122
 00:38:45,740 --> 00:38:48,005
 0,240 240,495 495,830 1810,2085 2085,2265
-their core problem. {What,if -}
+their core problem,| {what,if -}
+|如果现在我们只关注生成样本的质量，
 
 1123
 00:38:48,005 --> 00:38:49,445
@@ -6342,7 +6368,8 @@ the quality of the generated
 1125
 00:38:51,120 --> 00:38:52,880
 0,545 545,755 755,1265 1265,1535 1535,1760
-samples, and that's the task
+samples,| and that's the task
+|这是我们更关心的任务。
 
 1126
 00:38:52,880 --> 00:38:54,640
@@ -6354,7 +6381,7 @@ that we care more about.|
 00:38:55,690 --> 00:38:56,790
 0,290 290,515 515,770 770,905 905,1100
 For that, we're going to
-为此，我们将过渡到一种新型的生成性模型，称为生成性对抗网络，或称GAM。
+所以，我们将过渡到一种新型的生成性模型，
 
 1128
 00:38:56,790 --> 00:38:58,050
@@ -6364,24 +6391,26 @@ transition to a new type
 1129
 00:38:58,050 --> 00:39:00,060
 0,165 165,585 585,860 1420,1770 1770,2010
-of generative model called a
+of generative model| called a
+|称为生成性对抗网络，或称 GAN ，
 
 1130
 00:39:00,060 --> 00:39:02,690
 0,540 540,1320 1320,1610 1750,2150 2200,2630
-generative adversarial network, or gam.|
+generative adversarial network or GAN,|
 |
 
 1131
 00:39:04,040 --> 00:39:05,620
 0,305 305,530 530,880 930,1265 1265,1580
-Where with gans, our goal
-对于Gans，我们的目标实际上是更多地关心如何生成与现有数据相似的新实例，这意味着我们希望尝试从模型试图近似的潜在非常复杂的分布中进行采样。
+where with GANs, our goal
+对于 GAN，我们的目标是，
 
 1132
 00:39:05,620 --> 00:39:07,015
 0,330 330,630 630,855 855,1080 1080,1395
-is really that we care
+is really that,| we care
+|更多地关心如何生成与现有数据相似的新实例，
 
 1133
 00:39:07,015 --> 00:39:08,875
@@ -6396,12 +6425,14 @@ generate new instances that are
 1135
 00:39:11,245 --> 00:39:12,900
 0,335 445,720 720,945 945,1275 1275,1655
-similar to the existing data,
+similar to the existing data,|
+|
 
 1136
 00:39:13,610 --> 00:39:15,190
 0,365 365,695 695,980 980,1280 1280,1580
 meaning that we want to
+这意味着我们希望尝试从潜在非常复杂的分布中进行采样，
 
 1137
 00:39:15,190 --> 00:39:17,170
@@ -6411,7 +6442,8 @@ try to sample from a
 1138
 00:39:17,170 --> 00:39:19,960
 0,350 430,830 940,1340 1360,1760 2440,2790
-potentially very complex distribution that
+potentially very complex distribution,| that
+|模型试图近似的（分布），
 
 1139
 00:39:19,960 --> 00:39:21,445
@@ -6421,14 +6453,14 @@ the model is trying to
 1140
 00:39:21,445 --> 00:39:22,600
 0,695
-approximate.|
+approximate,|
 |
 
 1141
 00:39:23,370 --> 00:39:25,060
 0,260 260,365 365,610 780,1180 1290,1690
-It can be extremely, extremely
-直接了解这种分布可能非常非常困难，因为它很复杂，维度很高，我们希望能够绕过这种复杂性。
+it can be extremely, extremely
+直接学习这种分布可能非常困难，
 
 1142
 00:39:25,230 --> 00:39:27,160
@@ -6438,12 +6470,14 @@ difficult to learn that distribution
 1143
 00:39:27,270 --> 00:39:29,375
 0,400 570,935 935,1385 1385,1760 1760,2105
-directly because it's complex, it's
+directly,| because it's complex, it's
+|因为它很复杂，维度很高，
 
 1144
 00:39:29,375 --> 00:39:31,160
 0,180 180,875 1075,1350 1350,1515 1515,1785
-high dimensional and we want
+high dimensional| and we want
+|我们希望能够绕过这种复杂性，
 
 1145
 00:39:31,160 --> 00:39:32,600
@@ -6453,19 +6487,20 @@ to be able to get
 1146
 00:39:32,600 --> 00:39:34,440
 0,225 225,495 495,1190
-around that complexity.|
+around that complexity,|
 |
 
 1147
 00:39:34,510 --> 00:39:36,015
 0,305 305,725 725,1025 1025,1310 1310,1505
-What ganss do is they
-甘斯所做的是，他们会说，好吧，如果我们从超级，超级简单的东西开始呢？就像它可以得到完全随机的噪音一样简单吗？我们能否建立一种神经网络体系结构，能够学习从完全随机的噪音中生成合成样本？
+what GANs do is they
+GAN 所做的是，他们会说，
 
 1148
 00:39:36,015 --> 00:39:37,740
 0,305 325,725 1105,1380 1380,1530 1530,1725
-say, okay, what if we
+say,| okay, what if we
+|好的，如果我们从超级简单的东西开始，
 
 1149
 00:39:37,740 --> 00:39:39,330
@@ -6475,22 +6510,26 @@ start from something super, super
 1150
 00:39:39,330 --> 00:39:40,800
 0,345 345,735 735,1080 1080,1320 1320,1470
-simple? As simple as it
+simple,| as simple as it
+|就像它可以得到完全随机的噪音一样简单，
 
 1151
 00:39:40,800 --> 00:39:43,190
 0,150 150,440 1150,1550 1570,1970 1990,2390
-can get completely random noise?
+can get completely random noise,|
+|
 
 1152
 00:39:43,900 --> 00:39:45,150
 0,290 290,470 470,695 695,920 920,1250
-Could we build a neural
+could we build a neural
+我们能否建立一种神经网络体系结构，
 
 1153
 00:39:45,150 --> 00:39:47,720
 0,290 610,1010 1780,2055 2055,2250 2250,2570
-network architecture that can learn
+network architecture,| that can learn
+|能够学习从完全随机的噪音中生成合成样本。
 
 1154
 00:39:48,070 --> 00:39:50,780
@@ -6500,19 +6539,20 @@ to generate synthetic examples from
 1155
 00:39:50,860 --> 00:39:53,360
 0,400 870,1270 1530,1930
-complete random noise?|
+complete random noise.|
 |
 
 1156
 00:39:54,210 --> 00:39:55,420
 0,290 290,530 530,800 800,965 965,1210
 And this is the underlying
-这就是GANS的基本概念，目标是训练这个生成器网络，学习从噪声到训练数据分布的转换。
+这就是 GAN 的基本概念，
 
 1157
 00:39:55,680 --> 00:39:58,925
 0,400 570,965 965,1390 2130,2530 2970,3245
-concept of gans, where the
+concept of GANs,| where the
+|目标是训练这个生成器网络，
 
 1158
 00:39:58,925 --> 00:40:00,095
@@ -6522,7 +6562,8 @@ goal is to train this
 1159
 00:40:00,095 --> 00:40:02,710
 0,545 565,965 1405,1740 1740,2250 2250,2615
-generator network that learns a
+generator network,| that learns a
+|学习从噪声到训练数据分布的转换，
 
 1160
 00:40:02,730 --> 00:40:05,795
@@ -6532,14 +6573,14 @@ transformation from noise to the
 1161
 00:40:05,795 --> 00:40:07,840
 0,285 285,665 775,1175
-training data distribution.|
+training data distribution,|
 |
 
 1162
 00:40:07,840 --> 00:40:09,145
 0,270 270,420 420,630 630,960 960,1305
-With the goal of making
-目标是使生成的示例尽可能接近真实的deo。
+with the goal of making
+目标是使生成的示例尽可能接近真实的[] 。
 
 1163
 00:40:09,145 --> 00:40:11,425
@@ -6549,7 +6590,7 @@ the generated examples as close
 1164
 00:40:11,425 --> 00:40:12,940
 0,180 180,285 285,480 480,965 1165,1515
-to the real deo as
+to the real [] as
 
 1165
 00:40:12,940 --> 00:40:14,640
@@ -6560,18 +6601,20 @@ possible.|
 1166
 00:40:14,910 --> 00:40:17,720
 0,335 335,700 1560,1880 1880,2480 2480,2810
-With gans, the breakthrough idea
-对于甘斯，这里的突破性想法是将这两个神经网络连接在一起，一个是生成器，一个是鉴别器。
+With GANs, the breakthrough idea
+对于 GAN ，这里的突破性想法是，
 
 1167
 00:40:17,720 --> 00:40:21,695
 0,300 300,650 910,1310 2860,3600 3600,3975
-here was to interface these
+here was| to interface these
+|将这两个神经网络连接在一起，
 
 1168
 00:40:21,695 --> 00:40:24,455
 0,330 330,675 675,965 1165,1565 2365,2760
-two neural networks together, one
+two neural networks together,| one
+|一个是生成器，一个是判别器，
 
 1169
 00:40:24,455 --> 00:40:26,465
@@ -6581,19 +6624,20 @@ being a generator and one
 1170
 00:40:26,465 --> 00:40:28,440
 0,365 385,660 660,1385
-being a discriminator.|
+being a discriminator,|
 |
 
 1171
 00:40:28,480 --> 00:40:30,030
 0,305 305,560 560,860 860,1210 1260,1550
-And these two components, the
-而这两个组成部分，生成器和鉴别器，正处于战争之中，相互竞争。
+and these two components, the
+而这两个组成部分，生成器和判别器，
 
 1172
 00:40:30,030 --> 00:40:32,625
 0,510 510,890 1000,1820 2110,2385 2385,2595
-generator and discriminator, are at
+generator and discriminator,| are at
+|处于战争之中，相互竞争，
 
 1173
 00:40:32,625 --> 00:40:34,440
@@ -6603,24 +6647,26 @@ war, at competition with each
 1174
 00:40:34,440 --> 00:40:35,460
 0,290
-other.|
+other,|
 |
 
 1175
 00:40:35,650 --> 00:40:37,425
 0,400 930,1220 1220,1430 1430,1625 1625,1775
-Specifically, the goal of the
-具体地说，生成器网络的目标是观察随机噪声，并试图产生尽可能接近真实数据的模拟数据。
+specifically, the goal of the
+具体地说，生成器网络的目标是，
 
 1176
 00:40:37,425 --> 00:40:39,855
 0,450 450,815 1375,1770 1770,2160 2160,2430
-generator network is to look
+generator network is| to look
+|观察随机噪声，
 
 1177
 00:40:39,855 --> 00:40:41,790
 0,165 165,450 450,845 1315,1665 1665,1935
-at random noise and try
+at random noise| and try
+|并试图产生尽可能接近真实数据的模拟数据，
 
 1178
 00:40:41,790 --> 00:40:43,365
@@ -6635,14 +6681,14 @@ the data that's as close
 1180
 00:40:45,015 --> 00:40:46,760
 0,195 195,345 345,570 570,905
-to real as possible.|
+to real as possible,|
 |
 
 1181
 00:40:47,100 --> 00:40:49,450
 0,290 290,1000 1380,1745 1745,2030 2030,2350
-The discriminator then takes the
-然后，鉴别器获取生成器的输出以及一些真实的数据示例，并尝试学习分类决策。
+the discriminator then takes the
+然后，判别器获取生成器的输出以及一些真实的数据示例，
 
 1182
 00:40:49,530 --> 00:40:51,980
@@ -6657,30 +6703,32 @@ well as some real data
 1184
 00:40:53,150 --> 00:40:55,190
 0,380 940,1290 1290,1590 1590,1815 1815,2040
-examples, and tries to learn
+examples,| and tries to learn
+|并尝试学习分类决策，
 
 1185
 00:40:55,190 --> 00:40:58,340
 0,270 270,1820 2080,2480
-a classification decision.|
+a classification decision,|
 |
 
 1186
 00:40:58,750 --> 00:41:01,480
 0,760 870,1270 1380,1685 1685,1990
-Distinguishing real from fake.|
-辨别真假。|
+distinguishing real from fake,|
+辨别真假，|
 
 1187
 00:41:01,480 --> 00:41:02,965
 0,345 345,710 820,1110 1110,1275 1275,1485
-And effectively in the g,
-在G中，这两个部分相互竞争，试图迫使鉴别者更好地区分真假，而生成器试图愚弄和超越鉴别者进行分类的能力。
+and effectively in the GAN,|
+在 GAN 中，|
 
 1188
 00:41:02,965 --> 00:41:05,110
 0,315 315,695 865,1265 1585,1890 1890,2145
 these two components are going
+这两个部分相互竞争，
 
 1189
 00:41:05,110 --> 00:41:06,520
@@ -6690,7 +6738,8 @@ back and forth, competing each
 1190
 00:41:06,520 --> 00:41:08,665
 0,290 1000,1335 1335,1545 1545,1785 1785,2145
-other, trying to force the
+other,| trying to force the
+|试图迫使判别器更好地区分真假，
 
 1191
 00:41:08,665 --> 00:41:10,555
@@ -6700,12 +6749,14 @@ discriminator to better learn this
 1192
 00:41:10,555 --> 00:41:12,600
 0,485 985,1305 1305,1530 1530,1740 1740,2045
-distinction between real and fake,
+distinction between real and fake,|
+|
 
 1193
 00:41:13,250 --> 00:41:15,325
 0,400 750,1055 1055,1520 1520,1805 1805,2075
 while the generator is trying
+而生成器试图愚弄和超越判别器进行分类的能力。
 
 1194
 00:41:15,325 --> 00:41:17,920
@@ -6726,23 +6777,26 @@ make that classification.|
 1197
 00:41:22,780 --> 00:41:25,490
 0,400 1170,1610 1610,1715 1715,2230 2310,2710
-So that's the overlying concept.
-所以这就是最重要的概念。但真正让我兴奋的是下一个例子，这是我在这门课上最喜欢的插图和演练之一。它得到了甘斯背后的直觉，他们是如何工作的，以及潜在的概念。
+So that's the overlying concept,|
+所以这就是最重要的概念，|
 
 1198
 00:41:26,080 --> 00:41:27,915
 0,400 420,695 695,1060 1140,1505 1505,1835
-{But,what -} I'm really excited
+{but,what -} I'm really excited
+但真正让我兴奋的是下一个例子，
 
 1199
 00:41:27,915 --> 00:41:29,900
 0,300 300,635 1015,1290 1290,1565 1585,1985
-about is the next example,
+about is the next example,|
+|
 
 1200
 00:41:29,920 --> 00:41:30,980
 0,275 275,455 455,635 635,785 785,1060
 which is one of my
+这是我在这门课上最喜欢的插图和演练之一，
 
 1201
 00:41:31,120 --> 00:41:34,230
@@ -6752,7 +6806,8 @@ absolute favorite illustrations and walkthroughs
 1202
 00:41:34,230 --> 00:41:35,640
 0,135 135,315 315,620 1000,1260 1260,1410
-in this {class.,And -} it
+in this class,| and it
+|它得到了 GAN 背后的直觉，
 
 1203
 00:41:35,640 --> 00:41:37,530
@@ -6762,7 +6817,8 @@ gets at the intuition behind
 1204
 00:41:37,530 --> 00:41:39,345
 0,380 700,990 990,1170 1170,1460 1540,1815
-gans, how they work and
+GANs,| how they work and
+|它们是如何工作的，以及潜在的概念。
 
 1205
 00:41:39,345 --> 00:41:42,760
@@ -6773,18 +6829,20 @@ the underlying concept.|
 1206
 00:41:42,800 --> 00:41:43,735
 0,320 320,440 440,605 605,755 755,935
-We're going to look at
-我们来看一个例子，直线上的点，对吗？这就是我们正在处理的数据。
+{Okay\,,we're} going to look at
+我们来看一个一维例子，
 
 1207
 00:41:43,735 --> 00:41:45,280
 0,195 195,420 420,690 690,1025 1225,1545
-a one d example, points
+a {1D -} example,| points
+|直线上的点，
 
 1208
 00:41:45,280 --> 00:41:46,735
 0,180 180,300 300,560 580,960 960,1455
-on a line, right? That's
+on a line, right,| that's
+|这就是我们处理的数据，
 
 1209
 00:41:46,735 --> 00:41:47,800
@@ -6794,24 +6852,26 @@ the data that we're working
 1210
 00:41:47,800 --> 00:41:48,720
 0,380
-with.|
+with,|
 |
 
 1211
 00:41:48,760 --> 00:41:50,870
 0,335 335,670 840,1130 1130,1690 1710,2110
-And again, the generator starts
-同样，生成器从随机噪声开始，产生一些虚假数据。它们会落在这条一维线上的某个地方。
+and again, the generator starts
+同样，生成器从随机噪声开始，
 
 1212
 00:41:50,890 --> 00:41:53,175
 0,400 450,815 815,1180 1500,1985 1985,2285
-from random noise, produces some
+from random noise,| produces some
+|产生一些虚假数据，
 
 1213
 00:41:53,175 --> 00:41:54,375
 0,255 255,540 540,840 840,990 990,1200
-fake data. They're going to
+fake data,| they're going to
+|它们会落在这条一维线上的某个地方。
 
 1214
 00:41:54,375 --> 00:41:55,620
@@ -6828,7 +6888,7 @@ dimensional line.|
 00:41:57,870 --> 00:41:59,960
 0,400 630,905 905,1130 1130,1480 1740,2090
 Now the next step is
-现在下一步是鉴别器，然后看到这些点。
+现在下一步是判别器看到这些点，
 
 1217
 00:41:59,960 --> 00:42:01,610
@@ -6838,26 +6898,26 @@ the discriminator then sees these
 1218
 00:42:01,610 --> 00:42:02,720
 0,320
-points.|
+points,|
 |
 
 1219
 00:42:02,920 --> 00:42:04,760
 0,400 450,850 870,1175 1175,1460 1460,1840
-And it also sees some
-它还看到了一些真实的数据。
+and it also sees some
+它还看到了一些真实的数据，
 
 1220
 00:42:04,810 --> 00:42:06,160
 0,305 305,610
-real data.|
+real data,|
 |
 
 1221
 00:42:06,460 --> 00:42:07,880
 0,275 275,455 455,635 635,770 770,1420
-The goal of the discriminator
-鉴别器的目标是训练它输出它所看到的实例是真是假的概率。
+the goal of the discriminator
+判别器的目标是训练它输出概率，
 
 1222
 00:42:08,050 --> 00:42:10,370
@@ -6867,7 +6927,8 @@ is to be trained to
 1223
 00:42:10,450 --> 00:42:12,530
 0,260 260,425 425,1000 1320,1700 1700,2080
-output a probability that an
+output a probability,| that an
+|它所看到的实例是真的还是假的。
 
 1224
 00:42:12,760 --> 00:42:14,720
@@ -6883,38 +6944,44 @@ or fake.|
 1226
 00:42:17,130 --> 00:42:18,770
 0,365 365,730 840,1130 1130,1340 1340,1640
-And initially in the beginning
-而且最初在训练之前，它没有得到正确的训练。因此，它的预测可能不是很好。但在训练的过程中，你将训练它，它有望开始增加那些真实例子的概率，减少那些虚假例子的可能性。
+And initially, in the beginning
+最初，在训练之前，
 
 1227
 00:42:18,770 --> 00:42:20,975
 0,380 460,860 1300,1695 1695,1905 1905,2205
-before training, it's not trained
+before training,| it's not trained,
+|它没有得到训练，
 
 1228
 00:42:20,975 --> 00:42:22,745
 0,365 625,885 885,1050 1050,1575 1575,1770
-right. {So,its -} predictions may
+right,| {so,its -} predictions may
+|所以，它的预测可能不是很好，
 
 1229
 00:42:22,745 --> 00:42:24,640
 0,165 165,330 330,555 555,905 1495,1895
-not be very {good.,But -}
+not be very good,| but
+|但在训练的过程中，
 
 1230
 00:42:24,750 --> 00:42:25,955
 0,335 335,545 545,710 710,905 905,1205
-over the course of training,
+over the course of training,|
+|
 
 1231
 00:42:25,955 --> 00:42:27,100
 0,330 330,480 480,675 675,855 855,1145
-you're going to train it
+you're going to train it|
+你将训练它，|
 
 1232
 00:42:27,480 --> 00:42:29,200
 0,290 290,580 630,1025 1025,1370 1370,1720
 and it hopefully will start
+它有望开始增加那些真实例子的概率，
 
 1233
 00:42:29,430 --> 00:42:32,090
@@ -6924,7 +6991,8 @@ increasing the probability for those
 1234
 00:42:32,090 --> 00:42:34,270
 0,380 520,780 780,960 960,1280 1780,2180
-examples that are real and
+examples that are real| and
+|减少那些虚假例子的可能性，
 
 1235
 00:42:34,470 --> 00:42:36,520
@@ -6934,31 +7002,32 @@ decreasing the probability for those
 1236
 00:42:36,540 --> 00:42:38,560
 0,400 720,980 980,1145 1145,1450
-examples that are fake.|
+examples that are fake,|
 |
 
 1237
 00:42:38,750 --> 00:42:40,860
 0,400 480,880 1170,1550 1550,1820 1820,2110
-Overall goal is to predict
-总体目标是预测什么是真实的。
+overall goal is to predict
+总体目标是预测什么是真实的，
 
 1238
 00:42:40,880 --> 00:42:42,260
 0,260 260,425 425,730
-what is real.|
+what is real,|
 |
 
 1239
 00:42:42,600 --> 00:42:45,560
 0,400 1140,1540 1590,1850 1850,2525 2525,2960
-Until eventually the discriminator reaches
-直到最终鉴别器达到这一点，它有一个完美的分离，完美的真假分类。
+until eventually the discriminator reaches
+直到最终判别器达到这一点，
 
 1240
 00:42:45,560 --> 00:42:46,685
 0,195 195,465 465,765 765,975 975,1125
-this point where it has
+this point,| where it has
+|它有一个完美的分离，完美的真假分类。
 
 1241
 00:42:46,685 --> 00:42:49,180
@@ -6975,27 +7044,31 @@ of real versus fake.|
 00:42:53,040 --> 00:42:54,395
 0,400 600,845 845,980 980,1160 1160,1355
 Okay, so at this point,
-好的，在这一点上，鉴别器认为，好的，我已经完成了我的工作，现在我们回到生成器，它会看到真实数据所在的示例。
+好的，在这一点上，判别器认为，
 
 1244
 00:42:54,395 --> 00:42:56,195
 0,165 165,825 825,1205 1285,1545 1545,1800
-the discriminator thinks, okay, I've
+the discriminator thinks,| okay, I've
+|好的，我已经完成了我的工作，
 
 1245
 00:42:56,195 --> 00:42:58,385
 0,150 150,345 345,635 1135,1535 1915,2190
-done my job, now we
+done my job,| now we
+|现在我们回到生成器，
 
 1246
 00:42:58,385 --> 00:42:59,560
 0,165 165,390 390,570 570,690 690,1175
-go back to the generator
+go back to the generator|
+|
 
 1247
 00:43:00,180 --> 00:43:01,540
 0,260 260,455 455,725 725,1010 1010,1360
 and it sees the examples
+它会看到真实数据所在的示例，
 
 1248
 00:43:01,560 --> 00:43:02,705
@@ -7005,14 +7078,14 @@ of where the real data
 1249
 00:43:02,705 --> 00:43:04,140
 0,365
-lie.|
+lie,|
 |
 
 1250
 00:43:04,140 --> 00:43:06,015
 0,320 730,1005 1005,1260 1260,1575 1575,1875
-And it can be forced
-而且，它可能会被迫开始将其生成的虚假数据越来越接近真实数据。
+and it can be forced
+而且，它可能会被迫开始将其生成的虚假数据，
 
 1251
 00:43:06,015 --> 00:43:07,670
@@ -7022,7 +7095,8 @@ to start moving its generated
 1252
 00:43:07,870 --> 00:43:10,520
 0,320 320,640 1230,1630 1890,2270 2270,2650
-fake data closer and closer,
+fake data| closer and closer,
+|越来越接近真实数据，
 
 1253
 00:43:10,900 --> 00:43:12,660
@@ -7032,19 +7106,20 @@ increasingly closer to the real
 1254
 00:43:12,660 --> 00:43:13,640
 0,320
-data.|
+data,|
 |
 
 1255
 00:43:14,310 --> 00:43:15,350
 0,260 260,395 395,590 590,800 800,1040
-We can then go back
-然后我们可以回到鉴别器，它从生成器接收这些新合成的示例，并重复相同的过程来估计任何给定点为真实的概率。
+we can then go back
+然后我们可以回到判别器，
 
 1256
 00:43:15,350 --> 00:43:17,000
 0,210 210,330 330,945 945,1230 1230,1650
-to the discriminator, which receives
+to the discriminator,| which receives
+|它从生成器接收这些新合成的示例，
 
 1257
 00:43:17,000 --> 00:43:19,445
@@ -7054,7 +7129,8 @@ these newly synthesized examples from
 1258
 00:43:19,445 --> 00:43:21,650
 0,180 180,665 1225,1625 1645,2010 2010,2205
-the generator, and repeats that
+the generator,| and repeats that
+|并重复相同的过程来估计任何给定点为真实的概率，
 
 1259
 00:43:21,650 --> 00:43:24,140
@@ -7069,14 +7145,14 @@ probability that any given point
 1261
 00:43:26,370 --> 00:43:27,680
 0,305 305,610
-is real.|
+is real,|
 |
 
 1262
 00:43:28,220 --> 00:43:30,175
 0,400 660,1040 1040,1420 1470,1775 1775,1955
-And learning to increase the
-学习增加真实例的概率，减少假点的概率。
+and learning to increase the
+学习增加真实例的概率，
 
 1263
 00:43:30,175 --> 00:43:31,885
@@ -7086,19 +7162,20 @@ probability of the true real
 1264
 00:43:31,885 --> 00:43:34,450
 0,365 1105,1410 1410,1590 1590,2135 2185,2565
-examples decrease the probability of
+examples,| decrease the probability of
+|减少假点的概率，
 
 1265
 00:43:34,450 --> 00:43:36,080
 0,255 255,465 465,800
-the fake points.|
+the fake points,|
 |
 
 1266
 00:43:36,580 --> 00:43:38,580
 0,635 635,1240 1260,1595 1595,1820 1820,2000
-Adjusting, adjusting over the course
-适应，适应在它的训练过程中。
+adjusting, adjusting over the course
+适应在它的训练过程中。
 
 1267
 00:43:38,580 --> 00:43:40,020
@@ -7110,7 +7187,7 @@ of its training.|
 00:43:40,530 --> 00:43:41,660
 0,290 290,575 575,830 830,965 965,1130
 And finally, we can go
-最后，我们可以回到生成器上，最后一次重复。发电机开始将这些假点移动得更近。
+最后，我们可以回到生成器上，最后一次重复，
 
 1269
 00:43:41,660 --> 00:43:43,010
@@ -7120,29 +7197,30 @@ back and repeat to the
 1270
 00:43:43,010 --> 00:43:45,130
 0,480 480,860 1180,1485 1485,1755 1755,2120
-generator again one last time.
+generator again one last time,|
+|
 
 1271
 00:43:45,390 --> 00:43:47,150
 0,290 290,770 770,1115 1115,1445 1445,1760
-{The,generator -} starts moving those
+{the,generator -} starts moving those
+生成器开始将这些假点移动得越来越接近真实数据，
 
 1272
 00:43:47,150 --> 00:43:49,480
 0,285 285,620 910,1310
-fake points closer.|
-|
+fake points closer,
 
 1273
 00:43:49,490 --> 00:43:51,010
 0,400 510,845 845,1175 1175,1415 1415,1520
-Closer and closer to the
-越来越接近真实数据，以至于假数据几乎都在跟随真实数据的分布。
+closer and closer to the
 
 1274
 00:43:51,010 --> 00:43:52,780
 0,195 195,530 1060,1395 1395,1620 1620,1770
-real data, such that the
+real data,| such that the
+|以至于假数据几乎都在跟随真实数据的分布。
 
 1275
 00:43:52,780 --> 00:43:54,540
@@ -7164,7 +7242,7 @@ data.|
 00:43:58,180 --> 00:43:59,940
 0,305 305,545 545,860 860,1240 1380,1760
 At this point, it becomes
-在这一点上，鉴别者很难区分真假。
+在这一点上，判别器很难区分，
 
 1279
 00:43:59,940 --> 00:44:01,800
@@ -7174,7 +7252,8 @@ very, very hard for the
 1280
 00:44:01,800 --> 00:44:04,470
 0,710 1000,1395 1395,1965 1965,2360 2410,2670
-discriminator to distinguish between what
+discriminator to distinguish| between what
+|什么是真的，什么是假的，
 
 1281
 00:44:04,470 --> 00:44:05,775
@@ -7184,14 +7263,14 @@ is real and what is
 1282
 00:44:05,775 --> 00:44:06,800
 0,305
-fake.|
+fake,|
 |
 
 1283
 00:44:06,800 --> 00:44:08,405
 0,225 225,450 450,915 915,1245 1245,1605
-While the generator will continue
-而生成器将继续尝试创建虚假数据点来愚弄鉴别者。
+while the generator will continue
+生成器将继续尝试创建虚假数据点来愚弄判别器，
 
 1284
 00:44:08,405 --> 00:44:10,145
@@ -7206,19 +7285,20 @@ data points to fool the
 1286
 00:44:11,975 --> 00:44:13,400
 0,695
-discriminator.|
+discriminator,|
 |
 
 1287
 00:44:14,000 --> 00:44:15,355
 0,290 290,500 500,755 755,1025 1025,1355
-This is really the key
-这确实是关键概念，是GAN组件如何本质上相互竞争的基本直觉，在生成器和鉴别器之间来回移动。
+this is really the key
+这确实是关键概念，
 
 1288
 00:44:15,355 --> 00:44:17,815
 0,395 445,705 705,965 1195,1865 2065,2460
-concept, the underlying intuition behind
+concept,| the underlying intuition behind
+|GAN 组件如何本质上相互竞争的基本直觉，
 
 1289
 00:44:17,815 --> 00:44:19,510
@@ -7228,12 +7308,13 @@ how the components of the
 1290
 00:44:19,510 --> 00:44:21,430
 0,290 460,825 825,1190 1390,1785 1785,1920
-Gan are essentially competing with
+GAN are essentially competing with
 
 1291
 00:44:21,430 --> 00:44:23,020
 0,150 150,440 790,1140 1140,1395 1395,1590
-each other, going back and
+each other,| going back and
+|在生成器和判别器之间来回移动，
 
 1292
 00:44:23,020 --> 00:44:25,440
@@ -7243,14 +7324,14 @@ forth between the generator and
 1293
 00:44:25,670 --> 00:44:27,320
 0,260 260,940
-the discriminator.|
+the discriminator,|
 |
 
 1294
 00:44:27,690 --> 00:44:28,900
 0,260 260,410 410,665 665,920 920,1210
-And in fact, this is
-事实上，这就是GAN是如何在实践中被训练的直观概念，生成器首先试图合成新的例子，合成例子来愚弄鉴别者。而鉴别器的目标是同时获取虚假实例和真实数据，以尝试识别合成实例。
+and in fact, this is
+事实上，这就是 GAN 是如何在实践中被训练的直观概念，
 
 1295
 00:44:29,220 --> 00:44:31,115
@@ -7260,27 +7341,31 @@ this intuitive concept is how
 1296
 00:44:31,115 --> 00:44:32,735
 0,195 195,465 465,795 795,1145 1315,1620
-the Gan is trained in
+the GAN is trained in
 
 1297
 00:44:32,735 --> 00:44:35,435
 0,305 1135,1425 1425,1590 1590,2105 2335,2700
-practice, where the generator first
+practice,| where the generator first
+|生成器首先试图合成新的例子，
 
 1298
 00:44:35,435 --> 00:44:38,080
 0,345 345,615 615,1235 1645,2045 2245,2645
-tries to synthesize new examples,
+tries to synthesize new examples,|
+|
 
 1299
 00:44:38,370 --> 00:44:40,520
 0,580 630,1030 1470,1760 1760,1970 1970,2150
 synthetic examples to fool the
+合成例子来愚弄判别器，
 
 1300
 00:44:40,520 --> 00:44:42,605
 0,680 1210,1500 1500,1680 1680,1890 1890,2085
-discriminator. {And,the -} goal of
+discriminator,| {and,the -} goal of
+|而判别器的目标是同时获取虚假实例和真实数据，
 
 1301
 00:44:42,605 --> 00:44:44,135
@@ -7295,7 +7380,8 @@ both the fake examples and
 1303
 00:44:46,490 --> 00:44:47,900
 0,180 180,345 345,650 850,1170 1170,1410
-the real data to try
+the real data| to try
+|以尝试识别合成实例。
 
 1304
 00:44:47,900 --> 00:44:50,440
@@ -7307,19 +7393,19 @@ to identify the synthesized instances.|
 00:44:51,980 --> 00:44:53,875
 0,350 350,700 1050,1370 1370,1595 1595,1895
 In training, what this means
-在训练中，这意味着目标是。
+在训练中，这意味着目标是，
 
 1306
 00:44:53,875 --> 00:44:56,240
 0,285 285,575 625,1005 1005,1385
-is that the objective.|
+is that the objective,|
 |
 
 1307
 00:44:56,240 --> 00:44:57,830
 0,195 195,470 580,900 900,1095 1095,1590
-The loss for the generator
-发电机和鉴别器的损失必须是彼此不一致的。它们是对抗性的，这就是生成对抗性网络中对抗性成分的原因。
+the loss for the generator
+生成器和判别器的损失必须是彼此不一致的，
 
 1308
 00:44:57,830 --> 00:44:59,660
@@ -7329,12 +7415,14 @@ and discriminator have to be
 1309
 00:44:59,660 --> 00:45:01,000
 0,270 270,750 750,900 900,1050 1050,1340
-at odds with each other.
+at odds with each other,|
+|
 
 1310
 00:45:01,260 --> 00:45:03,290
 0,335 335,1240 1290,1580 1580,1805 1805,2030
-They're adversarial, and that is
+they're adversarial,| and that is
+它们是对抗性的，|这就是生成对抗性网络中对抗性成分的原因，
 
 1311
 00:45:03,290 --> 00:45:04,730
@@ -7349,19 +7437,20 @@ component of adversarial in generative
 1313
 00:45:07,520 --> 00:45:09,340
 0,750 750,1100
-adversarial network.|
+adversarial network,|
 |
 
 1314
 00:45:09,960 --> 00:45:14,110
 0,380 380,1550 1550,1930 2640,3040 3750,4150
-These adversarial objectives are then
-然后将这些对抗性目标放在一起，以定义达到稳定的全局最优意味着什么，在这种情况下，生成器能够产生完全欺骗鉴别器的真实数据分布。
+these adversarial objectives are then
+然后将这些对抗性目标放在一起，
 
 1315
 00:45:14,160 --> 00:45:15,965
 0,350 350,700 810,1115 1115,1420 1440,1805
-put together to then define
+put together| to then define
+|以定义达到稳定的全局最优意味着什么，
 
 1316
 00:45:15,965 --> 00:45:17,240
@@ -7371,12 +7460,14 @@ what it means to arrive
 1317
 00:45:17,240 --> 00:45:19,210
 0,225 225,390 390,710 850,1250 1450,1970
-at a stable global optimum,
+at a stable global optimum,|
+|
 
 1318
 00:45:19,680 --> 00:45:22,000
 0,400 990,1265 1265,1715 1715,1985 1985,2320
 where the generator is capable
+在这种情况下，生成器能够产生真实数据分布，
 
 1319
 00:45:22,080 --> 00:45:24,280
@@ -7386,19 +7477,20 @@ of producing the true data
 1320
 00:45:24,330 --> 00:45:26,740
 0,400 870,1205 1205,1540 1560,1960 2010,2410
-distribution that would completely fool
+distribution,| that would completely fool
+|将会完全欺骗判别器，
 
 1321
 00:45:26,790 --> 00:45:28,300
 0,275 275,940
-the discriminator.|
+the discriminator,|
 |
 
 1322
 00:45:30,440 --> 00:45:31,810
 0,485 485,695 695,860 860,1070 1070,1370
-Concretely, this can be defined
-具体地说，这可以根据亏损目标在数学上反复定义。
+concretely, this can be defined
+具体地说，这可以在数学上定义为损失目标，
 
 1323
 00:45:31,810 --> 00:45:33,880
@@ -7408,24 +7500,26 @@ mathematically in terms of a
 1324
 00:45:33,880 --> 00:45:37,040
 0,290 460,860 1630,1950 1950,2270
-loss objective and again.|
-|
+loss objective| and again
+|再次，虽然我在展示数学，
 
 1325
 00:45:37,370 --> 00:45:38,850
 0,290 290,635 635,920 920,1145 1145,1480
-Though I'm, I'm showing math,
-虽然我在展示数学，但我可以，我们可以把这些提炼出来，通过每个术语所反映的核心直观概念和概念概念，希望这个例子能传达出来。
+though I'm, I'm showing math,|
+|
 
 1326
 00:45:39,110 --> 00:45:40,480
 0,275 275,550 570,830 830,965 965,1370
 I can, we can distill
+我们可以把这些提炼出来，
 
 1327
 00:45:40,480 --> 00:45:41,880
 0,240 240,510 510,765 765,1035 1035,1400
-this down and go through
+this down| and go through
+|通过每个术语所反映的核心直观概念和概念概念，
 
 1328
 00:45:41,990 --> 00:45:43,200
@@ -7445,71 +7539,77 @@ core intuitive idea and conceptual
 1331
 00:45:47,530 --> 00:45:50,560
 0,380 580,980 1030,1430 1510,1910 2710,3030
-idea that hopefully that one
+idea,| that hopefully that {1D
+|希望这个一维例子能传达出来。
 
 1332
 00:45:50,560 --> 00:45:52,520
 0,300 300,680 700,1400
-d example conveyed.|
+-} example conveyed.|
 |
 
 1333
 00:45:53,140 --> 00:45:55,455
 0,275 275,515 515,790 870,1270 1920,2315
 So we'll first consider the
-所以我们首先考虑鉴别者的观点，它的目标是最大化它的决定的概率，在它的决定中，真实的数据被归类为真实的假数据，被归类为假的。
+所以我们首先考虑判别者的观点 D ，
 
 1334
 00:45:55,455 --> 00:45:57,440
 0,360 360,600 600,750 750,1415 1585,1985
-perspective of the discriminator d
+perspective of the discriminator D,|
+|
 
 1335
 00:45:58,210 --> 00:46:00,105
 0,350 350,695 695,995 995,1205 1205,1895
 its goal is to maximize
+它的目标是最大化它的决定的概率，
 
 1336
 00:46:00,105 --> 00:46:03,180
 0,645 645,915 915,1200 1200,1595 2815,3075
-probability that its decisions in
+probability that its decisions,| in
+|在它的决定中，
 
 1337
 00:46:03,180 --> 00:46:04,730
 0,255 255,615 615,930 930,1215 1215,1550
-its decisions that real data
+its decisions,| that real data
+|真实的数据被归类为真实的，假数据被归类为假的，
 
 1338
 00:46:04,900 --> 00:46:07,220
 0,305 305,815 815,1150 1650,1985 1985,2320
-are classified real fake data
+are classified real, fake data
 
 1339
 00:46:07,330 --> 00:46:09,060
 0,620 620,860 860,1180
-classified as fake.|
+classified as fake,|
 |
 
 1340
 00:46:09,330 --> 00:46:11,410
 0,320 320,640 1170,1460 1460,1715 1715,2080
-So here the first term
-这里，z的第一项g是生成器的输出，g的d是鉴别器对生成的输出为假的估计。
+so here the first term
+所以，这里的第一项 G(z) 是生成器的输出，
 
 1341
 00:46:12,360 --> 00:46:13,535
 0,260 260,455 455,725 725,965 965,1175
-g of z is the
+{G(z) - -} is the
 
 1342
 00:46:13,535 --> 00:46:16,715
 0,905 1015,1415 1885,2285 2455,2835 2835,3180
-generator's output, and d of
+generator's output,| and {D(G(z)) -
+|D(G(z)) 是判别器对生成器的输出为假的估计，
 
 1343
 00:46:16,715 --> 00:46:18,305
 0,270 270,510 510,845 1105,1410 1410,1590
-g of z is the
+- - -} is the
 
 1344
 00:46:18,305 --> 00:46:21,520
@@ -7519,24 +7619,25 @@ discriminator's estimate of that generated
 1345
 00:46:21,930 --> 00:46:23,760
 0,305 305,530 530,815 815,1180
-output as being fake.|
+output as being fake,|
 |
 
 1346
 00:46:25,200 --> 00:46:26,870
 0,245 245,380 380,670 1110,1445 1445,1670
-D of X X is
-X的D是真实的数据，所以X的D是真实实例为假的概率的估计。
+{D(x) -}, x is
+D(x) ， x 是真实的数据，
 
 1347
 00:46:26,870 --> 00:46:28,310
 0,165 165,360 360,680 940,1230 1230,1440
-the real data, and so
+the real data,| and so
+|所以 D(x) 是真实实例为假的概率的估计，
 
 1348
 00:46:28,310 --> 00:46:29,440
 0,165 165,315 315,585 585,840 840,1130
-d of X is the
+{D(x) - -} is the
 
 1349
 00:46:29,490 --> 00:46:31,190
@@ -7546,14 +7647,14 @@ estimate of the probability that
 1350
 00:46:31,190 --> 00:46:33,040
 0,165 165,470 940,1290 1290,1545 1545,1850
-a real instance is fake.|
+a real instance is fake,|
 |
 
 1351
 00:46:33,780 --> 00:46:35,120
 0,300 300,645 645,885 885,1035 1035,1340
-One minus d of X
-X的一个减去d是该真实实例是真实的估计。
+{1-D(x) - - - -}
+1-D(x) 是真实实例是真实的估计，
 
 1352
 00:46:35,680 --> 00:46:37,005
@@ -7563,19 +7664,20 @@ is the estimate that that
 1353
 00:46:37,005 --> 00:46:39,280
 0,335 565,945 945,1245 1245,1565
-real instance is real.|
+real instance is real,|
 |
 
 1354
 00:46:39,580 --> 00:46:41,655
 0,400 660,1060 1320,1625 1625,1850 1850,2075
-So here in both these
-因此，在这两种情况下，鉴别者都在做出关于虚假数据和真实数据的决定。它想要一起努力最大化它得到正确答案的可能性，对吗？
+so here in both these
+因此，在这两种情况下，
 
 1355
 00:46:41,655 --> 00:46:43,560
 0,300 300,570 570,1200 1200,1535 1555,1905
-cases, the discriminator is producing
+cases,| the discriminator is producing
+|判别器都在做出关于虚假数据和真实数据的决定，
 
 1356
 00:46:43,560 --> 00:46:45,740
@@ -7585,7 +7687,8 @@ a decision about fake data,
 1357
 00:46:46,240 --> 00:46:48,540
 0,335 335,670 960,1325 1325,1690 2010,2300
-real data. {And,together -} it
+real data,| {and,together -} it
+|它想要一起努力最大化它得到正确答案的可能性。
 
 1358
 00:46:48,540 --> 00:46:50,190
@@ -7600,36 +7703,37 @@ the probability that it's getting
 1360
 00:46:52,140 --> 00:46:54,320
 0,350 700,1100 1270,1670
-answers correct, right?|
+answers correct, right.|
 |
 
 1361
 00:46:56,360 --> 00:46:58,315
 0,400 780,1070 1070,1235 1235,1700 1700,1955
 Now with the generator, we
-现在，对于发电机，我们有相同的术语，但请记住，发电机永远不会。
+现在，对于生成器，我们有相同的条目，
 
 1362
 00:46:58,315 --> 00:46:59,730
 0,195 195,420 420,735 735,1065 1065,1415
-have those same exact terms,
+have those same exact terms,|
+|
 
 1363
 00:47:00,320 --> 00:47:01,435
 0,305 305,485 485,635 635,875 875,1115
 but keep in mind the
+但请记住，生成器永远不能影响，
 
 1364
 00:47:01,435 --> 00:47:03,540
 0,435 435,690 690,1025
-generator is never.|
-|
+generator is never
 
 1365
 00:47:03,540 --> 00:47:05,310
 0,345 345,690 690,1040 1180,1485 1485,1770
-Able to affect anything that
-能够影响鉴别器决策实际正在做的任何事情，除了生成新的数据示例之外。
+able to affect| anything that
+|判别器决策做的任何事情，
 
 1366
 00:47:05,310 --> 00:47:08,295
@@ -7639,7 +7743,8 @@ the discriminator decision is actually
 1367
 00:47:08,295 --> 00:47:11,420
 0,305 865,1265 1705,2310 2310,2705 2725,3125
-doing, besides generating new data
+doing,| besides generating new data
+|除了生成新的数据示例之外。
 
 1368
 00:47:11,440 --> 00:47:12,900
@@ -7651,12 +7756,13 @@ examples.|
 00:47:12,900 --> 00:47:14,570
 0,255 255,375 375,495 495,1040 1270,1670
 So for the generator, its
-因此，对于生成器来说，其目标只是将生成的数据被识别为虚假数据的概率降至最低。
+因此，对于生成器来说，其目标只是，
 
 1370
 00:47:14,590 --> 00:47:17,930
 0,400 540,890 890,1240 1980,2380 2670,3340
-objective is simply to minimize
+objective is simply| to minimize
+|将生成的数据被识别为虚假数据的概率降至最低。
 
 1371
 00:47:17,980 --> 00:47:20,030
@@ -7673,12 +7779,13 @@ data is identified as fake.|
 00:47:24,800 --> 00:47:26,760
 0,400 630,935 935,1220 1220,1580 1580,1960
 Together, we want to then
-总之，我们想把这些放在一起，定义生成器合成假图像意味着什么，希望这些假图像能愚弄鉴别者。
+总之，我们想把这些放在一起，
 
 1374
 00:47:27,350 --> 00:47:29,245
 0,275 275,500 500,850 870,1270 1500,1895
-put this together to define
+put this together| to define
+|定义生成器合成假图像意味着什么，
 
 1375
 00:47:29,245 --> 00:47:30,685
@@ -7688,34 +7795,38 @@ what it means for the
 1376
 00:47:30,685 --> 00:47:32,970
 0,515 595,995 1015,1695 1695,1965 1965,2285
-generator to synthesize fake images
+generator to synthesize fake images|
+|
 
 1377
 00:47:33,320 --> 00:47:35,580
 0,320 320,640 930,1330 1350,1610 1610,2260
 that hopefully fool the discriminator.|
-|
+希望能愚弄判别者。|
 
 1378
 00:47:37,030 --> 00:47:38,750
 0,290 290,440 440,700 870,1270 1320,1720
 All in all, right, this
-总而言之，对了，这个术语，除了数学，除了这个定义的特殊性，我想让你们从这个关于甘斯的这一节中得到的是，我们有这个双重竞争的目标，生成器试图合成这些理想的愚弄最好的鉴别者的合成例子。
+总而言之，这个项目，
 
 1379
 00:47:38,860 --> 00:47:41,340
 0,400 1170,1505 1505,1700 1700,1960 2100,2480
-term, besides the math, besides
+term,| besides the math, besides
+|除了数学，除了这个定义的特殊性，
 
 1380
 00:47:41,340 --> 00:47:43,370
 0,380 580,1395 1395,1575 1575,1740 1740,2030
-the particularities of this definition,
+the particularities of this definition,|
+|
 
 1381
 00:47:44,140 --> 00:47:45,105
 0,275 275,425 425,635 635,845 845,965
 what I want you to
+我想让你们从这个关于 GAN 的这一节中得到的，
 
 1382
 00:47:45,105 --> 00:47:47,085
@@ -7725,7 +7836,8 @@ get away from this, from
 1383
 00:47:47,085 --> 00:47:49,080
 0,165 165,405 405,675 675,1025 1705,1995
-this section on gans, is
+this section on GANs,| is
+|是我们有这个双重竞争的目标，
 
 1384
 00:47:49,080 --> 00:47:51,080
@@ -7735,7 +7847,8 @@ that we have this dual
 1385
 00:47:51,190 --> 00:47:54,255
 0,520 750,1150 1800,2200 2310,2600 2600,3065
-competing objective where the generator
+competing objective,| where the generator
+|生成器试图合成这些合成例子，
 
 1386
 00:47:54,255 --> 00:47:55,880
@@ -7745,19 +7858,20 @@ is trying to synthesize these
 1387
 00:47:56,770 --> 00:48:00,140
 0,550 600,1000 1500,1900 2130,2950 2970,3370
-synthetic examples that ideally fool
+synthetic examples,| that ideally fool
+|尽可能地愚弄最好的判别者，
 
 1388
 00:48:00,460 --> 00:48:02,940
 0,350 350,680 680,1475 1475,1870
-the best discriminator possible.|
+the best discriminator possible,|
 |
 
 1389
 00:48:03,100 --> 00:48:04,710
 0,275 275,455 455,725 725,1090 1320,1610
-And in doing so, the
-在这样做的过程中，目标是建立一个网络。
+and in doing so, the
+在这样做的过程中，目标是建立一个网络，
 
 1390
 00:48:04,710 --> 00:48:06,165
@@ -7767,29 +7881,32 @@ goal is to build up
 1391
 00:48:06,165 --> 00:48:07,680
 0,135 135,395
-a network.|
+a network,|
 |
 
 1392
 00:48:07,810 --> 00:48:09,855
 0,380 380,650 650,1460 1460,1760 1760,2045
-VIA this adversarial training, this
-通过这种对抗性训练，这种对抗性竞争使用生成器来创建最能模拟真实数据分布及其完全合成的新实例的新数据。
+via this adversarial training, this
+通过这种对抗性训练，这种对抗性竞争，
 
 1393
 00:48:09,855 --> 00:48:12,465
 0,875 985,1385 1885,2160 2160,2385 2385,2610
-adversarial competition to use the
+adversarial competition| to use the
+|使用生成器来创建新数据，
 
 1394
 00:48:12,465 --> 00:48:14,630
 0,515 895,1230 1230,1545 1545,1845 1845,2165
-generator to create new data
+generator to create new data,|
+|
 
 1395
 00:48:14,740 --> 00:48:16,875
 0,335 335,670 690,1210 1620,1925 1925,2135
 that best mimics the true
+最能模拟真实数据分布及其完全合成的新实例。
 
 1396
 00:48:16,875 --> 00:48:18,825
@@ -7806,7 +7923,7 @@ synthetic new instances.|
 00:48:23,120 --> 00:48:24,850
 0,400 690,1010 1010,1295 1295,1535 1535,1730
 What this amounts to in
-实际上，在培训过程之后，您可以只查看生成器组件，然后使用它来创建新的数据实例。
+实际上，在培训过程之后，
 
 1399
 00:48:24,850 --> 00:48:26,455
@@ -7816,17 +7933,20 @@ practice is that after the
 1400
 00:48:26,455 --> 00:48:27,960
 0,300 300,695 775,1035 1035,1200 1200,1505
-training process, you can look
+training process,| you can look
+|你可以只查看生成器组件，
 
 1401
 00:48:28,160 --> 00:48:30,270
 0,680 680,920 920,1130 1130,1660 1710,2110
-exclusively at the generator component
+exclusively at the generator component|
+|
 
 1402
 00:48:30,860 --> 00:48:32,400
 0,400 540,860 860,1100 1100,1280 1280,1540
 and use it to then
+然后使用它来创建新的数据实例。
 
 1403
 00:48:32,630 --> 00:48:35,740
@@ -7838,12 +7958,13 @@ create new data instances.|
 00:48:37,220 --> 00:48:38,970
 0,305 305,500 500,680 680,970 1350,1750
 All this is done by
-所有这些都是从随机噪声开始，并试图学习从随机噪声到真实数据分布的模型。实际上，Gans正在做的是学习一种函数，将随机噪声的分布转化为某个目标。
+所有这些都是从随机噪声开始，
 
 1405
 00:48:39,440 --> 00:48:41,755
 0,400 420,725 725,1030 1080,1480 1950,2315
-starting from random noise and
+starting from random noise| and
+|并试图学习从随机噪声到真实数据分布的模型。
 
 1406
 00:48:41,755 --> 00:48:43,375
@@ -7858,39 +7979,44 @@ that goes from random noise
 1408
 00:48:45,350 --> 00:48:47,130
 0,395 395,680 680,935 935,1300 1380,1780
-to the real data distribution.
+to the real data distribution.|
+|
 
 1409
 00:48:47,990 --> 00:48:49,645
 0,350 350,700 870,1175 1175,1430 1430,1655
 {And,effectively -} what gans are
+实际上， GAN 在做的是学习一种函数，
 
 1410
 00:48:49,645 --> 00:48:51,120
 0,285 285,600 600,915 915,1185 1185,1475
-doing is learning a function
+doing is learning a function,|
+|
 
 1411
 00:48:51,530 --> 00:48:53,910
 0,400 660,1145 1145,1400 1400,1780 1980,2380
 that transforms that distribution of
+将随机噪声的分布转化为某个目标，
 
 1412
 00:48:53,930 --> 00:48:56,250
 0,395 395,790 1320,1655 1655,1955 1955,2320
-random noise to some target.|
+random noise to some target,|
 |
 
 1413
 00:48:57,450 --> 00:48:59,735
 0,305 305,515 515,1060 1620,2020 2070,2285
-What this mapping does is
-这种映射的作用是允许我们对噪声空间中的噪声进行特定的观察，并将其映射到某些输出，目标数据空间中的特定输出。
+what this mapping does is,|
+这种映射的作用是，|
 
 1414
 00:48:59,735 --> 00:49:01,235
 0,210 210,585 585,900 900,1215 1215,1500
 it allows us to take
+它允许我们对噪声空间中的噪声进行特定的观察，
 
 1415
 00:49:01,235 --> 00:49:03,550
@@ -7900,7 +8026,8 @@ a particular observation of noise
 1416
 00:49:03,900 --> 00:49:06,160
 0,290 290,515 515,815 815,1180 1860,2260
-in that noise space and
+in that noise space| and
+|并将其映射到某些输出，目标数据空间中的特定输出，
 
 1417
 00:49:06,420 --> 00:49:08,210
@@ -7915,14 +8042,14 @@ a particular output in our
 1419
 00:49:09,800 --> 00:49:11,640
 0,300 300,660 660,1040
-target data space.|
+target data space,|
 |
 
 1420
 00:49:12,130 --> 00:49:13,635
 0,290 290,500 500,820 960,1250 1250,1505
-And in turn, if we
-反过来，如果我们考虑一些其他随机的噪声样本，如果我们把它送入g的生成器，它将产生一个全新的实例，落在真正的数据分布流形上的其他地方。
+and in turn, if we
+反过来，如果我们考虑一些其他随机的噪声样本，
 
 1421
 00:49:13,635 --> 00:49:15,270
@@ -7932,7 +8059,8 @@ consider some other random sample
 1422
 00:49:15,270 --> 00:49:16,875
 0,240 240,530 940,1215 1215,1410 1410,1605
-of noise, if we feed
+of noise,| if we feed
+|如果我们把它送入 GAN 的生成器，
 
 1423
 00:49:16,875 --> 00:49:18,030
@@ -7942,12 +8070,14 @@ it through the generator of
 1424
 00:49:18,030 --> 00:49:19,515
 0,350 550,915 915,1035 1035,1245 1245,1485
-g, it's going to produce
+GAN,| it's going to produce
+|它将产生一个全新的实例，
 
 1425
 00:49:19,515 --> 00:49:22,130
 0,270 270,635 655,1055 1195,1595 2215,2615
-a completely new instance falling
+a completely new instance,| falling
+|落在真正的数据分布流形上的其他地方，
 
 1426
 00:49:22,180 --> 00:49:23,960
@@ -7957,19 +8087,20 @@ somewhere else on that true
 1427
 00:49:24,010 --> 00:49:26,280
 0,400 480,880 960,1660
-data distribution manifold.|
+data distribution manifold,|
 |
 
 1428
 00:49:26,380 --> 00:49:28,040
 0,395 395,790 990,1265 1265,1400 1400,1660
-And indeed, what we can
-事实上，我们实际上可以做的是在噪声空间中的轨迹之间进行内插和遍历，然后映射到目标数据空间中的遍历和内插。
+and indeed, what we can
+事实上，我们实际上可以做的是，
 
 1429
 00:49:28,150 --> 00:49:30,780
 0,320 320,640 660,1060 1500,2170 2280,2630
-actually do is interpolate and
+actually do is| interpolate and
+|在噪声空间中的轨迹之间进行内插和遍历，
 
 1430
 00:49:30,780 --> 00:49:33,375
@@ -7979,7 +8110,8 @@ traverse between trajectories in the
 1431
 00:49:33,375 --> 00:49:35,600
 0,255 255,635 1165,1515 1515,1845 1845,2225
-noise space that then map
+noise space,| that then map
+|然后映射到目标数据空间中的遍历和内插，
 
 1432
 00:49:35,980 --> 00:49:40,110
@@ -7989,19 +8121,20 @@ to traversals and interpolations in
 1433
 00:49:40,110 --> 00:49:42,240
 0,300 300,650 670,1050 1050,1430
-the target data space.|
+the target data space,|
 |
 
 1434
 00:49:42,240 --> 00:49:43,440
 0,270 270,435 435,630 630,900 900,1200
-And this is really, really
-这真的，真的很酷，因为现在你可以考虑一个起始点和一个目标点，以及在目标数据分布中合成和处理这些图像所需的所有步骤。
+and this is really, really
+这真的很酷，
 
 1435
 00:49:43,440 --> 00:49:44,640
 0,345 345,630 630,840 840,1035 1035,1200
-cool because now you can
+cool,| because now you can
+|因为现在你可以考虑一个起始点和一个目标点，
 
 1436
 00:49:44,640 --> 00:49:46,280
@@ -8011,7 +8144,8 @@ think about an initial point
 1437
 00:49:46,660 --> 00:49:48,510
 0,275 275,455 455,740 740,1120 1560,1850
-and a target point and
+and a target point| and
+|所以步骤将会让你，
 
 1438
 00:49:48,510 --> 00:49:49,455
@@ -8021,7 +8155,8 @@ all the steps that are
 1439
 00:49:49,455 --> 00:49:51,170
 0,195 195,405 405,615 615,935 1315,1715
-going to take you to
+going to take you| to
+|在目标数据分布中合成和处理这些图像。
 
 1440
 00:49:51,370 --> 00:49:53,535
@@ -8043,7 +8178,7 @@ distribution.|
 00:49:57,740 --> 00:50:00,685
 0,400 630,1025 1025,1420 2490,2780 2780,2945
 So hopefully this gives a
-因此，希望这能让我们对用于创建新数据实例的生成性建模的概念有一个了解。
+希望这能让我们对用于创建新数据实例的生成性建模的概念有一个了解。
 
 1444
 00:50:00,685 --> 00:50:02,260
@@ -8065,12 +8200,13 @@ of creating new data instances.|
 00:50:07,200 --> 00:50:09,860
 0,380 640,1040 1360,1725 1725,1965 1965,2660
 And that notion of interpolation
-而这种插补和数据转换的概念很好地导致了Gans最近的一些进步和应用。
+而这种插补和数据转换的概念
 
 1448
 00:50:09,910 --> 00:50:12,480
 0,320 320,620 620,1000 1890,2255 2255,2570
-and data transformation leads very
+and data transformation| leads very
+|很好地引领了 GAN 最近的一些进步和应用，
 
 1449
 00:50:12,480 --> 00:50:13,725
@@ -8085,24 +8221,25 @@ recent advances and applications of
 1451
 00:50:16,110 --> 00:50:17,300
 0,320
-gans.|
+GANs,|
 |
 
 1452
 00:50:17,400 --> 00:50:20,110
 0,350 350,700 1080,1480 1650,2050 2310,2710
-Where one particularly commonly employed
-其中一个特别常用的想法是尝试再次迭代增长以获得更多更详细的图像生成，在训练过程中逐步添加层，然后改进由生成器生成的示例。
+where one particularly commonly employed
+其中一个特别常用的想法是，
 
 1453
 00:50:20,160 --> 00:50:22,060
 0,400 600,905 905,1145 1145,1480 1500,1900
-idea is to try to
+idea is| to try to
+|尝试再次迭代 GAN 以获得更多更详细的图像生成，
 
 1454
 00:50:22,260 --> 00:50:24,830
 0,800 800,1150 1170,1570 2010,2315 2315,2570
-iteratively grow again to get
+iteratively grow {the,GANs} to get
 
 1455
 00:50:24,830 --> 00:50:26,620
@@ -8112,12 +8249,14 @@ more and more detailed image
 1456
 00:50:26,730 --> 00:50:30,530
 0,400 1350,2195 2195,2500 2790,3370 3450,3800
-generations, progressively adding layers over
+generations,| progressively adding layers over
+|在训练过程中逐步添加层，
 
 1457
 00:50:30,530 --> 00:50:31,895
 0,225 225,390 390,600 600,920 1090,1365
-the course of training to
+the course of training| to
+|然后改进由生成器生成的示例。
 
 1458
 00:50:31,895 --> 00:50:34,420
@@ -8134,7 +8273,7 @@ by the generator.|
 00:50:37,020 --> 00:50:38,135
 0,275 275,425 425,575 575,800 800,1115
 And this is the approach
-这就是用来生成那些合成的，那些合成面孔的图像的方法，我在这节课的开头展示了这个想法，使用迭代细化的g来产生更高分辨率的图像。
+这就是用来生成那些合成脸部的图像的方法，
 
 1461
 00:50:38,135 --> 00:50:40,480
@@ -8149,7 +8288,8 @@ those synthetic, those images of
 1463
 00:50:42,755 --> 00:50:44,450
 0,180 180,615 615,965 1105,1425 1425,1695
-those synthetic faces that I
+those synthetic faces,| that I
+|我在这节课的开头展示的图像，
 
 1464
 00:50:44,450 --> 00:50:45,440
@@ -8159,12 +8299,13 @@ showed at the beginning of
 1465
 00:50:45,440 --> 00:50:47,380
 0,150 150,440 940,1320 1320,1620 1620,1940
-this lecture, this idea of
+this lecture,| this idea of
+|使用迭代细化的 GAN 来产生更高分辨率的图像。
 
 1466
 00:50:47,610 --> 00:50:49,960
 0,400 450,850 1200,1490 1490,1760 1760,2350
-using g that is refined
+using GAN that is refined
 
 1467
 00:50:50,040 --> 00:50:52,150
@@ -8181,37 +8322,42 @@ images.|
 00:50:55,100 --> 00:50:56,380
 0,350 350,605 605,770 770,995 995,1280
 Another way we can extend
-我们可以扩展这一概念的另一种方法是扩展GAN架构以考虑特定任务，并将进一步的结构强加于网络本身。一个特别的想法是，好的，如果我们有一个特定的标签或一些因素，我们想要以此为条件来产生。
+我们可以扩展这一概念的另一种方法是，
 
 1470
 00:50:56,380 --> 00:50:59,155
 0,225 225,530 1120,1520 1570,1970 2470,2775
-this concept is to extend
+this concept is| to extend
+|扩展 GAN 架构以考虑特定任务，
 
 1471
 00:50:59,155 --> 00:51:01,530
 0,180 180,420 420,755 1255,1655 1975,2375
-the Gan architecture to consider
+the GAN architecture to consider
 
 1472
 00:51:01,670 --> 00:51:04,345
 0,400 780,1180 1650,1910 1910,2315 2315,2675
-particular tasks and impose further
+particular tasks| and impose further
+|并将进一步的结构强加于网络本身，
 
 1473
 00:51:04,345 --> 00:51:06,600
 0,395 715,1020 1020,1185 1185,1445 1855,2255
-structure on the network itself.
+structure on the network itself,|
+|
 
 1474
 00:51:07,490 --> 00:51:09,190
 0,380 380,760 840,1175 1175,1460 1460,1700
-{One,particular -} idea is to
+{one,particular -} idea is to
+一个特别的想法是，
 
 1475
 00:51:09,190 --> 00:51:10,855
 0,290 370,770 1090,1350 1350,1500 1500,1665
-say, okay, what if we
+say,| okay, what if we
+|好的，如果我们有一个特定的标签或一些因素，
 
 1476
 00:51:10,855 --> 00:51:12,690
@@ -8221,19 +8367,20 @@ have a particular label or
 1477
 00:51:13,160 --> 00:51:14,560
 0,335 335,670 690,980 980,1160 1160,1400
-some factor that we want
+some factor,| that we want
+|我们想要以此为条件来产生，
 
 1478
 00:51:14,560 --> 00:51:16,740
 0,350 640,1020 1020,1275 1275,1550 1780,2180
-to condition the generation on.|
+to condition the generation on,|
 |
 
 1479
 00:51:17,820 --> 00:51:19,265
 0,290 290,470 470,680 680,1000 1140,1445
-We call the c and
-我们调用c，它同时提供给生成器和鉴别器。
+we call the c| and
+我们称为 c ，|它同时提供给生成器和判别器，
 
 1480
 00:51:19,265 --> 00:51:20,810
@@ -8243,14 +8390,14 @@ it supplied to both the
 1481
 00:51:20,810 --> 00:51:23,180
 0,495 495,705 705,855 855,1520
-generator and the discriminator.|
+generator and the discriminator,|
 |
 
 1482
 00:51:23,590 --> 00:51:24,855
 0,305 305,530 530,800 800,1055 1055,1265
-What this will allow us
-这将使我们能够实现不同类型数据之间的配对转换。例如，我们可以有街景的图像，我们可以有街景的分割图像，我们可以重新构建可以在街景和分割之间直接转换的图像。
+what this will allow us
+这将使我们能够实现不同类型数据之间的配对转换，
 
 1483
 00:51:24,855 --> 00:51:27,080
@@ -8260,12 +8407,14 @@ to achieve is paired translation
 1484
 00:51:27,670 --> 00:51:30,470
 0,400 780,1180 1200,1600 1620,2020 2400,2800
-between different types of data.
+between different types of data,|
+|
 
 1485
 00:51:30,820 --> 00:51:32,610
 0,305 305,515 515,820 1350,1625 1625,1790
-{So,,for -} example, we can
+{so\,,for -} example, we can
+例如，我们可以有街景的图像，
 
 1486
 00:51:32,610 --> 00:51:35,310
@@ -8275,7 +8424,8 @@ have images of a street
 1487
 00:51:35,310 --> 00:51:36,795
 0,350 490,795 795,975 975,1200 1200,1485
-view and we can have
+view| and we can have
+|我们可以有街景的分割图像，
 
 1488
 00:51:36,795 --> 00:51:38,715
@@ -8285,7 +8435,8 @@ images of the segmentation of
 1489
 00:51:38,715 --> 00:51:40,560
 0,275 295,615 615,935 1405,1695 1695,1845
-that street view and we
+that street view| and we
+|我们可以重新构建可以在街景图像和分割之间直接转换。
 
 1490
 00:51:40,560 --> 00:51:42,075
@@ -8307,7 +8458,7 @@ view and the segmentation.|
 00:51:47,300 --> 00:51:48,300
 0,245 245,365 365,530 530,710 710,1000
 {Let's -} make this more
-让我们通过考虑一些特定的例子来使这一点更加具体。
+让我们通过考虑一些特定的例子来使这一点更加具体，
 
 1494
 00:51:48,350 --> 00:51:50,250
@@ -8317,14 +8468,14 @@ concrete by considering some particular
 1495
 00:51:50,360 --> 00:51:51,640
 0,400
-examples.|
+examples,|
 |
 
 1496
 00:51:51,680 --> 00:51:53,485
 0,400 750,1010 1010,1145 1145,1415 1415,1805
-So what I just described
-所以我刚才描述的就是从一个分割标签变成一个街头场景。
+so what I just described
+所以我刚才描述的就是从一个分割标签变成一个街头场景，
 
 1497
 00:51:53,485 --> 00:51:55,735
@@ -8334,24 +8485,25 @@ was going from a segmentation
 1498
 00:51:55,735 --> 00:51:57,300
 0,395 475,735 735,930 930,1215 1215,1565
-label to a street scene.|
+label to a street scene,|
 |
 
 1499
 00:51:58,040 --> 00:51:59,680
 0,275 275,530 530,910 990,1370 1370,1640
-We can also translate between
-我们还可以将卫星视图航空卫星图像转换为相当于该航空卫星图像的路线图，或将建筑物图像的特定注释或标签转换为该建筑物的实际视觉实现和视觉立面。
+we can also translate between
+我们还可以将卫星视图，航空卫星图像转换为
 
 1500
 00:51:59,680 --> 00:52:02,395
 0,210 210,780 780,1130 1690,2265 2265,2715
-a satellite view aerial satellite
+a satellite view, aerial satellite
 
 1501
 00:52:02,395 --> 00:52:04,350
 0,305 745,1065 1065,1320 1320,1605 1605,1955
-image to what is the
+image| to what is the
+|相当于该航空卫星图像的路线图，
 
 1502
 00:52:04,610 --> 00:52:07,645
@@ -8361,7 +8513,8 @@ roadmap equivalent of that aerial
 1503
 00:52:07,645 --> 00:52:11,065
 0,450 450,755 1525,1925 2305,2705 3025,3420
-satellite image or a particular
+satellite image| or a particular
+|或将建筑物图像的特定注释或标签转换为
 
 1504
 00:52:11,065 --> 00:52:13,375
@@ -8371,7 +8524,8 @@ annotation or labels of the
 1505
 00:52:13,375 --> 00:52:14,680
 0,165 165,345 345,465 465,725 1015,1305
-image of a building to
+image of a building| to
+|建筑物的实际视觉实现和视觉立面，
 
 1506
 00:52:14,680 --> 00:52:18,070
@@ -8381,38 +8535,38 @@ the actual visual realization and
 1507
 00:52:18,070 --> 00:52:19,470
 0,270 270,750 750,930 930,1095 1095,1400
-visual facade of that building.|
+visual facade of that building,|
 |
 
 1508
 00:52:20,280 --> 00:52:21,860
 0,260 260,520 600,1000 1020,1325 1325,1580
-We can translate between different
-我们可以从白天到晚上在不同的照明条件之间进行转换。
+we can translate between different
+我们可以在不同的照明条件之间进行转换，白天到晚上，
 
 1509
 00:52:21,860 --> 00:52:23,980
 0,350 490,890 1240,1620 1620,1860 1860,2120
-lighting conditions day to night.|
+lighting conditions, day to night,|
 |
 
 1510
 00:52:25,010 --> 00:52:26,310
 0,290 290,470 470,740 740,1010 1010,1300
-Black and white to color
-从黑白到彩色轮廓再到彩色照片。
+black and white to color,|
+从黑白到彩色，|
 
 1511
 00:52:26,690 --> 00:52:30,510
 0,700 930,1250 1250,1490 1490,1810 3420,3820
 outlines to a colored photo.|
-|
+轮廓再到彩色照片。|
 
 1512
 00:52:31,440 --> 00:52:33,170
 0,305 305,545 545,880 1350,1595 1595,1730
-All these cases, and I
-所有这些案例，特别是我认为，对我来说最有趣和最有影响力的是街景和鸟瞰之间的转换。这是用来考虑，例如，如果你有来自谷歌地图的数据，你如何在地图的街景和航拍图像之间移动。
+All these cases,| and I
+所有这些案例，|特别是对我来说最有趣和最有影响力的是，
 
 1513
 00:52:33,170 --> 00:52:34,625
@@ -8427,32 +8581,38 @@ most interesting and impactful to
 1515
 00:52:36,755 --> 00:52:38,980
 0,245 535,825 825,1065 1065,1415 1825,2225
-me is this translation between
+me is| this translation between
+|街景和鸟瞰之间的转换，
 
 1516
 00:52:39,150 --> 00:52:40,660
 0,335 335,590 590,800 800,1220 1220,1510
-street view and aerial view.
+street view and aerial view,|
+|
 
 1517
 00:52:41,010 --> 00:52:43,760
 0,320 320,590 590,940 2010,2390 2390,2750
-{And,this -} is used to
+{and,this -} is used to
+这是用来考虑，
 
 1518
 00:52:43,760 --> 00:52:44,900
 0,315 315,555 555,795 795,990 990,1140
-consider, for example, if you
+consider,| for example, if you
+|例如，如果你有来自谷歌地图的数据，
 
 1519
 00:52:44,900 --> 00:52:47,140
 0,225 225,555 555,950 1540,1890 1890,2240
-have data from Google maps,
+have data from Google maps,|
+|
 
 1520
 00:52:47,400 --> 00:52:48,790
 0,305 305,500 500,680 680,970 990,1390
 how you can go between
+你如何在地图的街景和航拍图像之间移动。
 
 1521
 00:52:48,990 --> 00:52:50,750
@@ -8474,7 +8634,7 @@ of that.|
 00:52:55,250 --> 00:52:58,780
 0,400 1290,1690 2640,3095 3095,3275 3275,3530
 Finally, again extending the same
-最后，再次将同一翻译概念在一个域之间扩展到另一个域，另一个想法是完全不成对的翻译，这使用了一种称为青色的特定GAN体系结构。
+最后，再次扩展一个域到另一个域转换的概念，
 
 1525
 00:52:58,780 --> 00:53:01,405
@@ -8484,7 +8644,8 @@ concept of translation between one
 1526
 00:53:01,405 --> 00:53:04,075
 0,335 355,645 645,935 1795,2195 2305,2670
-domain to another, another idea
+domain to another,| another idea
+|另一个想法是完全不成对的转换，
 
 1527
 00:53:04,075 --> 00:53:06,150
@@ -8494,24 +8655,26 @@ is that of completely unpaired
 1528
 00:53:06,560 --> 00:53:08,920
 0,400 1170,1445 1445,1640 1640,1960 2010,2360
-translation, and this uses a
+translation,| and this uses a
+|这使用了一种特定 GAN 体系结构，称为 CycleGAN 。
 
 1529
 00:53:08,920 --> 00:53:11,610
 0,350 490,840 840,1160 1540,1935 1935,2690
-particular Gan architecture called cyan.|
+particular GAN architecture, called CycleGAN.|
 |
 
 1530
 00:53:12,650 --> 00:53:13,855
 0,320 320,530 530,740 740,1010 1010,1205
 So in this video that
-在我在这里展示的这段视频中，该模型将一个域中的一组图像作为输入。它并不一定要在另一个目标域中有对应的图像，但它被训练成试图在该目标域中生成大致对应于源域的示例，将源的样式转移到目标上，反之亦然。所以这个例子展示了从马域到斑马域的图像转换。
+在我在这里展示的这段视频中，
 
 1531
 00:53:13,855 --> 00:53:15,540
 0,210 210,465 465,845 1105,1395 1395,1685
-I'm showing here, the model
+I'm showing here,| the model
+|模型将一个域中的一组图像作为输入，
 
 1532
 00:53:15,890 --> 00:53:17,305
@@ -8521,12 +8684,14 @@ takes as input a bunch
 1533
 00:53:17,305 --> 00:53:19,050
 0,335 445,845 925,1215 1215,1425 1425,1745
-of images in one domain.
+of images in one domain,|
+|
 
 1534
 00:53:19,700 --> 00:53:21,550
 0,395 395,665 665,1120 1170,1565 1565,1850
-{And,it -} doesn't necessarily have
+{and,it -} doesn't necessarily have
+它并不一定要在另一个目标域中有对应的图像，
 
 1535
 00:53:21,550 --> 00:53:22,840
@@ -8536,7 +8701,8 @@ to have a corresponding image
 1536
 00:53:22,840 --> 00:53:25,180
 0,300 300,615 615,975 975,1340 2080,2340
-in another target domain, but
+in another target domain,| but
+|但它被训练成试图在该目标域中生成大致对应于源域的示例，
 
 1537
 00:53:25,180 --> 00:53:26,425
@@ -8556,7 +8722,8 @@ target domain that roughly correspond
 1540
 00:53:32,270 --> 00:53:34,990
 0,400 540,830 830,1070 1070,1420 2070,2720
-to the source domain, transferring
+to the source domain,| transferring
+|将源的样式转移到目标上，反之亦然。
 
 1541
 00:53:34,990 --> 00:53:36,330
@@ -8571,7 +8738,8 @@ onto the target and vice
 1543
 00:53:38,455 --> 00:53:41,050
 0,575 1165,1565 1585,1935 1935,2280 2280,2595
-{versa.,So -} this example is
+versa.| So this example is
+|所以这个例子展示了从马域到斑马域的图像转换，
 
 1544
 00:53:41,050 --> 00:53:43,470
@@ -8586,34 +8754,37 @@ in horse domain to zebra
 1546
 00:53:46,660 --> 00:53:47,540
 0,290
-domain.|
+domain,|
 |
 
 1547
 00:53:48,020 --> 00:53:49,500
 0,290 290,580 660,965 965,1175 1175,1480
-The concept here is this
-这里的概念是循环依赖，对吗？你有两个GAN通过这个循环损耗连接在一起，在一个域和另一个域之间转换。
+the concept here is this
+这里的概念是循环依赖，
 
 1548
 00:53:49,640 --> 00:53:52,255
 0,635 635,1450 1560,1960 2070,2375 2375,2615
-cyclic dependency, right? You have
+cyclic dependency, right,| you have
+|你有两个 GAN 通过这个循环损失连接在一起，
 
 1549
 00:53:52,255 --> 00:53:53,640
 0,240 240,570 570,825 825,1035 1035,1385
-two gans that are connected
+two GANs that are connected
 
 1550
 00:53:53,660 --> 00:53:56,760
 0,400 660,1040 1040,1420 2220,2765 2765,3100
-together VIA this cyclic loss,
+together via this cyclic loss,|
+|
 
 1551
 00:53:57,470 --> 00:53:59,665
 0,590 590,905 905,1205 1205,1570 1860,2195
 transforming between one domain and
+在一个域和另一个域之间转换。
 
 1552
 00:53:59,665 --> 00:54:00,740
@@ -8625,7 +8796,7 @@ another.|
 00:54:01,340 --> 00:54:02,695
 0,305 305,560 560,845 845,1100 1100,1355
 And really like all the
-就像我们到目前为止在这节课上看到的所有例子一样，直觉是分布变换的想法。通常情况下，在g的作用下，你会在循环中从噪声转向某个目标。再一次，你试图从一些源分布，一些数据流形X到目标分布，另一个数据流形Y。
+像我们到目前为止在这节课上看到的所有例子一样，
 
 1554
 00:54:02,695 --> 00:54:04,600
@@ -8635,7 +8806,8 @@ examples that we've seen so
 1555
 00:54:04,600 --> 00:54:06,100
 0,180 180,330 330,495 495,800 1240,1500
-far in this lecture, the
+far in this lecture,| the
+|直觉是分布变换的想法，
 
 1556
 00:54:06,100 --> 00:54:07,810
@@ -8645,7 +8817,8 @@ intuition is this idea of
 1557
 00:54:07,810 --> 00:54:11,080
 0,380 520,920 2140,2540 2590,2940 2940,3270
-distribution transformation. {Normally,with -} g,
+distribution transformation,| {normally\,,with -} GAN,
+|通常情况下，在 GAN 的作用下，你会在循环中从噪声转向某个目标，
 
 1558
 00:54:11,080 --> 00:54:12,565
@@ -8655,17 +8828,19 @@ you're going from noise to
 1559
 00:54:12,565 --> 00:54:14,545
 0,210 210,545 1255,1530 1530,1695 1695,1980
-some target with the {cycle.,Again,
+some target,| with the {CycleGAN
+|在 CycleGAN 下，你试着从某些源分布，
 
 1560
 00:54:14,545 --> 00:54:16,015
 0,395 475,855 855,1065 1065,1260 1260,1470
--} you're trying to go
+-}, you're trying to go
 
 1561
 00:54:16,015 --> 00:54:19,165
 0,285 285,635 955,1355 1915,2315 2815,3150
-from some source distribution, some
+from some source distribution,| some
+|从某些数据流形 X 到目标分布另一个数据流形 Y ，
 
 1562
 00:54:19,165 --> 00:54:21,055
@@ -8680,19 +8855,20 @@ target distribution, another data manifold
 1564
 00:54:24,145 --> 00:54:25,080
 0,395
-y.|
+Y,|
 |
 
 1565
 00:54:25,420 --> 00:54:26,870
 0,275 275,425 425,650 650,1000 1050,1450
-And this is really, really
-这真的，真的不仅很酷，而且在思考我们如何灵活地转换这些不同的发行版时也很强大。
+and this is really, really
+这真的不仅很酷，
 
 1566
 00:54:27,220 --> 00:54:28,935
 0,290 290,560 560,940 990,1390 1410,1715
-not only cool, but also
+not only cool,| but also
+|而且在思考我们如何灵活地转换这些不同的分布时也很强大。
 
 1567
 00:54:28,935 --> 00:54:31,020
@@ -8714,7 +8890,7 @@ different distributions flexibly.|
 00:54:35,850 --> 00:54:38,105
 0,275 275,455 455,760 1080,1480 1890,2255
 And in fact, this allows
-事实上，这让我们不仅可以对图像进行转换，还可以对语音和音频进行转换。
+事实上，这让我们不仅可以对图像进行转换，
 
 1571
 00:54:38,105 --> 00:54:40,040
@@ -8724,24 +8900,26 @@ us to do transformations not
 1572
 00:54:40,040 --> 00:54:41,810
 0,240 240,465 465,740 1240,1545 1545,1770
-only to images, but to
+only to images,| but to
+|还可以对语音和音频进行转换，
 
 1573
 00:54:41,810 --> 00:54:43,390
 0,315 315,615 615,920 970,1275 1275,1580
-speech and audio as well.|
+speech and audio as well,|
 |
 
 1574
 00:54:44,210 --> 00:54:45,400
 0,365 365,605 605,770 770,965 965,1190
-So in the case of
-所以在语音和音频的情况下，事实证明你可以利用声波。代表。
+so in the case of
+所以在语音和音频的情况下，
 
 1575
 00:54:45,400 --> 00:54:47,155
 0,210 210,390 390,680 1210,1530 1530,1755
-speech and audio, turns out
+speech and audio,| turns out
+|事实证明你可以利用声波，使用一个压缩语谱图表示，
 
 1576
 00:54:47,155 --> 00:54:48,205
@@ -8751,24 +8929,25 @@ that you can take sound
 1577
 00:54:48,205 --> 00:54:50,760
 0,335 805,1205
-waves. Represent.|
-|
+waves represent
 
 1578
 00:54:50,980 --> 00:54:53,000
 0,800 800,950 950,1115 1115,1685 1685,2020
-Compactly in a spectrogram image
-然后使用循环g将语音从一个域中的一个人的声音转换到另一个域中的另一个人的声音，对吗？这是我们定义的两个独立的数据分布。
+compactly in a spectrogram image|
+|
 
 1579
 00:54:53,500 --> 00:54:54,950
 0,335 335,575 575,770 770,1055 1055,1450
-and use a cycle g
+and use a {CycleGAN -}|
+然后使用 CycleGAN ，|
 
 1580
 00:54:55,180 --> 00:54:58,280
 0,275 275,550 1170,1570 1890,2290 2700,3100
 to then translate and transform
+将语音从一个域中的一个人的声音转换到另一个域中的另一个人的声音，
 
 1581
 00:54:58,570 --> 00:55:00,500
@@ -8788,7 +8967,8 @@ person's voice in another domain,
 1584
 00:55:05,080 --> 00:55:06,740
 0,380 380,620 620,815 815,1150 1260,1660
-right? These are two independent
+right,| these are two independent
+|这是我们定义的两个独立的数据分布。
 
 1585
 00:55:06,940 --> 00:55:08,780
@@ -8800,17 +8980,18 @@ data distributions that we define.|
 00:55:09,700 --> 00:55:10,935
 0,335 335,605 605,785 785,1025 1025,1235
 Maybe you're getting a sense
-也许你已经明白我在暗示什么了。也许不是，但事实上，这正是我们开发模型来合成奥巴马声音背后的音频的方式，我们在昨天的入门课中看到了这一点。我们所做的是训练一个周期g来获取亚历山大声音中的数据，并将其转换为奥巴马声音中的数据。
+也许你已经明白我在暗示什么，也许不是，
 
 1587
 00:55:10,935 --> 00:55:11,925
 0,165 165,285 285,495 495,795 795,990
-of where I'm hinting at.
+of where I'm hinting at,
 
 1588
 00:55:11,925 --> 00:55:13,665
 0,270 270,605 1015,1275 1275,1455 1455,1740
-{Maybe,not, -} but in fact,
+{maybe,not -},| but in fact,
+|但这正是我们开发模型来合成奥巴马声音背后的音频的方式，
 
 1589
 00:55:13,665 --> 00:55:15,950
@@ -8825,32 +9006,38 @@ developed the model to synthesize
 1591
 00:55:18,900 --> 00:55:21,140
 0,225 225,500 760,1160 1450,1965 1965,2240
-the audio behind Obama's voice
+the audio behind Obama's voice,|
+|
 
 1592
 00:55:21,430 --> 00:55:23,310
 0,290 290,485 485,790 960,1250 1250,1880
 that we saw in yesterday's
+我们在昨天的入门课中看到的，
 
 1593
 00:55:23,310 --> 00:55:25,875
 0,660 660,950 1900,2175 2175,2340 2340,2565
-introductory {lecture.,What -} we did
+introductory lecture,| what we did
+|我们所做的是，
 
 1594
 00:55:25,875 --> 00:55:27,405
 0,255 255,510 510,825 825,1170 1170,1530
-was we trained a cycle
+was,| we trained a {CycleGAN
+|我们训练一个 CycleGAN ，
 
 1595
 00:55:27,405 --> 00:55:30,050
 0,395 805,1205 1225,1620 1620,2015 2245,2645
-g to take data in
+-}| to take data in
+|获取 Alexander 声音中的数据，
 
 1596
 00:55:30,070 --> 00:55:32,870
 0,560 560,820 1410,1810 2160,2480 2480,2800
-Alexander's voice and transform it
+Alexander's voice| and transform it
+|并将其转换为奥巴马声音中的数据，
 
 1597
 00:55:33,220 --> 00:55:35,070
@@ -8860,14 +9047,14 @@ into data in the manifold
 1598
 00:55:35,070 --> 00:55:36,920
 0,350 490,1050 1050,1310
-of Obama's voice.|
+of Obama's voice,|
 |
 
 1599
 00:55:37,520 --> 00:55:39,190
 0,365 365,605 605,770 770,1370 1370,1670
-So we can visualize how
-所以我们可以直观地看到亚历山大的声音和奥巴马的声音的频谱图波形是什么样子的，这是完全使用循环方法合成的。
+so we can visualize how
+所以我们可以直观地看到 Alexander 的声音和奥巴马的声音的频谱图波形是什么样的，
 
 1600
 00:55:39,190 --> 00:55:41,650
@@ -8882,56 +9069,59 @@ for Alexander's voice versus Obama's
 1602
 00:55:44,080 --> 00:55:46,110
 0,260 370,630 630,890 910,1290 1290,2030
-voice that was completely synthesized
+voice,| that was completely synthesized
+|这是完全使用 CycleGAN 方法合成的。
 
 1603
 00:55:46,310 --> 00:55:54,620
 0,395 395,790 930,1330 1950,2350
-using this cycle approach.|
+using this CycleGAN approach.|
 |
 
 1604
 00:55:56,330 --> 00:55:56,680
 0,320
-The.|
-这个。|
 
 1605
 00:55:59,130 --> 00:56:02,500
 0,400 750,1150 1230,1630
 Here at MIT.|
-在麻省理工学院。|
+在 MIT 。|
 
 1606
 00:56:03,260 --> 00:56:06,840
 0,400 1680,2165 2165,2410 2550,2950 3180,3580
-I replayed it, okay, but
-我重放了一遍，好的，但基本上我们所做的就是亚历山大说了昨天播放的那个短语，我们又有了火车周期，模型，然后我们可以把它部署到那个精确的音频上，把它从亚历山大的声音领域转换到奥巴马的声音领域。
+I replayed it,| okay, but
+我重放了一遍，|好的，但基本上我们所做的就是，
 
 1607
 00:56:06,860 --> 00:56:08,370
 0,400 480,755 755,920 920,1160 1160,1510
-basically what we did was
+basically what we did was|
+|
 
 1608
 00:56:08,540 --> 00:56:10,950
 0,400 480,785 785,1090 1110,1510 2010,2410
 Alexander spoke that exact phrase
+Alexander 说了昨天播放的那个短语，
 
 1609
 00:56:11,030 --> 00:56:13,735
 0,335 335,620 620,970 1170,1570 2400,2705
-that was played yesterday, and
+that was played yesterday,| and
+|我们有训练 CycleGAN 模型，
 
 1610
 00:56:13,735 --> 00:56:14,875
 0,210 210,420 420,615 615,840 840,1140
-we had the train cycle
+we had the train {CycleGAN
 
 1611
 00:56:14,875 --> 00:56:16,600
 0,285 285,605 1075,1365 1365,1500 1500,1725
-again, model, and we can
+-} model,| and we can
+|然后我们可以把它部署到那个精确的音频上，
 
 1612
 00:56:16,600 --> 00:56:17,755
@@ -8941,7 +9131,8 @@ deploy it then on that
 1613
 00:56:17,755 --> 00:56:19,980
 0,315 315,665 1075,1475 1585,1905 1905,2225
-exact audio to transform it
+exact audio| to transform it
+|把它从 Alexander 的声音域转换到奥巴马的声音域，
 
 1614
 00:56:20,240 --> 00:56:22,315
@@ -8951,13 +9142,13 @@ from the domain of Alexander's
 1615
 00:56:22,315 --> 00:56:23,970
 0,245 385,785 895,1200 1200,1380 1380,1655
-voice to Obama s voice.|
+voice to Obama s voice,|
 |
 
 1616
 00:56:24,600 --> 00:56:27,090
 0,510 510,890 1120,1650 1650,2000 2230,2490
-Generating the synthetic audio that
+generating the synthetic audio that
 生成为该视频剪辑播放的合成音频。
 
 1617
@@ -8975,44 +9166,47 @@ clip.|
 00:56:32,260 --> 00:56:35,325
 0,380 380,710 710,1060 1200,1990 2700,3065
 Okay, before I accidentally played
-好吧，在我不小心再次上场之前，我。
+好的，在我不小心再次播放之前，
 
 1620
 00:56:35,325 --> 00:56:36,860
 0,315 315,665
-again, I.|
-|
+again,| I
+|我跳到总结幻灯片。
 
 1621
 00:56:36,860 --> 00:56:38,170
 0,225 225,560 580,885 885,1050 1050,1310
-Jump now to the summary
-现在跳到摘要幻灯片。今天，在这堂课中，我们学习了深入的生成模型，主要讨论了潜变量模型，自动编码器，变分自动编码器，我们的目标是学习数据的低维潜在编码，以及生成对抗网络，在那里，我们有这些相互竞争的生成器和鉴别器组件，试图合成合成例子。
+jump now to the summary
 
 1622
 00:56:38,190 --> 00:56:40,370
 0,400 1050,1445 1445,1805 1805,2030 2030,2180
-slide. {So,today -} in this
+slide.| {So,today -} in this
+|今天，在这节课中，
 
 1623
 00:56:40,370 --> 00:56:42,560
 0,290 310,675 675,920 1450,1755 1755,2190
-lecture we've learned deep generative
+lecture,| we've learned deep generative
+|我们学习了深入生成模型，
 
 1624
 00:56:42,560 --> 00:56:44,960
 0,260 340,740 1330,1710 1710,2085 2085,2400
-models specifically talking mostly about
+models,| specifically talking mostly about
+|主要讨论了隐变量模型，自编码器，变分自编码器，
 
 1625
 00:56:44,960 --> 00:56:47,950
 0,390 390,680 880,1280 1990,2325 2325,2990
-latent variable models, auto encoders,
+latent variable models, {autoencoders -},
 
 1626
 00:56:47,970 --> 00:56:50,120
 0,580 600,935 935,1570 1710,1970 1970,2150
-variational auto encoders where our
+variational {autoencoders -},| where our
+|我们的目标是学习数据的低维潜在编码，
 
 1627
 00:56:50,120 --> 00:56:51,410
@@ -9027,12 +9221,14 @@ low dimensional latent encoding of
 1629
 00:56:53,630 --> 00:56:55,690
 0,135 135,410 1150,1470 1470,1725 1725,2060
-the data, as well as
+the data,| as well as
+|以及生成对抗网络，
 
 1630
 00:56:56,070 --> 00:56:58,370
 0,590 590,1235 1235,1510 1860,2135 2135,2300
-generative adversarial networks where we
+generative adversarial networks,| where we
+|我们有这些相互竞争的生成器和判别器组件，
 
 1631
 00:56:58,370 --> 00:57:00,550
@@ -9042,7 +9238,8 @@ have these competing generator and
 1632
 00:57:00,720 --> 00:57:03,065
 0,790 840,1240 1650,1910 1910,2090 2090,2345
-discriminator components that are trying
+discriminator components,| that are trying
+|试图合成合成例子。
 
 1633
 00:57:03,065 --> 00:57:06,420
@@ -9054,12 +9251,13 @@ to synthesize synthetic examples.|
 00:57:07,510 --> 00:57:09,020
 0,365 365,605 605,875 875,1145 1145,1510
 We've talked about these core
-我们已经讨论了这些核心的基本生成方法，但事实证明，就像我在讲座开始时提到的那样，特别是在过去的一年里，我们看到了生成建模的真正、真正的巨大进步，其中许多并不是来自这两种方法，我们描述的两种基本方法。
+我们已经讨论了这些核心的基本生成方法，
 
 1635
 00:57:09,130 --> 00:57:12,375
 0,610 660,1220 1220,1510 2370,2770 2940,3245
-foundational generative methods, but it
+foundational generative methods,| but it
+|但事实证明，就像我在讲座开始时提到的那样，
 
 1636
 00:57:12,375 --> 00:57:13,695
@@ -9074,12 +9272,14 @@ to in the beginning of
 1638
 00:57:15,060 --> 00:57:17,265
 0,120 120,380 1210,1610 1690,1980 1980,2205
-the lecture, that in this
+the lecture,| that in this
+|特别是在过去的一年里，
 
 1639
 00:57:17,265 --> 00:57:19,125
 0,315 315,585 585,840 840,1205 1435,1860
-past year in particular, we've
+past year in particular,| we've
+|我们看到了生成建模的真正的巨大进步，
 
 1640
 00:57:19,125 --> 00:57:21,675
@@ -9089,7 +9289,8 @@ seen truly, truly tremendous advances
 1641
 00:57:21,675 --> 00:57:23,940
 0,195 195,600 600,1145 1705,2040 2040,2265
-in generative modeling, many of
+in generative modeling,| many of
+|其中许多并不是来自这两种方法，
 
 1642
 00:57:23,940 --> 00:57:25,970
@@ -9099,18 +9300,19 @@ which have not been from
 1643
 00:57:26,080 --> 00:57:27,930
 0,365 365,620 620,910 1320,1640 1640,1850
-those two methods, those two
+those two methods,| those two
+|我们描述的两种基本方法，
 
 1644
 00:57:27,930 --> 00:57:29,780
 0,525 525,915 915,1185 1185,1455 1455,1850
-foundational methods that we described.|
+foundational methods that we described,|
 |
 
 1645
 00:57:30,500 --> 00:57:32,070
 0,290 290,545 545,815 815,1120 1170,1570
-But rather a new approach
+but rather a new approach
 而是一种名为扩散模型的新方法。
 
 1646
@@ -9123,7 +9325,7 @@ called diffusion modeling.|
 00:57:34,700 --> 00:57:37,495
 0,545 545,910 990,1355 1355,1720 2520,2795
 Diffusion models are driving are
-扩散模型是推动生成性人工智能巨大进步的驱动工具，特别是在过去的一年里。
+扩散模型是推动生成性人工智能巨大进步的驱动工具，
 
 1648
 00:57:37,495 --> 00:57:39,660
@@ -9133,29 +9335,32 @@ the driving tools behind the
 1649
 00:57:39,680 --> 00:57:42,360
 0,400 720,1420 1470,1775 1775,2315 2315,2680
-tremendous advances in generative AI
+tremendous advances in generative AI,|
+|
 
 1650
 00:57:42,500 --> 00:57:43,525
 0,275 275,515 515,680 680,845 845,1025
 that we've seen in this
+特别是在过去的一年里，
 
 1651
 00:57:43,525 --> 00:57:45,780
 0,270 270,630 630,975 975,1325
-past year in particular.|
+past year in particular,|
 |
 
 1652
 00:57:46,130 --> 00:57:48,820
 0,400 960,1390 1800,2150 2150,2390 2390,2690
-These gans, they're learning these
-这些GAN，他们正在学习这些转换，这些编码，但他们在很大程度上被限制在生成类似于他们以前见过的数据空间的例子。
+these GANs, they're learning these
+这些 GAN ，它们正在学习这些转换，这些编码，
 
 1653
 00:57:48,820 --> 00:57:51,265
 0,680 700,975 975,1640 1930,2205 2205,2445
-transformations, these encodings, but they're
+transformations, these encodings,| but they're
+|但它们在很大程度上被限制在生成类似于他们以前见过的数据空间的例子，
 
 1654
 00:57:51,265 --> 00:57:55,230
@@ -9175,19 +9380,20 @@ data space that they've seen
 1657
 00:57:59,485 --> 00:58:00,660
 0,305
-before.|
+before,|
 |
 
 1658
 00:58:01,270 --> 00:58:03,320
 0,560 560,940 1200,1505 1505,1730 1730,2050
-Diffusion models have this ability
-扩散模型现在有这种能力，可以幻觉、想象和想象全新的物体和实例，作为人类，我们可能没有见过，甚至没有考虑到训练数据没有覆盖的设计空间的部分。
+diffusion models have this ability|
+扩散模型现在有这种能力，|
 
 1659
 00:58:03,340 --> 00:58:05,490
 0,275 275,550 750,1505 1505,1715 1715,2150
 to now hallucinate and envision
+可以幻觉、想象和想象全新的物体和实例，
 
 1660
 00:58:05,490 --> 00:58:08,235
@@ -9197,7 +9403,8 @@ and imagine completely new objects
 1661
 00:58:08,235 --> 00:58:10,320
 0,225 225,965 1105,1485 1485,1815 1815,2085
-and instances, which we as
+and instances,| which we as
+|作为人类，我们可能没有见过，甚至没有想过，
 
 1662
 00:58:10,320 --> 00:58:12,020
@@ -9207,7 +9414,8 @@ humans may not have seen
 1663
 00:58:12,250 --> 00:58:14,370
 0,290 290,530 530,800 800,1120 1800,2120
-or even thought about parts
+or even thought about,| parts
+|设计空间的部分没有没有被训练数据覆盖。
 
 1664
 00:58:14,370 --> 00:58:16,020
@@ -9229,17 +9437,19 @@ training data.|
 00:58:18,940 --> 00:58:20,490
 0,395 395,725 725,1060 1080,1370 1370,1550
 So an example here is
-这里的一个例子是人工智能生成的艺术，如果你愿意的话，它是艺术，它是由扩散模型创建的，我认为这不仅是为了达到目的。
+这里的一个例子是人工智能生成的艺术，
 
 1668
 00:58:20,490 --> 00:58:22,640
 0,270 270,585 585,920 1030,1430 1750,2150
-this AI generated art, which
+this AI generated art,| which
+|如果你愿意的话，它是艺术，
 
 1669
 00:58:22,810 --> 00:58:25,275
 0,335 335,545 545,680 680,940 2190,2465
-art, if you will, which
+art, if you will,| which
+|它是由扩散模型创建的，
 
 1670
 00:58:25,275 --> 00:58:26,790
@@ -9249,29 +9459,30 @@ was created by a diffusion
 1671
 00:58:26,790 --> 00:58:28,920
 0,350 910,1155 1155,1275 1275,1550 1840,2130
-model, and I think not
+model,| and I think not
+|我认为这不仅是为了达到这些强大模型的一些限制和功能，
 
 1672
 00:58:28,920 --> 00:58:30,530
 0,255 255,510 510,800 940,1275 1275,1610
-only does this get at.|
-|
+only does this get at
 
 1673
 00:58:31,240 --> 00:58:32,790
 0,210 210,345 345,620 670,1070 1150,1550
-Some of the limits and
-这些强大模型的一些限制和功能，但也有关于创建新实例意味着什么的问题。这些模型的极限和界限是什么，它们如何，我们如何看待它们在人类能力和人类智力方面的进步？
+some of the limits and
 
 1674
 00:58:33,080 --> 00:58:35,010
 0,400 720,995 995,1190 1190,1510 1530,1930
-capabilities of these powerful models,
+capabilities of these powerful models,|
+|
 
 1675
 00:58:35,390 --> 00:58:37,750
 0,395 395,725 725,1060 1230,1630 2070,2360
 but also questions about what
+但也有关于创建新实例意味着什么的问题，
 
 1676
 00:58:37,750 --> 00:58:39,570
@@ -9281,7 +9492,8 @@ does it mean to create
 1677
 00:58:39,950 --> 00:58:42,040
 0,365 365,1150 1410,1730 1730,1925 1925,2090
-new instances? What are the
+new instances,| what are the
+|这些模型的极限和界限是什么，
 
 1678
 00:58:42,040 --> 00:58:43,795
@@ -9291,12 +9503,14 @@ limits and bounds of these
 1679
 00:58:43,795 --> 00:58:45,540
 0,305 685,1020 1020,1290 1290,1485 1485,1745
-models, and how do they,
+models,| and how do they,|
+|它们如何，|
 
 1680
 00:58:45,920 --> 00:58:46,930
 0,290 290,425 425,560 560,770 770,1010
 how can we think about
+我们如何看待它们在人类能力和人类智力方面的进步。
 
 1681
 00:58:46,930 --> 00:58:48,805
@@ -9306,19 +9520,20 @@ their advances with respect to
 1682
 00:58:48,805 --> 00:58:51,120
 0,255 255,635 1255,1560 1560,1865 1915,2315
-human capabilities and human intelligence?|
+human capabilities and human intelligence.|
 |
 
 1683
 00:58:52,540 --> 00:58:53,840
 0,290 290,455 455,755 755,1040 1040,1300
 And so I'm, I'm really
-因此，我非常兴奋，在周四的第七讲深度学习的新领域，我们将深入研究扩散模型，讨论它们的基本原理，不仅讨论图像的应用，也讨论其他领域，我们看到这些模型真正开始取得变革性的进展，因为它们确实处于当今生成性人工智能的前沿和新前沿。
+所以，我非常兴奋，
 
 1684
 00:58:53,890 --> 00:58:55,425
 0,350 350,575 575,785 785,1120 1230,1535
-excited that on thursday in
+excited that,| on Thursday in
+|在周四的第七讲，深度学习的新领域，
 
 1685
 00:58:55,425 --> 00:58:57,780
@@ -9328,7 +9543,8 @@ lecture seven on new frontiers
 1686
 00:58:57,780 --> 00:58:59,280
 0,195 195,375 375,680 1030,1365 1365,1500
-in deep learning, we're going
+in deep learning,| we're going
+|我们将深入研究扩散模型，
 
 1687
 00:58:59,280 --> 00:59:00,210
@@ -9338,27 +9554,32 @@ to take a really deep
 1688
 00:59:00,210 --> 00:59:02,445
 0,345 345,675 675,1125 1125,1490 1900,2235
-dive into diffusion models, talk
+dive into diffusion models,| talk
+|讨论它们的基本原理，
 
 1689
 00:59:02,445 --> 00:59:04,665
 0,240 240,435 435,1205 1585,1920 1920,2220
-about their fundamentals, talk about
+about their fundamentals,| talk about
+|不仅讨论图像的应用，
 
 1690
 00:59:04,665 --> 00:59:06,410
 0,285 285,605 865,1260 1260,1500 1500,1745
-not only applications to images,
+not only applications to images,|
+|
 
 1691
 00:59:06,820 --> 00:59:08,240
 0,290 290,560 560,860 860,1100 1100,1420
-but other fields as well,
+but other fields as well,|
+也讨论其他领域，|
 
 1692
 00:59:08,470 --> 00:59:09,795
 0,290 290,500 500,815 815,1055 1055,1325
 in which we're seeing these
+我们看到这些模型真正开始取得变革性的进展，
 
 1693
 00:59:09,795 --> 00:59:11,360
@@ -9368,7 +9589,8 @@ models really start to make
 1694
 00:59:11,530 --> 00:59:14,295
 0,670 870,1540 2040,2375 2375,2555 2555,2765
-transformative advances because they are
+transformative advances,| because they are
+|因为它们确实处于当今生成性人工智能的前沿和新前沿。
 
 1695
 00:59:14,295 --> 00:59:15,450
@@ -9394,14 +9616,14 @@ today.|
 1699
 00:59:20,470 --> 00:59:22,070
 0,260 260,520 690,1040 1040,1295 1295,1600
-All right. {So,with -} that.|
-好的。因此，有了这些。|
+{Alright -}, {so,with -} that,|
+好的，有了这些，|
 
 1700
 00:59:23,180 --> 00:59:26,140
 0,440 440,665 665,1000 2250,2650 2670,2960
-Tease and and hopefully set
-梳理并希望为周四的第七讲做好准备，结束并提醒你们，我们现在大约有一个小时的开放办公时间。该是您在软件实验室工作的时候了。请到我们这里来，提出任何你可能有的问题，以及将在这里的助教们。
+tease and and hopefully set
+梳理并希望为周四的第七讲做好准备，
 
 1701
 00:59:26,140 --> 00:59:27,780
@@ -9411,12 +9633,14 @@ the stage for lecture seven
 1702
 00:59:27,860 --> 00:59:32,250
 0,335 335,670 1440,1840 3600,4070 4070,4390
-on thursday and conclude and
+on Thursday| and conclude and
+|结束并提醒你们，
 
 1703
 00:59:32,330 --> 00:59:33,640
 0,335 335,530 530,725 725,1040 1040,1310
-remind you all that we
+remind you all that,| we
+|我们现在大约有一个小时的开放办公时间，
 
 1704
 00:59:33,640 --> 00:59:35,520
@@ -9426,7 +9650,8 @@ have now about an hour
 1705
 00:59:35,630 --> 00:59:37,440
 0,400 660,1010 1010,1220 1220,1445 1445,1810
-for open office hour. {Time,for
+for open office hour,| {time,for
+|是你在软件实验工作的时间，
 
 1706
 00:59:37,700 --> 00:59:38,755
@@ -9436,7 +9661,8 @@ for open office hour. {Time,for
 1707
 00:59:38,755 --> 00:59:40,510
 0,210 210,510 510,1085 1225,1560 1560,1755
-your software {labs.,Come -} to
+your software labs,| come to
+|请到我们这里来，提出任何你可能有的问题，
 
 1708
 00:59:40,510 --> 00:59:42,400
@@ -9446,12 +9672,13 @@ us, ask any questions you
 1709
 00:59:42,400 --> 00:59:44,335
 0,165 165,470 1330,1635 1635,1800 1800,1935
-may have as well as
+may have,| as well as
+|以及助教们也在这里。
 
 1710
 00:59:44,335 --> 00:59:45,450
 0,180 180,450 450,675 675,825 825,1115
-the tas who will be
+the TAs who will be
 
 1711
 00:59:45,560 --> 00:59:46,960
@@ -9462,5 +9689,5 @@ here as well.|
 1712
 00:59:47,030 --> 00:59:52,057
 0,290 290,455 455,590 590,850
-Thank you so much.|
-非常感谢。|
+Thank you so much.
+非常感谢。
