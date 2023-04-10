@@ -2,22 +2,25 @@
 00:00:09,660 --> 00:00:11,240
 0,320 320,515 515,880 900,1300 1320,1580
 I'm really excited especially for
-我真的很兴奋，特别是这次演讲，这是一个非常特别的演讲，由我们这门令人惊叹的课程的赞助商之一--主题是人工智能--关于稳健和值得信赖的深度学习。正如你今天将看到的，Temeis AI实际上是一家总部位于剑桥的初创公司。我们的使命是设计、推进和部署人工智能和值得信赖的未来。我尤其对今天的演讲感到兴奋，因为我是麻省理工学院的Themis的联合创始人，就在这里，就在这座大楼里。事实上，这一切都源于我们在这里创造的令人难以置信的科学创新和进步，就在比你们今天坐的地方高几层的地方。由于我们的背景是麻省理工学院真正的尖端科学创新，MUS深深植根于科学，就像我说的，创新。
+我真的很兴奋，特别是这次演讲，
 
 2
 00:00:11,240 --> 00:00:12,275
 0,180 180,500 520,780 780,915 915,1035
-this lecture, which is a
+this lecture,| which is a
+|这是一个非常特别的演讲，
 
 3
 00:00:12,275 --> 00:00:13,985
 0,245 385,735 735,1065 1065,1395 1395,1710
-very special lecture on robust
+very special lecture| on robust
+|关于健壮和值得信赖的深度学习，
 
 4
 00:00:13,985 --> 00:00:15,755
 0,255 255,810 810,990 990,1295 1435,1770
-and trustworthy deep learning by
+and trustworthy deep learning| by
+|由我们这门令人惊叹的课程的赞助商之一 Themis AI 提供。
 
 5
 00:00:15,755 --> 00:00:17,405
@@ -27,17 +30,20 @@ one of our sponsors of
 6
 00:00:17,405 --> 00:00:19,150
 0,195 195,495 495,870 870,1380 1380,1745
-this amazing course, themeis AI.
+this amazing course, Themis AI.|
+|
 
 7
 00:00:19,800 --> 00:00:21,070
 0,365 365,620 620,845 845,980 980,1270
-{And,as -} you'll see today,
+{And,as -} you'll see today,|
+正如你们今天将看到的，|
 
 8
 00:00:21,240 --> 00:00:24,310
 0,515 515,880 990,1390 1890,2290 2460,3070
-themeis AI is a startup
+Themis AI is a startup
+Temeis AI 是一家总部位于 Cambridge 的初创公司，
 
 9
 00:00:24,510 --> 00:00:26,015
@@ -47,7 +53,8 @@ actually locally based here in
 10
 00:00:26,015 --> 00:00:27,890
 0,575 865,1155 1155,1380 1380,1620 1620,1875
-{Cambridge.,Our -} mission is to
+Cambridge,| our mission is to
+|我们的使命是设计、推进和部署人工智能和值得信赖的人工智能，
 
 11
 00:00:27,890 --> 00:00:30,500
@@ -57,37 +64,42 @@ design, advance and deploy the
 12
 00:00:30,500 --> 00:00:32,870
 0,290 340,740 940,1340 1390,1725 1725,2370
-future of AI {and,trustworthy. -}
+future of AI {and,trustworthy -}
 
 13
 00:00:32,870 --> 00:00:35,320
 0,240 240,560 1180,1680 1680,2055 2055,2450
-I specifically, I'm especially excited
+AI specifically,| I'm especially excited
+|我尤其对今天的演讲感到兴奋，
 
 14
 00:00:35,340 --> 00:00:37,865
 0,350 350,970 1050,1450 1800,2200 2220,2525
-about today's lecture because I
+about today's lecture,| because I
+|因为我是 Themis 的联合创始人，就在 MIT ，
 
 15
 00:00:37,865 --> 00:00:39,575
 0,195 195,485 565,1145 1165,1470 1470,1710
-Co founded themis right here
+{co-founded -} Themis right here
 
 16
 00:00:39,575 --> 00:00:41,210
 0,300 300,665 1105,1395 1395,1530 1530,1635
-at MIT right here in
+at MIT,| right here in
+|就在这里，在这座大楼里，
 
 17
 00:00:41,210 --> 00:00:42,370
 0,165 165,375 375,615 615,855 855,1160
-{this,very -} building. In fact,
+{this,very -} building, in fact,|
+|
 
 18
 00:00:42,930 --> 00:00:44,525
 0,305 305,560 560,935 935,1210 1230,1595
 this all stemmed from really
+这一切都源于我们在这里创造的令人难以置信的科学创新和进步，
 
 19
 00:00:44,525 --> 00:00:47,105
@@ -102,7 +114,8 @@ advances that we created right
 21
 00:00:48,755 --> 00:00:49,930
 0,225 225,405 405,540 540,735 735,1175
-here just a few floors
+here,| just a few floors
+|就在比你们今天坐的地方高几层的地方，
 
 22
 00:00:50,100 --> 00:00:51,245
@@ -112,7 +125,8 @@ higher than {where,you're -} sitting
 23
 00:00:51,245 --> 00:00:53,510
 0,365 1135,1535 1705,1995 1995,2130 2130,2265
-today. And because of our
+today,| and because of our
+|由于我们的背景是 MIT 真正的尖端科学创新，
 
 24
 00:00:53,510 --> 00:00:55,570
@@ -122,12 +136,14 @@ background in really cutting edge
 25
 00:00:55,770 --> 00:00:58,780
 0,400 990,1390 2010,2480 2480,2690 2690,3010
-scientific innovation stemming from MIT,
+scientific innovation stemming from MIT,|
+|
 
 26
 00:00:58,830 --> 00:01:00,940
 0,425 425,635 635,970 1080,1690 1710,2110
-themus is very rooted deeply
+Themis is very rooted deeply
+Themis 深深植根于科学，就像我说的，创新，
 
 27
 00:01:01,380 --> 00:01:03,320
@@ -137,14 +153,14 @@ in science and like I
 28
 00:01:03,320 --> 00:01:05,520
 0,290 400,800
-said, innovation.|
+said, innovation,|
 |
 
 29
 00:01:05,520 --> 00:01:07,490
 0,195 195,470 550,950 1210,1590 1590,1970
-We really aim to advance
-我们的目标是推动深度学习和人工智能的未来，我们的许多技术已经从我们在世界各地人工智能场馆的顶级同行评议会议上发表的研究成果中成长起来，我们的工作得到了国际知名媒体的报道。这种以科学创新为主题的科学创新是我们正在应对当今存在的安全关键人工智能中的一些最大挑战。这实际上源于这样一个事实，即我们希望将所有这些令人惊叹的进步作为本课程的一部分，并在现实中作为我们日常生活的一部分来实现，我们正在与许多不同学科的全球领先行业合作伙伴合作，从机器人学、自主性、医疗保健等等，开发一系列产品，以确保安全和值得信赖的人工智能，我们与我们的技术工程和机器学习团队一起深入推动这一点。
+we really aim to advance
+我们的目标是推动深度学习和人工智能的未来，
 
 30
 00:01:07,540 --> 00:01:08,810
@@ -154,7 +170,8 @@ the future of deep learning
 31
 00:01:09,010 --> 00:01:10,395
 0,400 420,800 800,1070 1070,1250 1250,1385
-and AI and much of
+and AI| and much of
+|我们的许多技术已经从发表的研究成果中成长起来，
 
 32
 00:01:10,395 --> 00:01:12,350
@@ -164,7 +181,8 @@ our technology has already grown
 33
 00:01:12,400 --> 00:01:15,140
 0,320 320,605 605,970 1680,2080 2160,2740
-from published research that we've
+from published research,| that we've
+|我们在世界各地人工智能[场馆]的顶级同行评议会议上发表的，
 
 34
 00:01:15,580 --> 00:01:18,195
@@ -179,7 +197,8 @@ review conferences in the AI
 36
 00:01:20,380 --> 00:01:22,065
 0,580 660,950 950,1100 1100,1360 1440,1685
-venues around the world and
+[venues] around the world| and
+|我们的工作得到了国际知名媒体的报道，
 
 37
 00:01:22,065 --> 00:01:23,115
@@ -194,12 +213,14 @@ by high profile international media
 39
 00:01:25,440 --> 00:01:28,725
 0,500 1480,1880 1900,2300 2530,2930 2980,3285
-outlets. {This,scientific -} innovation with
+outlets,| {this,scientific -} innovation, with
+|通过这种科学创新，
 
 40
 00:01:28,725 --> 00:01:31,095
 0,195 195,485 685,1085 1315,1895 2125,2370
-this scientific innovation themeis we
+this scientific innovation,| Themis, we
+|Themis 我们正在应对当今存在的安全关键人工智能中的一些最大挑战，
 
 41
 00:01:31,095 --> 00:01:33,015
@@ -214,7 +235,8 @@ biggest challenges in safety critical
 43
 00:01:35,500 --> 00:01:37,260
 0,400 420,755 755,1040 1040,1385 1385,1760
-AI that exists {today.,And -}
+AI that exists today,| and
+|这实际上源于这样一个事实，
 
 44
 00:01:37,260 --> 00:01:38,925
@@ -224,7 +246,8 @@ really that stems from the
 45
 00:01:38,925 --> 00:01:39,810
 0,240 240,405 405,540 540,705 705,885
-fact that we want to
+fact,| that we want to
+|我们希望将所有这些令人惊叹的进步作为本课程的一部分，
 
 46
 00:01:39,810 --> 00:01:40,850
@@ -239,7 +262,8 @@ advances that you're learning as
 48
 00:01:42,015 --> 00:01:43,340
 0,120 120,225 225,405 405,725 925,1325
-part of this course and
+part of this course| and
+|并在现实中作为我们日常生活的一部分来实现，
 
 49
 00:01:43,360 --> 00:01:44,780
@@ -254,7 +278,8 @@ as part of our daily
 51
 00:01:46,140 --> 00:01:47,835
 0,350 670,945 945,1125 1125,1365 1365,1695
-lives and we're working together
+lives| and we're working together
+|我们正在与许多不同学科的全球领先行业合作伙伴合作，
 
 52
 00:01:47,835 --> 00:01:49,580
@@ -264,69 +289,78 @@ with leading global industry partners
 53
 00:01:49,690 --> 00:01:51,855
 0,400 630,950 950,1205 1205,1760 1760,2165
-across many different disciplines ranging
+across many different disciplines| ranging
+|从机器人学、自主性医疗保健等等，
 
 54
 00:01:51,855 --> 00:01:54,105
 0,240 240,755 1045,1755 1755,2010 2010,2250
-from robotics, autonomy, health care
+from robotics, autonomy health care
 
 55
 00:01:54,105 --> 00:01:55,275
 0,180 180,450 450,765 765,990 990,1170
-and more to develop a
+and more| to develop a
+|开发一系列产品，
 
 56
 00:01:55,275 --> 00:01:57,090
 0,210 210,450 450,755 1375,1650 1650,1815
-line of products that will
+line of products,| that will
+|以确保安全和值得信赖的人工智能，
 
 57
 00:01:57,090 --> 00:01:59,060
 0,290 460,810 810,1050 1050,1650 1650,1970
-guarantee safe and trustworthy AI
+guarantee safe and trustworthy AI|
+|
 
 58
 00:01:59,440 --> 00:02:01,430
 0,305 305,545 545,860 860,1240 1590,1990
 and we drive this really
+我们的技术工程和机器学习团队一起深入推动这一点，
 
 59
 00:02:01,630 --> 00:02:03,500
 0,400 420,820 1110,1385 1385,1565 1565,1870
-eh deeply with our technical
+{} deeply with our technical
 
 60
 00:02:03,670 --> 00:02:05,450
 0,400 540,875 875,1100 1100,1385 1385,1780
-engineering and machine learning team.|
+engineering and machine learning team,|
 |
 
 61
 00:02:05,900 --> 00:02:08,005
 0,400 480,800 800,1120 1440,1790 1790,2105
-And our focus is very
-我们的重点是工程，非常灵活和非常模块化的平台，将算法扩展到健壮和值得信赖的人工智能。这真的使这种部署能够应对我们社会今天面临的重大挑战。具体地说，今天的人工智能解决方案的能力根本不太值得信任，即使它们在我们作为本课程一部分学习的一些任务中可能表现得非常高。因此，对于Themis来说，这是一个令人难以置信的令人兴奋的时刻，特别是现在风险投资支持我们所在的地方。我们的办公室就在剑桥，所以我们是当地的，我们刚刚完成了融资，所以我们正在积极招聘最优秀、最聪明的工程师，像你们所有人一样，实现安全可靠的人工智能的未来，我们希望今天的演讲真正激励你加入我们的使命，建设人工智能的未来。说到这里，我非常高兴地介绍一下SOA。SOA是一位机器学习科学家。
+and our focus is very
+我们的重点是工程，
 
 62
 00:02:08,005 --> 00:02:10,135
 0,365 595,870 870,1125 1125,1505 1765,2130
-much on the engineering, very
+much on the engineering,| very
+|非常灵活和非常模块化的平台，
 
 63
 00:02:10,135 --> 00:02:12,570
 0,365 565,840 840,1065 1065,1655 2035,2435
-flexible and very modular platforms
+flexible and very modular platforms|
+|
 
 64
 00:02:13,010 --> 00:02:14,940
 0,305 305,610 660,1085 1085,1420 1530,1930
 to scale algorithms towards robust
+将算法扩展到健壮和值得信赖的人工智能，
 
 65
 00:02:15,200 --> 00:02:17,650
 0,400 450,1190 1190,1540 2010,2270 2270,2450
-and trustworthy AI. {This,really -}
+and trustworthy AI,| {this,really -}
+|这使这种部署能够应对我们社会今天面临的重大挑战，
 
 66
 00:02:17,650 --> 00:02:20,575
@@ -341,7 +375,8 @@ challenges that our society faces
 68
 00:02:22,460 --> 00:02:24,670
 0,365 365,665 665,1000 1350,1750 1920,2210
-with AI {today.,Specifically -} the
+with AI today,| specifically the
+|特别是，今天的人工智能解决方案的能力根本不太值得信任，
 
 69
 00:02:24,670 --> 00:02:26,305
@@ -356,7 +391,8 @@ are not very trustworthy at
 71
 00:02:27,760 --> 00:02:29,245
 0,260 430,830 880,1170 1170,1335 1335,1485
-all, even if they may
+all,| even if they may
+|即使它们在我们作为本课程一部分学习的一些任务中可能表现得非常高。
 
 72
 00:02:29,245 --> 00:02:30,400
@@ -376,22 +412,26 @@ we study as part of
 75
 00:02:32,080 --> 00:02:34,000
 0,195 195,530 1030,1410 1410,1710 1710,1920
-{this,course. -} So it's an
+{this,course -}.| So it's an
+|所以，对于 Themis 来说，这是一个令人难以置信的令人兴奋的时刻，
 
 76
 00:02:34,000 --> 00:02:36,715
 0,380 550,945 945,1340 1750,2150 2200,2715
-incredibly exciting time for themis
+incredibly exciting time for Themis|
+|
 
 77
 00:02:36,715 --> 00:02:38,455
 0,285 285,600 600,900 900,1205 1435,1740
-and specific right now where
+and specific right now, where
+特别是现在风险投资，
 
 78
 00:02:38,455 --> 00:02:40,375
 0,390 390,900 900,1335 1335,1620 1620,1920
-VC {backed,we're -} located. Our
+VC backed,| we're located our
+|我们的办公室就在 Cambridge ，所以我们是本地的，
 
 79
 00:02:40,375 --> 00:02:41,485
@@ -401,7 +441,8 @@ offices are right here in
 80
 00:02:41,485 --> 00:02:43,390
 0,510 510,750 750,930 930,1175 1645,1905
-Cambridge so we're local and
+Cambridge, so we're local| and
+|我们刚刚完成了融资，
 
 81
 00:02:43,390 --> 00:02:44,740
@@ -411,7 +452,8 @@ we have just closed around
 82
 00:02:44,740 --> 00:02:46,990
 0,195 195,470 1180,1545 1545,1965 1965,2250
-the funding so we're actively
+the funding,| so we're actively
+|所以我们正在积极招聘最优秀、最聪明的工程师，像你们所有人一样，
 
 83
 00:02:46,990 --> 00:02:48,310
@@ -421,27 +463,31 @@ hiring the best and the
 84
 00:02:48,310 --> 00:02:49,930
 0,470 520,920 1000,1305 1305,1485 1485,1620
-brightest engineers like all of
+brightest engineers, like all of
 
 85
 00:02:49,930 --> 00:02:51,820
 0,260 910,1230 1230,1470 1470,1650 1650,1890
-you to realize the future
+you| to realize the future
+|实现安全可靠的人工智能的未来，
 
 86
 00:02:51,820 --> 00:02:53,485
 0,270 270,510 510,750 750,1335 1335,1665
-of safe and trustworthy AI
+of safe and trustworthy AI|
+|
 
 87
 00:02:53,485 --> 00:02:54,730
 0,255 255,375 375,570 570,900 900,1245
 and we hope that really
+我们希望今天的演讲激励你，
 
 88
 00:02:54,730 --> 00:02:56,970
 0,435 435,630 630,1215 1215,1610 1840,2240
-today's lecture inspires you to
+today's lecture inspires you| to
+|加入我们的使命，建设人工智能的未来。
 
 89
 00:02:56,990 --> 00:02:58,470
@@ -456,7 +502,8 @@ to build {the,future -} of
 91
 00:02:59,665 --> 00:03:01,420
 0,255 255,435 435,585 585,875 1375,1755
-AI. And with that it's
+AI.| And with that it's
+|说到这里，我非常高兴地介绍一下 Sadhana ，
 
 92
 00:03:01,420 --> 00:03:02,965
@@ -466,39 +513,43 @@ my {great,pleasure -} to introduce
 93
 00:03:02,965 --> 00:03:04,810
 0,515 865,1350 1350,1455 1455,1635 1635,1845
-SOA. SOA is a machine
+Sadhana,| Sadhana is a machine
+|Sadhana 是 Themis 的一位机器学习科学家，
 
 94
 00:03:04,810 --> 00:03:05,840
 0,240 240,590
-learning scientist.|
-|
+learning scientist
 
 95
 00:03:05,840 --> 00:03:08,570
 0,120 120,560 1240,1790 2020,2420 2440,2730
-At themis, she's also the
-在Themis，她也是这门课程的首席助教，麻省理工学院深度学习入门。她在Themis的研究专门专注于我们如何为人工智能构建非常模块化和灵活的方法，并构建我们所说的安全可靠的人工智能。今天，她将特别教我们更多关于人工智能算法的偏见和不确定性领域，这实际上是实现这一使命或安全可靠地部署我们周围的人工智能愿景的两个关键或关键组件。所以谢谢你们，请给s热烈热烈的掌声。
+at Themis,| she's also the
+|她也是这门课程的首席助教，
 
 96
 00:03:08,570 --> 00:03:10,060
 0,240 240,590 670,945 945,1155 1155,1490
-lead ta of this course,
+lead TA of this course,|
+|
 
 97
 00:03:10,170 --> 00:03:11,510
 0,410 410,530 530,680 680,970 990,1340
 intro to deep learning at
+MIT 的深度学习入门，
 
 98
 00:03:11,510 --> 00:03:13,430
 0,350 700,975 975,1245 1245,1545 1545,1920
-MIT. {Her,research -} at themis
+MIT,| {her,research -} at Themis
+|她在 Themis 的研究专注于，
 
 99
 00:03:13,430 --> 00:03:15,620
 0,555 555,890 970,1275 1275,1580 1930,2190
-focuses specifically on how we
+focuses specifically on,| how we
+|我们如何为人工智能构建非常模块化和灵活的方法，
 
 100
 00:03:15,620 --> 00:03:17,045
@@ -508,7 +559,8 @@ can build very modular and
 101
 00:03:17,045 --> 00:03:19,430
 0,305 385,785 1255,1655 1795,2145 2145,2385
-flexible methods for AI and
+flexible methods for AI| and
+|并构建我们所说的安全可靠的人工智能。
 
 102
 00:03:19,430 --> 00:03:20,900
@@ -518,17 +570,20 @@ building what we call a
 103
 00:03:20,900 --> 00:03:22,880
 0,180 180,360 360,1005 1005,1370 1690,1980
-safe and trustworthy {AI.,And -}
+safe and trustworthy AI.| And
+|今天，她将教我们，
 
 104
 00:03:22,880 --> 00:03:23,900
 0,240 240,480 480,585 585,780 780,1020
-today she'll be teaching us
+today she'll be teaching us|
+|
 
 105
 00:03:23,900 --> 00:03:25,955
 0,255 255,590 730,1130 1300,1590 1590,2055
 more about specifically the bias
+更多关于人工智能算法的偏见和不确定性领域，
 
 106
 00:03:25,955 --> 00:03:28,090
@@ -538,17 +593,20 @@ and the uncertainty realms of
 107
 00:03:28,320 --> 00:03:30,410
 0,400 420,940 1470,1730 1730,1865 1865,2090
-AI algorithms, which are really
+AI algorithms,| which are really
+|这是两个关键或关键组件，
 
 108
 00:03:30,410 --> 00:03:32,500
 0,350 490,885 885,1185 1185,1490 1690,2090
-two key or critical components
+two key or critical components|
+|
 
 109
 00:03:32,550 --> 00:03:34,145
 0,400 420,860 860,1085 1085,1370 1370,1595
 towards achieving this mission or
+实现安全可靠地部署我们周围人工智能的使命或愿景。
 
 110
 00:03:34,145 --> 00:03:35,930
@@ -563,7 +621,8 @@ trustworthy deployment of AI all
 112
 00:03:38,360 --> 00:03:40,220
 0,225 225,530 1060,1440 1440,1710 1710,1860
-{around,us. -} So thank you
+{around,us -}.| So thank you
+|所以谢谢你们，请给 Sadhana 热烈的掌声。
 
 113
 00:03:40,220 --> 00:03:41,855
@@ -578,44 +637,49 @@ warm round of applause for
 115
 00:03:43,370 --> 00:03:44,860
 0,380
-s.|
+Sadhana.|
 |
 
 116
 00:03:48,040 --> 00:03:49,140
 0,260 260,395 395,530 530,785 785,1100
 Thank you so much, Alexander,
-亚历山大，非常感谢你的介绍。大家好。我是Salina，我是Themis AI的一名机器学习科学家，也是今年这门课程的首席助教。今天，我非常兴奋地代表Themis向你们所有人谈论稳健和值得信赖的深度学习。
+Alexander ，非常感谢你的介绍。
 
 117
 00:03:49,140 --> 00:03:51,540
 0,165 165,240 240,470 1660,2040 2040,2400
-for the introduction. {Hi,everyone. -}
+for the introduction.| {Hi,everyone. -}
+|大家好。我是 Sadhana ，
 
 118
 00:03:51,540 --> 00:03:53,025
 0,375 375,840 840,1110 1110,1275 1275,1485
-I'm salina, I'm a machine
+I'm Sadhana,| I'm a machine
+|我是 Themis AI 的一名机器学习科学家，
 
 119
 00:03:53,025 --> 00:03:54,840
 0,225 225,575 865,1185 1185,1410 1410,1815
-learning scientist here at themis
+learning scientist here at Themis
 
 120
 00:03:54,840 --> 00:03:56,715
 0,350 730,1130 1210,1470 1470,1650 1650,1875
-AI and the lead ta
+AI| and the lead TA
+|也是今年这门课程的首席助教，
 
 121
 00:03:56,715 --> 00:03:57,710
 0,165 165,300 300,510 510,720 720,995
-of the course this {year.,And
+of the course this year,|
+|
 
 122
 00:03:57,910 --> 00:03:59,385
 0,275 275,545 545,920 920,1160 1160,1475
--} today I'm super excited
+and today I'm super excited
+今天，我非常兴奋地代表 Themis 向你们所有人谈论健壮和值得信赖的深度学习。
 
 123
 00:03:59,385 --> 00:04:00,290
@@ -630,7 +694,7 @@ about robust and trustworthy deep
 125
 00:04:02,415 --> 00:04:04,010
 0,305 355,690 690,960 960,1170 1170,1595
-learning on behalf of themis.|
+learning on behalf of Themis.|
 |
 
 126
@@ -9541,4 +9605,3 @@ resumes and {get,back -} to
 0,230 250,555 555,860
 you. Thank you.|
 |
-
