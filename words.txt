@@ -27,3 +27,6 @@ autoencoder 自编码器
 generator 生成器
 discriminator 判别器
 diffusion model 扩散模型
+
+# Lecture 5
+bias 偏差

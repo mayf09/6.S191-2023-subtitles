@@ -700,28 +700,31 @@ learning on behalf of Themis.|
 126
 00:04:06,230 --> 00:04:07,830
 0,400 480,815 815,1025 1025,1250 1250,1600
-So over the past decade,
-因此，在过去的十年里，我们看到人工智能在安全、关键领域、自主和机器人领域取得了巨大的增长。我们现在的模型可以在一秒钟的时间内对自动驾驶等事情做出关键决定，这些模型正在为全自动车辆和机器人铺平道路，而这并不局限于医药和医疗保健领域。机器人现在已经装备好，可以进行救命手术。我们有算法来生成对关键药物的预测，这些药物可能会治愈我们之前认为无法治愈的疾病。我们的模型可以自动诊断疾病，而不需要任何卫生保健专业人员的干预。这些进步是革命性的，它们有可能改变我们今天所知的生活。
+So over the past decade,|
+在过去的十年里，|
 
 127
 00:04:07,850 --> 00:04:09,595
 0,395 395,650 650,950 950,1270 1380,1745
 we've seen some tremendous growth
+我们看到人工智能在安全关键领域取得了巨大的增长，
 
 128
 00:04:09,595 --> 00:04:11,635
 0,345 345,690 690,1055 1315,1695 1695,2040
-in artificial intelligence, across safety,
+in artificial intelligence, across safety
 
 129
 00:04:11,635 --> 00:04:13,825
 0,315 315,785 1375,1650 1650,1815 1815,2190
-critical domains, in the spheres
+critical domains,| in the spheres
+|在自主和机器人领域，
 
 130
 00:04:13,825 --> 00:04:15,820
 0,180 180,780 780,975 975,1445 1705,1995
-of autonomy and robotics. {We,now
+of autonomy and robotics,| {we,now
+|我们现在的模型可以在一秒钟的时间内对自动驾驶等事情做出关键决定，
 
 131
 00:04:15,820 --> 00:04:17,275
@@ -741,7 +744,8 @@ like self driving at a
 134
 00:04:19,915 --> 00:04:21,610
 0,405 405,665 1105,1380 1380,1530 1530,1695
-second's notice, and these are
+second's notice,| and these are
+|这些模型为全自动车辆和机器人铺平道路，
 
 135
 00:04:21,610 --> 00:04:22,750
@@ -751,57 +755,67 @@ paving the way for fully
 136
 00:04:22,750 --> 00:04:25,285
 0,570 570,860 910,1200 1200,1610 2260,2535
-autonomous vehicles and robots, and
+autonomous vehicles and robots,| and
+|而这并没有停止，
 
 137
 00:04:25,285 --> 00:04:26,370
 0,225 225,360 360,555 555,765 765,1085
-that's not where this stops
+that's not where this stops,|
+|
 
 138
 00:04:26,480 --> 00:04:27,780
 0,260 260,410 410,800 800,1010 1010,1300
 in the spheres of medicine
+在医药和医疗保健领域，
 
 139
 00:04:27,830 --> 00:04:29,740
 0,275 275,550 1020,1505 1505,1685 1685,1910
-and {healthcare.,Robots -} are now
+and healthcare,| robots are now
+|机器人现在已经装备好，可以进行救命手术，
 
 140
 00:04:29,740 --> 00:04:31,300
 0,330 330,540 540,800 880,1230 1230,1560
-equipped to conduct life {saving,surgery.
+equipped to conduct life {saving,surgery
 
 141
 00:04:31,300 --> 00:04:33,400
 0,380 880,1155 1155,1430 1450,1890 1890,2100
--} We have algorithms that
+-},| we have algorithms that
+|我们有算法来生成对关键药物的预测，
 
 142
 00:04:33,400 --> 00:04:35,130
 0,270 270,855 855,1050 1050,1335 1335,1730
-generate predictions for critical drugs
+generate predictions for critical drugs,|
+|
 
 143
 00:04:35,150 --> 00:04:36,535
 0,275 275,485 485,770 770,1115 1115,1385
 that may cure diseases that
+这些药物可能会治愈我们之前认为无法治愈的疾病，
 
 144
 00:04:36,535 --> 00:04:38,250
 0,180 180,485 565,870 870,1035 1035,1715
-we previously {thought,were -} incurable.
+we previously {thought,were -} incurable,|
+|
 
 145
 00:04:38,750 --> 00:04:40,075
 0,395 395,650 650,800 800,1070 1070,1325
-And we have models that
+and we have models that
+我们的模型可以自动诊断疾病，
 
 146
 00:04:40,075 --> 00:04:42,295
 0,275 325,725 745,1425 1425,1805 1855,2220
-can automatically diagnose diseases without
+can automatically diagnose diseases,| without
+|而不需要任何卫生保健专业人员的干预。
 
 147
 00:04:42,295 --> 00:04:43,900
@@ -811,12 +825,14 @@ intervention from any health {care,professionals
 148
 00:04:43,900 --> 00:04:46,615
 0,510 510,690 690,950 1870,2235 2235,2715
--} at all. These advances
+-} at all.| These advances
+|这些进步是革命性的，
 
 149
 00:04:46,615 --> 00:04:48,160
 0,180 180,960 960,1230 1230,1380 1380,1545
-are revolutionary, and they have
+are revolutionary,| and they have
+|它们有可能改变我们今天所知的生活。
 
 150
 00:04:48,160 --> 00:04:49,315
@@ -833,12 +849,13 @@ as we know it today.|
 00:04:51,550 --> 00:04:52,890
 0,350 350,680 680,860 860,1130 1130,1340
 But there's another question that
-但还有一个问题我们需要问，那就是这些模型在现实生活中处于什么位置？这些技术中的许多都是五年前、十年前创新的，但你我在日常生活中并没有看到它们。那么，创新和部署之间的差距是什么？
+但还有一个问题我们需要问，
 
 153
 00:04:52,890 --> 00:04:53,895
 0,120 120,270 270,405 405,650 730,1005
-we need to ask, which
+we need to ask,| which
+|那就是这些模型在现实生活中处于什么位置，
 
 154
 00:04:53,895 --> 00:04:55,485
@@ -848,7 +865,8 @@ is where are these models
 155
 00:04:55,485 --> 00:04:57,045
 0,240 240,420 420,725 1135,1410 1410,1560
-in real life? A lot
+in real life,| a lot
+|这些技术中的许多都是五年前、十年前创新的，
 
 156
 00:04:57,045 --> 00:04:58,545
@@ -858,7 +876,8 @@ of these technologies were innovated
 157
 00:04:58,545 --> 00:05:00,225
 0,360 360,660 660,945 945,1325 1405,1680
-five, ten years ago, but
+five, ten years ago,| but
+|但你我在日常生活中并没有看到它们，
 
 158
 00:05:00,225 --> 00:05:01,305
@@ -868,12 +887,14 @@ you and I don't see
 159
 00:05:01,305 --> 00:05:02,300
 0,165 165,300 300,435 435,660 660,995
-them in our daily lives.
+them in our daily lives,|
+|
 
 160
 00:05:02,950 --> 00:05:04,500
 0,400 570,860 860,1100 1100,1430 1430,1550
-{So,what -} is, what's the
+{so,what -} is, what's the
+那么，创新和使用之间的差距是什么。
 
 161
 00:05:04,500 --> 00:05:06,240
@@ -883,14 +904,14 @@ gap here between innovation and
 162
 00:05:06,240 --> 00:05:07,480
 0,500
-deployment?|
+deployment.|
 |
 
 163
 00:05:09,270 --> 00:05:10,340
 0,260 260,485 485,785 785,965 965,1070
 The reason why you and
-你和我不能乘坐自动驾驶汽车或机器人去手术室的原因是这样的。这些是关于人工智能失败的一些头条新闻，仅在过去几年。除了这些令人难以置信的进步，我们还看到我刚才提到的每一个安全关键领域都出现了灾难性的故障。这些问题包括自动驾驶汽车的崩溃，以及实际上并不适用于每个人的医疗保健算法，尽管它们部署在现实世界中，所以每个人都可以使用它们。
+你和我不能乘坐自动驾驶汽车或机器人去手术室的原因是这样的，
 
 164
 00:05:10,340 --> 00:05:11,390
@@ -910,7 +931,8 @@ typically assist in operating rooms
 167
 00:05:15,330 --> 00:05:17,435
 0,305 305,610 1320,1670 1670,1910 1910,2105
-is this. {These,are -} some
+is this,| {these,are -} some
+|这些是仅在过去几年关于人工智能失败的一些头条新闻，
 
 168
 00:05:17,435 --> 00:05:18,830
@@ -925,17 +947,20 @@ AI from the last few
 170
 00:05:20,015 --> 00:05:22,340
 0,225 225,575 1435,1755 1755,2070 2070,2325
-years {alone.,In -} addition to
+years alone,| in addition to
+|除了这些令人难以置信的进步，
 
 171
 00:05:22,340 --> 00:05:25,160
 0,260 400,800 1510,2130 2130,2565 2565,2820
-these incredible advances, we've also
+these incredible advances,| we've also
+|我们还看到出现了灾难性的故障，
 
 172
 00:05:25,160 --> 00:05:27,520
 0,290 310,1125 1125,1640 1750,2055 2055,2360
-seen catastrophic failures in every
+seen catastrophic failures| in every
+|我刚才提到的每一个安全关键领域，
 
 173
 00:05:27,540 --> 00:05:28,730
@@ -945,17 +970,20 @@ single one of the safety
 174
 00:05:28,730 --> 00:05:30,160
 0,285 285,690 690,930 930,1125 1125,1430
-critical domains I {just,mentioned. -}
+critical domains I {just,mentioned -},|
+|
 
 175
 00:05:31,140 --> 00:05:32,975
 0,335 335,670 720,1100 1100,1415 1415,1835
-These problems range from crashing
+these problems range from crashing
+这些问题包括自动驾驶汽车的撞车，
 
 176
 00:05:32,975 --> 00:05:34,835
 0,465 465,755 1105,1365 1365,1560 1560,1860
-autonomous vehicles to health care
+autonomous vehicles| to health care
+|以及并不适用于每个人的医疗保健算法，
 
 177
 00:05:34,835 --> 00:05:36,395
@@ -965,7 +993,8 @@ algorithms that don't actually work
 178
 00:05:36,395 --> 00:05:38,060
 0,335 355,755 835,1170 1170,1380 1380,1665
-for everyone, even though they're
+for everyone,| even though they're
+|尽管它们部署在现实世界中，
 
 179
 00:05:38,060 --> 00:05:39,005
@@ -975,7 +1004,8 @@ deployed out in the real
 180
 00:05:39,005 --> 00:05:40,295
 0,305 355,720 720,975 975,1125 1125,1290
-world so everyone can use
+world,| so everyone can use
+|所以每个人都可以使用它们。
 
 181
 00:05:40,295 --> 00:05:41,000
@@ -986,13 +1016,14 @@ them.|
 182
 00:05:41,790 --> 00:05:43,180
 0,400 450,710 710,830 830,1040 1040,1390
-Now, at a first glance,
-乍一看，这似乎真的让人士气低落。如果这些都是人工智能的问题所在，我们将如何实现这样的愿景：在安全、关键部署方面，将我们的人工智能整合到我们的日常生活结构中？但在Themis，这正是我们解决的问题类型。我们希望将这些进步带到现实世界中，我们做到这一点的方式是在安全和值得信赖的人工智能领域进行创新，以便将世界各地研究实验室开发的东西带给像你我这样的客户。
+Now, at a first glance,|
+现在，初看起来，|
 
 183
 00:05:43,380 --> 00:05:45,710
 0,290 290,560 560,860 860,1480 1980,2330
-this seems really demoralizing. {If,these
+this seems really demoralizing,| {if,these
+这似乎真的让人士气低落，|如果这些都是人工智能的问题所在，
 
 184
 00:05:45,710 --> 00:05:46,520
@@ -1002,17 +1033,20 @@ this seems really demoralizing. {If,these
 185
 00:05:46,520 --> 00:05:47,950
 0,180 180,435 435,735 735,1065 1065,1430
-things wrong with artificial intelligence,
+things wrong with artificial intelligence,|
+|
 
 186
 00:05:48,330 --> 00:05:49,340
 0,275 275,410 410,560 560,785 785,1010
 how are we ever going
+我们将如何实现这样的愿景，
 
 187
 00:05:49,340 --> 00:05:50,600
 0,225 225,465 465,690 690,990 990,1260
-to achieve that vision of
+to achieve that vision| of
+|将我们的人工智能整合到我们的日常生活结构中，
 
 188
 00:05:50,600 --> 00:05:52,370
@@ -1027,12 +1061,14 @@ the fabric of our daily
 190
 00:05:53,465 --> 00:05:55,145
 0,365 625,945 945,1215 1215,1455 1455,1680
-lives in terms of safety,
+lives| in terms of safety
+|在安全关键部署方面，
 
 191
 00:05:55,145 --> 00:05:58,490
 0,335 355,905 2305,2655 2655,2910 2910,3345
-critical deployment? But at themis,
+critical deployment,| but at Themis,
+|但在 Themis ，这正是我们解决的问题类型，
 
 192
 00:05:58,490 --> 00:05:59,645
@@ -1042,22 +1078,26 @@ this is exactly the type
 193
 00:05:59,645 --> 00:06:00,640
 0,150 150,360 360,570 570,720 720,995
-of problem that we {solve.,We
+of problem that we solve,|
+|
 
 194
 00:06:01,200 --> 00:06:02,540
 0,380 380,710 710,920 920,1100 1100,1340
--} want to bring these
+we want to bring these
+我们希望将这些进步带到现实世界中，
 
 195
 00:06:02,540 --> 00:06:03,770
 0,480 480,645 645,765 765,945 945,1230
-advances to the real world,
+advances to the real world,|
+|
 
 196
 00:06:03,770 --> 00:06:04,610
 0,255 255,375 375,525 525,705 705,840
 and the way we do
+我们做到这一点的方式是在安全和值得信赖的人工智能领域进行创新，
 
 197
 00:06:04,610 --> 00:06:05,810
@@ -1072,7 +1112,8 @@ the spheres of safe and
 199
 00:06:07,085 --> 00:06:09,380
 0,675 675,1035 1035,1415 1765,2055 2055,2295
-trustworthy artificial intelligence in order
+trustworthy artificial intelligence| in order
+|以便将世界各地研究实验室开发的东西带给像你我这样的客户。
 
 200
 00:06:09,380 --> 00:06:10,625
@@ -1098,18 +1139,20 @@ like you and me.|
 204
 00:06:16,450 --> 00:06:17,930
 0,365 365,605 605,755 755,1030 1080,1480
-And we do this by
-我们这样做是基于我们的核心意识形态，我们相信这张幻灯片上的所有问题都有两个关键概念作为基础。首先是偏见。
+And we do this by,
+我们这样做，我们的核心意识形态是，
 
 205
 00:06:18,100 --> 00:06:19,560
 0,320 320,530 530,1145 1145,1295 1295,1460
-our core ideology, is that
+our core ideology is that,|
+|
 
 206
 00:06:19,560 --> 00:06:20,670
 0,225 225,480 480,720 720,945 945,1110
 we believe that all of
+我们相信这张幻灯片上的所有问题都有两个关键概念作为基础，
 
 207
 00:06:20,670 --> 00:06:21,800
@@ -1124,14 +1167,14 @@ are underlaid by two key
 209
 00:06:23,985 --> 00:06:26,270
 0,545 775,1050 1050,1325 1465,1785 1785,2285
-notions. {The,first -} is bias.|
-|
+notions,| {the,first -} is bias,|
+|首先是偏差，|
 
 210
 00:06:27,110 --> 00:06:28,735
 0,530 530,740 740,890 890,1150 1230,1625
-Bias is what happens when
-偏差是指机器学习模型在某些人口统计数据上表现得比其他人口统计数据更好时发生的情况。这导致面部检测系统无法高精度检测某些人脸，Siri无法识别带有口音的语音，或者针对不平衡数据集进行训练的算法。因此，该算法相信的是一个好的解决方案，实际上并不适用于现实世界中的每个人。
+bias is what happens when
+偏差是指机器学习模型在某些人口统计数据上表现得比其他更好，
 
 211
 00:06:28,735 --> 00:06:30,040
@@ -1141,12 +1184,14 @@ machine learning models do better
 212
 00:06:30,040 --> 00:06:31,650
 0,300 300,510 510,1155 1155,1350 1350,1610
-on some demographics than others.
+on some demographics than others,|
+|
 
 213
 00:06:32,390 --> 00:06:33,760
 0,365 365,635 635,830 830,1070 1070,1370
-{This,results -} in things like
+{this,results -} in things like
+这导致面部检测系统，无法高精度检测某些人脸，
 
 214
 00:06:33,760 --> 00:06:35,410
@@ -1161,7 +1206,8 @@ able to detect certain faces
 216
 00:06:36,890 --> 00:06:39,325
 0,380 380,755 755,1420 1800,2255 2255,2435
-with high accuracy, Siri not
+with high accuracy,| Siri not
+|Siri 无法识别带有口音的语音，
 
 217
 00:06:39,325 --> 00:06:40,620
@@ -1171,7 +1217,8 @@ being able to recognize voices
 218
 00:06:40,640 --> 00:06:42,595
 0,275 275,820 1020,1415 1415,1820 1820,1955
-with accents, or algorithms that
+with accents,| or algorithms that
+|或者针对不平衡数据集进行训练的算法，
 
 219
 00:06:42,595 --> 00:06:44,065
@@ -1181,17 +1228,20 @@ are trained on imbalanced data
 220
 00:06:44,065 --> 00:06:45,670
 0,335 445,720 720,885 885,1170 1170,1605
-{sets.,So -} what the algorithm
+sets,| so what the algorithm
+|所以，算法相信的是一个好的解决方案，
 
 221
 00:06:45,670 --> 00:06:47,010
 0,315 315,570 570,750 750,1005 1005,1340
-believes is a good solution
+believes is a good solution|
+|
 
 222
 00:06:47,450 --> 00:06:49,105
 0,530 530,815 815,1055 1055,1370 1370,1655
 doesn't actually work for everyone
+实际上并不适用于现实世界中的每个人。
 
 223
 00:06:49,105 --> 00:06:50,740
@@ -1203,7 +1253,7 @@ in the real world.|
 00:06:52,030 --> 00:06:53,160
 0,275 275,410 410,605 605,905 905,1130
 And the second notion that
-如今，许多此类问题背后的第二个概念是无法缓解和无法传达的不确定性。这就是模特不知道什么时候可以信任或者不可以信任的时候。这导致了一些场景，比如自动驾驶汽车在没有100%自信的情况下继续在环境中操作，而不是将控制权交给用户，或者机器人在它们以前从未进入过的环境中移动，并且高度不熟悉。
+许多此类问题背后的第二个概念是无法缓解和无法传达的不确定性，
 
 225
 00:06:53,160 --> 00:06:54,165
@@ -1218,7 +1268,8 @@ problems today is unmitigated and
 227
 00:06:56,460 --> 00:06:59,370
 0,860 1000,1400 2290,2565 2565,2715 2715,2910
-uncommunicated uncertainty. {This,is -} when
+uncommunicated uncertainty,| {this,is -} when
+|这就是模型不知道什么时候可以信任或者不可以信任，
 
 228
 00:06:59,370 --> 00:07:00,990
@@ -1228,17 +1279,20 @@ models don't know when they
 229
 00:07:00,990 --> 00:07:02,450
 0,300 300,615 615,975 975,1155 1155,1460
-can or can't be {trusted.,And
+can or can't be trusted,|
+|
 
 230
 00:07:03,160 --> 00:07:04,785
 0,290 290,545 545,830 830,1040 1040,1625
--} this results in scenarios
+and this results in scenarios,|
+这导致了一些场景，|
 
 231
 00:07:04,785 --> 00:07:06,020
 0,210 210,345 345,555 555,855 855,1235
 such as self driving cars
+比如自动驾驶汽车在没有 100% 自信的情况下继续在环境中操作，
 
 232
 00:07:06,190 --> 00:07:08,700
@@ -1253,12 +1307,14 @@ when {they're,not - -} 100%
 234
 00:07:09,870 --> 00:07:11,550
 0,350 640,885 885,1005 1005,1280 1360,1680
-confident instead of giving control
+confident| instead of giving control
+|而不是将控制权交给用户，
 
 235
 00:07:11,550 --> 00:07:14,180
 0,180 180,440 1270,1670 1750,2280 2280,2630
-to users, or robots being
+to users,| or robots being
+|或者机器人在它们以前从未进入过的环境中移动，并且高度不熟悉。
 
 236
 00:07:14,380 --> 00:07:15,870
@@ -1280,7 +1336,7 @@ and have high unfamiliarity with.|
 00:07:21,160 --> 00:07:22,125
 0,350 350,560 560,695 695,830 830,965
 And a lot of the
-而现代人工智能中的许多问题都是彻头彻尾的偏见和不确定性的组合的结果。
+现代人工智能中的许多问题都是彻头彻尾的偏差和不确定性的组合的结果。
 
 240
 00:07:22,125 --> 00:07:24,180
@@ -1306,13 +1362,14 @@ uncertainty.|
 244
 00:07:30,980 --> 00:07:32,550
 0,395 395,790 840,1115 1115,1280 1280,1570
-So today in this lecture,
-所以今天在这节课中，我们将重点研究所有这些问题的根本原因，这是稳健的深度学习面临的两大挑战。我们还将讨论它们的解决方案，这些解决方案可以为每个人提高所有这些算法的健壮性和安全性。我们将从讨论偏见开始。
+So today in this lecture,|
+所以今天在这节课中，|
 
 245
 00:07:32,750 --> 00:07:33,880
 0,320 320,440 440,575 575,800 800,1130
 we're going to focus on
+我们将重点研究所有这些问题的根本原因，
 
 246
 00:07:33,880 --> 00:07:35,620
@@ -1322,7 +1379,8 @@ investigating the root causes of
 247
 00:07:35,620 --> 00:07:37,120
 0,210 210,375 375,555 555,860 1120,1500
-all of these problems, these
+all of these problems,| these
+|这是健壮深度学习面临的两大挑战。
 
 248
 00:07:37,120 --> 00:07:38,950
@@ -1332,12 +1390,14 @@ two big challenges to robust
 249
 00:07:38,950 --> 00:07:41,050
 0,270 270,560 1270,1680 1680,1890 1890,2100
-deep learning. We'll also talk
+deep learning.| We'll also talk
+|我们还将讨论它们的解决方案，
 
 250
 00:07:41,050 --> 00:07:42,295
 0,225 225,530 610,870 870,1050 1050,1245
-about solutions for them that
+about solutions for them,| that
+|可以为每个人提高所有这些算法的健壮性和安全性。
 
 251
 00:07:42,295 --> 00:07:43,660
@@ -1352,7 +1412,8 @@ safety of all of these
 253
 00:07:45,050 --> 00:07:47,365
 0,515 515,875 875,1270 1800,2090 2090,2315
-algorithms for everyone. {And,we'll -}
+algorithms for everyone.| {And,we'll -}
+|我们将从讨论偏差开始。
 
 254
 00:07:47,365 --> 00:07:48,900
@@ -1364,17 +1425,18 @@ start by talking about bias.|
 00:07:50,280 --> 00:07:51,320
 0,425 425,560 560,680 680,860 860,1040
 Bias is a word that
-在深度学习的背景下，我们都听说过偏见这个词，但在机器学习的背景下，它是可以量化和数学定义的。
+在深度学习的背景下，我们都听说过 Bias 这个词，
 
 256
 00:07:51,320 --> 00:07:52,610
 0,210 210,435 435,800 910,1170 1170,1290
-we've all heard outside the
+we've all heard, outside the
 
 257
 00:07:52,610 --> 00:07:54,125
 0,255 255,525 525,690 690,980 1240,1515
-context of deep learning, but
+context of deep learning,| but
+|但在机器学习的背景下，它是可以量化和数学定义的。
 
 258
 00:07:54,125 --> 00:07:55,250
@@ -1396,12 +1458,13 @@ and mathematically defined.|
 00:07:59,130 --> 00:08:00,170
 0,320 320,560 560,710 710,905 905,1040
 Today we'll talk about how
-今天，我们将讨论如何做到这一点，从算法上缓解这种偏见的方法，以及Mus如何在这些领域进行创新，以便将该领域的新算法带到世界各地的行业。
+今天，我们将讨论如何做到这一点，
 
 262
 00:08:00,170 --> 00:08:01,295
 0,135 135,270 270,530 550,855 855,1125
-to do this and methods
+to do this| and methods
+|从算法上缓解这种偏差的方法，
 
 263
 00:08:01,295 --> 00:08:02,950
@@ -1411,12 +1474,14 @@ for mitigation of this bias
 264
 00:08:02,970 --> 00:08:05,030
 0,910 990,1280 1280,1505 1505,1880 1880,2060
-algorithmically and how themus is
+algorithmically| and how Themis is
+|以及 Themis 如何在这些领域进行创新，
 
 265
 00:08:05,030 --> 00:08:06,455
 0,465 465,660 660,810 810,1100 1180,1425
-innovating in these areas in
+innovating in these areas| in
+|以便将该领域的新算法带到世界各地的行业。
 
 266
 00:08:06,455 --> 00:08:07,760
@@ -1437,13 +1502,14 @@ around the world.|
 269
 00:08:12,240 --> 00:08:14,080
 0,400 630,935 935,1115 1115,1445 1445,1840
-Afterwards, we'll talk about uncertainty,
-然后，我们将讨论不确定性，也就是，当一个模型知道或不知道给定任务的答案时，我们能教它吗？我们将讨论这对现实世界人工智能的影响。
+Afterwards, we'll talk about uncertainty,|
+然后，我们将讨论不确定性，|
 
 270
 00:08:14,460 --> 00:08:15,800
 0,275 275,550 690,965 965,1145 1145,1340
-which is can we teach
+which is, can we teach
+也就是，我们能教一个模型知道或不知道给定任务的答案吗，
 
 271
 00:08:15,800 --> 00:08:17,015
@@ -1458,12 +1524,14 @@ or doesn't know the answer
 273
 00:08:18,300 --> 00:08:19,750
 0,400 510,740 740,860 860,1100 1100,1450
-to to its given task?
+to to its given task,|
+|
 
 274
 00:08:20,100 --> 00:08:21,095
 0,260 260,425 425,590 590,800 800,995
-And we'll talk about the
+and we'll talk about the
+我们将讨论这对现实世界人工智能的影响。
 
 275
 00:08:21,095 --> 00:08:22,940
@@ -1480,12 +1548,13 @@ world AI.|
 00:08:27,900 --> 00:08:29,900
 0,400 630,980 980,1325 1325,1610 1610,2000
 So what exactly does bias
-那么，偏见到底是什么意思，它在人工智能生命周期中处于什么位置？
+那么，偏差到底是什么意思，
 
 278
 00:08:29,900 --> 00:08:31,295
 0,320 580,885 885,1095 1095,1260 1260,1395
-mean, and where is it
+mean,| and where is it
+|它在人工智能生命周期中处于什么位置，
 
 279
 00:08:31,295 --> 00:08:32,645
@@ -1495,19 +1564,20 @@ present in the artificial intelligence
 280
 00:08:32,645 --> 00:08:34,860
 0,785
-lifecycle?|
+lifecycle,|
 |
 
 281
 00:08:34,860 --> 00:08:36,165
 0,135 135,300 300,915 915,1125 1125,1305
-The most intuitive form of
-最直观的偏见形式来自数据。我们这里有两种不同的主要类型的偏见。第一种是抽样偏差，即从我们的输入、数据分布的某些地区过度抽样，而从其他地区抽样不足。一个很好的例子是大量的临床数据集，其中包含的疾病患者的例子往往比健康患者少，因为获得健康患者的数据比获得疾病患者的数据容易得多。
+the most intuitive form of
+最直观的偏差形式来自数据。
 
 282
 00:08:36,165 --> 00:08:38,535
 0,455 505,870 870,1140 1140,1445 2095,2370
-bias comes from data. {We,have
+bias comes from data.| {We,have
+|我们这里有两种不同的主要类型的偏差，
 
 283
 00:08:38,535 --> 00:08:39,780
@@ -1517,12 +1587,14 @@ bias comes from data. {We,have
 284
 00:08:39,780 --> 00:08:41,205
 0,225 225,390 390,705 705,1010 1150,1425
-types of bias {here.,The -}
+types of bias here,| the
+|第一种是抽样偏差，
 
 285
 00:08:41,205 --> 00:08:43,290
 0,275 325,660 660,1125 1125,1595 1825,2085
-first is sampling bias, which
+first is sampling bias,| which
+|即从我们的输入数据分布的某些地区过度抽样，
 
 286
 00:08:43,290 --> 00:08:44,535
@@ -1537,12 +1609,14 @@ from some regions of our
 288
 00:08:45,840 --> 00:08:47,700
 0,255 255,530 550,950 1330,1620 1620,1860
-input, data distribution and under
+input data distribution| and under
+|而从其他地区抽样不足，
 
 289
 00:08:47,700 --> 00:08:49,500
 0,330 330,585 585,860 1360,1620 1620,1800
-sample {from,others. -} A good
+sample {from,others -},| a good
+|一个很好的例子是大量的临床数据集，
 
 290
 00:08:49,500 --> 00:08:50,505
@@ -1552,12 +1626,14 @@ example of this is a
 291
 00:08:50,505 --> 00:08:51,710
 0,120 120,285 285,555 555,870 870,1205
-lot of clinical data sets,
+lot of clinical data sets,|
+|
 
 292
 00:08:51,940 --> 00:08:53,835
 0,400 600,890 890,1180 1260,1580 1580,1895
 where they often contain fewer
+其中包含的疾病患者的例子往往比健康患者少，
 
 293
 00:08:53,835 --> 00:08:56,145
@@ -1567,7 +1643,8 @@ examples of diseased patients than
 294
 00:08:56,145 --> 00:08:57,585
 0,240 240,605 745,1005 1005,1230 1230,1440
-healthy patients because it's much
+healthy patients,| because it's much
+|因为获得健康患者的数据比获得疾病患者的数据容易得多。
 
 295
 00:08:57,585 --> 00:08:59,265
@@ -1589,7 +1666,7 @@ counterparts.|
 00:09:02,610 --> 00:09:04,130
 0,305 305,610 720,1070 1070,1280 1280,1520
 In addition, we also have
-此外，在人工智能生命周期的数据部分，我们也存在选择偏见。想想苹果的一系列语音识别算法吧。这个模型主要是根据完美的美式英语训练的，但它被部署在现实世界中，以便能够识别来自世界各地的带有口音的声音。
+此外，在人工智能生命周期的数据部分，我们也存在选择偏差，
 
 299
 00:09:04,130 --> 00:09:05,540
@@ -1604,12 +1681,14 @@ portion of the AI life
 301
 00:09:06,755 --> 00:09:09,340
 0,305 1105,1425 1425,1680 1680,2295 2295,2585
-cycle. {Think,about -} Apple's series
+cycle,| {think,about -} Apple's series
+|想想苹果的一系列语音识别算法，
 
 302
 00:09:09,390 --> 00:09:12,220
 0,320 320,640 960,1540 2190,2510 2510,2830
-voice recognition {algorithm.,This -} model
+voice recognition algorithm,| this model
+|这个模型主要是根据完美的美式英语训练的，
 
 303
 00:09:12,540 --> 00:09:14,420
@@ -1619,12 +1698,14 @@ is trained largely on flawless
 304
 00:09:14,420 --> 00:09:16,535
 0,350 460,860 1180,1485 1485,1800 1800,2115
-American English, but it's deployed
+American English,| but it's deployed
+|但它被部署在现实世界中，
 
 305
 00:09:16,535 --> 00:09:17,675
 0,225 225,420 420,615 615,915 915,1140
-across the real world to
+across the real world| to
+|以便能够识别来自世界各地的带有口音的声音，
 
 306
 00:09:17,675 --> 00:09:18,880
@@ -1639,14 +1720,14 @@ with accents from all over
 308
 00:09:20,345 --> 00:09:21,260
 0,180 180,425
-the world.|
+the world,|
 |
 
 309
 00:09:21,850 --> 00:09:23,505
 0,365 365,730 870,1145 1145,1280 1280,1655
-The distribution of the model's
-该模型的训练数据的分布与现实世界中这类语言的分布不匹配，因为与其他人口统计数据相反，美国英语被严重高估了。
+the distribution of the model's
+模型的训练数据的分布与现实世界中这类语言的分布不匹配，
 
 310
 00:09:23,505 --> 00:09:25,320
@@ -1661,12 +1742,14 @@ distribution of this type of
 312
 00:09:27,070 --> 00:09:28,250
 0,350 350,545 545,665 665,860 860,1180
-language in the real world,
+language in the real world,|
+|
 
 313
 00:09:28,570 --> 00:09:30,195
 0,350 350,700 780,1100 1100,1340 1340,1625
 because American English is highly
+因为美国英语被严重高估了，与其他人口统计数据相反，
 
 314
 00:09:30,195 --> 00:09:32,040
@@ -1683,7 +1766,7 @@ demographics.|
 00:09:35,070 --> 00:09:36,920
 0,320 320,620 620,800 800,1120 1500,1850
 But that's not where, that's
-但这并不是问题所在，偏见和数据也不会止步于此。这些偏见可以传播到模型，培训周期本身，这是我们在本课程的后半部分将重点关注的。
+但这并不是问题所在，偏差和数据也不会止步于此，
 
 317
 00:09:36,920 --> 00:09:37,955
@@ -1693,17 +1776,19 @@ not where bias and data
 318
 00:09:37,955 --> 00:09:40,745
 0,395 1045,1365 1365,2010 2010,2375 2485,2790
-stops. {These,biases -} can be
+stops,| {these,biases -} can be
+|这些偏差可以传播到模型训练循环本身，
 
 319
 00:09:40,745 --> 00:09:42,875
 0,570 570,900 900,1265 1285,1635 1635,2130
-propagated towards models, training cycles
+propagated towards models training cycles
 
 320
 00:09:42,875 --> 00:09:44,105
 0,395 565,825 825,945 945,1065 1065,1230
-themselves, which is what we'll
+themselves,| which is what we'll
+|这是我们在本课程的后半部分将重点关注的。
 
 321
 00:09:44,105 --> 00:09:45,035
@@ -1720,12 +1805,13 @@ half of this lecture.|
 00:09:48,130 --> 00:09:49,440
 0,260 260,520 600,935 935,1130 1130,1310
 And then once the model
-然后，一旦模型被实际部署，这意味着它实际上被放到了现实世界中，客户或用户实际上可以从它获得预测，我们可能会看到更多我们以前从未见过的偏见。第一个是分配的转变。假设我有一个模型，这个模型是我根据过去20年的数据训练的，然后我把它部署到2023年的现实世界中。这个模型可能会做得很好，因为数据输入分布与训练分布中的数据非常相似。
+然后，一旦模型被实际部署，
 
 324
 00:09:49,440 --> 00:09:51,195
 0,320 400,800 850,1320 1320,1545 1545,1755
-is actually deployed, which means
+is actually deployed,| which means
+|这意味着它被放到了现实世界中，
 
 325
 00:09:51,195 --> 00:09:52,350
@@ -1735,7 +1821,8 @@ it's actually put out into
 326
 00:09:52,350 --> 00:09:53,450
 0,165 165,345 345,585 585,810 810,1100
-the real world and customers
+the real world| and customers
+|客户或用户可以从它获得预测，
 
 327
 00:09:53,590 --> 00:09:55,245
@@ -1745,7 +1832,8 @@ or users can actually get
 328
 00:09:55,245 --> 00:09:56,835
 0,165 165,555 555,720 720,995 1315,1590
-the predictions from it, we
+the predictions from it,| we
+|我们可能会看到更多我们以前从未见过的偏差，
 
 329
 00:09:56,835 --> 00:09:59,805
@@ -1755,22 +1843,26 @@ may see further biases perpetuated
 330
 00:09:59,805 --> 00:10:00,980
 0,240 240,390 390,690 690,885 885,1175
-that we haven't seen before.
+that we haven't seen before,|
+|
 
 331
 00:10:01,630 --> 00:10:02,805
 0,260 260,440 440,620 620,830 830,1175
-{The,first -} of these is
+{the,first -} of these is
+第一个是分布的转变，
 
 332
 00:10:02,805 --> 00:10:05,055
 0,395 475,1055 1525,1905 1905,2070 2070,2250
-distribution shifts. Let's say I
+distribution shifts,| let's say I
+|假设我有一个模型，
 
 333
 00:10:05,055 --> 00:10:06,270
 0,135 135,255 255,515 565,930 930,1215
-have a model that I
+have a model,| that I
+|是我根据过去 20 年的数据训练的，
 
 334
 00:10:06,270 --> 00:10:07,560
@@ -1780,7 +1872,8 @@ trained on the past twenty
 335
 00:10:07,560 --> 00:10:08,985
 0,195 195,360 360,620 970,1245 1245,1425
-years of data, and then
+years of data,| and then
+|然后我把它部署到现实世界中，
 
 336
 00:10:08,985 --> 00:10:09,900
@@ -1790,7 +1883,8 @@ I deploy it into the
 337
 00:10:09,900 --> 00:10:11,990
 0,150 150,440 910,1215 1215,1740 1740,2090
-real world {{in,-} -} 2023.
+real world,| {in -} 2023,
+|在 2023 ，这个模型可能会做得很好，
 
 338
 00:10:12,100 --> 00:10:13,410
@@ -1800,7 +1894,8 @@ This model will probably do
 339
 00:10:13,410 --> 00:10:14,895
 0,290 430,690 690,810 810,1070 1120,1485
-fine because the data input
+fine,| because the data input
+|因为数据输入分布与训练分布中的数据非常相似，
 
 340
 00:10:14,895 --> 00:10:16,605
@@ -1810,19 +1905,20 @@ distribution is quite similar to
 341
 00:10:16,605 --> 00:10:17,900
 0,210 210,480 480,645 645,900 900,1295
-data in the training distribution.|
+data in the training distribution,|
 |
 
 342
 00:10:18,900 --> 00:10:20,025
 0,320 340,615 615,750 750,945 945,1125
-But what would happen to
-但这种模式在2033年会发生什么如果它可能不会很好地发挥作用，因为数据来自的分布将在这十年内发生显着变化。如果我们不继续用这些输入数据流更新我们的模型，我们就会得到过时和不正确的预测。
+but what would happen to
+但这种模式在 2033 年会发生什么，
 
 343
 00:10:20,025 --> 00:10:22,650
 0,135 135,405 405,735 735,2370 2370,2625
-this model in {2033,it,} it
+this model in 2033,| it
+|如果它可能不会很好地发挥作用，
 
 344
 00:10:22,650 --> 00:10:24,360
@@ -1832,7 +1928,8 @@ probably would not work as
 345
 00:10:24,360 --> 00:10:26,250
 0,320 700,1020 1020,1290 1290,1635 1635,1890
-well because the distribution that
+well,| because the distribution that
+|因为数据来自的分布将在这十年内发生显着变化，
 
 346
 00:10:26,250 --> 00:10:27,150
@@ -1847,7 +1944,8 @@ would shift significantly across this
 348
 00:10:29,355 --> 00:10:30,705
 0,305 565,825 825,945 945,1065 1065,1350
-decade. {And,if -} we don't
+decade,| {and,if -} we don't
+|如果我们不继续用这些输入数据流更新我们的模型，
 
 349
 00:10:30,705 --> 00:10:31,875
@@ -1862,7 +1960,8 @@ with this input stream of
 351
 00:10:33,405 --> 00:10:34,545
 0,275 475,780 780,870 870,990 990,1140
-data, we're going to have
+data,| we're going to have
+|我们就会得到过时和不正确的预测。
 
 352
 00:10:34,545 --> 00:10:37,480
@@ -1873,13 +1972,14 @@ obsolete and incorrect predictions.|
 353
 00:10:38,510 --> 00:10:40,690
 0,290 290,580 780,1180 1290,1805 1805,2180
-And finally, after deployment there,
-最后，部署到那里之后，评估方面。回想一下我们一直在谈论的Apple Siri的例子。EM如果评估Siri的评估指标或评估数据集也主要由美国英语组成，那么在任何人看来，这个模型都会表现得非常好，对吗？它可以检测到，它可以非常高的准确率识别美国英语的声音，因此部署到现实世界中。但它在子组、带口音的人以及那些英语不是他们的第一语言的人上的准确性如何？如果我们不在我们的评估指标中对子组进行测试，我们将面临面对面的偏见。
+And finally, after deployment, there
+最后，部署之后，在评估方面，
 
 354
 00:10:40,690 --> 00:10:43,390
 0,195 195,800 1000,1400 1780,2180 2380,2700
-the evaluation aspect. {So,think -}
+the evaluation aspect,| {so,think -}
+|回想一下我们谈论的 Apple Siri 的例子，
 
 355
 00:10:43,390 --> 00:10:44,920
@@ -1894,7 +1994,8 @@ example that we've been talking
 357
 00:10:45,985 --> 00:10:48,715
 0,395 835,1235 1645,1980 1980,2205 2205,2730
-{about.,EM, -} if the evaluation
+about,| {} if the evaluation
+|如果评估 Siri 的评估指标或评估数据集
 
 358
 00:10:48,715 --> 00:10:50,290
@@ -1909,12 +2010,14 @@ set that Siri was evaluated
 360
 00:10:51,685 --> 00:10:53,725
 0,305 475,875 925,1215 1215,1500 1500,2040
-on was also mostly comprised
+on| was also mostly comprised
+|也主要由美国英语组成，
 
 361
 00:10:53,725 --> 00:10:56,610
 0,360 360,725 805,1205 1525,1925 2485,2885
-of American English, then to
+of American English,| then to
+|那么在任何人看来，这个模型都会表现得非常好，
 
 362
 00:10:56,630 --> 00:10:57,955
@@ -1929,7 +2032,8 @@ like it does extremely well,
 364
 00:10:59,330 --> 00:11:00,790
 0,290 290,440 440,650 650,1000 1200,1460
-right? It can detect, it,
+right,| it can detect, it
+|它可以检测，它可以非常高的准确率识别美国英语的声音，
 
 365
 00:11:00,790 --> 00:11:02,440
@@ -1939,7 +2043,8 @@ can recognize American English voices
 366
 00:11:02,440 --> 00:11:04,495
 0,345 345,660 660,1005 1005,1610 1690,2055
-with extremely high accuracy and
+with extremely high accuracy| and
+|此部署到现实世界中，
 
 367
 00:11:04,495 --> 00:11:05,650
@@ -1949,12 +2054,14 @@ therefore is deployed into the
 368
 00:11:05,650 --> 00:11:07,300
 0,165 165,470 940,1200 1200,1365 1365,1650
-{real,world. -} But what about
+{real,world -},| but what about
+|但它在子组准确率会怎么样，
 
 369
 00:11:07,300 --> 00:11:09,340
 0,375 375,855 855,1050 1050,1710 1710,2040
-its accuracy on subgroups, on
+its accuracy on subgroups,| on
+|对于带口音的人，那些英语不是他们的第一语言的人，
 
 370
 00:11:09,340 --> 00:11:11,400
@@ -1969,7 +2076,8 @@ for whom English is not
 372
 00:11:12,790 --> 00:11:14,320
 0,165 165,345 345,650 1090,1365 1365,1530
-their first language? If we
+their first language,| if we
+|如果我们不在我们的评估指标中对子组进行测试，
 
 373
 00:11:14,320 --> 00:11:15,985
@@ -1979,19 +2087,20 @@ don't also test on subgroups
 374
 00:11:15,985 --> 00:11:17,680
 0,120 120,270 270,795 795,1145 1405,1695
-in our evaluation metrics, we're
+in our evaluation metrics,| we're
+|我们将面临偏差。
 
 375
 00:11:17,680 --> 00:11:20,340
 0,120 120,270 270,1125 1125,1640
-going to faceation bias.|
+going to {face,evaluation} bias.|
 |
 
 376
 00:11:20,640 --> 00:11:22,115
 0,260 260,520 690,1055 1055,1235 1235,1475
 So now let's talk about
-现在，让我们来谈谈现实世界中的另一个例子，即偏见如何在人工智能生命周期的整个过程中持续存在。
+现在，让我们来谈谈现实世界中的另一个例子，
 
 377
 00:11:22,115 --> 00:11:23,240
@@ -2001,7 +2110,8 @@ another example in the real
 378
 00:11:23,240 --> 00:11:24,530
 0,300 300,570 570,765 765,1125 1125,1290
-world of how bias can
+world| of how bias can
+|关于偏差如何在人工智能生命周期的整个过程中持续存在，
 
 379
 00:11:24,530 --> 00:11:26,120
@@ -2011,19 +2121,20 @@ perpetuate throughout the course of
 380
 00:11:26,120 --> 00:11:27,640
 0,240 240,585 585,930 930,1215 1215,1520
-this artificial intelligence life cycle.|
+this artificial intelligence life cycle,|
 |
 
 381
 00:11:30,310 --> 00:11:32,240
 0,395 395,845 845,1220 1220,1510 1530,1930
-Commercial facial detection systems are
-商用面部检测系统无处不在。在第二个实验中，当你在面部检测数据集上训练你的v时，你实际上是在玩其中的一些游戏。
+commercial facial detection systems are
+商用面部检测系统无处不在，
 
 382
 00:11:32,320 --> 00:11:34,095
 0,400 570,970 1080,1370 1370,1565 1565,1775
-everywhere. {You,actually -} played around
+everywhere,| {you,actually -} played around
+|在第二个实验中，你玩了其中一些，
 
 383
 00:11:34,095 --> 00:11:35,150
@@ -2033,12 +2144,13 @@ with some of them in
 384
 00:11:35,410 --> 00:11:36,795
 0,365 365,680 680,875 875,1085 1085,1385
-lab two when you trained
+lab two,| when you trained
+|当你在面部检测数据集上训练你的 VAE 时。
 
 385
 00:11:36,795 --> 00:11:38,580
 0,225 225,515 865,1200 1200,1425 1425,1785
-your v on a facial
+your VAE on a facial
 
 386
 00:11:38,580 --> 00:11:40,520
