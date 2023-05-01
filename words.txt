@@ -30,3 +30,5 @@ diffusion model 扩散模型
 
 # Lecture 5
 bias 偏差
+aleatoric uncertainty 偶然不确定性
+epistemic uncertainty 认知不确定性
