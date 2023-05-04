@@ -27,3 +27,8 @@ autoencoder 自编码器
 generator 生成器
 discriminator 判别器
 diffusion model 扩散模型
+
+# Lecture 5
+bias 偏差
+aleatoric uncertainty 偶然不确定性
+epistemic uncertainty 认知不确定性
