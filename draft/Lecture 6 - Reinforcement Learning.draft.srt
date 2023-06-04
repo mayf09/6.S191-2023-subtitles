@@ -6365,17 +6365,19 @@ from that data.|
 00:30:47,270 --> 00:30:49,225
 0,400 690,935 935,1070 1070,1360 1590,1955
 Now there are several very
-QUE学习有几个非常重要的缺点，希望这些能激励我们今天课程的第二部分，也就是我们要讨论的。但我想在这里告诉大家的第一点是，你们的学习自然适用于离散的动作空间，对吗？因为你可以把我们提供的这个输出空间想象成每一个可以执行的操作有一个数字。现在，如果我们有一个连续的行动空间，我们必须想出聪明的方法来解决这个问题。事实上，现在有了更多的解决方案来实现QUE学习和连续的动作空间。但在很大程度上，队列学习非常适合离散动作空间。稍后我们会讨论用其他方法克服这个问题的方法。
+Q 学习有几个非常重要的缺点，
 
 1134
 00:30:49,225 --> 00:30:50,695
 0,285 285,870 870,1110 1110,1305 1305,1470
-important downsides of que learning
+important downsides of {Q-learning -}|
+|
 
 1135
 00:30:50,695 --> 00:30:51,610
 0,165 165,390 390,630 630,765 765,915
 and hopefully these are going
+希望这些能激励我们今天课程的第二部分，
 
 1136
 00:30:51,610 --> 00:30:53,230
@@ -6385,12 +6387,14 @@ to motivate the second part
 1137
 00:30:53,230 --> 00:30:54,820
 0,150 150,585 585,890 1030,1335 1335,1590
-of today's lecture, which we'll
+of today's lecture,| which we'll
+|也就是我们要讨论的。
 
 1138
 00:30:54,820 --> 00:30:56,110
 0,180 180,500 670,930 930,1080 1080,1290
-talk about. But the first
+talk about.| But the first
+|但我想在这里告诉大家的第一点是，
 
 1139
 00:30:56,110 --> 00:30:57,340
@@ -6405,7 +6409,8 @@ really convey to everyone here
 1141
 00:30:58,855 --> 00:31:00,570
 0,180 180,485 925,1215 1215,1410 1410,1715
-is that you learning is
+is that,| {Q-learning -} is
+|Q 学习自然适用于离散的动作空间，
 
 1142
 00:31:00,740 --> 00:31:04,290
@@ -6415,7 +6420,8 @@ naturally applicable to discrete action
 1143
 00:31:04,340 --> 00:31:05,635
 0,400 510,830 830,1025 1025,1145 1145,1295
-spaces, right? Because you can
+spaces, right,| because you can
+|因为你可以把我们提供的这个输出空间想象成
 
 1144
 00:31:05,635 --> 00:31:07,915
@@ -6425,7 +6431,8 @@ think of this output space
 1145
 00:31:07,915 --> 00:31:08,950
 0,195 195,420 420,645 645,870 870,1035
-that we're providing as kind
+that we're providing| as kind
+|每一个可以执行的操作有一个数字，
 
 1146
 00:31:08,950 --> 00:31:10,480
@@ -6435,17 +6442,20 @@ of like one number per
 1147
 00:31:10,480 --> 00:31:11,910
 0,290 490,780 780,945 945,1125 1125,1430
-action that could be taken.
+action that could be taken,|
+|
 
 1148
 00:31:12,050 --> 00:31:12,850
 0,275 275,410 410,515 515,605 605,800
-Now if we have a
+now, if we have a
+现在，如果我们有一个连续的行动空间，
 
 1149
 00:31:12,850 --> 00:31:14,635
 0,300 300,650 760,1160 1420,1665 1665,1785
-continuous action space, we have
+continuous action space,| we have
+|我们必须想出聪明的方法来解决这个问题，
 
 1150
 00:31:14,635 --> 00:31:15,745
@@ -6455,7 +6465,8 @@ to think about clever ways
 1151
 00:31:15,745 --> 00:31:16,825
 0,195 195,420 420,705 705,915 915,1080
-to work around that. In
+to work around that,| in
+|事实上，现在有了更多的解决方案，
 
 1152
 00:31:16,825 --> 00:31:18,490
@@ -6465,22 +6476,26 @@ fact, there are now more
 1153
 00:31:18,490 --> 00:31:19,920
 0,290 580,825 825,945 945,1125 1125,1430
-recently there are some solutions
+recently there are some solutions|
+|
 
 1154
 00:31:20,240 --> 00:31:21,655
 0,335 335,620 620,875 875,1100 1100,1415
-to achieve que learning and
+to achieve {Q-learning -} and
+来实现 Q 学习和连续的动作空间，
 
 1155
 00:31:21,655 --> 00:31:23,680
 0,315 315,665 685,1085 1195,1595 1765,2025
-continuous action spaces. But for
+continuous action spaces,| but for
+|但在很大程度上，
 
 1156
 00:31:23,680 --> 00:31:25,080
 0,120 120,330 330,680 820,1140 1140,1400
-the most part, queue learning
+the most part,| {Q-learning -}
+|Q 学习非常适合离散动作空间，
 
 1157
 00:31:25,190 --> 00:31:26,830
@@ -6490,7 +6505,8 @@ is very well suited for
 1158
 00:31:26,830 --> 00:31:28,870
 0,375 375,650 730,1130 1570,1830 1830,2040
-discrete action spaces. And we'll
+discrete action spaces,| and we'll
+|稍后我们会讨论用其他方法克服这个问题的方法。
 
 1159
 00:31:28,870 --> 00:31:30,040
@@ -6512,27 +6528,30 @@ bit later.|
 00:31:32,660 --> 00:31:34,860
 0,400 630,935 935,1240 1410,1805 1805,2200
 And the second component here
-这里的第二个组成部分是我们正在学习的策略，对，Q函数产生了该策略，这是我们实际上用来确定要采取什么行动的东西。假设策略是通过确定性地优化Q函数来确定的，我们只需查看Q函数的结果，然后应用我们的，或者我们，我们查看Q函数的结果，然后选择Q值最好或最高的操作。
+这里的第二个组成部分是，
 
 1163
 00:31:35,090 --> 00:31:38,110
 0,305 305,610 1740,2045 2045,2350 2730,3020
-is that the policy that
+is that,| the policy that
+|我们正在学习的策略，
 
 1164
 00:31:38,110 --> 00:31:39,460
 0,225 225,470 610,945 945,1170 1170,1350
-we're learning, right, the q
+we're learning, right,| the {Q-function
+|Q 函数产生了该策略，
 
 1165
 00:31:39,460 --> 00:31:41,545
 0,290 760,1155 1155,1515 1515,1860 1860,2085
-function is giving rise to
+-} is giving rise to
 
 1166
 00:31:41,545 --> 00:31:42,610
 0,165 165,485 535,795 795,930 930,1065
-that policy, which is the
+that policy,| which is the
+|这是我们用来确定要采取什么行动的东西，
 
 1167
 00:31:42,610 --> 00:31:43,590
@@ -6547,7 +6566,8 @@ to determine what action to
 1169
 00:31:45,025 --> 00:31:47,230
 0,275 385,765 765,1140 1140,1535 1855,2205
-take. Given any state that
+take,| given any state,| that
+|给出任何状态，|策略是通过优化 Q 函数来确定的，
 
 1170
 00:31:47,230 --> 00:31:50,725
@@ -6557,22 +6577,24 @@ policy is determined by, you
 1171
 00:31:50,725 --> 00:31:54,250
 0,245 445,1535 2335,2855 2995,3315 3315,3525
-know, deterministically optimizing that q
+know, deterministically optimizing that {Q-funtion
 
 1172
 00:31:54,250 --> 00:31:55,630
 0,290 340,630 630,915 915,1200 1200,1380
-function, we simply look at
+-},| we simply look at
+|我们只需查看 Q 函数的结果，
 
 1173
 00:31:55,630 --> 00:31:56,710
 0,255 255,570 570,780 780,915 915,1080
-the results from the q
+the results from the {Q-function
 
 1174
 00:31:56,710 --> 00:31:59,320
 0,290 880,1275 1275,1670 1720,2120 2320,2610
-function and apply our, or
+-}| and apply our,| or
+|然后应用我们的，|或者我们查看 Q 函数的结果，
 
 1175
 00:31:59,320 --> 00:32:00,115
@@ -6582,12 +6604,14 @@ we, we look at the
 1176
 00:32:00,115 --> 00:32:00,985
 0,210 210,360 360,465 465,600 600,870
-results of the q function
+results of the {Q-function -}|
+|
 
 1177
 00:32:00,985 --> 00:32:02,220
 0,270 270,480 480,765 765,975 975,1235
 and we pick the action
+然后选择 Q 值最好或最高的操作，
 
 1178
 00:32:02,450 --> 00:32:03,640
@@ -6597,19 +6621,20 @@ that has the best or
 1179
 00:32:03,640 --> 00:32:05,240
 0,165 165,440 520,810 810,1100
-the highest q value.|
+the highest Q value,|
 |
 
 1180
 00:32:05,340 --> 00:32:07,610
 0,305 305,610 780,1180 1350,1750 1980,2270
-That is very dangerous in
-这在许多情况下是非常危险的，因为它总是为给定的州挑选最佳的值。在这条管道中没有随机性，所以你经常会遇到这样的情况：你一直在重复相同的动作，而你没有学会探索你可能正在考虑的潜在的不同选择。因此，为了应对这些非常重要的挑战，这有望推动今天课程的下一部分，重点是策略学习，这是一种不同于队列学习算法的强化学习算法。
+that is very dangerous in
+这在许多情况下是非常危险的，
 
 1181
 00:32:07,610 --> 00:32:09,020
 0,225 225,560 820,1110 1110,1275 1275,1410
-many cases because of the
+many cases,| because of the
+|因为它总是为给定的状态挑选最佳的值，
 
 1182
 00:32:09,020 --> 00:32:10,055
@@ -6624,22 +6649,26 @@ to pick the best value
 1184
 00:32:11,820 --> 00:32:12,905
 0,245 245,365 365,605 605,845 845,1085
-for a given state. There's
+for a given state,| there's
+|在管道中没有随机性，
 
 1185
 00:32:12,905 --> 00:32:14,890
 0,165 165,1175 1225,1500 1500,1680 1680,1985
-no stochasticity in that pipeline,
+no stochasticity in that pipeline,|
+|
 
 1186
 00:32:15,000 --> 00:32:16,120
 0,245 245,365 365,530 530,770 770,1120
 so you can very frequently
+所以你经常会遇到这样的情况，
 
 1187
 00:32:16,170 --> 00:32:18,770
 0,335 335,670 960,1360 1560,1960 2340,2600
-get caught in situations where
+get caught in situations,| where
+|你一直在重复相同的动作，
 
 1188
 00:32:18,770 --> 00:32:19,820
@@ -6649,7 +6678,8 @@ you keep repeating the same
 1189
 00:32:19,820 --> 00:32:21,020
 0,290 310,555 555,690 690,975 975,1200
-actions and you don't learn
+actions| and you don't learn
+|而你没有学会探索你可能正在考虑的潜在的不同选择。
 
 1190
 00:32:21,020 --> 00:32:23,410
@@ -6664,12 +6694,14 @@ that you may be thinking
 1192
 00:32:24,755 --> 00:32:26,830
 0,335 625,1025 1195,1500 1500,1740 1740,2075
-of. So to address these
+of.| So to address these
+|因此，为了应对这些非常重要的挑战，
 
 1193
 00:32:27,060 --> 00:32:29,465
 0,380 380,755 755,1150 1830,2210 2210,2405
-very important challenges, that's hopefully
+very important challenges,| that's hopefully
+|这有望推动今天课程的下一部分，
 
 1194
 00:32:29,465 --> 00:32:30,740
@@ -6679,17 +6711,20 @@ going to motivate now the
 1195
 00:32:30,740 --> 00:32:32,230
 0,255 255,540 540,795 795,1215 1215,1490
-next part of today's lecture,
+next part of today's lecture,|
+|
 
 1196
 00:32:32,610 --> 00:32:33,365
 0,260 260,410 410,560 560,650 650,755
 which is going to be
+重点是策略学习，
 
 1197
 00:32:33,365 --> 00:32:35,345
 0,275 325,705 705,1085 1105,1505 1675,1980
-focused on policy learning, which
+focused on policy learning,| which
+|这是一种不同于 Q 学习算法的强化学习算法。
 
 1198
 00:32:35,345 --> 00:32:37,115
@@ -6704,29 +6739,32 @@ reinforcement learning algorithms that are
 1200
 00:32:38,795 --> 00:32:41,140
 0,305 325,725 955,1260 1260,1535 1855,2345
-different than queue learning algorithms.|
+different than {Q-learning -} algorithms.|
 |
 
 1201
 00:32:41,600 --> 00:32:42,815
 0,320 490,765 765,915 915,1065 1065,1215
 And like I said, those
-就像我说的，这些算法被称为政策梯度算法和政策梯度算法。主要的不同之处在于，我们不会试图从Q函数中推断出政策，我们只需要构建一个神经网络，直接从数据中学习政策函数。所以它有点跳过了一步，我们将看看如何训练这些网络。
+就像我说的，这些算法被称为策略梯度算法，
 
 1202
 00:32:42,815 --> 00:32:44,330
 0,150 150,345 345,660 660,1155 1155,1515
-are called policy gradient algorithms
+are called policy gradient algorithms|
+|
 
 1203
 00:32:44,330 --> 00:32:45,875
 0,195 195,480 480,990 990,1365 1365,1545
-and policy gradient algorithms. The
+and policy gradient algorithms, the
+策略梯度算法，主要的不同之处在于，
 
 1204
 00:32:45,875 --> 00:32:47,645
 0,180 180,465 465,720 720,995 1495,1770
-main difference is that instead
+main difference is that,| instead
+|不是试图从 Q 函数中推断出策略，
 
 1205
 00:32:47,645 --> 00:32:49,925
@@ -6736,17 +6774,20 @@ of trying to infer the
 1206
 00:32:49,925 --> 00:32:51,250
 0,305 475,750 750,900 900,1050 1050,1325
-policy from the q function,
+policy from the {Q-function -},|
+|
 
 1207
 00:32:51,480 --> 00:32:52,355
 0,320 320,425 425,590 590,725 725,875
 we're just going to build
+我们只需要构建一个神经网络，
 
 1208
 00:32:52,355 --> 00:32:53,435
 0,165 165,375 375,615 615,855 855,1080
-a neural network that will
+a neural network,| that will
+|直接从数据中学习策略函数，
 
 1209
 00:32:53,435 --> 00:32:55,570
@@ -6756,17 +6797,20 @@ directly learn that policy function
 1210
 00:32:56,040 --> 00:32:57,335
 0,290 290,440 440,700 930,1175 1175,1295
-from the data. So it
+from the data,| so it
+|所以它跳过了一步，
 
 1211
 00:32:57,335 --> 00:32:58,720
 0,135 135,360 360,690 690,1005 1005,1385
-kind of skips one step
+kind of skips one step|
+|
 
 1212
 00:32:58,920 --> 00:32:59,810
 0,260 260,455 455,605 605,755 755,890
 and we'll see how we
+我们将看看如何训练这些网络。
 
 1213
 00:32:59,810 --> 00:33:02,100
@@ -6777,18 +6821,20 @@ can train those networks.|
 1214
 00:33:03,170 --> 00:33:04,330
 0,365 365,650 650,830 830,980 980,1160
-So before we get there,
-所以在我们到达那里之前，让我再回顾一次。我们看到的Q函数图，正确的Q函数，我们试图构建一个神经网络输出这些Q值，每个操作一个值，我们通过查看Q值的这种状态来确定策略，选择具有最高值的值。
+So before we get there,|
+所以在我们到达那里之前，|
 
 1215
 00:33:04,330 --> 00:33:05,515
 0,135 135,270 270,450 450,975 975,1185
 let me just revisit one
+让我再回顾一次，
 
 1216
 00:33:05,515 --> 00:33:06,840
 0,210 210,495 495,780 780,1005 1005,1325
-more time. The q function
+more time,| the {Q-function -}
+|我们看到的 Q 函数，
 
 1217
 00:33:07,310 --> 00:33:08,575
@@ -6798,7 +6844,8 @@ illustration that we are looking
 1218
 00:33:08,575 --> 00:33:10,375
 0,210 210,480 480,735 735,1025 1555,1800
-at, right q function, we
+at, right,| {Q-function -}, we
+|Q 函数，我们试图构建一个神经网络输出这些 Q 值，
 
 1219
 00:33:10,375 --> 00:33:11,530
@@ -6808,17 +6855,19 @@ are trying to build a
 1220
 00:33:11,530 --> 00:33:13,045
 0,210 210,470 730,1095 1095,1305 1305,1515
-neural network outputs these q
+neural network outputs these Q
 
 1221
 00:33:13,045 --> 00:33:14,730
 0,275 565,885 885,1170 1170,1410 1410,1685
-values, one value per action,
+values,| one value per action,|
+|每个操作一个值，|
 
 1222
 00:33:15,290 --> 00:33:16,650
 0,245 245,440 440,770 770,1055 1055,1360
 and we determine the policy
+我们通过查看 Q 值的这种状态来确定策略，
 
 1223
 00:33:17,360 --> 00:33:18,880
@@ -6828,69 +6877,80 @@ by looking over this state
 1224
 00:33:18,880 --> 00:33:20,680
 0,255 255,435 435,710 1090,1490 1510,1800
-of q values, picking the
+of Q values,| picking the
+|选择具有最高值的值，
 
 1225
 00:33:20,680 --> 00:33:21,720
 0,255 255,480 480,630 630,780 780,1040
-value that has the highest.|
+value that has the highest,|
 |
 
 1226
 00:33:22,500 --> 00:33:24,075
 0,330 330,570 570,795 795,1050 1050,1575
-And looking at its corresponding
-看看它现在通过政策网络采取的相应行动，我们想要保留的想法是，与其预测关键价值本身，不如直接尝试优化这一政策功能。这里我们叫S的政策函数pi，对吗？所以皮是政策，S是我们的国家。所以它是一个只接受状态作为输入的函数，它将直接输出动作。所以这里的输出给了我们在任何给定的状态下我们应该采取的行动，这不仅代表了我们应该采取的最佳行动，而且让我们把它表示为基本上选择该行动将产生非常理想的结果的概率。
+and looking at its corresponding
+看看它对应的动作，
 
 1227
 00:33:24,075 --> 00:33:26,570
 0,245 1045,1425 1425,1740 1740,2075 2095,2495
-action now with policy networks,
+action,| now with policy networks,|
+|现在通过策略网络，|
 
 1228
 00:33:26,920 --> 00:33:28,305
 0,400 420,815 815,1070 1070,1205 1205,1385
 the idea that we want
+我们想要保留的想法是，
 
 1229
 00:33:28,305 --> 00:33:29,265
 0,165 165,330 330,510 510,675 675,960
-to keep here is that
+to keep here is that,|
+|
 
 1230
 00:33:29,265 --> 00:33:30,675
 0,240 240,375 375,930 930,1200 1200,1410
-instead of predicting the key
+instead of predicting the Q
+不是预测 Q 值本身，
 
 1231
 00:33:30,675 --> 00:33:33,420
 0,275 685,1085 1675,2130 2130,2460 2460,2745
-values themselves, let's directly try
+values themselves,| let's directly try
+|而是直接尝试优化这一策略函数，
 
 1232
 00:33:33,420 --> 00:33:35,520
 0,255 255,710 1060,1395 1395,1725 1725,2100
-to optimize this policy function.
+to optimize this policy function,|
+|
 
 1233
 00:33:35,520 --> 00:33:36,570
 0,285 285,495 495,645 645,810 810,1050
-Here we're calling the policy
+here we're calling the policy
+这里我们叫策略函数 π(s) ，
 
 1234
 00:33:36,570 --> 00:33:38,370
 0,380 700,1020 1020,1200 1200,1460 1510,1800
-function pi of s, right?
+function {π(s) - -}, right,|
+|
 
 1235
 00:33:38,370 --> 00:33:39,350
 0,195 195,390 390,555 555,705 705,980
-So pi is the policy,
+so π is the policy,
+所以 π 是策略， s 是我们的状态，
 
 1236
 00:33:39,880 --> 00:33:41,370
 0,350 350,575 575,785 785,1120 1260,1490
-s is our state. So
+s is our state,| so
+|所以它是一个只接受状态作为输入的函数，
 
 1237
 00:33:41,370 --> 00:33:42,780
@@ -6900,17 +6960,20 @@ it's a function that takes
 1238
 00:33:42,780 --> 00:33:44,000
 0,240 240,450 450,660 660,915 915,1220
-as input only the state
+as input only the state|
+|
 
 1239
 00:33:44,140 --> 00:33:45,230
 0,230 230,365 365,500 500,740 740,1090
 and it's going to directly
+它将直接输出动作，
 
 1240
 00:33:45,400 --> 00:33:47,685
 0,400 480,725 725,970 1800,2060 2060,2285
-output the action. So the
+output the action,| so the
+|所以这里的输出给了我们应该采取的行动，
 
 1241
 00:33:47,685 --> 00:33:49,485
@@ -6920,7 +6983,8 @@ outputs here give us the
 1242
 00:33:49,485 --> 00:33:50,865
 0,405 405,785 805,1065 1065,1200 1200,1380
-desired action that we should
+desired action,| that we should
+|我们在任何给定的状态下应该采取的，
 
 1243
 00:33:50,865 --> 00:33:52,590
@@ -6930,12 +6994,14 @@ take in any given state
 1244
 00:33:52,590 --> 00:33:53,780
 0,180 180,315 315,585 585,885 885,1190
-that we find ourselves in
+that we find ourselves in,|
+|
 
 1245
 00:33:54,190 --> 00:33:56,810
 0,305 305,610 1380,1685 1685,1990 2220,2620
 that represents not only the
+这不仅代表了我们应该采取的最佳行动，
 
 1246
 00:33:56,830 --> 00:33:58,290
@@ -6945,7 +7011,8 @@ best action that we should
 1247
 00:33:58,290 --> 00:34:00,075
 0,255 255,480 480,860 1060,1545 1545,1785
-take, but let's denote this
+take,| but let's denote this
+|但是让我们把这个选择行动的概率，
 
 1248
 00:34:00,075 --> 00:34:02,360
@@ -6955,19 +7022,20 @@ as basically the probability that
 1249
 00:34:02,410 --> 00:34:04,760
 0,545 545,755 755,1060 1590,1970 1970,2350
-selecting that action would result
+selecting that action| would result
+|将产生非常理想的结果，
 
 1250
 00:34:04,840 --> 00:34:06,860
 0,245 245,395 395,635 635,1450 1620,2020
-in a very desirable outcome.|
+in a very desirable outcome,|
 |
 
 1251
 00:34:07,280 --> 00:34:08,760
 0,290 290,560 560,935 935,1205 1205,1480
-For our network, so not
-对于我们的网络，不一定是该操作的值，而是选择该操作将是最高值的概率，对吗？因此，您并不关心选择此操作所采取或产生的确切数值是多少，而是。
+for our network,| so not
+对于我们的网络，|所以不一定是该操作的值，
 
 1252
 00:34:08,840 --> 00:34:11,515
@@ -6977,7 +7045,8 @@ necessarily the value of that
 1253
 00:34:11,515 --> 00:34:13,690
 0,255 255,545 1015,1335 1335,1655 1885,2175
-that action, but rather the
+that action,| but rather the
+|而是选择该操作将是最高值的概率，
 
 1254
 00:34:13,690 --> 00:34:15,570
@@ -6992,12 +7061,14 @@ would be the highest value,
 1256
 00:34:17,810 --> 00:34:19,060
 0,400 480,725 725,830 830,1040 1040,1250
-right? So you don't care
+right,| so, you don't care
+|所以，你并不关心，
 
 1257
 00:34:19,060 --> 00:34:20,490
 0,350 370,705 705,915 915,1110 1110,1430
-exactly about what is the
+exactly about,| what is the
+|选择此操作所采取或产生的确切数值是多少，
 
 1258
 00:34:20,780 --> 00:34:22,510
@@ -7012,14 +7083,14 @@ action takes or gives rise
 1260
 00:34:24,595 --> 00:34:26,940
 0,195 195,455 925,1230 1230,1535
-to rather, but rather.|
-|
+to rather,| but rather,
+|而是，可能性是什么，
 
 1261
 00:34:27,410 --> 00:34:29,545
 0,275 275,500 500,850 1080,1805 1805,2135
-What is the likelihood that
-选择此操作将为您提供预期的最佳性能价值的可能性有多大？确切的价值本身并不重要。您只关心选择此操作是否会给您带来最好的结果，这种可能性很高。
+what is the likelihood,| that
+|选择此操作将为你提供预期的最佳值是多少，
 
 1262
 00:34:29,545 --> 00:34:31,420
@@ -7034,12 +7105,14 @@ you the best performing value
 1264
 00:34:32,875 --> 00:34:35,005
 0,225 225,390 390,660 660,1025 1795,2130
-that you could expect? Exact
+that you could expect,| exact
+|确切的值本身并不重要，
 
 1265
 00:34:35,005 --> 00:34:37,330
 0,335 925,1325 1375,1800 1800,2070 2070,2325
-value itself doesn't matter. You
+value itself doesn't matter,| you
+|你只关心选择此操作是否会给您带来最好的结果。
 
 1266
 00:34:37,330 --> 00:34:38,560
@@ -7066,7 +7139,7 @@ the best one.|
 00:34:43,570 --> 00:34:44,745
 0,400 480,740 740,890 890,1040 1040,1175
 So we can see that
-所以我们可以看到，如果这些预测的概率在这里，就在这个Atari的例子中。
+所以我们可以看到，如果这些预测的概率在这里，
 
 1271
 00:34:44,745 --> 00:34:47,030
@@ -7076,19 +7149,20 @@ if these predicted probabilities here,
 1272
 00:34:47,110 --> 00:34:48,540
 0,335 335,545 545,785 785,1130 1130,1430
-right in this example of
+right,| in this example of
+|在这个 Atari 的例子中，
 
 1273
 00:34:48,540 --> 00:34:50,120
 0,500
-atari.|
+Atari,|
 |
 
 1274
 00:34:50,560 --> 00:34:52,880
 0,365 365,730 840,1240 1470,1760 1760,2320
-Going left has the probability
-左转的概率是最高值动作，90%留在中间的概率为{10%。-}右转为0%。在这种情况下，理想情况下，我们的神经网络应该做的是，在这种情况下，90%的时间向左，10%的时间，它仍然可以保持在原来的位置，但永远不应该向右。现在注意，这是一个概率分布。这与A Q函数有很大的不同。QUE函数实际上没有eh结构，对吗？Q值本身可以取任何实数。
+going left has the probability
+向左移动的概率是最高值动作， 90% ，
 
 1275
 00:34:53,380 --> 00:34:56,150
@@ -7098,7 +7172,8 @@ of being the highest value
 1276
 00:34:56,590 --> 00:34:59,340
 0,400 720,1010 1010,1600 2130,2495 2495,2750
-action with 90% staying in
+action with 90%,| staying in
+|留在中间的概率为 10% ，
 
 1277
 00:34:59,340 --> 00:35:00,915
@@ -7108,12 +7183,14 @@ the center has a probability
 1278
 00:35:00,915 --> 00:35:04,455
 0,335 1615,2225 2695,3030 3030,3300 3300,3540
-of {{10%.,-}} Going {right -}
+of 10%,| going {right -}
+|向右移动为 0% ，
 
 1279
 00:35:04,455 --> 00:35:06,420
 0,225 225,545 925,1185 1185,1770 1770,1965
-is 0%. So ideally what
+is 0%,| so ideally, what
+|在理想情况下，我们的神经网络应该做的是，
 
 1280
 00:35:06,420 --> 00:35:07,290
@@ -7123,7 +7200,8 @@ our neural networks should do
 1281
 00:35:07,290 --> 00:35:08,595
 0,120 120,285 285,510 510,735 735,1305
-in this case is 90%
+in this case is| 90%
+|在这种情况下， 90% 的时间向左，
 
 1282
 00:35:08,595 --> 00:35:09,615
@@ -7133,12 +7211,14 @@ of the time in this
 1283
 00:35:09,615 --> 00:35:11,420
 0,305 1015,1320 1320,1470 1470,1560 1560,1805
-situation go to the left
+situation go to the left,|
+|
 
 1284
 00:35:11,560 --> 00:35:12,660
 0,515 515,680 680,800 800,965 965,1100
-10% of the time it
+10% of the time, it
+10% 的时间，它仍然可以保持在原来的位置，
 
 1285
 00:35:12,660 --> 00:35:14,340
@@ -7148,7 +7228,8 @@ could still try staying at
 1286
 00:35:14,340 --> 00:35:15,380
 0,135 135,255 255,450 450,720 720,1040
-where it is, but never
+where it is,| but never
+|但永远不应该向右，
 
 1287
 00:35:15,430 --> 00:35:16,350
@@ -7158,32 +7239,37 @@ it should go to the
 1288
 00:35:16,350 --> 00:35:18,690
 0,260 1030,1430 1450,1770 1770,2025 2025,2340
-right. Now note that this
+right,| now note that this
+|现在注意，这是一个概率分布，
 
 1289
 00:35:18,690 --> 00:35:21,015
 0,380 520,920 1030,1320 1320,1850 1930,2325
-now is a probability distribution.
+now is a probability distribution,|
+|
 
 1290
 00:35:21,015 --> 00:35:22,110
 0,240 240,375 375,600 600,885 885,1095
-This is very different than
+this is very different than
+这与 Q 函数有很大的不同，
 
 1291
 00:35:22,110 --> 00:35:22,965
 0,135 135,285 285,510 510,720 720,855
-A Q function. A que
+a {Q-function -},| a {Q-function
+|Q 函数实际上没有结构，
 
 1292
 00:35:22,965 --> 00:35:25,160
 0,240 240,605 655,1005 1005,1355 1795,2195
-function has actually no eh
+-} has actually no {}
 
 1293
 00:35:25,180 --> 00:35:26,600
 0,395 395,710 710,920 920,1115 1115,1420
-structure, right? The q values
+structure, right,| the Q values
+|Q 值本身可以取任何实数，
 
 1294
 00:35:26,830 --> 00:35:28,035
@@ -7193,14 +7279,13 @@ themselves can take any real
 1295
 00:35:28,035 --> 00:35:28,860
 0,305
-number.|
-|
+number,
 
 1296
 00:35:28,860 --> 00:35:31,670
 0,290 880,1230 1230,1580 2200,2505 2505,2810
-Right. But here the policy
-正确的。但在这里，政策网络的输出是非常严谨的。输出中的所有数字都必须求和为1，因为这是一个概率分布，对吗？这给了它一个非常严格的版本，我们如何训练这个模型，使它比色调函数更容易训练。
+right,| but here the policy
+|但在这里，策略网络有非常严格的输出，
 
 1297
 00:35:31,690 --> 00:35:34,310
@@ -7210,7 +7295,8 @@ network has a very formulated
 1298
 00:35:34,630 --> 00:35:36,380
 0,400 780,1100 1100,1325 1325,1490 1490,1750
-output. All of the numbers
+output,| all of the numbers
+|输出中的所有数字都必须求和为 1 ，
 
 1299
 00:35:36,400 --> 00:35:38,205
@@ -7220,7 +7306,8 @@ here in the output have
 1300
 00:35:38,205 --> 00:35:39,375
 0,210 210,390 390,555 555,815 865,1170
-to sum to one because
+to sum to 1,| because
+|因为这是一个概率分布，
 
 1301
 00:35:39,375 --> 00:35:40,760
@@ -7230,22 +7317,26 @@ this is a probability distribution,
 1302
 00:35:41,410 --> 00:35:42,750
 0,400 570,815 815,965 965,1160 1160,1340
-right? And that gives it
+right,| and that gives it
+|这给了它一个非常严格的版本，
 
 1303
 00:35:42,750 --> 00:35:45,620
 0,210 210,530 760,1400 1840,2240 2470,2870
-a very rigorous version of
+a very rigorous version of|
+|
 
 1304
 00:35:46,270 --> 00:35:47,310
 0,275 275,410 410,590 590,815 815,1040
 how we can train this
+我们如何训练这个模型，
 
 1305
 00:35:47,310 --> 00:35:48,435
 0,320 460,735 735,885 885,990 990,1125
-model that makes it a
+model,| that makes it a
+|使它比 Q 函数更容易训练。
 
 1306
 00:35:48,435 --> 00:35:49,820
@@ -7255,14 +7346,14 @@ bit easier to train than
 1307
 00:35:50,080 --> 00:35:53,540
 0,305 305,580 690,995 995,1300
-hue functions as well.|
+{Q-function -} as well.|
 |
 
 1308
 00:35:53,760 --> 00:35:55,600
 0,335 335,665 665,1040 1040,1420 1440,1840
 One other very important advantage
-输出是概率分布的另一个非常重要的优点是，实际上将与我们之前看到的Q函数和Q神经网络的另一个问题联系在一起，这是Q函数自然适合离散动作空间的事实。现在，当我们看这个政策网络时，我们考虑的是分配，对吗？记住，这些分布也可以采取连续的形式。事实上，我们在上两节课中已经看到了这一点。在生成性讲座中，我们了解了如何使用VES来预测其潜在空间上的高斯分布。在上一节课中，我们还学习了如何使用数据来预测不确定性，这些不确定性是连续的概率分布。就像这样，我们也可以使用同样的公式来超越离散的行动空间，就像你在这里看到的，这是一个可能的行动，一个与一个可能的行动相关的概率。
+输出是概率分布的另一个非常重要的优点是，
 
 1309
 00:35:56,040 --> 00:35:58,010
@@ -7272,12 +7363,14 @@ of having an output that
 1310
 00:35:58,010 --> 00:36:00,280
 0,120 120,240 240,710 850,1250 1870,2270
-is a probability distribution is
+is a probability distribution is|
+|
 
 1311
 00:36:00,450 --> 00:36:01,820
 0,275 275,455 455,740 740,1055 1055,1370
 actually going to tie back
+将与我们之前看到的 Q 函数和 Q 神经网络的另一个问题联系在一起，
 
 1312
 00:36:01,820 --> 00:36:03,200
@@ -7287,17 +7380,19 @@ to this other issue of
 1313
 00:36:03,200 --> 00:36:04,790
 0,240 240,530 820,1140 1140,1350 1350,1590
-q functions and q neural
+{Q-functions -} and Q neural
 
 1314
 00:36:04,790 --> 00:36:05,860
 0,255 255,495 495,615 615,780 780,1070
-networks that we saw before
+networks that we saw before|
+|
 
 1315
 00:36:06,150 --> 00:36:07,310
 0,275 275,440 440,725 725,980 980,1160
 and that is the fact
+这是 Q 函数自然适合离散动作空间的事实，
 
 1316
 00:36:07,310 --> 00:36:09,890
@@ -7307,22 +7402,26 @@ that q functions are naturally
 1317
 00:36:09,890 --> 00:36:11,950
 0,405 405,690 690,1215 1215,1520 1660,2060
-suited towards discrete action spaces.
+suited towards discrete action spaces,|
+|
 
 1318
 00:36:12,210 --> 00:36:13,565
 0,380 380,650 650,875 875,1055 1055,1355
-Now when we're looking at
+now when we're looking at
+现在，当我们看这个策略网络时，
 
 1319
 00:36:13,565 --> 00:36:16,025
 0,365 505,905 925,1325 1735,2160 2160,2460
-this policy network we're puttingting
+this policy network,| we're puttingting
+|我们考虑的是分布，
 
 1320
 00:36:16,025 --> 00:36:17,930
 0,180 180,635 895,1245 1245,1575 1575,1905
-a distributions, right? And remember
+a distributions, right,| and remember
+|这些分布也可以采取连续的形式，
 
 1321
 00:36:17,930 --> 00:36:20,255
@@ -7332,7 +7431,8 @@ those those distributions can also
 1322
 00:36:20,255 --> 00:36:22,070
 0,305 595,990 990,1380 1380,1650 1650,1815
-take continuous forms. In fact,
+take continuous forms,| in fact,
+|事实上，我们在上两节课中已经看到了这一点，
 
 1323
 00:36:22,070 --> 00:36:23,240
@@ -7342,17 +7442,19 @@ we've seen this in the
 1324
 00:36:23,240 --> 00:36:25,480
 0,240 240,495 495,1040 1720,1980 1980,2240
-last two lectures. In the
+last two lectures,| in the
+|在生成性课程中，
 
 1325
 00:36:25,590 --> 00:36:26,930
 0,515 515,755 755,995 995,1145 1145,1340
-generative lecture we saw how
+generative lecture,| we saw how
+|我们了解了如何使用 VAE 来预测其潜在空间上的高斯分布，
 
 1326
 00:36:26,930 --> 00:36:28,745
 0,525 525,765 765,1040 1150,1545 1545,1815
-ves could be used to
+VAEs could be used to
 
 1327
 00:36:28,745 --> 00:36:31,115
@@ -7362,12 +7464,13 @@ predict gaussian distributions over their
 1328
 00:36:31,115 --> 00:36:32,390
 0,330 330,635 685,945 945,1065 1065,1275
-latent space. In the last
+latent space,| in the last
+|在上一节课中，我们还学习了如何预测不确定性，
 
 1329
 00:36:32,390 --> 00:36:33,860
 0,300 300,585 585,810 810,1100 1210,1470
-lecture we also saw how
+lecture, we also saw how
 
 1330
 00:36:33,860 --> 00:36:34,750
@@ -7377,64 +7480,74 @@ we could learn to predict
 1331
 00:36:34,800 --> 00:36:36,910
 0,400 630,905 905,1160 1160,1520 1520,2110
-uncertainties which are continuous probability
+uncertainties,| which are continuous probability
+|这些使用数据的不确定性是连续的概率分布，
 
 1332
 00:36:36,990 --> 00:36:40,565
 0,490 1140,1540 1710,2110 3090,3380 3380,3575
-distributions using data. And just
+distributions using data,| and just
+|就像这样，
 
 1333
 00:36:40,565 --> 00:36:42,250
 0,210 210,515 715,990 990,1265 1285,1685
-like that, we could also
+like that,| we could also
+|我们也可以使用同样的公式，
 
 1334
 00:36:42,630 --> 00:36:45,320
 0,400 900,1300 1410,1730 1730,2290 2430,2690
-use this same formulation to
+use this same formulation| to
+|来超越离散的行动空间，
 
 1335
 00:36:45,320 --> 00:36:47,615
 0,225 225,590 1120,1575 1575,1850 1900,2295
-move beyond discrete action spaces
+move beyond discrete action spaces,|
+|
 
 1336
 00:36:47,615 --> 00:36:48,700
 0,270 270,390 390,540 540,765 765,1085
-like you can see here,
+like you can see here,|
+就像你在这里看到的，|
 
 1337
 00:36:48,780 --> 00:36:51,370
 0,275 275,550 960,1360 1740,2140 2190,2590
-which are one possible action,
+which are one possible action,|
+这是一个可能的行动，|
 
 1338
 00:36:51,420 --> 00:36:53,090
 0,290 290,815 815,1190 1190,1460 1460,1670
 a probability associated to one
+一个与一个可能的行动相关的概率，
 
 1339
 00:36:53,090 --> 00:36:54,140
 0,300 300,680
-possible action.|
+possible action,|
 |
 
 1340
 00:36:54,140 --> 00:36:55,385
 0,120 120,270 270,765 765,1035 1035,1245
-In a discrete set of
-在一组离散的可能动作中，现在我们可能有一个空间，不是我应该采取什么动作，向左，向右，或者说是居中，而是我应该移动的速度有多快，我应该向右移动的方向？这是一个连续变量，而不是离散变量。你可以说现在的答案应该是这样的，向右移动的速度非常快，而向左移动的速度非常慢，抱歉，向左移动的速度非常快，而向左移动的速度非常慢，这是我们可能想要建模的连续谱。
+in a discrete set of
+在一组离散的可能动作中，
 
 1341
 00:36:55,385 --> 00:36:57,905
 0,300 300,695 1495,1895 2065,2340 2340,2520
-possible actions, now we may
+possible actions,| now we may
+|现在我们可能有一个空间，
 
 1342
 00:36:57,905 --> 00:36:59,285
 0,255 255,540 540,875 895,1170 1170,1380
-have a space which is
+have a space,| which is
+|不是我应该采取什么动作，
 
 1343
 00:36:59,285 --> 00:37:00,800
@@ -7444,17 +7557,20 @@ not what action should I
 1344
 00:37:00,800 --> 00:37:02,195
 0,320 340,645 645,915 915,1185 1185,1395
-take, go left, right or
+take,| go left, right or
+|向左，向右，或者说是居中，
 
 1345
 00:37:02,195 --> 00:37:04,175
 0,240 240,575 805,1110 1110,1415 1645,1980
-say center, but rather how
+say center,| but rather how
+|而是我应该移动的速度有多快，
 
 1346
 00:37:04,175 --> 00:37:05,405
 0,335 445,690 690,825 825,1050 1050,1230
-quickly should I move and
+quickly should I move| and
+|我应该移动的方向，
 
 1347
 00:37:05,405 --> 00:37:06,470
@@ -7464,7 +7580,8 @@ in what direction should I
 1348
 00:37:06,470 --> 00:37:07,600
 0,225 225,480 480,690 690,855 855,1130
-move right? That is a
+move, right,| that is a
+|这是一个连续变量，而不是离散变量，
 
 1349
 00:37:07,650 --> 00:37:09,140
@@ -7474,7 +7591,8 @@ continuous variable as opposed to
 1350
 00:37:09,140 --> 00:37:11,105
 0,90 90,495 495,800 1330,1710 1710,1965
-a discrete variable. And you
+a discrete variable,| and you
+|你可以说现在的答案应该是这样的，
 
 1351
 00:37:11,105 --> 00:37:12,305
@@ -7484,12 +7602,14 @@ could say that now the
 1352
 00:37:12,305 --> 00:37:13,690
 0,245 265,540 540,780 780,1065 1065,1385
-answer should look like this,
+answer should look like this,|
+|
 
 1353
 00:37:14,490 --> 00:37:16,070
 0,400 660,1010 1010,1310 1310,1490 1490,1580
 moving very fast to the
+向右移动的速度非常快或非常慢，
 
 1354
 00:37:16,070 --> 00:37:17,375
@@ -7499,7 +7619,8 @@ right versus very slow to
 1355
 00:37:17,375 --> 00:37:18,770
 0,245 445,735 735,930 930,1140 1140,1395
-the, excuse me, very fast
+the,| excuse me, very fast
+|抱歉，向左移动的速度非常快或非常慢，
 
 1356
 00:37:18,770 --> 00:37:19,730
@@ -7509,7 +7630,8 @@ to the left versus very
 1357
 00:37:19,730 --> 00:37:21,370
 0,255 255,405 405,510 510,770 1240,1640
-slow to the left has
+slow to the left,| has
+|这是我们可能想要建模的连续谱。
 
 1358
 00:37:21,480 --> 00:37:23,345
@@ -7526,17 +7648,19 @@ may want to model.|
 00:37:25,160 --> 00:37:26,430
 0,350 350,560 560,740 740,965 965,1270
 Now, when we plot this
-现在，当我们画出采取行动的整个分布，给出一个状态，你可以在这里看到一个非常简单的图解。这个，这个分布的大部分质量都超过了，对不起，它的所有质量都在整个实数线上。首先，它在我们想要采取的最优行动空间中拥有大部分的质量权利。因此，如果我们想要确定采取的最佳行动，我们将简单地采用这种分布模式，最高点。这将是我们应该前进的速度和我们应该前进的方向。
+现在，当我们画出整个分布，
 
 1361
 00:37:26,450 --> 00:37:28,480
 0,400 510,910 1170,1520 1520,1820 1820,2030
-entire distribution of taking an
+entire distribution| of taking an
+|采取行动，给出状态，
 
 1362
 00:37:28,480 --> 00:37:30,520
 0,260 670,990 990,1245 1245,1580 1780,2040
-action, giving a state, you
+action, giving a state,| you
+|你可以在这里看到一个非常简单的图解，
 
 1363
 00:37:30,520 --> 00:37:32,050
@@ -7551,17 +7675,20 @@ simple illustration of that right
 1365
 00:37:33,745 --> 00:37:36,385
 0,255 255,605 1015,1415 1675,2075 2245,2640
-here. This, this distribution has
+here,| this, this distribution has
+|这个分布的大部分质量都超过了，
 
 1366
 00:37:36,385 --> 00:37:38,910
 0,345 345,540 540,765 765,1145 2125,2525
-most of its mass over,
+most of its mass over,|
+|
 
 1367
 00:37:39,350 --> 00:37:40,150
 0,275 275,395 395,530 530,695 695,800
 sorry, it has all of
+抱歉，它的所有质量都在整个实数线上，
 
 1368
 00:37:40,150 --> 00:37:41,200
@@ -7571,7 +7698,8 @@ its mass over the entire
 1369
 00:37:41,200 --> 00:37:42,295
 0,210 210,435 435,720 720,960 960,1095
-real number line. First of
+real number line,| first of
+|首先，它在我们想要采取的最优行动空间中拥有大部分的质量，
 
 1370
 00:37:42,295 --> 00:37:43,225
@@ -7591,7 +7719,8 @@ optimal action space that we
 1373
 00:37:46,660 --> 00:37:47,290
 0,135 135,255 255,390 390,525 525,630
-want to take. So if
+want to take,| so if
+|所以，如果我们想要确定采取的最佳行动，
 
 1374
 00:37:47,290 --> 00:37:48,340
@@ -7601,7 +7730,8 @@ we want to determine the
 1375
 00:37:48,340 --> 00:37:49,930
 0,240 240,585 585,855 855,1130 1330,1590
-best action to take, we
+best action to take,| we
+|我们将简单地采用这种分布模式，
 
 1376
 00:37:49,930 --> 00:37:51,630
@@ -7611,12 +7741,13 @@ would simply take the mode
 1377
 00:37:51,650 --> 00:37:53,260
 0,290 290,545 545,910 1140,1385 1385,1610
-of this distribution, the highest
+of this distribution,| the highest
+|最高点，这将是我们应该前进的速度和我们应该前进的方向，
 
 1378
 00:37:53,260 --> 00:37:54,870
 0,380 580,855 855,1005 1005,1245 1245,1610
-point. That would be the
+point, that would be the
 
 1379
 00:37:54,980 --> 00:37:56,125
@@ -7631,14 +7762,14 @@ move and the direction that
 1381
 00:37:57,130 --> 00:37:58,200
 0,120 120,255 255,405 405,680
-we should move in.|
+we should move in,|
 |
 
 1382
 00:37:58,440 --> 00:38:00,245
 0,290 290,455 455,730 840,1240 1410,1805
-If we wanted to also,
-如果我们也想尝试不同的东西，探索我们的空间，我们可以从这个分布中取样，仍然获得一些随机性。
+if we wanted to also,
+如果我们也想尝试不同的东西，探索我们的空间，
 
 1383
 00:38:00,245 --> 00:38:01,355
@@ -7648,12 +7779,14 @@ you know, try out different
 1384
 00:38:01,355 --> 00:38:02,830
 0,315 315,615 615,900 900,1140 1140,1475
-things and explore our space,
+things and explore our space,|
+|
 
 1385
 00:38:03,060 --> 00:38:04,520
 0,260 260,470 470,820 900,1190 1190,1460
 we could sample from this
+我们可以从这个分布中取样，仍然获得一些随机性。
 
 1386
 00:38:04,520 --> 00:38:06,275
@@ -7669,23 +7802,26 @@ stochasticity.|
 1388
 00:38:09,480 --> 00:38:10,925
 0,400 450,785 785,890 890,1115 1115,1445
-Now let's look at an
-现在让我们来看一个例子，我们如何对这些连续分布进行建模，实际上我们已经在前面两节课中看到了一些例子，就像我提到的，但让我们具体看看强化学习和策略梯度学习的背景。所以不是预测采取行动的概率，而是给出所有可能的状态，在这种情况下，现在有无限多的状态，因为我们处于连续的域中，我们不能简单地预测每个可能的行动的单一概率，因为它们的数量是无限的。因此，如果我们通过分布来参数化我们的动作空间，对吗？因此，让我们以高斯分布为例，将高斯分布参数化。我们只需要两个输出，对，我们需要一个均值和一个方差。给定均值和方差，我们实际上可以有一个概率质量，我们可以计算任何可能的行动的概率，我们可能想要从这两个数字。例如，在这里的图像中，我们可能想要输出一个Gou。
+Now, let's look at an
+现在让我们来看一个例子，
 
 1389
 00:38:10,925 --> 00:38:11,975
 0,345 345,585 585,735 735,870 870,1050
-example of how we can
+example| of how we can
+|我们如何对这些连续分布进行建模，
 
 1390
 00:38:11,975 --> 00:38:14,470
 0,315 315,695 835,1235 1465,1865 1975,2495
-actually model these continuous distributions
+actually model these continuous distributions|
+|
 
 1391
 00:38:14,520 --> 00:38:15,815
 0,335 335,545 545,800 800,1025 1025,1295
 and actually we've already seen
+我们已经在前面两节课中看到了一些例子，就像我提到的，
 
 1392
 00:38:15,815 --> 00:38:16,955
@@ -7700,7 +7836,8 @@ the previous two lectures like
 1394
 00:38:18,005 --> 00:38:19,565
 0,210 210,545 895,1140 1140,1395 1395,1560
-I mentioned, but let's take
+I mentioned,| but let's take
+|但让我们具体看看强化学习和策略梯度学习的背景。
 
 1395
 00:38:19,565 --> 00:38:20,765
@@ -7715,7 +7852,8 @@ context of reinforcement learning and
 1397
 00:38:22,490 --> 00:38:24,620
 0,270 270,705 705,980 1570,1920 1920,2130
-policy gradient learning. So instead
+policy gradient learning.| So instead
+|所以不是预测采取行动的概率，
 
 1398
 00:38:24,620 --> 00:38:27,335
@@ -7725,27 +7863,31 @@ of predicting this probability of
 1399
 00:38:27,335 --> 00:38:28,655
 0,225 225,405 405,665 715,1050 1050,1320
-taking an action, giving all
+taking an action,| giving all
+|给出所有可能的状态，
 
 1400
 00:38:28,655 --> 00:38:30,470
 0,335 655,1050 1050,1380 1380,1605 1605,1815
-possible states, which in this
+possible states,| which in this
+|在这种情况下，现在有无限多的状态，
 
 1401
 00:38:30,470 --> 00:38:31,505
 0,320 340,600 600,735 735,885 885,1035
-case there is now an
+case, there is now an
 
 1402
 00:38:31,505 --> 00:38:33,095
 0,510 510,765 765,1115 1135,1410 1410,1590
-infinite number of, because we're
+infinite number of,| because we're
+|因为我们处于连续的域中，
 
 1403
 00:38:33,095 --> 00:38:34,670
 0,45 45,240 240,585 585,965 1285,1575
-in the continuous domain, we
+in the continuous domain,| we
+|我们不能简单地预测每个可能的行动的单一概率，
 
 1404
 00:38:34,670 --> 00:38:36,305
@@ -7755,17 +7897,20 @@ can't simply predict a single
 1405
 00:38:36,305 --> 00:38:38,020
 0,480 480,735 735,990 990,1335 1335,1715
-probability for every possible action
+probability for every possible action,|
+|
 
 1406
 00:38:38,760 --> 00:38:39,845
 0,275 275,500 500,575 575,935 935,1085
 because there's an infinite number
+因为它们的数量是无限的，
 
 1407
 00:38:39,845 --> 00:38:41,870
 0,180 180,455 715,1065 1065,1415 1765,2025
-of them. So instead, what
+of them,| so instead, what
+|因此，如果我们通过分布来参数化我们的动作空间，
 
 1408
 00:38:41,870 --> 00:38:44,020
@@ -7775,7 +7920,8 @@ if we parameterized our action
 1409
 00:38:44,130 --> 00:38:47,015
 0,400 510,910 1860,2260 2430,2735 2735,2885
-space by distribution, right? So
+space by distribution, right,| so
+|因此，让我们以高斯分布为例，
 
 1410
 00:38:47,015 --> 00:38:48,110
@@ -7785,37 +7931,44 @@ let's take for example, the
 1411
 00:38:48,110 --> 00:38:51,275
 0,465 465,830 1870,2250 2250,2925 2925,3165
-gaussian distribution to parameterize a
+gaussian distribution,| to parameterize a
+|将高斯分布参数化，
 
 1412
 00:38:51,275 --> 00:38:53,120
 0,435 435,785 1045,1320 1320,1545 1545,1845
-gaussian distribution. We only need
+gaussian distribution,| we only need
+|我们只需要两个输出，
 
 1413
 00:38:53,120 --> 00:38:54,680
 0,345 345,825 825,1185 1185,1440 1440,1560
-two outputs, right, we need
+two outputs, right,| we need
+|我们需要一个均值和一个方差，
 
 1414
 00:38:54,680 --> 00:38:55,870
 0,135 135,360 360,570 570,690 690,1190
-a mean and a variance.
+a mean and a variance,|
+|
 
 1415
 00:38:55,920 --> 00:38:56,810
 0,305 305,470 470,620 620,770 770,890
-Given a mean and a
+given a mean and a
+给定均值和方差，
 
 1416
 00:38:56,810 --> 00:38:58,355
 0,500 640,900 900,1125 1125,1380 1380,1545
-variance we can actually have
+variance,| we can actually have
+|我们可以有一个概率质量，
 
 1417
 00:38:58,355 --> 00:38:59,825
 0,150 150,600 600,965 1075,1335 1335,1470
-a probability mass and we
+a probability mass| and we
+|我们可以计算任何可能的行动的概率，
 
 1418
 00:38:59,825 --> 00:39:01,400
@@ -7825,7 +7978,8 @@ can compute a probability over
 1419
 00:39:01,400 --> 00:39:03,320
 0,350 640,1020 1020,1400 1540,1800 1800,1920
-any possible action that we
+any possible action,| that we
+|我们可能想要从这两个数字，
 
 1420
 00:39:03,320 --> 00:39:04,280
@@ -7835,7 +7989,8 @@ may want to take just
 1421
 00:39:04,280 --> 00:39:06,020
 0,165 165,375 375,585 585,860 1480,1740
-from those two numbers. So
+from those two numbers,| so
+|例如，在这里的图像中，
 
 1422
 00:39:06,020 --> 00:39:07,025
@@ -7845,29 +8000,31 @@ for example, in this image
 1423
 00:39:07,025 --> 00:39:08,945
 0,395 685,975 975,1260 1260,1590 1590,1920
-here we may want to
+here,| we may want to
+|我们可能想要输出一个像这样的高斯分布，
 
 1424
 00:39:08,945 --> 00:39:09,860
 0,315 315,570 570,885
-output a gou.|
-|
+output a gaussian
 
 1425
 00:39:10,110 --> 00:39:11,300
 0,290 290,485 485,695 695,950 950,1190
-That looks like this right?
-看起来像这样，对吗？它的平均值以负0.8为中心，表示我们基本上应该以每秒0.8米的速度向左移动。我们再一次看到，由于政策网络的格式，这是一个概率分布，对，我们强制要求这是一个概率分布。这意味着，这个的积分，这个输出的积分，按照它是高斯的定义，也必须积分为1。
+that looks like this, right,|
+|
 
 1426
 00:39:11,300 --> 00:39:13,690
 0,240 240,590 700,1005 1005,1520 1990,2390
-Its mean is centered at,
+its mean is centered at,
+它的平均值以 -0.8 为中心，
 
 1427
 00:39:14,550 --> 00:39:17,090
 0,350 350,515 515,850 870,1750 1950,2540
-let's see, negative 0.8 indicating
+let's see, {-0.8 -},| indicating
+|表示我们应该以每秒 0.8 米的速度向左移动，
 
 1428
 00:39:17,090 --> 00:39:18,430
@@ -7887,17 +8044,20 @@ left with a speed of
 1431
 00:39:23,120 --> 00:39:24,890
 0,320 820,1125 1125,1395 1395,1620 1620,1770
-example. And again we can
+example,| and again we can
+|我们再一次看到，
 
 1432
 00:39:24,890 --> 00:39:26,690
 0,150 150,410 1030,1410 1410,1665 1665,1800
-see that because this is
+see that,| because this is
+|因为这是一个概率分布，
 
 1433
 00:39:26,690 --> 00:39:29,975
 0,260 370,980 1090,1490 1630,2030 3010,3285
-a probability distribution because of
+a probability distribution,| because of
+|因为策略网络的格式，
 
 1434
 00:39:29,975 --> 00:39:32,440
@@ -7907,12 +8067,14 @@ the format of policy networks,
 1435
 00:39:32,910 --> 00:39:34,250
 0,335 335,575 575,1100 1100,1220 1220,1340
-right, we're enforcing that this
+right,| we're enforcing that this
+|我们强制要求这是一个概率分布，
 
 1436
 00:39:34,250 --> 00:39:36,155
 0,120 120,240 240,710 790,1190 1600,1905
-is a probability distribution. That
+is a probability distribution,| that
+|这意味着这个输出的积分，
 
 1437
 00:39:36,155 --> 00:39:37,960
@@ -7927,7 +8089,8 @@ of this, of this outputs
 1439
 00:39:40,115 --> 00:39:41,630
 0,395 505,780 780,1055 1135,1395 1395,1515
-right by definition of it
+right,| by definition of it
+|按照它是高斯的定义，也必须积分为 1 。
 
 1440
 00:39:41,630 --> 00:39:43,240
@@ -7937,14 +8100,14 @@ being a gaussian, must also
 1441
 00:39:43,260 --> 00:39:44,720
 0,635 635,890 890,1150
-integrate to one.|
+integrate to 1.|
 |
 
 1442
 00:39:47,890 --> 00:39:49,485
 0,290 290,515 515,830 830,1130 1130,1595
-Okay, great. So now let's
-好的，太好了。现在让我们来看看如何训练政策梯度网络，你知道，逐步完成这个过程，我们来看看一个非常具体的例子。让我们从回顾强化学习循环开始，这节课就是从现在开始的。
+Okay, great,| so now let's
+好的，太好了，|现在让我们来看看如何训练策略梯度网络，
 
 1443
 00:39:49,485 --> 00:39:51,075
@@ -7959,7 +8122,8 @@ how policy gradient networks can
 1445
 00:39:53,565 --> 00:39:55,290
 0,195 195,515 895,1295 1345,1590 1590,1725
-be trained and, you know,
+be trained| and, you know,
+|逐步完成这个过程，
 
 1446
 00:39:55,290 --> 00:39:56,550
@@ -7969,12 +8133,14 @@ step through that process as
 1447
 00:39:56,550 --> 00:39:58,560
 0,320 670,1020 1020,1370 1570,1845 1845,2010
-well as we look at
+well,| as we look at
+|我们来看看一个非常具体的例子，
 
 1448
 00:39:58,560 --> 00:40:00,060
 0,150 150,410 490,825 825,1160 1210,1500
-a very concrete example. And
+a very concrete example,| and
+|让我们从回顾强化学习循环开始，
 
 1449
 00:40:00,060 --> 00:40:01,410
@@ -7984,34 +8150,37 @@ maybe let's start by just
 1450
 00:40:01,410 --> 00:40:04,130
 0,705 705,975 975,1635 1635,1910 2320,2720
-revisiting this reinforcement learning loop
+revisiting this reinforcement learning loop,|
+|
 
 1451
 00:40:04,180 --> 00:40:05,520
 0,275 275,470 470,740 740,1040 1040,1340
 that we started this class
+这节课就是从这里开始的。
 
 1452
 00:40:05,520 --> 00:40:07,620
 0,350 1000,1400
-with now.|
-|
+with.| Now,
+|现在，让我们具体考虑训练自动驾驶车辆的例子，
 
 1453
 00:40:07,870 --> 00:40:09,740
 0,395 395,670 960,1280 1280,1535 1535,1870
-Let's specifically consider the example
-让我们具体考虑训练自动驾驶车辆的例子，因为我认为这是一个特别非常直观的例子，我们可以通过代理。这是车，对吗？
+let's specifically consider the example
 
 1454
 00:40:09,940 --> 00:40:11,840
 0,400 570,950 950,1175 1175,1625 1625,1900
-of training an autonomous vehicles,
+of training an autonomous vehicles,|
+|
 
 1455
 00:40:11,860 --> 00:40:12,660
 0,260 260,395 395,545 545,680 680,800
 since I think that this
+因为我认为这是一个特别非常直观的例子，
 
 1456
 00:40:12,660 --> 00:40:14,805
@@ -8021,29 +8190,32 @@ is a particularly very intuitive
 1457
 00:40:14,805 --> 00:40:15,840
 0,315 315,525 525,660 660,810 810,1035
-example that we can walk
+example,| that we can walk
+|我们可以讨论的，
 
 1458
 00:40:15,840 --> 00:40:18,060
 0,350 610,855 855,1095 1095,1490 1840,2220
-through the agent. Here is
+through,| the agent here is
+|这里的 agent 是车，
 
 1459
 00:40:18,060 --> 00:40:19,740
 0,225 225,470 1090,1490
-the vehicle, right?|
+the vehicle, right,|
 |
 
 1460
 00:40:20,010 --> 00:40:21,880
 0,320 320,640 990,1250 1250,1370 1370,1870
-The state could be obtained
-可以通过安装在车辆本身上的许多传感器来获取状态。因此，例如，自动驾驶车辆通常配备摄像头、激光雷达、雷达等传感器，所有这些都为车辆提供观测输入。
+the state could be obtained
+状态可以通过很多传感器来获得，
 
 1461
 00:40:22,020 --> 00:40:23,600
 0,305 305,560 560,1130 1130,1415 1415,1580
-through many sensors that could
+through many sensors,| that could
+|安装在车辆身上，
 
 1462
 00:40:23,600 --> 00:40:25,000
@@ -8053,7 +8225,8 @@ be mounted on the vehicle
 1463
 00:40:25,110 --> 00:40:27,065
 0,350 350,590 590,785 785,1090 1350,1955
-itself. So, for example, autonomous
+itself,| so, for example, autonomous
+|例如，自动驾驶车辆通常配备摄像头、激光雷达、雷达等传感器，
 
 1464
 00:40:27,065 --> 00:40:28,595
@@ -8068,7 +8241,8 @@ sensors like cameras, lidars, radars
 1466
 00:40:31,220 --> 00:40:32,660
 0,530 730,1005 1005,1140 1140,1275 1275,1440
-etc, all of these are
+etc,| all of these are
+|所有这些都为车辆提供观测输入，
 
 1467
 00:40:32,660 --> 00:40:35,110
@@ -8078,14 +8252,14 @@ giving observational inputs to the
 1468
 00:40:35,370 --> 00:40:36,720
 0,260 260,365 365,610
-to the vehicle.|
+to the vehicle,|
 |
 
 1469
 00:40:36,850 --> 00:40:38,100
 0,245 245,490 720,980 980,1100 1100,1250
-The action that we could
-我们可以采取的行动是方向盘角度。这不是一个离散变量。这是一个连续变量。这实际上是一个可以取任何实数的角度。最后，在这个非常简单的例子中，奖励是我们在撞车前行驶的距离。
+the action that we could
+我们可以采取的行动是方向盘角度，
 
 1470
 00:40:38,100 --> 00:40:39,420
@@ -8095,17 +8269,19 @@ take is a steering wheel
 1471
 00:40:39,420 --> 00:40:40,620
 0,260 490,750 750,900 900,1065 1065,1200
-angle. This is not a
+angle,| this is not a
+|这不是一个离散变量。这是一个连续变量，
 
 1472
 00:40:40,620 --> 00:40:41,880
 0,375 375,675 675,930 930,1050 1050,1260
-discrete variable. This is a
+discrete variable, this is a
 
 1473
 00:40:41,880 --> 00:40:43,365
 0,330 330,710 730,1170 1170,1365 1365,1485
-continuous variable. It's actually an
+continuous variable,| it's actually an
+|这是一个可以取任何实数的角度，
 
 1474
 00:40:43,365 --> 00:40:44,415
@@ -8115,7 +8291,8 @@ angle that could take any
 1475
 00:40:44,415 --> 00:40:46,830
 0,255 255,575 1405,1695 1695,1985 2065,2415
-real number. And finally, the
+real number,| and finally, the
+|最后奖励，在这个非常简单的例子中，
 
 1476
 00:40:46,830 --> 00:40:48,915
@@ -8125,7 +8302,8 @@ reward in this very simplistic
 1477
 00:40:48,915 --> 00:40:50,145
 0,285 285,540 540,720 720,975 975,1230
-example is the distance that
+example| is the distance that
+|是我们在撞车前行驶的距离。
 
 1478
 00:40:50,145 --> 00:40:51,440
@@ -8137,12 +8315,13 @@ we travel before we crash.|
 00:40:53,660 --> 00:40:54,805
 0,320 320,500 500,635 635,935 935,1145
 Okay, so now let's take
-好的，现在让我们来看看如何训练一个政策梯度神经网络来解决这个自动驾驶汽车的任务作为一个具体的例子。因此，我们从正确初始化代理开始。记住，我们没有训练数据，对吗？所以我们不得不思考，强化学习实际上就像是一条数据获取和学习的管道结合在一起。因此，数据采集管道的第一部分首先初始化我们的代理，以便出去收集一些数据。
+好的，现在让我们来看看，
 
 1480
 00:40:54,805 --> 00:40:55,555
 0,135 135,270 270,420 420,585 585,750
-a look at how we
+a look at,| how we
+|如何训练一个策略梯度神经网络，
 
 1481
 00:40:55,555 --> 00:40:57,300
@@ -8152,17 +8331,20 @@ could train a policy gradient
 1482
 00:40:57,650 --> 00:40:59,410
 0,365 365,640 870,1190 1190,1475 1475,1760
-neural network to solve this
+neural network| to solve this
+|来解决这个自动驾驶汽车的任务，
 
 1483
 00:40:59,410 --> 00:41:00,960
 0,320 370,660 660,870 870,1170 1170,1550
-task of self driving cars
+task of self driving cars|
+|
 
 1484
 00:41:00,980 --> 00:41:03,750
 0,275 275,545 545,860 860,1180 2370,2770
-as a concrete example. So
+as a concrete example.| So
+作为一个具体的例子。|我们从初始化 agent 开始，
 
 1485
 00:41:03,920 --> 00:41:06,520
@@ -8172,17 +8354,20 @@ we start by initializing our
 1486
 00:41:06,520 --> 00:41:08,365
 0,320 640,1040 1270,1590 1590,1755 1755,1845
-agent right. Remember that we
+agent, right,| remember that we
+|记住，我们没有训练数据，
 
 1487
 00:41:08,365 --> 00:41:09,475
 0,120 120,330 330,615 615,885 885,1110
-have no training data, right?
+have no training data, right,|
+|
 
 1488
 00:41:09,475 --> 00:41:10,450
 0,285 285,510 510,645 645,795 795,975
-So we have to think
+so we have to think
+所以我们不得不思考，强化学习就像是，
 
 1489
 00:41:10,450 --> 00:41:12,205
@@ -8192,17 +8377,20 @@ about actually reinforcement learning is
 1490
 00:41:12,205 --> 00:41:13,320
 0,225 225,375 375,495 495,735 735,1115
-almost like a data acquisition
+almost like| a data acquisition
+|数据获取和学习的管道结合在一起，
 
 1491
 00:41:13,610 --> 00:41:16,090
 0,380 380,760 810,1210 1740,2135 2135,2480
-plus learning pipeline combined together.
+plus learning pipeline combined together,|
+|
 
 1492
 00:41:16,090 --> 00:41:16,945
 0,195 195,300 300,495 495,705 705,855
-So the first part of
+so the first part of
+所以，数据采集管道的第一部分首先是，
 
 1493
 00:41:16,945 --> 00:41:19,210
@@ -8212,7 +8400,8 @@ that data acquisition pipeline is
 1494
 00:41:19,210 --> 00:41:20,520
 0,210 210,405 405,855 855,1035 1035,1310
-first to initialize our agent
+first| to initialize our agent
+|初始化我们的 agent ，以便收集一些数据。
 
 1495
 00:41:20,660 --> 00:41:21,610
@@ -8228,14 +8417,14 @@ some data.|
 1497
 00:41:24,510 --> 00:41:26,640
 0,245 245,380 380,620 620,970
-So we start our.|
-所以我们开始我们的。|
+So we start our
+所以我们开始我们的车，我们的 agent ，
 
 1498
 00:41:26,640 --> 00:41:28,740
 0,380 430,735 735,1040 1450,1845 1845,2100
-Vehicle, our agent. And in
-车辆，我们的特工。当然，在一开始，它对驾驶一无所知。它以前从来没有接触过任何这些环境规则或观察。所以它运行它的政策，现在完全没有训练，直到它终止，直到它超出了我们定义的一些界限。我们基本上是用它在终止前行驶的距离来衡量奖励的。
+vehicle, our agent,| and in
+|当然，在一开始，它对驾驶一无所知，
 
 1499
 00:41:28,740 --> 00:41:29,625
@@ -8245,7 +8434,8 @@ the beginning, of course, it
 1500
 00:41:29,625 --> 00:41:31,125
 0,210 210,510 510,795 795,1115 1135,1500
-knows nothing about driving. It's
+knows nothing about driving,| it's
+|它以前从来没有接触过任何这些环境规则或观察，
 
 1501
 00:41:31,125 --> 00:41:32,730
@@ -8260,22 +8450,26 @@ of these rules of the
 1503
 00:41:33,945 --> 00:41:35,600
 0,305 355,630 630,825 825,1145 1255,1655
-environment or the observation before.
+environment or the observation before,|
+|
 
 1504
 00:41:35,650 --> 00:41:37,310
 0,400 540,860 860,1085 1085,1325 1325,1660
-So it runs its policy,
+so it runs its policy,|
+所以它运行它的策略，|
 
 1505
 00:41:37,480 --> 00:41:39,290
 0,400 450,740 740,920 920,1160 1160,1810
 which right now is untrained
+现在完全没有训练，
 
 1506
 00:41:39,520 --> 00:41:41,820
 0,400 1140,1400 1400,1565 1565,2000 2000,2300
-entirely until it terminates, right
+entirely,| until it terminates, right,
+|直到它终止，直到它超出了我们定义的一些界限，
 
 1507
 00:41:41,820 --> 00:41:42,915
@@ -8285,12 +8479,14 @@ until it goes outside of
 1508
 00:41:42,915 --> 00:41:44,000
 0,135 135,405 405,600 600,765 765,1085
-some bounds that we define.
+some bounds that we define,|
+|
 
 1509
 00:41:44,260 --> 00:41:46,605
 0,320 320,640 1230,1630 1680,2030 2030,2345
-We measure basically the reward
+we measure basically the reward
+我们是用它在终止前行驶的距离来衡量奖励的，
 
 1510
 00:41:46,605 --> 00:41:47,940
@@ -8300,14 +8496,14 @@ as the distance that it
 1511
 00:41:47,940 --> 00:41:50,540
 0,480 480,830 1030,1335 1335,1910
-traveled before it terminated.|
+traveled before it terminated,|
 |
 
 1512
 00:41:50,670 --> 00:41:52,220
 0,275 275,530 530,910 1020,1340 1340,1550
-And we record all of
-我们记录了所有的状态，所有的行动和最终的奖励，直到终止，对吗？这将成为我们的迷你数据集，我们将在第一轮培训中使用它。让我们来看看这些数据集。现在我们来做一个步骤的训练。我们要做的训练的第一步是带我去参加我们的后半段训练。
+and we record all of
+我们记录了所有的状态，所有的行动，
 
 1513
 00:41:52,220 --> 00:41:53,600
@@ -8317,7 +8513,8 @@ the states, all of the
 1514
 00:41:53,600 --> 00:41:55,810
 0,260 790,1190 1210,1485 1485,1760 1810,2210
-actions and the final reward
+actions| and the final reward
+|和直到终止的最终的奖励，
 
 1515
 00:41:55,860 --> 00:41:58,130
@@ -8327,12 +8524,14 @@ that it obtained until that
 1516
 00:41:58,130 --> 00:42:00,605
 0,530 700,1100 1150,1550 1660,2060 2080,2475
-termination, right? This becomes our
+termination, right,| this becomes our
+|这将成为我们的迷你数据集，
 
 1517
 00:42:00,605 --> 00:42:02,300
 0,395 475,825 825,1175 1195,1485 1485,1695
-mini data set that we'll
+mini data set,| that we'll
+|我们将在第一轮训练中使用它，
 
 1518
 00:42:02,300 --> 00:42:03,380
@@ -8342,49 +8541,53 @@ use for the first round
 1519
 00:42:03,380 --> 00:42:05,450
 0,255 255,560 1240,1635 1635,1830 1830,2070
-of training. Let's take those
+of training,| let's take those
+|让我们来看看这些数据集，
 
 1520
 00:42:05,450 --> 00:42:07,205
 0,285 285,650 790,1095 1095,1400 1450,1755
-data sets. And now we'll
+data sets,| and now we'll
+|现在我们来做一个步骤的训练，
 
 1521
 00:42:07,205 --> 00:42:08,650
 0,150 150,435 435,810 810,1125 1125,1445
-do one step of training.
+do one step of training,|
+|
 
 1522
 00:42:08,700 --> 00:42:09,965
 0,290 290,545 545,785 785,980 980,1265
-The first step of training
+the first step of training
+我们要做的训练的第一步是，
 
 1523
 00:42:09,965 --> 00:42:11,465
 0,225 225,435 435,695 985,1290 1290,1500
-that we'll do is to
+that we'll do is| to
+|使用我们的 agent 运行的轨迹的后半部分，
 
 1524
 00:42:11,465 --> 00:42:13,600
 0,305 955,1320 1320,1575 1575,1800 1800,2135
-take me to take the
+take {}, to take the
 
 1525
 00:42:14,040 --> 00:42:16,640
 0,400 480,880 1410,1685 1685,1960
-later half of our.|
-|
+later half of our,
 
 1526
 00:42:17,260 --> 00:42:18,795
 0,260 260,425 425,1145 1145,1385 1385,1535
-Of our trajectory that our
-我们的代理运行的轨迹，并减少了导致低回报的行动的可能性。现在，因为我们所知道的飞行器终止了，我们可以假设在这个轨迹的后半部分发生的所有动作都可能不是非常好的动作，因为它们非常接近终止。因此，让我们降低所有这些事情在未来再次发生的可能性，我们将考虑在我们的培训课程的前半部分发生的所有事情。
+of our trajectory that our
 
 1527
 00:42:18,795 --> 00:42:21,270
 0,275 325,725 1195,1595 1825,2280 2280,2475
-agent ran and decreased the
+agent ran| and decreased the
+|并减少导致低回报的行动的可能性，
 
 1528
 00:42:21,270 --> 00:42:23,570
@@ -8394,7 +8597,8 @@ probability of actions that resulted
 1529
 00:42:23,770 --> 00:42:25,680
 0,320 320,545 545,965 965,1360 1560,1910
-in low rewards. Now, because
+in low rewards,| now, because
+|现在，因为我们知道车终止了，
 
 1530
 00:42:25,680 --> 00:42:26,745
@@ -8402,14 +8606,16 @@ in low rewards. Now, because
 the vehicle we know the
 
 1531
-00:42:26,745 --> 00:42:29,300
+00:42:26,745 --> 00:42:29,120
 0,245 265,875 1405,1680 1680,1955 2155,2555
-vehicle terminated, we can assume
+vehicle terminated,| we can assume
+|我们可以假设，
 
 1532
-00:42:29,320 --> 00:42:30,470
+00:42:29,220 --> 00:42:30,370
 0,335 335,575 575,770 770,905 905,1150
-that all of the actions
+that,| all of the actions
+|在这个轨迹的后半部分发生的所有动作都可能不是非常好的动作，
 
 1533
 00:42:31,270 --> 00:42:32,610
@@ -8424,17 +8630,20 @@ half of this trajectory were
 1535
 00:42:34,050 --> 00:42:35,720
 0,290 610,915 915,1155 1155,1380 1380,1670
-probably not very good actions
+probably not very good actions,|
+|
 
 1536
 00:42:35,860 --> 00:42:36,885
 0,260 260,395 395,560 560,785 785,1025
 because they came very close
+因为它们非常接近终止，
 
 1537
 00:42:36,885 --> 00:42:38,955
 0,180 180,665 1225,1470 1470,1800 1800,2070
-to termination. So let's decrease
+to termination,| so let's decrease
+|所以，让我们降低所有这些事情在未来再次发生的可能性，
 
 1538
 00:42:38,955 --> 00:42:40,035
@@ -8449,7 +8658,8 @@ those things happening again in
 1540
 00:42:41,250 --> 00:42:42,570
 0,135 135,410 700,975 975,1155 1155,1320
-the future, and we'll take
+the future,| and we'll take
+|我们将考虑在我们的训练的前半部分发生的所有事情，
 
 1541
 00:42:42,570 --> 00:42:43,320
@@ -8464,24 +8674,26 @@ happen in the beginning half
 1543
 00:42:44,710 --> 00:42:46,620
 0,275 275,470 470,790 930,1330
-of our training episode.|
+of our training episode,|
 |
 
 1544
 00:42:46,620 --> 00:42:48,150
 0,380 580,840 840,1065 1065,1335 1335,1530
-And we will increase their
-我们会增加他们的概率。现在，再说一次，我们没有理由不在这个轨迹的前半部分采取好的行动，而在后半部分采取糟糕的行动。但这只是因为后半部分的行动更接近失败，更接近确定，例如，我们可以假设，这些行动可能是次优行动。但这些也很可能是嘈杂的奖励，因为它是如此稀少的信号，很可能你在最后采取了一些好的行动，你实际上是在试图找回你的车，但你已经太晚了。
+and we will increase their
+我们会增加他们的概率，
 
 1545
 00:42:48,150 --> 00:42:50,330
 0,530 820,1140 1140,1440 1440,1860 1860,2180
-probabilities. Now, again, there's no
+probabilities,| now, again, there's no
+|现在，再说一次，我们没有理由，
 
 1546
 00:42:50,500 --> 00:42:53,760
 0,400 510,910 1800,2200 2250,2800 2880,3260
-reason why there shouldn't necessarily
+reason,| why there shouldn't necessarily
+|不在这个轨迹的前半部分采取好的行动，
 
 1547
 00:42:53,760 --> 00:42:55,245
@@ -8496,7 +8708,8 @@ we took in the first
 1549
 00:42:56,280 --> 00:42:57,600
 0,240 240,450 450,690 690,1230 1230,1320
-half of this trajectory and
+half of this trajectory| and
+|而在后半部分采取糟糕的行动，
 
 1550
 00:42:57,600 --> 00:42:58,395
@@ -8506,7 +8719,8 @@ a bad action in the
 1551
 00:42:58,395 --> 00:42:59,750
 0,165 165,485 685,930 930,1110 1110,1355
-later half. But it's simply
+later half,| but it's simply
+|但这只是因为后半部分的行动更接近失败，更接近终止，
 
 1552
 00:42:59,980 --> 00:43:01,980
@@ -8526,7 +8740,8 @@ to a failure and closer
 1555
 00:43:05,200 --> 00:43:07,070
 0,560 560,770 770,905 905,1180 1470,1870
-determination that we can assume,
+determination,| that we can assume,
+|我们可以假设，这些行动可能是次优行动，
 
 1556
 00:43:07,150 --> 00:43:08,865
@@ -8536,7 +8751,8 @@ for example, that these were
 1557
 00:43:08,865 --> 00:43:11,280
 0,305 505,1275 1275,1565 2005,2250 2250,2415
-probably suboptimal actions. But it's
+probably suboptimal actions,| but it's
+|但这些也很可能是嘈杂的奖励，
 
 1558
 00:43:11,280 --> 00:43:12,480
@@ -8546,17 +8762,20 @@ very possible that these are
 1559
 00:43:12,480 --> 00:43:14,580
 0,590 700,1230 1230,1515 1515,1815 1815,2100
-noisy rewards as well, because
+noisy rewards as well,| because
+|因为它是如此稀少的信号，
 
 1560
 00:43:14,580 --> 00:43:15,680
 0,225 225,345 345,510 510,825 825,1100
-it's such a sparse signal,
+it's such a sparse signal,|
+|
 
 1561
 00:43:16,000 --> 00:43:17,295
 0,380 380,605 605,920 920,1160 1160,1295
 it's very possible that you
+很可能你在最后采取了一些好的行动，
 
 1562
 00:43:17,295 --> 00:43:18,405
@@ -8566,7 +8785,8 @@ had some good actions at
 1563
 00:43:18,405 --> 00:43:19,125
 0,135 135,285 285,420 420,525 525,720
-the end and you were
+the end| and you were
+|你实际上是在试图恢复你的车，
 
 1564
 00:43:19,125 --> 00:43:20,190
@@ -8576,7 +8796,8 @@ actually trying to recover your
 1565
 00:43:20,190 --> 00:43:21,230
 0,290 310,555 555,645 645,765 765,1040
-car, but you were just
+car,| but you were just
+|但你已经太晚了。
 
 1566
 00:43:21,340 --> 00:43:22,340
@@ -8587,13 +8808,14 @@ too late.|
 1567
 00:43:24,180 --> 00:43:25,960
 0,395 395,650 650,800 800,1090 1380,1780
-Now repeat this process again.
-现在再次重复这个过程。再次重新初始化代理并运行它，直到完成。现在代理走得更远了一点，因为您已经降低了末端的概率，增加了未来的概率，并且您不断重复这一过程，直到您注意到代理每次都学习执行得越来越好，直到它最终收敛。在结束时，代理基本上能够沿着车道行驶，通常在这样做的过程中会稍微左右转向。
+Now repeat this process again,|
+现在再次重复这个过程，|
 
 1568
 00:43:26,010 --> 00:43:27,365
 0,290 290,740 740,905 905,1115 1115,1355
-{Re-initialize -} the agent one
+{re-initialize -} the agent one
+再次重新初始化 agent 并运行它，直到完成，
 
 1569
 00:43:27,365 --> 00:43:28,940
@@ -8603,27 +8825,32 @@ more time and run it
 1570
 00:43:28,940 --> 00:43:30,260
 0,285 285,645 645,960 960,1125 1125,1320
-until completion. Now the agent
+until completion,| now the agent
+|现在 agent 走得更远了一点，
 
 1571
 00:43:30,260 --> 00:43:31,580
 0,225 225,360 360,525 525,1020 1020,1320
-goes a bit farther right
+goes a bit farther, right,|
+|
 
 1572
 00:43:31,580 --> 00:43:32,960
 0,225 225,555 555,840 840,975 975,1380
 because you've decreased the probabilities
+因为你已经降低了末端的概率，
 
 1573
 00:43:32,960 --> 00:43:33,995
 0,225 225,330 330,560 610,885 885,1035
-at the ends, increased the
+at the ends,| increased the
+|增加了未来的概率，
 
 1574
 00:43:33,995 --> 00:43:35,830
 0,420 420,660 660,795 795,1055 1435,1835
-probabilities at the future, and
+probabilities at the future,| and
+|你不断重复这一过程，
 
 1575
 00:43:35,880 --> 00:43:37,325
@@ -8633,7 +8860,8 @@ you keep repeating this over
 1576
 00:43:37,325 --> 00:43:39,035
 0,210 210,455 475,875 1135,1485 1485,1710
-and over again until you
+and over again| until you
+|直到你注意到 agent 每次都学习执行得越来越好，
 
 1577
 00:43:39,035 --> 00:43:40,670
@@ -8648,12 +8876,14 @@ to perform better and better
 1579
 00:43:42,270 --> 00:43:43,750
 0,380 380,760 840,1085 1085,1205 1205,1480
-every time until it finally
+every time| until it finally
+|直到它最终收敛，
 
 1580
 00:43:43,890 --> 00:43:45,520
 0,545 545,880 960,1250 1250,1385 1385,1630
-converges. And at the end
+converges,| and at the end,
+|最后， agent 基本上能够沿着车道行驶，
 
 1581
 00:43:46,350 --> 00:43:48,530
@@ -8663,7 +8893,8 @@ the agent is able to
 1582
 00:43:48,530 --> 00:43:51,125
 0,290 310,660 660,1040 1540,1940 2140,2595
-basically follow lanes, usually swerving
+basically follow lanes,| usually swerving
+|通常在这样做的过程中会稍微左右转向，而不会撞车，
 
 1583
 00:43:51,125 --> 00:43:52,040
@@ -8673,49 +8904,55 @@ a bit side to side
 1584
 00:43:52,040 --> 00:43:53,520
 0,240 240,375 375,585 585,920
-while it does that.|
-|
+while it does that,
 
 1585
 00:43:53,710 --> 00:43:55,310
 0,380 380,965 965,1205 1205,1340 1340,1600
-Without crashing. And this is
-而不会坠毁。这真的很有趣，因为这是一辆我们从来没有教过的自动驾驶汽车。车道标志是什么意思，或者道路规则是什么，对吗？这是一辆完全通过外出学习的赛车，经常撞车，你知道，试图弄清楚如何做才能在未来不再继续这样做。
+without crashing,| and this is
+|这真的很有趣，
 
 1586
 00:43:55,510 --> 00:43:58,275
 0,350 350,700 990,1390 1650,2050 2490,2765
-actually really fascinating because this
+actually really fascinating,| because this
+|因为这是一辆自动驾驶汽车，
 
 1587
 00:43:58,275 --> 00:43:59,340
 0,135 135,255 255,420 420,705 705,1065
-is a self driving car
+is a self driving car,|
+|
 
 1588
 00:43:59,340 --> 00:44:01,040
 0,255 255,420 420,690 690,1070 1300,1700
 that we never taught anything
+我们从来没有教过任何东西，
 
 1589
 00:44:01,120 --> 00:44:02,505
 0,365 365,590 590,725 725,920 920,1385
-about. What a Lane marker
+about,| what a lane marker
+|车道标志是什么意思，
 
 1590
 00:44:02,505 --> 00:44:03,555
 0,335 385,660 660,795 795,915 915,1050
-means or what are the
+means| or what are the
+|或者道路规则是什么，
 
 1591
 00:44:03,555 --> 00:44:05,190
 0,195 195,390 390,525 525,785 1345,1635
-rules of the road, anything
+rules of the road,| anything
+|任何这样的东西，
 
 1592
 00:44:05,190 --> 00:44:06,375
 0,195 195,420 420,740 760,1035 1035,1185
-about that, right? This was
+about that, right,| this was
+|这是一辆完全通过外出学习的赛车，
 
 1593
 00:44:06,375 --> 00:44:07,880
@@ -8725,7 +8962,8 @@ a car that learned entirely
 1594
 00:44:08,260 --> 00:44:09,780
 0,275 275,455 455,695 695,1025 1025,1520
-just by going out, crashing
+just by going out,| crashing
+|经常撞车，试图弄清楚如何做才能在未来不再继续这样做。
 
 1595
 00:44:09,780 --> 00:44:11,445
@@ -8752,7 +8990,7 @@ doing that in the future.|
 00:44:16,070 --> 00:44:17,400
 0,275 275,455 455,695 695,980 980,1330
 And the remaining question is
-剩下的问题实际上是我们如何更新，你知道，作为我在左边和右边展示给你们的这个算法的一部分，对吗？例如，我们如何才能基本上制定出相同的算法？具体地说，就是更新方程式，第四步和第五步。这是我们如何使用这两个步骤来训练我们的政策并降低发生坏事件的可能性，同时促进所有这些好事件的可能性的两个真正重要的步骤。
+剩下的问题是我们如何更新策略，
 
 1600
 00:44:17,450 --> 00:44:18,720
@@ -8762,7 +9000,8 @@ actually how we can update,
 1601
 00:44:19,160 --> 00:44:20,770
 0,215 215,430 450,755 755,1060 1290,1610
-you know, that policy as
+you know, that policy| as
+|作为我在左边和右边展示给你们的这个算法的一部分，
 
 1602
 00:44:20,770 --> 00:44:21,910
@@ -8782,7 +9021,8 @@ right and the left hand
 1605
 00:44:23,680 --> 00:44:25,570
 0,285 285,650 880,1280 1390,1695 1695,1890
-side, right? Like how can
+side, right,| like how can
+|例如，我们如何才能制定出相同的算法，
 
 1606
 00:44:25,570 --> 00:44:27,660
@@ -8792,7 +9032,8 @@ we basically formulate that same
 1607
 00:44:27,770 --> 00:44:30,145
 0,550 750,1070 1070,1390 1650,2030 2030,2375
-algorithm? And specifically the update
+algorithm,| and specifically the update
+|具体地说，就是更新方程式，这里第四步和第五步，
 
 1608
 00:44:30,145 --> 00:44:31,770
@@ -8802,12 +9043,14 @@ equations, steps four and five
 1609
 00:44:31,910 --> 00:44:33,310
 0,335 335,670 810,1100 1100,1250 1250,1400
-right here. These are the
+right here,| these are the
+|这是两个重要的步骤，
 
 1610
 00:44:33,310 --> 00:44:35,110
 0,165 165,405 405,770 790,1190 1510,1800
-two really important steps of
+two really important steps| of
+|我们如何使用这两个步骤来训练我们的策略，
 
 1611
 00:44:35,110 --> 00:44:36,400
@@ -8822,12 +9065,14 @@ two steps to train our
 1613
 00:44:37,525 --> 00:44:39,580
 0,305 745,1145 1195,1530 1530,1725 1725,2055
-policy and decrease the probability
+policy| and decrease the probability
+|并降低发生坏事件的可能性，
 
 1614
 00:44:39,580 --> 00:44:41,080
 0,165 165,345 345,600 600,920 1000,1500
-of bad events while promoting
+of bad events,| while promoting
+|同时促进所有这些好事件的可能性。
 
 1615
 00:44:41,080 --> 00:44:42,490
@@ -8843,18 +9088,20 @@ good events.|
 1617
 00:44:44,870 --> 00:44:47,365
 0,400 450,845 845,1070 1070,1390 1470,2495
-So let's assume the let's
-那么让我们假设，让我们来看看损失函数。首先，策略梯度神经网络的损失函数是这样的。然后我们将从剖析它开始，以了解为什么它是这样工作的。所以在这里我们可以看到，损失由两项组成。第一个术语是绿色术语。
+So let's assume the, let's
+那么让我们假设，让我们来看看损失函数，
 
 1618
 00:44:47,365 --> 00:44:48,150
 0,90 90,195 195,300 300,465 465,785
-look at the loss function.
+look at the loss function,|
+|
 
 1619
 00:44:48,290 --> 00:44:49,315
 0,305 305,440 440,605 605,815 815,1025
-First of all, the loss
+first of all, the loss
+首先，策略梯度神经网络的损失函数是这样的，
 
 1620
 00:44:49,315 --> 00:44:50,910
@@ -8864,17 +9111,20 @@ function for a policy gradient
 1621
 00:44:51,110 --> 00:44:53,440
 0,380 380,640 1470,1775 1775,2045 2045,2330
-neural network looks like this.
+neural network looks like this,|
+|
 
 1622
 00:44:53,440 --> 00:44:54,475
 0,165 165,285 285,555 555,795 795,1035
-And then we'll start by
+and then we'll start by
+然后我们将从剖析它开始，
 
 1623
 00:44:54,475 --> 00:44:56,730
 0,645 645,905 1135,1515 1515,1875 1875,2255
-dissecting it to understand why
+dissecting it| to understand why
+|以了解为什么它是这样工作的，
 
 1624
 00:44:57,110 --> 00:44:58,285
@@ -8884,7 +9134,8 @@ this works the way it
 1625
 00:44:58,285 --> 00:44:59,920
 0,275 895,1185 1185,1365 1365,1500 1500,1635
-does. So here we can
+does,| so here we can
+|所以在这里我们可以看到，损失由两项组成，
 
 1626
 00:44:59,920 --> 00:45:00,955
@@ -8894,7 +9145,8 @@ see that the loss consists
 1627
 00:45:00,955 --> 00:45:02,365
 0,305 325,645 645,960 960,1215 1215,1410
-of two terms. The first
+of two terms,| the first
+|第一项是绿色的项，
 
 1628
 00:45:02,365 --> 00:45:03,700
@@ -8904,24 +9156,26 @@ term is this term in
 1629
 00:45:03,700 --> 00:45:04,620
 0,320
-green.|
+green,|
 |
 
 1630
 00:45:04,620 --> 00:45:06,830
 0,210 210,465 465,830 1090,1485 1485,2210
-Just called the log likelihood
-刚刚被称为选择特定行动的对数概率，第二项是你们都非常熟悉的东西。这只是一个特定时间的回报，所以这是在这个时间点之后你将获得的预期回报。
+just called the log likelihood
+被称为选择特定行动的对数概率，
 
 1631
 00:45:06,850 --> 00:45:08,750
 0,380 380,890 890,1190 1190,1520 1520,1900
-of selecting a particular action
+of selecting a particular action,|
+|
 
 1632
 00:45:09,340 --> 00:45:10,470
 0,260 260,485 485,740 740,905 905,1130
 the second term is something
+第二项是你们都非常熟悉的东西，
 
 1633
 00:45:10,470 --> 00:45:11,205
@@ -8931,7 +9185,8 @@ that all of you are
 1634
 00:45:11,205 --> 00:45:12,480
 0,195 195,480 480,795 795,1080 1080,1275
-very familiar with already. This
+very familiar with already,| this
+|这只是一个特定时间的回报，
 
 1635
 00:45:12,480 --> 00:45:14,775
@@ -8941,7 +9196,8 @@ is simply the return at
 1636
 00:45:14,775 --> 00:45:16,755
 0,210 210,515 565,965 1405,1680 1680,1980
-a specific time, so that's
+a specific time,| so that's
+|所以这是在这个时间点之后你将获得的预期回报。
 
 1637
 00:45:16,755 --> 00:45:18,330
@@ -8963,7 +9219,7 @@ this time point.|
 00:45:21,200 --> 00:45:22,940
 0,290 790,1200 1200,1440 1440,1620 1620,1740
 Now, let's assume that we
-现在，让我们假设我们从具有高对数概率或高概率的特定操作中获得了大量奖励。如果我们从概率很高的特定行动中获得了很多奖励，这意味着我们想要进一步增加这种可能性。所以我们做的可能性更大，甚至更有可能，我们在未来再次采样这种行动。
+现在，让我们假设我们从特定操作种获得到大量奖励，
 
 1641
 00:45:22,940 --> 00:45:24,100
@@ -8973,17 +9229,19 @@ got a lot of reward
 1642
 00:45:24,330 --> 00:45:26,450
 0,290 290,575 575,970 1020,1420 1800,2120
-for a particular action that
+for a particular action,| that
+|有高的损失概率，
 
 1643
 00:45:26,450 --> 00:45:28,990
 0,320 400,780 780,1160 1450,1850 1870,2540
-had a high log probability
+had a high loss probability
 
 1644
 00:45:29,130 --> 00:45:31,310
 0,335 335,605 605,1180 1800,2060 2060,2180
-or high probability. If we
+or high probability,| if we
+|如果我们从概率很高的特定行动中获得了很多奖励，
 
 1645
 00:45:31,310 --> 00:45:32,290
@@ -8998,7 +9256,8 @@ for a particular action that
 1647
 00:45:33,935 --> 00:45:35,780
 0,180 180,390 390,965 1405,1680 1680,1845
-had high probability, that means
+had high probability,| that means
+|这意味着我们想要进一步增加这种可能性，
 
 1648
 00:45:35,780 --> 00:45:36,850
@@ -9008,7 +9267,8 @@ that we want to increase
 1649
 00:45:36,960 --> 00:45:38,675
 0,335 335,830 830,1130 1130,1460 1460,1715
-that probability even further. So
+that probability even further,| so
+|所以我们做的可能性更大，甚至更有可能，
 
 1650
 00:45:38,675 --> 00:45:40,115
@@ -9018,7 +9278,8 @@ we do it even more
 1651
 00:45:40,115 --> 00:45:41,825
 0,330 330,615 615,885 885,1500 1500,1710
-or even more likelihood, we
+or even more likelihood,| we
+|我们在未来再次采样这种行动。
 
 1652
 00:45:41,825 --> 00:45:43,520
@@ -9035,22 +9296,25 @@ the future.|
 00:45:45,060 --> 00:45:46,535
 0,275 275,380 380,515 515,820 1170,1475
 On the other hand, if
-另一方面，如果我们选择或比方说，如果我们获得的奖励对于一个可能性很高的行动来说是非常低的，我们想要相反的效果。我们不想在未来再次尝试这种行为，因为它导致了低回报，对吗？你们会注意到，这个损失函数，通过包括这个负值，我们将最小化在这个轨道上实现任何回报较低的行动的可能性，现在在我们的简化例子中。
+另一方面，如果我们选择，
 
 1655
 00:45:46,535 --> 00:45:48,530
 0,305 535,935 1345,1650 1650,1875 1875,1995
-we selected or let's say
+we selected| or let's say
+|或比方说，如果我们获得的奖励，
 
 1656
 00:45:48,530 --> 00:45:50,560
 0,165 165,360 360,950 1300,1665 1665,2030
-if we obtained a reward
+if we obtained a reward,|
+|
 
 1657
 00:45:50,940 --> 00:45:52,370
 0,305 305,575 575,890 890,1205 1205,1430
 that was very low for
+对于一个可能性很高的行动来说是非常低的，
 
 1658
 00:45:52,370 --> 00:45:53,435
@@ -9060,12 +9324,14 @@ an action that had high
 1659
 00:45:53,435 --> 00:45:55,220
 0,635 775,1035 1035,1185 1185,1365 1365,1785
-likelihood, we want the inverse
+likelihood,| we want the inverse
+|我们想要相反的效果，
 
 1660
 00:45:55,220 --> 00:45:56,975
 0,350 820,1095 1095,1320 1320,1575 1575,1755
-effect. We never want to
+effect,| we never want to
+|我们不想在未来再次尝试这种行为，
 
 1661
 00:45:56,975 --> 00:45:58,250
@@ -9075,27 +9341,32 @@ sample that action again in
 1662
 00:45:58,250 --> 00:45:59,420
 0,120 120,360 360,615 615,840 840,1170
-the future because it resulted
+the future,| because it resulted
+|因为它导致了低回报，
 
 1663
 00:45:59,420 --> 00:46:01,310
 0,225 225,330 330,555 555,920 1570,1890
-in a low reward, right?
+in a low reward, right,|
+|
 
 1664
 00:46:01,310 --> 00:46:02,620
 0,210 210,435 435,680 730,1020 1020,1310
-And you'll notice that this
+and you'll notice that this
+你们会注意到，这个损失函数，
 
 1665
 00:46:02,850 --> 00:46:04,955
 0,350 350,700 780,1115 1115,1450 1740,2105
-loss function right here, by
+loss function right here,| by
+|通过包括这个负值，
 
 1666
 00:46:04,955 --> 00:46:06,725
 0,315 315,585 585,905 1285,1620 1620,1770
-including this negative, we're going
+including this negative,| we're going
+|我们将最小化在这个轨道上实现任何回报较低的行动的可能性，
 
 1667
 00:46:06,725 --> 00:46:09,335
@@ -9110,34 +9381,37 @@ achieving any action that had
 1669
 00:46:11,460 --> 00:46:13,840
 0,305 305,760 960,1265 1265,1570 1620,2380
-low rewards in this trajectory
+low rewards in this trajectory,|
+|
 
 1670
 00:46:14,310 --> 00:46:16,205
 0,335 335,530 530,790 870,1535 1535,1895
 now in our simplified example
+现在在我们的简化汽车例子中，
 
 1671
 00:46:16,205 --> 00:46:17,320
 0,395
-on.|
-|
+on
 
 1672
 00:46:17,320 --> 00:46:19,120
 0,240 240,495 495,860 1270,1605 1605,1800
-The car example, all the
-以汽车为例，所有奖励较低的东西都是那些最接近车辆终止部分的行为。所有有高回报的东西都是一开始就来的。这只是我们在定义报酬结构时所做的假设。
+the car example,| all the
+|所有奖励较低的东西，
 
 1673
 00:46:19,120 --> 00:46:20,365
 0,165 165,345 345,555 555,795 795,1245
-things that had low rewards
+things that had low rewards|
+|
 
 1674
 00:46:20,365 --> 00:46:22,285
 0,315 315,635 715,1095 1095,1475 1615,1920
 were exactly those actions that
+都是那些最接近车辆终止部分的行为，
 
 1675
 00:46:22,285 --> 00:46:24,480
@@ -9152,7 +9426,8 @@ part of the of the
 1677
 00:46:26,240 --> 00:46:27,640
 0,400 750,1010 1010,1115 1115,1250 1250,1400
-vehicle. All the things that
+vehicle,| all the things that
+|所有有高回报的东西都是一开始就来的，
 
 1678
 00:46:27,640 --> 00:46:28,555
@@ -9167,7 +9442,8 @@ things that came in the
 1680
 00:46:29,275 --> 00:46:31,000
 0,305 655,1035 1035,1185 1185,1365 1365,1725
-beginning. That's just the assumption
+beginning,| that's just the assumption
+|这只是我们在定义回报结构时所做的假设。
 
 1681
 00:46:31,000 --> 00:46:32,200
@@ -9184,7 +9460,7 @@ our reward structure.|
 00:46:34,130 --> 00:46:35,400
 0,365 365,575 575,725 725,950 950,1270
 Now we can plug this
-现在我们可以将其插入到损失梯度下降算法中来训练我们的神经网络。当我们看到，你知道，这个政策梯度算法，你可以在这里突出显示。这种梯度恰恰是神经网络的策略部分。这是选择一个动作的概率，甚至是一个特定的状态。如果你还记得我们之前定义的，你知道，作为一个政策职能意味着什么？这就是它的意思，对吗？给定您发现自己所处的特定状态，选择具有最高可能性的特定操作的概率是多少。
+现在我们可以将其插入到损失梯度下降算法中来训练我们的神经网络，
 
 1684
 00:46:35,480 --> 00:46:38,490
@@ -9199,7 +9475,8 @@ gradient descent algorithm to train
 1686
 00:46:40,795 --> 00:46:41,905
 0,165 165,390 390,645 645,915 915,1110
-our neural network. When we
+our neural network,| when we
+|当我们看到这个策略梯度算法，
 
 1687
 00:46:41,905 --> 00:46:43,350
@@ -9209,12 +9486,14 @@ see, you know, this policy
 1688
 00:46:43,430 --> 00:46:45,175
 0,610 690,1145 1145,1415 1415,1610 1610,1745
-gradient algorithm which you can
+gradient algorithm,| which you can
+|你可以在这里突出显示，
 
 1689
 00:46:45,175 --> 00:46:46,980
 0,165 165,630 630,840 840,1170 1170,1805
-see highlighted here. This gradient
+see highlighted here,| this gradient
+|这种梯度恰恰是神经网络的策略部分，
 
 1690
 00:46:47,180 --> 00:46:49,680
@@ -9224,27 +9503,32 @@ is exactly of the policy
 1691
 00:46:50,000 --> 00:46:51,160
 0,380 380,635 635,755 755,950 950,1160
-part of the neural network.
+part of the neural network,|
+|
 
 1692
 00:46:51,160 --> 00:46:52,855
 0,315 315,450 450,960 960,1275 1275,1695
-That's the probability of selecting
+that's the probability of selecting
+这是选择一个动作的概率，
 
 1693
 00:46:52,855 --> 00:46:54,600
 0,105 105,365 775,1155 1155,1440 1440,1745
-an action, even a specific
+an action,| even a specific
+|甚至是一个特定的状态，
 
 1694
 00:46:54,800 --> 00:46:55,825
 0,350 350,530 530,635 635,785 785,1025
-state. And if you remember
+state,| and if you remember
+|如果你还记得我们之前定义的，
 
 1695
 00:46:55,825 --> 00:46:57,145
 0,330 330,555 555,795 795,1125 1125,1320
-before when we defined, you
+before when we defined,| you
+|作为一个策略函数意味着什么，
 
 1696
 00:46:57,145 --> 00:46:58,080
@@ -9254,27 +9538,32 @@ know, what does it mean
 1697
 00:46:58,400 --> 00:46:59,725
 0,275 275,470 470,665 665,935 935,1325
-to be a policy function?
+to be a policy function,|
+|
 
 1698
 00:46:59,725 --> 00:47:01,105
 0,420 420,705 705,945 945,1110 1110,1380
-That's exactly what it means,
+that's exactly what it means,
+这就是它的意思，
 
 1699
 00:47:01,105 --> 00:47:03,055
 0,315 315,665 865,1200 1200,1535 1615,1950
-right? Given a particular state
+right,| given a particular state
+|给定你发现自己所处的特定状态，
 
 1700
 00:47:03,055 --> 00:47:04,260
 0,195 195,345 345,615 615,900 900,1205
-that you find yourself in,
+that you find yourself in,|
+|
 
 1701
 00:47:04,580 --> 00:47:06,625
 0,290 290,545 545,910 1140,1745 1745,2045
 what is the probability of
+选择具有最高可能性的特定操作的概率是多少，
 
 1702
 00:47:06,625 --> 00:47:08,155
@@ -9284,14 +9573,14 @@ selecting a particular action with
 1703
 00:47:08,155 --> 00:47:09,460
 0,165 165,375 375,1025
-the highest likelihood.|
+the highest likelihood,|
 |
 
 1704
 00:47:09,650 --> 00:47:10,825
 0,260 260,560 560,725 725,890 890,1175
-And that's, you know, exactly
-你知道，这就是这个方法得名的原因，你可以在这里看到这个政策梯度部分。
+and that's, you know, exactly
+这就是这个方法得名的原因，
 
 1705
 00:47:10,825 --> 00:47:12,025
@@ -9301,7 +9590,8 @@ where this method gets its
 1706
 00:47:12,025 --> 00:47:13,680
 0,285 285,555 555,750 750,1055 1075,1655
-name from this policy gradient
+name| from this policy gradient
+|你可以在这里看到这个策略梯度部分。
 
 1707
 00:47:14,510 --> 00:47:15,790
@@ -9318,7 +9608,7 @@ see here.|
 00:47:18,040 --> 00:47:19,490
 0,400 690,950 950,1070 1070,1190 1190,1450
 Now, I want to take
-现在，我想在这节课快结束的时候花很短的时间来谈谈，你们知道的，和今天的第一堂课保持一致的一些挑战，在现实世界中部署这些类型的算法的一些挑战，对吗？
+现在，我想在这节课快结束的时候花很短的时间来谈谈，
 
 1710
 00:47:19,600 --> 00:47:20,910
@@ -9338,7 +9628,8 @@ the class here just to
 1713
 00:47:23,055 --> 00:47:24,480
 0,210 210,545 895,1110 1110,1245 1245,1425
-talk about, you know, some
+talk about,| you know, some
+|和今天的第一节课保持一致的一些挑战，
 
 1714
 00:47:24,480 --> 00:47:26,595
@@ -9353,7 +9644,8 @@ in line with the first
 1716
 00:47:27,495 --> 00:47:28,635
 0,305 325,660 660,855 855,975 975,1140
-lecture today, some of the
+lecture today,| some of the
+|在现实世界中部署这些类型的算法的一些挑战。
 
 1717
 00:47:28,635 --> 00:47:30,585
@@ -9368,14 +9660,14 @@ of algorithms in the context
 1719
 00:47:32,440 --> 00:47:34,520
 0,395 395,650 650,830 830,1150 1680,2080
-of the real world, right?|
+of the real world, right.|
 |
 
 1720
 00:47:35,060 --> 00:47:36,125
 0,255 255,360 360,450 450,710 790,1065
 What do you think when
-当你看到这个训练算法时，你会怎么想？你认为这种训练算法的缺点是什么？我想，如果我们想要将这种方法部署到现实中，具体是哪一步？
+当你看到这个训练算法时，你会怎么想，
 
 1721
 00:47:36,125 --> 00:47:37,210
@@ -9390,7 +9682,8 @@ algorithm that you can see
 1723
 00:47:38,255 --> 00:47:39,695
 0,305 775,1065 1065,1185 1185,1290 1290,1440
-here? What do you think
+here,| what do you think
+|你认为这种训练算法的缺点是什么，
 
 1724
 00:47:39,695 --> 00:47:41,225
@@ -9400,7 +9693,8 @@ are the shortcomings of this
 1725
 00:47:41,225 --> 00:47:43,550
 0,335 445,965 1315,1650 1650,1980 1980,2325
-training algorithm and which step,
+training algorithm| and which step,
+|具体是哪一步，如果我们想要将这种方法部署到现实中？
 
 1726
 00:47:43,550 --> 00:47:44,855
@@ -9421,13 +9715,14 @@ into reality?|
 1729
 00:47:52,910 --> 00:47:54,730
 0,400 540,920 920,1220 1220,1550 1550,1820
-Yeah, exactly. So it's step
-是啊，就是这样。所以这是第二步，对吧？如果你想在现实中做到这一点，对，那基本上意味着你想出去，取走你的车，把它撞上一堆次，就是为了学习如何不撞它，对吗？而这是，你知道，这是根本不可行的。对吗？第一，这也是非常危险的。第二，所以有办法绕过这一点，对吗？绕过这一问题的第一种方法是，人们试图在模拟中训练这些类型的模型，对吗？模拟是非常安全的，因为你知道我们实际上不会破坏任何真实的东西。它的效率仍然很低，因为我们不得不多次运行这些算法，并多次使它们崩溃。只要学会不要撞车，但至少现在从安全的角度来看是这样的。
+Yeah, exactly, so it's step
+是的，就是这样，所以是第二步。
 
 1730
 00:47:54,730 --> 00:47:56,485
 0,375 375,770 1120,1410 1410,1560 1560,1755
-two, right? If you wanted
+two, right.| If you wanted
+|如果你想在现实中做到这一点，
 
 1731
 00:47:56,485 --> 00:47:57,810
@@ -9437,22 +9732,26 @@ to do this in reality,
 1732
 00:47:58,490 --> 00:47:59,980
 0,350 350,650 650,965 965,1250 1250,1490
-right, that essentially means that
+right,| that essentially means that
+|那意味着你想出去，
 
 1733
 00:47:59,980 --> 00:48:01,290
 0,195 195,435 435,780 780,1035 1035,1310
-you want to go out,
+you want to go out,|
+|
 
 1734
 00:48:01,310 --> 00:48:03,010
 0,290 290,470 470,760 1020,1550 1550,1700
 collect your car, crashing it
+取走你的车，把它撞上很多次，
 
 1735
 00:48:03,010 --> 00:48:04,255
 0,165 165,330 330,525 525,830 880,1245
-a bunch of times just
+a bunch of times,| just
+|就是为了学习如何不撞它，
 
 1736
 00:48:04,255 --> 00:48:06,025
@@ -9462,7 +9761,8 @@ to learn how to not
 1737
 00:48:06,025 --> 00:48:08,040
 0,285 285,635 1015,1350 1350,1575 1575,2015
-crash it, right? And that's,
+crash it, right,| and that's,
+|第一，而这是根本不可行的，
 
 1738
 00:48:08,180 --> 00:48:09,580
@@ -9472,22 +9772,25 @@ you know, that's simply not
 1739
 00:48:09,580 --> 00:48:11,485
 0,620 670,990 990,1260 1260,1545 1545,1905
-feasible. Right? Number one, it's
+feasible, right, number one,| it's
+|第二，这也是非常危险的。
 
 1740
 00:48:11,485 --> 00:48:13,110
 0,300 300,525 525,785 1045,1335 1335,1625
-also, you know, very dangerous.
+also, you know, very dangerous,
 
 1741
 00:48:13,220 --> 00:48:16,720
 0,365 365,730 2220,2620 3000,3305 3305,3500
-Number two, so there are
+number two.| So there are
+|所以有办法绕过这一点，
 
 1742
 00:48:16,720 --> 00:48:18,400
 0,255 255,570 570,920 1000,1395 1395,1680
-ways around this, right? The
+ways around this, right,| the
+|绕过这一问题的第一种方法是，
 
 1743
 00:48:18,400 --> 00:48:19,915
@@ -9497,7 +9800,8 @@ number one way around this
 1744
 00:48:19,915 --> 00:48:21,415
 0,255 255,465 465,755 805,1155 1155,1500
-is that people try to
+is that,| people try to
+|人们试图在模拟中训练这些类型的模型，
 
 1745
 00:48:21,415 --> 00:48:22,650
@@ -9507,12 +9811,14 @@ train these types of models
 1746
 00:48:23,060 --> 00:48:25,720
 0,395 395,1000 1260,1660 1740,2330 2330,2660
-in simulation, right? Simulation is
+in simulation, right,| simulation is
+|模拟是非常安全的，
 
 1747
 00:48:25,720 --> 00:48:27,505
 0,285 285,620 790,1190 1420,1650 1650,1785
-very safe because you know
+very safe,| because you know
+|因为我们实际上不会破坏任何真实的东西，
 
 1748
 00:48:27,505 --> 00:48:28,405
@@ -9522,12 +9828,14 @@ we're not going to actually
 1749
 00:48:28,405 --> 00:48:30,780
 0,135 135,695 805,1140 1140,1475 1855,2375
-be damaging anything real. It's
+be damaging anything real,| it's
+|它的效率仍然很低，
 
 1750
 00:48:30,860 --> 00:48:32,260
 0,290 290,470 470,1100 1100,1295 1295,1400
-still very inefficient because we
+still very inefficient,| because we
+|因为我们不得不多次运行这些算法，
 
 1751
 00:48:32,260 --> 00:48:33,190
@@ -9537,7 +9845,8 @@ have to run these algorithms
 1752
 00:48:33,190 --> 00:48:34,530
 0,105 105,240 240,390 390,650 940,1340
-a bunch of times and
+a bunch of times| and
+|并多次使它们撞车，
 
 1753
 00:48:34,550 --> 00:48:35,440
@@ -9547,12 +9856,14 @@ crash them a bunch of
 1754
 00:48:35,440 --> 00:48:36,595
 0,165 165,390 390,705 705,990 990,1155
-times. Just learn not to
+times,| just learn not to
+|只是学习不要撞车，
 
 1755
 00:48:36,595 --> 00:48:37,930
 0,275 505,750 750,870 870,1065 1065,1335
-crash, but at least now
+crash,| but at least now
+|但至少现在从安全的角度来看，
 
 1756
 00:48:37,930 --> 00:48:39,055
@@ -9562,20 +9873,20 @@ at least from a safety
 1757
 00:48:39,055 --> 00:48:40,100
 0,285 285,435 435,695
-point of view.|
+point of view,|
 |
 
 1758
 00:48:40,220 --> 00:48:41,880
 0,105 105,285 285,800
-It's much safer.|
-这样就安全多了。|
+it's much safer.|
+这样安全多了。|
 
 1759
 00:48:41,950 --> 00:48:43,010
 0,320 320,500 500,635 635,785 785,1060
 But, you know, the problem
-但是，你知道，问题是用于强化学习的现代模拟引擎，一般来说，特别是视觉的现代模拟器，根本不能非常准确地捕捉到现实。事实上，有一个非常著名的概念叫做道德鸿沟，这是当你在模拟中训练算法时存在的鸿沟，它们不会延伸到我们在现实中看到的许多现象和模式。
+但是，问题是用于强化学习的现代模拟引擎，
 
 1760
 00:48:43,420 --> 00:48:45,380
@@ -9585,7 +9896,8 @@ is that modern simulation engines
 1761
 00:48:45,910 --> 00:48:47,750
 0,400 450,1130 1130,1310 1310,1535 1535,1840
-for reinforcement learning and generally,
+for reinforcement learning| and generally,
+|一般来说，特别是视觉的现代模拟器，
 
 1762
 00:48:48,070 --> 00:48:50,660
@@ -9595,7 +9907,8 @@ very broadly speaking, modern simators
 1763
 00:48:51,190 --> 00:48:53,610
 0,400 450,850 1230,1630 1890,2195 2195,2420
-for vision specifically, do not
+for vision specifically,| do not
+|根本不能非常准确地捕捉到现实，
 
 1764
 00:48:53,610 --> 00:48:56,030
@@ -9605,7 +9918,8 @@ at all capture reality very
 1765
 00:48:56,110 --> 00:48:59,010
 0,575 575,830 830,1090 2430,2765 2765,2900
-accurately. In fact, there's a
+accurately,| in fact, there's a
+|事实上，有一个非常著名的概念叫做 sim-to-real 鸿沟，
 
 1766
 00:48:59,010 --> 00:49:01,830
@@ -9615,22 +9929,26 @@ very famous notion called the
 1767
 00:49:01,830 --> 00:49:03,570
 0,585 585,920 1180,1440 1440,1575 1575,1740
-simoral gap, which is a
+sim-to-real gap,| which is a
+|这是存在的鸿沟，
 
 1768
 00:49:03,570 --> 00:49:05,040
 0,270 270,615 615,980 1000,1275 1275,1470
-gap that exists when you
+gap that exists,| when you
+|当你在模拟中训练算法时，
 
 1769
 00:49:05,040 --> 00:49:07,455
 0,320 400,920 940,1260 1260,1790 2140,2415
-train algorithms in simulation, and
+train algorithms in simulation,| and
+|它们不会延伸到，
 
 1770
 00:49:07,455 --> 00:49:09,300
 0,195 195,660 660,1055 1375,1680 1680,1845
-they don't extend to a
+they don't extend to| a
+|我们在现实中看到的许多现象和模式。
 
 1771
 00:49:09,300 --> 00:49:10,305
@@ -9652,7 +9970,7 @@ that we see in reality.|
 00:49:13,720 --> 00:49:15,145
 0,345 345,615 615,870 870,1170 1170,1425
 And one really cool result
-我想在这里强调的一个非常酷的结果是，当我们训练强化学习算法时，我们最终希望它们不是在模拟中运行。我们希望它们是真实存在的。作为我们麻省理工学院实验室的一部分，我们一直在开发这种非常、非常酷的全新照片、逼真的模拟引擎，它超越了当今模拟器工作的模式，基本上就是定义一个环境模型，并试图，你知道，合成这个模型。从本质上讲，这些模拟器就像是美化了的游戏引擎，对吗？当你看着他们的时候，他们看起来都很有活力。但我们所做的一件事是采用数据驱动的方法，使用真实世界的真实数据。我们可以建立一个超逼真的合成环境，看起来就像这样吗？这是我们麻省理工学院在开发照片真实感模拟引擎时创造的一个很酷的结果。这实际上是一个自动代理，而不是一辆真正的汽车通过。
+我想在这里强调的一个非常酷的结果是，
 
 1775
 00:49:15,145 --> 00:49:15,895
@@ -9662,17 +9980,20 @@ that I want to just
 1776
 00:49:15,895 --> 00:49:17,050
 0,330 330,630 630,810 810,975 975,1155
-highlight here is that when
+highlight here is that,| when
+|当我们训练强化学习算法时，
 
 1777
 00:49:17,050 --> 00:49:18,970
 0,240 240,495 495,1140 1140,1400 1450,1920
-we're training reinforcement learning algorithms,
+we're training reinforcement learning algorithms,|
+|
 
 1778
 00:49:18,970 --> 00:49:20,350
 0,285 285,615 615,915 915,1185 1185,1380
 we ultimately want them to
+我们最终希望它们不是在模拟中运行。
 
 1779
 00:49:20,350 --> 00:49:21,895
@@ -9682,12 +10003,14 @@ be, you know, not operating
 1780
 00:49:21,895 --> 00:49:23,110
 0,210 210,600 600,810 810,1005 1005,1215
-in simulation. We want them
+in simulation,| we want them
+|我们希望它们是真实存在的，
 
 1781
 00:49:23,110 --> 00:49:25,050
 0,135 135,240 240,480 480,860 1540,1940
-to be in reality. And
+to be in reality,| and
+|作为我们 MIT 实验的一部分，
 
 1782
 00:49:25,820 --> 00:49:27,295
@@ -9697,7 +10020,8 @@ as part of our lab
 1783
 00:49:27,295 --> 00:49:28,600
 0,210 210,390 390,675 675,1050 1050,1305
-here at MIT, we've been
+here at MIT,| we've been
+|我们一直在开发这种非常、非常酷的全新照片、逼真的模拟引擎，
 
 1784
 00:49:28,600 --> 00:49:30,760
@@ -9712,7 +10036,8 @@ brand new photo, realistic simulation
 1786
 00:49:32,545 --> 00:49:34,680
 0,395 535,840 840,1140 1140,1535 1735,2135
-engine that goes beyond basically
+engine,| that goes beyond basically
+|它超越了当今模拟器工作的模式，
 
 1787
 00:49:34,760 --> 00:49:36,870
@@ -9722,7 +10047,8 @@ the paradigm of how simulators
 1788
 00:49:36,920 --> 00:49:38,760
 0,400 420,820 840,1100 1100,1360 1440,1840
-work today, which is basically
+work today,| which is basically
+|基本上就是定义一个环境模型，
 
 1789
 00:49:38,870 --> 00:49:40,105
@@ -9732,37 +10058,43 @@ defining a model of their
 1790
 00:49:40,105 --> 00:49:42,115
 0,335 805,1185 1185,1500 1500,1800 1800,2010
-environment and trying to, you
+environment| and trying to, you
+|并试图合成这个模型，
 
 1791
 00:49:42,115 --> 00:49:43,920
 0,195 195,810 810,1175 1195,1500 1500,1805
-know, synthesize that that model.
+know, synthesize that that model,|
+|
 
 1792
 00:49:44,270 --> 00:49:46,090
 0,395 395,790 810,1355 1355,1565 1565,1820
-Essentially these simulators are like
+essentially these simulators are like
+从本质上讲，这些模拟器就像是美化了的游戏引擎，
 
 1793
 00:49:46,090 --> 00:49:47,830
 0,540 540,765 765,1070 1210,1530 1530,1740
-glorified game engines, right? They
+glorified game engines, right,| they
+|当你看着他们的时候，他们看起来都很像游戏，
 
 1794
 00:49:47,830 --> 00:49:49,170
 0,210 210,450 450,720 720,1005 1005,1340
-all look very game like
+all look very game like,
 
 1795
 00:49:49,370 --> 00:49:50,280
 0,260 260,380 380,515 515,650 650,910
-when you look at them.
+when you look at them,|
+|
 
 1796
 00:49:50,660 --> 00:49:52,030
 0,400 420,710 710,875 875,1025 1025,1370
-But one thing that we've
+but one thing that we've
+但我们所做的一件事是采用数据驱动的方法，
 
 1797
 00:49:52,030 --> 00:49:54,025
@@ -9772,12 +10104,14 @@ done is taken a data
 1798
 00:49:54,025 --> 00:49:55,810
 0,315 315,695 715,1115 1165,1500 1500,1785
-driven approach using real data
+driven approach| using real data
+|使用真实世界的真实数据，
 
 1799
 00:49:55,810 --> 00:49:57,340
 0,240 240,420 420,630 630,950 1240,1530
-of the real world. Can
+of the real world,| can
+|我们可以建立一个超逼真的合成环境，看起来就像这样，
 
 1800
 00:49:57,340 --> 00:49:59,370
@@ -9792,12 +10126,14 @@ that are super photo realistic
 1802
 00:50:01,630 --> 00:50:02,965
 0,180 180,345 345,540 540,860 1030,1335
-and look like this, right?
+and look like this, right,|
+|
 
 1803
 00:50:02,965 --> 00:50:04,090
 0,150 150,270 270,545 595,885 885,1125
-So this is a cool
+so this is a cool
+这是我们 MIT 创造的一个很酷的结果，
 
 1804
 00:50:04,090 --> 00:50:05,920
@@ -9807,29 +10143,31 @@ result that we created here
 1805
 00:50:05,920 --> 00:50:08,125
 0,240 240,590 1210,1590 1590,1920 1920,2205
-at MIT developing this photo
+at MIT,| developing this photo
+|开发照片真实感模拟引擎时，
 
 1806
 00:50:08,125 --> 00:50:10,000
 0,630 630,1125 1125,1395 1395,1620 1620,1875
-realistic simulation engine. This is
+realistic simulation engine,| this is
+|这实际上是一个自动 agent ，
 
 1807
 00:50:10,000 --> 00:50:11,890
 0,225 225,315 315,840 840,1100 1600,1890
-actually an autonomous agent, not
+actually an autonomous agent,| not
+|而不是一辆真正的汽车通过我们的虚拟模拟器，
 
 1808
 00:50:11,890 --> 00:50:13,890
 0,150 150,345 345,680 1000,1400 1600,2000
-a real car driving through.|
-|
+a real car driving through
 
 1809
 00:50:14,270 --> 00:50:15,685
 0,320 320,640 660,1190 1190,1310 1310,1415
-Our virtual simulator and a
-我们的虚拟模拟器和一堆不同类型的不同场景。所以这个模拟器被称为Vista，它允许我们基本上使用我们在真实世界中收集的真实数据，然后重新模拟那些相同的真实道路。例如，假设你开着你的车，开着大质量的车，收集质量数据，现在你可以把一个虚拟代理人放到同一个模拟环境中，从不同类型的扰动或，或它可能暴露的角度，观察那个场景可能是什么样子的新视角。
+our virtual simulator| and a
+|一堆不同类型的不同场景，
 
 1810
 00:50:15,685 --> 00:50:16,885
@@ -9839,12 +10177,14 @@ bunch of different types of
 1811
 00:50:16,885 --> 00:50:19,060
 0,330 330,1025 1345,1605 1605,1770 1770,2175
-different scenarios. So this simulator
+different scenarios,| so this simulator
+|所以这个模拟器被称为 VISTA ，
 
 1812
 00:50:19,060 --> 00:50:20,275
 0,165 165,345 345,765 765,1005 1005,1215
-is called vista, allows us
+is called VISTA,| allows us
+|它允许我们使用我们在真实世界中收集的真实数据，
 
 1813
 00:50:20,275 --> 00:50:21,990
@@ -9859,7 +10199,8 @@ that we do collect in
 1815
 00:50:23,110 --> 00:50:24,535
 0,120 120,300 300,620 940,1215 1215,1425
-the real world, but then
+the real world,| but then
+|然后重新模拟那些相同的真实道路，
 
 1816
 00:50:24,535 --> 00:50:26,590
@@ -9869,27 +10210,31 @@ the real world, but then
 1817
 00:50:26,590 --> 00:50:28,030
 0,350 430,750 750,960 960,1185 1185,1440
-roads. So for example, let's
+roads,| so for example, let's
+|例如，假设你开着你的车，
 
 1818
 00:50:28,030 --> 00:50:28,735
 0,105 105,270 270,420 420,555 555,705
-say you take your car,
+say you take your car,|
+|
 
 1819
 00:50:28,735 --> 00:50:29,620
 0,150 150,330 330,510 510,675 675,885
-you drive out on mass,
+you drive out on [mass
+开着[质量]的车，收集[质量]数据，
 
 1820
 00:50:29,620 --> 00:50:31,120
 0,320 550,870 870,1095 1095,1305 1305,1500
-have you collect data of
+have], you collect data of
 
 1821
 00:50:31,120 --> 00:50:32,610
 0,225 225,560 820,1095 1095,1230 1230,1490
-mass have you can now
+[mass have],| you can now
+|现在你可以把一个虚拟 agent 放到同一个模拟环境中，
 
 1822
 00:50:32,690 --> 00:50:34,770
@@ -9899,7 +10244,8 @@ drop a virtual agent into
 1823
 00:50:34,850 --> 00:50:37,620
 0,350 350,700 720,1355 1355,1750 2370,2770
-that same simulated environment, observing
+that same simulated environment,| observing
+|观察那个场景可能是什么样子的新视角，
 
 1824
 00:50:37,820 --> 00:50:39,880
@@ -9909,17 +10255,20 @@ new viewpoints of what that
 1825
 00:50:39,880 --> 00:50:40,900
 0,255 255,420 420,570 570,780 780,1020
-scene might have looked like
+scene might have looked like|
+|
 
 1826
 00:50:40,900 --> 00:50:43,230
 0,240 240,540 540,855 855,1190 1720,2330
-from different types of perturbations
+from different types of perturbations|
+从不同类型的扰动，|
 
 1827
 00:50:43,400 --> 00:50:45,880
 0,400 480,830 830,1100 1100,1420 1860,2480
 or, or types of angles
+或它可能暴露的角度。
 
 1828
 00:50:45,880 --> 00:50:47,035
@@ -9936,7 +10285,7 @@ to.|
 00:50:47,800 --> 00:50:49,155
 0,365 365,650 650,890 890,1130 1130,1355
 And that allows us to
-这允许我们现在完全使用强化学习来训练这些代理，没有人类的标签，但重要的是允许它们转移到现实中，因为不再有SIM到真正的差距。所以事实上，我们就是这么做的。我们将代理放入我们的模拟器中，我们使用你们在今天的课程中学到的确切算法来训练他们，这些策略梯度算法和所有的训练都完全在模拟中完成。然后我们采取了这些政策，并将它们部署在我们的全尺寸自动驾驶汽车上。这现在是在真实世界中，不再是在模拟中，在左边你可以看到。
+这允许我们完全使用强化学习来训练这些 agent ，
 
 1831
 00:50:49,155 --> 00:50:50,840
@@ -9946,57 +10295,67 @@ train these agents now entirely
 1832
 00:50:51,070 --> 00:50:53,250
 0,365 365,1100 1100,1360 1560,1895 1895,2180
-using reinforcement learning, no human
+using reinforcement learning,| no human
+|没有人类的标签，
 
 1833
 00:50:53,250 --> 00:50:56,235
 0,560 1180,1580 1750,2150 2320,2655 2655,2985
-labels, but importantly allowed them
+labels,| but importantly allowed them
+|但重要的是允许它们转移到现实中，
 
 1834
 00:50:56,235 --> 00:50:57,830
 0,240 240,420 420,960 960,1245 1245,1595
-to be transferred into reality
+to be transferred into reality,|
+|
 
 1835
 00:50:57,940 --> 00:50:59,340
 0,290 290,650 650,965 965,1235 1235,1400
-because there's no SIM to
+because there's no {sim-to-real -
+因为不再有 sim-to-real 鸿沟。
 
 1836
 00:50:59,340 --> 00:51:01,110
 0,180 180,500 880,1280 1450,1680 1680,1770
-real gap anymore. So in
+-} gap anymore.| So in
+|所以事实上，我们就是这么做的，
 
 1837
 00:51:01,110 --> 00:51:03,140
 0,180 180,500 910,1290 1290,1650 1650,2030
-fact, we did exactly this.
+fact, we did exactly this,|
+|
 
 1838
 00:51:03,280 --> 00:51:05,445
 0,320 320,640 660,1060 1620,1940 1940,2165
-We placed agents into our
+we placed agents into our
+我们将 agent 放入我们的模拟器中，
 
 1839
 00:51:05,445 --> 00:51:06,860
 0,450 450,675 675,915 915,1125 1125,1415
-simulator, we trained them using
+simulator,| we trained them using
+|我们使用确切的算法，
 
 1840
 00:51:07,060 --> 00:51:09,090
 0,350 350,700 930,1450 1620,1880 1880,2030
-the exact algorithms that you
+the exact algorithms,| that you
+|你们在今天的课程中学到的策略梯度算法，
 
 1841
 00:51:09,090 --> 00:51:10,350
 0,225 225,450 450,615 615,990 990,1260
-learned about in today's lecture,
+learned about in today's lecture
 
 1842
 00:51:10,350 --> 00:51:12,555
 0,285 285,585 585,1140 1140,1640 1900,2205
-these policy gradient algorithms and
+these policy gradient algorithms| and
+|所有的训练都完全在模拟中完成，
 
 1843
 00:51:12,555 --> 00:51:13,590
@@ -10006,12 +10365,14 @@ all of the training was
 1844
 00:51:13,590 --> 00:51:16,260
 0,290 310,710 940,1275 1275,1850 2320,2670
-done entirely in simulation. Then
+done entirely in simulation,| then
+|然后我们采取了这些策略，
 
 1845
 00:51:16,260 --> 00:51:17,535
 0,225 225,390 390,585 585,890 1000,1275
-we took these policies and
+we took these policies| and
+|并将它们部署在我们的全尺寸自动驾驶汽车上，
 
 1846
 00:51:17,535 --> 00:51:18,915
@@ -10021,12 +10382,14 @@ we deployed them on board
 1847
 00:51:18,915 --> 00:51:20,630
 0,345 345,630 630,885 885,1440 1440,1715
-our full scale autonomous vehicle.
+our full scale autonomous vehicle,|
+|
 
 1848
 00:51:20,740 --> 00:51:21,630
 0,260 260,410 410,590 590,755 755,890
-This is now in the
+this is now in the
+这现在是在真实世界中，不再是在模拟中，
 
 1849
 00:51:21,630 --> 00:51:22,830
@@ -10036,19 +10399,20 @@ real world, no longer in
 1850
 00:51:22,830 --> 00:51:24,960
 0,500 1030,1430 1540,1830 1830,1965 1965,2130
-simulation, and on the left
+simulation,| and on the left
+|在左边你可以看到，
 
 1851
 00:51:24,960 --> 00:51:25,970
 0,210 210,390 390,540 540,705 705,1010
-hand side you can see.|
+hand side you can see,|
 |
 
 1852
 00:51:26,850 --> 00:51:29,050
 0,395 395,710 710,1030 1380,1780 1800,2200
-Basically this car driving through
-基本上这辆车在现实世界中完全自主地通过这个环境，没有迁移学习在这里做。不存在从真实世界数据中增加数据的情况。这完全是使用模拟来训练的，这实际上是有史以来第一次使用强化学习来端到端地训练策略。我们是一辆可以在现实中部署的自动驾驶汽车。这是我们在麻省理工学院创造的很酷的东西.但现在我们已经讨论了强化学习和策略学习的所有基础，我想谈谈我们正在看到的其他一些可能非常令人兴奋的应用。围棋是一个非常受欢迎的应用，很多人都会告诉你和谈论它。
+basically this car driving through
+基本上这辆车在现实世界中完全自主地通过这个环境，
 
 1853
 00:51:29,100 --> 00:51:31,535
@@ -10058,37 +10422,44 @@ this environment completely autonomous in
 1854
 00:51:31,535 --> 00:51:32,885
 0,135 135,315 315,635 685,1020 1020,1350
-the real world, no transfer
+the real world,| no transfer
+|没有迁移学习在这里做，
 
 1855
 00:51:32,885 --> 00:51:34,420
 0,345 345,675 675,975 975,1215 1215,1535
-learning is is done here.
+learning is is done here,|
+|
 
 1856
 00:51:34,500 --> 00:51:36,815
 0,245 245,425 425,760 1290,2075 2075,2315
-There is no augmentation of
+there is no augmentation of
+不存在从真实世界数据中增加数据的情况，
 
 1857
 00:51:36,815 --> 00:51:38,225
 0,275 385,690 690,900 900,1140 1140,1410
-data from real world data.
+data from real world data,|
+|
 
 1858
 00:51:38,225 --> 00:51:40,145
 0,210 210,465 465,845 865,1265 1525,1920
-This is entirely trained using
+this is entirely trained using
+这完全是使用模拟来训练的，
 
 1859
 00:51:40,145 --> 00:51:42,095
 0,570 570,810 810,975 975,1265 1675,1950
-simulation and this represented actually
+simulation| and this represented actually
+|这是有史以来第一次，
 
 1860
 00:51:42,095 --> 00:51:43,715
 0,150 150,360 360,615 615,935 1315,1620
-the first time ever that
+the first time ever,| that
+|使用强化学习来端到端地训练策略，
 
 1861
 00:51:43,715 --> 00:51:45,710
@@ -10103,7 +10474,8 @@ train a policy end to
 1863
 00:51:47,075 --> 00:51:48,785
 0,245 685,975 975,1035 1035,1470 1470,1710
-end. We're an autonomous vehicle
+end,| we're an autonomous vehicle
+|我们是一辆可以在现实中部署的自动驾驶汽车，
 
 1864
 00:51:48,785 --> 00:51:50,330
@@ -10113,22 +10485,25 @@ that could be deployed in
 1865
 00:51:50,330 --> 00:51:51,485
 0,320 460,705 705,810 810,930 930,1155
-reality. So that was something
+reality,| so that was something
+|这是我们在 MIT 创造的很酷的东西。
 
 1866
 00:51:51,485 --> 00:51:53,435
 0,315 315,570 570,875 1135,1535 1585,1950
-really cool that uh we
+really cool that {} we
 
 1867
 00:51:53,435 --> 00:51:54,700
 0,270 270,540 540,765 765,945 945,1265
-we created here at MIT.
+we created here at MIT.|
+|
 
 1868
 00:51:54,870 --> 00:51:56,050
 0,305 305,500 500,650 650,845 845,1180
 But now that we covered,
+但现在我们已经讨论了强化学习和策略学习的所有基础，
 
 1869
 00:51:56,340 --> 00:51:57,335
@@ -10143,7 +10518,8 @@ foundations of reinforcement learning and
 1871
 00:52:00,065 --> 00:52:02,090
 0,305 325,725 1375,1650 1650,1800 1800,2025
-policy learning, I want to
+policy learning,| I want to
+|我想谈谈我们正在看到的其他一些可能非常令人兴奋的应用，
 
 1872
 00:52:02,090 --> 00:52:03,245
@@ -10158,12 +10534,14 @@ very exciting applications that we're
 1874
 00:52:05,870 --> 00:52:08,170
 0,290 640,1040 1090,1440 1440,1790 1900,2300
-seeing. And one very popular
+seeing,| and one very popular
+|一个受欢迎的应用，
 
 1875
 00:52:08,490 --> 00:52:09,410
 0,350 350,545 545,650 650,785 785,920
-application that a lot of
+application,| that a lot of
+|很多人都会告诉你和谈论它的游戏是围棋。
 
 1876
 00:52:09,410 --> 00:52:10,535
@@ -10178,19 +10556,20 @@ and talk about is the
 1878
 00:52:11,615 --> 00:52:12,900
 0,180 180,405 405,725
-game of go.|
+game of Go.|
 |
 
 1879
 00:52:12,940 --> 00:52:14,930
 0,305 305,610 780,1460 1460,1655 1655,1990
 So here reinforcement learning agents
-所以在这里，强化学习代理实际上可以用来对抗围棋大师级别的棋手的测试，你知道，当时取得了令人难以置信的令人印象深刻的结果。所以，对于那些不熟悉围棋游戏的人来说，围棋是在19*19的棋盘上玩的。围棋的粗略目标是基本上比你的对手拥有更多的棋子，对吗？通过这个表示抱歉的网格，通过这个网格，你可以在这里看到这个19乘19的网格。
+所以在这里，强化学习 agent 可以用来，
 
 1880
 00:52:15,130 --> 00:52:17,060
 0,275 275,485 485,770 770,1120 1530,1930
-could be actually tried to
+could be| actually tried to
+|对抗围棋大师级别的棋手的测试，
 
 1881
 00:52:17,410 --> 00:52:18,930
@@ -10205,7 +10584,8 @@ you know, grand master level
 1883
 00:52:20,890 --> 00:52:23,205
 0,335 335,670 1290,1690 1890,2120 2120,2315
-go players and you know
+Go players| and you know
+|当时取得了令人难以置信的令人印象深刻的结果，
 
 1884
 00:52:23,205 --> 00:52:24,950
@@ -10215,7 +10595,8 @@ at the time achieved incredibly
 1885
 00:52:25,240 --> 00:52:26,655
 0,400 570,905 905,1130 1130,1280 1280,1415
-impressive results. So for those
+impressive results,| so for those
+|所以，对于那些不熟悉围棋游戏的人来说，
 
 1886
 00:52:26,655 --> 00:52:27,410
@@ -10230,22 +10611,25 @@ familiar with the game of
 1888
 00:52:28,740 --> 00:52:30,140
 0,255 255,620 640,930 930,1110 1110,1400
-go go game of go
+Go,| Go, game of Go
+|围棋是在 19x19 的棋盘上玩的，
 
 1889
 00:52:30,190 --> 00:52:31,250
 0,305 305,485 485,620 620,770 770,1060
-is played on a nineteen
+is played on a 19
 
 1890
 00:52:31,510 --> 00:52:33,830
 0,305 305,610 840,1240 1620,1970 1970,2320
-by nineteen board. The rough
+by 19 board,| the rough
+|围棋的粗略目标是，
 
 1891
 00:52:33,850 --> 00:52:35,790
 0,400 480,800 800,1120 1380,1715 1715,1940
-objective of go is to
+objective of Go is| to
+|比你的对手拥有更多的棋子，
 
 1892
 00:52:35,790 --> 00:52:37,610
@@ -10255,34 +10639,36 @@ claim basically more board pieces
 1893
 00:52:37,720 --> 00:52:39,465
 0,290 290,580 600,1180 1200,1505 1505,1745
-than your opponent, right? And
+than your opponent, right,| and
+|通过这个网格，
 
 1894
 00:52:39,465 --> 00:52:42,465
 0,240 240,545 865,1295 1405,1805 2605,3000
-through the grid of sorry
+through the grid of, sorry
 
 1895
 00:52:42,465 --> 00:52:43,560
 0,285 285,495 495,780 780,975 975,1095
-through the grid that you
+through the grid,| that you
+|你可以在这里看到这个 19x19 的网格，
 
 1896
 00:52:43,560 --> 00:52:44,475
 0,150 150,315 315,480 480,660 660,915
-can see here this nineteen
+can see here this 19
 
 1897
 00:52:44,475 --> 00:52:46,140
 0,255 255,545 685,1115
-by nineteen grid.|
+by 19 grid,|
 |
 
 1898
 00:52:46,140 --> 00:52:48,020
 0,290 640,945 945,1140 1140,1430 1480,1880
-And while the game itself,
-虽然游戏本身，逻辑规则，实际上非常简单，但这块棋盘可以放置的可能行动空间和可能状态的数量比宇宙中的原子数量更多。因此，这个游戏，尽管规则在逻辑定义上非常简单，但对于一个人工算法来说，它是一个非常复杂的游戏。
+and while the game itself,
+虽然游戏本身，逻辑规则，实际上非常简单，
 
 1899
 00:52:48,160 --> 00:52:49,935
@@ -10292,7 +10678,8 @@ the the logical rules, are
 1900
 00:52:49,935 --> 00:52:51,555
 0,225 225,450 450,785 1075,1365 1365,1620
-actually quite simple, the number
+actually quite simple,| the number
+|但这块棋盘可以放置的可能行动空间和可能状态的数量
 
 1901
 00:52:51,555 --> 00:52:54,555
@@ -10302,12 +10689,14 @@ of possible action spaces and
 1902
 00:52:54,555 --> 00:52:56,295
 0,335 385,785 955,1260 1260,1485 1485,1740
-possible states that this board
+possible states that this board|
+|
 
 1903
 00:52:56,295 --> 00:52:57,795
 0,195 195,345 345,570 570,905 1195,1500
 could be placed into is
+比宇宙中的原子数量更多，
 
 1904
 00:52:57,795 --> 00:52:58,800
@@ -10317,7 +10706,8 @@ greater than the number of
 1905
 00:52:58,800 --> 00:53:00,540
 0,435 435,675 675,930 930,1310 1480,1740
-atoms in the universe. So
+atoms in the universe,| so
+|因此，这个游戏，尽管规则在逻辑定义上非常简单，
 
 1906
 00:53:00,540 --> 00:53:02,385
@@ -10332,7 +10722,8 @@ rules are very simple in
 1908
 00:53:04,020 --> 00:53:06,510
 0,195 195,645 645,1160 1810,2160 2160,2490
-their logical definitions, is an
+their logical definitions,| is an
+|但对于一个人工算法来说，它是一个非常复杂的游戏。
 
 1909
 00:53:06,510 --> 00:53:08,955
@@ -10354,7 +10745,7 @@ master.|
 00:53:11,860 --> 00:53:12,970
 0,180 180,345 345,615 615,885 885,1110
 So the objective here was
-所以这里的目标是建立一种强化学习算法来掌握围棋游戏，不仅击败，你知道，这些黄金标准软件，而且在当时看起来像是一个惊人的结果是击败了大师级的棋手。因此，围棋世界排名第一的棋手显然是人类冠军。
+所以这里的目标是建立一种强化学习算法来掌握围棋游戏，
 
 1913
 00:53:12,970 --> 00:53:15,120
@@ -10369,7 +10760,8 @@ algorithm to master the game
 1915
 00:53:16,720 --> 00:53:18,300
 0,180 180,470 520,825 825,1130 1180,1580
-of go, not only beating,
+of Go,| not only beating,
+|不仅击败这些黄金标准软件，
 
 1916
 00:53:18,620 --> 00:53:20,190
@@ -10379,7 +10771,8 @@ you know, these gold standard
 1917
 00:53:20,660 --> 00:53:22,615
 0,635 635,1000 1020,1420 1530,1805 1805,1955
-softwareares, but also what was
+softwareares,| but also what was
+|而且在当时看起来像是一个惊人的结果是击败了大师级的棋手，
 
 1918
 00:53:22,615 --> 00:53:23,500
@@ -10394,17 +10787,19 @@ amazing result was to beat
 1920
 00:53:25,285 --> 00:53:27,130
 0,225 225,480 480,845 865,1265 1495,1845
-the grand master level players.
+the grand master level players,|
+|
 
 1921
 00:53:27,130 --> 00:53:28,060
 0,195 195,315 315,510 510,735 735,930
-So the number one player
+so the number one player
+围棋世界排名第一的棋手显然是人类冠军。
 
 1922
 00:53:28,060 --> 00:53:29,280
 0,150 150,285 285,560 610,915 915,1220
-in the world of go
+in the world of Go
 
 1923
 00:53:29,630 --> 00:53:31,740
@@ -10420,13 +10815,14 @@ obviously.|
 1925
 00:53:33,010 --> 00:53:34,800
 0,380 380,710 710,1250 1250,1580 1580,1790
-So Google deepmind Rose to
-所以Google DeepMind Rose应对了他们几年前创造的这个挑战，开发了这个解决方案，它非常基于你们在今天的课程中学到的完全相同的算法，将这个网络的价值部分和残留层结合在一起，我们将在明天的下一堂课中讨论。而使用强化学习管道，他们能够击败人类玩家的大冠军，而其核心的想法其实很简单，第一步是你训练一个神经网络，基本上观看人类水平的专家。所以这不是使用强化学习，使用监督学习，使用我们在第一课、第二课和第三课中讨论的技术。
+So Google DeepMind rose to
+所以 Google DeepMind 应对了这个挑战，
 
 1926
 00:53:34,800 --> 00:53:37,340
 0,180 180,500 1150,1550 1600,2000 2140,2540
-this challenge they created a
+this challenge,| they created a
+|他们几年前开发了这个解决方案，
 
 1927
 00:53:37,630 --> 00:53:39,500
@@ -10436,7 +10832,8 @@ couple years ago developing this
 1928
 00:53:39,520 --> 00:53:42,200
 0,400 720,1120 1260,1660 1890,2285 2285,2680
-solution, which is very much
+solution,| which is very much
+|它非常基于你们在今天的课程中学到的完全相同的算法，
 
 1929
 00:53:42,790 --> 00:53:44,415
@@ -10451,7 +10848,8 @@ algorithms that you learned about
 1931
 00:53:45,465 --> 00:53:47,750
 0,180 180,525 525,785 1225,1775 1885,2285
-in today's lecture, combining both
+in today's lecture,| combining both
+|将这个网络的价值部分和[残留]层结合在一起，
 
 1932
 00:53:47,770 --> 00:53:49,695
@@ -10461,7 +10859,8 @@ the value part of this
 1933
 00:53:49,695 --> 00:53:52,230
 0,300 300,600 600,1265 1285,1865 2215,2535
-network with residual layers, which
+network with [residual] layers,| which
+|我们将在明天的下一节课中讨论，
 
 1934
 00:53:52,230 --> 00:53:53,610
@@ -10471,12 +10870,14 @@ we'll cover in the next
 1935
 00:53:53,610 --> 00:53:56,865
 0,320 400,800 1780,2175 2175,2565 2565,3255
-lecture tomorrow. And using reinforcement
+lecture tomorrow,| and using reinforcement
+|而使用强化学习管道，
 
 1936
 00:53:56,865 --> 00:53:58,800
 0,225 225,575 1225,1530 1530,1695 1695,1935
-learning pipeline, they were able
+learning pipeline,| they were able
+|他们能够击败人类玩家的大冠军，
 
 1937
 00:53:58,800 --> 00:54:00,560
@@ -10486,7 +10887,8 @@ to defeat the grand champion
 1938
 00:54:00,730 --> 00:54:01,980
 0,350 350,650 650,860 860,1040 1040,1250
-human players and the idea
+human players| and the idea
+|而其核心的想法其实很简单，
 
 1939
 00:54:01,980 --> 00:54:03,110
@@ -10496,7 +10898,8 @@ that its core was actually
 1940
 00:54:03,250 --> 00:54:04,880
 0,350 350,700 780,1055 1055,1280 1280,1630
-very simple, the first step
+very simple,| the first step
+|第一步是你训练一个神经网络，
 
 1941
 00:54:04,900 --> 00:54:06,375
@@ -10506,12 +10909,14 @@ is that you train a
 1942
 00:54:06,375 --> 00:54:07,970
 0,225 225,480 480,765 765,1055 1195,1595
-neural network to basically watch
+neural network| to basically watch
+|基本上观看人类水平的专家，
 
 1943
 00:54:08,230 --> 00:54:10,770
 0,400 540,940 1200,1600 2190,2435 2435,2540
-human level experts. So this
+human level experts,| so this
+|所以这不是使用强化学习，使用监督学习，
 
 1944
 00:54:10,770 --> 00:54:12,350
@@ -10521,7 +10926,8 @@ is not using reinforcement learning,
 1945
 00:54:12,490 --> 00:54:14,745
 0,400 660,1040 1040,1390 1650,2015 2015,2255
-using supervised learning, using the
+using supervised learning,| using the
+|使用我们在第一课、第二课和第三课中讨论的技术。
 
 1946
 00:54:14,745 --> 00:54:15,720
@@ -10537,18 +10943,20 @@ lectures one, two and three.|
 1948
 00:54:17,460 --> 00:54:19,200
 0,380 610,930 930,1155 1155,1410 1410,1740
-And from this first step,
-从第一步开始，我们的目标是建立一个类似于一个政策，它将模仿人类类型的玩家或人类特级大师根据给定的棋盘采取的一些粗略模式，说明他们可能执行的动作类型。但给出这个预先训练的模型，基本上你可以用它来引导和强化学习算法，这将与它自己的竞争。
+And from this first step,|
+从第一步开始，|
 
 1949
 00:54:19,200 --> 00:54:20,180
 0,240 240,390 390,570 570,720 720,980
 the goal is to build
+我们的目标是建立一个类似于一个策略，
 
 1950
 00:54:20,260 --> 00:54:21,525
 0,260 260,410 410,700 870,1130 1130,1265
-like a policy that would
+like a policy,| that would
+|它将模仿人类玩家，
 
 1951
 00:54:21,525 --> 00:54:22,965
@@ -10563,17 +10971,19 @@ patterns that a human type
 1953
 00:54:24,705 --> 00:54:25,740
 0,210 210,495 495,720 720,825 825,1035
-of player or a human
+of player| or a human
+|或人类特级大师采取的，
 
 1954
 00:54:25,740 --> 00:54:27,675
 0,560 610,915 915,1220 1450,1770 1770,1935
-grandmaster would take based on
+grandmaster would take,| based on
+|根据给定的棋盘，他们可能采取的行动，
 
 1955
 00:54:27,675 --> 00:54:28,800
 0,105 105,300 300,600 600,915 915,1125
-a given board, state the
+a given board state, the
 
 1956
 00:54:28,800 --> 00:54:29,775
@@ -10583,12 +10993,14 @@ type of actions that they
 1957
 00:54:29,775 --> 00:54:31,770
 0,275 475,875 1345,1590 1590,1725 1725,1995
-might execute. But then given
+might execute,| but then given
+|但给出这个预先训练的模型，
 
 1958
 00:54:31,770 --> 00:54:33,740
 0,380 520,855 855,1155 1155,1520 1570,1970
-this pre trained model, essentially
+this pre trained model,| essentially
+|你可以用它来引导和强化学习算法，
 
 1959
 00:54:34,090 --> 00:54:35,010
@@ -10598,19 +11010,20 @@ you could use it to
 1960
 00:54:35,010 --> 00:54:38,000
 0,590 730,1130 1330,2070 2070,2330 2470,2990
-bootstrap and reinforcement learning algorithm
+bootstrap and reinforcement learning algorithm,|
+|
 
 1961
 00:54:38,170 --> 00:54:40,400
 0,290 290,580 720,1120 1230,1630 1830,2230
-that would play against itself.|
-|
+that would play against itself,|
+这将与它自己的竞争，|
 
 1962
 00:54:41,130 --> 00:54:42,635
 0,305 305,610 780,1055 1055,1265 1265,1505
-In order to learn how
-为了学习如何超越人类的水平来提高，对。因此，它需要人类的理解，首先试图模仿人类，但通过这种模仿，他们会将这两个神经网络与他们自己联系起来，与他们自己玩游戏，获胜者将获得奖励。失败者会试图否定他们可能从人类同行那里获得的所有行动，并试图实际学习新类型的规则和新类型的行动，这些规则和行动基本上可能对实现超人表现非常有益。而使这个想法成为可能的一个非常重要的辅助技巧是使用第二个网络，这个辅助网络将电路板的状态作为输入并试图预测，你知道，从这个特定的状态可能出现的所有不同的电路板状态，它们的值是什么？他们的潜在回报和结果会是什么？所以这个网络是一个辅助。
+in order to learn how
+为了学习如何超越人类的水平来提高，
 
 1963
 00:54:42,635 --> 00:54:44,375
@@ -10620,27 +11033,32 @@ to improve even beyond the
 1964
 00:54:44,375 --> 00:54:46,250
 0,210 210,545 1165,1500 1500,1725 1725,1875
-human levels, right. So it
+human levels, right,| so it
+|所以，它需要人类的理解，
 
 1965
 00:54:46,250 --> 00:54:47,825
 0,180 180,450 450,690 690,980 1090,1575
-would take its human understandings,
+would take its human understandings,|
+|
 
 1966
 00:54:47,825 --> 00:54:49,025
 0,225 225,360 360,780 780,945 945,1200
 try to imitate the humans
+首先试图模仿人类，
 
 1967
 00:54:49,025 --> 00:54:49,925
 0,300 300,450 450,600 600,750 750,900
-first of all, but then
+first of all,| but then
+|但通过这种模仿，
 
 1968
 00:54:49,925 --> 00:54:51,875
 0,195 195,360 360,845 1465,1740 1740,1950
-from that imitation they would
+from that imitation,| they would
+|它们会将这两个神经网络与他们自己联系起来，
 
 1969
 00:54:51,875 --> 00:54:53,050
@@ -10650,22 +11068,26 @@ pin these two neural networks
 1970
 00:54:53,100 --> 00:54:54,740
 0,400 420,820 1080,1340 1340,1460 1460,1640
-against themselves, play a game
+against themselves,| play a game
+|与他们自己玩游戏，
 
 1971
 00:54:54,740 --> 00:54:56,080
 0,315 315,630 630,810 810,945 945,1340
-against themselves and the winners
+against themselves| and the winners
+|获胜者将获得奖励，
 
 1972
 00:54:56,310 --> 00:54:57,950
 0,290 290,580 870,1175 1175,1400 1400,1640
-would be receiving a reward.
+would be receiving a reward,|
+|
 
 1973
 00:54:57,950 --> 00:54:59,150
 0,180 180,585 585,810 810,1020 1020,1200
-The losers would try to
+the losers would try to
+失败者会试图否定他们可能从人类同行那里获得的所有行动，
 
 1974
 00:54:59,150 --> 00:55:00,340
@@ -10680,7 +11102,8 @@ that they may have acquired
 1976
 00:55:02,285 --> 00:55:04,810
 0,300 300,525 525,845 1045,1925 2125,2525
-from their human counterparts and
+from their human counterparts| and
+|并试图实际学习新类型的规则和新类型的行动，
 
 1977
 00:55:04,920 --> 00:55:06,395
@@ -10695,7 +11118,8 @@ types of rules and new
 1979
 00:55:07,490 --> 00:55:09,200
 0,180 180,315 315,560 760,1160 1390,1710
-types of actions basically that
+types of actions| basically that
+|可能对实现超人表现非常有益。
 
 1980
 00:55:09,200 --> 00:55:11,240
@@ -10705,7 +11129,8 @@ might be very beneficial to
 1981
 00:55:11,240 --> 00:55:13,340
 0,510 510,1275 1275,1640 1660,1950 1950,2100
-achieving superhuman performance. And one
+achieving superhuman performance.| And one
+|使这个想法成为可能的一个非常重要的辅助技巧是，
 
 1982
 00:55:13,340 --> 00:55:15,350
@@ -10720,17 +11145,20 @@ tricks that brought this idea
 1984
 00:55:18,330 --> 00:55:19,940
 0,245 245,410 410,730 1170,1460 1460,1610
-to be possible was the
+to be possible was,| the
+|使用第二个网络，
 
 1985
 00:55:19,940 --> 00:55:21,400
 0,360 360,570 570,780 780,1080 1080,1460
-usage of this second network,
+usage of this second network,|
+|
 
 1986
 00:55:21,420 --> 00:55:23,750
 0,290 290,920 920,1210 1560,1960 2010,2330
 this auxiliary network which took
+这个辅助网络将棋盘的状态作为输入，
 
 1987
 00:55:23,750 --> 00:55:25,175
@@ -10740,7 +11168,8 @@ as input the state of
 1988
 00:55:25,175 --> 00:55:26,525
 0,135 135,395 655,975 975,1185 1185,1350
-the board and tried to
+the board| and tried to
+|并试图预测，从这个特定的状态可能出现的所有不同的棋盘状态，
 
 1989
 00:55:26,525 --> 00:55:29,165
@@ -10760,39 +11189,43 @@ board states that might emerge
 1992
 00:55:32,960 --> 00:55:35,300
 0,195 195,500 1360,1760 1810,2130 2130,2340
-from this particular state and
+from this particular state| and
+|它们的值是什么，
 
 1993
 00:55:35,300 --> 00:55:36,875
 0,180 180,360 360,555 555,860 1270,1575
-what would their values be?
+what would their values be,|
+|
 
 1994
 00:55:36,875 --> 00:55:38,180
 0,180 180,315 315,540 540,905 955,1305
-What would their potential returns
+what would their potential returns
+他们的潜在回报和结果会是什么，
 
 1995
 00:55:38,180 --> 00:55:39,815
 0,210 210,465 465,860 1120,1440 1440,1635
-and their outcomes be? So
+and their outcomes be,| so
+|所以这个网络是一个辅助网络，
 
 1996
 00:55:39,815 --> 00:55:41,270
 0,195 195,515 625,900 900,1035 1035,1455
-this network was an auxiliary.|
-|
+this network was an auxiliary
 
 1997
 00:55:41,360 --> 00:55:43,440
 0,400 720,980 980,1145 1145,1355 1355,2080
-Network that was almost hallucinating,
-几乎是幻觉的电视网，对吧？不同的董事会声明，它可以从这个特定的状态中采取行动，并使用这些预测值来指导它的规划，你知道，它应该在未来采取什么行动？最后，就在最近，他们扩展了这个算法，表明他们甚至不能从一开始就使用人类大师来模仿。引导这些算法。如果他们只是完全从头开始，只有两个从未训练过的神经网络，然后他们开始相互依附，你实际上可以看到，你可以在没有任何人类监督的情况下。
+network,| that was almost hallucinating,
+|几乎是幻觉，
 
 1998
 00:55:43,550 --> 00:55:45,775
 0,400 780,1175 1175,1550 1550,1925 1925,2225
-right? Different board states that
+right,| different board states that
+|不同的棋盘状态，它可以从这个特定的状态中采取行动，
 
 1999
 00:55:45,775 --> 00:55:46,890
@@ -10802,7 +11235,8 @@ it could take from this
 2000
 00:55:46,940 --> 00:55:49,450
 0,400 540,940 1320,1720 1800,2195 2195,2510
-particular state and using those
+particular state| and using those
+|并使用这些预测值来指导它的规划，
 
 2001
 00:55:49,450 --> 00:55:51,670
@@ -10812,7 +11246,8 @@ predicted values to guide its
 2002
 00:55:51,670 --> 00:55:53,755
 0,380 670,1070 1210,1455 1455,1700 1780,2085
-planning of, you know, what
+planning of,| you know, what
+|它应该在未来采取什么行动。
 
 2003
 00:55:53,755 --> 00:55:54,865
@@ -10822,17 +11257,20 @@ action should it take into
 2004
 00:55:54,865 --> 00:55:57,000
 0,195 195,455 925,1215 1215,1505 1735,2135
-the future? And finally, very
+the future.| And finally, very
+|最后，就在最近，
 
 2005
 00:55:57,230 --> 00:55:59,080
 0,305 305,500 500,790 1170,1535 1535,1850
-much more recently, they extended
+much more recently,| they extended
+|他们扩展了这个算法，
 
 2006
 00:55:59,080 --> 00:56:00,205
 0,330 330,660 660,810 810,975 975,1125
-this algorithm and showed that
+this algorithm| and showed that
+|表明它们甚至不能从一开始就使用人类大师来模仿，
 
 2007
 00:56:00,205 --> 00:56:01,380
@@ -10852,27 +11290,32 @@ the beginning to imitate from
 2010
 00:56:04,660 --> 00:56:05,785
 0,240 240,390 390,570 570,735 735,1125
-in the beginning. And bootstrap
+in the beginning,| and bootstrap
+|引导这些算法，
 
 2011
 00:56:05,785 --> 00:56:06,805
 0,240 240,630 630,780 780,885 885,1020
-these algorithms. What if they
+these algorithms,| what if they
+|如果他们只是完全从头开始，
 
 2012
 00:56:06,805 --> 00:56:08,590
 0,180 180,485 805,1185 1185,1485 1485,1785
-just started entirely from scratch
+just started entirely from scratch|
+|
 
 2013
 00:56:08,590 --> 00:56:09,640
 0,240 240,405 405,630 630,825 825,1050
 and just had two neural
+只有两个从未训练过的神经网络，
 
 2014
 00:56:09,640 --> 00:56:11,980
 0,260 670,1020 1020,1275 1275,1580 1960,2340
-networks never trained before they
+networks never trained before,| they
+|然后他们开始相互依附，
 
 2015
 00:56:11,980 --> 00:56:13,450
@@ -10882,24 +11325,26 @@ start pinning themselves against each
 2016
 00:56:13,450 --> 00:56:14,845
 0,290 520,795 795,930 930,1140 1140,1395
-other and you could actually
+other| and you could actually
+|你实际上可以看到，
 
 2017
 00:56:14,845 --> 00:56:16,165
 0,180 180,330 330,495 495,785 955,1320
-see that you could without
+see that,| you could without
+|你可以在没有任何人类监督的情况下，
 
 2018
 00:56:16,165 --> 00:56:17,700
 0,300 300,635 775,1125 1125,1290 1290,1535
-any human supervision at all.|
+any human supervision at all,|
 |
 
 2019
 00:56:18,460 --> 00:56:20,220
 0,380 380,650 650,890 890,1150 1380,1760
-Have a neural network learn
-让神经网络学习不仅要超越超越人类的解决方案，而且还要超越人类创造的解决方案，后者也是由人类引导的。
+have a neural network, learn
+让神经网络学习不仅要超越超越人类的解决方案，
 
 2020
 00:56:20,220 --> 00:56:22,620
@@ -10909,17 +11354,20 @@ to not only outperform the
 2021
 00:56:22,620 --> 00:56:26,330
 0,290 880,1280 2590,3270 3270,3435 3435,3710
-solution that outperform the humans,
+solution that outperform the humans,|
+|
 
 2022
 00:56:26,800 --> 00:56:28,785
 0,395 395,650 650,1300 1440,1715 1715,1985
 but also outperform the solution
+而且还要超越人类创造的解决方案，
 
 2023
 00:56:28,785 --> 00:56:30,030
 0,255 255,420 420,725 775,1050 1050,1245
-that was created, which was
+that was created,| which was
+|后者也是由人类引导的。
 
 2024
 00:56:30,030 --> 00:56:32,300
@@ -10931,7 +11379,7 @@ bootstrapped by humans as well.|
 00:56:34,460 --> 00:56:36,730
 0,400 540,815 815,1010 1010,1540 1800,2270
 So with that, I'll summarize
-到此为止，我将非常快速地总结我们今天所学的内容，并结束这一天。所以我们已经讨论了很多关于强化学习的基本算法。我们看到了两种不同类型的强化学习方法来优化这些解决方案。首先是Q，学习，我们试图实际估计的地方，给定一个状态，你知道，我们可能期望的任何可能的行动的价值是什么，第二种方式是采取更端到端的方法，并说如何，考虑到我们所处的状态，我应该采取任何给定行动来最大化我在这种特定状态下的潜力的可能性有多大。
+到此为止，我将非常快速地总结我们今天所学的内容，
 
 2026
 00:56:36,730 --> 00:56:37,885
@@ -10941,12 +11389,14 @@ very quickly what we've learned
 2027
 00:56:37,885 --> 00:56:39,280
 0,255 255,540 540,905 925,1275 1275,1395
-today and and conclude for
+today| and and conclude for
+|并结束这一天。
 
 2028
 00:56:39,280 --> 00:56:40,990
 0,120 120,380 880,1155 1155,1500 1500,1710
-the day. So we've talked
+the day.| So we've talked
+|所以我们已经讨论了很多关于强化学习的基本算法，
 
 2029
 00:56:40,990 --> 00:56:42,070
@@ -10956,17 +11406,20 @@ a lot about really the
 2030
 00:56:42,070 --> 00:56:45,160
 0,470 820,1340 1480,1880 2140,2865 2865,3090
-foundational algorithms underlying reinforcement learning.
+foundational algorithms underlying reinforcement learning,|
+|
 
 2031
 00:56:45,160 --> 00:56:46,570
 0,240 240,495 495,735 735,1010 1030,1410
-We saw two different types
+we saw two different types
+我们看到了两种不同类型的强化学习方法，
 
 2032
 00:56:46,570 --> 00:56:48,610
 0,240 240,885 885,1160 1360,1760 1780,2040
-of reinforcement learning approaches of
+of reinforcement learning approaches| of
+|来优化这些解决方案，
 
 2033
 00:56:48,610 --> 00:56:49,735
@@ -10976,22 +11429,26 @@ how we can optimize these
 2034
 00:56:49,735 --> 00:56:51,810
 0,335 925,1260 1260,1545 1545,1785 1785,2075
-solutions. First being q, learning,
+solutions,| first being {Q-learning -},|
+|首先是 Q 学习，|
 
 2035
 00:56:51,830 --> 00:56:53,100
 0,275 275,455 455,635 635,920 920,1270
 where we're trying to actually
+我们试图实际估计，
 
 2036
 00:56:53,480 --> 00:56:54,835
 0,365 365,635 635,845 845,1130 1130,1355
-estimate, given a state, you
+estimate,| given a state, you
+|给定一个状态，
 
 2037
 00:56:54,835 --> 00:56:55,980
 0,245 295,555 555,720 720,885 885,1145
-know, what is the value
+know,| what is the value
+|我们可能期望的任何可能的行动的值是什么，
 
 2038
 00:56:56,030 --> 00:56:57,580
@@ -11001,7 +11458,8 @@ that we might expect for
 2039
 00:56:57,580 --> 00:56:58,735
 0,165 165,435 435,765 765,1005 1005,1155
-any possible action in the
+any possible action,| in the
+|第二种方式是采取更端到端的方法，
 
 2040
 00:56:58,735 --> 00:57:00,010
@@ -11016,7 +11474,8 @@ a much more end to
 2042
 00:57:00,700 --> 00:57:02,580
 0,195 195,560 880,1185 1185,1485 1485,1880
-end approach and say how,
+end approach| and say how,
+|并说，考虑到我们所处的状态，
 
 2043
 00:57:02,690 --> 00:57:03,670
@@ -11026,17 +11485,19 @@ given the state that we
 2044
 00:57:03,670 --> 00:57:04,825
 0,255 255,540 540,810 810,1020 1020,1155
-see ourselves in, what is
+see ourselves in,| what is
+|我应该采取任何给定行动，
 
 2045
 00:57:04,825 --> 00:57:05,770
 0,135 135,570 570,690 690,810 810,945
-the likelihood that I should
+the likelihood, that I should
 
 2046
 00:57:05,770 --> 00:57:07,435
 0,135 135,315 315,525 525,830 1390,1665
-take any given action to
+take any given action| to
+|来最大化我在这种特定状态下的潜力。
 
 2047
 00:57:07,435 --> 00:57:09,450
@@ -11058,7 +11519,7 @@ state.|
 00:57:12,010 --> 00:57:13,350
 0,350 350,560 560,725 725,1030 1080,1340
 And I hope that all
-我希望今天所有的这些对你们来说都非常令人兴奋。我们有一个非常令人兴奋的实验室，比赛开始了，比赛的最后期限会很好。原定是星期四，也就是明天晚上11点谢谢。
+我希望所有的这些对你们来说都非常令人兴奋，
 
 2051
 00:57:13,350 --> 00:57:14,415
@@ -11068,27 +11529,32 @@ of this was very exciting
 2052
 00:57:14,415 --> 00:57:15,345
 0,210 210,390 390,675 675,825 825,930
-to you today. We have
+to you,| today we have
+|我们有一个非常令人兴奋的实验，
 
 2053
 00:57:15,345 --> 00:57:17,300
 0,275 295,690 690,1080 1080,1475 1555,1955
-a very exciting lab and
+a very exciting lab| and
+|竞赛开始了，
 
 2054
 00:57:17,440 --> 00:57:18,800
 0,275 275,500 500,710 710,965 965,1360
-kick off for the competition
+kick off for the competition|
+|
 
 2055
 00:57:19,510 --> 00:57:20,805
 0,350 350,575 575,980 980,1145 1145,1295
 and the deadline for these
+竞赛的最后期限会是，
 
 2056
 00:57:20,805 --> 00:57:23,220
 0,575 655,945 945,1235 1975,2265 2265,2415
-competitions will be well. It
+competitions will be,| well, it
+|原定是星期四，
 
 2057
 00:57:23,220 --> 00:57:24,660
@@ -11098,10 +11564,11 @@ was originally set to be
 2058
 00:57:24,660 --> 00:57:27,240
 0,380 850,1125 1125,1400 1750,2150 2260,2580
-thursday, which is tomorrow at
+thursday,| which is tomorrow at
+|也就是明天晚上 11 点。
 
 2059
 00:57:27,240 --> 00:57:29,740
 0,270 270,710 850,1140 1140,1430
-eleven PM. Thank you.|
-|
+{11pm -}.| Thank you.
+|谢谢。
