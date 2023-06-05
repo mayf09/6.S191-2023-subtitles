@@ -2,7 +2,7 @@
 00:00:09,410 --> 00:00:11,190
 0,320 320,575 575,910 930,1330 1380,1780
 This next lecture is my
-下一堂课是我绝对最喜欢的深度学习入门课，重点讲述当今深度学习方法的局限性，以及这些局限性和突出挑战如何真正激励深度学习和人工智能前沿和新领域的新研究。
+这一节课是我绝对最喜欢的深度学习入门课程，
 
 2
 00:00:11,360 --> 00:00:14,100
@@ -12,7 +12,8 @@ absolute favorite lecture in introduction
 3
 00:00:14,300 --> 00:00:16,380
 0,245 245,395 395,700 1140,1540 1680,2080
-to deep learning, focusing on
+to deep learning,| focusing on
+|重点讲述当今深度学习方法的局限性，
 
 4
 00:00:16,850 --> 00:00:18,775
@@ -22,17 +23,20 @@ the limitations of deep learning
 5
 00:00:18,775 --> 00:00:20,190
 0,330 330,615 615,840 840,1095 1095,1415
-methods as they exist today,
+methods as they exist today,|
+|
 
 6
 00:00:20,630 --> 00:00:22,380
 0,335 335,590 590,815 815,1355 1355,1750
 and how those limitations and
+以及这些局限性和突出挑战如何真正激励
 
 7
 00:00:22,430 --> 00:00:25,375
 0,400 420,820 1350,1700 1700,2290 2580,2945
-outstanding challenges really motivate new
+outstanding challenges really motivate| new
+|深度学习和人工智能前沿和新领域的新研究。
 
 8
 00:00:25,375 --> 00:00:27,235
@@ -53,8 +57,8 @@ deep learning and AI.|
 11
 00:00:31,410 --> 00:00:32,675
 0,350 350,575 575,755 755,1010 1010,1265
-Before we dive in, we
-在我们开始之前，我们有几件后勤方面的事情要讨论和讨论，首先可能是本课程中最重要的方面之一。作为课程的一部分，我们有设计和赠送T恤的传统，希望你们都能看到。今天他们就在这里，就在前面。所以我们将在今天的节目结束时分发T恤衫。所以，如果你想买件T恤，请留下来。
+Before we dive in,| we
+在我们开始之前，|我们有几件[后勤]方面的事情要讨论，
 
 12
 00:00:32,675 --> 00:00:34,610
@@ -69,7 +73,8 @@ things to to discuss and
 14
 00:00:37,980 --> 00:00:40,690
 0,335 335,670 960,1355 1355,1750 2310,2710
-go through, starting with perhaps
+go through,| starting with perhaps
+|首先可能是本课程中最重要的方面之一，
 
 15
 00:00:41,010 --> 00:00:42,190
@@ -84,27 +89,31 @@ aspects of this of this
 17
 00:00:43,895 --> 00:00:45,190
 0,305 385,645 645,780 780,975 975,1295
-course. We have a tradition
+course,| we have a tradition
+|我们有设计和赠送 T恤的传统，
 
 18
 00:00:45,210 --> 00:00:48,125
 0,400 510,1060 1200,1520 1520,1840 2640,2915
-of designing and giving t
+of designing and giving {T-shirts
 
 19
 00:00:48,125 --> 00:00:49,070
 0,225 225,450 450,630 630,765 765,945
-shirts as part of this
+-}| as part of this
+|作为课程的一部分，
 
 20
 00:00:49,070 --> 00:00:50,660
 0,320 580,915 915,1230 1230,1470 1470,1590
-course and hopefully you can
+course| and hopefully you can
+|希望你们都能看到，
 
 21
 00:00:50,660 --> 00:00:51,650
 0,195 195,405 405,585 585,780 780,990
-all see them. We have
+all see them,| we have
+|今天它们就在这里，就在前面，
 
 22
 00:00:51,650 --> 00:00:53,225
@@ -114,7 +123,8 @@ them here today right at
 23
 00:00:53,225 --> 00:00:54,665
 0,150 150,425 865,1125 1125,1305 1305,1440
-the front. So we're going
+the front.| So we're going
+|所以我们将在今天的编程结束时分发 T恤，
 
 24
 00:00:54,665 --> 00:00:55,970
@@ -124,12 +134,13 @@ to do the distribution of
 25
 00:00:55,970 --> 00:00:57,305
 0,165 165,330 330,650 910,1200 1200,1335
-the t shirts at the
+the {T-shirts -} at the
 
 26
 00:00:57,305 --> 00:00:59,510
 0,245 325,675 675,1295 1345,1745 1915,2205
-end of today's program. And
+end of today's program,| and
+|所以，请留下来，如果你想要一件 T恤。
 
 27
 00:00:59,510 --> 00:01:01,190
@@ -144,24 +155,26 @@ you wish to pick up
 29
 00:01:02,630 --> 00:01:03,540
 0,150 150,330 330,620
-A T shirt.|
+a {T-shirt -}.|
 |
 
 30
 00:01:04,610 --> 00:01:06,625
 0,260 260,520 930,1330 1530,1835 1835,2015
-All right. So where we
-好的。所以在我们现在的位置，我们有一堂课，我要讲的是深度学习的局限性和新的领域。在那之后我们还会有三场讲座，继续我们今年的客座讲座系列。
+All right, so where we
+好的，所以在我们现在的位置，
 
 31
 00:01:06,625 --> 00:01:07,855
 0,210 210,465 465,750 750,1020 1020,1230
-are right now, we have
+are right now,| we have
+|我们有一节课，
 
 32
 00:01:07,855 --> 00:01:10,075
 0,210 210,515 1675,1920 1920,2100 2100,2220
-this lecture that I'm going
+this lecture,| that I'm going
+|我要讲的是深度学习的局限性和新的领域，
 
 33
 00:01:10,075 --> 00:01:11,155
@@ -171,22 +184,26 @@ to be giving on deep
 34
 00:01:11,155 --> 00:01:13,020
 0,225 225,845 865,1140 1140,1305 1305,1865
-learning limitations and new frontiers.
+learning limitations and new frontiers,|
+|
 
 35
 00:01:13,460 --> 00:01:14,610
 0,320 320,545 545,680 680,860 860,1150
-And we're going to have
+and we're going to have
+在那之后我们还会有三场讲座，
 
 36
 00:01:14,750 --> 00:01:16,440
 0,290 290,485 485,965 965,1295 1295,1690
-three more lectures following that,
+three more lectures following that,|
+|
 
 37
 00:01:16,790 --> 00:01:18,480
 0,400 420,770 770,1100 1100,1385 1385,1690
 continuing our series of guest
+继续我们今年的客座讲座系列。
 
 38
 00:01:18,650 --> 00:01:21,220
@@ -198,7 +215,7 @@ lectures for this year.|
 00:01:21,320 --> 00:01:23,350
 0,400 690,1040 1040,1340 1340,1685 1685,2030
 Importantly, we still have the
-重要的是，我们仍然有围绕软件实验室和项目推介提案的竞争。
+重要的是，我们仍然有围绕软件实验和项目推介提案的竞争，
 
 40
 00:01:23,350 --> 00:01:25,920
@@ -213,29 +230,32 @@ lab and the project pitch
 42
 00:01:28,370 --> 00:01:29,980
 0,400
-proposal.|
+proposal,|
 |
 
 43
 00:01:29,990 --> 00:01:32,010
 0,275 275,545 545,940 1140,1540 1620,2020
-For the project pitch proposal,
-对于项目推介提案，我们要求您在今晚之前上传幻灯片。我们在课程大纲上有关于这方面的所有详细说明。如果你有兴趣提交实验室竞赛，截止日期已经延长到明天下午1点因此，请同时提交实验室的实验室。
+for the project pitch proposal,|
+对于项目推介提案，|
 
 44
 00:01:32,120 --> 00:01:33,340
 0,290 290,530 530,755 755,950 950,1220
 we ask that you please
+我们要求你在今晚之前上传幻灯片，
 
 45
 00:01:33,340 --> 00:01:35,100
 0,465 465,720 720,1065 1065,1410 1410,1760
-upload your slides by tonight.
+upload your slides by tonight,|
+|
 
 46
 00:01:35,360 --> 00:01:36,840
 0,290 290,545 545,845 845,1130 1130,1480
-We have all the detailed
+we have all the detailed
+我们在课程大纲上有关于这方面的所有详细说明，
 
 47
 00:01:36,860 --> 00:01:38,095
@@ -245,7 +265,8 @@ instructions for that on the
 48
 00:01:38,095 --> 00:01:40,390
 0,225 225,785 1345,1745 1885,2160 2160,2295
-course syllabus. And if you
+course syllabus,| and if you
+|如果你有兴趣提交实验竞赛，
 
 49
 00:01:40,390 --> 00:01:42,085
@@ -255,7 +276,8 @@ are interested in submitting to
 50
 00:01:42,085 --> 00:01:44,650
 0,335 415,780 780,1445 1885,2160 2160,2565
-the lab competitions, the deadline
+the lab competitions,| the deadline
+|截止日期已经延长到明天下午 1 点，
 
 51
 00:01:44,650 --> 00:01:45,810
@@ -265,17 +287,18 @@ for that has been extended
 52
 00:01:45,860 --> 00:01:48,460
 0,365 365,680 680,1030 1890,2270 2270,2600
-to tomorrow afternoon at one
+to tomorrow afternoon at {1pm
 
 53
 00:01:48,460 --> 00:01:50,590
 0,465 465,840 840,1220 1360,1760 1870,2130
-PM. So please submit the
+-},| so please submit the
+|因此，请同时提交实验。
 
 54
 00:01:50,590 --> 00:01:52,090
 0,530 760,1020 1020,1140 1140,1380 1380,1500
-labs for the labs as
+labs, for the labs as
 
 55
 00:01:52,090 --> 00:01:53,080
@@ -287,7 +310,7 @@ well.|
 00:01:53,150 --> 00:01:55,140
 0,640 660,1060 1110,1445 1445,1685 1685,1990
 Motivation hopefully is not only
-希望动机不仅仅是锻炼你在深度学习中的技能和积累知识，而且我们还有这些令人惊叹的比赛和每个实验室的奖品，以及项目推介比赛。为了提醒你第一个关于设计神经网络以产生音乐的实验，我们有与音频相关的奖项悬而未决。比赛是公开的，可以是任何人的比赛，所以请提交你们的参赛作品。
+希望动机不仅仅是锻炼你在深度学习中的技能和积累知识，
 
 57
 00:01:55,190 --> 00:01:57,235
@@ -302,7 +325,8 @@ your skills in deep learning
 59
 00:01:58,540 --> 00:02:00,115
 0,225 225,360 360,540 540,860 1300,1575
-and to build knowledge but
+and to build knowledge,| but
+|而且我们还有这些令人惊叹的比赛和奖品，
 
 60
 00:02:00,115 --> 00:02:01,705
@@ -312,7 +336,8 @@ we also have these amazing
 61
 00:02:01,705 --> 00:02:03,850
 0,660 660,945 945,1565 1705,1980 1980,2145
-competitions and prizes for each
+competitions and prizes| for each
+|对于每个实验以及项目推介比赛。
 
 62
 00:02:03,850 --> 00:02:05,170
@@ -327,7 +352,8 @@ as the project pitch proposal
 64
 00:02:07,460 --> 00:02:09,595
 0,400 1050,1340 1340,1535 1535,1790 1790,2135
-competition. So to remind you
+competition.| So to remind you
+|为了提醒你第一个关于设计神经网络以产生音乐的实验，
 
 65
 00:02:09,595 --> 00:02:10,920
@@ -342,7 +368,8 @@ designing neural networks for music
 67
 00:02:13,105 --> 00:02:15,865
 0,365 1135,1410 1410,1685 1825,2225 2365,2760
-generation, we have audio related
+generation,| we have audio related
+|我们有与音频相关的奖项悬而未决，
 
 68
 00:02:15,865 --> 00:02:18,085
@@ -352,17 +379,20 @@ prizes that are up up
 69
 00:02:18,085 --> 00:02:19,810
 0,135 135,255 255,515 775,1175 1375,1725
-in the air. The competition
+in the air,| the competition
+|比赛是公开的，
 
 70
 00:02:19,810 --> 00:02:21,990
 0,270 270,590 640,1040 1630,1905 1905,2180
-is wide open can be
+is wide open,| can be
+|可以是任何人的比赛，
 
 71
 00:02:22,010 --> 00:02:23,635
 0,380 380,605 605,920 920,1265 1265,1625
-anyone's game so please please,
+anyone's game,| so please please,
+|所以请提交你们的参赛作品。
 
 72
 00:02:23,635 --> 00:02:26,440
@@ -374,12 +404,13 @@ please submit your entries.|
 00:02:27,450 --> 00:02:29,105
 0,400 510,875 875,1085 1085,1340 1340,1655
 Tomorrow we'll have the project
-明天我们将举行项目推介大赛。每年它都是这个节目的一个亮点。我们听到了你关于新的深度学习算法应用程序的惊人想法，这是一种快速的鲨鱼缸风格。三分钟的演讲真的很有趣，不仅能站在这里，有机会向大家展示，还能听到你的同学、同事和同事们令人惊叹的想法。
+明天我们将举行项目推介大赛，
 
 74
 00:02:29,105 --> 00:02:31,520
 0,395 415,815 1075,1475 1795,2145 2145,2415
-pitch proposal competition. Every year
+pitch proposal competition,| every year
+|每年它都是这个节目的一个亮点，
 
 75
 00:02:31,520 --> 00:02:32,585
@@ -389,7 +420,8 @@ it's a highlight of this
 76
 00:02:32,585 --> 00:02:34,630
 0,305 745,1050 1050,1350 1350,1695 1695,2045
-program. We hear your amazing
+program,| we hear your amazing
+|我们听到了你关于新的深度学习算法应用程序的惊人想法，
 
 77
 00:02:34,800 --> 00:02:36,340
@@ -399,17 +431,20 @@ ideas about new deep learning
 78
 00:02:36,840 --> 00:02:39,610
 0,520 780,1180 1830,2150 2150,2420 2420,2770
-algorithms applications in a quick
+algorithms applications| in a quick
+|一种快速的[鲨鱼缸]风格，
 
 79
 00:02:40,290 --> 00:02:41,930
 0,395 395,725 725,1090 1110,1400 1400,1640
-shark tank style. Three minute
+shark tank style,| Three minute
+|三分钟的演讲真的很有趣，
 
 80
 00:02:41,930 --> 00:02:43,895
 0,330 330,660 660,975 975,1340 1690,1965
-pitch is really fun not
+pitch is really fun,| not
+|不仅能站在这里，有机会向大家展示，
 
 81
 00:02:43,895 --> 00:02:44,870
@@ -424,7 +459,8 @@ and have the chance to
 83
 00:02:45,935 --> 00:02:47,765
 0,275 625,1020 1020,1305 1305,1575 1575,1830
-present to everyone, but also
+present to everyone,| but also
+|还能听到你的同学、同事们令人惊叹的想法，
 
 84
 00:02:47,765 --> 00:02:49,595
@@ -439,13 +475,13 @@ of your coursemates and your
 86
 00:02:51,470 --> 00:02:53,400
 0,315 315,510 510,830
-peers and colleagues.|
+peers and colleagues,|
 |
 
 87
 00:02:53,730 --> 00:02:55,715
 0,400 870,1130 1130,1250 1250,1370 1370,1985
-Again, some of the logistical
+again, some of the logistical
 同样，一些关于如何将幻灯片提交到谷歌幻灯片卡片组的后勤信息也包括在教学大纲中。
 
 88
@@ -473,27 +509,31 @@ on the syllabus.|
 00:03:03,450 --> 00:03:05,590
 0,305 305,610 930,1310 1310,1690 1740,2140
 And finally, as we introduced
-最后，正如我们在第一堂课中介绍的，希望你们已经意识到，我们有一个令人兴奋的大奖竞赛，围绕着实验室的可信性、深度学习、稳健性、不确定性和偏见，再次强调，竞争现在是完全开放的。请提交您的参赛作品应该是非常，非常令人兴奋，我们期待着收到您的参赛作品。
+最后，正如我们在第一节课中介绍的，
 
 93
 00:03:05,730 --> 00:03:06,860
 0,260 260,395 395,590 590,875 875,1130
-in the first lecture, and
+in the first lecture,| and
+|希望你们已经意识到，
 
 94
 00:03:06,860 --> 00:03:08,740
 0,255 255,660 660,980 1270,1575 1575,1880
-hopefully you've realized we have
+hopefully you've realized,| we have
+|我们有一个令人兴奋的大奖竞赛，
 
 95
 00:03:09,090 --> 00:03:11,590
 0,400 420,820 1110,1475 1475,1840 2100,2500
-an exciting grand prize competition
+an exciting grand prize competition|
+|
 
 96
 00:03:12,030 --> 00:03:15,005
 0,400 510,815 815,1120 1140,1540 2310,2975
 surrounding the lab on trustworthy,
+围绕着实验室的可信性、深度学习、稳健性、不确定性和偏见，
 
 97
 00:03:15,005 --> 00:03:17,090
@@ -503,7 +543,8 @@ deep learning, robustness, uncertainty and
 98
 00:03:17,090 --> 00:03:20,225
 0,500 1000,1400 1510,1910 2080,2775 2775,3135
-bias, and again, emphasizing the
+bias,| and again, emphasizing the
+|再次强调，竞争现在是完全开放的，
 
 99
 00:03:20,225 --> 00:03:21,560
@@ -513,12 +554,14 @@ competition is wide open right
 100
 00:03:21,560 --> 00:03:23,320
 0,290 460,780 780,1050 1050,1260 1260,1760
-now. Please submit your entries
+now,| please submit your entries,|
+|请提交您的参赛作品，|
 
 101
 00:03:23,970 --> 00:03:25,265
 0,275 275,440 440,650 650,965 965,1295
 should be very, very exciting
+非常令人兴奋，我们期待着收到你的参赛作品。
 
 102
 00:03:25,265 --> 00:03:26,530
@@ -535,7 +578,7 @@ receiving your submissions.|
 00:03:29,840 --> 00:03:32,605
 0,400 840,1240 1950,2270 2270,2555 2555,2765
 Okay, so in addition to
-好的，除了这门课的那些技术部分，我们还有三堂客座讲座，来结束我们的系列讲座。我们昨天听到了来自Themis AI的Soden关于稳健和值得信赖的深度学习的令人惊叹的演讲。今天，我们将听取来自先锋公司的Rami Hasani的演讲，他将谈论统计学的新时代，以及这对深度学习算法意味着什么。
+好的，除了这门课的那些技术部分，
 
 105
 00:03:32,605 --> 00:03:35,170
@@ -545,17 +588,20 @@ that, those technical components of
 106
 00:03:35,170 --> 00:03:38,160
 0,195 195,500 1120,1440 1440,1760 2590,2990
-the course, we have three
+the course,| we have three
+|我们还有三节客座讲座，
 
 107
 00:03:38,330 --> 00:03:40,450
 0,400 540,875 875,1480 1650,1910 1910,2120
-remaining guest lectures to round
+remaining guest lectures| to round
+|来结束我们的系列讲座。
 
 108
 00:03:40,450 --> 00:03:42,700
 0,315 315,680 790,1190 1270,1670 1960,2250
-out our lecture series. We
+out our lecture series.| We
+|我们昨天听到了来自 Themis AI 的 Sadhana 令人惊叹的演讲，
 
 109
 00:03:42,700 --> 00:03:44,310
@@ -565,27 +611,31 @@ heard an amazing talk yesterday
 110
 00:03:44,420 --> 00:03:46,540
 0,335 335,815 815,1180 1320,1790 1790,2120
-by soden from themis AI
+by Sadhana from themis AI|
+|
 
 111
 00:03:46,540 --> 00:03:48,625
 0,380 700,1050 1050,1320 1320,1905 1905,2085
 on robust and trustworthy deep
+关于稳健和值得信赖的深度学习。
 
 112
 00:03:48,625 --> 00:03:50,575
 0,305 925,1320 1320,1620 1620,1770 1770,1950
-learning. Today we're going to
+learning.| Today we're going to
+|今天，我们将听取来自 Vanguard 公司的 Ramin Hasani 的演讲，
 
 113
 00:03:50,575 --> 00:03:52,210
 0,240 240,510 510,870 870,1410 1410,1635
-hear from rami hasani, from
+hear from Ramin Hasani, from
 
 114
 00:03:52,210 --> 00:03:53,970
 0,560 790,1155 1155,1305 1305,1485 1485,1760
-Vanguard, who's going to talk
+Vanguard,| who's going to talk
+|他将谈论统计学的新时代，
 
 115
 00:03:53,990 --> 00:03:55,705
@@ -595,7 +645,8 @@ about the new age of
 116
 00:03:55,705 --> 00:03:57,520
 0,305 895,1215 1215,1440 1440,1635 1635,1815
-statistics and what that can
+statistics| and what that can
+|以及这对深度学习算法意味着什么。
 
 117
 00:03:57,520 --> 00:03:59,130
@@ -606,33 +657,36 @@ mean for deep learning algorithms.|
 118
 00:03:59,980 --> 00:04:01,605
 0,395 395,710 710,920 920,1270 1350,1625
-Tomorrow we'll have two awesome
-明天，我们将有两场精彩的嘉宾演讲，分别来自谷歌的迪普·克里希南和麻省理工学院销售总监丹妮拉·罗斯特。是的，有一些。我们知道观众中有很多丹妮尔的粉丝，包括我们。所以请出席。这些应该是非常棒的演讲，你将听到更多关于深度学习研究的前沿。
+Tomorrow, we'll have two awesome
+明天，我们将有两场精彩的嘉宾演讲，
 
 119
 00:04:01,605 --> 00:04:03,810
 0,195 195,750 750,1145 1345,1710 1710,2205
-guest lectures from dip krishnan
+guest lectures| from Dilip Krishnan
+|来自 Google 的 Dilip Krishnan ，
 
 120
 00:04:03,810 --> 00:04:05,985
 0,255 255,560 970,1370 1690,1980 1980,2175
-from Google and to round
+from Google| and to round
+|以及来自 MIT CSAIL 主管 Daniela Rus ，
 
 121
 00:04:05,985 --> 00:04:07,785
 0,165 165,425 445,840 840,1425 1425,1800
-it out from daniella rost,
+it out from Daniela Rus,
 
 122
 00:04:07,785 --> 00:04:09,660
 0,270 270,605 655,1055 1135,1535 1585,1875
-the director of MIT c
+the director of MIT {CSAIL
 
 123
 00:04:09,660 --> 00:04:13,530
 0,290 310,710 970,1370 2950,3350 3580,3870
-sale herself. Yes, some. We
+-} herself,| yes, some, we
+|是的，一些，我们知道观众中有很多 Daniela 的粉丝，包括我们。
 
 124
 00:04:13,530 --> 00:04:14,475
@@ -642,22 +696,24 @@ know that there are many
 125
 00:04:14,475 --> 00:04:16,875
 0,365 505,810 810,1385 1885,2160 2160,2400
-fans of danielle in the
+fans of Daniela in the
 
 126
 00:04:16,875 --> 00:04:19,040
 0,365 505,905 925,1325 1525,1845 1845,2165
-audience, us included. So please
+audience, us included.| So please
+|所以请出席，这些应该是非常棒的演讲，
 
 127
 00:04:19,060 --> 00:04:20,360
 0,350 350,605 605,785 785,980 980,1300
-attend. These should be really
+attend, these should be really
 
 128
 00:04:20,590 --> 00:04:23,160
 0,400 1530,1925 1925,2195 2195,2420 2420,2570
-awesome talks and you'll get
+awesome talk| and you'll get
+|你将听到更多关于深度学习研究的前沿。
 
 129
 00:04:23,160 --> 00:04:25,155
@@ -679,7 +735,7 @@ deep learning.|
 00:04:28,590 --> 00:04:30,455
 0,380 380,620 620,880 1290,1715 1715,1865
 Okay, so that rounds out
-好了，这就是我想要宣布的所有后勤和项目公告。现在我们可以真正深入到有趣的东西，这门课的技术内容。
+好了，这就是我想要宣布的所有后勤和项目公告。
 
 133
 00:04:30,455 --> 00:04:31,960
@@ -694,17 +750,20 @@ announcements that I wanted to
 135
 00:04:33,560 --> 00:04:35,210
 0,260 820,1140 1140,1335 1335,1470 1470,1650
-make. Now we can really
+make.| Now we can really
+|现在我们可以真正深入到有趣的东西，
 
 136
 00:04:35,210 --> 00:04:36,455
 0,240 240,510 510,720 720,930 930,1245
-dive into the fun stuff,
+dive into the fun stuff,|
+|
 
 137
 00:04:36,455 --> 00:04:38,135
 0,270 270,575 715,1115 1225,1485 1485,1680
 the technical content for this
+这门课的技术内容。
 
 138
 00:04:38,135 --> 00:04:39,320
@@ -10764,4 +10823,3 @@ fantastic lecture from rami next.
 0,290 290,455 455,590 590,850
 Thank you so much.|
 |
-
