@@ -4947,19 +4947,18 @@ remainder of today's lecture.|
 00:29:05,340 --> 00:29:06,935
 0,400 660,920 920,1160 1160,1370 1370,1595
 Okay, so let's focus on
-好的，让我们先来关注一下这个。
+好的，让我们先来关注一下这个概念，
 
 873
 00:29:06,935 --> 00:29:08,320
 0,180 180,485
-this first.|
-|
+this first,
 
 874
 00:29:08,320 --> 00:29:10,150
 0,300 300,650 1120,1440 1440,1665 1665,1830
-First concept of how we
-第一个概念是我们如何利用更多的人类领域知识来将更大的结构编码到深度学习算法中。
+first concept,| of how we
+|我们如何利用更多的人类领域知识
 
 875
 00:29:10,150 --> 00:29:11,680
@@ -4969,7 +4968,8 @@ can leverage more of our
 876
 00:29:11,680 --> 00:29:14,155
 0,315 315,680 700,1100 1540,1830 1830,2475
-human domain knowledge to encode
+human domain knowledge| to encode
+|来将更大的结构编码到深度学习算法中。
 
 877
 00:29:14,155 --> 00:29:16,110
@@ -4986,7 +4986,7 @@ algorithms.|
 00:29:18,110 --> 00:29:19,530
 0,275 275,440 440,785 785,1070 1070,1420
 Turns out we've already seen
-到目前为止，我们已经在课程中看到了这方面的例子，特别是CNN中强调的用于空间处理和视觉数据的例子。
+到目前为止，我们已经在课程中看到了这方面的例子，
 
 880
 00:29:19,550 --> 00:29:21,115
@@ -4996,12 +4996,14 @@ examples of this in the
 881
 00:29:21,115 --> 00:29:24,625
 0,195 195,420 420,725 2185,2585 2815,3510
-course so far, particularly highlighted
+course so far,| particularly highlighted
+|特别是 CNN 中，
 
 882
 00:29:24,625 --> 00:29:27,130
 0,300 300,905 1075,1475 1525,1875 1875,2505
-in CNN, used for spatial
+in CNN,| used for spatial
+|强调的用于空间处理和视觉数据的例子。
 
 883
 00:29:27,130 --> 00:29:29,440
@@ -5012,13 +5014,14 @@ processing and visual data.|
 884
 00:29:29,510 --> 00:29:31,140
 0,320 320,530 530,815 815,1310 1310,1630
-As we saw, cnns were
-正如我们所看到的，CNN被引入作为一种高效的架构来捕获数据中的空间依赖关系。
+As we saw, CNNs were
+正如我们所看到的， CNN 被引入，
 
 885
 00:29:31,190 --> 00:29:32,370
 0,335 335,530 530,665 665,860 860,1180
-introduced to be a highly
+introduced| to be a highly
+|作为一种高效的架构来捕获数据中的空间依赖关系，
 
 886
 00:29:32,450 --> 00:29:35,410
@@ -5028,14 +5031,14 @@ efficient architecture for capturing spatial
 887
 00:29:35,410 --> 00:29:37,300
 0,660 660,855 855,1130
-dependencies in data.|
+dependencies in data,|
 |
 
 888
 00:29:37,370 --> 00:29:39,190
 0,275 275,455 455,760 870,1270 1440,1820
-And the core idea behind
-CNN背后的核心思想是卷积的概念，它如何通过这种有效的卷积运算将输入图像的空间相似和相邻部分相互关联。
+and the core idea behind
+CNN 背后的核心思想是卷积的概念，
 
 889
 00:29:39,190 --> 00:29:40,975
@@ -5045,7 +5048,8 @@ CNN was this notion of
 890
 00:29:40,975 --> 00:29:43,500
 0,635 1315,1665 1665,1890 1890,2145 2145,2525
-convolution, how it would relate
+convolution,| how it would relate
+|它如何将输入图像的空间相似和相邻部分相互关联，
 
 891
 00:29:43,760 --> 00:29:47,620
@@ -5060,7 +5064,8 @@ of an input image to
 893
 00:29:50,140 --> 00:29:51,490
 0,150 150,435 435,720 720,990 990,1350
-each other through this efficient
+each other| through this efficient
+|通过这种有效的卷积运算。
 
 894
 00:29:51,490 --> 00:29:53,460
@@ -5072,7 +5077,7 @@ convolution operation.|
 00:29:53,760 --> 00:29:55,430
 0,290 290,485 485,755 755,1040 1040,1670
 And we saw that convolution
-我们看到卷积能够有效地从视觉数据中提取局部特征。
+我们看到卷积能够有效地从视觉数据中提取局部特征，
 
 896
 00:29:55,430 --> 00:29:57,490
@@ -5087,14 +5092,14 @@ at extracting local features from
 898
 00:29:59,795 --> 00:30:01,260
 0,300 300,695
-visual data.|
+visual data,|
 |
 
 899
 00:30:01,260 --> 00:30:02,835
 0,225 225,510 510,890 940,1260 1260,1575
-And then using this local
-然后使用该局部特征提取来实现诸如分类、目标检测等下游预测任务。
+and then using this local
+然后使用该局部特征提取来实现下游预测任务，
 
 900
 00:30:02,835 --> 00:30:05,870
@@ -5104,7 +5109,8 @@ feature extraction to then enable
 901
 00:30:05,950 --> 00:30:08,750
 0,710 710,1205 1205,1510 1860,2180 2180,2800
-downstream predictive tasks like classification,
+downstream predictive tasks,| like classification,
+|比如分类、目标检测等。
 
 902
 00:30:09,280 --> 00:30:10,880
