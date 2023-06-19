@@ -5122,56 +5122,60 @@ object detection and so forth.|
 00:30:13,010 --> 00:30:14,695
 0,335 335,635 635,1000 1290,1550 1550,1685
 What about now, instead of
-现在，如果我们考虑更不规则的数据结构，而不是图像，情况会怎样？
+现在，如果不是图像，
 
 904
 00:30:14,695 --> 00:30:16,290
 0,275 355,630 630,870 870,1215 1215,1595
-images, if we consider more
+images,| if we consider more
+|我们考虑更不规则的数据结构，情况会怎样，
 
 905
 00:30:16,400 --> 00:30:18,980
 0,760 930,1310 1310,1690
-irregular data structures?|
+irregular data structures,|
 |
 
 906
 00:30:19,440 --> 00:30:20,900
 0,275 275,425 425,635 635,1280 1280,1460
-That can be encoded in
-它可以通过2个深度像素网格以外的不同方式进行编码。
+that can be encoded in
+它可以通过二维像素网格以外的不同方式进行编码，
 
 907
 00:30:20,900 --> 00:30:23,075
 0,270 270,650 820,1220 1780,2025 2025,2175
-different ways beyond 2 deep
+different ways beyond {2D -}
 
 908
 00:30:23,075 --> 00:30:24,840
 0,270 270,495 495,995
-grids of pixels.|
+grids of pixels,|
 |
 
 909
 00:30:25,150 --> 00:30:27,170
 0,560 560,725 725,980 980,1360 1620,2020
-Graphs are a particularly powerful
-图是一种编码结构信息的特别强大的方法，在许多情况下，图或网络的概念对于我们可能正在考虑的问题非常重要。
+graphs are a particularly powerful
+图是一种编码结构信息的特别强大的方法，
 
 910
 00:30:27,250 --> 00:30:29,840
 0,365 365,730 750,1510 1530,2170 2190,2590
-way of encoding structural information,
+way of encoding structural information,|
+|
 
 911
 00:30:30,340 --> 00:30:31,395
 0,305 305,500 500,680 680,875 875,1055
 and it can be in
+在许多情况下，
 
 912
 00:30:31,395 --> 00:30:33,150
 0,240 240,600 600,995 1225,1500 1500,1755
-many cases that the notion
+many cases,| that the notion
+|图或网络的概念对于我们可能正在考虑的问题非常重要，
 
 913
 00:30:33,150 --> 00:30:34,095
@@ -5191,14 +5195,14 @@ the problem that we may
 916
 00:30:37,575 --> 00:30:38,780
 0,240 240,605
-be considering.|
+be considering,|
 |
 
 917
 00:30:40,690 --> 00:30:42,600
 0,640 660,950 950,1145 1145,1450 1530,1910
-Graphs as a structure and
-作为一种结构和表示数据的示例，图确实存在于我们周围，跨越许多不同的应用程序。
+graphs as a structure and
+图作为一种结构和表示数据的示例，
 
 918
 00:30:42,600 --> 00:30:44,865
@@ -5208,19 +5212,20 @@ as an example for representing
 919
 00:30:44,865 --> 00:30:46,545
 0,335 385,780 780,1125 1125,1410 1410,1680
-data are really all around
+data| are really all around
+|确实存在于我们周围，
 
 920
 00:30:46,545 --> 00:30:48,590
 0,335 475,840 840,1140 1140,1475 1645,2045
-us, across many different applications.|
-|
+us,| across many different applications,|
+|跨越许多不同的应用程序，|
 
 921
 00:30:49,460 --> 00:30:52,205
 0,480 480,830 850,1230 1230,1610 2200,2745
-Ranging from social networks, defining
-范围从社交网络，定义了我们彼此之间的联系方式。
+ranging from social networks,| defining
+范围从社交网络，|定义了我们彼此之间的联系方式，
 
 922
 00:30:52,205 --> 00:30:53,735
@@ -5230,14 +5235,14 @@ how we are all connected
 923
 00:30:53,735 --> 00:30:55,140
 0,240 240,360 360,635
-to each other.|
+to each other,|
 |
 
 924
 00:30:55,140 --> 00:30:57,600
 0,380 520,915 915,1290 1290,1670 2080,2460
-To state machines that describe
-到描述一个过程如何从一个状态转换到另一个状态的状态机，到人类流动性、城市交通到化学分子和生物网络的度量和模型。
+to state machines,| that describe
+到状态机，|描述一个过程如何从一个状态转换到另一个状态，
 
 925
 00:30:57,600 --> 00:30:59,090
@@ -5247,17 +5252,20 @@ how a process can transition
 926
 00:30:59,560 --> 00:31:00,830
 0,290 290,530 530,785 785,980 980,1270
-from one state to another
+from one state to another,|
+|
 
 927
 00:31:01,540 --> 00:31:03,945
 0,290 290,580 720,1120 1740,2120 2120,2405
 to metrics and models of
+到人类流动性、城市交通的度量和模型，
 
 928
 00:31:03,945 --> 00:31:07,035
 0,240 240,755 1015,1410 1410,1805 2695,3090
-human mobility, urban transport to
+human mobility, urban transport,| to
+|到化学分子和生物网络。
 
 929
 00:31:07,035 --> 00:31:09,800
@@ -5269,12 +5277,13 @@ chemical molecules and biological networks.|
 00:31:10,890 --> 00:31:12,620
 0,275 275,410 410,910 1080,1445 1445,1730
 And the motivation across all
-所有这些例子的动机是，如此多的真实世界数据的实例自然地落入这种网络或图形结构的概念中，但这种结构不容易被标准的数据编码或几何图形结合或捕获。
+所有这些例子的动机是，
 
 931
 00:31:12,620 --> 00:31:14,540
 0,285 285,650 790,1080 1080,1370 1600,1920
-these examples is that so
+these examples is that,| so
+|如此多的真实世界数据的实例自然地落入这种网络或图形结构的概念中，
 
 932
 00:31:14,540 --> 00:31:16,325
@@ -5294,7 +5303,8 @@ idea of a network or
 935
 00:31:20,825 --> 00:31:23,465
 0,300 300,665 1375,1775 2095,2400 2400,2640
-graph structure, but that this
+graph structure,| but that this
+|但这种结构不容易被标准的数据编码或几何图形结合或捕获，
 
 936
 00:31:23,465 --> 00:31:27,275
@@ -5309,14 +5319,14 @@ or captured by standard data
 938
 00:31:29,270 --> 00:31:31,580
 0,630 630,975 975,1760
-encodings or geometries.|
+encodings or geometries,|
 |
 
 939
 00:31:31,590 --> 00:31:32,480
 0,275 275,425 425,590 590,710 710,890
-And so we're going to
-因此，我们将稍微讨论一下将图形作为一种结构，以及如何尝试将编码在图形中的信息表示出来，以构建能够处理这些数据类型的神经网络。
+and so we're going to
+因此，我们将稍微讨论一下将图作为一种结构，
 
 940
 00:31:32,480 --> 00:31:33,500
@@ -5326,7 +5336,8 @@ talk a little bit about
 941
 00:31:33,500 --> 00:31:35,120
 0,420 420,540 540,705 705,1010 1300,1620
-graphs as a structure and
+graphs as a structure| and
+|以及如何尝试将编码在图形中的信息表示出来，
 
 942
 00:31:35,120 --> 00:31:36,275
@@ -5341,7 +5352,8 @@ represent this information encoded in
 944
 00:31:38,810 --> 00:31:40,550
 0,135 135,410 670,930 930,1190 1390,1740
-a graph to build neural
+a graph| to build neural
+|以构建能够处理这些数据类型的神经网络。
 
 945
 00:31:40,550 --> 00:31:42,965
@@ -5358,7 +5370,7 @@ handling these data types.|
 00:31:46,560 --> 00:31:47,525
 0,290 290,485 485,680 680,830 830,965
 To see how we can
-为了看看我们如何做到这一点，并处理这个问题，让我们花一点时间回到CNN。
+为了看看我们如何做到这一点，并处理这个问题，
 
 948
 00:31:47,525 --> 00:31:49,625
@@ -5368,7 +5380,8 @@ do this and, and approach
 949
 00:31:49,625 --> 00:31:51,470
 0,240 240,545 895,1365 1365,1605 1605,1845
-this problem, let's go back
+this problem,| let's go back
+|让我们花一点时间回到 CNN ，
 
 950
 00:31:51,470 --> 00:31:52,970
@@ -5378,34 +5391,37 @@ for a moment to the
 951
 00:31:52,970 --> 00:31:54,060
 0,500
-CNN.|
+CNN,|
 |
 
 952
 00:31:54,260 --> 00:31:55,915
 0,335 335,845 845,1115 1115,1385 1385,1655
-In CNN we saw that
-在美国有线电视新闻网中，我们看到了这个矩形的二维内核，它有效地在图像中滑动，关注并拾取存在于这个二维网格中的特征。
+in CNN, we saw that
+在 CNN 中，我们看到了这个矩形的二维内核，
 
 953
 00:31:55,915 --> 00:31:58,195
 0,225 225,510 510,875 1045,1955 2005,2280
-we have this rectangular two
+we have this rectangular {2D
 
 954
 00:31:58,195 --> 00:32:00,385
 0,210 210,695 1225,1625 1735,1995 1995,2190
-d kernel, and what it
+-} kernel,| and what it
+|它所做的是，
 
 955
 00:32:00,385 --> 00:32:02,070
 0,335 415,810 810,1080 1080,1320 1320,1685
-effectively does is it slides
+effectively does is,| it slides
+|它有效地在图像中滑动，
 
 956
 00:32:02,240 --> 00:32:04,500
 0,380 380,605 605,850 1500,1880 1880,2260
-across the image, paying attention
+across the image,| paying attention
+|关注并拾取存在于这个二维网格中的特征，
 
 957
 00:32:04,520 --> 00:32:06,240
@@ -5415,24 +5431,25 @@ and picking up to features
 958
 00:32:06,620 --> 00:32:08,785
 0,380 380,760 990,1390 1620,1955 1955,2165
-that exist across this two
+that exist across this {2D
 
 959
 00:32:08,785 --> 00:32:09,800
 0,180 180,515
-d grid.|
+-} grid,|
 |
 
 960
 00:32:10,060 --> 00:32:12,660
 0,335 335,590 590,910 1980,2345 2345,2600
-And all this function is
-这个函数所做的就是定义卷积运算的元素乘法。
+and all this function is
+这个函数所做的是，
 
 961
 00:32:12,660 --> 00:32:14,180
 0,255 255,510 510,720 720,1040 1120,1520
-doing is that element wise
+doing is that,| element wise
+|定义卷积运算的元素乘法，
 
 962
 00:32:14,380 --> 00:32:17,060
@@ -5442,14 +5459,14 @@ multiplication that defines the convolution
 963
 00:32:17,260 --> 00:32:18,380
 0,400
-operation.|
+operation,|
 |
 
 964
 00:32:18,450 --> 00:32:20,015
 0,275 275,980 980,1130 1130,1310 1310,1565
-And intuitively we can think
-直观地说，我们可以把卷积看作是在图像上一块一块迭代地滑动这个核心的可视化，继续尝试提取在这两个D中捕捉到的信息特征。
+and intuitively, we can think
+直观地说，我们可以把卷积看作滑动这个核心的可视化，
 
 965
 00:32:20,015 --> 00:32:22,510
@@ -5459,7 +5476,8 @@ about convolution as this visualization
 966
 00:32:22,650 --> 00:32:25,270
 0,350 350,730 750,1085 1085,1570 1740,2620
-of sliding this kernel iteratively
+of sliding this kernel,| iteratively
+|在图像上一块一块迭代，
 
 967
 00:32:25,350 --> 00:32:27,530
@@ -5469,7 +5487,8 @@ patch by patch across the
 968
 00:32:27,530 --> 00:32:30,260
 0,260 1000,1395 1395,1790 2080,2430 2430,2730
-image, continuing on to try
+image,| continuing on to try
+|继续尝试提取在这二维像素空间中捕捉到的信息特征。
 
 969
 00:32:30,260 --> 00:32:32,105
@@ -5484,20 +5503,19 @@ features that are captured in
 971
 00:32:33,770 --> 00:32:34,980
 0,240 240,465 465,740
-this two d.|
-|
+this {2D -}
 
 972
 00:32:35,200 --> 00:32:36,860
 0,560 560,940
-Pixel space.|
-像素空间。|
+pixel space.|
+|
 
 973
 00:32:37,680 --> 00:32:39,395
 0,350 350,695 695,980 980,1190 1190,1715
 This core idea of convolution
-卷积在滑动中的核心思想这个特征提取过滤器是现在我们如何将这个思想扩展到基于图形的核心。
+卷积在滑动中这个特征提取过滤器的核心思想是，
 
 974
 00:32:39,395 --> 00:32:41,710
@@ -5507,7 +5525,8 @@ in sliding this this feature
 975
 00:32:41,790 --> 00:32:43,790
 0,545 545,850 1410,1685 1685,1835 1835,2000
-extraction filter is at the
+extraction filter is| at the
+|我们如何将这个思想扩展到基于图形的核心，
 
 976
 00:32:43,790 --> 00:32:45,305
@@ -5522,20 +5541,19 @@ can extend this idea to
 978
 00:32:47,280 --> 00:32:48,960
 0,400 540,940
-graph based.|
-|
+graph based
 
 979
 00:32:49,000 --> 00:32:50,160
 0,400
-Data.|
-数据。|
+data,|
+|
 
 980
 00:32:50,800 --> 00:32:52,880
 0,335 335,905 905,1270 1380,1730 1730,2080
-This motivates a very recent
-这激发了一种称为图卷积网络的最新类型的神经网络结构，其思想与标准的CNN非常相似。
+this motivates a very recent
+这激发了一种称为图卷积网络的最新类型的神经网络结构，
 
 981
 00:32:53,050 --> 00:32:54,350
@@ -5545,7 +5563,8 @@ type of neural network architecture
 982
 00:32:54,700 --> 00:32:57,465
 0,365 365,710 710,1475 1475,1750 2490,2765
-called graph convolutional networks, where
+called graph convolutional networks,| where
+|其思想与标准的 CNN 非常相似，
 
 983
 00:32:57,465 --> 00:32:58,880
@@ -5555,26 +5574,26 @@ the idea is very similar
 984
 00:32:59,020 --> 00:33:00,940
 0,290 290,580 630,1210
-to standard cnns.|
+to standard CNNs,|
 |
 
 985
 00:33:00,940 --> 00:33:02,395
 0,270 270,560 700,1035 1035,1245 1245,1455
-We have some type of
-我们有某种类型的重量核。
+we have some type of
+我们有某种权重的[核]，
 
 986
 00:33:02,395 --> 00:33:04,120
 0,335 475,1055
-weight kernel.|
+weight [kernel],|
 |
 
 987
 00:33:04,120 --> 00:33:05,365
 0,315 315,555 555,720 720,915 915,1245
-And all it is is
-它只是一个像以前和现在一样由神经网络权重定义的矩阵，而不是在二维像素网格上滑动内核。
+and all it is is
+它只是一个像以前一样由神经网络权重定义的矩阵，
 
 988
 00:33:05,365 --> 00:33:07,840
@@ -5584,7 +5603,8 @@ a matrix defined by neural
 989
 00:33:07,840 --> 00:33:10,315
 0,255 255,780 780,1050 1050,1370 2170,2475
-network weights as before, and
+network weights as before,| and
+|现在不是在二维像素网格上滑动内核，
 
 990
 00:33:10,315 --> 00:33:12,505
@@ -5594,31 +5614,31 @@ now, rather than sliding that
 991
 00:33:12,505 --> 00:33:14,250
 0,480 480,840 840,1170 1170,1440 1440,1745
-kernel across a two d
+kernel across a {2D -}
 
 992
 00:33:14,420 --> 00:33:16,160
 0,335 335,575 575,1120
-grid of pixels.|
+grid of pixels,|
 |
 
 993
 00:33:16,160 --> 00:33:18,320
 0,270 270,660 660,980 1060,1460 1870,2160
-The kernel goes around to
-内核转到图形的不同部分。
+the kernel goes around to
+内核去到图形的不同部分，
 
 994
 00:33:18,320 --> 00:33:19,810
 0,290 520,855 855,1050 1050,1200 1200,1490
-different parts of the graph.|
+different parts of the graph,|
 |
 
 995
 00:33:20,940 --> 00:33:23,225
 0,365 365,710 710,1090 1110,1750 2010,2285
-Defined by particular nodes, and
-由特定节点定义，它查看该节点的邻居是什么，它是如何连接到相邻节点的。
+defined by particular nodes,| and
+由特定节点定义，|它查看该节点的邻居是什么，
 
 996
 00:33:23,225 --> 00:33:24,905
@@ -5633,19 +5653,20 @@ neighbors of the of that
 998
 00:33:26,345 --> 00:33:28,025
 0,345 345,605 745,1035 1035,1350 1350,1680
-node is, how it's connected
+node is,| how it's connected
+|它是如何连接到相邻节点的，
 
 999
 00:33:28,025 --> 00:33:29,740
 0,240 240,765 765,1205
-to adjacent nodes.|
+to adjacent nodes,|
 |
 
 1000
 00:33:29,740 --> 00:33:30,910
 0,195 195,375 375,705 705,900 900,1170
-And the kernel is used
-而核被用来从图中的局部邻域中提取特征，然后捕获结构中的相关信息。
+and the kernel is used
+而核被用来从图中的局部邻域中提取特征，
 
 1001
 00:33:30,910 --> 00:33:33,070
@@ -5655,12 +5676,14 @@ to extract features from that
 1002
 00:33:33,070 --> 00:33:35,160
 0,320 340,740 1210,1560 1560,1800 1800,2090
-local neighborhood within the graph
+local neighborhood within the graph|
+|
 
 1003
 00:33:35,540 --> 00:33:37,260
 0,275 275,550 750,1150 1200,1460 1460,1720
 to then capture the relevant
+然后捕获结构中的相关信息。
 
 1004
 00:33:37,640 --> 00:33:40,060
@@ -5672,17 +5695,18 @@ information within the structure.|
 00:33:40,820 --> 00:33:42,210
 0,290 290,440 440,590 590,1070 1070,1390
 So we can visualize this
-所以我们可以在这里具体地看到这一点，现在不是看到二维内核查看图像的特定块，我要强调的是内核是如何关注节点及其本地邻居的，以及有效的图形卷积操作。它所做的是拾取特定节点的局部连通性，并学习与这些边相关联的权重，定义该局部连通性。
+所以我们可以在这里具体地看到这一点，
 
 1006
 00:33:42,290 --> 00:33:44,395
 0,455 455,725 725,1090 1110,1510 1860,2105
-concretely here, where now instead
+concretely here,| where now instead
+|现在不是看到二维内核查看图像的特定块，
 
 1007
 00:33:44,395 --> 00:33:46,615
 0,165 165,485 775,1175 1705,1995 1995,2220
-of seeing the two d
+of seeing the {2D -}
 
 1008
 00:33:46,615 --> 00:33:48,030
@@ -5692,7 +5716,8 @@ kernel looking at a particular
 1009
 00:33:48,080 --> 00:33:49,795
 0,320 320,500 500,620 620,880 1470,1715
-patch of an image, what
+patch of an image,| what
+|我要强调的是内核是如何关注节点及其本地邻居的，
 
 1010
 00:33:49,795 --> 00:33:51,520
@@ -5707,17 +5732,20 @@ kernel is paying attention to
 1012
 00:33:53,710 --> 00:33:55,140
 0,360 360,525 525,720 720,1035 1035,1430
-node and its local neighbors
+node and its local neighbors|
+|
 
 1013
 00:33:55,970 --> 00:33:57,960
 0,335 335,670 780,1070 1070,1340 1340,1990
 and effectively the graph convolution
+以及有效的图形卷积操作，
 
 1014
 00:33:58,250 --> 00:34:00,730
 0,400 870,1130 1130,1370 1370,1630 2100,2480
-operation. What it's doing is
+operation,| what it's doing is
+|它所做的是拾取特定节点的局部连通性，
 
 1015
 00:34:00,730 --> 00:34:02,010
@@ -5727,12 +5755,14 @@ picking up on the local
 1016
 00:34:02,240 --> 00:34:05,010
 0,580 1110,1475 1475,1820 1820,2195 2195,2770
-connectivity of a particular node
+connectivity of a particular node|
+|
 
 1017
 00:34:05,570 --> 00:34:07,360
 0,400 450,850 930,1400 1400,1550 1550,1790
 and learning weights that are
+并学习与这些边相关联的权重，定义该局部连通性，
 
 1018
 00:34:07,360 --> 00:34:09,640
@@ -5742,14 +5772,14 @@ associated with those edges, defining
 1019
 00:34:09,640 --> 00:34:11,280
 0,195 195,500 580,1160
-that local connectivity.|
+that local connectivity,|
 |
 
 1020
 00:34:11,920 --> 00:34:13,250
 0,305 305,635 635,815 815,1025 1025,1330
-The kernel is just then
-然后，将内核迭代应用于图中的每个节点，试图提取有关本地连接性的信息。
+the kernel is just then
+然后，将内核迭代应用于图中的每个节点，
 
 1021
 00:34:13,390 --> 00:34:15,555
@@ -5759,7 +5789,8 @@ applied iteratively to each node
 1022
 00:34:15,555 --> 00:34:17,295
 0,105 105,240 240,515 1045,1410 1410,1740
-in the graph, trying to
+in the graph,| trying to
+|试图提取有关本地连接性的信息，
 
 1023
 00:34:17,295 --> 00:34:19,070
@@ -5769,19 +5800,20 @@ extract information about the local
 1024
 00:34:19,150 --> 00:34:20,520
 0,580
-connectivity.|
+connectivity,|
 |
 
 1025
 00:34:20,560 --> 00:34:21,890
 0,350 350,665 665,890 890,1040 1040,1330
-Such that we can go
-这样我们就可以四处走动，最后开始把所有这些信息聚集在一起，然后根据当地的观测结果对权重进行编码和更新。
+such that we can go
+这样我们就可以四处走动，
 
 1026
 00:34:22,000 --> 00:34:23,925
 0,320 320,545 545,850 1380,1700 1700,1925
-around and around and at
+around and around| and at
+|最后开始把所有这些信息聚集在一起，
 
 1027
 00:34:23,925 --> 00:34:26,040
@@ -5796,7 +5828,8 @@ all this information together in
 1029
 00:34:27,870 --> 00:34:30,830
 0,680 1240,1500 1500,1695 1695,2510 2560,2960
-aggregation to then encode and
+aggregation| to then encode and
+|然后根据当地的观测结果对权重进行编码和更新。
 
 1030
 00:34:30,910 --> 00:34:32,750
@@ -5813,7 +5846,7 @@ what the local observations were.|
 00:34:36,270 --> 00:34:37,955
 0,290 290,580 600,995 995,1355 1355,1685
 The key idea is very,
-它的关键思想非常非常类似于标准的卷积运算，这种方法是核心，它所做的是一个特征提取过程，现在由这个图中的节点和边来定义，而不是图像中的二维像素网格。
+它的关键思想非常非常类似于标准的卷积运算，
 
 1033
 00:34:37,955 --> 00:34:40,120
@@ -5823,17 +5856,20 @@ very similar to the standard
 1034
 00:34:40,200 --> 00:34:42,845
 0,640 810,1210 1860,2165 2165,2390 2390,2645
-convolution operation, where this way
+convolution operation,| where this way
+|这种方法是核心，
 
 1035
 00:34:42,845 --> 00:34:44,420
 0,515 595,885 885,1140 1140,1365 1365,1575
-kernel, all it's doing is
+kernel,| all it's doing is
+|它所做的是一个特征提取过程，
 
 1036
 00:34:44,420 --> 00:34:46,850
 0,150 150,440 610,1185 1185,1490 1990,2430
-a feature extraction procedure that's
+a feature extraction procedure,| that's
+|现在由这个图中的节点和边来定义，
 
 1037
 00:34:46,850 --> 00:34:48,845
@@ -5843,12 +5879,13 @@ now defined by nodes and
 1038
 00:34:48,845 --> 00:34:50,885
 0,510 510,780 780,975 975,1295 1645,2040
-edges in this graph rather
+edges in this graph,| rather
+|而不是图像中的二维像素网格。
 
 1039
 00:34:50,885 --> 00:34:52,325
 0,390 390,720 720,945 945,1170 1170,1440
-than a two d grid
+than a {2D -} grid
 
 1040
 00:34:52,325 --> 00:34:53,920
@@ -5860,7 +5897,7 @@ of pixels in an image.|
 00:34:55,080 --> 00:34:57,335
 0,395 395,755 755,1120 1230,1595 1595,2255
 This idea of graph encoding
-图形编码和图形卷积的想法非常令人兴奋，就我们现在如何将其扩展到现实世界的设置而言，非常强大。
+图形编码和图形卷积的想法非常令人兴奋和强大的，
 
 1042
 00:34:57,335 --> 00:34:59,740
@@ -5870,7 +5907,8 @@ and graph convolution is very
 1043
 00:34:59,790 --> 00:35:01,415
 0,335 335,575 575,875 875,1270 1320,1625
-exciting and very powerful in
+exciting and very powerful| in
+|就我们现在如何将其扩展到现实世界的设置而言，
 
 1044
 00:35:01,415 --> 00:35:02,960
@@ -5885,14 +5923,14 @@ can extend this to real
 1046
 00:35:04,505 --> 00:35:07,060
 0,285 285,635 1225,1560 1560,1895
-world settings that are.|
-|
+world settings,| that are
+|它有数据集定义，
 
 1047
 00:35:07,160 --> 00:35:09,090
 0,400 420,820 900,1265 1265,1580 1580,1930
-Defined by data sets that
-由数据集定义，这些数据集自然地适合于这个图，比如结构。
+defined by data sets,| that
+|这些数据集自然地适合于这个图结构。
 
 1048
 00:35:09,350 --> 00:35:11,050
@@ -5902,14 +5940,14 @@ naturally lend themselves to this
 1049
 00:35:11,050 --> 00:35:12,660
 0,255 255,540 540,890
-graph, like structure.|
+graph like structure.|
 |
 
 1050
 00:35:12,830 --> 00:35:13,960
 0,275 275,425 425,700 750,1010 1010,1130
 So to highlight some of
-为了强调其中一些在不同领域的应用，我想要引起注意的第一个例子是在化学和生物科学中，现在如果我们考虑一个分子结构，对，它是由原子定义的，这些原子根据分子键相互连接。
+为了强调其中一些在不同领域的应用，
 
 1051
 00:35:13,960 --> 00:35:15,820
@@ -5919,7 +5957,8 @@ those applications across a variety
 1052
 00:35:15,820 --> 00:35:18,010
 0,255 255,680 1300,1575 1575,1845 1845,2190
-of domains, the first example
+of domains,| the first example
+|我想要引起注意的第一个例子是在化学和生物科学中，
 
 1053
 00:35:18,010 --> 00:35:19,290
@@ -5934,7 +5973,8 @@ to is in the chemical
 1055
 00:35:20,990 --> 00:35:23,545
 0,335 335,670 990,1690 2010,2315 2315,2555
-and biological sciences, where now
+and biological sciences,| where now
+|如果我们考虑一个分子结构，
 
 1056
 00:35:23,545 --> 00:35:24,760
@@ -5944,12 +5984,14 @@ if we think about the
 1057
 00:35:24,760 --> 00:35:26,490
 0,285 285,510 510,645 645,1280 1330,1730
-structure of a molecule, right,
+structure of a molecule, right,|
+|
 
 1058
 00:35:26,930 --> 00:35:29,440
 0,440 440,725 725,1090 1200,1810 2220,2510
-it's defined by atoms, and
+it's defined by atoms,| and
+它是由原子定义的，|这些原子根据分子键相互连接，
 
 1059
 00:35:29,440 --> 00:35:31,450
@@ -5964,14 +6006,14 @@ to each other according to
 1061
 00:35:33,190 --> 00:35:34,860
 0,585 585,1190
-molecular bonds.|
+molecular bonds,|
 |
 
 1062
 00:35:34,900 --> 00:35:35,970
 0,245 245,410 410,665 665,905 905,1070
-And it turns out that
-事实证明，我们可以设计图形神经网络，它可以有效地构建分子的表示。
+and it turns out that
+事实证明，我们可以设计图形神经网络，
 
 1063
 00:35:35,970 --> 00:35:37,695
@@ -5981,24 +6023,26 @@ we can design graph neural
 1064
 00:35:37,695 --> 00:35:40,065
 0,275 655,945 945,1200 1200,1565 2005,2370
-networks that can effectively build
+networks,| that can effectively build
+|它可以有效地构建分子的表示，
 
 1065
 00:35:40,065 --> 00:35:43,160
 0,845 1225,1545 1545,2345
-representations of molecules.|
+representations of molecules,|
 |
 
 1066
 00:35:43,470 --> 00:35:45,290
 0,275 275,470 470,790 990,1390 1500,1820
-In the same operation of
-在这张图的相同操作中，卷积建立了化学结构的信息表示。
+in the same operation of
+以这个图卷积的相同操作，
 
 1067
 00:35:45,290 --> 00:35:47,645
 0,320 370,765 765,1430 1900,2175 2175,2355
-this graph, convolution to build
+this graph convolution| to build
+|建立化学结构的信息表示，
 
 1068
 00:35:47,645 --> 00:35:49,990
@@ -6008,14 +6052,14 @@ up an informative representation of
 1069
 00:35:50,280 --> 00:35:52,020
 0,400 450,850
-chemical structures.|
+chemical structures,|
 |
 
 1070
 00:35:52,490 --> 00:35:54,400
 0,335 335,650 650,1030 1050,1450 1590,1910
-This very same idea of
-图形卷积的这个想法最近也被应用到了药物发现的问题上，事实上，在麻省理工学院的工作中也是如此。事实证明，我们可以定义图形神经网络结构，它可以查看小分子药物的数据，然后查看新的数据集，试图预测和发现具有强大活性的新治疗化合物，如杀菌和用作抗生素。
+this very same idea of
+图形卷积的这个想法最近也被应用到了药物发现的问题上，
 
 1071
 00:35:54,400 --> 00:35:57,240
@@ -6030,17 +6074,20 @@ to the problem of drug
 1073
 00:35:59,210 --> 00:36:01,330
 0,400 960,1235 1235,1400 1400,1690 1860,2120
-discovery, and in fact, out
+discovery,| and in fact, out
+|事实上，在 MIT 的工作中也是如此，
 
 1074
 00:36:01,330 --> 00:36:02,700
 0,150 150,435 435,750 750,1020 1020,1370
-of work here at MIT.
+of work here at MIT,|
+|
 
 1075
 00:36:03,710 --> 00:36:04,840
 0,305 305,500 500,710 710,950 950,1130
-It turned out that we
+it turned out that we
+事实证明，我们可以定义图形神经网络结构，
 
 1076
 00:36:04,840 --> 00:36:06,850
@@ -6050,22 +6097,26 @@ can define graph neural network
 1077
 00:36:06,850 --> 00:36:08,635
 0,870 870,1065 1065,1230 1230,1485 1485,1785
-architectures that can look at
+architectures,| that can look at
+|它可以查看小分子药物的数据，
 
 1078
 00:36:08,635 --> 00:36:11,010
 0,335 625,1025 1135,1470 1470,2040 2040,2375
-data of small molecule drugs
+data of small molecule drugs|
+|
 
 1079
 00:36:11,570 --> 00:36:13,495
 0,305 305,610 840,1100 1100,1360 1620,1925
 and then look at new
+然后查看新的数据集，
 
 1080
 00:36:13,495 --> 00:36:14,755
 0,255 255,525 525,765 765,1020 1020,1260
-data sets to try to
+data sets| to try to
+|试图预测和发现具有强大活性的新治疗化合物，
 
 1081
 00:36:14,755 --> 00:36:17,380
@@ -6075,12 +6126,14 @@ predict and discover new therapeutic
 1082
 00:36:17,380 --> 00:36:20,040
 0,590 820,1110 1110,1365 1365,1940 2260,2660
-compounds that have potent activity,
+compounds that have potent activity,|
+|
 
 1083
 00:36:20,570 --> 00:36:23,305
 0,290 290,580 930,1330 2130,2480 2480,2735
 such as killing bacteria and
+比如杀菌和用作抗生素。
 
 1084
 00:36:23,305 --> 00:36:25,420
@@ -6091,8 +6144,8 @@ functioning as antibiotics.|
 1085
 00:36:26,640 --> 00:36:28,990
 0,305 305,610 630,1030 1650,2000 2000,2350
-Beyond this example, another recent
-除了这个例子之外，图神经网络最近的另一个应用是在交通预测中，其中的目标是将街道和十字路口视为节点和边定义的Bioggraph，并将图神经网络应用于该结构和移动模式，以学习预测所产生的交通模式。
+Beyond this example,| another recent
+除了这个例子，|图神经网络最近的另一个应用是在交通预测中，
 
 1086
 00:36:29,190 --> 00:36:30,640
@@ -6102,12 +6155,14 @@ application of graph neural networks
 1087
 00:36:30,720 --> 00:36:32,530
 0,320 320,590 590,920 920,1300 1320,1810
-has been in traffic prediction,
+has been in traffic prediction,|
+|
 
 1088
 00:36:33,180 --> 00:36:34,630
 0,275 275,425 425,700 720,1085 1085,1450
 where the goal is to
+其中的目标是将街道和十字路口视为图定义的节点和边，
 
 1089
 00:36:34,800 --> 00:36:37,480
@@ -6122,7 +6177,8 @@ as nodes and edges defined
 1091
 00:36:40,640 --> 00:36:43,100
 0,680 1120,1500 1500,1860 1860,2190 2190,2460
-biograph and apply graph neural
+{by,graph}| and apply graph neural
+|并将图神经网络应用于该结构和移动模式，
 
 1092
 00:36:43,100 --> 00:36:46,505
@@ -6132,7 +6188,8 @@ network to that structure and
 1093
 00:36:46,505 --> 00:36:48,290
 0,210 210,515 535,810 810,1235 1495,1785
-to patterns of mobility to
+to patterns of mobility| to
+|以学习预测所产生的交通模式。
 
 1094
 00:36:48,290 --> 00:36:50,435
@@ -6149,12 +6206,13 @@ traffic patterns could be.|
 00:36:52,460 --> 00:36:54,150
 0,365 365,730 750,1040 1040,1310 1310,1690
 And indeed, in work from
-事实上，在谷歌和DeepMind的工作中，同样的建模方法能够显著改善谷歌地图中ETA估计到达时间的预测。
+事实上，在谷歌和 DeepMind 的工作中，
 
 1097
 00:36:54,170 --> 00:36:56,160
 0,335 335,560 560,1030 1320,1655 1655,1990
-Google and deepmind, this same
+Google and DeepMind,| this same
+|同样的建模方法能够显著改善
 
 1098
 00:36:56,210 --> 00:36:58,240
@@ -6164,12 +6222,13 @@ modeling approach was able to
 1099
 00:36:58,240 --> 00:37:00,895
 0,300 300,680 700,1100 1450,1850 2380,2655
-result in significant improvements in
+result in significant improvements| in
+|谷歌地图中 ETA 估计到达时间的预测，
 
 1100
 00:37:00,895 --> 00:37:03,805
 0,150 150,575 655,1055 1195,1925 2455,2910
-the prediction of eta estimated
+the prediction of ETA, estimated
 
 1101
 00:37:03,805 --> 00:37:05,620
@@ -6179,39 +6238,43 @@ time of arrival in Google
 1102
 00:37:05,620 --> 00:37:06,620
 0,380
-maps.|
+maps,|
 |
 
 1103
 00:37:06,620 --> 00:37:08,140
 0,320 430,735 735,975 975,1170 1170,1520
-So when you're looking at
-因此，当你在手机上查看谷歌地图并预测你何时将到达某个位置时，它在后端所做的是应用这种图形神经网络体系结构来查看交通数据，并就这些模式如何随着时间的变化做出更有信息的预测。
+so when you're looking at
+因此，当你在手机上查看谷歌地图，
 
 1104
 00:37:08,520 --> 00:37:09,695
 0,335 335,590 590,785 785,950 950,1175
-Google maps on your phone
+Google maps on your phone|
+|
 
 1105
 00:37:09,695 --> 00:37:11,165
 0,225 225,815 835,1125 1125,1335 1335,1470
 and predicting when you're going
+并预测你何时将到达某个位置时，
 
 1106
 00:37:11,165 --> 00:37:12,460
 0,195 195,405 405,630 630,915 915,1295
-to arrive at some location,
+to arrive at some location,|
+|
 
 1107
 00:37:13,200 --> 00:37:14,135
 0,260 260,470 470,635 635,800 800,935
 what it's doing on the
+它在后端所做的是应用这种图形神经网络体系结构来查看交通数据，
 
 1108
 00:37:14,135 --> 00:37:15,830
 0,195 195,515 625,1025 1045,1410 1410,1695
-back end is applying this
+{backend -} is applying this
 
 1109
 00:37:15,830 --> 00:37:18,005
@@ -6221,12 +6284,14 @@ graph neural network architecture to
 1110
 00:37:18,005 --> 00:37:19,600
 0,195 195,405 405,695 925,1260 1260,1595
-look at data of traffic
+look at data of traffic|
+|
 
 1111
 00:37:19,620 --> 00:37:21,850
 0,395 395,725 725,1060 1080,1595 1595,2230
 and make more informative predictions
+并就这些模式如何随着时间的变化做出更有信息的预测。
 
 1112
 00:37:22,080 --> 00:37:23,525
@@ -6243,7 +6308,7 @@ changing over time.|
 00:37:26,180 --> 00:37:28,530
 0,290 290,580 690,1090 1410,1810 1950,2350
 A final and another recent
-最后一个也是最近的另一个例子是在预测Covid19的传播中，同样，基于同样的活动模式和接触图的想法，神经网络被用来不仅研究Covid传播的空间分布，还结合了一个时间维度，以便研究人员可以有效地预测哪些地区最有可能受到Covid19的影响，以及这些影响可能发生在什么时间尺度上。
+最后一个也是最近的另一个例子是在预测 COVID-19 的传播中，
 
 1115
 00:37:28,640 --> 00:37:31,195
@@ -6253,7 +6318,8 @@ example was in forecasting the
 1116
 00:37:31,195 --> 00:37:33,340
 0,285 285,540 540,855 855,1115 1825,2145
-spread of covid nineteen where,
+spread of {COVID-19 -},| where,
+|同样，基于同样的活动模式和连接，
 
 1117
 00:37:33,340 --> 00:37:35,275
@@ -6268,7 +6334,8 @@ same idea of mobility patterns
 1119
 00:37:37,940 --> 00:37:40,440
 0,400 450,1330 1620,1970 1970,2240 2240,2500
-and contacts graph, neural networks
+and contacts,| graph neural networks
+|图神经网络被用来不仅研究 COVID 传播的空间分布，
 
 1120
 00:37:40,520 --> 00:37:42,390
@@ -6283,12 +6350,14 @@ not only spatial distributions of
 1122
 00:37:44,830 --> 00:37:47,035
 0,360 360,680 940,1320 1320,1695 1695,2205
-covid spread, but also incorporate
+COVID spread,| but also incorporate
+|还结合了一个时间维度，
 
 1123
 00:37:47,035 --> 00:37:49,440
 0,195 195,690 690,1205 1825,2115 2115,2405
-a temporal dimension so that
+a temporal dimension,| so that
+|以便研究人员可以有效地预测哪些地区最有可能受到 COVID-19 的影响，
 
 1124
 00:37:49,460 --> 00:37:52,090
@@ -6303,12 +6372,13 @@ were the most likely areas
 1126
 00:37:53,930 --> 00:37:55,405
 0,260 260,515 515,890 890,1175 1175,1475
-to be affected by covid
+to be affected by {COVID-19
 
 1127
 00:37:55,405 --> 00:37:58,230
 0,275 805,1205 1435,1835 2065,2430 2430,2825
-nineteen, and what time scales
+-},| and what time scales
+|以及这些影响可能发生在什么时间尺度上。
 
 1128
 00:37:58,460 --> 00:38:00,355
@@ -6324,13 +6394,14 @@ occur on.|
 1130
 00:38:02,670 --> 00:38:05,230
 0,395 395,790 840,1240 1410,1810 2160,2560
-So hopefully this this highlights
-因此，希望这突出了这样一个想法，即关于数据结构的简单想法可以转化为新的神经网络体系结构，这些体系结构是专门为相关应用领域的特定问题设计的。
+So hopefully, this this highlights,|
+所以，希望这个强调，|
 
 1131
 00:38:05,820 --> 00:38:07,540
 0,380 380,635 635,845 845,1180 1320,1720
 this idea of how simple
+这样一个想法，关于数据结构可以转化为新的神经网络体系结构的简单想法，
 
 1132
 00:38:07,710 --> 00:38:10,040
@@ -6345,7 +6416,8 @@ then be translated into new
 1134
 00:38:12,260 --> 00:38:14,435
 0,315 315,590 610,1550 1720,1965 1965,2175
-neural network architectures that are
+neural network architectures,| that are
+|这些体系结构是专门为相关应用领域的特定问题设计的。
 
 1135
 00:38:14,435 --> 00:38:17,530
@@ -6362,51 +6434,54 @@ in relevant application areas.|
 00:38:21,580 --> 00:38:23,720
 0,290 290,580 1050,1430 1430,1850 1850,2140
 And this also lends very
-这也自然而然地决定了我们如何才能不扩展。
+这也自然而然地决定了，
 
 1138
 00:38:23,890 --> 00:38:25,635
 0,365 365,730 1050,1355 1355,1520 1520,1745
-naturally to how we can
+naturally to| how we can
+|我们如何才能扩展从数据到图形，
 
 1139
 00:38:25,635 --> 00:38:26,960
 0,300 300,635
-extend not.|
-|
+extend not
 
 1140
 00:38:27,150 --> 00:38:29,960
 0,400 780,1180 1650,1925 1925,2465 2465,2810
-Beyond data to graphs to
-从数据到图表，再到现在的三维数据。
+beyond data to graphs,| to
+|再到现在的三维数据，
 
 1141
 00:38:29,960 --> 00:38:32,280
 0,350 370,690 690,1320 1320,1610
-now three dimensional data.|
+now three dimensional data,|
 |
 
 1142
 00:38:32,740 --> 00:38:34,230
 0,275 275,440 440,730 900,1250 1250,1490
-Which is often referred to
-这通常被称为三维点云。这些都是无序的数据集。你可以把它们想象成散布在三维空间中。事实证明，你可以非常自然地扩展图形神经网络，以处理三个三维数据集，生命点云。
+which is often referred to
+这通常被称为三维点云，
 
 1143
 00:38:34,230 --> 00:38:35,870
 0,290 490,795 795,1020 1020,1290 1290,1640
-as three d point clouds.
+as {3D -} point clouds,|
+|
 
 1144
 00:38:36,460 --> 00:38:38,385
 0,290 290,545 545,905 905,1655 1655,1925
-And these are unordered sets
+and these are unordered sets
+这些都是无序的数据集，
 
 1145
 00:38:38,385 --> 00:38:39,510
 0,210 210,480 480,780 780,960 960,1125
-of data. And you can
+of data,| and you can
+|你可以把它们想象成散布在三维空间中，
 
 1146
 00:38:39,510 --> 00:38:40,760
@@ -6416,12 +6491,14 @@ think about them as being
 1147
 00:38:41,470 --> 00:38:42,890
 0,395 395,710 710,905 905,1100 1100,1420
-scattered in three d space.
+scattered in {3D -} space,|
+|
 
 1148
 00:38:43,540 --> 00:38:44,760
 0,320 320,545 545,755 755,995 995,1220
-And it turns out that
+and it turns out that
+事实证明，你可以非常自然地扩展图形神经网络，
 
 1149
 00:38:44,760 --> 00:38:47,025
@@ -6431,39 +6508,42 @@ you can extend graph neural
 1150
 00:38:47,025 --> 00:38:49,440
 0,275 355,755 955,1355 1615,2015 2065,2415
-networks very naturally to operate
+networks very naturally| to operate
+|以处理三维数据集，生命点云，
 
 1151
 00:38:49,440 --> 00:38:52,005
 0,350 580,945 945,1310 1510,2220 2220,2565
-on three d datasets, life
+on {3D -} datasets, life
 
 1152
 00:38:52,005 --> 00:38:53,160
 0,285 285,605
-point clouds.|
+point clouds,|
 |
 
 1153
 00:38:53,200 --> 00:38:54,945
 0,380 380,680 680,1000 1050,1450 1470,1745
-Where the core idea is
-其中的核心思想是，你可以使用图形卷积和图形神经网络的相同思想来动态计算这个三维空间中存在的网格。
+where the core idea is
+其中的核心思想是，
 
 1154
 00:38:54,945 --> 00:38:57,380
 0,165 165,315 315,495 495,1445 1765,2435
-that you can dynamically compute
+that,| you can dynamically compute
+|你可以动态计算这个三维空间中存在的网格，
 
 1155
 00:38:57,730 --> 00:39:00,285
 0,670 900,1300 1470,1775 1775,2080 2250,2555
-meshes present in this three
+meshes present in this {3D
 
 1156
 00:39:00,285 --> 00:39:02,660
 0,645 645,995 1405,1785 1785,2070 2070,2375
-dimensional space using the same
+-} space| using the same
+|使用图形卷积和图形神经网络的相同思想。
 
 1157
 00:39:02,770 --> 00:39:04,635
@@ -6480,7 +6560,7 @@ graph neural networks.|
 00:39:08,070 --> 00:39:10,660
 0,400 900,1300 1650,2045 2045,2315 2315,2590
 Okay, so hopefully with that
-好的，希望通过对图形结构、图形和神经网络的了解，您已经开始了解如何使用数据基础结构的检查和我们的先验知识来为非常适合特定任务的新的神经网络体系结构提供信息。
+好的，希望通过对图形结构、图形神经网络的了解，
 
 1160
 00:39:10,770 --> 00:39:12,490
@@ -6490,7 +6570,8 @@ run through of graph structure,
 1161
 00:39:12,630 --> 00:39:14,600
 0,335 335,590 590,850 1350,1730 1730,1970
-graph, neural networks, you've started
+graph neural networks,| you've started
+|你已经开始了解，
 
 1162
 00:39:14,600 --> 00:39:15,350
@@ -6500,7 +6581,8 @@ to get a little bit
 1163
 00:39:15,350 --> 00:39:17,945
 0,255 255,650 670,1070 1240,1640 2020,2595
-of idea about how inspection
+of idea about| how inspection
+|如何使用数据基础结构的检查和我们的先验知识
 
 1164
 00:39:17,945 --> 00:39:19,805
@@ -6515,7 +6597,8 @@ data and incorporation of our
 1166
 00:39:21,950 --> 00:39:23,825
 0,330 330,710 1150,1440 1440,1605 1605,1875
-prior knowledge can be used
+prior knowledge| can be used
+|来为非常适合特定任务的新的神经网络体系结构提供信息。
 
 1167
 00:39:23,825 --> 00:39:25,355
