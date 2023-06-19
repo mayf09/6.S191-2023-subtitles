@@ -6620,7 +6620,7 @@ suited for particular tasks.|
 00:39:32,510 --> 00:39:33,810
 0,290 290,515 515,755 755,980 980,1300
 On that, I want to
-关于这一点，我想把这堂课剩下的时间花在我们的第二个新领域，重点是产生式人工智能。
+关于这个，我想把这节课剩下的时间花在我们的第二个新领域，
 
 1171
 00:39:34,070 --> 00:39:35,550
@@ -6635,7 +6635,8 @@ of this lecture on our
 1173
 00:39:37,735 --> 00:39:40,315
 0,335 445,735 735,1295 1645,2045 2245,2580
-second new frontier, focusing on
+second new frontier,| focusing on
+|重点是生成式 AI 。
 
 1174
 00:39:40,315 --> 00:39:41,900
@@ -6647,7 +6648,7 @@ generative AI.|
 00:39:43,450 --> 00:39:45,525
 0,400 750,1055 1055,1250 1250,1540 1680,2075
 So as we first introduced
-因此，正如我们在这门课程的第一节课中所介绍的那样，我认为今天我们真的处于人工智能的这个转折点。
+正如我们在这门课程的第一节课中所介绍的那样，
 
 1176
 00:39:45,525 --> 00:39:46,845
@@ -6657,7 +6658,8 @@ in the first lecture of
 1177
 00:39:46,845 --> 00:39:49,410
 0,195 195,515 535,935 1105,1505 2275,2565
-this course and throughout, I
+this course and throughout,| I
+|我认为今天我们处于人工智能的转折点，
 
 1178
 00:39:49,410 --> 00:39:50,985
@@ -6672,36 +6674,38 @@ at this inflection point in
 1180
 00:39:52,965 --> 00:39:53,980
 0,365
-AI.|
+AI,|
 |
 
 1181
 00:39:53,980 --> 00:39:55,915
 0,285 285,585 585,890 910,1310 1600,1935
-Where we're seeing tremendous new
-我们看到了巨大的新功能，特别是产生式模型，使各种领域的新进展成为可能。
+where we're seeing tremendous new
+我们看到了巨大的新功能，
 
 1182
 00:39:55,915 --> 00:39:58,150
 0,335 835,1155 1155,1635 1635,1905 1905,2235
-capabilities, with generative models in
+capabilities,| with generative models in
+|特别是生成式模型，
 
 1183
 00:39:58,150 --> 00:40:01,530
 0,350 1150,2030 2110,2475 2475,3060 3060,3380
-particular, enabling new advances in
+particular,| enabling new advances in
+|使各种领域的新进展成为可能，
 
 1184
 00:40:01,640 --> 00:40:03,540
 0,275 275,545 545,845 845,1150
-a variety of fields.|
+a variety of fields,|
 |
 
 1185
 00:40:03,610 --> 00:40:04,995
 0,245 245,380 380,670 780,1160 1160,1385
-And I think we're just
-我认为我们正处在这个转折点上，在未来的几年里，我们将看到产生式人工智能从根本上改变我们世界的面貌，我们社会的面貌。
+and I think we're just
+我认为我们正处在这个转折点上，
 
 1186
 00:40:04,995 --> 00:40:06,405
@@ -6711,17 +6715,20 @@ at the, at the casa
 1187
 00:40:06,405 --> 00:40:07,755
 0,135 135,315 315,780 780,1125 1125,1350
-of this inflection point in
+of this inflection point,| in
+|在未来的几年里，
 
 1188
 00:40:07,755 --> 00:40:09,270
 0,275 445,750 750,930 930,1170 1170,1515
-that in the coming years,
+that in the coming years,|
+|
 
 1189
 00:40:09,270 --> 00:40:10,755
 0,315 315,450 450,645 645,900 900,1485
 we're going to see generative
+我们将看到生成式 AI 从根本上改变我们世界的面貌，我们社会的面貌。
 
 1190
 00:40:10,755 --> 00:40:13,680
@@ -6743,7 +6750,7 @@ of our society.|
 00:40:16,640 --> 00:40:18,205
 0,365 365,730 780,1040 1040,1235 1235,1565
 So today, in the remaining
-因此，今天，在新前沿课程的剩余部分，我们将专门关注一类新的生成性模型，扩散模型正在推动生成性人工智能的一些最新进展。
+所以，今天，在新前沿课程的剩余部分，
 
 1194
 00:40:18,205 --> 00:40:19,675
@@ -6753,7 +6760,8 @@ portion of the new frontiers
 1195
 00:40:19,675 --> 00:40:21,480
 0,365 895,1200 1200,1335 1335,1515 1515,1805
-lecture, we're going to focus
+lecture,| we're going to focus
+|我们将专门关注一类新的生成式模型，扩散模型，
 
 1196
 00:40:21,500 --> 00:40:23,490
@@ -6763,12 +6771,14 @@ specifically on a new class
 1197
 00:40:23,540 --> 00:40:25,830
 0,305 305,755 755,1030 1380,1925 1925,2290
-of generative models, diffusion models
+of generative models, diffusion models,|
+|
 
 1198
 00:40:26,180 --> 00:40:27,385
 0,245 245,425 425,890 890,1070 1070,1205
 that are powering some of
+正在推动生成式 AI 的一些最新进展。
 
 1199
 00:40:27,385 --> 00:40:30,205
@@ -6784,8 +6794,8 @@ AI.|
 1201
 00:40:32,130 --> 00:40:33,935
 0,245 245,490 840,1145 1145,1430 1430,1805
-All right, to start, let's
-好的，首先，让我们回顾一下关于生成性建模的课程，我们主要关注两类生成性模型，VAS和Gans。
+All right, to start,| let's
+好的，首先，|让我们回顾一下关于生成式模型的课程，
 
 1202
 00:40:33,935 --> 00:40:35,320
@@ -6795,7 +6805,8 @@ think back to the lecture
 1203
 00:40:35,370 --> 00:40:37,925
 0,305 305,755 755,1240 1950,2300 2300,2555
-on generative modeling, where we
+on generative modeling,| where we
+|我们主要关注两类生成式模型， VAE 和 GAN ，
 
 1204
 00:40:37,925 --> 00:40:39,910
@@ -6805,19 +6816,19 @@ focus primarily on two classes
 1205
 00:40:40,110 --> 00:40:43,205
 0,320 320,785 785,1060 1710,2200 2790,3095
-of generative models, vas and
+of generative models, VAEs and
 
 1206
 00:40:43,205 --> 00:40:44,300
 0,335
-gans.|
+GANs,|
 |
 
 1207
 00:40:45,540 --> 00:40:46,805
 0,320 320,515 515,785 785,995 995,1265
-What we didn't have time
-我们没有时间深入探讨的是，这些罐装VA型号的潜在局限性是什么。
+what we didn't have time
+我们没有时间深入探讨的是，
 
 1208
 00:40:46,805 --> 00:40:48,160
@@ -6827,7 +6838,8 @@ to go into into depth
 1209
 00:40:48,360 --> 00:40:49,685
 0,365 365,680 680,980 980,1190 1190,1325
-was what are some of
+was| what are some of
+|这些 VAE 和 GAN 的潜在局限性是什么。
 
 1210
 00:40:49,685 --> 00:40:52,070
@@ -6837,41 +6849,43 @@ the underlying limitations of these
 1211
 00:40:52,070 --> 00:40:54,360
 0,320 610,1035 1035,1260 1260,1760
-models va in cans.|
+models VAEs and GANs.|
 |
 
 1212
 00:40:55,470 --> 00:40:56,765
 0,320 320,590 590,875 875,1070 1070,1295
 Turns out that there are
-事实证明，这有三个主要限制。
+事实证明，这里有三个主要限制，
 
 1213
 00:40:56,765 --> 00:40:59,600
 0,365 415,815 895,1565
-three primary limitations.|
+three primary limitations,|
 |
 
 1214
 00:40:59,600 --> 00:41:00,770
 0,255 255,480 480,735 735,930 930,1170
-The first is what we
-第一个是我们所说的模式崩溃，这意味着在生成过程中，VAS和Gans可以向下崩溃到这个模式，在这个阶段，他们会产生很多预测，很多彼此非常相似的新样本。
+the first is what we
+第一个是我们所说的模式崩溃，
 
 1215
 00:41:00,770 --> 00:41:03,500
 0,350 460,860 880,1340 2050,2400 2400,2730
-call mode collapse, meaning that
+call mode collapse,| meaning that
+|这意味着在生成过程中，
 
 1216
 00:41:03,500 --> 00:41:05,420
 0,270 270,450 450,930 930,1220 1450,1920
-in the generative process, vas
+in the generative process,| VAEs
+|VAE 和 GAN 可以向下崩溃到这个模式，这个阶段，
 
 1217
 00:41:05,420 --> 00:41:06,875
 0,225 225,560 730,1065 1065,1275 1275,1455
-and gans can kind of
+and GANs can kind of
 
 1218
 00:41:06,875 --> 00:41:09,550
@@ -6881,12 +6895,14 @@ collapse down to this mode,
 1219
 00:41:09,900 --> 00:41:11,930
 0,395 395,785 785,1070 1070,1460 1460,2030
-this phase where they're generating
+this phase,| where they're generating
+|它们会产生很多预测，
 
 1220
 00:41:11,930 --> 00:41:14,150
 0,255 255,495 495,830 1000,1760 1960,2220
-a lot of predictions, a
+a lot of predictions,| a
+|很多彼此非常相似的新样本，
 
 1221
 00:41:14,150 --> 00:41:15,215
@@ -6901,13 +6917,13 @@ are very, very similar to
 1223
 00:41:16,445 --> 00:41:17,340
 0,135 135,425
-each other.|
+each other,|
 |
 
 1224
 00:41:17,410 --> 00:41:18,855
 0,400 480,875 875,1130 1130,1265 1265,1445
-We often kind of think
+we often kind of think
 我们经常认为这是对平均值或最常见值的回归。
 
 1225
@@ -6929,8 +6945,8 @@ most common value.|
 1228
 00:41:24,140 --> 00:41:25,765
 0,290 290,560 560,830 830,1370 1370,1625
-The second key limitation, as
-第二个关键限制，就像我在我们的生成性建模课程中提到的那样，是这些模型真的很难生成全新的实例。
+The second key limitation,| as
+第二个关键限制，|就像我在我们的生成式建模课程中提到的那样，
 
 1229
 00:41:25,765 --> 00:41:26,935
@@ -6940,12 +6956,14 @@ I kind of alluded to
 1230
 00:41:26,935 --> 00:41:28,950
 0,285 285,605 775,1290 1290,1725 1725,2015
-in our generative modeling lecture,
+in our generative modeling lecture,|
+|
 
 1231
 00:41:29,600 --> 00:41:31,020
 0,290 290,470 470,680 680,1000 1020,1420
 was that these models really
+是这些模型真的很难生成全新的实例，
 
 1232
 00:41:31,040 --> 00:41:33,600
@@ -6955,31 +6973,30 @@ struggle to generate radically new
 1233
 00:41:33,740 --> 00:41:35,840
 0,770 770,1090 1140,1540
-instances that are.|
-|
+instances,| that are
+|与训练数据不同，而更加多样化。
 
 1234
 00:41:36,210 --> 00:41:38,075
 0,400 720,1120 1230,1490 1490,1625 1625,1865
-Not similar to the training
-与训练数据不同的是更加多样化。
+not similar to the training
 
 1235
 00:41:38,075 --> 00:41:39,310
 0,300 300,495 495,660 660,900 900,1235
-data that are more diverse.|
+data, that are more diverse.|
 |
 
 1236
 00:41:40,660 --> 00:41:42,690
 0,400 870,1175 1175,1385 1385,1670 1670,2030
 Finally, it turns out that
-最后，事实证明，尤其是甘斯，以及VAS在实践中可能很难训练。它们不稳定，效率低下，这导致在实践中考虑如何扩展这些模型时会出现很多问题。
+最后，事实证明， GAN 以及 VAE 在实践中可能很难训练，
 
 1237
 00:41:42,690 --> 00:41:45,015
 0,410 790,1170 1170,1545 1545,1905 1905,2325
-gans in particular and vas
+GANs in particular and VAEs
 
 1238
 00:41:45,015 --> 00:41:46,785
@@ -6989,12 +7006,14 @@ as well in practice can
 1239
 00:41:46,785 --> 00:41:48,260
 0,225 225,575 715,1005 1005,1185 1185,1475
-be very difficult to train.
+be very difficult to train,|
+|
 
 1240
 00:41:48,640 --> 00:41:51,330
 0,335 335,940 1200,2020 2160,2465 2465,2690
-They're unstable, inefficient, and this
+they're unstable, inefficient,| and this
+它们不稳定，效率低下，|这导致在实践中出现很多问题，
 
 1241
 00:41:51,330 --> 00:41:52,490
@@ -7004,7 +7023,8 @@ leads to a lot of
 1242
 00:41:52,750 --> 00:41:54,675
 0,395 395,695 695,1000 1350,1640 1640,1925
-problems in practice when thinking
+problems in practice,| when thinking
+|当考虑如何扩展这些模型时。
 
 1243
 00:41:54,675 --> 00:41:56,685
@@ -7021,7 +7041,7 @@ models.|
 00:41:58,850 --> 00:42:01,020
 0,305 305,880 930,1250 1250,1820 1820,2170
 These limitations then motivate a
-然后，这些限制激发了一组具体的挑战或标准，当我们考虑生成性模型时，这些挑战或标准是我们真正想要满足的。
+这些限制激发了一组具体的挑战或标准，
 
 1246
 00:42:01,130 --> 00:42:02,890
@@ -7031,7 +7051,8 @@ concrete set of challenges or
 1247
 00:42:02,890 --> 00:42:04,870
 0,770 1000,1290 1290,1470 1470,1710 1710,1980
-criteria that we really want
+criteria,| that we really want
+|当我们考虑生成式模型时，
 
 1248
 00:42:04,870 --> 00:42:06,265
@@ -7041,14 +7062,14 @@ to meet when thinking about
 1249
 00:42:06,265 --> 00:42:07,780
 0,465 465,725
-generative models.|
+generative models,|
 |
 
 1250
 00:42:07,900 --> 00:42:09,180
 0,275 275,455 455,650 650,1070 1070,1280
-We want our generative model
-我们希望我们的生成模型稳定、高效地进行训练。
+we want our generative model
+我们希望我们的生成模型稳定、高效地进行训练，
 
 1251
 00:42:09,180 --> 00:42:10,995
@@ -7058,24 +7079,26 @@ to be stable, efficient to
 1252
 00:42:10,995 --> 00:42:12,080
 0,305
-train.|
+train,|
 |
 
 1253
 00:42:12,180 --> 00:42:13,745
 0,275 275,530 530,785 785,1060 1200,1565
-We wanted to generate high
-我们希望生成高质量的样本，这些样本是人工合成的，而且是新颖的多样化，不同于该模型以前在其训练示例中看到的。
+we wanted to generate high
+我们希望生成高质量的样本，
 
 1254
 00:42:13,745 --> 00:42:16,360
 0,365 415,1055 1705,1965 1965,2130 2130,2615
-quality samples that are synthetic
+quality samples,| that are synthetic
+|这些样本是人工合成的，而且是新颖的多样化，
 
 1255
 00:42:16,680 --> 00:42:19,325
 0,400 480,880 1080,1480 1860,2260 2280,2645
-and novel diverse, different from
+and novel diverse,| different from
+|不同于该模型以前在其训练示例中看到的。
 
 1256
 00:42:19,325 --> 00:42:21,035
@@ -7091,8 +7114,8 @@ before in its training examples.|
 1258
 00:42:24,950 --> 00:42:26,560
 0,380 380,725 725,1090 1110,1445 1445,1610
-Today and tomorrow we're going
-今天和明天，我们将关注两个非常、非常令人兴奋的新的生成性模型，它们将正面应对这些挑战。
+Today and tomorrow,| we're going
+今天和明天，|我们将关注两个非常令人兴奋的新的生成式模型，
 
 1259
 00:42:26,560 --> 00:42:28,660
@@ -7107,7 +7130,8 @@ very exciting new classes of
 1261
 00:42:30,820 --> 00:42:33,340
 0,450 450,740 1180,1580 1780,2295 2295,2520
-generative models that tackle these
+generative models,| that tackle these
+|它们将正面应对这些挑战。
 
 1262
 00:42:33,340 --> 00:42:34,980
@@ -7118,13 +7142,14 @@ challenges head on.|
 1263
 00:42:35,080 --> 00:42:36,350
 0,335 335,620 620,755 755,950 950,1270
-Today I'm going to specifically
-今天，我将特别关注扩散模型，提供它们工作原理背后的直觉，你以前可能在哪里见过它们，以及它们带来了哪些进步。
+Today, I'm going to specifically
+今天，我将特别关注扩散模型，
 
 1264
 00:42:36,520 --> 00:42:39,075
 0,395 395,710 710,1145 1145,1510 2220,2555
-focus on diffusion models, provide
+focus on diffusion models,| provide
+|提供它们工作原理背后的直觉，
 
 1265
 00:42:39,075 --> 00:42:40,950
@@ -7134,12 +7159,14 @@ the intuition behind how they
 1266
 00:42:40,950 --> 00:42:42,435
 0,290 640,960 960,1155 1155,1305 1305,1485
-work, where you may have
+work,| where you may have
+|你以前可能在哪里见过它们，
 
 1267
 00:42:42,435 --> 00:42:43,605
 0,195 195,345 345,585 585,885 885,1170
-seen them before and what
+seen them before| and what
+|以及它们带来了哪些进步。
 
 1268
 00:42:43,605 --> 00:42:44,820
@@ -7155,23 +7182,25 @@ that they're enabling.|
 1270
 00:42:46,500 --> 00:42:48,065
 0,365 365,730 900,1190 1190,1355 1355,1565
-And tomorrow in the guest
-明天，在谷歌的客座演讲中，我们将听到Dillip关于另一种生成性建模方法的演讲，该方法专门专注于从文本到图像生成的任务。
+And tomorrow, in the guest
+明天，在谷歌的客座演讲中，
 
 1271
 00:42:48,065 --> 00:42:49,730
 0,315 315,600 600,905 1195,1515 1515,1665
-lecture from Google, we're going
+lecture from Google,| we're going
+|我们将听到 Dilip 关于另一种生成式建模方法的演讲，
 
 1272
 00:42:49,730 --> 00:42:51,410
 0,195 195,420 420,690 690,1130 1300,1680
-to hear from dillip on
+to hear from Dilip on
 
 1273
 00:42:51,410 --> 00:42:53,810
 0,345 345,915 915,1410 1410,1760 1990,2400
-another generative modeling approach that's
+another generative modeling approach,| that's
+|专门专注于从文本到图像生成的任务。
 
 1274
 00:42:53,810 --> 00:42:55,720
@@ -7187,20 +7216,20 @@ of text to image generation.|
 1276
 00:42:59,630 --> 00:43:00,680
 0,400
-Okay.|
-好吧。|
+Okay,
+好的，所以让我们开始吧。
 
 1277
 00:43:01,070 --> 00:43:01,930
 0,105 105,210 210,345 345,540 540,860
-So let's get into it.|
-所以让我们开始吧。|
+so let's get into it.|
+|
 
 1278
 00:43:03,670 --> 00:43:05,145
 0,335 335,740 740,1070 1070,1325 1325,1475
-For diffusion models, I think
-对于扩散模型，我认为它首先帮助我们再次与我们看到的模型、我们看到和了解的体系结构进行比较。
+For diffusion models,| I think
+对于扩散模型，|我认为它首先帮助我们再次与我们看到的模型进行比较，
 
 1279
 00:43:05,145 --> 00:43:06,345
@@ -7215,19 +7244,20 @@ compare back again to the
 1281
 00:43:08,445 --> 00:43:10,215
 0,270 270,645 645,870 870,1110 1110,1770
-models we've seen, the architectures
+models we've seen,| the architectures
+|我们看到和了解的体系结构，
 
 1282
 00:43:10,215 --> 00:43:12,020
 0,270 270,525 525,905 1135,1470 1470,1805
-we've seen and know about.|
+we've seen and know about,|
 |
 
 1283
 00:43:12,800 --> 00:43:14,245
 0,335 335,710 710,935 935,1205 1205,1445
-With vas and gans that
-对于我们在第四讲中讨论的VAS和Gans，我们的任务是生成示例，合成示例，比方说一张照片中的图像，通过获取一些压缩或噪声的潜在空间，然后尝试解码或生成，在我们的原始数据空间中产生一个新的实例。
+with VAEs and GANs that
+对于我们在第四讲中讨论的 VAE 和 GAN ，
 
 1284
 00:43:14,245 --> 00:43:15,480
@@ -7237,37 +7267,44 @@ we talked about in lecture
 1285
 00:43:15,500 --> 00:43:18,085
 0,400 1230,1550 1550,1870 1920,2285 2285,2585
-four, the task is to
+4,| the task is to
+|任务是生成示例，合成示例，
 
 1286
 00:43:18,085 --> 00:43:20,995
 0,335 805,1205 1315,1890 1890,2285 2545,2910
-generate examples, synthetic examples, let's
+generate examples, synthetic examples,| let's
+|比如一张照片，
 
 1287
 00:43:20,995 --> 00:43:22,900
 0,105 105,240 240,515 1465,1740 1740,1905
-say an image in a
+say an image,| in a
+|在一次中，
 
 1288
 00:43:22,900 --> 00:43:24,685
 0,270 270,650 760,1110 1110,1460 1480,1785
-single shot, by taking some
+single shot,| by taking some
+|通过获取一些压缩或噪声的潜在空间，
 
 1289
 00:43:24,685 --> 00:43:27,030
 0,575 775,1110 1110,1605 1605,2010 2010,2345
-compressed or noisy latent space
+compressed or noisy latent space|
+|
 
 1290
 00:43:27,560 --> 00:43:29,335
 0,275 275,500 500,845 845,1175 1175,1775
 and then trying to decode
+然后尝试从它解码或生成，
 
 1291
 00:43:29,335 --> 00:43:31,045
 0,195 195,515 595,900 900,1205 1345,1710
-or generate from that to
+or generate from that,| to
+|在我们的原始数据空间中产生一个新的实例。
 
 1292
 00:43:31,045 --> 00:43:32,850
@@ -7284,51 +7321,55 @@ in our original data space.|
 00:43:36,220 --> 00:43:38,600
 0,500 500,875 875,1220 1220,2075 2075,2380
 Diffusion models work fundamentally differently
-扩散模型的工作原理与这种方法截然不同。
+扩散模型的工作原理与这种方法截然不同，
 
 1295
 00:43:38,800 --> 00:43:40,460
 0,290 290,530 530,880
-from this approach.|
+from this approach,|
 |
 
 1296
 00:43:40,590 --> 00:43:42,320
 0,400 480,800 800,1085 1085,1400 1400,1730
-Rather than doing this one
-扩散模型所做的是迭代地产生新的样本，而不是进行这种尖锐的预测。
+rather than doing this {one-shot
+不是进行这种一次的预测，
 
 1297
 00:43:42,320 --> 00:43:44,860
 0,315 315,770 1480,1785 1785,2175 2175,2540
-sharp prediction, what diffusion models
+-} prediction,| what diffusion models
+|扩散模型所做的是，
 
 1298
 00:43:44,880 --> 00:43:46,630
 0,400 750,1025 1025,1190 1190,1415 1415,1750
-do is that they generate
+do is that,| they generate
+|它们迭代地产生新的样本，
 
 1299
 00:43:46,770 --> 00:43:49,100
 0,350 350,950 950,1810
-new samples iteratively.|
+new samples iteratively,|
 |
 
 1300
 00:43:49,110 --> 00:43:51,280
 0,400 660,1060 1110,1460 1460,1880 1880,2170
-By starting from purely random
-从纯粹的随机噪声开始，学习一个过程，这个过程可以迭代地从完全随机状态中删除小增量的噪声，直到能够在我们开始并关心的原始数据环境中生成合成示例。
+by starting from purely random
+从纯粹的随机噪声开始，
 
 1301
 00:43:51,300 --> 00:43:53,650
 0,400 1110,1460 1460,1775 1775,2045 2045,2350
-noise and learning a process
+noise| and learning a process|
+|学习一个过程，|
 
 1302
 00:43:53,760 --> 00:43:56,080
 0,275 275,470 470,1205 1205,1570 1920,2320
 that can iteratively remove small
+这个过程可以迭代地从完全随机状态中删除小增量的噪声，
 
 1303
 00:43:56,280 --> 00:43:58,205
@@ -7338,7 +7379,8 @@ increments of noise from that
 1304
 00:43:58,205 --> 00:44:00,335
 0,345 345,695 745,1145 1645,1965 1965,2130
-complete random state all the
+complete random state,| all the
+|直到能够生成合成示例，
 
 1305
 00:44:00,335 --> 00:44:01,970
@@ -7353,7 +7395,8 @@ able to generate a synthetic
 1307
 00:44:03,810 --> 00:44:06,220
 0,400 840,1145 1145,1355 1355,1660 2010,2410
-example in the original data
+example| in the original data
+|在我们开始并关心的原始数据环境中。
 
 1308
 00:44:06,420 --> 00:44:07,595
@@ -7370,29 +7413,31 @@ with and caring about.|
 00:44:10,320 --> 00:44:12,035
 0,260 260,800 800,1085 1085,1355 1355,1715
 The intuition here is really
-这里的直觉真的很聪明，我认为，在这方面真的很强大。
+这里的直觉真的很聪明，
 
 1311
 00:44:12,035 --> 00:44:14,330
 0,395 655,1050 1050,1445 1765,2055 2055,2295
-clever and really, I think,
+clever| and really, I think,
+|我认为，很强大，
 
 1312
 00:44:14,330 --> 00:44:16,740
 0,350 970,1275 1275,1580
-powerful in that.|
+powerful in that,|
 |
 
 1313
 00:44:17,040 --> 00:44:18,680
 0,320 320,725 725,1090 1110,1415 1415,1640
-What diffusion models allow us
-扩散模型使我们能够从一个完全随机的状态开始，捕捉最大的可变性，最大的信息量。
+what diffusion models allow us
+扩散模型使我们能够，
 
 1314
 00:44:18,680 --> 00:44:19,960
 0,180 180,405 405,690 690,945 945,1280
-to do is to capture
+to do is| to capture
+|捕捉最大的可变性，最大的信息量，
 
 1315
 00:44:20,700 --> 00:44:23,590
@@ -7402,7 +7447,8 @@ maximum variability, maximum amount of
 1316
 00:44:23,670 --> 00:44:26,315
 0,400 870,1270 1500,1900 2010,2330 2330,2645
-information, by starting from a
+information,| by starting from a
+|从一个完全随机的状态开始，
 
 1317
 00:44:26,315 --> 00:44:28,360
@@ -7414,41 +7460,42 @@ completely random state.|
 00:44:28,990 --> 00:44:30,480
 0,485 485,800 800,1040 1040,1205 1205,1490
 Diffusion models can be broken
-扩散模型可以分为两个关键方面。
+扩散模型可以分为两个关键方面，
 
 1319
 00:44:30,480 --> 00:44:33,170
 0,330 330,680 730,1130 1360,1760 2290,2690
-down into two key aspects.|
+down into two key aspects,|
 |
 
 1320
 00:44:33,960 --> 00:44:35,390
 0,305 305,610 660,995 995,1220 1220,1430
-The first is what we
-第一个是我们所说的前向噪声过程。
+the first is what we
+第一个是我们所说的前向噪声过程，
 
 1321
 00:44:35,390 --> 00:44:37,450
 0,315 315,645 645,980 1180,1740 1740,2060
-call the forward noising process.|
+call the forward noising process,|
 |
 
 1322
 00:44:38,830 --> 00:44:40,155
 0,400 480,785 785,995 995,1175 1175,1325
-And at the core of
-这个想法的核心是我们如何建立数据，让扩散模型查看，然后学习如何去噪和生成数据。
+and at the core of
+这个想法的核心是，
 
 1323
 00:44:40,155 --> 00:44:41,685
 0,225 225,450 450,725 805,1185 1185,1530
-this is this idea of
+this is| this idea of
+|我们如何建立数据，让扩散模型查看，
 
 1324
 00:44:41,685 --> 00:44:43,520
 0,270 270,495 495,780 780,1145 1435,1835
-how we build up data
+how we build up data,
 
 1325
 00:44:44,050 --> 00:44:45,480
@@ -7458,7 +7505,8 @@ for the diffusion model to
 1326
 00:44:45,480 --> 00:44:46,950
 0,150 150,440 640,930 930,1155 1155,1470
-look at and then learn
+look at| and then learn
+|然后学习如何去噪和生成数据。
 
 1327
 00:44:46,950 --> 00:44:48,510
@@ -7475,7 +7523,7 @@ generate from.|
 00:44:50,870 --> 00:44:52,510
 0,290 290,500 500,740 740,1060 1350,1640
 The key step here is
-这里的关键一步是我们从训练数据开始，比如说图像的例子。
+这里的关键一步是我们从训练数据开始，
 
 1330
 00:44:52,510 --> 00:44:54,055
@@ -7485,31 +7533,32 @@ that we start with training
 1331
 00:44:54,055 --> 00:44:56,305
 0,365 955,1320 1320,1565 1615,1995 1995,2250
-data, let's say examples of
+data,| let's say examples of
+|比如说图像的例子，
 
 1332
 00:44:56,305 --> 00:44:57,420
 0,275
-images.|
+images,|
 |
 
 1333
 00:44:57,460 --> 00:44:58,710
 0,320 320,590 590,830 830,1055 1055,1250
-And over the course of
-在这个前向噪声扩散过程中。
+and over the course of
+在这个前向噪声扩散过程中，
 
 1334
 00:44:58,710 --> 00:45:00,740
 0,210 210,560 670,1230 1230,1650 1650,2030
-this forward noising diffusion process.|
+this forward noising diffusion process,|
 |
 
 1335
 00:45:01,810 --> 00:45:03,135
 0,290 290,470 470,760 810,1115 1115,1325
-What we do is we
-我们所做的是逐渐增加噪音，这样我们就会慢慢地抹去图像中的细节，破坏信息，摧毁信息，直到我们达到纯粹的噪音状态。
+what we do is we
+我们所做的是逐渐增加噪音，
 
 1336
 00:45:03,135 --> 00:45:06,240
@@ -7519,7 +7568,8 @@ progressively add increasing increments of
 1337
 00:45:06,240 --> 00:45:08,280
 0,290 1030,1380 1380,1650 1650,1815 1815,2040
-noise such that we are
+noise,| such that we are
+|这样我们就会慢慢地抹去图像中的细节，
 
 1338
 00:45:08,280 --> 00:45:10,160
@@ -7529,12 +7579,14 @@ slowly wiping out the details
 1339
 00:45:10,360 --> 00:45:12,465
 0,290 290,440 440,700 1170,1835 1835,2105
-in the image, corrupting the
+in the image,| corrupting the
+|破坏信息，摧毁信息，
 
 1340
 00:45:12,465 --> 00:45:15,315
 0,395 625,1050 1050,1325 1345,1745 2545,2850
-information, destroying that information until
+information, destroying that information,| until
+|直到我们达到纯粹的噪音状态。
 
 1341
 00:45:15,315 --> 00:45:16,700
@@ -7550,24 +7602,25 @@ that is pure noise.|
 1343
 00:45:19,070 --> 00:45:20,360
 0,400
-Then.|
-然后。|
+Then,
+然后，我们构建神经网络的目的是，
 
 1344
 00:45:20,710 --> 00:45:22,095
 0,290 290,580 600,920 920,1160 1160,1385
-What we actually build our
-我们实际上构建神经网络的目的是学习从完全噪声状态返回到原始数据空间的映射，我们称之为反向过程。
+what we actually build our
 
 1345
 00:45:22,095 --> 00:45:23,790
 0,240 240,510 510,780 780,1055 1375,1695
-neural network to do is
+neural network to do is|
+|
 
 1346
 00:45:23,790 --> 00:45:25,875
 0,225 225,530 790,1080 1080,1670 1750,2085
 to learn a mapping that
+学习从完全噪声状态返回到原始数据空间的映射，
 
 1347
 00:45:25,875 --> 00:45:27,810
@@ -7582,39 +7635,44 @@ state back up to the
 1349
 00:45:29,820 --> 00:45:32,160
 0,320 610,1005 1005,1400 1870,2145 2145,2340
-original data space, what we
+original data space,| what we
+|我们称之为反向过程，
 
 1350
 00:45:32,160 --> 00:45:34,140
 0,225 225,495 495,825 825,1190
-call the reverse process.|
+call the reverse process,|
 |
 
 1351
 00:45:34,330 --> 00:45:36,075
 0,380 380,620 620,1120 1170,1505 1505,1745
-Learning and mapping that d
-学习和映射从噪声返回到数据的d个噪声。这里的核心思想是，去噪是从完全随机的状态迭代地恢复越来越多的信息。
+learning and mapping that de
+学习和映射去噪声，
 
 1352
 00:45:36,075 --> 00:45:38,475
 0,575 805,1155 1155,1410 1410,1715 2035,2400
-noises going from noise back
+noises,| going from noise back
+|从噪声返回到数据，
 
 1353
 00:45:38,475 --> 00:45:40,875
 0,365 565,825 825,1085 1945,2220 2220,2400
-up to data. And the
+up to data,| and the
+|这里的核心思想是，
 
 1354
 00:45:40,875 --> 00:45:42,285
 0,300 300,645 645,930 930,1155 1155,1410
-core idea here is that
+core idea here is that,|
+|
 
 1355
 00:45:42,285 --> 00:45:44,880
 0,255 255,780 780,1145 1165,2045 2065,2595
 de noising is iteratively recovering
+去噪是从完全随机的状态迭代地恢复越来越多的信息。
 
 1356
 00:45:44,880 --> 00:45:46,790
@@ -7631,32 +7689,37 @@ from a completely random state.|
 00:45:51,510 --> 00:45:52,600
 0,290 290,440 440,590 590,785 785,1090
 These are the two core
-这是两个核心部分，正向去噪过程和反向去噪过程，我们将看看每个过程是如何工作的，归结为核心直觉。
+这是两个核心部分，
 
 1359
 00:45:52,920 --> 00:45:55,030
 0,400 510,800 800,1090 1290,1805 1805,2110
-components, the forward noising process,
+components,| the forward noising process,
+|正向噪声过程和反向去噪过程，
 
 1360
 00:45:55,380 --> 00:45:57,160
 0,335 335,670 840,1115 1115,1490 1490,1780
-the reverse de noising process,
+the reverse de noising process,|
+|
 
 1361
 00:45:57,720 --> 00:45:58,670
 0,275 275,455 455,590 590,755 755,950
 and we're going to look
+我们将看看每个过程是如何工作的，
 
 1362
 00:45:58,670 --> 00:46:00,400
 0,320 730,1035 1035,1230 1230,1425 1425,1730
-at how each one works,
+at how each one works,|
+|
 
 1363
 00:46:00,570 --> 00:46:01,985
 0,575 575,815 815,1025 1025,1175 1175,1415
 distilled down to the core
+归结为核心直觉。
 
 1364
 00:46:01,985 --> 00:46:03,160
