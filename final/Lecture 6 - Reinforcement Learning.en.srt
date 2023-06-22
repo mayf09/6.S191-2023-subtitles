@@ -1,0 +1,4152 @@
+1
+00:00:09,040 --> 00:00:10,280
+Hi, everyone, welcome back.
+
+2
+00:00:11,080 --> 00:00:14,895
+Today, I think that these two lectures today are really exciting,
+
+3
+00:00:14,895 --> 00:00:16,760
+because they start to move beyond,
+
+4
+00:00:16,870 --> 00:00:19,790
+you know, a lot of what we've talked about in the class so far,
+
+5
+00:00:20,140 --> 00:00:23,085
+which is focusing a lot on really static data sets
+
+6
+00:00:23,085 --> 00:00:25,820
+and specifically in today, in this lecture, right now,
+
+7
+00:00:26,290 --> 00:00:30,390
+I'm going to start to talk about how we can learn about this very long standing field
+
+8
+00:00:30,390 --> 00:00:33,140
+of how we can specifically marry two topics.
+
+9
+00:00:33,310 --> 00:00:35,840
+The first topic being reinforcement learning,
+
+10
+00:00:36,480 --> 00:00:38,570
+which has existed for many, many decades,
+
+11
+00:00:38,980 --> 00:00:42,780
+together with a lot of the very recent advances in deep learning,
+
+12
+00:00:42,780 --> 00:00:44,430
+which you've already started learning about
+
+13
+00:00:44,430 --> 00:00:45,620
+as part of this course.
+
+14
+00:00:46,940 --> 00:00:51,600
+Now this marriage of these two fields is actually really fascinating to me,
+
+15
+00:00:51,680 --> 00:00:53,605
+particularly, because like I said,
+
+16
+00:00:53,605 --> 00:00:56,250
+it moves away from this whole paradigm of
+
+17
+00:00:56,840 --> 00:01:01,135
+or really this whole paradigm that we've been exposed to in the class thus far,
+
+18
+00:01:01,135 --> 00:01:07,180
+and that paradigm is really how we can build a deep learning model using some data set,
+
+19
+00:01:07,180 --> 00:01:11,125
+but that data set is typically fixed in in our world, right,
+
+20
+00:01:11,125 --> 00:01:13,590
+we collect, we go out and go collect that data set,
+
+21
+00:01:13,760 --> 00:01:16,410
+we deploy it on our machine learning or deep learning algorithm
+
+22
+00:01:16,520 --> 00:01:18,870
+and then we can evaluate on a brand new data set,
+
+23
+00:01:19,330 --> 00:01:22,830
+but that is very different than the way things work in the real world,
+
+24
+00:01:22,830 --> 00:01:23,660
+in the real world,
+
+25
+00:01:23,950 --> 00:01:27,860
+you have your deep learning model actually deployed together with the data
+
+26
+00:01:27,940 --> 00:01:29,270
+together, out into reality,
+
+27
+00:01:30,280 --> 00:01:32,690
+exploring, interacting with its environment
+
+28
+00:01:32,830 --> 00:01:36,740
+and trying out a whole bunch of different actions and different things in that environment
+
+29
+00:01:36,970 --> 00:01:38,540
+in order to be able to learn
+
+30
+00:01:38,740 --> 00:01:43,310
+how to best perform any particular task that may need to accomplish,
+
+31
+00:01:43,330 --> 00:01:48,210
+and typically we want to be able to do this without explicit human supervision, right,
+
+32
+00:01:48,210 --> 00:01:51,240
+this is the key motivation of reinforcement learning,
+
+33
+00:01:51,240 --> 00:01:53,430
+you're going to try and learn through reinforcement,
+
+34
+00:01:53,430 --> 00:01:55,310
+making mistakes in your world
+
+35
+00:01:55,360 --> 00:01:58,490
+and then collecting data on those mistakes to learn how to improve.
+
+36
+00:01:59,600 --> 00:02:06,700
+Now, this is obviously a huge field in or a huge topic in the field of robotics and autonomy,
+
+37
+00:02:06,700 --> 00:02:09,270
+you can think of self driving cars and robot manipulation,
+
+38
+00:02:09,650 --> 00:02:14,455
+but also very recently we've started seeing incredible advances of deep reinforcement learning,
+
+39
+00:02:14,455 --> 00:02:19,860
+specifically also on the side of game play and strategy making as well.
+
+40
+00:02:20,480 --> 00:02:22,270
+So one really cool thing is that,
+
+41
+00:02:22,270 --> 00:02:24,270
+now you can even imagine right this,
+
+42
+00:02:26,160 --> 00:02:30,730
+this combination of robotics, together with gameplay right,
+
+43
+00:02:30,840 --> 00:02:33,640
+now, training robots to play against us in the real world,
+
+44
+00:02:33,870 --> 00:02:37,270
+and I'll just play this very short video on StarCraft and DeepMind.
+
+45
+00:02:41,870 --> 00:02:44,580
+Perfect information and to display in real time,
+
+46
+00:02:45,110 --> 00:02:47,185
+it also requires long term planning
+
+47
+00:02:47,185 --> 00:02:51,240
+and the ability to choose what action to take from millions and millions of possibilities,
+
+48
+00:02:52,430 --> 00:02:54,880
+I'm hoping for a five zero not to lose any games,
+
+49
+00:02:54,880 --> 00:02:57,630
+but I think the realistic goal would be four and one in my favor.
+
+50
+00:02:59,900 --> 00:03:01,110
+I think he looks more confident
+
+51
+00:03:01,250 --> 00:03:03,330
+and Taylor was quite nervous before.
+
+52
+00:03:07,970 --> 00:03:09,570
+The room was much more tense this time,
+
+53
+00:03:11,390 --> 00:03:12,870
+really didn't know what to expect,
+
+54
+00:03:13,370 --> 00:03:15,960
+he's been playing StarCraft pretty much since he five.
+
+55
+00:03:21,170 --> 00:03:23,640
+I wasn't expecting AI to be that good,
+
+56
+00:03:26,030 --> 00:03:27,270
+everything that he did was proper,
+
+57
+00:03:27,290 --> 00:03:29,490
+it was calculated and it was done well,
+
+58
+00:03:30,320 --> 00:03:31,740
+I thought I'm learning something.
+
+59
+00:03:36,800 --> 00:03:38,910
+I would consider myself a good player, right,
+
+60
+00:03:39,200 --> 00:03:41,250
+but I lost every single one of my games.
+
+61
+00:03:45,740 --> 00:03:46,920
+[] had won.
+
+62
+00:03:48,690 --> 00:03:51,340
+So let's take maybe a start and take a step back,
+
+63
+00:03:51,540 --> 00:03:55,535
+first of all, and think about how reinforcement learning fits into
+
+64
+00:03:55,535 --> 00:04:00,140
+this whole paradigm of all of the different topics that you've been exposed to in this class so far,
+
+65
+00:04:00,140 --> 00:04:01,745
+so as a whole,
+
+66
+00:04:01,745 --> 00:04:06,530
+I think that we've really covered two different types of learning in this course to date, right,
+
+67
+00:04:06,530 --> 00:04:10,160
+up until now, we've really started focusing in the beginning part of the lectures,
+
+68
+00:04:10,160 --> 00:04:12,670
+firstly on what we call supervised learning,
+
+69
+00:04:13,860 --> 00:04:15,850
+supervised learning is in this domain,
+
+70
+00:04:15,990 --> 00:04:18,430
+where we're given data in the form of
+
+71
+00:04:18,600 --> 00:04:21,670
+x's our inputs and our label's y,
+
+72
+00:04:22,050 --> 00:04:24,880
+and our goal here is to learn a function or a neural network,
+
+73
+00:04:25,110 --> 00:04:27,820
+that can learn to predict y, given our inputs x.
+
+74
+00:04:28,460 --> 00:04:31,840
+So, for example, if you consider this example of an apple,
+
+75
+00:04:32,340 --> 00:04:35,255
+observing a bunch of images of apples we want to detect,
+
+76
+00:04:35,255 --> 00:04:37,420
+you know, in the future if we see a new image of an apple,
+
+77
+00:04:37,530 --> 00:04:39,400
+to detect that this is indeed an apple.
+
+78
+00:04:40,750 --> 00:04:45,320
+Now, the second class of learning approaches that we've discovered yesterday,
+
+79
+00:04:45,520 --> 00:04:48,210
+in yesterday's lecture was that of unsupervised learning,
+
+80
+00:04:48,210 --> 00:04:49,695
+and in these algorithms,
+
+81
+00:04:49,695 --> 00:04:52,400
+you have only access to the data,
+
+82
+00:04:52,420 --> 00:04:54,390
+there's no notion of labels, right,
+
+83
+00:04:54,390 --> 00:04:55,820
+this is what we learned about yesterday,
+
+84
+00:04:56,860 --> 00:04:58,350
+in these types of algorithms,
+
+85
+00:04:58,350 --> 00:04:59,990
+you're not trying to predict a label,
+
+86
+00:05:00,160 --> 00:05:03,380
+but you're trying to uncover some of the underlying structure,
+
+87
+00:05:03,460 --> 00:05:05,805
+what we were calling basically these latent variables,
+
+88
+00:05:05,805 --> 00:05:07,700
+these hidden features in your data,
+
+89
+00:05:07,750 --> 00:05:10,130
+so for example, in this apple example, right,
+
+90
+00:05:10,330 --> 00:05:11,780
+using unsupervised learning,
+
+91
+00:05:12,010 --> 00:05:15,860
+the analogous example would basically be to build a model,
+
+92
+00:05:16,000 --> 00:05:21,555
+that could understand and cluster certain certain parts of these images together,
+
+93
+00:05:21,555 --> 00:05:23,925
+and maybe it doesn't have to understand that necessarily,
+
+94
+00:05:23,925 --> 00:05:25,250
+this is an image of an apple,
+
+95
+00:05:25,690 --> 00:05:27,030
+but it needs to understand that,
+
+96
+00:05:27,030 --> 00:05:29,640
+you know, this image of the red apple is similar,
+
+97
+00:05:29,640 --> 00:05:32,480
+it has the same latent features and same semantic meaning
+
+98
+00:05:32,770 --> 00:05:35,840
+as this black and white outline sketch of the Apple.
+
+99
+00:05:37,660 --> 00:05:39,320
+Now, in today's lecture,
+
+100
+00:05:39,370 --> 00:05:43,290
+we're going to talk about yet another type of learning algorithms, right,
+
+101
+00:05:43,290 --> 00:05:44,720
+in reinforcement learning,
+
+102
+00:05:44,770 --> 00:05:50,655
+we're going to be only given data in the form of what are called state action pairs, right,
+
+103
+00:05:50,655 --> 00:05:53,415
+now states are observations, right,
+
+104
+00:05:53,415 --> 00:05:55,875
+this is what the agent, let's call it,
+
+105
+00:05:55,875 --> 00:05:57,675
+the neural network is going to observe,
+
+106
+00:05:57,675 --> 00:05:58,580
+it's what it sees,
+
+107
+00:05:59,260 --> 00:06:05,060
+the actions are the behaviors that this agent takes in those particular states,
+
+108
+00:06:05,440 --> 00:06:07,410
+so the goal of reinforcement learning is
+
+109
+00:06:07,410 --> 00:06:11,540
+to build an agent that can learn how to maximize what are called rewards,
+
+110
+00:06:11,800 --> 00:06:15,290
+this is the third component that is specific to reinforcement learning
+
+111
+00:06:15,550 --> 00:06:20,330
+and you want to maximize all of those rewards over many, many time steps in the future,
+
+112
+00:06:20,960 --> 00:06:22,720
+so again, in this apple example,
+
+113
+00:06:23,160 --> 00:06:26,330
+we might now see that the agent doesn't necessarily learn that,
+
+114
+00:06:26,330 --> 00:06:28,540
+okay, this is an apple or it looks like these other apples,
+
+115
+00:06:28,830 --> 00:06:30,350
+now it has to learn to,
+
+116
+00:06:30,350 --> 00:06:32,950
+let's say, eat the apple, take an action, eat that apple,
+
+117
+00:06:33,000 --> 00:06:34,205
+because it has learned that,
+
+118
+00:06:34,205 --> 00:06:35,710
+eating that apple makes it live longer
+
+119
+00:06:35,760 --> 00:06:38,050
+or survive because it doesn't starve.
+
+120
+00:06:39,620 --> 00:06:41,500
+So in today, right, like I said,
+
+121
+00:06:41,500 --> 00:06:45,840
+we're going to be focusing exclusively on this third type of learning paradigm,
+
+122
+00:06:45,920 --> 00:06:47,520
+which is reinforcement learning.
+
+123
+00:06:47,870 --> 00:06:49,110
+And before we go any further,
+
+124
+00:06:49,190 --> 00:06:56,635
+I just want to start by building up some very key terminology and like, basically background for all of you,
+
+125
+00:06:56,635 --> 00:06:58,075
+so that we're all on the same page,
+
+126
+00:06:58,075 --> 00:07:01,890
+when we start discussing some of the more complex components of today's lecture.
+
+127
+00:07:02,920 --> 00:07:06,990
+So, let's start by building up, you know, some of this terminology,
+
+128
+00:07:06,990 --> 00:07:10,070
+the first main piece of terminology is that of an agent,
+
+129
+00:07:10,660 --> 00:07:15,830
+an agent is a being basically that can take actions,
+
+130
+00:07:16,330 --> 00:07:21,075
+for example, you can think of an agent as a machine, right,
+
+131
+00:07:21,075 --> 00:07:25,070
+that is, let's say an autonomous drone that is making a delivery,
+
+132
+00:07:25,120 --> 00:07:26,430
+or for example, in a game,
+
+133
+00:07:26,430 --> 00:07:27,615
+it could be Super Mario,
+
+134
+00:07:27,615 --> 00:07:30,500
+that's navigating inside of your video, video game,
+
+135
+00:07:31,500 --> 00:07:32,690
+the algorithm itself,
+
+136
+00:07:33,010 --> 00:07:36,180
+it's important to remember that the algorithm is the agent, right,
+
+137
+00:07:36,180 --> 00:07:38,670
+we're trying to build an agent that can do these tasks,
+
+138
+00:07:38,670 --> 00:07:40,010
+and the algorithm is that agent,
+
+139
+00:07:40,420 --> 00:07:41,775
+so in life, for example,
+
+140
+00:07:41,775 --> 00:07:44,060
+all of you are agents in life.
+
+141
+00:07:45,420 --> 00:07:48,520
+The environment is the other kind of contrary approach
+
+142
+00:07:48,600 --> 00:07:51,100
+or the contrary perspective to the agent,
+
+143
+00:07:51,450 --> 00:07:55,900
+the environment is simply the world where that agent lives and where it operates,
+
+144
+00:07:56,070 --> 00:07:58,900
+right, where it exists and it moves around in,
+
+145
+00:07:59,950 --> 00:08:02,595
+the agent can send commands to that environment
+
+146
+00:08:02,595 --> 00:08:04,010
+in the form of what are called actions,
+
+147
+00:08:04,630 --> 00:08:06,410
+you can take actions in that environment
+
+148
+00:08:06,880 --> 00:08:09,740
+and let's call for notation purposes,
+
+149
+00:08:09,820 --> 00:08:14,610
+let's say the possible set of all actions that it could take is,
+
+150
+00:08:14,610 --> 00:08:16,850
+let's say a set of A, right,
+
+151
+00:08:17,680 --> 00:08:18,950
+now, it should be noted that,
+
+152
+00:08:19,060 --> 00:08:23,330
+agents at any point in time could choose amongst this,
+
+153
+00:08:23,350 --> 00:08:25,100
+let's say list of possible actions,
+
+154
+00:08:25,330 --> 00:08:26,510
+but of course, in some situations,
+
+155
+00:08:27,040 --> 00:08:30,740
+your action space does not necessarily need to be a finite space,
+
+156
+00:08:30,790 --> 00:08:32,985
+maybe you could take actions in a continuous space,
+
+157
+00:08:32,985 --> 00:08:34,490
+for example, when you're driving a car,
+
+158
+00:08:34,810 --> 00:08:38,130
+you're taking actions on a continuous angle space
+
+159
+00:08:38,130 --> 00:08:40,095
+of what angle you want to steer that car,
+
+160
+00:08:40,095 --> 00:08:42,560
+it's not necessarily just going right or left or straight,
+
+161
+00:08:42,820 --> 00:08:45,050
+you may steer at any continuous degree.
+
+162
+00:08:47,080 --> 00:08:51,735
+Observations is essentially how the environment responds back to the agent, right,
+
+163
+00:08:51,735 --> 00:08:53,870
+the environment can tell the agent,
+
+164
+00:08:54,190 --> 00:08:57,890
+you know what it should be seeing based on those actions that it just took,
+
+165
+00:08:58,300 --> 00:09:02,265
+and it responds in the form of what is called a state,
+
+166
+00:09:02,265 --> 00:09:05,450
+a state is simply a concrete and immediate situation,
+
+167
+00:09:05,860 --> 00:09:08,930
+that the agent finds itself in at that particular moment.
+
+168
+00:09:10,570 --> 00:09:12,620
+Now it's important to remember that,
+
+169
+00:09:13,060 --> 00:09:16,790
+unlike other types of learning that we've covered in this course,
+
+170
+00:09:17,140 --> 00:09:18,680
+reinforcement learning is a bit unique,
+
+171
+00:09:18,940 --> 00:09:22,970
+because it has one more component here in addition to these other components,
+
+172
+00:09:23,890 --> 00:09:25,160
+which is called the reward,
+
+173
+00:09:25,270 --> 00:09:29,090
+now, the reward is a feedback by which we measure,
+
+174
+00:09:29,260 --> 00:09:34,400
+or we can try to measure the success of a particular agent in its environment.
+
+175
+00:09:34,630 --> 00:09:36,230
+So, for example, in a video game,
+
+176
+00:09:36,580 --> 00:09:38,960
+when Mario grabs a coin, for example,
+
+177
+00:09:39,430 --> 00:09:40,590
+he wins points, right,
+
+178
+00:09:40,590 --> 00:09:41,660
+so from a given state,
+
+179
+00:09:41,830 --> 00:09:47,070
+an agent can send out any form of actions to take some decisions,
+
+180
+00:09:47,070 --> 00:09:53,090
+and those actions may or may not result in rewards being collected and accumulated over time.
+
+181
+00:09:53,630 --> 00:09:55,795
+Now, it's also very important to remember that,
+
+182
+00:09:55,795 --> 00:09:58,495
+not all actions result in immediate rewards,
+
+183
+00:09:58,495 --> 00:10:02,910
+you may take some actions that will result in a reward in a delayed fashion,
+
+184
+00:10:02,990 --> 00:10:04,825
+maybe in a few time steps down the future,
+
+185
+00:10:04,825 --> 00:10:06,330
+maybe in life, maybe years,
+
+186
+00:10:06,740 --> 00:10:12,090
+you may take an action today, that results in a reward many some time from now,
+
+187
+00:10:12,530 --> 00:10:16,770
+and, but essentially all of these try to effectively evaluate some way
+
+188
+00:10:17,300 --> 00:10:22,530
+of measuring the success of a particular action that an agent takes.
+
+189
+00:10:23,170 --> 00:10:25,940
+So, for example, when we look at the total rewards,
+
+190
+00:10:26,050 --> 00:10:28,820
+that an agent accumulates over the course of its lifetime,
+
+191
+00:10:28,960 --> 00:10:31,490
+we can simply sum up all of the rewards,
+
+192
+00:10:32,080 --> 00:10:35,550
+that an agent gets after a certain time t, right,
+
+193
+00:10:35,550 --> 00:10:42,230
+so this Rt is the sum of all rewards from that point on into the future into infinity,
+
+194
+00:10:43,580 --> 00:10:46,540
+and that can be expanded to look exactly like this,
+
+195
+00:10:46,540 --> 00:10:50,310
+it's reward time t plus the reward time t+1 plus t+2,
+
+196
+00:10:50,540 --> 00:10:51,630
+and so on and so forth.
+
+197
+00:10:52,460 --> 00:10:54,925
+Often it's actually very useful for all of us
+
+198
+00:10:54,925 --> 00:10:58,350
+to consider not only the sum of all of these rewards,
+
+199
+00:10:58,430 --> 00:11:00,775
+but instead what's called the discounted sum.
+
+200
+00:11:00,775 --> 00:11:01,680
+So you can see here,
+
+201
+00:11:01,940 --> 00:11:05,250
+I've added this γ factor in front of all of the rewards,
+
+202
+00:11:05,660 --> 00:11:10,795
+and that discounting factor is essentially multiplied by every future reward
+
+203
+00:11:10,795 --> 00:11:14,490
+that the agent sees and it's discovered by the agent,
+
+204
+00:11:14,510 --> 00:11:16,810
+and the reason that we want to do this is
+
+205
+00:11:16,810 --> 00:11:19,470
+actually this dampening factor is designed
+
+206
+00:11:19,940 --> 00:11:26,280
+to make future rewards essentially worth less than rewards that we might see at this instant,
+
+207
+00:11:26,360 --> 00:11:27,690
+at this moment right now.
+
+208
+00:11:28,010 --> 00:11:36,070
+Now, you can think of this as basically enforcing some kind of short term greiness in the algorithm, right,
+
+209
+00:11:36,070 --> 00:11:39,540
+so for example, if I offered you a reward of five dollars today
+
+210
+00:11:39,710 --> 00:11:42,660
+or a reward of five dollars and ten years from now,
+
+211
+00:11:42,890 --> 00:11:45,450
+I think all of you would prefer that five dollars today,
+
+212
+00:11:45,890 --> 00:11:50,790
+simply because we have that same discounting factor applied to this, to this processing,
+
+213
+00:11:51,170 --> 00:11:52,255
+we have that factor,
+
+214
+00:11:52,255 --> 00:11:54,750
+that that five dollars is not worth as much to us,
+
+215
+00:11:54,890 --> 00:11:56,920
+if it's given to us ten years in the future,
+
+216
+00:11:56,920 --> 00:11:59,370
+and that's exactly how this is captured here as well,
+
+217
+00:11:59,510 --> 00:12:02,980
+mathematically, this discounting factor is like multiply,
+
+218
+00:12:02,980 --> 00:12:07,400
+like I said, multiply that every single future award exponentially,
+
+219
+00:12:08,260 --> 00:12:10,845
+and it's important to understand that also,
+
+220
+00:12:10,845 --> 00:12:14,670
+typically this discounting factor is, you know, between 0 and 1,
+
+221
+00:12:14,670 --> 00:12:17,985
+there are some exceptional cases where maybe you want some strange behaviors
+
+222
+00:12:17,985 --> 00:12:19,950
+and have a discounting factor greater than 1,
+
+223
+00:12:19,950 --> 00:12:23,270
+but in general, that's not something we're going to be talking about today.
+
+224
+00:12:24,380 --> 00:12:27,820
+Now finally, it's very important in reinforcement learning,
+
+225
+00:12:28,170 --> 00:12:31,330
+this special function called the Q-function,
+
+226
+00:12:31,470 --> 00:12:35,830
+which ties in a lot of these different components that I've just shared with you altogether.
+
+227
+00:12:36,570 --> 00:12:39,485
+Now, let's look at what this Q-function is, right.
+
+228
+00:12:39,485 --> 00:12:42,650
+So we already covered this Rt function, right,
+
+229
+00:12:42,650 --> 00:12:45,730
+Rt is the discounted sum of rewards
+
+230
+00:12:45,990 --> 00:12:50,140
+from time t all the way into the future time infinity,
+
+231
+00:12:50,470 --> 00:12:53,715
+but remember that this Rt, right,
+
+232
+00:12:53,715 --> 00:12:56,180
+it's discounted number one and number two,
+
+233
+00:12:57,160 --> 00:13:00,800
+we're going to try and build a Q-function,
+
+234
+00:13:01,300 --> 00:13:06,590
+that captures the the maximum or the best action that we could take,
+
+235
+00:13:06,790 --> 00:13:08,970
+that will maximize this reward.
+
+236
+00:13:08,970 --> 00:13:11,120
+So let me say that one more time in a different way,
+
+237
+00:13:11,530 --> 00:13:14,720
+the Q-function takes as input, two different things,
+
+238
+00:13:14,860 --> 00:13:16,850
+the first is the state that you're currently in
+
+239
+00:13:16,960 --> 00:13:22,100
+and the second is a possible action that you could execute in this particular state,
+
+240
+00:13:22,990 --> 00:13:25,220
+so here's st is that state at time t,
+
+241
+00:13:25,330 --> 00:13:28,760
+at is that action that you may want to take at time t,
+
+242
+00:13:28,990 --> 00:13:33,740
+and the Q-function of these two pieces is going to denote or capture,
+
+243
+00:13:34,480 --> 00:13:37,935
+what the expected total return would be of that agent,
+
+244
+00:13:37,935 --> 00:13:41,090
+if it took that action in that particular state.
+
+245
+00:13:42,780 --> 00:13:48,130
+Now, one thing that I think maybe we should all be asking ourselves now is
+
+246
+00:13:48,960 --> 00:13:51,140
+this seems like a really powerful function, right,
+
+247
+00:13:51,140 --> 00:13:54,220
+if you had access to this type of a function, this Q-function,
+
+248
+00:13:54,450 --> 00:13:57,920
+I think you could actually perform a lot of tasks right off the that, right,
+
+249
+00:13:57,920 --> 00:14:04,690
+so if you wanted to, for example, understand how to what actions to take in a particular state,
+
+250
+00:14:05,040 --> 00:14:07,300
+and let's suppose I gave you this magical Q-function,
+
+251
+00:14:07,740 --> 00:14:09,080
+does anyone have any ideas of
+
+252
+00:14:09,080 --> 00:14:14,260
+how you could transform that Q-function to directly infer what action should be taken?
+
+253
+00:14:17,390 --> 00:14:18,270
+Given a state,
+
+254
+00:14:18,320 --> 00:14:20,425
+you can look at your possible action space
+
+255
+00:14:20,425 --> 00:14:22,500
+and pick the one that gives you the highest Q value.
+
+256
+00:14:22,910 --> 00:14:25,105
+Exactly, so that's exactly right.
+
+257
+00:14:25,105 --> 00:14:27,030
+So just to repeat that one more time,
+
+258
+00:14:27,530 --> 00:14:30,570
+the Q-function tells us for any possible action, right,
+
+259
+00:14:31,040 --> 00:14:34,590
+what is the expected reward for that action to be taken,
+
+260
+00:14:34,610 --> 00:14:38,730
+so if we wanted to take a specific action given in a specific state,
+
+261
+00:14:39,530 --> 00:14:40,950
+ultimately we need to,
+
+262
+00:14:40,970 --> 00:14:43,825
+you know, figure out which action is the best action,
+
+263
+00:14:43,825 --> 00:14:46,620
+the way we do that from a Q-function is
+
+264
+00:14:46,700 --> 00:14:50,880
+simply to pick the action that will maximize our future reward,
+
+265
+00:14:51,050 --> 00:14:54,265
+and we can simply try out number one,
+
+266
+00:14:54,265 --> 00:14:56,020
+if we have a discrete action space,
+
+267
+00:14:56,020 --> 00:14:58,020
+we can simply try out all possible actions,
+
+268
+00:14:58,430 --> 00:15:01,560
+compute their Q value for every single possible actions,
+
+269
+00:15:01,610 --> 00:15:03,810
+based on the state that we currently find ourselves in,
+
+270
+00:15:03,950 --> 00:15:08,160
+and then we pick the action that is going to result in the highest Q value,
+
+271
+00:15:09,690 --> 00:15:11,405
+if we have a continuous action space,
+
+272
+00:15:11,405 --> 00:15:13,150
+maybe we do something a bit more intelligent,
+
+273
+00:15:13,260 --> 00:15:16,420
+maybe following the gradients along this Q value curve
+
+274
+00:15:16,830 --> 00:15:19,360
+and maximizing it as part of an optimization procedure.
+
+275
+00:15:20,620 --> 00:15:22,560
+But generally in this lecture,
+
+276
+00:15:22,790 --> 00:15:24,480
+what I want to focus on is,
+
+277
+00:15:24,740 --> 00:15:27,220
+actually how we can obtain this Q-function.
+
+278
+00:15:27,220 --> 00:15:31,165
+To start with, I I kind of skipped a lot of steps in that last slide,
+
+279
+00:15:31,165 --> 00:15:31,735
+where I just said,
+
+280
+00:15:31,735 --> 00:15:33,895
+let's suppose I give you this magical Q-function,
+
+281
+00:15:33,895 --> 00:15:35,730
+how can you determine what action to take,
+
+282
+00:15:35,990 --> 00:15:38,005
+but in reality, we're not given that Q-function,
+
+283
+00:15:38,005 --> 00:15:40,410
+we have to learn that Q-function using deep learning,
+
+284
+00:15:40,760 --> 00:15:44,140
+and that's what today's lecture is going to be talking about primarily is,
+
+285
+00:15:44,140 --> 00:15:47,700
+first of all, how can we construct and learn that Q-function from data,
+
+286
+00:15:48,340 --> 00:15:51,360
+and then of course, the final step is use that Q-function to,
+
+287
+00:15:51,560 --> 00:15:53,640
+you know, take some actions in the real world.
+
+288
+00:15:53,690 --> 00:15:57,805
+And broadly speaking, there are two classes of reinforcement learning algorithms,
+
+289
+00:15:57,805 --> 00:16:00,090
+that we're going to briefly touch on as part of today's lecture.
+
+290
+00:16:00,500 --> 00:16:03,040
+The first class is what's going to be called value learning,
+
+291
+00:16:03,040 --> 00:16:05,560
+and that's exactly this process that we've just talked about,
+
+292
+00:16:05,560 --> 00:16:08,785
+value learning tries to estimate our Q-function, right,
+
+293
+00:16:08,785 --> 00:16:10,320
+so to find that Q-function,
+
+294
+00:16:10,430 --> 00:16:12,300
+Q given our state and our action,
+
+295
+00:16:12,650 --> 00:16:14,730
+and then use that Q-function to,
+
+296
+00:16:14,900 --> 00:16:20,940
+you know optimize for the best action to take given a particular state that we find ourselves in.
+
+297
+00:16:21,700 --> 00:16:23,245
+The second class of algorithms,
+
+298
+00:16:23,245 --> 00:16:25,470
+which we'll touch on right at the end of today's lecture,
+
+299
+00:16:25,850 --> 00:16:28,855
+is kind of a different framing of this same approach,
+
+300
+00:16:28,855 --> 00:16:33,205
+but instead of first optimizing the Q-function and finding a Q value
+
+301
+00:16:33,205 --> 00:16:36,210
+and then using that Q-function to optimize our actions,
+
+302
+00:16:36,680 --> 00:16:40,110
+what if we just try to directly optimize our policy,
+
+303
+00:16:40,370 --> 00:16:45,000
+which is what action to take based on a particular state that we find ourselves in,
+
+304
+00:16:45,590 --> 00:16:48,690
+if we do that, if we can obtain this function, right,
+
+305
+00:16:49,120 --> 00:16:51,960
+then we can directly sample from that policy distribution
+
+306
+00:16:52,400 --> 00:16:53,700
+to obtain the optimal action.
+
+307
+00:16:54,020 --> 00:16:56,605
+We'll talk more details about that later in the lecture,
+
+308
+00:16:56,605 --> 00:17:00,840
+but first let's cover this first class of approaches, which is Q learning approaches,
+
+309
+00:17:01,520 --> 00:17:06,360
+and we'll build up that intuition and that knowledge onto the second part of policy learning.
+
+310
+00:17:07,070 --> 00:17:11,760
+So maybe let's start by just digging a bit deeper into the Q-function specifically,
+
+311
+00:17:12,260 --> 00:17:15,780
+just to start to understand, you know, how we could estimate this in the beginning.
+
+312
+00:17:16,440 --> 00:17:18,050
+So first let me introduce this game,
+
+313
+00:17:18,050 --> 00:17:19,490
+maybe some of you recognize this,
+
+314
+00:17:19,490 --> 00:17:21,820
+this is the game of called Atari Breakout,
+
+315
+00:17:23,010 --> 00:17:28,085
+the the game here is essentially one where the agent is able to move left or right,
+
+316
+00:17:28,085 --> 00:17:30,070
+this paddle on the bottom left or right,
+
+317
+00:17:30,240 --> 00:17:36,760
+and the objective is to move it in a way that this ball that's coming down towards the bottom of the screen
+
+318
+00:17:36,960 --> 00:17:40,355
+can be, you know, bounced off of your paddle, reflected back up,
+
+319
+00:17:40,355 --> 00:17:43,060
+and essentially you want to break out, right,
+
+320
+00:17:43,290 --> 00:17:46,340
+reflect that ball back up to the top of the screen towards the rainbow portion
+
+321
+00:17:46,340 --> 00:17:47,480
+and keep breaking off,
+
+322
+00:17:47,480 --> 00:17:49,685
+every time you hit a pixel on the top of the screen,
+
+323
+00:17:49,685 --> 00:17:50,980
+you break off that pixel,
+
+324
+00:17:51,030 --> 00:17:56,300
+and the objective of the game is to basically eliminate all of those rainbow pixels, right,
+
+325
+00:17:56,300 --> 00:17:58,430
+so you want to keep hitting that ball against the top of the screen
+
+326
+00:17:58,430 --> 00:18:00,160
+until you remove all the pixels.
+
+327
+00:18:01,680 --> 00:18:03,760
+Now the Q-function tells us,
+
+328
+00:18:04,170 --> 00:18:09,430
+you know, the expected total return or the total reward that we can expect
+
+329
+00:18:09,480 --> 00:18:12,070
+based on a given state and action pair,
+
+330
+00:18:12,240 --> 00:18:14,170
+that we may find ourselves in this game.
+
+331
+00:18:14,850 --> 00:18:17,105
+Now, the first point I want to make here is that,
+
+332
+00:18:17,105 --> 00:18:22,660
+sometimes even for us as humans to understand what the q value should be
+
+333
+00:18:22,800 --> 00:18:25,070
+is sometimes quite unintuitive, right.
+
+334
+00:18:25,070 --> 00:18:26,050
+So here's one example,
+
+335
+00:18:26,580 --> 00:18:31,025
+let's say we find these two state action pairs right here is A and B,
+
+336
+00:18:31,025 --> 00:18:33,580
+two different options, that we can be presented with in this game,
+
+337
+00:18:34,060 --> 00:18:36,820
+A, the ball is coming straight down towards us,
+
+338
+00:18:36,820 --> 00:18:37,680
+that's our state,
+
+339
+00:18:37,760 --> 00:18:39,210
+our action is to do nothing
+
+340
+00:18:39,260 --> 00:18:42,810
+and simply reflect that ball back up vertically up,
+
+341
+00:18:43,190 --> 00:18:45,210
+the second situation,
+
+342
+00:18:45,980 --> 00:18:49,050
+the state is basically that the ball is coming slightly at an angle,
+
+343
+00:18:49,190 --> 00:18:51,010
+we're not quite underneath it yet
+
+344
+00:18:51,010 --> 00:18:52,560
+and we need to move towards it
+
+345
+00:18:52,790 --> 00:18:59,830
+and actually hit that ball in a way that you know will will make it and not miss it hopefully, right,
+
+346
+00:18:59,830 --> 00:19:01,510
+So hopefully that ball doesn't pass below us
+
+347
+00:19:01,510 --> 00:19:02,460
+and the game would be over,
+
+348
+00:19:03,350 --> 00:19:04,110
+can you imagine,
+
+349
+00:19:04,310 --> 00:19:09,955
+you know which of these two options might have a higher Q value for the network,
+
+350
+00:19:09,955 --> 00:19:14,690
+which one would result in a rate of reward for the neural network or for the agent,
+
+351
+00:19:17,260 --> 00:19:21,410
+so how many people believe A would result in a higher return,
+
+352
+00:19:23,930 --> 00:19:24,630
+how about B,
+
+353
+00:19:26,400 --> 00:19:28,175
+okay, how about someone who picked B,
+
+354
+00:19:28,175 --> 00:19:29,740
+can you tell me why B?
+
+355
+00:19:32,160 --> 00:19:34,420
+[], you're actually doing something.
+
+356
+00:19:35,730 --> 00:19:38,020
+Okay, yeah, about more?
+
+357
+00:19:38,910 --> 00:19:42,970
+For the, for A, you only have like the maximum you can take off is like one,
+
+358
+00:19:43,020 --> 00:19:44,440
+because after you reflect,
+
+359
+00:19:44,910 --> 00:19:49,180
+your automatically [background] more than.
+
+360
+00:19:50,580 --> 00:19:53,540
+Exactly and actually there's a very interesting thing,
+
+361
+00:19:53,540 --> 00:19:55,030
+so when I first saw this,
+
+362
+00:19:55,110 --> 00:19:58,895
+actually it's, it was very unintuitive for me,
+
+363
+00:19:58,895 --> 00:20:01,640
+why A is actually working much worse than B,
+
+364
+00:20:01,640 --> 00:20:05,375
+but in general, with this very conservative action of B,
+
+365
+00:20:05,375 --> 00:20:06,850
+your kind of exactly like you said,
+
+366
+00:20:07,080 --> 00:20:09,490
+the two answers were implying,
+
+367
+00:20:09,840 --> 00:20:11,450
+is that A is a very conservative action,
+
+368
+00:20:11,450 --> 00:20:12,910
+you're kind of only going up and down,
+
+369
+00:20:13,410 --> 00:20:14,675
+it will achieve a good reward,
+
+370
+00:20:14,675 --> 00:20:16,270
+it will solve the game, right,
+
+371
+00:20:16,350 --> 00:20:18,890
+in fact, it solves the game exactly like this right here,
+
+372
+00:20:18,890 --> 00:20:19,450
+you can see,
+
+373
+00:20:19,710 --> 00:20:22,430
+in general, this action is going to be quite conservative,
+
+374
+00:20:22,430 --> 00:20:23,470
+it's just bouncing up,
+
+375
+00:20:23,670 --> 00:20:25,745
+hitting one point at a time from the top
+
+376
+00:20:25,745 --> 00:20:27,160
+and breaking off very slowly,
+
+377
+00:20:27,600 --> 00:20:29,080
+the board that you can see here,
+
+378
+00:20:29,460 --> 00:20:32,795
+but in general, you see the part of the board that's being broken off
+
+379
+00:20:32,795 --> 00:20:35,255
+is towards the center of the board, right,
+
+380
+00:20:35,255 --> 00:20:36,890
+not much on edges of the board,
+
+381
+00:20:37,270 --> 00:20:38,390
+if you look at B,
+
+382
+00:20:38,560 --> 00:20:41,240
+now with b, you're kind of having agency,
+
+383
+00:20:41,530 --> 00:20:42,690
+like one of the answers said,
+
+384
+00:20:42,690 --> 00:20:44,000
+you're coming towards the ball
+
+385
+00:20:44,140 --> 00:20:45,975
+and what that implies is that
+
+386
+00:20:45,975 --> 00:20:49,520
+you're sometimes going to actually hit the corner of your paddle
+
+387
+00:20:49,540 --> 00:20:52,230
+and have a very extreme angle on your paddle
+
+388
+00:20:52,230 --> 00:20:54,080
+and hit the sides of the board as well,
+
+389
+00:20:54,190 --> 00:20:57,740
+and it turns out that the algorithm, the agent can actually learn,
+
+390
+00:20:57,940 --> 00:21:02,060
+that hitting the sides of the board can have some kind of unexpected consequences,
+
+391
+00:21:02,800 --> 00:21:03,740
+that look like this,
+
+392
+00:21:03,850 --> 00:21:05,850
+so here you see it trying to enact that policy,
+
+393
+00:21:05,850 --> 00:21:07,760
+it's targeting the sides of the board,
+
+394
+00:21:08,170 --> 00:21:10,760
+but once it reaches a breakout on the side of the board,
+
+395
+00:21:10,840 --> 00:21:12,620
+it found this hack in the solution,
+
+396
+00:21:12,700 --> 00:21:14,420
+where now it's breaking off a ton of points,
+
+397
+00:21:14,980 --> 00:21:18,260
+so that was kind of a trick that this neural network learned,
+
+398
+00:21:18,790 --> 00:21:23,010
+it was a way that it even moves away from the ball as it's coming down just,
+
+399
+00:21:23,010 --> 00:21:24,345
+so we could move back towards it,
+
+400
+00:21:24,345 --> 00:21:25,610
+just to hit it on the corner
+
+401
+00:21:25,840 --> 00:21:28,710
+and execute on those those corner parts of the board
+
+402
+00:21:28,710 --> 00:21:31,760
+and break out a lot of pieces for free almost.
+
+403
+00:21:33,800 --> 00:21:35,190
+So now that we can see that,
+
+404
+00:21:35,210 --> 00:21:39,240
+sometimes obtaining the Q-function can be a little bit unintuitive,
+
+405
+00:21:39,380 --> 00:21:41,125
+but the key point here is that,
+
+406
+00:21:41,125 --> 00:21:42,120
+if we have the Q-function,
+
+407
+00:21:42,120 --> 00:21:44,520
+we can directly use it to determine,
+
+408
+00:21:44,540 --> 00:21:46,080
+you know, what is the best action
+
+409
+00:21:46,340 --> 00:21:49,510
+that we can take in any given state that we find ourselves in.
+
+410
+00:21:49,510 --> 00:21:51,210
+So now the question naturally is,
+
+411
+00:21:51,410 --> 00:21:52,860
+how can we train a neural network,
+
+412
+00:21:53,030 --> 00:21:55,620
+that can indeed learn this Q-function?
+
+413
+00:21:57,340 --> 00:22:00,380
+So the type of the neural network here,
+
+414
+00:22:00,550 --> 00:22:03,315
+naturally, because we have a function that takes as input two things,
+
+415
+00:22:03,315 --> 00:22:08,025
+let's imagine our neural network will also take as input these two objects as well,
+
+416
+00:22:08,025 --> 00:22:10,170
+one object is going to be the state of the board,
+
+417
+00:22:10,170 --> 00:22:14,160
+you can think of this as simply the pixels that are on the screen describing that board,
+
+418
+00:22:14,160 --> 00:22:16,440
+so it's an image of the board at a particular time,
+
+419
+00:22:16,440 --> 00:22:18,800
+maybe you want to even provide two or three images
+
+420
+00:22:18,820 --> 00:22:23,235
+to give it some sense of temporal information and some past history as well,
+
+421
+00:22:23,235 --> 00:22:25,940
+but all of that information can be combined together
+
+422
+00:22:26,200 --> 00:22:28,400
+and provided to the network in the form of a state.
+
+423
+00:22:28,950 --> 00:22:33,185
+And in addition to that, you may also want to provide some actions as well, right,
+
+424
+00:22:33,185 --> 00:22:33,815
+so in this case,
+
+425
+00:22:33,815 --> 00:22:38,825
+the actions that a neural network or an agent could take in this game is
+
+426
+00:22:38,825 --> 00:22:41,260
+to move to the right, to the left, to stay still,
+
+427
+00:22:41,820 --> 00:22:43,240
+and those could be three different actions,
+
+428
+00:22:43,290 --> 00:22:46,900
+that could be provided and parameterized to the input of a neural network,
+
+429
+00:22:47,250 --> 00:22:51,340
+the goal here is to, you know, estimate the single number output,
+
+430
+00:22:51,810 --> 00:22:56,050
+that measures what is the expected value or the expected Q value
+
+431
+00:22:56,340 --> 00:22:59,620
+of this neural network at this particular state action pair,
+
+432
+00:23:00,180 --> 00:23:02,675
+now oftentimes what you'll see is that,
+
+433
+00:23:02,675 --> 00:23:04,030
+if you wanted to evaluate,
+
+434
+00:23:04,290 --> 00:23:06,170
+let's suppose a very large action space,
+
+435
+00:23:06,170 --> 00:23:09,280
+it's going to be very inefficient to try the approach on the left,
+
+436
+00:23:09,720 --> 00:23:11,770
+with, with a very large action space,
+
+437
+00:23:11,790 --> 00:23:16,790
+because what it would mean is that you'd have to run your neural network forward many different times
+
+438
+00:23:16,790 --> 00:23:19,505
+one time for every single element of your action space,
+
+439
+00:23:19,505 --> 00:23:23,020
+so what if instead you only provided it an input of your state
+
+440
+00:23:23,400 --> 00:23:27,970
+and as output you gave it, let's say all n different Q values,
+
+441
+00:23:28,410 --> 00:23:30,610
+one Q value for every single possible action,
+
+442
+00:23:30,630 --> 00:23:34,720
+that way you only need to run your neural network once for the given state that you're in,
+
+443
+00:23:35,290 --> 00:23:39,710
+and then that neural network will tell you for all possible actions, what's the maximum,
+
+444
+00:23:40,390 --> 00:23:42,350
+you simply then look at that output
+
+445
+00:23:42,490 --> 00:23:45,200
+and pick the action that has the [] Q value.
+
+446
+00:23:46,940 --> 00:23:49,420
+Now, what would happen, right,
+
+447
+00:23:49,420 --> 00:23:52,140
+So actually the question I want to pose here is really,
+
+448
+00:23:52,370 --> 00:23:55,285
+you know, we want to train one of these two networks,
+
+449
+00:23:55,285 --> 00:23:57,625
+let's stick with the network on the right for simplicity,
+
+450
+00:23:57,625 --> 00:24:00,480
+just since it's a much more efficient version of the network on the left,
+
+451
+00:24:01,010 --> 00:24:02,320
+and the question is,
+
+452
+00:24:02,320 --> 00:24:05,550
+you know, how do we actually train that network on the right,
+
+453
+00:24:05,840 --> 00:24:09,780
+and specifically I want all of you to think about really the best case scenario
+
+454
+00:24:10,010 --> 00:24:14,910
+just to start with how an agent would perform ideally in a particular situation
+
+455
+00:24:15,170 --> 00:24:21,120
+or what would happen if an agent took all of the ideal actions at any given state,
+
+456
+00:24:21,350 --> 00:24:24,400
+this would mean that essentially the target return, right,
+
+457
+00:24:24,400 --> 00:24:28,920
+the, the predicted or the the value that we're trying to predict the target
+
+458
+00:24:29,240 --> 00:24:31,975
+is going to always be maximized, right,
+
+459
+00:24:31,975 --> 00:24:35,130
+and this can serve as essentially the ground truth to the agent.
+
+460
+00:24:36,200 --> 00:24:38,620
+Now, for example, to do this,
+
+461
+00:24:38,670 --> 00:24:40,690
+we want to formulate a loss function,
+
+462
+00:24:41,280 --> 00:24:44,990
+that's going to essentially represent our expected return,
+
+463
+00:24:44,990 --> 00:24:48,140
+if we're able to take all of the best actions, right,
+
+464
+00:24:48,140 --> 00:24:50,590
+so, for example, if we select an initial reward
+
+465
+00:24:51,000 --> 00:24:53,825
+plus selecting some action in our action space,
+
+466
+00:24:53,825 --> 00:24:55,840
+that maximizes our expected return,
+
+467
+00:24:56,400 --> 00:24:58,480
+then for the next future state,
+
+468
+00:24:58,740 --> 00:25:03,700
+we need to apply that discounting factor and recursively apply the same equation,
+
+469
+00:25:03,750 --> 00:25:05,950
+and that simply turns into our target.
+
+470
+00:25:06,420 --> 00:25:11,745
+Right, now we can ask basically what does our neural network predict, right,
+
+471
+00:25:11,745 --> 00:25:12,590
+so that's our target,
+
+472
+00:25:12,940 --> 00:25:15,620
+and we recall from previous lectures,
+
+473
+00:25:15,760 --> 00:25:16,890
+if we have a target value,
+
+474
+00:25:16,890 --> 00:25:19,130
+in this case, our Q value is a continuous variable,
+
+475
+00:25:19,810 --> 00:25:21,650
+we have also a predicted variable,
+
+476
+00:25:22,150 --> 00:25:27,230
+that is going to come as part of the output of every single one of these potential actions that could be taken,
+
+477
+00:25:28,900 --> 00:25:30,770
+we can define what's called a Q-loss,
+
+478
+00:25:30,910 --> 00:25:36,080
+which is essentially just a very simple mean squared error loss between these two continuous variables,
+
+479
+00:25:36,400 --> 00:25:41,330
+we minimize their distance over two over many, many different iterations
+
+480
+00:25:41,530 --> 00:25:44,120
+of [] our neural network in this environment,
+
+481
+00:25:44,290 --> 00:25:47,420
+observing actions and observing not only the actions,
+
+482
+00:25:47,500 --> 00:25:49,820
+but most importantly after the action is,
+
+483
+00:25:51,150 --> 00:25:52,480
+committed or executed,
+
+484
+00:25:52,860 --> 00:25:57,950
+we can see exactly the ground truth, expected return, right,
+
+485
+00:25:57,950 --> 00:26:01,750
+so we have the ground truth labels to train and supervise this model
+
+486
+00:26:02,100 --> 00:26:07,210
+directly from the actions that were executed as part of random selection, for example.
+
+487
+00:26:08,420 --> 00:26:11,120
+Now, let me just stop right there
+
+488
+00:26:11,120 --> 00:26:13,540
+and maybe summarize the whole process one more time
+
+489
+00:26:13,680 --> 00:26:15,665
+and maybe a bit different terminology,
+
+490
+00:26:15,665 --> 00:26:19,150
+just to give everyone kind of a different perspective on this same problem.
+
+491
+00:26:19,890 --> 00:26:23,750
+So our deep neural network that we're trying to train looks like this, right,
+
+492
+00:26:23,750 --> 00:26:25,000
+it takes as input state
+
+493
+00:26:25,290 --> 00:26:27,580
+is trying to output n different numbers,
+
+494
+00:26:28,020 --> 00:26:32,590
+those n different numbers correspond to the Q value associated to n different actions,
+
+495
+00:26:32,880 --> 00:26:34,480
+one Q value per action,
+
+496
+00:26:36,200 --> 00:26:41,100
+here the actions in Atari breakout, for example, should be three actions,
+
+497
+00:26:41,240 --> 00:26:42,930
+we can either go left, we can go right,
+
+498
+00:26:43,160 --> 00:26:49,120
+or we can do nothing, we can stay where we are, right.
+
+499
+00:26:49,470 --> 00:26:52,295
+So, the next step from this we saw,
+
+500
+00:26:52,295 --> 00:26:55,520
+if we have this Q value output,
+
+501
+00:26:55,520 --> 00:26:57,280
+what we can do with it is,
+
+502
+00:26:57,690 --> 00:27:01,880
+we can make an action or we can even let me be more formal about it,
+
+503
+00:27:01,880 --> 00:27:03,850
+we can develop what's called a policy function,
+
+504
+00:27:03,870 --> 00:27:06,820
+policy function is a function that given a state,
+
+505
+00:27:07,170 --> 00:27:09,340
+it determines what is the best action,
+
+506
+00:27:09,420 --> 00:27:11,360
+so that's different than the Q-function, right,
+
+507
+00:27:11,360 --> 00:27:12,490
+the Q-function tells us
+
+508
+00:27:12,660 --> 00:27:18,250
+given a state, what is the best or what is the value, the return of every action that we could take,
+
+509
+00:27:18,540 --> 00:27:21,250
+the policy function tells us one step more than that,
+
+510
+00:27:21,580 --> 00:27:25,195
+given, given a state, what is the best action, right,
+
+511
+00:27:25,195 --> 00:27:27,960
+so it's a very end to end way of thinking about,
+
+512
+00:27:28,250 --> 00:27:31,860
+you know, the agent's decision making process based on what I see right now,
+
+513
+00:27:32,210 --> 00:27:33,810
+what is the action that I should take,
+
+514
+00:27:34,100 --> 00:27:38,770
+and we can determine that policy function directly from the Q-function itself
+
+515
+00:27:38,770 --> 00:27:42,840
+simply by maximizing and optimizing all of the different Q values
+
+516
+00:27:43,010 --> 00:27:45,360
+for all of the different actions that we see here.
+
+517
+00:27:45,950 --> 00:27:47,965
+So for example, here we can see that,
+
+518
+00:27:47,965 --> 00:27:50,310
+given this state, the Q-function,
+
+519
+00:27:50,810 --> 00:27:52,800
+as the result of these three different values
+
+520
+00:27:53,240 --> 00:27:55,920
+has A Q value of 20, if it goes to the left,
+
+521
+00:27:56,090 --> 00:27:58,705
+has a Q value of 3, if it stays in the same place
+
+522
+00:27:58,705 --> 00:28:00,120
+and it has a Q value of 0,
+
+523
+00:28:00,380 --> 00:28:02,880
+it's going to basically die after this iteration,
+
+524
+00:28:03,050 --> 00:28:04,105
+if it moves to the right,
+
+525
+00:28:04,105 --> 00:28:06,070
+because you can see that the ball is coming to the left of it,
+
+526
+00:28:06,070 --> 00:28:08,395
+if it moves to the right, the game is over, right,
+
+527
+00:28:08,395 --> 00:28:12,630
+so it needs to move to the left, in order to do that, in order to continue the game,
+
+528
+00:28:12,830 --> 00:28:14,430
+and the Q value reflects that,
+
+529
+00:28:15,260 --> 00:28:19,890
+the optimal action here is simply going to be the maximum of these three Q values,
+
+530
+00:28:20,030 --> 00:28:22,120
+in this case, it's going to be 20,
+
+531
+00:28:22,380 --> 00:28:26,255
+and then the action is going to be the corresponding action that comes from that 20,
+
+532
+00:28:26,255 --> 00:28:27,370
+which is moving left.
+
+533
+00:28:29,340 --> 00:28:35,510
+Now, we can send this action back to the environment,
+
+534
+00:28:35,740 --> 00:28:39,150
+in the form of the game, to execute the next step, right,
+
+535
+00:28:39,150 --> 00:28:41,480
+and as the agent moves through this environment,
+
+536
+00:28:41,890 --> 00:28:46,130
+it's going to be responded with not only by new pixels that come from the game,
+
+537
+00:28:46,450 --> 00:28:48,650
+but more importantly, some reward signal,
+
+538
+00:28:48,700 --> 00:28:50,250
+now, it's very important to remember that,
+
+539
+00:28:50,250 --> 00:28:56,030
+the reward signals in pong, or sorry in Atari Breakout are very sparse, right,
+
+540
+00:28:56,030 --> 00:29:01,720
+you get a reward, not necessarily based on the action that you take at this exact moment,
+
+541
+00:29:01,860 --> 00:29:06,460
+it usually takes a few time steps for that ball to travel back up to the top of the screen,
+
+542
+00:29:06,690 --> 00:29:09,160
+so usually your rewards will be quite delayed,
+
+543
+00:29:09,450 --> 00:29:11,540
+maybe at least by several time steps,
+
+544
+00:29:11,540 --> 00:29:15,070
+sometimes even more if you're bouncing off of the corners of the screen.
+
+545
+00:29:16,430 --> 00:29:22,150
+Now, one very popular or very famous approach that showed this
+
+546
+00:29:22,150 --> 00:29:26,335
+was presented by DeepMind, Google DeepMind several years ago,
+
+547
+00:29:26,335 --> 00:29:29,070
+where they showed that you could train a Q value network
+
+548
+00:29:29,090 --> 00:29:31,140
+and you can see the input on the left hand side
+
+549
+00:29:31,340 --> 00:29:33,810
+is simply the raw pixels coming from the screen,
+
+550
+00:29:34,190 --> 00:29:38,370
+all the way to the actions of a controller on the right hand side,
+
+551
+00:29:38,960 --> 00:29:43,140
+and you could train this one network for a variety of different tasks
+
+552
+00:29:43,340 --> 00:29:47,220
+all across the Atari Breakout ecosystem of games.
+
+553
+00:29:47,910 --> 00:29:49,450
+And for each of these tasks,
+
+554
+00:29:49,740 --> 00:29:51,965
+the really fascinating thing that they showed was
+
+555
+00:29:51,965 --> 00:29:53,630
+for this very simple algorithm,
+
+556
+00:29:53,630 --> 00:29:57,070
+which really relies on random choice of selection of actions
+
+557
+00:29:57,150 --> 00:30:00,860
+and then, you know, learning from, you know, actions that don't do very well,
+
+558
+00:30:00,860 --> 00:30:05,560
+that you discourage them and trying to do actions that did perform well more frequently,
+
+559
+00:30:06,090 --> 00:30:07,160
+very simple algorithm,
+
+560
+00:30:07,160 --> 00:30:09,730
+but what they found was even with that type of algorithm,
+
+561
+00:30:10,160 --> 00:30:14,260
+they were able to surpass human level performance on over half of the game,
+
+562
+00:30:14,340 --> 00:30:18,310
+there were some games that you can see here were still below human level performance,
+
+563
+00:30:18,600 --> 00:30:19,340
+but as we'll see,
+
+564
+00:30:19,340 --> 00:30:22,390
+this was really like such an exciting advance,
+
+565
+00:30:22,470 --> 00:30:24,580
+because of the simplicity of the algorithm
+
+566
+00:30:24,600 --> 00:30:28,000
+and how you clean the formulation of the training was,
+
+567
+00:30:28,260 --> 00:30:31,180
+you only needed a very little amount of prior knowledge
+
+568
+00:30:31,680 --> 00:30:33,550
+to impose onto this neural network
+
+569
+00:30:33,660 --> 00:30:35,735
+for it to be able to learn how to play these games,
+
+570
+00:30:35,735 --> 00:30:37,960
+you never had to teach any of the rules of the game,
+
+571
+00:30:38,340 --> 00:30:40,515
+you only had to let it explore its environment,
+
+572
+00:30:40,515 --> 00:30:42,590
+play the game many, many times against itself,
+
+573
+00:30:42,730 --> 00:30:44,810
+and learn directly from that data.
+
+574
+00:30:47,270 --> 00:30:50,695
+Now there are several very important downsides of Q-learning
+
+575
+00:30:50,695 --> 00:30:54,120
+and hopefully these are going to motivate the second part of today's lecture,
+
+576
+00:30:54,260 --> 00:30:55,320
+which we'll talk about.
+
+577
+00:30:55,490 --> 00:30:59,340
+But the first one that I want to really convey to everyone here is that,
+
+578
+00:30:59,780 --> 00:31:05,170
+Q-learning is naturally applicable to discrete action spaces, right,
+
+579
+00:31:05,170 --> 00:31:08,560
+because you can think of this output space that we're providing
+
+580
+00:31:08,560 --> 00:31:11,910
+as kind of like one number per action that could be taken,
+
+581
+00:31:12,050 --> 00:31:14,010
+now, if we have a continuous action space,
+
+582
+00:31:14,270 --> 00:31:16,660
+we have to think about clever ways to work around that,
+
+583
+00:31:16,660 --> 00:31:19,920
+in fact, there are now more recently there are some solutions
+
+584
+00:31:20,240 --> 00:31:22,740
+to achieve Q-learning and continuous action spaces,
+
+585
+00:31:22,850 --> 00:31:24,360
+but for the most part,
+
+586
+00:31:24,500 --> 00:31:27,960
+Q-learning is very well suited for discrete action spaces,
+
+587
+00:31:28,400 --> 00:31:32,040
+and we'll talk about ways of overcoming that with other approaches a bit later.
+
+588
+00:31:32,660 --> 00:31:35,700
+And the second component here is that,
+
+589
+00:31:36,830 --> 00:31:39,055
+the policy that we're learning, right,
+
+590
+00:31:39,055 --> 00:31:42,030
+the Q-function is giving rise to that policy,
+
+591
+00:31:42,080 --> 00:31:45,300
+which is the thing that we're actually using to determine what action to take,
+
+592
+00:31:45,410 --> 00:31:46,560
+given any state,
+
+593
+00:31:46,880 --> 00:31:54,540
+that policy is determined by, you know, deterministically optimizing that Q-funtion,
+
+594
+00:31:54,590 --> 00:31:57,000
+we simply look at the results from the Q-function
+
+595
+00:31:57,590 --> 00:31:58,830
+and apply our,
+
+596
+00:31:59,030 --> 00:32:00,985
+or we, we look at the results of the Q-function
+
+597
+00:32:00,985 --> 00:32:04,740
+and we pick the action that has the best or the highest Q value,
+
+598
+00:32:05,340 --> 00:32:08,170
+that is very dangerous in many cases,
+
+599
+00:32:08,430 --> 00:32:12,665
+because of the fact that it's always going to pick the best value for a given state,
+
+600
+00:32:12,665 --> 00:32:14,890
+there's no stochasticity in that pipeline,
+
+601
+00:32:15,000 --> 00:32:18,130
+so you can very frequently get caught in situations,
+
+602
+00:32:18,510 --> 00:32:20,110
+where you keep repeating the same actions
+
+603
+00:32:20,130 --> 00:32:25,090
+and you don't learn to explore potentially different options that you may be thinking of.
+
+604
+00:32:25,380 --> 00:32:28,210
+So to address these very important challenges,
+
+605
+00:32:28,890 --> 00:32:32,230
+that's hopefully going to motivate now the next part of today's lecture,
+
+606
+00:32:32,610 --> 00:32:34,870
+which is going to be focused on policy learning,
+
+607
+00:32:35,040 --> 00:32:41,140
+which is a different class of reinforcement learning algorithms that are different than Q-learning algorithms.
+
+608
+00:32:41,600 --> 00:32:44,330
+And like I said, those are called policy gradient algorithms
+
+609
+00:32:44,330 --> 00:32:46,870
+and policy gradient algorithms, the main difference is that,
+
+610
+00:32:47,370 --> 00:32:51,250
+instead of trying to infer the policy from the Q-function,
+
+611
+00:32:51,480 --> 00:32:52,970
+we're just going to build a neural network,
+
+612
+00:32:52,970 --> 00:32:56,740
+that will directly learn that policy function from the data,
+
+613
+00:32:56,970 --> 00:32:58,720
+so it kind of skips one step
+
+614
+00:32:58,920 --> 00:33:00,760
+and we'll see how we can train those networks.
+
+615
+00:33:03,170 --> 00:33:04,330
+So before we get there,
+
+616
+00:33:04,330 --> 00:33:06,010
+let me just revisit one more time,
+
+617
+00:33:06,010 --> 00:33:09,055
+the Q-function illustration that we are looking at, right,
+
+618
+00:33:09,055 --> 00:33:13,320
+Q-function, we are trying to build a neural network outputs these Q values,
+
+619
+00:33:13,610 --> 00:33:14,730
+one value per action,
+
+620
+00:33:15,290 --> 00:33:19,590
+and we determine the policy by looking over this state of Q values,
+
+621
+00:33:19,970 --> 00:33:21,720
+picking the value that has the highest,
+
+622
+00:33:22,500 --> 00:33:24,320
+and looking at its corresponding action,
+
+623
+00:33:25,120 --> 00:33:26,570
+now with policy networks,
+
+624
+00:33:26,920 --> 00:33:29,265
+the idea that we want to keep here is that,
+
+625
+00:33:29,265 --> 00:33:31,760
+instead of predicting the Q values themselves,
+
+626
+00:33:32,350 --> 00:33:35,520
+let's directly try to optimize this policy function,
+
+627
+00:33:35,520 --> 00:33:38,370
+here we're calling the policy function π(s), right,
+
+628
+00:33:38,370 --> 00:33:41,000
+so π is the policy, s is our state,
+
+629
+00:33:41,140 --> 00:33:44,000
+so it's a function that takes as input only the state
+
+630
+00:33:44,140 --> 00:33:46,370
+and it's going to directly output the action,
+
+631
+00:33:47,200 --> 00:33:50,270
+so the outputs here give us the desired action,
+
+632
+00:33:50,290 --> 00:33:53,780
+that we should take in any given state that we find ourselves in,
+
+633
+00:33:54,190 --> 00:33:58,545
+that represents not only the best action that we should take,
+
+634
+00:33:58,545 --> 00:34:03,470
+but let's denote this as basically the probability that selecting that action
+
+635
+00:34:04,000 --> 00:34:06,860
+would result in a very desirable outcome,
+
+636
+00:34:07,280 --> 00:34:08,215
+for our network,
+
+637
+00:34:08,215 --> 00:34:12,060
+so not necessarily the value of that that action,
+
+638
+00:34:12,530 --> 00:34:18,210
+but rather the probability that selecting that action would be the highest value, right,
+
+639
+00:34:18,290 --> 00:34:19,765
+so, you don't care exactly about,
+
+640
+00:34:19,765 --> 00:34:25,050
+what is the numerical value that selecting this action takes or gives rise to rather,
+
+641
+00:34:25,520 --> 00:34:29,215
+but rather, what is the likelihood,
+
+642
+00:34:29,215 --> 00:34:33,900
+that selecting this action will give you the best performing value that you could expect,
+
+643
+00:34:34,670 --> 00:34:37,075
+exact value itself doesn't matter,
+
+644
+00:34:37,075 --> 00:34:42,030
+you only care about if selecting this action is going to give you, with high likelihood, the best one.
+
+645
+00:34:43,570 --> 00:34:47,445
+So we can see that if these predicted probabilities here, right,
+
+646
+00:34:47,445 --> 00:34:49,040
+in this example of Atari,
+
+647
+00:34:50,560 --> 00:34:58,190
+going left has the probability of being the highest value action with 90%,
+
+648
+00:34:58,720 --> 00:35:03,140
+staying in the center has a probability of 10%,
+
+649
+00:35:03,610 --> 00:35:05,000
+going right is 0%,
+
+650
+00:35:05,380 --> 00:35:08,025
+so ideally, what our neural networks should do in this case is
+
+651
+00:35:08,025 --> 00:35:11,420
+90% of the time in this situation go to the left,
+
+652
+00:35:11,560 --> 00:35:14,790
+10% of the time, it could still try staying at where it is,
+
+653
+00:35:14,790 --> 00:35:16,610
+but never it should go to the right,
+
+654
+00:35:17,380 --> 00:35:21,015
+now note that this now is a probability distribution,
+
+655
+00:35:21,015 --> 00:35:22,620
+this is very different than a Q-function,
+
+656
+00:35:22,620 --> 00:35:25,890
+a Q-function has actually no structure, right,
+
+657
+00:35:25,890 --> 00:35:29,150
+the Q values themselves can take any real number, right,
+
+658
+00:35:29,740 --> 00:35:35,030
+but here the policy network has a very formulated output,
+
+659
+00:35:35,410 --> 00:35:39,020
+all of the numbers here in the output have to sum to 1,
+
+660
+00:35:39,070 --> 00:35:41,810
+because this is a probability distribution, right,
+
+661
+00:35:41,980 --> 00:35:45,620
+and that gives it a very rigorous version of
+
+662
+00:35:46,270 --> 00:35:47,630
+how we can train this model,
+
+663
+00:35:47,770 --> 00:35:51,380
+that makes it a bit easier to train than Q-function as well.
+
+664
+00:35:53,760 --> 00:36:00,280
+One other very important advantage of having an output that is a probability distribution is
+
+665
+00:36:00,450 --> 00:36:05,860
+actually going to tie back to this other issue of Q-functions and Q neural networks that we saw before
+
+666
+00:36:06,150 --> 00:36:11,950
+and that is the fact that q functions are naturally suited towards discrete action spaces,
+
+667
+00:36:12,210 --> 00:36:14,890
+now when we're looking at this policy network,
+
+668
+00:36:15,300 --> 00:36:17,270
+we're puttingting a distributions, right,
+
+669
+00:36:17,270 --> 00:36:21,635
+and remember those those distributions can also take continuous forms,
+
+670
+00:36:21,635 --> 00:36:24,280
+in fact, we've seen this in the last two lectures,
+
+671
+00:36:24,960 --> 00:36:26,345
+in the generative lecture,
+
+672
+00:36:26,345 --> 00:36:31,750
+we saw how VAEs could be used to predict gaussian distributions over their latent space,
+
+673
+00:36:31,800 --> 00:36:35,200
+in the last lecture, we also saw how we could learn to predict uncertainties,
+
+674
+00:36:35,430 --> 00:36:39,100
+which are continuous probability distributions using data,
+
+675
+00:36:40,080 --> 00:36:41,080
+and just like that,
+
+676
+00:36:41,280 --> 00:36:44,920
+we could also use this same formulation
+
+677
+00:36:45,060 --> 00:36:47,615
+to move beyond discrete action spaces,
+
+678
+00:36:47,615 --> 00:36:48,700
+like you can see here,
+
+679
+00:36:48,780 --> 00:36:51,370
+which are one possible action,
+
+680
+00:36:51,420 --> 00:36:53,770
+a probability associated to one possible action,
+
+681
+00:36:54,140 --> 00:36:56,080
+in a discrete set of possible actions,
+
+682
+00:36:56,880 --> 00:36:58,780
+now we may have a space,
+
+683
+00:36:58,800 --> 00:37:01,120
+which is not what action should I take,
+
+684
+00:37:01,140 --> 00:37:02,770
+go left, right or say center,
+
+685
+00:37:03,000 --> 00:37:05,225
+but rather how quickly should I move
+
+686
+00:37:05,225 --> 00:37:06,950
+and in what direction should I move, right,
+
+687
+00:37:06,950 --> 00:37:09,940
+that is a continuous variable as opposed to a discrete variable,
+
+688
+00:37:10,470 --> 00:37:13,690
+and you could say that now the answer should look like this,
+
+689
+00:37:14,490 --> 00:37:17,620
+moving very fast to the right versus very slow to the,
+
+690
+00:37:17,820 --> 00:37:20,500
+excuse me, very fast to the left versus very slow to the left,
+
+691
+00:37:20,970 --> 00:37:24,160
+has this continuous spectrum that we may want to model.
+
+692
+00:37:25,160 --> 00:37:27,360
+Now, when we plot this entire distribution
+
+693
+00:37:27,620 --> 00:37:30,060
+of taking an action, giving a state,
+
+694
+00:37:30,260 --> 00:37:34,000
+you can see basically a very simple illustration of that right here,
+
+695
+00:37:34,000 --> 00:37:38,910
+this, this distribution has most of its mass over,
+
+696
+00:37:39,350 --> 00:37:41,920
+sorry, it has all of its mass over the entire real number line,
+
+697
+00:37:41,920 --> 00:37:47,050
+first of all, it has most of its mass right in the optimal action space that we want to take,
+
+698
+00:37:47,050 --> 00:37:49,470
+so if we want to determine the best action to take,
+
+699
+00:37:49,670 --> 00:37:52,560
+we would simply take the mode of this distribution,
+
+700
+00:37:52,790 --> 00:37:57,810
+the highest point, that would be the speed at which we should move and the direction that we should move in,
+
+701
+00:37:58,440 --> 00:38:02,830
+if we wanted to also, you know, try out different things and explore our space,
+
+702
+00:38:03,060 --> 00:38:07,210
+we could sample from this distribution and still obtain some stochasticity.
+
+703
+00:38:09,480 --> 00:38:11,270
+Now, let's look at an example
+
+704
+00:38:11,270 --> 00:38:14,470
+of how we can actually model these continuous distributions
+
+705
+00:38:14,520 --> 00:38:18,550
+and actually we've already seen some examples of this in the previous two lectures like I mentioned,
+
+706
+00:38:18,900 --> 00:38:23,470
+but let's take a look specifically in the context of reinforcement learning and policy gradient learning.
+
+707
+00:38:24,060 --> 00:38:28,000
+So instead of predicting this probability of taking an action,
+
+708
+00:38:28,050 --> 00:38:29,705
+giving all possible states,
+
+709
+00:38:29,705 --> 00:38:32,620
+which in this case, there is now an infinite number of,
+
+710
+00:38:32,640 --> 00:38:34,060
+because we're in the continuous domain,
+
+711
+00:38:34,380 --> 00:38:38,020
+we can't simply predict a single probability for every possible action,
+
+712
+00:38:38,760 --> 00:38:40,300
+because there's an infinite number of them,
+
+713
+00:38:40,560 --> 00:38:46,865
+so instead, what if we parameterized our action space by distribution, right,
+
+714
+00:38:46,865 --> 00:38:48,940
+so let's take for example, the gaussian distribution,
+
+715
+00:38:49,980 --> 00:38:52,060
+to parameterize a gaussian distribution,
+
+716
+00:38:52,320 --> 00:38:54,305
+we only need two outputs, right,
+
+717
+00:38:54,305 --> 00:38:55,870
+we need a mean and a variance,
+
+718
+00:38:55,920 --> 00:38:57,310
+given a mean and a variance,
+
+719
+00:38:57,450 --> 00:38:59,320
+we can actually have a probability mass
+
+720
+00:38:59,430 --> 00:39:02,800
+and we can compute a probability over any possible action,
+
+721
+00:39:02,940 --> 00:39:05,140
+that we may want to take just from those two numbers,
+
+722
+00:39:05,760 --> 00:39:07,420
+so for example, in this image here,
+
+723
+00:39:07,710 --> 00:39:11,300
+we may want to output a gaussian that looks like this, right,
+
+724
+00:39:11,300 --> 00:39:16,300
+its mean is centered at, let's see, -0.8,
+
+725
+00:39:16,500 --> 00:39:23,440
+indicating that we should move basically left with a speed of 0.8 meters per second for example,
+
+726
+00:39:23,940 --> 00:39:25,300
+and again we can see that,
+
+727
+00:39:25,920 --> 00:39:28,180
+because this is a probability distribution,
+
+728
+00:39:28,320 --> 00:39:33,245
+because of the format of policy networks, right,
+
+729
+00:39:33,245 --> 00:39:35,440
+we're enforcing that this is a probability distribution,
+
+730
+00:39:35,850 --> 00:39:40,510
+that means that the integral now of this, of this outputs right,
+
+731
+00:39:40,620 --> 00:39:44,410
+by definition of it being a gaussian, must also integrate to 1.
+
+732
+00:39:47,890 --> 00:39:48,405
+Okay, great,
+
+733
+00:39:48,405 --> 00:39:54,080
+so now let's maybe take a look at how policy gradient networks can be trained
+
+734
+00:39:54,460 --> 00:39:56,870
+and, you know, step through that process as well,
+
+735
+00:39:57,220 --> 00:39:59,720
+as we look at a very concrete example,
+
+736
+00:39:59,770 --> 00:40:04,130
+and maybe let's start by just revisiting this reinforcement learning loop,
+
+737
+00:40:04,180 --> 00:40:05,870
+that we started this class with.
+
+738
+00:40:06,520 --> 00:40:11,840
+Now, let's specifically consider the example of training an autonomous vehicles,
+
+739
+00:40:11,860 --> 00:40:15,120
+since I think that this is a particularly very intuitive example,
+
+740
+00:40:15,120 --> 00:40:16,190
+that we can walk through,
+
+741
+00:40:16,450 --> 00:40:19,550
+the agent here is the vehicle, right,
+
+742
+00:40:20,010 --> 00:40:23,150
+the state could be obtained through many sensors,
+
+743
+00:40:23,150 --> 00:40:25,460
+that could be mounted on the vehicle itself,
+
+744
+00:40:25,460 --> 00:40:31,750
+so, for example, autonomous vehicles are typically equipped with sensors like cameras, lidars, radars etc,
+
+745
+00:40:31,950 --> 00:40:35,980
+all of these are giving observational inputs to the to the vehicle,
+
+746
+00:40:36,850 --> 00:40:39,680
+the action that we could take is a steering wheel angle,
+
+747
+00:40:39,910 --> 00:40:42,590
+this is not a discrete variable, this is a continuous variable,
+
+748
+00:40:42,610 --> 00:40:44,990
+it's actually an angle that could take any real number,
+
+749
+00:40:45,820 --> 00:40:49,200
+and finally, the reward in this very simplistic example
+
+750
+00:40:49,200 --> 00:40:51,440
+is the distance that we travel before we crash.
+
+751
+00:40:53,660 --> 00:40:55,225
+Okay, so now let's take a look at,
+
+752
+00:40:55,225 --> 00:40:58,290
+how we could train a policy gradient neural network
+
+753
+00:40:58,520 --> 00:41:00,960
+to solve this task of self driving cars
+
+754
+00:41:00,980 --> 00:41:02,160
+as a concrete example.
+
+755
+00:41:03,350 --> 00:41:07,560
+So we start by initializing our agent, right,
+
+756
+00:41:07,790 --> 00:41:09,475
+remember that we have no training data, right,
+
+757
+00:41:09,475 --> 00:41:12,580
+so we have to think about actually reinforcement learning is almost like
+
+758
+00:41:12,580 --> 00:41:16,090
+a data acquisition plus learning pipeline combined together,
+
+759
+00:41:16,090 --> 00:41:19,420
+so the first part of that data acquisition pipeline is first
+
+760
+00:41:19,420 --> 00:41:22,110
+to initialize our agent to go out and collect some data.
+
+761
+00:41:24,510 --> 00:41:27,680
+So we start our vehicle, our agent,
+
+762
+00:41:28,090 --> 00:41:30,740
+and in the beginning, of course, it knows nothing about driving,
+
+763
+00:41:30,760 --> 00:41:35,600
+it's never been exposed to any of these rules of the environment or the observation before,
+
+764
+00:41:35,650 --> 00:41:37,310
+so it runs its policy,
+
+765
+00:41:37,480 --> 00:41:39,920
+which right now is untrained entirely,
+
+766
+00:41:40,660 --> 00:41:44,000
+until it terminates, right, until it goes outside of some bounds that we define,
+
+767
+00:41:44,260 --> 00:41:49,850
+we measure basically the reward as the distance that it traveled before it terminated,
+
+768
+00:41:50,670 --> 00:41:53,860
+and we record all of the states, all of the actions
+
+769
+00:41:54,390 --> 00:41:59,230
+and the final reward that it obtained until that termination, right,
+
+770
+00:41:59,280 --> 00:42:01,780
+this becomes our mini data set,
+
+771
+00:42:01,800 --> 00:42:03,940
+that we'll use for the first round of training,
+
+772
+00:42:04,620 --> 00:42:06,100
+let's take those data sets,
+
+773
+00:42:06,240 --> 00:42:08,650
+and now we'll do one step of training,
+
+774
+00:42:08,700 --> 00:42:11,255
+the first step of training that we'll do is
+
+775
+00:42:11,255 --> 00:42:19,520
+to take, to take the later half of our, of our trajectory that our agent ran
+
+776
+00:42:19,990 --> 00:42:24,735
+and decreased the probability of actions that resulted in low rewards,
+
+777
+00:42:24,735 --> 00:42:27,620
+now, because the vehicle we know the vehicle terminated,
+
+778
+00:42:28,150 --> 00:42:29,555
+we can assume that,
+
+779
+00:42:29,555 --> 00:42:35,720
+all of the actions that occurred in the later half of this trajectory were probably not very good actions,
+
+780
+00:42:35,860 --> 00:42:37,550
+because they came very close to termination,
+
+781
+00:42:38,110 --> 00:42:41,660
+so let's decrease the probability of all of those things happening again in the future,
+
+782
+00:42:41,950 --> 00:42:46,040
+and we'll take all of the things that happen in the beginning half of our training episode,
+
+783
+00:42:46,620 --> 00:42:48,680
+and we will increase their probabilities,
+
+784
+00:42:48,970 --> 00:42:50,900
+now, again, there's no reason,
+
+785
+00:42:51,010 --> 00:42:57,510
+why there shouldn't necessarily be a good action that we took in the first half of this trajectory
+
+786
+00:42:57,510 --> 00:42:58,880
+and a bad action in the later half,
+
+787
+00:42:59,080 --> 00:43:05,760
+but it's simply because actions that are in the later half were closer to a failure and closer determination,
+
+788
+00:43:05,760 --> 00:43:10,430
+that we can assume, for example, that these were probably suboptimal actions,
+
+789
+00:43:10,870 --> 00:43:14,295
+but it's very possible that these are noisy rewards as well,
+
+790
+00:43:14,295 --> 00:43:15,680
+because it's such a sparse signal,
+
+791
+00:43:16,000 --> 00:43:18,690
+it's very possible that you had some good actions at the end
+
+792
+00:43:18,690 --> 00:43:20,480
+and you were actually trying to recover your car,
+
+793
+00:43:20,500 --> 00:43:21,890
+but you were just too late.
+
+794
+00:43:24,180 --> 00:43:25,960
+Now repeat this process again,
+
+795
+00:43:26,010 --> 00:43:29,585
+re-initialize the agent one more time and run it until completion,
+
+796
+00:43:29,585 --> 00:43:31,580
+now the agent goes a bit farther, right,
+
+797
+00:43:31,580 --> 00:43:33,520
+because you've decreased the probabilities at the ends,
+
+798
+00:43:33,570 --> 00:43:35,050
+increased the probabilities at the future,
+
+799
+00:43:35,430 --> 00:43:38,200
+and you keep repeating this over and over again
+
+800
+00:43:38,460 --> 00:43:43,030
+until you notice that the agent learns to perform better and better every time
+
+801
+00:43:43,110 --> 00:43:44,435
+until it finally converges,
+
+802
+00:43:44,435 --> 00:43:49,570
+and at the end, the agent is able to basically follow lanes,
+
+803
+00:43:50,070 --> 00:43:54,675
+usually swerving a bit side to side while it does that, without crashing,
+
+804
+00:43:54,675 --> 00:43:56,900
+and this is actually really fascinating,
+
+805
+00:43:57,160 --> 00:43:59,340
+because this is a self driving car,
+
+806
+00:43:59,340 --> 00:44:01,485
+that we never taught anything about,
+
+807
+00:44:01,485 --> 00:44:02,840
+what a lane marker means
+
+808
+00:44:02,890 --> 00:44:04,340
+or what are the rules of the road,
+
+809
+00:44:04,900 --> 00:44:05,930
+anything about that, right,
+
+810
+00:44:05,950 --> 00:44:09,285
+this was a car that learned entirely just by going out,
+
+811
+00:44:09,285 --> 00:44:15,320
+crashing a lot and, you know, trying to figure out what to do to not keep doing that in the future.
+
+812
+00:44:16,070 --> 00:44:20,220
+And the remaining question is actually how we can update, you know, that policy
+
+813
+00:44:20,450 --> 00:44:24,330
+as part of this algorithm that I'm showing you on the right and the left hand side, right,
+
+814
+00:44:24,560 --> 00:44:28,320
+like how can we basically formulate that same algorithm,
+
+815
+00:44:28,520 --> 00:44:32,580
+and specifically the update equations, steps four and five right here,
+
+816
+00:44:32,720 --> 00:44:34,500
+these are the two really important steps
+
+817
+00:44:34,820 --> 00:44:37,830
+of how we can use those two steps to train our policy
+
+818
+00:44:38,270 --> 00:44:40,180
+and decrease the probability of bad events,
+
+819
+00:44:40,180 --> 00:44:43,050
+while promoting these likelihoods of all these good events.
+
+820
+00:44:44,870 --> 00:44:48,150
+So let's assume the, let's look at the loss function,
+
+821
+00:44:48,290 --> 00:44:53,440
+first of all, the loss function for a policy gradient neural network looks like this,
+
+822
+00:44:53,440 --> 00:44:55,380
+and then we'll start by dissecting it
+
+823
+00:44:55,610 --> 00:44:58,560
+to understand why this works the way it does,
+
+824
+00:44:59,180 --> 00:45:01,915
+so here we can see that the loss consists of two terms,
+
+825
+00:45:01,915 --> 00:45:04,020
+the first term is this term in green,
+
+826
+00:45:04,620 --> 00:45:08,750
+just called the log likelihood of selecting a particular action,
+
+827
+00:45:09,340 --> 00:45:12,285
+the second term is something that all of you are very familiar with already,
+
+828
+00:45:12,285 --> 00:45:15,740
+this is simply the return at a specific time,
+
+829
+00:45:16,180 --> 00:45:20,180
+so that's the expected return on rewards that you would get after this time point.
+
+830
+00:45:21,200 --> 00:45:25,750
+Now, let's assume that we got a lot of reward for a particular action,
+
+831
+00:45:26,130 --> 00:45:30,310
+that had a high loss probability or high probability,
+
+832
+00:45:30,930 --> 00:45:34,900
+if we got a lot of reward for a particular action that had high probability,
+
+833
+00:45:35,340 --> 00:45:38,420
+that means that we want to increase that probability even further,
+
+834
+00:45:38,420 --> 00:45:41,615
+so we do it even more or even more likelihood,
+
+835
+00:45:41,615 --> 00:45:43,990
+we sampled that action again into the future.
+
+836
+00:45:45,060 --> 00:45:47,470
+On the other hand, if we selected
+
+837
+00:45:47,880 --> 00:45:50,560
+or let's say if we obtained a reward,
+
+838
+00:45:50,940 --> 00:45:54,070
+that was very low for an action that had high likelihood,
+
+839
+00:45:54,210 --> 00:45:55,570
+we want the inverse effect,
+
+840
+00:45:56,040 --> 00:45:58,610
+we never want to sample that action again in the future,
+
+841
+00:45:58,610 --> 00:46:01,310
+because it resulted in a low reward, right,
+
+842
+00:46:01,310 --> 00:46:04,300
+and you'll notice that this loss function right here,
+
+843
+00:46:04,590 --> 00:46:05,860
+by including this negative,
+
+844
+00:46:06,240 --> 00:46:13,840
+we're going to minimize the likelihood of achieving any action that had low rewards in this trajectory,
+
+845
+00:46:14,310 --> 00:46:18,180
+now in our simplified example on the car example,
+
+846
+00:46:18,590 --> 00:46:20,365
+all the things that had low rewards
+
+847
+00:46:20,365 --> 00:46:26,640
+were exactly those actions that came closest to the termination part of the of the vehicle,
+
+848
+00:46:26,990 --> 00:46:29,580
+all the things that had high rewards were the things that came in the beginning,
+
+849
+00:46:29,930 --> 00:46:33,060
+that's just the assumption that we make when defining our reward structure.
+
+850
+00:46:34,130 --> 00:46:41,440
+Now we can plug this into the the loss of gradient descent algorithm to train our neural network,
+
+851
+00:46:41,440 --> 00:46:44,575
+when we see, you know, this policy gradient algorithm,
+
+852
+00:46:44,575 --> 00:46:46,015
+which you can see highlighted here,
+
+853
+00:46:46,015 --> 00:46:51,160
+this gradient is exactly of the policy part of the neural network,
+
+854
+00:46:51,160 --> 00:46:53,220
+that's the probability of selecting an action,
+
+855
+00:46:53,630 --> 00:46:55,150
+even a specific state,
+
+856
+00:46:55,150 --> 00:46:56,950
+and if you remember before when we defined,
+
+857
+00:46:56,950 --> 00:46:59,725
+you know, what does it mean to be a policy function,
+
+858
+00:46:59,725 --> 00:47:01,420
+that's exactly what it means, right,
+
+859
+00:47:01,420 --> 00:47:04,260
+given a particular state that you find yourself in,
+
+860
+00:47:04,580 --> 00:47:09,180
+what is the probability of selecting a particular action with the highest likelihood,
+
+861
+00:47:09,650 --> 00:47:12,310
+and that's, you know, exactly where this method gets its name
+
+862
+00:47:12,310 --> 00:47:16,230
+from this policy gradient piece here that you can see here.
+
+863
+00:47:18,040 --> 00:47:23,600
+Now, I want to take maybe just a very brief second towards the end of the class here just to talk about,
+
+864
+00:47:23,950 --> 00:47:28,155
+you know, some of the challenges and keeping in line with the first lecture today,
+
+865
+00:47:28,155 --> 00:47:34,520
+some of the challenges of deploying these types of algorithms in the context of the real world, right.
+
+866
+00:47:35,060 --> 00:47:38,560
+What do you think when you look at this training algorithm that you can see here,
+
+867
+00:47:39,030 --> 00:47:42,190
+what do you think are the shortcomings of this training algorithm
+
+868
+00:47:42,540 --> 00:47:47,920
+and which step, I guess, specifically if we wanted to deploy this approach into reality?
+
+869
+00:47:52,910 --> 00:47:55,500
+Yeah, exactly, so it's step two, right.
+
+870
+00:47:55,850 --> 00:47:58,840
+If you wanted to do this in reality, right,
+
+871
+00:47:58,840 --> 00:48:01,290
+that essentially means that you want to go out,
+
+872
+00:48:01,310 --> 00:48:03,840
+collect your car, crashing it a bunch of times,
+
+873
+00:48:03,890 --> 00:48:07,375
+just to learn how to not crash it, right,
+
+874
+00:48:07,375 --> 00:48:11,125
+and that's, you know, that's simply not feasible, right, number one,
+
+875
+00:48:11,125 --> 00:48:13,950
+it's also, you know, very dangerous, number two.
+
+876
+00:48:15,440 --> 00:48:18,115
+So there are ways around this, right,
+
+877
+00:48:18,115 --> 00:48:20,380
+the number one way around this is that,
+
+878
+00:48:20,380 --> 00:48:24,720
+people try to train these types of models in simulation, right,
+
+879
+00:48:24,800 --> 00:48:26,340
+simulation is very safe,
+
+880
+00:48:26,510 --> 00:48:29,880
+because you know we're not going to actually be damaging anything real,
+
+881
+00:48:30,260 --> 00:48:31,960
+it's still very inefficient,
+
+882
+00:48:31,960 --> 00:48:33,840
+because we have to run these algorithms a bunch of times
+
+883
+00:48:34,130 --> 00:48:35,605
+and crash them a bunch of times,
+
+884
+00:48:35,605 --> 00:48:36,870
+just learn not to crash,
+
+885
+00:48:37,100 --> 00:48:39,750
+but at least now at least from a safety point of view,
+
+886
+00:48:40,220 --> 00:48:41,020
+it's much safer.
+
+887
+00:48:41,950 --> 00:48:47,220
+But, you know, the problem is that modern simulation engines for reinforcement learning
+
+888
+00:48:47,220 --> 00:48:52,820
+and generally, very broadly speaking, modern simators for vision specifically,
+
+889
+00:48:53,080 --> 00:48:56,685
+do not at all capture reality very accurately,
+
+890
+00:48:56,685 --> 00:49:02,750
+in fact, there's a very famous notion called the sim-to-real gap,
+
+891
+00:49:03,010 --> 00:49:04,550
+which is a gap that exists,
+
+892
+00:49:04,570 --> 00:49:06,830
+when you train algorithms in simulation,
+
+893
+00:49:07,180 --> 00:49:09,135
+and they don't extend to
+
+894
+00:49:09,135 --> 00:49:13,010
+a lot of the phenomena that we see and the patterns that we see in reality.
+
+895
+00:49:13,720 --> 00:49:16,870
+And one really cool result that I want to just highlight here is that,
+
+896
+00:49:16,870 --> 00:49:18,970
+when we're training reinforcement learning algorithms,
+
+897
+00:49:18,970 --> 00:49:22,495
+we ultimately want them to be, you know, not operating in simulation,
+
+898
+00:49:22,495 --> 00:49:23,970
+we want them to be in reality,
+
+899
+00:49:24,650 --> 00:49:27,970
+and as part of our lab here at MIT,
+
+900
+00:49:27,970 --> 00:49:32,940
+we've been developing this very, very cool brand new photo, realistic simulation engine,
+
+901
+00:49:33,080 --> 00:49:37,740
+that goes beyond basically the paradigm of how simulators work today,
+
+902
+00:49:37,760 --> 00:49:40,440
+which is basically defining a model of their environment
+
+903
+00:49:40,910 --> 00:49:43,920
+and trying to, you know, synthesize that that model,
+
+904
+00:49:44,270 --> 00:49:47,620
+essentially these simulators are like glorified game engines, right,
+
+905
+00:49:47,620 --> 00:49:50,280
+they all look very game like, when you look at them,
+
+906
+00:49:50,660 --> 00:49:54,720
+but one thing that we've done is taken a data driven approach
+
+907
+00:49:54,740 --> 00:49:56,760
+using real data of the real world,
+
+908
+00:49:57,050 --> 00:50:02,965
+can we build up synthetic environments that are super photo realistic and look like this, right,
+
+909
+00:50:02,965 --> 00:50:06,510
+so this is a cool result that we created here at MIT,
+
+910
+00:50:07,130 --> 00:50:09,520
+developing this photo realistic simulation engine,
+
+911
+00:50:09,520 --> 00:50:11,100
+this is actually an autonomous agent,
+
+912
+00:50:11,600 --> 00:50:15,460
+not a real car driving through our virtual simulator
+
+913
+00:50:15,460 --> 00:50:17,910
+and a bunch of different types of different scenarios,
+
+914
+00:50:18,230 --> 00:50:19,825
+so this simulator is called VISTA,
+
+915
+00:50:19,825 --> 00:50:23,730
+allows us to basically use real data that we do collect in the real world,
+
+916
+00:50:24,050 --> 00:50:26,940
+but then re-simulate those same real roads,
+
+917
+00:50:27,020 --> 00:50:28,735
+so for example, let's say you take your car,
+
+918
+00:50:28,735 --> 00:50:31,680
+you drive out on [mass have], you collect data of [mass have],
+
+919
+00:50:31,940 --> 00:50:36,600
+you can now drop a virtual agent into that same simulated environment,
+
+920
+00:50:37,220 --> 00:50:40,900
+observing new viewpoints of what that scene might have looked like
+
+921
+00:50:40,900 --> 00:50:43,230
+from different types of perturbations
+
+922
+00:50:43,400 --> 00:50:47,400
+or, or types of angles that it might be exposed to.
+
+923
+00:50:47,800 --> 00:50:52,430
+And that allows us to train these agents now entirely using reinforcement learning,
+
+924
+00:50:52,630 --> 00:50:53,810
+no human labels,
+
+925
+00:50:54,430 --> 00:50:57,830
+but importantly allowed them to be transferred into reality,
+
+926
+00:50:57,940 --> 00:51:00,620
+because there's no sim-to-real gap anymore.
+
+927
+00:51:00,790 --> 00:51:03,140
+So in fact, we did exactly this,
+
+928
+00:51:03,280 --> 00:51:05,895
+we placed agents into our simulator,
+
+929
+00:51:05,895 --> 00:51:08,510
+we trained them using the exact algorithms,
+
+930
+00:51:08,680 --> 00:51:11,990
+that you learned about in today's lecture these policy gradient algorithms
+
+931
+00:51:12,250 --> 00:51:15,440
+and all of the training was done entirely in simulation,
+
+932
+00:51:15,910 --> 00:51:17,150
+then we took these policies
+
+933
+00:51:17,260 --> 00:51:20,630
+and we deployed them on board our full scale autonomous vehicle,
+
+934
+00:51:20,740 --> 00:51:23,330
+this is now in the real world, no longer in simulation,
+
+935
+00:51:23,860 --> 00:51:25,970
+and on the left hand side you can see,
+
+936
+00:51:26,850 --> 00:51:32,170
+basically this car driving through this environment completely autonomous in the real world,
+
+937
+00:51:32,220 --> 00:51:34,420
+no transfer learning is is done here,
+
+938
+00:51:34,500 --> 00:51:38,225
+there is no augmentation of data from real world data,
+
+939
+00:51:38,225 --> 00:51:40,715
+this is entirely trained using simulation
+
+940
+00:51:40,715 --> 00:51:43,030
+and this represented actually the first time ever,
+
+941
+00:51:43,410 --> 00:51:47,320
+that reinforcement learning was used to train a policy end to end,
+
+942
+00:51:47,760 --> 00:51:50,650
+we're an autonomous vehicle that could be deployed in reality,
+
+943
+00:51:50,790 --> 00:51:54,700
+so that was something really cool that we we created here at MIT.
+
+944
+00:51:54,870 --> 00:52:00,790
+But now that we covered, you know, all of these foundations of reinforcement learning and policy learning,
+
+945
+00:52:01,440 --> 00:52:06,160
+I want to touch on some other maybe very exciting applications that we're seeing,
+
+946
+00:52:06,510 --> 00:52:08,840
+and one very popular application,
+
+947
+00:52:08,840 --> 00:52:12,340
+that a lot of people will tell you about and talk about is the game of Go.
+
+948
+00:52:12,940 --> 00:52:15,615
+So here reinforcement learning agents could be
+
+949
+00:52:15,615 --> 00:52:21,560
+actually tried to put against the test against you know, grand master level Go players
+
+950
+00:52:22,180 --> 00:52:26,145
+and you know at the time achieved incredibly impressive results,
+
+951
+00:52:26,145 --> 00:52:28,995
+so for those of you who are not familiar with the game of Go,
+
+952
+00:52:28,995 --> 00:52:32,750
+Go, game of Go is played on a 19 by 19 board,
+
+953
+00:52:33,130 --> 00:52:35,565
+the rough objective of Go is
+
+954
+00:52:35,565 --> 00:52:39,225
+to claim basically more board pieces than your opponent, right,
+
+955
+00:52:39,225 --> 00:52:43,245
+and through the grid of, sorry through the grid,
+
+956
+00:52:43,245 --> 00:52:45,590
+that you can see here this 19 by 19 grid,
+
+957
+00:52:46,140 --> 00:52:50,720
+and while the game itself, the the logical rules, are actually quite simple,
+
+958
+00:52:51,010 --> 00:52:56,295
+the number of possible action spaces and possible states that this board
+
+959
+00:52:56,295 --> 00:53:00,110
+could be placed into is greater than the number of atoms in the universe,
+
+960
+00:53:00,280 --> 00:53:05,180
+so this game, even though the rules are very simple in their logical definitions,
+
+961
+00:53:05,830 --> 00:53:11,180
+is an extraordinarily complex game for an artificial algorithm to try and master.
+
+962
+00:53:11,860 --> 00:53:17,190
+So the objective here was to build a reinforcement learning algorithm to master the game of Go,
+
+963
+00:53:17,240 --> 00:53:21,295
+not only beating, you know, these gold standard softwareares,
+
+964
+00:53:21,295 --> 00:53:27,130
+but also what was at the time like an amazing result was to beat the grand master level players,
+
+965
+00:53:27,130 --> 00:53:32,340
+so the number one player in the world of Go was a human human champion, obviously.
+
+966
+00:53:33,010 --> 00:53:35,300
+So Google DeepMind rose to this challenge,
+
+967
+00:53:35,950 --> 00:53:39,920
+they created a couple years ago developing this solution,
+
+968
+00:53:40,240 --> 00:53:46,250
+which is very much based in the exact same algorithms that you learned about in today's lecture,
+
+969
+00:53:46,690 --> 00:53:51,560
+combining both the value part of this network with [residual] layers,
+
+970
+00:53:51,910 --> 00:53:54,410
+which we'll cover in the next lecture tomorrow,
+
+971
+00:53:55,390 --> 00:53:57,440
+and using reinforcement learning pipeline,
+
+972
+00:53:58,090 --> 00:54:01,380
+they were able to defeat the grand champion human players
+
+973
+00:54:01,380 --> 00:54:03,950
+and the idea that its core was actually very simple,
+
+974
+00:54:04,030 --> 00:54:06,855
+the first step is that you train a neural network
+
+975
+00:54:06,855 --> 00:54:09,830
+to basically watch human level experts,
+
+976
+00:54:10,420 --> 00:54:13,880
+so this is not using reinforcement learning, using supervised learning,
+
+977
+00:54:14,140 --> 00:54:16,910
+using the techniques that we covered in lectures one, two and three.
+
+978
+00:54:17,460 --> 00:54:19,200
+And from this first step,
+
+979
+00:54:19,200 --> 00:54:20,960
+the goal is to build like a policy,
+
+980
+00:54:21,130 --> 00:54:25,200
+that would imitate some of the rough patterns that a human type of player
+
+981
+00:54:25,200 --> 00:54:26,960
+or a human grandmaster would take,
+
+982
+00:54:27,190 --> 00:54:30,650
+based on a given board state, the type of actions that they might execute,
+
+983
+00:54:31,120 --> 00:54:33,290
+but then given this pre trained model,
+
+984
+00:54:33,340 --> 00:54:38,000
+essentially you could use it to bootstrap and reinforcement learning algorithm,
+
+985
+00:54:38,170 --> 00:54:40,400
+that would play against itself,
+
+986
+00:54:41,130 --> 00:54:45,875
+in order to learn how to improve even beyond the human levels, right,
+
+987
+00:54:45,875 --> 00:54:47,825
+so it would take its human understandings,
+
+988
+00:54:47,825 --> 00:54:49,625
+try to imitate the humans first of all,
+
+989
+00:54:49,625 --> 00:54:50,770
+but then from that imitation,
+
+990
+00:54:51,390 --> 00:54:53,920
+they would pin these two neural networks against themselves,
+
+991
+00:54:54,180 --> 00:54:55,370
+play a game against themselves
+
+992
+00:54:55,370 --> 00:54:57,950
+and the winners would be receiving a reward,
+
+993
+00:54:57,950 --> 00:55:04,210
+the losers would try to negate all of the actions that they may have acquired from their human counterparts
+
+994
+00:55:04,410 --> 00:55:08,050
+and try to actually learn new types of rules and new types of actions
+
+995
+00:55:08,250 --> 00:55:12,880
+basically that might be very beneficial to achieving superhuman performance.
+
+996
+00:55:12,900 --> 00:55:19,790
+And one of the very important auxiliary tricks that brought this idea to be possible was,
+
+997
+00:55:19,790 --> 00:55:21,400
+the usage of this second network,
+
+998
+00:55:21,420 --> 00:55:25,570
+this auxiliary network which took as input the state of the board
+
+999
+00:55:25,830 --> 00:55:35,090
+and tried to predict, you know, what are all of the different possible board states that might emerge from this particular state
+
+1000
+00:55:35,090 --> 00:55:36,875
+and what would their values be,
+
+1001
+00:55:36,875 --> 00:55:39,620
+what would their potential returns and their outcomes be,
+
+1002
+00:55:39,620 --> 00:55:41,760
+so this network was an auxiliary network,
+
+1003
+00:55:42,080 --> 00:55:43,950
+that was almost hallucinating, right,
+
+1004
+00:55:44,330 --> 00:55:47,880
+different board states that it could take from this particular state
+
+1005
+00:55:48,260 --> 00:55:52,740
+and using those predicted values to guide its planning of,
+
+1006
+00:55:52,880 --> 00:55:55,320
+you know, what action should it take into the future.
+
+1007
+00:55:55,790 --> 00:55:58,020
+And finally, very much more recently,
+
+1008
+00:55:58,400 --> 00:55:59,740
+they extended this algorithm
+
+1009
+00:55:59,740 --> 00:56:05,230
+and showed that they could not even use the human grand masters in the beginning to imitate from in the beginning,
+
+1010
+00:56:05,230 --> 00:56:06,415
+and bootstrap these algorithms,
+
+1011
+00:56:06,415 --> 00:56:08,590
+what if they just started entirely from scratch
+
+1012
+00:56:08,590 --> 00:56:11,220
+and just had two neural networks never trained before,
+
+1013
+00:56:11,600 --> 00:56:13,740
+they start pinning themselves against each other
+
+1014
+00:56:13,970 --> 00:56:15,175
+and you could actually see that,
+
+1015
+00:56:15,175 --> 00:56:17,700
+you could without any human supervision at all,
+
+1016
+00:56:18,460 --> 00:56:26,330
+have a neural network, learn to not only outperform the solution that outperform the humans,
+
+1017
+00:56:26,800 --> 00:56:29,510
+but also outperform the solution that was created,
+
+1018
+00:56:29,560 --> 00:56:32,300
+which was bootstrapped by humans as well.
+
+1019
+00:56:34,460 --> 00:56:38,140
+So with that, I'll summarize very quickly what we've learned today
+
+1020
+00:56:38,140 --> 00:56:39,660
+and and conclude for the day.
+
+1021
+00:56:40,160 --> 00:56:45,160
+So we've talked a lot about really the foundational algorithms underlying reinforcement learning,
+
+1022
+00:56:45,160 --> 00:56:48,330
+we saw two different types of reinforcement learning approaches
+
+1023
+00:56:48,350 --> 00:56:50,070
+of how we can optimize these solutions,
+
+1024
+00:56:50,660 --> 00:56:51,810
+first being Q-learning,
+
+1025
+00:56:51,830 --> 00:56:53,845
+where we're trying to actually estimate,
+
+1026
+00:56:53,845 --> 00:56:55,080
+given a state, you know,
+
+1027
+00:56:55,130 --> 00:56:58,345
+what is the value that we might expect for any possible action,
+
+1028
+00:56:58,345 --> 00:57:01,260
+in the second way was to take a much more end to end approach
+
+1029
+00:57:01,580 --> 00:57:04,480
+and say how, given the state that we see ourselves in,
+
+1030
+00:57:04,480 --> 00:57:06,600
+what is the likelihood, that I should take any given action
+
+1031
+00:57:07,160 --> 00:57:11,610
+to maximize the potential that I I have in this particular state.
+
+1032
+00:57:12,010 --> 00:57:14,805
+And I hope that all of this was very exciting to you,
+
+1033
+00:57:14,805 --> 00:57:16,820
+today we have a very exciting lab
+
+1034
+00:57:16,900 --> 00:57:18,800
+and kick off for the competition
+
+1035
+00:57:19,510 --> 00:57:22,040
+and the deadline for these competitions will be,
+
+1036
+00:57:22,780 --> 00:57:25,040
+well, it was originally set to be thursday,
+
+1037
+00:57:25,510 --> 00:57:27,950
+which is tomorrow at 11pm.
+
+1038
+00:57:28,090 --> 00:57:28,670
+Thank you.
+
