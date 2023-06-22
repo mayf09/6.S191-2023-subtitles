@@ -36,3 +36,6 @@ epistemic uncertainty 认知不确定性
 # Lecture 6
 reward 奖励
 policy function 策略函数
+
+# Lecture 7
+mode collapse 模式崩溃

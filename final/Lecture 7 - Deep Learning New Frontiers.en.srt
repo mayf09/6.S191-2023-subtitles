@@ -1,0 +1,3920 @@
+1
+00:00:09,410 --> 00:00:15,000
+This next lecture is my absolute favorite lecture in introduction to deep learning,
+
+2
+00:00:15,440 --> 00:00:20,190
+focusing on the limitations of deep learning methods as they exist today,
+
+3
+00:00:20,630 --> 00:00:24,720
+and how those limitations and outstanding challenges really motivate
+
+4
+00:00:25,010 --> 00:00:29,970
+new research at the cutting edge and the new frontiers of deep learning and AI.
+
+5
+00:00:31,410 --> 00:00:32,420
+Before we dive in,
+
+6
+00:00:32,420 --> 00:00:38,650
+we have a couple of logistical things to to discuss and go through,
+
+7
+00:00:38,940 --> 00:00:44,200
+starting with perhaps one of the most important aspects of this of this course,
+
+8
+00:00:44,280 --> 00:00:48,350
+we have a tradition of designing and giving T-shirts
+
+9
+00:00:48,350 --> 00:00:49,390
+as part of this course
+
+10
+00:00:49,650 --> 00:00:51,245
+and hopefully you can all see them,
+
+11
+00:00:51,245 --> 00:00:53,650
+we have them here today right at the front.
+
+12
+00:00:54,090 --> 00:00:59,050
+So we're going to do the distribution of the T-shirts at the end of today's program,
+
+13
+00:00:59,220 --> 00:01:03,250
+and so please, please stay if you wish to pick up a T-shirt.
+
+14
+00:01:04,610 --> 00:01:07,375
+All right, so where we are right now,
+
+15
+00:01:07,375 --> 00:01:08,370
+we have this lecture,
+
+16
+00:01:09,530 --> 00:01:13,020
+that I'm going to be giving on deep learning limitations and new frontiers,
+
+17
+00:01:13,460 --> 00:01:16,440
+and we're going to have three more lectures following that,
+
+18
+00:01:16,790 --> 00:01:19,890
+continuing our series of guest lectures for this year.
+
+19
+00:01:21,320 --> 00:01:28,770
+Importantly, we still have the competitions surrounding both the software lab and the project pitch proposal,
+
+20
+00:01:29,990 --> 00:01:32,010
+for the project pitch proposal,
+
+21
+00:01:32,120 --> 00:01:35,100
+we ask that you please upload your slides by tonight,
+
+22
+00:01:35,360 --> 00:01:38,880
+we have all the detailed instructions for that on the course syllabus,
+
+23
+00:01:39,440 --> 00:01:43,530
+and if you are interested in submitting to the lab competitions,
+
+24
+00:01:43,970 --> 00:01:48,925
+the deadline for that has been extended to tomorrow afternoon at 1pm,
+
+25
+00:01:48,925 --> 00:01:52,380
+so please submit the labs, for the labs as well.
+
+26
+00:01:53,150 --> 00:01:59,400
+Motivation hopefully is not only to is mostly to exercise your skills in deep learning and to build knowledge,
+
+27
+00:01:59,840 --> 00:02:03,270
+but we also have these amazing competitions and prizes
+
+28
+00:02:03,410 --> 00:02:07,860
+for each of the labs as well as the project pitch proposal competition.
+
+29
+00:02:08,510 --> 00:02:13,470
+So to remind you for the first lab on designing neural networks for music generation,
+
+30
+00:02:14,240 --> 00:02:18,600
+we have audio related prizes that are up up in the air,
+
+31
+00:02:18,860 --> 00:02:20,850
+the competition is wide open,
+
+32
+00:02:21,440 --> 00:02:22,615
+can be anyone's game,
+
+33
+00:02:22,615 --> 00:02:25,950
+so please please, please submit your entries.
+
+34
+00:02:27,450 --> 00:02:30,580
+Tomorrow we'll have the project pitch proposal competition,
+
+35
+00:02:30,900 --> 00:02:32,890
+every year it's a highlight of this program,
+
+36
+00:02:33,330 --> 00:02:38,020
+we hear your amazing ideas about new deep learning algorithms applications
+
+37
+00:02:38,670 --> 00:02:41,380
+in a quick shark tank style,
+
+38
+00:02:41,400 --> 00:02:43,270
+Three minute pitch is really fun,
+
+39
+00:02:43,620 --> 00:02:47,240
+not only to be up here and have the chance to present to everyone,
+
+40
+00:02:47,240 --> 00:02:52,300
+but also to hear the amazing ideas of your coursemates and your peers and colleagues,
+
+41
+00:02:53,730 --> 00:03:02,020
+again, some of the logistical information for how to submit your slides up to the Google slide deck are included on the syllabus.
+
+42
+00:03:03,450 --> 00:03:06,605
+And finally, as we introduced in the first lecture,
+
+43
+00:03:06,605 --> 00:03:07,840
+and hopefully you've realized,
+
+44
+00:03:08,130 --> 00:03:11,590
+we have an exciting grand prize competition
+
+45
+00:03:12,030 --> 00:03:17,590
+surrounding the lab on trustworthy, deep learning, robustness, uncertainty and bias,
+
+46
+00:03:18,090 --> 00:03:21,850
+and again, emphasizing the competition is wide open right now,
+
+47
+00:03:22,020 --> 00:03:23,320
+please submit your entries,
+
+48
+00:03:23,970 --> 00:03:27,760
+should be very, very exciting and we look forward to receiving your submissions.
+
+49
+00:03:29,840 --> 00:03:35,670
+Okay, so in addition to that, those technical components of the course,
+
+50
+00:03:36,290 --> 00:03:39,810
+we have three remaining guest lectures
+
+51
+00:03:39,980 --> 00:03:42,120
+to round out our lecture series.
+
+52
+00:03:42,410 --> 00:03:46,540
+We heard an amazing talk yesterday by Sadhana from themis AI
+
+53
+00:03:46,540 --> 00:03:48,930
+on robust and trustworthy deep learning.
+
+54
+00:03:49,550 --> 00:03:52,770
+Today we're going to hear from Ramin Hasani, from Vanguard,
+
+55
+00:03:53,000 --> 00:03:56,010
+who's going to talk about the new age of statistics
+
+56
+00:03:56,600 --> 00:03:59,130
+and what that can mean for deep learning algorithms.
+
+57
+00:03:59,980 --> 00:04:02,355
+Tomorrow, we'll have two awesome guest lectures
+
+58
+00:04:02,355 --> 00:04:04,370
+from Dilip Krishnan from Google
+
+59
+00:04:04,780 --> 00:04:10,370
+and to round it out from Daniela Rus, the director of MIT CSAIL herself,
+
+60
+00:04:10,630 --> 00:04:18,200
+yes, some, we know that there are many fans of Daniela in the audience, us included.
+
+61
+00:04:18,400 --> 00:04:22,515
+So please attend, these should be really awesome talk
+
+62
+00:04:22,515 --> 00:04:27,710
+and you'll get to hear more about the cutting edge of research in deep learning.
+
+63
+00:04:28,590 --> 00:04:33,820
+Okay, so that rounds out all the logistical and program announcements that I wanted to make.
+
+64
+00:04:34,380 --> 00:04:36,455
+Now we can really dive into the fun stuff,
+
+65
+00:04:36,455 --> 00:04:38,470
+the technical content for this class.
+
+66
+00:04:39,510 --> 00:04:42,400
+So, so far, in introduction to deep learning,
+
+67
+00:04:42,540 --> 00:04:45,850
+you've learned about the foundations of neural network algorithms
+
+68
+00:04:46,140 --> 00:04:47,560
+and also got a taste
+
+69
+00:04:47,580 --> 00:04:54,580
+for how deep learning has already started to make an impact across many different research areas and applications,
+
+70
+00:04:55,440 --> 00:04:57,800
+from advances in autonomous vehicles,
+
+71
+00:04:58,420 --> 00:05:02,030
+to think about, to think about applications in medicine and healthcare,
+
+72
+00:05:03,040 --> 00:05:04,395
+to reinforcement learning,
+
+73
+00:05:04,395 --> 00:05:07,430
+that is changing the way that we think about gains and play,
+
+74
+00:05:08,260 --> 00:05:10,460
+to new generative modeling advances,
+
+75
+00:05:10,900 --> 00:05:11,780
+to robotics,
+
+76
+00:05:12,250 --> 00:05:14,420
+to many, many other applications,
+
+77
+00:05:14,770 --> 00:05:18,590
+like natural language processing, finance, security and more.
+
+78
+00:05:19,860 --> 00:05:23,270
+What we really hope you come away with from this course is
+
+79
+00:05:23,270 --> 00:05:27,100
+a concrete understanding of how deep neural networks work
+
+80
+00:05:27,660 --> 00:05:35,410
+and how these foundational algorithms are really enabling these advances across this multitude of disciplines.
+
+81
+00:05:36,590 --> 00:05:38,970
+And you've seen in this class and in this program,
+
+82
+00:05:39,350 --> 00:05:41,910
+that we've dealt with neural networks as a way,
+
+83
+00:05:41,960 --> 00:05:43,500
+as an algorithmic way,
+
+84
+00:05:43,670 --> 00:05:48,745
+to think about going from input data in the form of signals or measurements,
+
+85
+00:05:48,745 --> 00:05:51,270
+that we can derive from sensors of our world,
+
+86
+00:05:52,010 --> 00:05:54,750
+to directly produce some sort of decision,
+
+87
+00:05:55,220 --> 00:05:59,250
+that could be a prediction, like a class label or a numerical value,
+
+88
+00:06:00,170 --> 00:06:03,810
+or it could be an action itself, like in the case of reinforcement learning.
+
+89
+00:06:05,230 --> 00:06:07,130
+We've also seen the inverse,
+
+90
+00:06:07,570 --> 00:06:11,030
+where we can think about now building neural network algorithms,
+
+91
+00:06:11,290 --> 00:06:15,440
+that can go from a desired prediction or a desired action
+
+92
+00:06:15,580 --> 00:06:18,290
+to try to generate new data instances,
+
+93
+00:06:18,640 --> 00:06:21,320
+as is the case with generative modeling.
+
+94
+00:06:22,470 --> 00:06:25,370
+Now, taking a step back right in both these cases,
+
+95
+00:06:25,370 --> 00:06:29,080
+whether we're going from data to decision or the reverse,
+
+96
+00:06:30,020 --> 00:06:35,670
+neural networks can be thought of as very powerful function approximators.
+
+97
+00:06:37,600 --> 00:06:38,280
+What that means,
+
+98
+00:06:38,280 --> 00:06:40,520
+and to get at this in more detail,
+
+99
+00:06:41,020 --> 00:06:46,910
+we have to go back to a really famous theorem in computer science and in the theory of neural networks,
+
+100
+00:06:47,680 --> 00:06:51,020
+that was this theorem that was presented in 1989
+
+101
+00:06:51,550 --> 00:06:53,780
+and it generated quite the stir in the field,
+
+102
+00:06:54,800 --> 00:06:58,020
+this theorem is called the universal approximation theorem.
+
+103
+00:06:58,800 --> 00:07:00,790
+And what it states is that,
+
+104
+00:07:01,080 --> 00:07:03,040
+if we start with a neural network,
+
+105
+00:07:03,950 --> 00:07:06,000
+with just a single hidden layer,
+
+106
+00:07:07,030 --> 00:07:11,870
+that single layer neural network is sufficient to approximate any function.
+
+107
+00:07:13,180 --> 00:07:14,460
+Now, in this class,
+
+108
+00:07:14,460 --> 00:07:17,780
+we've been thinking about not single layer neural networks,
+
+109
+00:07:17,860 --> 00:07:22,580
+but rather deep models that stack multiple of these hidden layers together,
+
+110
+00:07:23,140 --> 00:07:25,700
+but this theorem says, oh, you don't even need that,
+
+111
+00:07:26,200 --> 00:07:28,860
+all you need is a single layer,
+
+112
+00:07:29,450 --> 00:07:30,835
+and if you believe that,
+
+113
+00:07:30,835 --> 00:07:36,840
+any problem can be simply reduced to this idea of mapping an input to an output through some function,
+
+114
+00:07:38,160 --> 00:07:40,930
+that neural network can exist,
+
+115
+00:07:41,720 --> 00:07:45,190
+the universal approximation theorem states that,
+
+116
+00:07:45,270 --> 00:07:46,720
+there is some neural network,
+
+117
+00:07:47,590 --> 00:07:53,120
+with a sufficient number of neurons that can approximate any arbitrary function.
+
+118
+00:07:54,930 --> 00:07:57,700
+Now this is an incredibly powerful result,
+
+119
+00:07:58,380 --> 00:08:01,540
+but if we look more closely at this and dig a little further,
+
+120
+00:08:02,340 --> 00:08:03,405
+you can start to see that,
+
+121
+00:08:03,405 --> 00:08:05,840
+there are a few caveats that we have to keep in mind.
+
+122
+00:08:07,220 --> 00:08:07,920
+First of all,
+
+123
+00:08:08,580 --> 00:08:11,930
+this theorem makes no guarantees on how many units,
+
+124
+00:08:12,100 --> 00:08:15,950
+how many neurons in that layer you need to solve such a problem.
+
+125
+00:08:17,280 --> 00:08:18,370
+Furthermore, it says,
+
+126
+00:08:19,050 --> 00:08:24,310
+okay, how do, it doesn't answer the question of how we can actually define that neural network,
+
+127
+00:08:24,660 --> 00:08:27,040
+how do we find the ways to support that architecture,
+
+128
+00:08:27,990 --> 00:08:31,390
+all it claims is tha such a neural network exists.
+
+129
+00:08:32,760 --> 00:08:33,695
+But we know that,
+
+130
+00:08:33,695 --> 00:08:37,180
+using gradient descent and some of the tools that we learned about in this class,
+
+131
+00:08:38,160 --> 00:08:42,580
+that finding those weights is not always a straightforward problem,
+
+132
+00:08:42,960 --> 00:08:47,500
+it can be very complex, very nonlinear, very non convex
+
+133
+00:08:48,090 --> 00:08:51,640
+and thinking about how we actually achieve that,
+
+134
+00:08:52,300 --> 00:08:55,770
+training of the neural network is a very, very hard problem.
+
+135
+00:08:57,500 --> 00:09:01,810
+Secondly, what is really important about this theorem is that,
+
+136
+00:09:01,810 --> 00:09:07,230
+it does not make any guarantees on how well that network would generalize to new tasks,
+
+137
+00:09:08,190 --> 00:09:09,275
+all it says is that,
+
+138
+00:09:09,275 --> 00:09:13,330
+given this desired mapping from input to output,
+
+139
+00:09:13,560 --> 00:09:15,730
+we can find some neural network that exists,
+
+140
+00:09:16,320 --> 00:09:20,710
+no guarantees on its performance in other tasks or in other settings.
+
+141
+00:09:22,500 --> 00:09:24,010
+And I think that this theorem,
+
+142
+00:09:24,150 --> 00:09:28,210
+this idea of the universal approximation theorem and its underlying caveats,
+
+143
+00:09:28,710 --> 00:09:30,160
+is a perfect example
+
+144
+00:09:30,330 --> 00:09:37,930
+of what can be thought of as the possible effects of the overhype in artificial intelligence and in deep learning.
+
+145
+00:09:39,000 --> 00:09:42,670
+And now here you've become part of this community, right,
+
+146
+00:09:42,930 --> 00:09:46,840
+that's interested in advancing the state of deep learning and AI,
+
+147
+00:09:47,460 --> 00:09:48,590
+and I think collectively
+
+148
+00:09:48,590 --> 00:09:52,880
+we need to be extremely careful in how we think about these algorithms,
+
+149
+00:09:52,880 --> 00:09:55,180
+how we market them, how we advertise them,
+
+150
+00:09:55,260 --> 00:09:57,730
+how we use them in the problems that we care about.
+
+151
+00:09:58,770 --> 00:10:01,480
+And while universal approximation tells us,
+
+152
+00:10:01,950 --> 00:10:05,020
+and that neural networks can be very, very powerful
+
+153
+00:10:05,040 --> 00:10:07,660
+and generates a lot of excitement around this idea,
+
+154
+00:10:08,320 --> 00:10:14,580
+at a time historically, actually provided false hope to the computer science and AI community,
+
+155
+00:10:15,260 --> 00:10:21,400
+that neural networks could solve any problem of any complexity in the real world.
+
+156
+00:10:22,680 --> 00:10:24,650
+Now, I think it goes without saying,
+
+157
+00:10:24,650 --> 00:10:27,610
+that such overhype can be extremely dangerous.
+
+158
+00:10:28,600 --> 00:10:34,110
+And in fact, it's not only the effect is not only in the course of research,
+
+159
+00:10:34,220 --> 00:10:37,350
+but also potentially at society at large.
+
+160
+00:10:39,610 --> 00:10:43,760
+So this is why that today, for the rest of this lecture,
+
+161
+00:10:43,780 --> 00:10:48,530
+I really want to focus on some of the limitations of deep learning algorithms,
+
+162
+00:10:48,790 --> 00:10:51,860
+that you've learned about this over the course of this class.
+
+163
+00:10:52,850 --> 00:10:56,410
+And I want to not only stop there, I want to extend beyond that,
+
+164
+00:10:56,410 --> 00:11:00,180
+to see how these limitations motivate new opportunities,
+
+165
+00:11:00,950 --> 00:11:06,630
+for new research that can be aimed at addressing some of those problems and overcoming them.
+
+166
+00:11:08,200 --> 00:11:09,110
+So, to start,
+
+167
+00:11:09,490 --> 00:11:13,820
+one of my favorite examples of a potential danger of deep neural networks,
+
+168
+00:11:14,410 --> 00:11:15,440
+comes from this paper,
+
+169
+00:11:15,760 --> 00:11:17,270
+comes from this paper that says,
+
+170
+00:11:18,310 --> 00:11:22,250
+understanding deep neural networks requires rethinking generalization.
+
+171
+00:11:23,260 --> 00:11:27,380
+This paper proposes a really elegant and simple experiment,
+
+172
+00:11:27,820 --> 00:11:33,260
+that highlights this notion of generalization and its limitations with deep learning models.
+
+173
+00:11:34,300 --> 00:11:36,750
+So what they do in this paper is that,
+
+174
+00:11:36,750 --> 00:11:41,000
+they took images from this large dataset called imagenet,
+
+175
+00:11:41,540 --> 00:11:45,250
+and each of these images is associated with a particular label,
+
+176
+00:11:45,720 --> 00:11:47,770
+dog, banana, dog, tree,
+
+177
+00:11:48,150 --> 00:11:49,240
+as you can see here.
+
+178
+00:11:50,720 --> 00:11:54,475
+Then what, what the authors of this paper did was that,
+
+179
+00:11:54,475 --> 00:11:56,460
+they considered each of these image examples,
+
+180
+00:11:57,480 --> 00:11:59,120
+and for every image in the data,
+
+181
+00:11:59,740 --> 00:12:02,270
+they took a k sided die,
+
+182
+00:12:02,890 --> 00:12:07,700
+where k is the number of possible class labels in this data set,
+
+183
+00:12:08,490 --> 00:12:13,900
+and use that die to randomly assign new labels to each of these instances,
+
+184
+00:12:15,990 --> 00:12:19,700
+now, all of the labels have been completely scrambled, right,
+
+185
+00:12:19,700 --> 00:12:22,000
+they're doing this random sampling,
+
+186
+00:12:22,320 --> 00:12:24,760
+assigning these brand new labels to these images,
+
+187
+00:12:25,770 --> 00:12:27,310
+and what this means is that,
+
+188
+00:12:27,330 --> 00:12:30,160
+the labels that are associated with an image,
+
+189
+00:12:30,180 --> 00:12:35,440
+as you see, are completely random with respect to what is actually in that image,
+
+190
+00:12:37,280 --> 00:12:38,190
+then what they did,
+
+191
+00:12:38,690 --> 00:12:40,080
+and if you know here,
+
+192
+00:12:40,520 --> 00:12:42,460
+is you can have instances,
+
+193
+00:12:42,460 --> 00:12:47,310
+because you have overlaps of multiple instances corresponding to the same class,
+
+194
+00:12:47,870 --> 00:12:49,860
+but now when you introduce randomness,
+
+195
+00:12:50,180 --> 00:12:52,650
+you can have two instances of the same class,
+
+196
+00:12:53,120 --> 00:12:55,470
+that now end up with completely different labels,
+
+197
+00:12:56,090 --> 00:13:01,080
+dog here maps to banana in one case and to tree in another case,
+
+198
+00:13:01,790 --> 00:13:02,340
+so literally,
+
+199
+00:13:02,480 --> 00:13:05,940
+they completely, completely randomizing the labels entirely,
+
+200
+00:13:08,740 --> 00:13:09,645
+with that in hand,
+
+201
+00:13:09,645 --> 00:13:13,400
+what they did was they tried to fit a deep neural network model
+
+202
+00:13:13,840 --> 00:13:16,940
+to the sampled data from this dataset, imagenet,
+
+203
+00:13:17,910 --> 00:13:20,645
+and they vary the degree of randomness,
+
+204
+00:13:20,645 --> 00:13:26,160
+ranging from the preserved original labels to completely random,
+
+205
+00:13:27,300 --> 00:13:28,990
+and then they took the resulting model,
+
+206
+00:13:29,770 --> 00:13:32,220
+looked at its performance on the test set,
+
+207
+00:13:32,220 --> 00:13:33,740
+an independent data set,
+
+208
+00:13:34,060 --> 00:13:36,320
+where now we're given new images
+
+209
+00:13:36,550 --> 00:13:40,370
+and the task of the network is to predict the associated label,
+
+210
+00:13:41,610 --> 00:13:43,030
+and as you can expect,
+
+211
+00:13:43,840 --> 00:13:48,240
+the accuracy of the model on this independent test set decreases
+
+212
+00:13:48,530 --> 00:13:52,650
+as you introduce more and more randomness into the label process,
+
+213
+00:13:54,540 --> 00:13:56,410
+what was really interesting, however,
+
+214
+00:13:56,640 --> 00:14:00,100
+was what they saw when they now looked not at the test set,
+
+215
+00:14:00,660 --> 00:14:02,210
+but at the training set,
+
+216
+00:14:02,990 --> 00:14:04,170
+and this is what they found,
+
+217
+00:14:05,000 --> 00:14:07,990
+that no matter how much they randomized these labels,
+
+218
+00:14:08,400 --> 00:14:11,770
+the neural network model, when trained on that resulting data,
+
+219
+00:14:12,450 --> 00:14:17,200
+was able to get 100% accuracy on the training set,
+
+220
+00:14:19,060 --> 00:14:21,110
+what this means is that,
+
+221
+00:14:21,670 --> 00:14:26,570
+these neural network models can really do this perfect fitting,
+
+222
+00:14:26,710 --> 00:14:29,330
+this very powerful function approximation.
+
+223
+00:14:30,090 --> 00:14:32,380
+And I think that this is a very powerful example,
+
+224
+00:14:32,520 --> 00:14:34,510
+because it shows once again,
+
+225
+00:14:34,920 --> 00:14:37,240
+like the universal approximation theorem,
+
+226
+00:14:37,530 --> 00:14:40,870
+that deep neural nets can perfectly fit to any function,
+
+227
+00:14:41,640 --> 00:14:46,910
+even if that function is defined by entirely random labels.
+
+228
+00:14:48,390 --> 00:14:49,970
+Now you'll note that,
+
+229
+00:14:49,970 --> 00:14:54,190
+this difference between the training set performance and the test set performance
+
+230
+00:14:54,630 --> 00:14:57,100
+captures this idea of generalization,
+
+231
+00:14:57,750 --> 00:15:01,750
+what is the limit of the neural network with respect to function fitting
+
+232
+00:15:01,860 --> 00:15:05,830
+and how it actually performs on unseen data.
+
+233
+00:15:07,760 --> 00:15:10,020
+And to drive this point home even further,
+
+234
+00:15:10,970 --> 00:15:15,870
+again, we can really understand neural networks simply as functional approximators,
+
+235
+00:15:16,680 --> 00:15:20,810
+and what the universal approximation theorem is telling us is that,
+
+236
+00:15:20,810 --> 00:15:24,370
+neural networks are just really, really, really good at doing this job.
+
+237
+00:15:25,350 --> 00:15:27,725
+So if we consider this example here,
+
+238
+00:15:27,725 --> 00:15:31,630
+where I've shown these data points in this 2D space,
+
+239
+00:15:33,310 --> 00:15:35,300
+we can always train a neural network
+
+240
+00:15:35,500 --> 00:15:40,760
+to learn what is the most likely position of the data within this space,
+
+241
+00:15:41,110 --> 00:15:44,300
+within this realm that it has seen examples before,
+
+242
+00:15:45,380 --> 00:15:46,740
+such that, if we get,
+
+243
+00:15:47,150 --> 00:15:50,490
+if we give the model a new data point here in purple,
+
+244
+00:15:51,260 --> 00:15:52,450
+we can expect that,
+
+245
+00:15:52,450 --> 00:15:58,650
+the neural network is going to generate a reasonable prediction of the estimate for that data point,
+
+246
+00:15:59,600 --> 00:16:01,225
+now, the challenge becomes,
+
+247
+00:16:01,225 --> 00:16:04,590
+what if you now start to extend beyond this landscape,
+
+248
+00:16:04,880 --> 00:16:08,910
+beyond the region that you have information, that you have data examples,
+
+249
+00:16:10,120 --> 00:16:15,410
+well, we have no guarantees on what the training data looks like in these regions,
+
+250
+00:16:16,090 --> 00:16:21,170
+and this is in fact one of the large limitations that exist in modern deep neural networks,
+
+251
+00:16:23,560 --> 00:16:29,180
+that they're very, very effective at functional approximation in regions when we have training data,
+
+252
+00:16:29,930 --> 00:16:34,260
+but we can't make guarantees on their performance out of those regions.
+
+253
+00:16:35,760 --> 00:16:37,810
+And so this raises this question,
+
+254
+00:16:37,890 --> 00:16:40,990
+which again, ties back to so in lecture yesterday,
+
+255
+00:16:41,910 --> 00:16:44,770
+of how can we derive methods, that tell us,
+
+256
+00:16:45,510 --> 00:16:50,170
+when the network doesn't know, when it needs more information, needs more examples.
+
+257
+00:16:52,530 --> 00:16:54,610
+Building off this idea a little further,
+
+258
+00:16:55,170 --> 00:16:57,790
+I think there's often this common conception,
+
+259
+00:16:58,050 --> 00:17:00,880
+which can indeed be inflated by the media,
+
+260
+00:17:01,380 --> 00:17:04,180
+that deep learning is basically this magic solution,
+
+261
+00:17:05,200 --> 00:17:05,690
+alchemy,
+
+262
+00:17:06,220 --> 00:17:09,170
+it can be the be all end, all solution to any problem,
+
+263
+00:17:10,750 --> 00:17:12,920
+but this spawns the belief that,
+
+264
+00:17:13,150 --> 00:17:14,990
+if we take some data examples
+
+265
+00:17:15,130 --> 00:17:19,100
+and apply some training architecture to it,
+
+266
+00:17:19,210 --> 00:17:20,450
+train the resulting model,
+
+267
+00:17:20,770 --> 00:17:23,660
+turn the crank on the deep learning algorithm,
+
+268
+00:17:23,860 --> 00:17:27,110
+that will spit out some beautiful, excellent results,
+
+269
+00:17:27,430 --> 00:17:28,400
+solving our problem,
+
+270
+00:17:29,310 --> 00:17:32,740
+but this is simply not how deep learning works,
+
+271
+00:17:33,560 --> 00:17:37,390
+there's this common idea of garbage in garbage out,
+
+272
+00:17:37,650 --> 00:17:40,055
+if your data is noisy,
+
+273
+00:17:40,055 --> 00:17:41,500
+if you have insufficient data,
+
+274
+00:17:41,670 --> 00:17:46,450
+if you try to build this very large neural network model to operate on the data,
+
+275
+00:17:46,980 --> 00:17:51,250
+you're not going to guarantee performance results at the outset.
+
+276
+00:17:52,960 --> 00:17:58,040
+And this motivates one of the most pertinent failure modes of modern deep neural nets,
+
+277
+00:17:58,480 --> 00:18:03,620
+and it highlights just how much they depend on the underlying data that they're trained with.
+
+278
+00:18:04,400 --> 00:18:06,450
+So let's say we have this image of a dog
+
+279
+00:18:06,920 --> 00:18:10,020
+and we are going to pass it into a CNN architecture,
+
+280
+00:18:11,030 --> 00:18:14,520
+and our task is now to try to colorize this image,
+
+281
+00:18:14,990 --> 00:18:19,080
+black and white image of a dog and produce a colored output,
+
+282
+00:18:21,520 --> 00:18:22,760
+this can be the result,
+
+283
+00:18:23,580 --> 00:18:25,780
+look closely at this resulting image,
+
+284
+00:18:27,470 --> 00:18:30,120
+anyone notice anything unusual about the dog?
+
+285
+00:18:31,660 --> 00:18:32,060
+Yes.
+
+286
+00:18:34,120 --> 00:18:35,030
+The ear is green,
+
+287
+00:18:35,530 --> 00:18:37,400
+awesome observation, anything else?
+
+288
+00:18:40,710 --> 00:18:41,110
+Yes.
+
+289
+00:18:42,520 --> 00:18:44,420
+Yeah, the chin is pink or purple.
+
+290
+00:18:44,770 --> 00:18:48,405
+And so two different instances pointed out by two different people
+
+291
+00:18:48,405 --> 00:18:50,570
+of things that don't really align,
+
+292
+00:18:51,400 --> 00:18:52,670
+why could this be the case.
+
+293
+00:18:53,520 --> 00:19:00,310
+In particular, if we look at the data that this model was trained with,
+
+294
+00:19:01,380 --> 00:19:02,830
+amongst the images of the dogs,
+
+295
+00:19:03,510 --> 00:19:05,980
+many of those images are going to be probably
+
+296
+00:19:06,060 --> 00:19:10,360
+of the dogs sticking their tongues out or having some grass in the background,
+
+297
+00:19:11,100 --> 00:19:18,695
+and as a result, the CNN model may have mapped that region around the chin to be pink in color
+
+298
+00:19:18,695 --> 00:19:21,190
+or around the ears to be green in color,
+
+299
+00:19:21,840 --> 00:19:25,750
+and what this example really highlights in thinking about this contrast
+
+300
+00:19:26,040 --> 00:19:31,990
+between what the training data looks like and what the predictive outputs can be.
+
+301
+00:19:32,580 --> 00:19:33,770
+Is that deep learning models,
+
+302
+00:19:34,060 --> 00:19:35,175
+all they're doing is that,
+
+303
+00:19:35,175 --> 00:19:37,160
+they're building up this representation,
+
+304
+00:19:37,600 --> 00:19:41,720
+based on the data that they have seen over the course of training.
+
+305
+00:19:43,590 --> 00:19:44,885
+And that raises this question
+
+306
+00:19:44,885 --> 00:19:49,630
+of how do neural networks effectively handle those instances,
+
+307
+00:19:49,800 --> 00:19:52,630
+where they may not have seen enough information,
+
+308
+00:19:53,070 --> 00:19:54,580
+they may be highly uncertain,
+
+309
+00:19:55,280 --> 00:19:59,920
+and exactly as Sadhana motivated in yesterday's lecture and laid out beautifully,
+
+310
+00:20:00,640 --> 00:20:05,160
+this is highly relevant to real world safety critical scenarios,
+
+311
+00:20:05,420 --> 00:20:07,650
+for example, in the case of autonomous driving,
+
+312
+00:20:08,330 --> 00:20:13,260
+where cars that are on autopilot can or in autonomous mode
+
+313
+00:20:13,370 --> 00:20:14,970
+can end up crashing,
+
+314
+00:20:15,050 --> 00:20:20,400
+with the results often being fatal or having very significant significant consequences.
+
+315
+00:20:21,870 --> 00:20:25,960
+In this particular instance to really highlight this further from a few years ago,
+
+316
+00:20:26,880 --> 00:20:32,950
+there was the case of an autonomous vehicle that resulted in a fatal accident,
+
+317
+00:20:33,510 --> 00:20:37,805
+where it, it crashed into a pylon,
+
+318
+00:20:37,805 --> 00:20:40,690
+a construction pylon that was present on the road,
+
+319
+00:20:41,400 --> 00:20:42,610
+and it turned out that,
+
+320
+00:20:42,960 --> 00:20:48,320
+when they looked back at the data that was used to train the resulting neural network,
+
+321
+00:20:48,320 --> 00:20:49,900
+that was used to control the car,
+
+322
+00:20:50,480 --> 00:20:52,060
+that in those training examples,
+
+323
+00:20:52,740 --> 00:20:56,440
+the Google street view images of that particular region of the road
+
+324
+00:20:56,850 --> 00:21:00,580
+did not have those construction barriers and construction pylons,
+
+325
+00:21:00,900 --> 00:21:04,030
+that resulted in the car crashing in the end.
+
+326
+00:21:05,430 --> 00:21:10,940
+And so, again, this idea of how disparities and issues with the training data
+
+327
+00:21:10,940 --> 00:21:13,120
+can lead to these downstream consequences
+
+328
+00:21:13,890 --> 00:21:18,100
+is a really prominent failure mode with neural network systems,
+
+329
+00:21:18,970 --> 00:21:22,020
+and it's exactly these types of failure modes that motivated
+
+330
+00:21:22,020 --> 00:21:25,880
+the need for understanding uncertainty in neural network systems.
+
+331
+00:21:26,500 --> 00:21:30,440
+And this was what you learned about in yesterday's lecture
+
+332
+00:21:30,760 --> 00:21:34,880
+and hopefully have gotten in depth experience with through the software lab,
+
+333
+00:21:36,010 --> 00:21:39,890
+highlighting the importance of developing robust methods
+
+334
+00:21:39,910 --> 00:21:43,130
+to understand these metrics of uncertainty and risk,
+
+335
+00:21:43,660 --> 00:21:47,570
+and how they can be really important for safety critical applications
+
+336
+00:21:48,040 --> 00:21:51,230
+from autonomy to medicine to facial recognition,
+
+337
+00:21:51,460 --> 00:21:52,850
+as you're exploring,
+
+338
+00:21:54,350 --> 00:21:56,280
+and how these downstream consequences
+
+339
+00:21:56,780 --> 00:22:02,370
+are linked fundamentally to issues of data imbalance, feature imbalance and noise.
+
+340
+00:22:04,310 --> 00:22:06,330
+So, overall,
+
+341
+00:22:06,560 --> 00:22:12,030
+I think that what these instances and these considerations point us to is
+
+342
+00:22:12,080 --> 00:22:18,250
+the susceptibilities of neural networks to succumb to these failure modes.
+
+343
+00:22:19,560 --> 00:22:23,195
+The final failure mode that I'd like to consider and highlight is
+
+344
+00:22:23,195 --> 00:22:25,600
+this idea of adversarial examples.
+
+345
+00:22:27,160 --> 00:22:29,850
+The intuition and the key idea here is that,
+
+346
+00:22:29,850 --> 00:22:33,950
+we can take a data instance, for example an image,
+
+347
+00:22:34,660 --> 00:22:39,110
+which if deployed and inputted into a standard CNN,
+
+348
+00:22:39,340 --> 00:22:44,930
+is going to be predicted to contain a temple with 97% probability,
+
+349
+00:22:46,430 --> 00:22:47,635
+what we can do is,
+
+350
+00:22:47,635 --> 00:22:56,460
+now apply some tiny perturbation in the form of random noise, choice random noise to that original image,
+
+351
+00:22:57,110 --> 00:22:59,820
+that then results in a perturbed image,
+
+352
+00:23:00,410 --> 00:23:04,380
+which to us humans appears visually largely the same,
+
+353
+00:23:05,190 --> 00:23:09,640
+but if you pass that resulting image back to that same neural network,
+
+354
+00:23:10,290 --> 00:23:16,810
+it produces a prediction that completely does not align with what is actually in the image,
+
+355
+00:23:17,540 --> 00:23:22,630
+predicting ostrich, label of ostrich with 98% probability.
+
+356
+00:23:23,520 --> 00:23:28,390
+And this is this notion of an adversarial attack or an adversarial perturbation,
+
+357
+00:23:29,410 --> 00:23:31,730
+what exactly is this perturbation doing,
+
+358
+00:23:33,970 --> 00:23:37,610
+remember that when we train neural networks using gradient descent,
+
+359
+00:23:38,080 --> 00:23:44,300
+the task is to optimize or minimize some loss function and objective,
+
+360
+00:23:45,450 --> 00:23:48,940
+and the goal in standard gradient descent is to say,
+
+361
+00:23:49,050 --> 00:23:55,420
+okay, how can I change the weights of the neural network to decrease the loss to optimize that objective,
+
+362
+00:23:57,080 --> 00:24:02,940
+we are specifically concerned with changing those weights W in a way to minimize our loss,
+
+363
+00:24:04,740 --> 00:24:06,100
+if you look closer here,
+
+364
+00:24:07,100 --> 00:24:16,540
+we are considering only the changes of the weights with respect to the input data and the corresponding label x and y,
+
+365
+00:24:17,990 --> 00:24:21,600
+in contrast, in thinking about adversarial attacks,
+
+366
+00:24:22,370 --> 00:24:24,420
+we now ask a different question,
+
+367
+00:24:25,220 --> 00:24:29,100
+how can we modify that input data, for example that image,
+
+368
+00:24:29,570 --> 00:24:34,890
+in order to increase the error in the network prediction,
+
+369
+00:24:36,080 --> 00:24:42,030
+concretely, how does a small change of tiny perturbation in the input data x
+
+370
+00:24:43,250 --> 00:24:45,870
+result in a maximal increase in the loss,
+
+371
+00:24:46,860 --> 00:24:47,880
+what that means is that,
+
+372
+00:24:47,880 --> 00:24:49,130
+we can fix the weights,
+
+373
+00:24:49,480 --> 00:24:50,690
+keep the network the same,
+
+374
+00:24:51,160 --> 00:24:55,220
+and look at how we can perturb and change and manipulate that input data
+
+375
+00:24:55,570 --> 00:24:57,740
+to try to increase that loss function.
+
+376
+00:24:59,910 --> 00:25:05,080
+An extension of this idea was developed and presented by a group of students right here at MIT,
+
+377
+00:25:05,250 --> 00:25:08,380
+where they took this idea of adversarial perturbation
+
+378
+00:25:09,000 --> 00:25:10,870
+and created an algorithm,
+
+379
+00:25:10,890 --> 00:25:15,730
+that could synthesize not only adversarial realizations in 2D,
+
+380
+00:25:16,110 --> 00:25:17,830
+but actually in 3D,
+
+381
+00:25:18,660 --> 00:25:20,860
+using a set of different transformations,
+
+382
+00:25:20,940 --> 00:25:24,940
+like rotations, color changes, other types of perturbations,
+
+383
+00:25:26,020 --> 00:25:28,580
+then, using those learned perturbations,
+
+384
+00:25:29,020 --> 00:25:30,770
+they took those information
+
+385
+00:25:31,180 --> 00:25:35,630
+and actually physically synthesized objects using 3D printing,
+
+386
+00:25:36,070 --> 00:25:40,610
+that were designed to be adversarial examples for a neural network,
+
+387
+00:25:41,490 --> 00:25:46,210
+and so they printed 3D, printed a bunch of these examples of turtles,
+
+388
+00:25:46,380 --> 00:25:47,860
+3D physical objects,
+
+389
+00:25:48,540 --> 00:25:54,310
+such that images of those would be completely fooling neural network,
+
+390
+00:25:54,360 --> 00:25:57,730
+that looked at that image and tried to classify the correct label,
+
+391
+00:25:59,050 --> 00:26:03,650
+and so this shows that this notion of adversarial examples and perturbation
+
+392
+00:26:04,030 --> 00:26:07,070
+can extend to different domains in the real world,
+
+393
+00:26:07,390 --> 00:26:11,390
+where now we can think about constructing these synthetic examples,
+
+394
+00:26:11,800 --> 00:26:17,690
+that are designed to probe at the weaknesses of neural networks and expose their vulnerabilities.
+
+395
+00:26:20,010 --> 00:26:25,480
+Finally, and we've discussed a lot about this idea yesterday as well,
+
+396
+00:26:25,710 --> 00:26:28,210
+is this notion of algorithmic bias,
+
+397
+00:26:28,560 --> 00:26:33,010
+the fact that as AI systems become more broadly deployed in society,
+
+398
+00:26:33,330 --> 00:26:36,460
+that they're susceptible to significant biases
+
+399
+00:26:36,510 --> 00:26:39,670
+resulting from many of those issues that I highlighted earlier,
+
+400
+00:26:40,390 --> 00:26:43,670
+and these can lead to very real detrimental consequences,
+
+401
+00:26:44,470 --> 00:26:48,920
+as we've been exploring throughout this course in both labs and lectures.
+
+402
+00:26:50,990 --> 00:26:53,605
+So the examples that I covered so far
+
+403
+00:26:53,605 --> 00:26:58,200
+are certainly not an exhaustive list of all the limitations of neural networks,
+
+404
+00:26:59,650 --> 00:27:02,990
+but I'd like to think of these not strictly as limitations,
+
+405
+00:27:04,120 --> 00:27:07,770
+but rather an invitation and a motivation for new innovation,
+
+406
+00:27:08,570 --> 00:27:12,150
+creative solutions that are aimed at trying to tackle some of these questions,
+
+407
+00:27:12,650 --> 00:27:16,860
+which are indeed open problems in AI and deep learning research today,
+
+408
+00:27:17,980 --> 00:27:25,580
+specifically, we've tackled and already thought about ways to address issues of bias and uncertainty in neural networks.
+
+409
+00:27:26,520 --> 00:27:28,660
+And now for the remainder of this talk,
+
+410
+00:27:29,160 --> 00:27:34,120
+I want to focus on some of the really exciting new frontiers of deep learning,
+
+411
+00:27:34,410 --> 00:27:37,930
+tackling some of these additional limitations that are introduced.
+
+412
+00:27:39,700 --> 00:27:41,360
+The first being this idea,
+
+413
+00:27:42,410 --> 00:27:46,830
+that stems from this idea of the size and scale of neural networks.
+
+414
+00:27:47,820 --> 00:27:49,250
+They rely heavily on data,
+
+415
+00:27:49,510 --> 00:27:50,120
+they're massive
+
+416
+00:27:50,890 --> 00:27:54,450
+and as a result it can be difficult to understand,
+
+417
+00:27:54,450 --> 00:27:59,330
+what is the underlying structure, if any, that the neural network is picking up on.
+
+418
+00:28:00,060 --> 00:28:03,130
+And so there's a very, very exciting line of work now,
+
+419
+00:28:03,570 --> 00:28:12,100
+that is focused on introducing structure and more information from prior human knowledge into neural network architectures
+
+420
+00:28:12,600 --> 00:28:18,880
+to enable them to become much smaller, more compact, more expressive, more efficient.
+
+421
+00:28:19,640 --> 00:28:22,360
+And we're going to see a bit of this in today's lecture,
+
+422
+00:28:22,710 --> 00:28:25,690
+but also in our following guest lecture by Ramin,
+
+423
+00:28:25,920 --> 00:28:29,525
+where he will talk about this idea of structural encoding
+
+424
+00:28:29,525 --> 00:28:35,620
+and how that can result in highly expressive and efficient neural network architectures.
+
+425
+00:28:37,230 --> 00:28:40,270
+The second issue that I'm going to talk about and discuss
+
+426
+00:28:40,560 --> 00:28:45,320
+and is very related to this problem of scale and structure
+
+427
+00:28:46,030 --> 00:28:52,010
+is how we can encourage neural networks to now extrapolate more effectively beyond data,
+
+428
+00:28:52,740 --> 00:28:58,340
+and this will tie very neatly into some of the ideas we've been discussing around generative AI,
+
+429
+00:28:58,540 --> 00:29:03,470
+and will be the last topic that I'm going to discuss in the remainder of today's lecture.
+
+430
+00:29:05,340 --> 00:29:08,970
+Okay, so let's focus on this first, first concept,
+
+431
+00:29:09,440 --> 00:29:12,780
+of how we can leverage more of our human domain knowledge
+
+432
+00:29:13,220 --> 00:29:16,740
+to encode greater structure into deep learning algorithms.
+
+433
+00:29:18,110 --> 00:29:21,840
+Turns out we've already seen examples of this in the course so far,
+
+434
+00:29:23,300 --> 00:29:25,530
+particularly highlighted in CNN,
+
+435
+00:29:25,700 --> 00:29:28,650
+used for spatial processing and visual data.
+
+436
+00:29:29,510 --> 00:29:31,525
+As we saw, CNNs were introduced
+
+437
+00:29:31,525 --> 00:29:36,540
+to be a highly efficient architecture for capturing spatial dependencies in data,
+
+438
+00:29:37,370 --> 00:29:41,610
+and the core idea behind CNN was this notion of convolution,
+
+439
+00:29:42,290 --> 00:29:50,575
+how it would relate spatially similar and adjacent portions of an input image to each other
+
+440
+00:29:50,575 --> 00:29:52,770
+through this efficient convolution operation.
+
+441
+00:29:53,760 --> 00:30:00,490
+And we saw that convolution was able to be effective at extracting local features from visual data,
+
+442
+00:30:01,260 --> 00:30:07,460
+and then using this local feature extraction to then enable downstream predictive tasks,
+
+443
+00:30:07,810 --> 00:30:10,880
+like classification, object detection and so forth.
+
+444
+00:30:13,010 --> 00:30:14,970
+What about now, instead of images,
+
+445
+00:30:15,050 --> 00:30:18,090
+if we consider more irregular data structures,
+
+446
+00:30:19,440 --> 00:30:24,070
+that can be encoded in different ways beyond 2D grids of pixels,
+
+447
+00:30:25,150 --> 00:30:29,840
+graphs are a particularly powerful way of encoding structural information,
+
+448
+00:30:30,340 --> 00:30:31,995
+and it can be in many cases,
+
+449
+00:30:31,995 --> 00:30:38,180
+that the notion of a graph or a network is very important to the problem that we may be considering,
+
+450
+00:30:40,690 --> 00:30:45,200
+graphs as a structure and as an example for representing data
+
+451
+00:30:45,250 --> 00:30:46,880
+are really all around us,
+
+452
+00:30:47,020 --> 00:30:48,590
+across many different applications,
+
+453
+00:30:49,460 --> 00:30:51,070
+ranging from social networks,
+
+454
+00:30:51,660 --> 00:30:54,370
+defining how we are all connected to each other,
+
+455
+00:30:55,140 --> 00:30:56,430
+to state machines,
+
+456
+00:30:56,430 --> 00:31:00,830
+that describe how a process can transition from one state to another,
+
+457
+00:31:01,540 --> 00:31:05,750
+to metrics and models of human mobility, urban transport,
+
+458
+00:31:06,640 --> 00:31:09,800
+to chemical molecules and biological networks.
+
+459
+00:31:10,890 --> 00:31:13,990
+And the motivation across all these examples is that,
+
+460
+00:31:14,220 --> 00:31:21,490
+so many instances of real world data fall into naturally this idea of a network or graph structure,
+
+461
+00:31:22,200 --> 00:31:31,030
+but that this structure cannot be readily incorporated or captured by standard data encodings or geometries,
+
+462
+00:31:31,590 --> 00:31:34,510
+and so we're going to talk a little bit about graphs as a structure
+
+463
+00:31:34,800 --> 00:31:39,220
+and how we can try to represent this information encoded in a graph
+
+464
+00:31:39,480 --> 00:31:44,650
+to build neural networks that are capable of handling these data types.
+
+465
+00:31:46,560 --> 00:31:50,170
+To see how we can do this and, and approach this problem,
+
+466
+00:31:50,520 --> 00:31:53,470
+let's go back for a moment to the CNN,
+
+467
+00:31:54,260 --> 00:31:58,890
+in CNN, we saw that we have this rectangular 2D kernel,
+
+468
+00:31:59,420 --> 00:32:01,465
+and what it effectively does is,
+
+469
+00:32:01,465 --> 00:32:03,090
+it slides across the image,
+
+470
+00:32:03,740 --> 00:32:09,300
+paying attention and picking up to features that exist across this 2D grid,
+
+471
+00:32:10,060 --> 00:32:13,380
+and all this function is doing is that,
+
+472
+00:32:13,380 --> 00:32:17,660
+element wise multiplication that defines the convolution operation,
+
+473
+00:32:18,450 --> 00:32:24,220
+and intuitively, we can think about convolution as this visualization of sliding this kernel,
+
+474
+00:32:24,390 --> 00:32:27,790
+iteratively patch by patch across the image,
+
+475
+00:32:28,530 --> 00:32:36,140
+continuing on to try to pick up on informative features that are captured in this 2D pixel space.
+
+476
+00:32:37,680 --> 00:32:43,475
+This core idea of convolution in sliding this this feature extraction filter is
+
+477
+00:32:43,475 --> 00:32:49,400
+at the heart of now how we can extend this idea to graph based data,
+
+478
+00:32:50,800 --> 00:32:56,450
+this motivates a very recent type of neural network architecture called graph convolutional networks,
+
+479
+00:32:57,190 --> 00:33:00,230
+where the idea is very similar to standard CNNs,
+
+480
+00:33:00,940 --> 00:33:03,450
+we have some type of weight [kernel],
+
+481
+00:33:04,120 --> 00:33:09,210
+and all it is is a matrix defined by neural network weights as before,
+
+482
+00:33:10,010 --> 00:33:15,540
+and now, rather than sliding that kernel across a 2D grid of pixels,
+
+483
+00:33:16,160 --> 00:33:19,810
+the kernel goes around to different parts of the graph,
+
+484
+00:33:20,940 --> 00:33:22,690
+defined by particular nodes,
+
+485
+00:33:22,950 --> 00:33:26,950
+and it looks at what the neighbors of the of that node is,
+
+486
+00:33:27,090 --> 00:33:29,230
+how it's connected to adjacent nodes,
+
+487
+00:33:29,740 --> 00:33:35,160
+and the kernel is used to extract features from that local neighborhood within the graph
+
+488
+00:33:35,540 --> 00:33:39,390
+to then capture the relevant information within the structure.
+
+489
+00:33:40,820 --> 00:33:43,015
+So we can visualize this concretely here,
+
+490
+00:33:43,015 --> 00:33:48,960
+where now instead of seeing the 2D kernel looking at a particular patch of an image,
+
+491
+00:33:49,550 --> 00:33:55,140
+what I'm highlighting is how the kernel is paying attention to node and its local neighbors
+
+492
+00:33:55,970 --> 00:33:58,650
+and effectively the graph convolution operation,
+
+493
+00:33:59,120 --> 00:34:05,010
+what it's doing is picking up on the local connectivity of a particular node
+
+494
+00:34:05,570 --> 00:34:10,800
+and learning weights that are associated with those edges, defining that local connectivity,
+
+495
+00:34:11,920 --> 00:34:16,070
+the kernel is just then applied iteratively to each node in the graph,
+
+496
+00:34:16,600 --> 00:34:19,730
+trying to extract information about the local connectivity,
+
+497
+00:34:20,560 --> 00:34:22,850
+such that we can go around and around
+
+498
+00:34:23,380 --> 00:34:28,550
+and at the end start to bring all this information together in aggregation
+
+499
+00:34:29,110 --> 00:34:34,730
+to then encode and update the weights according to what the local observations were.
+
+500
+00:34:36,270 --> 00:34:41,410
+The key idea is very, very similar to the standard convolution operation,
+
+501
+00:34:42,060 --> 00:34:43,360
+where this way kernel,
+
+502
+00:34:43,440 --> 00:34:45,910
+all it's doing is a feature extraction procedure,
+
+503
+00:34:46,410 --> 00:34:50,140
+that's now defined by nodes and edges in this graph,
+
+504
+00:34:50,490 --> 00:34:53,920
+rather than a 2D grid of pixels in an image.
+
+505
+00:34:55,080 --> 00:35:01,060
+This idea of graph encoding and graph convolution is very exciting and very powerful
+
+506
+00:35:01,110 --> 00:35:05,140
+in terms of now how we can extend this to real world settings,
+
+507
+00:35:05,730 --> 00:35:08,740
+that are defined by data sets,
+
+508
+00:35:08,740 --> 00:35:11,940
+that naturally lend themselves to this graph like structure.
+
+509
+00:35:12,830 --> 00:35:16,500
+So to highlight some of those applications across a variety of domains,
+
+510
+00:35:17,120 --> 00:35:22,680
+the first example I'd like to draw attention to is in the chemical and biological sciences,
+
+511
+00:35:23,000 --> 00:35:26,490
+where now if we think about the structure of a molecule, right,
+
+512
+00:35:26,930 --> 00:35:28,740
+it's defined by atoms,
+
+513
+00:35:29,150 --> 00:35:34,380
+and those atoms are individually connected to each other according to molecular bonds,
+
+514
+00:35:34,900 --> 00:35:37,970
+and it turns out that we can design graph neural networks,
+
+515
+00:35:38,350 --> 00:35:42,410
+that can effectively build representations of molecules,
+
+516
+00:35:43,470 --> 00:35:46,720
+in the same operation of this graph convolution
+
+517
+00:35:47,190 --> 00:35:51,130
+to build up an informative representation of chemical structures,
+
+518
+00:35:52,490 --> 00:35:59,610
+this very same idea of graph convolution was recently applied to the problem of drug discovery,
+
+519
+00:36:00,170 --> 00:36:02,700
+and in fact, out of work here at MIT,
+
+520
+00:36:03,710 --> 00:36:07,720
+it turned out that we can define graph neural network architectures,
+
+521
+00:36:07,720 --> 00:36:11,010
+that can look at data of small molecule drugs
+
+522
+00:36:11,570 --> 00:36:14,020
+and then look at new data sets
+
+523
+00:36:14,020 --> 00:36:20,040
+to try to predict and discover new therapeutic compounds that have potent activity,
+
+524
+00:36:20,570 --> 00:36:25,050
+such as killing bacteria and functioning as antibiotics.
+
+525
+00:36:26,640 --> 00:36:27,670
+Beyond this example,
+
+526
+00:36:28,290 --> 00:36:32,530
+another recent application of graph neural networks has been in traffic prediction,
+
+527
+00:36:33,180 --> 00:36:41,320
+where the goal is to look at streets and intersections as nodes and edges defined by graph
+
+528
+00:36:41,760 --> 00:36:47,740
+and apply graph neural network to that structure and to patterns of mobility
+
+529
+00:36:48,000 --> 00:36:51,760
+to learn to predict what resulting traffic patterns could be.
+
+530
+00:36:52,460 --> 00:36:55,200
+And indeed, in work from Google and DeepMind,
+
+531
+00:36:55,490 --> 00:37:00,090
+this same modeling approach was able to result in significant improvements
+
+532
+00:37:00,620 --> 00:37:06,000
+in the prediction of ETA, estimated time of arrival in Google maps,
+
+533
+00:37:06,620 --> 00:37:09,695
+so when you're looking at Google maps on your phone
+
+534
+00:37:09,695 --> 00:37:12,460
+and predicting when you're going to arrive at some location,
+
+535
+00:37:13,200 --> 00:37:19,600
+what it's doing on the backend is applying this graph neural network architecture to look at data of traffic
+
+536
+00:37:19,620 --> 00:37:24,520
+and make more informative predictions about how those patterns are changing over time.
+
+537
+00:37:26,180 --> 00:37:32,310
+A final and another recent example was in forecasting the spread of COVID-19,
+
+538
+00:37:33,020 --> 00:37:39,270
+where, again, building off of this same idea of mobility patterns and contacts,
+
+539
+00:37:39,560 --> 00:37:45,510
+graph neural networks were employed to look at not only spatial distributions of COVID spread,
+
+540
+00:37:45,770 --> 00:37:48,240
+but also incorporate a temporal dimension,
+
+541
+00:37:48,860 --> 00:37:55,680
+so that researchers could effectively forecast what were the most likely areas to be affected by COVID-19,
+
+542
+00:37:56,210 --> 00:38:00,900
+and what time scales those effects were likely to occur on.
+
+543
+00:38:02,670 --> 00:38:05,230
+So hopefully, this this highlights,
+
+544
+00:38:05,820 --> 00:38:13,810
+this idea of how simple ideas about data structure can then be translated into new neural network architectures,
+
+545
+00:38:13,980 --> 00:38:20,560
+that are specifically designed for particular problems in relevant application areas.
+
+546
+00:38:21,580 --> 00:38:24,620
+And this also lends very naturally to
+
+547
+00:38:24,940 --> 00:38:29,615
+how we can extend not beyond data to graphs,
+
+548
+00:38:29,615 --> 00:38:31,570
+to now three dimensional data,
+
+549
+00:38:32,740 --> 00:38:35,870
+which is often referred to as 3D point clouds,
+
+550
+00:38:36,460 --> 00:38:38,865
+and these are unordered sets of data,
+
+551
+00:38:38,865 --> 00:38:42,890
+and you can think about them as being scattered in 3D space,
+
+552
+00:38:43,540 --> 00:38:48,380
+and it turns out that you can extend graph neural networks very naturally
+
+553
+00:38:48,640 --> 00:38:52,610
+to operate on 3D datasets, life point clouds,
+
+554
+00:38:53,200 --> 00:38:55,110
+where the core idea is that,
+
+555
+00:38:55,110 --> 00:39:01,280
+you can dynamically compute meshes present in this 3D space
+
+556
+00:39:01,690 --> 00:39:05,420
+using the same idea of graph convolution and graph neural networks.
+
+557
+00:39:08,070 --> 00:39:13,480
+Okay, so hopefully with that run through of graph structure, graph neural networks,
+
+558
+00:39:13,980 --> 00:39:16,420
+you've started to get a little bit of idea about
+
+559
+00:39:16,590 --> 00:39:22,660
+how inspection of the underlying structure of data and incorporation of our prior knowledge
+
+560
+00:39:23,100 --> 00:39:28,990
+can be used to inform new neural network architectures that are very well suited for particular tasks.
+
+561
+00:39:32,510 --> 00:39:39,030
+On that, I want to spend the remaining of time of this lecture on our second new frontier,
+
+562
+00:39:39,380 --> 00:39:41,280
+focusing on generative AI.
+
+563
+00:39:43,450 --> 00:39:48,350
+So as we first introduced in the first lecture of this course and throughout,
+
+564
+00:39:49,120 --> 00:39:53,330
+I think that today we're really at this inflection point in AI,
+
+565
+00:39:53,980 --> 00:39:56,250
+where we're seeing tremendous new capabilities,
+
+566
+00:39:56,750 --> 00:39:58,500
+with generative models in particular,
+
+567
+00:39:59,300 --> 00:40:02,790
+enabling new advances in a variety of fields,
+
+568
+00:40:03,610 --> 00:40:07,530
+and I think we're just at the, at the casa of this inflection point,
+
+569
+00:40:07,530 --> 00:40:09,270
+in that in the coming years,
+
+570
+00:40:09,270 --> 00:40:15,710
+we're going to see generative AI radically transform the landscape of our world, the landscape of our society.
+
+571
+00:40:16,640 --> 00:40:20,040
+So today, in the remaining portion of the new frontiers lecture,
+
+572
+00:40:20,570 --> 00:40:25,830
+we're going to focus specifically on a new class of generative models, diffusion models,
+
+573
+00:40:26,180 --> 00:40:30,570
+that are powering some of these latest advances in generative AI.
+
+574
+00:40:32,130 --> 00:40:33,560
+All right, to start,
+
+575
+00:40:33,560 --> 00:40:36,610
+let's think back to the lecture on generative modeling,
+
+576
+00:40:37,320 --> 00:40:43,540
+where we focus primarily on two classes of generative models, VAEs and GANs,
+
+577
+00:40:45,540 --> 00:40:48,725
+what we didn't have time to go into into depth was
+
+578
+00:40:48,725 --> 00:40:53,830
+what are some of the underlying limitations of these models VAEs and GANs.
+
+579
+00:40:55,470 --> 00:40:58,330
+Turns out that there are three primary limitations,
+
+580
+00:40:59,600 --> 00:41:02,110
+the first is what we call mode collapse,
+
+581
+00:41:02,820 --> 00:41:04,720
+meaning that in the generative process,
+
+582
+00:41:04,950 --> 00:41:10,685
+VAEs and GANs can kind of collapse down to this mode, this phase,
+
+583
+00:41:10,685 --> 00:41:13,690
+where they're generating a lot of predictions,
+
+584
+00:41:13,890 --> 00:41:16,870
+a lot of new samples that are very, very similar to each other,
+
+585
+00:41:17,410 --> 00:41:22,820
+we often kind of think about this as regression to the average value or the most common value.
+
+586
+00:41:24,140 --> 00:41:25,510
+The second key limitation,
+
+587
+00:41:25,510 --> 00:41:28,950
+as I kind of alluded to in our generative modeling lecture,
+
+588
+00:41:29,600 --> 00:41:34,510
+was that these models really struggle to generate radically new instances,
+
+589
+00:41:34,510 --> 00:41:39,310
+that are not similar to the training data, that are more diverse.
+
+590
+00:41:40,660 --> 00:41:48,260
+Finally, it turns out that GANs in particular and VAEs as well in practice can be very difficult to train,
+
+591
+00:41:48,640 --> 00:41:50,660
+they're unstable, inefficient,
+
+592
+00:41:50,800 --> 00:41:53,750
+and this leads to a lot of problems in practice,
+
+593
+00:41:54,100 --> 00:41:56,990
+when thinking about how to scale these models.
+
+594
+00:41:58,850 --> 00:42:03,660
+These limitations then motivate a concrete set of challenges or criteria,
+
+595
+00:42:03,890 --> 00:42:06,990
+that we really want to meet when thinking about generative models,
+
+596
+00:42:07,900 --> 00:42:11,300
+we want our generative model to be stable, efficient to train,
+
+597
+00:42:12,180 --> 00:42:14,800
+we wanted to generate high quality samples,
+
+598
+00:42:15,450 --> 00:42:18,160
+that are synthetic and novel diverse,
+
+599
+00:42:18,540 --> 00:42:23,050
+different from what the model has seen before in its training examples.
+
+600
+00:42:24,950 --> 00:42:26,040
+Today and tomorrow,
+
+601
+00:42:26,060 --> 00:42:31,560
+we're going to focus on two very, very exciting new classes of generative models,
+
+602
+00:42:32,000 --> 00:42:34,410
+that tackle these challenges head on.
+
+603
+00:42:35,080 --> 00:42:38,030
+Today, I'm going to specifically focus on diffusion models,
+
+604
+00:42:38,740 --> 00:42:41,240
+provide the intuition behind how they work,
+
+605
+00:42:41,590 --> 00:42:43,020
+where you may have seen them before
+
+606
+00:42:43,020 --> 00:42:45,740
+and what are some of the advances that they're enabling.
+
+607
+00:42:46,500 --> 00:42:48,970
+And tomorrow, in the guest lecture from Google,
+
+608
+00:42:49,260 --> 00:42:53,170
+we're going to hear from Dilip on another generative modeling approach,
+
+609
+00:42:53,400 --> 00:42:58,030
+that's focused specifically on this task of text to image generation.
+
+610
+00:42:59,630 --> 00:43:01,930
+Okay, so let's get into it.
+
+611
+00:43:03,670 --> 00:43:04,740
+For diffusion models,
+
+612
+00:43:04,740 --> 00:43:09,315
+I think it first helps us to compare back again to the models we've seen,
+
+613
+00:43:09,315 --> 00:43:12,020
+the architectures we've seen and know about,
+
+614
+00:43:12,800 --> 00:43:15,900
+with VAEs and GANs that we talked about in lecture 4,
+
+615
+00:43:16,730 --> 00:43:20,370
+the task is to generate examples, synthetic examples,
+
+616
+00:43:20,630 --> 00:43:21,510
+let's say an image,
+
+617
+00:43:22,460 --> 00:43:23,550
+in a single shot,
+
+618
+00:43:23,660 --> 00:43:27,030
+by taking some compressed or noisy latent space
+
+619
+00:43:27,560 --> 00:43:30,540
+and then trying to decode or generate from that,
+
+620
+00:43:30,680 --> 00:43:34,860
+to produce now a new instance in our original data space.
+
+621
+00:43:36,220 --> 00:43:39,680
+Diffusion models work fundamentally differently from this approach,
+
+622
+00:43:40,590 --> 00:43:43,090
+rather than doing this one-shot prediction,
+
+623
+00:43:43,800 --> 00:43:46,070
+what diffusion models do is that,
+
+624
+00:43:46,070 --> 00:43:48,580
+they generate new samples iteratively,
+
+625
+00:43:49,110 --> 00:43:51,700
+by starting from purely random noise
+
+626
+00:43:52,410 --> 00:43:53,650
+and learning a process
+
+627
+00:43:53,760 --> 00:43:59,350
+that can iteratively remove small increments of noise from that complete random state,
+
+628
+00:43:59,850 --> 00:44:04,210
+all the way up back to being able to generate a synthetic example
+
+629
+00:44:04,650 --> 00:44:09,010
+in the original data landscape that we started off with and caring about.
+
+630
+00:44:10,320 --> 00:44:12,430
+The intuition here is really clever
+
+631
+00:44:12,690 --> 00:44:15,910
+and really, I think, powerful in that,
+
+632
+00:44:17,040 --> 00:44:19,370
+what diffusion models allow us to do is
+
+633
+00:44:19,370 --> 00:44:24,070
+to capture maximum variability, maximum amount of information,
+
+634
+00:44:24,540 --> 00:44:27,700
+by starting from a completely random state.
+
+635
+00:44:28,990 --> 00:44:33,170
+Diffusion models can be broken down into two key aspects,
+
+636
+00:44:33,960 --> 00:44:37,450
+the first is what we call the forward noising process,
+
+637
+00:44:38,830 --> 00:44:40,605
+and at the core of this is
+
+638
+00:44:40,605 --> 00:44:45,920
+this idea of how we build up data, for the diffusion model to look at
+
+639
+00:44:46,120 --> 00:44:49,250
+and then learn how to denoise and generate from.
+
+640
+00:44:50,870 --> 00:44:54,420
+The key step here is that we start with training data,
+
+641
+00:44:55,010 --> 00:44:56,580
+let's say examples of images,
+
+642
+00:44:57,460 --> 00:45:00,740
+and over the course of this forward noising diffusion process,
+
+643
+00:45:01,810 --> 00:45:06,530
+what we do is we progressively add increasing increments of noise,
+
+644
+00:45:07,270 --> 00:45:11,060
+such that we are slowly wiping out the details in the image,
+
+645
+00:45:11,530 --> 00:45:14,210
+corrupting the information, destroying that information,
+
+646
+00:45:15,010 --> 00:45:17,900
+until we arrive at a state that is pure noise.
+
+647
+00:45:19,070 --> 00:45:23,790
+Then, what we actually build our neural network to do is
+
+648
+00:45:23,790 --> 00:45:31,220
+to learn a mapping that goes from that completely noise state back up to the original data space,
+
+649
+00:45:31,690 --> 00:45:33,350
+what we call the reverse process,
+
+650
+00:45:34,330 --> 00:45:36,650
+learning and mapping that de noises,
+
+651
+00:45:36,880 --> 00:45:39,560
+going from noise back up to data,
+
+652
+00:45:40,420 --> 00:45:42,285
+and the core idea here is that,
+
+653
+00:45:42,285 --> 00:45:49,550
+denoising is iteratively recovering back more and more information from a completely random state.
+
+654
+00:45:51,510 --> 00:45:53,320
+These are the two core components,
+
+655
+00:45:53,430 --> 00:45:57,160
+the forward noising process, the reverse de noising process,
+
+656
+00:45:57,720 --> 00:46:00,400
+and we're going to look at how each one works,
+
+657
+00:46:00,570 --> 00:46:02,590
+distilled down to the core intuition.
+
+658
+00:46:03,830 --> 00:46:07,140
+Underlying this is the forward noising, the first step,
+
+659
+00:46:07,800 --> 00:46:09,260
+where we're given an image
+
+660
+00:46:09,400 --> 00:46:12,710
+and we want to arrive at a random sample of noise,
+
+661
+00:46:14,890 --> 00:46:20,630
+importantly, this process does not require any neural network learning, any training,
+
+662
+00:46:21,370 --> 00:46:25,020
+what we are able to do is define a fixed way,
+
+663
+00:46:25,020 --> 00:46:29,030
+a determined way to go from that input image to the noise,
+
+664
+00:46:29,970 --> 00:46:31,990
+the core idea is really simple,
+
+665
+00:46:32,640 --> 00:46:35,140
+all we do is we have some noising function,
+
+666
+00:46:35,980 --> 00:46:38,580
+and starting at the first time step,
+
+667
+00:46:38,870 --> 00:46:40,680
+our initial time step T 0,
+
+668
+00:46:41,540 --> 00:46:44,520
+where we have 100% image, no noise added,
+
+669
+00:46:45,320 --> 00:46:50,730
+all we do is progressively add more and more noise in an iterative way,
+
+670
+00:46:51,670 --> 00:46:54,050
+over the course of these individual time steps,
+
+671
+00:46:54,900 --> 00:46:58,070
+such that the result is increasingly more noisy.
+
+672
+00:46:59,020 --> 00:47:02,750
+First, we go from all image, less image, less image,
+
+673
+00:47:02,770 --> 00:47:04,790
+more noise, more noise, all noise,
+
+674
+00:47:05,020 --> 00:47:07,190
+in this defined forward process,
+
+675
+00:47:07,630 --> 00:47:09,260
+no training, no learning,
+
+676
+00:47:09,670 --> 00:47:11,330
+all we have is a noising function.
+
+677
+00:47:12,530 --> 00:47:15,640
+Now, this gives us a bunch of examples, right,
+
+678
+00:47:15,640 --> 00:47:19,140
+if we have a bunch of instances instances in the dataset,
+
+679
+00:47:19,340 --> 00:47:21,630
+we apply this noising to every one of them,
+
+680
+00:47:21,770 --> 00:47:26,820
+and so we have those slices at each of these different noising time steps,
+
+681
+00:47:27,950 --> 00:47:31,685
+our goal now in learning the neural network is
+
+682
+00:47:31,685 --> 00:47:35,500
+to then learn how to denoising in this reverse process,
+
+683
+00:47:36,450 --> 00:47:39,340
+starting from data in the input space,
+
+684
+00:47:39,600 --> 00:47:42,890
+what the noising process let us to is
+
+685
+00:47:42,890 --> 00:47:46,660
+this time series of these iteratively, more noised examples.
+
+686
+00:47:48,170 --> 00:47:50,190
+Now our task is,
+
+687
+00:47:50,690 --> 00:47:51,450
+given an image,
+
+688
+00:47:52,100 --> 00:47:57,330
+can we given a given one of these slices at these time steps, let's say T,
+
+689
+00:47:58,190 --> 00:47:59,230
+all we're asking is,
+
+690
+00:47:59,230 --> 00:48:06,950
+can we learn the next, next most denoise example from that time,
+
+691
+00:48:07,530 --> 00:48:10,030
+making this more concrete, walk through it,
+
+692
+00:48:11,200 --> 00:48:14,750
+a particular image at a slice, let's call it T,
+
+693
+00:48:15,820 --> 00:48:18,770
+what we ask the neural network to learn is
+
+694
+00:48:18,880 --> 00:48:24,970
+what is estimated image at that prior step T-1,
+
+695
+00:48:26,020 --> 00:48:27,440
+making this very concrete,
+
+696
+00:48:27,940 --> 00:48:32,390
+let's say we have this noised image at time 3,
+
+697
+00:48:33,000 --> 00:48:35,240
+the neural network is then trying to predict,
+
+698
+00:48:35,770 --> 00:48:39,260
+what was the denoise result at just one step before,
+
+699
+00:48:41,800 --> 00:48:42,840
+comparing these two,
+
+700
+00:48:42,840 --> 00:48:43,880
+let's take a step back,
+
+701
+00:48:44,890 --> 00:48:48,500
+all these two images differ by is that noise function,
+
+702
+00:48:49,690 --> 00:48:56,470
+and so the question that posed to the neural network in the course of training is,
+
+703
+00:48:57,560 --> 00:49:00,240
+how can we train, how can we learn this difference,
+
+704
+00:49:01,770 --> 00:49:04,870
+if our goal is to learn this iterative denoising process,
+
+705
+00:49:05,280 --> 00:49:07,690
+and we have all these consecutive steps,
+
+706
+00:49:08,890 --> 00:49:10,820
+going from more noise to less noise,
+
+707
+00:49:11,380 --> 00:49:12,950
+I pose a question to you all,
+
+708
+00:49:13,300 --> 00:49:14,480
+how could you think about,
+
+709
+00:49:15,260 --> 00:49:19,560
+defining a loss, defining a training objective for the neural network to learn,
+
+710
+00:49:22,810 --> 00:49:23,570
+any ideas?
+
+711
+00:49:25,650 --> 00:49:26,050
+Yes.
+
+712
+00:49:29,820 --> 00:49:31,780
+Can you expand a little further on that?
+
+713
+00:49:47,310 --> 00:49:49,180
+It gets, so the idea was,
+
+714
+00:49:49,230 --> 00:49:50,980
+can we look at the same concept
+
+715
+00:49:51,030 --> 00:49:57,230
+of trying to encode information from an image to maybe a reduced latent space
+
+716
+00:49:57,230 --> 00:49:58,300
+and try to learn that,
+
+717
+00:49:59,070 --> 00:50:04,300
+it's getting, it's getting, that's very related to what the network is actually doing,
+
+718
+00:50:04,650 --> 00:50:06,790
+but something even simpler,
+
+719
+00:50:07,280 --> 00:50:10,420
+thinking about how can we just compare these two images?
+
+720
+00:50:11,630 --> 00:50:12,030
+Yes.
+
+721
+00:50:18,680 --> 00:50:20,520
+Simple, just think really simply.
+
+722
+00:50:21,020 --> 00:50:21,420
+Yes.
+
+723
+00:50:23,450 --> 00:50:23,850
+Exactly,
+
+724
+00:50:24,110 --> 00:50:26,940
+the idea was how many of the pixels are the same,
+
+725
+00:50:27,350 --> 00:50:29,755
+all we need to do, it turns out, is
+
+726
+00:50:29,755 --> 00:50:33,360
+look at the pixel wise difference between these two steps
+
+727
+00:50:33,920 --> 00:50:37,435
+and the cleverness behind diffusion models is
+
+728
+00:50:37,435 --> 00:50:43,930
+defining that exact residual noise as what defines the loss.
+
+729
+00:50:44,740 --> 00:50:47,070
+The training objective for such a model,
+
+730
+00:50:47,600 --> 00:50:53,550
+all you do is compare these consecutive time steps of iterative, iterative noising
+
+731
+00:50:53,810 --> 00:50:56,470
+and ask, what is that mean squared error,
+
+732
+00:50:56,470 --> 00:50:59,370
+what is that pixel wise difference between those two.
+
+733
+00:50:59,930 --> 00:51:03,390
+And it turns out that this works very effectively in practice,
+
+734
+00:51:04,070 --> 00:51:08,130
+that we can train a neural network to do this iterative denoising
+
+735
+00:51:08,180 --> 00:51:12,210
+by this very intuitive idea of the loss.
+
+736
+00:51:13,990 --> 00:51:17,585
+All right, so hopefully this gives you the space
+
+737
+00:51:17,585 --> 00:51:23,230
+of how the diffusion model builds up this understanding of the denoising process
+
+738
+00:51:23,610 --> 00:51:29,290
+and is able to go in learning to iteratively denoise examples.
+
+739
+00:51:30,310 --> 00:51:35,640
+Now the task is how can we actually sample something brand new,
+
+740
+00:51:35,640 --> 00:51:37,670
+how can we generate a new instance.
+
+741
+00:51:38,360 --> 00:51:41,740
+Well, it's very related to that exact reverse process,
+
+742
+00:51:42,030 --> 00:51:44,320
+the denoising process that we just walked through,
+
+743
+00:51:45,040 --> 00:51:45,960
+what we do is
+
+744
+00:51:45,960 --> 00:51:49,910
+we take a brand new instance of completely random noise,
+
+745
+00:51:51,150 --> 00:51:54,790
+and take our trained diffusion model
+
+746
+00:51:55,410 --> 00:51:58,900
+and ask it, okay, just predict that residual noise difference,
+
+747
+00:51:59,400 --> 00:52:03,280
+that will get us to something that is slightly less noisy,
+
+748
+00:52:03,750 --> 00:52:05,530
+and this is all that is done,
+
+749
+00:52:05,970 --> 00:52:08,230
+repeatedly at these iterative time steps,
+
+750
+00:52:08,700 --> 00:52:15,540
+such that we can go from pure noise to something less noisy, repeatedly,
+
+751
+00:52:16,100 --> 00:52:17,790
+and as this process occurs,
+
+752
+00:52:18,110 --> 00:52:24,060
+hopefully you can see the emergence of something that reflects image related content,
+
+753
+00:52:24,890 --> 00:52:28,800
+time step by time step, iteratively doing this sampling procedure,
+
+754
+00:52:29,970 --> 00:52:32,620
+over many generations and many time steps,
+
+755
+00:52:33,090 --> 00:52:36,160
+such that we can get back to the point of this dog,
+
+756
+00:52:36,300 --> 00:52:37,690
+that's peeking out through us.
+
+757
+00:52:38,730 --> 00:52:40,960
+What I want you to take away with is that,
+
+758
+00:52:41,370 --> 00:52:43,660
+what the diffusion model enables is that,
+
+759
+00:52:44,520 --> 00:52:47,420
+going from a completely random noise state,
+
+760
+00:52:47,950 --> 00:52:50,990
+where we have this maximum notion of variability,
+
+761
+00:52:52,150 --> 00:52:55,550
+by defining it and breaking it down to this iterative process,
+
+762
+00:52:56,020 --> 00:52:59,445
+at each of those steps there is a prediction that's made,
+
+763
+00:52:59,445 --> 00:53:00,950
+there is a generation that's made,
+
+764
+00:53:01,210 --> 00:53:08,540
+and so that maximum variability is translated into maximum diversity in the generated samples.
+
+765
+00:53:09,550 --> 00:53:12,140
+Such that, when we get to the end state,
+
+766
+00:53:12,340 --> 00:53:15,140
+we have arrived at an image, a synthetic sample,
+
+767
+00:53:15,400 --> 00:53:19,340
+that's back in our completely noise free data space.
+
+768
+00:53:21,180 --> 00:53:22,480
+So at its core,
+
+769
+00:53:22,650 --> 00:53:25,960
+this is the summary of how a diffusion model works
+
+770
+00:53:26,340 --> 00:53:30,130
+and how they're able to go from completely random noise
+
+771
+00:53:30,480 --> 00:53:35,140
+to very faithful, diverse, newly generated samples.
+
+772
+00:53:36,840 --> 00:53:38,555
+As I've kind of been alluding to,
+
+773
+00:53:38,555 --> 00:53:42,280
+what I think is so powerful about this approach and this idea
+
+774
+00:53:42,870 --> 00:53:46,540
+is the fact that we can start from complete randomness,
+
+775
+00:53:47,570 --> 00:53:49,950
+it encapsulates maximum variability,
+
+776
+00:53:50,630 --> 00:53:56,550
+such that now diffusion models are able to produce generated samples that are very, very diverse,
+
+777
+00:53:57,580 --> 00:54:01,110
+from noise samples, that are fundamentally different to each other,
+
+778
+00:54:02,220 --> 00:54:03,350
+what this means is
+
+779
+00:54:03,350 --> 00:54:05,150
+now in this one instance,
+
+780
+00:54:05,150 --> 00:54:07,870
+we go from some noise sample to this image,
+
+781
+00:54:08,770 --> 00:54:12,150
+but equivalently and what is striking is,
+
+782
+00:54:12,150 --> 00:54:16,490
+if we consider now a completely different instance of random noise,
+
+783
+00:54:17,550 --> 00:54:19,900
+they're very variable from each other, right,
+
+784
+00:54:20,280 --> 00:54:25,630
+random noise, random noise, maximum variability internally and in comparison to each other,
+
+785
+00:54:26,530 --> 00:54:32,960
+the result, as a result of that denoising generation is going to be a different sampled image,
+
+786
+00:54:33,250 --> 00:54:36,800
+that's highly diverse, highly different to what we saw before.
+
+787
+00:54:37,580 --> 00:54:39,930
+And that's really the power of diffusion models
+
+788
+00:54:40,160 --> 00:54:45,900
+in thinking about how we can generate new samples that are very different and diverse.
+
+789
+00:54:46,430 --> 00:54:47,520
+Quick question, yes.
+
+790
+00:54:52,120 --> 00:54:52,520
+Yep.
+
+791
+00:54:54,150 --> 00:54:55,430
+That's a fantastic question,
+
+792
+00:54:55,430 --> 00:54:56,345
+so the question was,
+
+793
+00:54:56,345 --> 00:54:58,330
+how does the model know when to stop,
+
+794
+00:54:58,830 --> 00:55:00,010
+when you build these models,
+
+795
+00:55:00,060 --> 00:55:02,680
+you define a set number of time steps,
+
+796
+00:55:03,150 --> 00:55:05,435
+and this is a parameter,
+
+797
+00:55:05,435 --> 00:55:09,460
+that you can play around with when building and training the diffusion model,
+
+798
+00:55:10,140 --> 00:55:14,290
+and there are different studies looking at what works and what doesn't work,
+
+799
+00:55:15,690 --> 00:55:16,745
+the core idea is,
+
+800
+00:55:16,745 --> 00:55:17,885
+by more time steps,
+
+801
+00:55:17,885 --> 00:55:22,150
+you're going to result in better resolution effectively of generations,
+
+802
+00:55:22,800 --> 00:55:24,250
+but it's a trade off as well
+
+803
+00:55:24,420 --> 00:55:29,020
+in terms of the stability of the model and how efficiently it can train and learn.
+
+804
+00:55:56,850 --> 00:55:59,300
+So, so the question was,
+
+805
+00:55:59,300 --> 00:56:07,115
+if, explaining why there could be some missing details or incorrect details in the results of the diffusion models
+
+806
+00:56:07,115 --> 00:56:10,330
+and the particular example was [hands] in particular.
+
+807
+00:56:11,540 --> 00:56:18,190
+I don't know if there is a specific reason for why hands seem to cause issues,
+
+808
+00:56:18,630 --> 00:56:24,190
+I personally haven't seen reports or examples or literature discussing that,
+
+809
+00:56:24,540 --> 00:56:28,960
+but I think, the, the general point is,
+
+810
+00:56:29,130 --> 00:56:31,805
+yes, there is, there are going to be imperfections, right,
+
+811
+00:56:31,805 --> 00:56:36,075
+it's not going to be 100% perfect or accurate
+
+812
+00:56:36,075 --> 00:56:40,520
+in terms of faithfulness to the, to the true example,
+
+813
+00:56:41,350 --> 00:56:44,540
+and I think a lot of advances are now,
+
+814
+00:56:44,560 --> 00:56:48,050
+like thinking about what are modifications to the underlying architecture,
+
+815
+00:56:48,280 --> 00:56:52,670
+that could try to alleviate some of those details or those issues,
+
+816
+00:56:52,750 --> 00:56:54,825
+but for the sake of lecture,
+
+817
+00:56:54,825 --> 00:56:59,480
+I can discuss further with you about that particular example afterwards as well.
+
+818
+00:57:01,180 --> 00:57:01,580
+Okay.
+
+819
+00:57:02,620 --> 00:57:03,020
+So.
+
+820
+00:57:04,160 --> 00:57:13,310
+So, so, yeah, indeed, I think the power and the power of these models is, is very, very significant
+
+821
+00:57:14,230 --> 00:57:20,205
+and going back to the example that we showed at lecture one, right,
+
+822
+00:57:20,205 --> 00:57:22,790
+this ability to generate now a synthetic image
+
+823
+00:57:22,810 --> 00:57:26,750
+from a language prompt photo of an astronaut riding a horse.
+
+824
+00:57:27,360 --> 00:57:32,530
+In fact, it is a diffusion model that is underlying this this approach,
+
+825
+00:57:33,150 --> 00:57:35,780
+and what the diffusion model is doing is,
+
+826
+00:57:35,780 --> 00:57:41,980
+it's able to take an embedding that translates between text and language
+
+827
+00:57:42,450 --> 00:57:45,820
+and then run a diffusion process between the two,
+
+828
+00:57:46,110 --> 00:57:51,460
+such that image generation can be guided by the particular language prompt.
+
+829
+00:57:52,560 --> 00:57:57,850
+More examples of this idea of text to image generation have, I think,
+
+830
+00:57:57,990 --> 00:58:00,850
+really taken the Internet kind of by storm,
+
+831
+00:58:01,470 --> 00:58:05,080
+but I think what is so powerful about this idea is that,
+
+832
+00:58:05,130 --> 00:58:12,580
+we can guide the generative process according to constraints that we specify through language,
+
+833
+00:58:12,690 --> 00:58:14,020
+which is very, very powerful,
+
+834
+00:58:14,990 --> 00:58:17,430
+everything from something that's highly photo realistic
+
+835
+00:58:17,750 --> 00:58:22,140
+or generated with a specific art, artistic style,
+
+836
+00:58:22,940 --> 00:58:25,320
+as in the examples that I'm showing here.
+
+837
+00:58:27,030 --> 00:58:28,150
+So, so far,
+
+838
+00:58:28,800 --> 00:58:36,010
+in both today's portion on diffusion models and our discussion of generative models more broadly,
+
+839
+00:58:36,510 --> 00:58:39,580
+we largely focused on examples in images,
+
+840
+00:58:40,790 --> 00:58:44,100
+but what about other data modalities, other applications,
+
+841
+00:58:45,080 --> 00:58:47,080
+can we design new generative models,
+
+842
+00:58:47,970 --> 00:58:55,210
+leveraging these ideas to design new synthetic instances in other real world application areas.
+
+843
+00:58:56,840 --> 00:58:59,280
+To me, and I'm definitely biased in saying this,
+
+844
+00:58:59,630 --> 00:59:04,555
+but one of the most exciting aspects about thinking about this idea is,
+
+845
+00:59:04,555 --> 00:59:06,870
+in the context of molecular design
+
+846
+00:59:07,130 --> 00:59:12,960
+and how it can relate to chemistry, the life sciences and environmental science as well.
+
+847
+00:59:13,730 --> 00:59:19,080
+So for example, in the, in the landscape of chemistry and small molecules,
+
+848
+00:59:19,610 --> 00:59:22,710
+now instead of thinking about images and pixels,
+
+849
+00:59:23,120 --> 00:59:27,150
+we can think about atoms and molecules in 3D space.
+
+850
+00:59:27,800 --> 00:59:31,860
+And there's been a lot of recent work in building now diffusion models,
+
+851
+00:59:32,210 --> 00:59:37,440
+that can look at the 3D coordinates of atoms defining a molecule
+
+852
+00:59:37,730 --> 00:59:41,520
+and go from a completely random state in that 3D space
+
+853
+00:59:41,960 --> 00:59:45,150
+to again perform this same iterative denoising procedure
+
+854
+00:59:45,800 --> 00:59:49,470
+to now generate molecular structures that are well defined
+
+855
+00:59:49,760 --> 00:59:54,360
+and could be used for applications in drug discovery or therapeutic design.
+
+856
+00:59:55,880 --> 00:59:58,080
+Beyond that, and in my research specifically,
+
+857
+00:59:58,880 --> 01:00:00,750
+we are building new diffusion models,
+
+858
+01:00:00,830 --> 01:00:06,660
+that can generate biological molecules or biological sequences, like those of proteins,
+
+859
+01:00:07,160 --> 01:00:13,345
+which are the actuators and executors of all of biological function in human life
+
+860
+01:00:13,345 --> 01:00:15,120
+and across all the domains of life.
+
+861
+01:00:15,910 --> 01:00:18,890
+And specifically, in my work and in my research team,
+
+862
+01:00:18,970 --> 01:00:21,140
+we've developed a new diffusion model,
+
+863
+01:00:21,460 --> 01:00:24,860
+that is capable of generating brand new protein structures,
+
+864
+01:00:25,600 --> 01:00:29,235
+I'm going to share a little bit about how that model works
+
+865
+01:00:29,235 --> 01:00:32,100
+and our core idea behind it
+
+866
+01:00:32,360 --> 01:00:33,990
+to kind of close out this section.
+
+867
+01:00:35,250 --> 01:00:40,055
+The motivation that is really driving this work across the field at large is
+
+868
+01:00:40,055 --> 01:00:45,070
+this goal of trying to design new biological entities, like proteins,
+
+869
+01:00:45,450 --> 01:00:51,790
+that could have therapeutic functions or expand the functional space of biology at large.
+
+870
+01:00:52,550 --> 01:00:55,585
+And there are many, many efforts across generative AI,
+
+871
+01:00:55,585 --> 01:00:57,720
+that are now aiming at this problem,
+
+872
+01:00:58,010 --> 01:01:01,200
+because of the tremendous potential impact that it can have.
+
+873
+01:01:02,670 --> 01:01:04,090
+So in our work in specific,
+
+874
+01:01:04,620 --> 01:01:07,330
+we considered this problem of protein design
+
+875
+01:01:07,740 --> 01:01:11,530
+by going back to the biology and drawing inspiration from it,
+
+876
+01:01:12,320 --> 01:01:17,730
+and if you consider how protein function is determined and encoded,
+
+877
+01:01:18,530 --> 01:01:23,520
+all it is distilled down to is the structure of that protein in 3D space,
+
+878
+01:01:24,020 --> 01:01:29,160
+and how that structure informs and encodes a particular biological function,
+
+879
+01:01:30,350 --> 01:01:35,550
+in turn, proteins don't always start out adopting a particular 3D structure,
+
+880
+01:01:35,930 --> 01:01:39,390
+they go through this process of what we call protein folding,
+
+881
+01:01:39,680 --> 01:01:47,070
+that defines how the chain of atoms in the protein wiggle around in 3D space
+
+882
+01:01:47,300 --> 01:01:50,010
+to adopt a final defined 3D structure,
+
+883
+01:01:50,450 --> 01:01:55,320
+that is highly specific and highly linked to a particular biological function.
+
+884
+01:01:56,440 --> 01:01:59,985
+So we asked, and we looked at this question of protein folding
+
+885
+01:01:59,985 --> 01:02:02,210
+and how protein folding leads to structure
+
+886
+01:02:03,160 --> 01:02:08,480
+to inspire a new diffusion model approach for this protein structured design problem.
+
+887
+01:02:09,260 --> 01:02:10,590
+Where we said, okay,
+
+888
+01:02:11,030 --> 01:02:13,950
+if a protein is in a completely unfolded state,
+
+889
+01:02:14,390 --> 01:02:19,410
+you can think about that as equivalent to the random noise state in an image,
+
+890
+01:02:20,120 --> 01:02:22,710
+it's in a completely floppy configuration,
+
+891
+01:02:23,030 --> 01:02:26,190
+it doesn't have a defined structure, it's unfolded.
+
+892
+01:02:26,760 --> 01:02:27,875
+And what we did is,
+
+893
+01:02:27,875 --> 01:02:35,830
+we took that notion of protein protein structure being unfolded as the noisy state for a diffusion model,
+
+894
+01:02:36,390 --> 01:02:38,200
+and we designed a diffusion model,
+
+895
+01:02:38,550 --> 01:02:42,670
+that we trained to go from that unfolded state of the protein
+
+896
+01:02:43,350 --> 01:02:49,450
+to then produce a generated prediction about a new structure,
+
+897
+01:02:49,770 --> 01:02:52,480
+that would define a specific 3D structure.
+
+898
+01:02:53,620 --> 01:02:56,630
+And we can visualize how this algorithm works
+
+899
+01:02:56,860 --> 01:02:58,550
+and we call it folding diffusion,
+
+900
+01:02:59,260 --> 01:03:01,970
+in this video, that I'm going to show here,
+
+901
+01:03:02,470 --> 01:03:04,940
+where at the start in this initial frame,
+
+902
+01:03:05,290 --> 01:03:08,510
+we have a random noise protein chain,
+
+903
+01:03:09,280 --> 01:03:16,250
+completely random configuration unfolded and unfolded in 3D space,
+
+904
+01:03:17,100 --> 01:03:21,430
+now, what it's going to show this video is the iterative denoising steps,
+
+905
+01:03:21,720 --> 01:03:27,220
+that go from that noise random state to the final generated structure.
+
+906
+01:03:28,640 --> 01:03:29,760
+And as you can see,
+
+907
+01:03:29,810 --> 01:03:34,140
+it's this process very similar to the concept that I introduce with images,
+
+908
+01:03:34,760 --> 01:03:38,970
+where we're trying to go from something noisy to something structured,
+
+909
+01:03:39,290 --> 01:03:42,150
+arriving now at a final generated protein structure.
+
+910
+01:03:43,810 --> 01:03:45,920
+So our work was really focused on
+
+911
+01:03:46,060 --> 01:03:52,400
+introducing a new and foundational algorithm for this protein structured design problem,
+
+912
+01:03:52,840 --> 01:03:54,890
+via this, via diffusion models.
+
+913
+01:03:55,710 --> 01:03:56,885
+But it turns out that,
+
+914
+01:03:56,885 --> 01:04:02,650
+in just a very short time from when we and others introduced these algorithms,
+
+915
+01:04:02,970 --> 01:04:08,650
+that it precipitated really arise in scaling and extending these diffusion models
+
+916
+01:04:09,060 --> 01:04:13,210
+for very, very specific controlled programmable protein design,
+
+917
+01:04:13,740 --> 01:04:15,910
+where now we are seeing large scale efforts,
+
+918
+01:04:16,410 --> 01:04:20,620
+that use these diffusion model algorithms to generate protein designs
+
+919
+01:04:21,030 --> 01:04:24,820
+and actually realize them experimentally in the physical world.
+
+920
+01:04:25,360 --> 01:04:27,240
+So in this image I'm showing on the left,
+
+921
+01:04:27,590 --> 01:04:32,400
+the colored image is the generated output by the diffusion model,
+
+922
+01:04:32,810 --> 01:04:35,040
+and the black and white image is what,
+
+923
+01:04:35,150 --> 01:04:40,740
+if you take that result, synthesize it in the biological lab
+
+924
+01:04:41,030 --> 01:04:43,680
+and look and take a picture of the resulting protein
+
+925
+01:04:44,030 --> 01:04:45,270
+and assess its structure,
+
+926
+01:04:45,830 --> 01:04:48,090
+we see that there is a strong correspondence,
+
+927
+01:04:48,350 --> 01:04:53,130
+meaning that we're at the ability to leverage these powerful diffusion models
+
+928
+01:04:53,420 --> 01:04:55,315
+to now generate new proteins,
+
+929
+01:04:55,315 --> 01:04:57,330
+that can be realized in the physical world.
+
+930
+01:04:58,090 --> 01:04:59,300
+It doesn't stop there,
+
+931
+01:04:59,800 --> 01:05:05,240
+we can now think about designing proteins for very specific therapeutic applications,
+
+932
+01:05:05,890 --> 01:05:08,420
+so for example, in this visualization,
+
+933
+01:05:08,830 --> 01:05:12,780
+this is designed as a novel protein binder,
+
+934
+01:05:12,860 --> 01:05:19,410
+that's designed to block, to bind to and block the activity of the COVID spike receptor.
+
+935
+01:05:19,970 --> 01:05:22,140
+So what you're seeing, again, is that,
+
+936
+01:05:22,310 --> 01:05:27,330
+visualization of the diffusion process in arriving at a final design,
+
+937
+01:05:27,380 --> 01:05:31,740
+that binds to and blocks the top of the covid spike receptor.
+
+938
+01:05:33,410 --> 01:05:37,080
+So hopefully, you know, this kind of paints
+
+939
+01:05:37,670 --> 01:05:41,700
+a bit of the landscape of where we are today with generative AI,
+
+940
+01:05:42,510 --> 01:05:48,610
+and I think that this example in in protein science and in biology more broadly
+
+941
+01:05:48,900 --> 01:05:50,270
+really highlights the fact,
+
+942
+01:05:50,270 --> 01:05:55,840
+that generative AI is now at the ability to enable truly impactful applications,
+
+943
+01:05:56,960 --> 01:05:58,770
+not just for creating cool images
+
+944
+01:05:59,360 --> 01:06:02,370
+or what we can think of as AI synthetic art,
+
+945
+01:06:03,540 --> 01:06:09,440
+generative AI is now enabling us to think about design solutions for real world problems.
+
+946
+01:06:10,360 --> 01:06:12,590
+And I think there are so many open questions
+
+947
+01:06:12,700 --> 01:06:18,860
+in understanding the capabilities, the limitations, the applications of generative AI approaches
+
+948
+01:06:19,270 --> 01:06:21,320
+and how they can empower our society.
+
+949
+01:06:23,640 --> 01:06:27,820
+So to conclude, I want to end on a higher level thought.
+
+950
+01:06:29,650 --> 01:06:35,810
+And that's the fact that this idea of generative design kind of raises this higher level concept
+
+951
+01:06:36,460 --> 01:06:38,150
+of what it means to understand,
+
+952
+01:06:39,190 --> 01:06:43,550
+and I think it's captured perfectly in this quote by the physicist Richard Feynman,
+
+953
+01:06:43,990 --> 01:06:47,540
+who said what I cannot create, I cannot understand,
+
+954
+01:06:49,030 --> 01:06:50,720
+in order to create something,
+
+955
+01:06:51,370 --> 01:06:54,110
+we as humans really have to understand how it works,
+
+956
+01:06:54,940 --> 01:06:57,800
+and conversely, in order to understand something fully,
+
+957
+01:06:58,300 --> 01:07:01,490
+I'd argue that we'd have to create it engineer design,
+
+958
+01:07:02,800 --> 01:07:06,810
+generative AI and generative intelligence is at the core of this idea
+
+959
+01:07:06,810 --> 01:07:09,350
+of what I think about as concept learning,
+
+960
+01:07:10,130 --> 01:07:15,780
+being able to, distill a very complex problem down to its core roots,
+
+961
+01:07:16,380 --> 01:07:19,940
+and then build up from that foundation to design and to create,
+
+962
+01:07:21,860 --> 01:07:23,970
+when this course began on Monday,
+
+963
+01:07:24,950 --> 01:07:28,350
+Alexander introduced the idea of what it means to be intelligent,
+
+964
+01:07:28,940 --> 01:07:34,830
+loosely speaking, right, the ability to take information, use it to inform a future decision,
+
+965
+01:07:36,100 --> 01:07:42,320
+human learning is not only restricted to the ability to solve specific, distinct tasks,
+
+966
+01:07:43,490 --> 01:07:49,170
+it's foundational and founded by the idea of being able to understand concepts
+
+967
+01:07:49,520 --> 01:07:54,810
+and using those concepts to be creative, to imagine, to inspire, to dream,
+
+968
+01:07:56,710 --> 01:08:00,620
+I think now we're at the point where we have to really think about
+
+969
+01:08:01,180 --> 01:08:03,530
+what this notion of intelligence really means,
+
+970
+01:08:04,400 --> 01:08:08,230
+and how it relates to the connections and distinctions
+
+971
+01:08:08,670 --> 01:08:13,840
+between artificial intelligence and what we as humans can do and create.
+
+972
+01:08:15,550 --> 01:08:17,510
+So with that, I'm going to leave you with that,
+
+973
+01:08:17,740 --> 01:08:20,480
+and I hope that inspires you to think further
+
+974
+01:08:20,650 --> 01:08:22,940
+on what we've talked about in the course
+
+975
+01:08:23,590 --> 01:08:28,010
+and intelligence, AI, deep learning, more broadly.
+
+976
+01:08:29,010 --> 01:08:31,960
+So thank you very much for your attention,
+
+977
+01:08:32,460 --> 01:08:35,000
+we're going to take a very brief pause,
+
+978
+01:08:35,000 --> 01:08:37,030
+since we're, I know we're running a little bit late
+
+979
+01:08:37,260 --> 01:08:40,480
+and then have our fantastic lecture from Ramin.
+
+980
+01:08:40,860 --> 01:08:41,710
+Thank you so much.
+
