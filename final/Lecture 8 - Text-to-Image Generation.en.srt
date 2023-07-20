@@ -1,0 +1,2848 @@
+1
+00:00:09,150 --> 00:00:12,010
+Thanks for the invite,
+
+2
+00:00:12,180 --> 00:00:16,720
+so, yeah, I'm, I'm a research scientist at Google Research just across the street,
+
+3
+00:00:18,000 --> 00:00:22,510
+and I want to talk today about a paper that we just put up on archives,
+
+4
+00:00:23,010 --> 00:00:24,610
+which is a new model for
+
+5
+00:00:24,630 --> 00:00:29,045
+Text-to-image generation via Masked Generative Transformers,
+
+6
+00:00:29,045 --> 00:00:32,110
+and as you can guess from these figures,
+
+7
+00:00:32,520 --> 00:00:34,060
+the name of the model is Muse.
+
+8
+00:00:36,090 --> 00:00:41,830
+So this is a work that I've done with awesome set of colleagues at Google research,
+
+9
+00:00:43,110 --> 00:00:45,940
+the paper and a web pages online.
+
+10
+00:00:48,960 --> 00:00:52,990
+So, many of you must be familiar with text-to-image generation,
+
+11
+00:00:53,430 --> 00:00:58,000
+which has really advanced in the last year or two
+
+12
+00:00:58,890 --> 00:01:01,570
+and a question might be why text-to-image generation,
+
+13
+00:01:02,430 --> 00:01:06,790
+I think it's because text is a very natural control mechanism for generation,
+
+14
+00:01:07,560 --> 00:01:12,010
+we are able to express our thoughts, creative ideas through the use of text
+
+15
+00:01:12,390 --> 00:01:17,230
+and then that allows non-experts, non-artists to generate compelling images,
+
+16
+00:01:17,370 --> 00:01:20,050
+and then be able to iterate them through editing tools
+
+17
+00:01:20,850 --> 00:01:24,340
+to create your own personal art and ideas.
+
+18
+00:01:25,700 --> 00:01:27,870
+Also, very importantly,
+
+19
+00:01:28,430 --> 00:01:30,060
+deep learning requires lots of data
+
+20
+00:01:30,170 --> 00:01:34,740
+and it is much more feasible to collect large scale paired image text data,
+
+21
+00:01:35,390 --> 00:01:39,025
+an example is the LAION-5B dataset
+
+22
+00:01:39,025 --> 00:01:42,150
+on which models such as stable diffusion have been trained.
+
+23
+00:01:43,060 --> 00:01:47,055
+So we should recognize that various biases exist in these datasets,
+
+24
+00:01:47,055 --> 00:01:50,300
+and bias mitigation is an important research problem.
+
+25
+00:01:51,650 --> 00:01:58,260
+And lastly, these models can exploit pre-trained large language models,
+
+26
+00:01:58,790 --> 00:01:59,640
+which are very powerful
+
+27
+00:02:00,200 --> 00:02:03,630
+and they allow for extremely fine-grained understanding of text,
+
+28
+00:02:04,370 --> 00:02:07,480
+parts of speech, you know, nouns, verbs, adjectives,
+
+29
+00:02:07,480 --> 00:02:13,170
+and then be able to translate those semantic concepts to output images,
+
+30
+00:02:14,730 --> 00:02:21,100
+and these LLM importantly can be pre-trained on various text tasks with orders of magnitude larger text data,
+
+31
+00:02:21,150 --> 00:02:23,140
+so you can pre-trained with text only data
+
+32
+00:02:23,190 --> 00:02:27,490
+and then use paired data to do the text-to-image translation training.
+
+33
+00:02:29,600 --> 00:02:30,750
+So what's the state of the art,
+
+34
+00:02:31,100 --> 00:02:33,150
+you must be familiar with many of these,
+
+35
+00:02:34,190 --> 00:02:38,400
+so Dall-E2 from OpenAI was one of the first models,
+
+36
+00:02:39,080 --> 00:02:40,650
+which is a diffusion model,
+
+37
+00:02:41,480 --> 00:02:45,790
+that was, that was built on pre-trained CLIP representations,
+
+38
+00:02:46,950 --> 00:02:49,265
+I won't have time to go into each of these terminology,
+
+39
+00:02:49,265 --> 00:02:51,100
+so I'm sorry, some of you is not familiar.
+
+40
+00:02:52,680 --> 00:02:55,660
+Imagen from Google is also a diffusion model,
+
+41
+00:02:55,890 --> 00:02:59,110
+that was built on a pre-trained large language model.
+
+42
+00:03:00,300 --> 00:03:02,890
+Parti, which is another large scale model from Google,
+
+43
+00:03:03,210 --> 00:03:06,760
+is an autoregressive model on latent token space.
+
+44
+00:03:07,540 --> 00:03:13,140
+And Stable/Latent diffusion is a model release from Stability AI,
+
+45
+00:03:13,310 --> 00:03:15,780
+which is a diffusion model on latent embeddings.
+
+46
+00:03:17,000 --> 00:03:18,870
+So, so here's an example,
+
+47
+00:03:19,220 --> 00:03:26,250
+that is showing comparing DALL·E 2, Imagen and the Muse model on this particular text prompt.
+
+48
+00:03:27,620 --> 00:03:30,295
+and I'll go revisit this example
+
+49
+00:03:30,295 --> 00:03:33,810
+and point out some pros and cons of the different models later.
+
+50
+00:03:36,290 --> 00:03:40,110
+Some image editing applications that have been built on these models,
+
+51
+00:03:40,580 --> 00:03:46,320
+one example is Personalization via a tool called Dreambooth,
+
+52
+00:03:46,520 --> 00:03:48,720
+which was a paper written by some of my colleagues,
+
+53
+00:03:49,310 --> 00:03:50,610
+so here the idea is that,
+
+54
+00:03:50,690 --> 00:03:55,170
+instead of generating, for example, an image of a cat,
+
+55
+00:03:55,460 --> 00:03:57,480
+you can generate an image of your cat
+
+56
+00:03:58,040 --> 00:04:01,320
+by fine tuning the model on some images of your own cat
+
+57
+00:04:01,580 --> 00:04:05,430
+and then doing text guided generation of your cat.
+
+58
+00:04:06,000 --> 00:04:08,560
+So that's actually proven, extremely popular,
+
+59
+00:04:08,910 --> 00:04:13,750
+a couple of apps built on the Dreambooth tool have gone to the top of the App Store,
+
+60
+00:04:14,190 --> 00:04:20,560
+and many people have used it to generate their own avatars for you on social media.
+
+61
+00:04:22,700 --> 00:04:28,410
+Another example is fine-tuning for instruction following,
+
+62
+00:04:28,790 --> 00:04:32,160
+so that one can do various kinds of flexible mask free editing,
+
+63
+00:04:32,780 --> 00:04:36,480
+for example, here on this top right image,
+
+64
+00:04:36,500 --> 00:04:38,340
+we say add fireworks to the sky
+
+65
+00:04:38,690 --> 00:04:40,705
+and then the model has, after fine-tuning,
+
+66
+00:04:40,705 --> 00:04:44,460
+has an understanding of concepts such as the sky and fireworks,
+
+67
+00:04:44,630 --> 00:04:48,420
+and it's able to do a reasonably good job of following the instruction.
+
+68
+00:04:52,070 --> 00:04:57,760
+So, how is Muse different from the the prior models that I listed.
+
+69
+00:04:58,350 --> 00:05:01,810
+So firstly, it's neither a diffusion model nor is it autoregressive,
+
+70
+00:05:02,010 --> 00:05:07,330
+although it has some connections to both diffusion and autoregressive family of models.
+
+71
+00:05:08,460 --> 00:05:09,730
+It is extremely fast,
+
+72
+00:05:10,620 --> 00:05:15,550
+so for example a 512x512 image is generated in 1.3 seconds,
+
+73
+00:05:15,780 --> 00:05:18,940
+instead of 10s seconds for Imagen or Parti
+
+74
+00:05:18,990 --> 00:05:21,260
+and about 4 seconds for Stable Diffusion
+
+75
+00:05:21,260 --> 00:05:22,210
+on the same hardware.
+
+76
+00:05:23,370 --> 00:05:27,430
+And on Quantitative Eval, such as CLIP score and FID,
+
+77
+00:05:27,480 --> 00:05:32,450
+which are measures of how well the text prompt and the image line up with each other,
+
+78
+00:05:32,450 --> 00:05:33,400
+that's the CLIP score,
+
+79
+00:05:33,995 --> 00:05:37,990
+and FID is a measure of the image quality itself, the diversity and fidelity,
+
+80
+00:05:38,190 --> 00:05:40,690
+the model performs very well.
+
+81
+00:05:42,030 --> 00:05:46,900
+So, so it has similar semantic performance and quality as these much larger models,
+
+82
+00:05:46,950 --> 00:05:48,730
+but significantly faster inference,
+
+83
+00:05:49,140 --> 00:05:52,360
+and it has significantly better performance than Stable Diffusion.
+
+84
+00:05:52,960 --> 00:05:55,585
+All of these statements just hold true at this point in time,
+
+85
+00:05:55,585 --> 00:05:57,210
+all of these models keep improving,
+
+86
+00:05:57,500 --> 00:06:02,400
+So there could be a new model that does even better, you know, next week.
+
+87
+00:06:03,350 --> 00:06:10,110
+And some applications that are enabled by the way we train the model are Zero-shot editing,
+
+88
+00:06:11,720 --> 00:06:15,360
+so I'll show some examples of that Mask-free editing in painting
+
+89
+00:06:15,380 --> 00:06:19,560
+to remove objects and cropping to expand beyond the boundaries of an image.
+
+90
+00:06:22,280 --> 00:06:25,060
+So I give a quick overview of the architecture here
+
+91
+00:06:25,060 --> 00:06:27,750
+and then go into the individual components one by one.
+
+92
+00:06:28,850 --> 00:06:32,580
+Muse is mostly a transformer based architecture,
+
+93
+00:06:34,230 --> 00:06:37,060
+for both the text and image parts of the network,
+
+94
+00:06:37,710 --> 00:06:39,550
+but we also use CNNs,
+
+95
+00:06:40,320 --> 00:06:43,575
+and we also use vector quantization
+
+96
+00:06:43,575 --> 00:06:44,700
+and we also use GANs,
+
+97
+00:06:44,700 --> 00:06:48,350
+so we're using a lot of the toolkits in the modern CNN,
+
+98
+00:06:48,790 --> 00:06:53,540
+modern deep network, you know, from the toolbox.
+
+99
+00:06:54,580 --> 00:06:59,270
+We use image tokens, that are in the quantized latent space of a CNN-VQGAN.
+
+100
+00:07:00,120 --> 00:07:01,900
+And we train it with a masking loss,
+
+101
+00:07:02,490 --> 00:07:05,285
+which is similar to the masking loss used in large language model,
+
+102
+00:07:05,285 --> 00:07:09,700
+so the model is basically learning how to reconstruct mask tokens,
+
+103
+00:07:10,020 --> 00:07:11,290
+you pass in a set of tokens,
+
+104
+00:07:11,520 --> 00:07:12,815
+mask a bunch of them at random,
+
+105
+00:07:12,815 --> 00:07:14,080
+and then learn to predict that,
+
+106
+00:07:14,480 --> 00:07:17,030
+and just by doing that with variable masking ratios
+
+107
+00:07:17,030 --> 00:07:19,210
+enables it to get very good quality generation.
+
+108
+00:07:21,230 --> 00:07:22,350
+We have two models,
+
+109
+00:07:22,370 --> 00:07:27,270
+a base model that generates 256x256 size images
+
+110
+00:07:27,740 --> 00:07:32,700
+and then a super resolution model that upscales that to 512x512.
+
+111
+00:07:35,040 --> 00:07:39,425
+Okay, so the first major component is
+
+112
+00:07:39,425 --> 00:07:41,140
+this pre-trained large language model.
+
+113
+00:07:41,460 --> 00:07:48,130
+So we use a language model train at Google called the T5-XXL model,
+
+114
+00:07:48,630 --> 00:07:50,650
+which has about 5 billion parameters,
+
+115
+00:07:51,690 --> 00:07:53,860
+which was trained on many text tasks,
+
+116
+00:07:54,060 --> 00:07:54,980
+text-to-text tasks,
+
+117
+00:07:54,980 --> 00:07:58,330
+such as translation, question answering and classification.
+
+118
+00:07:59,460 --> 00:08:01,990
+And when a text prompt is provided,
+
+119
+00:08:03,390 --> 00:08:05,105
+it's passed in through the text encoder
+
+120
+00:08:05,105 --> 00:08:09,220
+and we get a sequence of vectors of dimens 4096,
+
+121
+00:08:09,270 --> 00:08:13,270
+which are then projected down to another lower dimensional sequence
+
+122
+00:08:13,470 --> 00:08:18,040
+and those set of text tokens are then passed into the rest of the network,
+
+123
+00:08:20,060 --> 00:08:26,340
+and then we use cross-attention from the text to the image tokens to guide the generation process.
+
+124
+00:08:30,220 --> 00:08:33,740
+The next component is the vector quantized latent space,
+
+125
+00:08:34,240 --> 00:08:36,950
+so for this, we built first a VQ GAN,
+
+126
+00:08:37,720 --> 00:08:42,075
+which is simply a form of autoencoder
+
+127
+00:08:42,075 --> 00:08:45,590
+with some vector quantization built into the latent space.
+
+128
+00:08:46,150 --> 00:08:51,200
+And the reason we use a quantized set of tokens about,
+
+129
+00:08:52,030 --> 00:08:55,250
+in most of the models we use 8000 tokens, 8192,
+
+130
+00:08:55,570 --> 00:08:59,150
+is that this is amenable to a cross-entropy classification type loss,
+
+131
+00:08:59,320 --> 00:09:01,970
+so when you want to predict what token is missing,
+
+132
+00:09:02,110 --> 00:09:06,150
+you just say which of the 8192 tokens does it need to be
+
+133
+00:09:06,150 --> 00:09:07,640
+and that's a classification loss,
+
+134
+00:09:08,080 --> 00:09:12,450
+and we find that this works much more effectively than a regression loss,
+
+135
+00:09:12,450 --> 00:09:16,400
+where you might try to predict the exact pixel values of the missing token.
+
+136
+00:09:17,740 --> 00:09:23,150
+The VQGAN has an entirely convolutional structure and encoder decoder structure,
+
+137
+00:09:23,710 --> 00:09:28,550
+which we found performs better than either transformer based VQGANs
+
+138
+00:09:28,630 --> 00:09:32,360
+or hybrid approaches that mix transformers and CNN.
+
+139
+00:09:34,150 --> 00:09:36,140
+We use a down sampling ratio of 16,
+
+140
+00:09:36,820 --> 00:09:38,030
+which generates latent,
+
+141
+00:09:38,260 --> 00:09:41,900
+so, so when you go through the encoder layers of the CNN,
+
+142
+00:09:42,400 --> 00:09:45,350
+you get a latents that are of size 16 by 16
+
+143
+00:09:45,970 --> 00:09:48,140
+from a 256 by 256 input.
+
+144
+00:09:48,760 --> 00:09:51,420
+And the super resolution model uses another VQGAN,
+
+145
+00:09:52,070 --> 00:09:54,630
+with latents of size 64 by 64,
+
+146
+00:09:54,890 --> 00:09:56,400
+so those are larger latents,
+
+147
+00:09:56,660 --> 00:10:01,530
+because we want more information in each of those super resolution latents.
+
+148
+00:10:02,240 --> 00:10:12,580
+And this, the VQGAN is built on work from some, from, from this paper called MaskGIT,
+
+149
+00:10:12,580 --> 00:10:14,790
+which is also from our group.
+
+150
+00:10:18,950 --> 00:10:26,130
+So a key component of our masking of our training is this idea of variable ratio masking.
+
+151
+00:10:26,570 --> 00:10:28,170
+So given a set of tokens,
+
+152
+00:10:28,670 --> 00:10:29,400
+you have an image,
+
+153
+00:10:29,900 --> 00:10:31,620
+it goes through the VQ tokenizer
+
+154
+00:10:31,910 --> 00:10:36,000
+and then you get a sequence of, say 196 tokens,
+
+155
+00:10:36,470 --> 00:10:39,655
+what we do is to drop a variable fraction of those tokens,
+
+156
+00:10:39,655 --> 00:10:41,850
+then pass into the network to learn to predict.
+
+157
+00:10:42,570 --> 00:10:44,780
+So unlike LLMs,
+
+158
+00:10:44,780 --> 00:10:47,410
+where usually have a fixed ratio of tokens that's dropped,
+
+159
+00:10:47,490 --> 00:10:50,830
+here we use a variable distribution,
+
+160
+00:10:51,090 --> 00:10:55,175
+which is biased towards a very high value of
+
+161
+00:10:55,175 --> 00:10:57,670
+about 64% of the tokens being dropped,
+
+162
+00:10:58,050 --> 00:11:03,790
+and we find that this makes the network much more amenable to editing applications,
+
+163
+00:11:04,290 --> 00:11:05,980
+like in painting and on cropping,
+
+164
+00:11:06,150 --> 00:11:10,150
+and since it's variable at, at inference time,
+
+165
+00:11:10,150 --> 00:11:12,180
+you can then pass in masks of different sizes,
+
+166
+00:11:12,320 --> 00:11:14,400
+and since it has done that during training,
+
+167
+00:11:14,660 --> 00:11:16,800
+it's able to do that during inference time.
+
+168
+00:11:20,260 --> 00:11:21,950
+Okay, so here's the base model,
+
+169
+00:11:22,900 --> 00:11:28,040
+which has, which is producing 256x256 size images.
+
+170
+00:11:29,150 --> 00:11:33,360
+So this is a transformer based model, the the base transformer,
+
+171
+00:11:33,530 --> 00:11:37,660
+that gets in the mask tokens and also the token, the text tokens,
+
+172
+00:11:37,660 --> 00:11:40,140
+so these these mask tokens are the image tokens
+
+173
+00:11:40,910 --> 00:11:42,600
+and then we have the text tokens,
+
+174
+00:11:43,310 --> 00:11:45,900
+so we have cross attention from the text tokens to image
+
+175
+00:11:46,190 --> 00:11:48,720
+and also self attention between the image tokens,
+
+176
+00:11:49,730 --> 00:11:55,650
+during training, all the tokens are predicted in parallel with the cross-entropy loss,
+
+177
+00:11:56,480 --> 00:12:01,050
+but during inference, we find that it is better to do an iterative schedule,
+
+178
+00:12:01,670 --> 00:12:05,190
+where we predict a subset of the tokens first,
+
+179
+00:12:05,840 --> 00:12:08,340
+we choose, we choose tokens with the highest confidence,
+
+180
+00:12:08,870 --> 00:12:11,860
+pass those back in as unmasked tokens,
+
+181
+00:12:11,860 --> 00:12:16,050
+and repeat this process ah for about 12 24 steps
+
+182
+00:12:16,250 --> 00:12:18,180
+until all of the tokens are unmasked.
+
+183
+00:12:18,730 --> 00:12:22,700
+We find that this significantly increases the quality of the result.
+
+184
+00:12:26,360 --> 00:12:28,240
+And then the super resolution model,
+
+185
+00:12:28,980 --> 00:12:34,090
+up samples the 256x256 image to 512x512,
+
+186
+00:12:35,040 --> 00:12:37,360
+importantly, this does this in token space
+
+187
+00:12:37,500 --> 00:12:41,710
+by transforming the latent from 16x16 to 64x64.
+
+188
+00:12:42,710 --> 00:12:47,490
+And we use cross-attention from the text embedding as well as the low-res tokens
+
+189
+00:12:48,050 --> 00:12:52,440
+and pass it into the high-res transformer.
+
+190
+00:12:52,700 --> 00:12:55,260
+So that's we mask the high-res tokens,
+
+191
+00:12:55,880 --> 00:12:57,750
+but the low-res are left unmasked,
+
+192
+00:12:57,770 --> 00:12:59,740
+the text embedding is left unmasked,
+
+193
+00:12:59,740 --> 00:13:03,660
+and the super-res model is trained to predict the masked higher tokens.
+
+194
+00:13:03,920 --> 00:13:06,480
+So you can see the effect here, especially on the text,
+
+195
+00:13:07,120 --> 00:13:10,975
+the the the low-res output of 256x256,
+
+196
+00:13:10,975 --> 00:13:12,270
+it is hard to see the text
+
+197
+00:13:12,740 --> 00:13:15,510
+and then once it's corrected in token space,
+
+198
+00:13:16,940 --> 00:13:18,640
+you can you can read the text,
+
+199
+00:13:18,640 --> 00:13:22,410
+the facial features of the hamster are much more clear,
+
+200
+00:13:23,770 --> 00:13:28,580
+many details are reconstructed in token space.
+
+201
+00:13:29,940 --> 00:13:31,565
+What we found is that,
+
+202
+00:13:31,565 --> 00:13:33,760
+a cascade of models is actually very important,
+
+203
+00:13:33,810 --> 00:13:37,120
+if you directly try to train a 512 model,
+
+204
+00:13:37,840 --> 00:13:41,340
+it tends to, the model tends to focus too much on the details,
+
+205
+00:13:42,470 --> 00:13:44,730
+whereas if you first train a low-res model,
+
+206
+00:13:45,110 --> 00:13:49,170
+you get the overall semantics or the layout of the scene, right,
+
+207
+00:13:49,190 --> 00:13:50,940
+somewhat like what an artist might do,
+
+208
+00:13:51,170 --> 00:13:53,260
+where you you get the scene right first
+
+209
+00:13:53,260 --> 00:13:54,780
+and then start filling in the details.
+
+210
+00:13:55,490 --> 00:13:59,130
+So one of the things we are looking at is how to,
+
+211
+00:13:59,420 --> 00:14:01,315
+maybe increase the depth of this cascade,
+
+212
+00:14:01,315 --> 00:14:03,750
+go from 128 to 256 to 512,
+
+213
+00:14:04,260 --> 00:14:06,170
+see if that improves further the quality.
+
+214
+00:14:10,100 --> 00:14:12,090
+So here you can see,
+
+215
+00:14:13,610 --> 00:14:16,740
+so, so here's a comparison of our token-based super resolution
+
+216
+00:14:17,660 --> 00:14:20,970
+comparing to a diffusion based pixel-based super resolution.
+
+217
+00:14:21,800 --> 00:14:24,120
+So, here on the left,
+
+218
+00:14:24,710 --> 00:14:27,690
+the, the text prompt here is a rabbit playing the violin
+
+219
+00:14:28,190 --> 00:14:35,190
+and this is the two, these are two samples from the model of 256x256 resolution,
+
+220
+00:14:35,870 --> 00:14:41,100
+and on the top right is the result of our token-based super resolution output,
+
+221
+00:14:41,390 --> 00:14:44,880
+so you can see that the musical notes, the details on the violin,
+
+222
+00:14:45,170 --> 00:14:46,590
+all of these are much more clear,
+
+223
+00:14:47,220 --> 00:14:51,050
+but if we just took this and did a diffusion based super resolution,
+
+224
+00:14:51,220 --> 00:14:55,580
+which is just pixel hallucination, that doesn't look so good,
+
+225
+00:14:56,130 --> 00:15:01,720
+so our token super resolution plays well with our token based approach.
+
+226
+00:15:08,870 --> 00:15:13,885
+So another important kind of heuristic or a trick is
+
+227
+00:15:13,885 --> 00:15:15,570
+something called classifier-free guidance,
+
+228
+00:15:16,400 --> 00:15:18,505
+which we found is crucial at inference time
+
+229
+00:15:18,505 --> 00:15:21,120
+to trade off diversity and quality,
+
+230
+00:15:23,980 --> 00:15:29,750
+what this this trick does is to simply trade off,
+
+231
+00:15:30,040 --> 00:15:35,540
+sorry, push the log away from unconditional generation and towards text conditional generation,
+
+232
+00:15:36,280 --> 00:15:41,450
+so you can think of the scale as the amount by which you are pushing away from unconditional generation.
+
+233
+00:15:42,130 --> 00:15:43,610
+And here's a comparison,
+
+234
+00:15:44,140 --> 00:15:50,630
+the image on the left, the two images on the left were generated by with the guidance scale of 0.5,
+
+235
+00:15:51,010 --> 00:15:54,890
+so there's more diversity in the poses of the cat and the backgrounds,
+
+236
+00:15:55,330 --> 00:15:58,250
+but it's, it's now as there are more errors,
+
+237
+00:15:58,420 --> 00:16:00,620
+for example here on the mouth of the cat,
+
+238
+00:16:01,160 --> 00:16:03,810
+compared to the two images on the right,
+
+239
+00:16:03,830 --> 00:16:08,010
+which are generated with a much larger guidance scale.
+
+240
+00:16:09,110 --> 00:16:09,960
+So during training,
+
+241
+00:16:10,970 --> 00:16:15,565
+we just dropped some tokens with a probability of 10%,
+
+242
+00:16:15,565 --> 00:16:18,750
+I'm sorry we drop conditioning with a probability of 10%,
+
+243
+00:16:19,520 --> 00:16:22,200
+but then at inference time we choose a particular guidance scale.
+
+244
+00:16:25,970 --> 00:16:27,570
+Another trick,
+
+245
+00:16:27,980 --> 00:16:32,280
+so many tricks here to make the images look good is something called negative prompting,
+
+246
+00:16:33,170 --> 00:16:34,680
+so the idea here is that,
+
+247
+00:16:35,030 --> 00:16:39,505
+there are concepts which one cannot say in the text prompt itself,
+
+248
+00:16:39,505 --> 00:16:42,030
+for example, if you would like to generate an image,
+
+249
+00:16:42,530 --> 00:16:44,010
+but not have trees in it,
+
+250
+00:16:44,390 --> 00:16:47,040
+it's somewhat cumbersome to say that in the text prompt,
+
+251
+00:16:47,660 --> 00:16:51,870
+so, so the classifier free guidance allows us to say
+
+252
+00:16:52,160 --> 00:16:54,910
+generate this scene, but don't have trees in it,
+
+253
+00:16:54,910 --> 00:16:57,960
+and we do that by pushing away from the negative prompt.
+
+254
+00:16:58,370 --> 00:16:59,310
+So here's an example,
+
+255
+00:17:00,230 --> 00:17:04,230
+it text, the text prompt says cyberpunk forest by Salvador Dali,
+
+256
+00:17:04,460 --> 00:17:05,130
+so that generated,
+
+257
+00:17:06,220 --> 00:17:10,010
+these are two examples that were generated using that prompt,
+
+258
+00:17:10,540 --> 00:17:12,435
+and then I added a negative prompt,
+
+259
+00:17:12,435 --> 00:17:13,880
+where I said I don't want trees,
+
+260
+00:17:13,900 --> 00:17:15,650
+I don't want green and blurry,
+
+261
+00:17:15,880 --> 00:17:17,750
+that the text prompt that I provided
+
+262
+00:17:18,250 --> 00:17:20,480
+and then it generates these other kinds of styles,
+
+263
+00:17:21,400 --> 00:17:23,240
+which seem to respect the negative prompt.
+
+264
+00:17:24,830 --> 00:17:26,850
+So that is a very useful trick,
+
+265
+00:17:28,960 --> 00:17:32,630
+for generating images closer to the things you're thinking of in your head.
+
+266
+00:17:38,430 --> 00:17:38,980
+This is,
+
+267
+00:17:39,240 --> 00:17:43,270
+yeah, so this is the iterative decoding I mentioned earlier at inference time,
+
+268
+00:17:43,830 --> 00:17:45,070
+and you can see that,
+
+269
+00:17:45,750 --> 00:17:52,120
+decoding tokens in multiple steps is very helpful for high quality generation,
+
+270
+00:17:52,830 --> 00:17:56,290
+so here's a sequence of unmasking steps,
+
+271
+00:17:56,340 --> 00:18:00,760
+which are generating tokens up to 18 steps
+
+272
+00:18:00,900 --> 00:18:05,050
+and there's steady improvement in the quality of the output,
+
+273
+00:18:05,420 --> 00:18:07,570
+our base model uses 24 steps
+
+274
+00:18:07,950 --> 00:18:10,570
+and the super resolution model uses 8 steps,
+
+275
+00:18:12,060 --> 00:18:14,410
+but these number of steps are significantly lower
+
+276
+00:18:14,700 --> 00:18:18,070
+than the fifty or thousand steps that are required by diffusion models,
+
+277
+00:18:18,540 --> 00:18:22,570
+and this is actually one of the most important reasons for the speed of our approach,
+
+278
+00:18:23,220 --> 00:18:26,540
+so we get like a 10x lower number of forward props,
+
+279
+00:18:26,540 --> 00:18:28,330
+that we need to push through the model.
+
+280
+00:18:29,530 --> 00:18:33,980
+However these days there's these ideas of progressive distillation,
+
+281
+00:18:34,900 --> 00:18:38,810
+which can potentially reduce the number of steps for diffusion models,
+
+282
+00:18:39,010 --> 00:18:45,620
+and we hope to exploit that to further reduce our sampling steps,
+
+283
+00:18:48,830 --> 00:18:50,040
+Okay, so we did some,
+
+284
+00:18:50,840 --> 00:18:52,060
+so now on to evals that,
+
+285
+00:18:52,060 --> 00:18:56,100
+that was a quick tour of the entire model.
+
+286
+00:18:57,470 --> 00:18:59,230
+So we did some qualitative evals,
+
+287
+00:18:59,230 --> 00:19:05,340
+where we took a set of 1650 prompts from the [] paper
+
+288
+00:19:05,450 --> 00:19:10,060
+and generated images from our model and the stable diffusion model
+
+289
+00:19:10,060 --> 00:19:14,280
+and sent it to raters to answer the question,
+
+290
+00:19:14,840 --> 00:19:15,810
+which of the two images,
+
+291
+00:19:16,670 --> 00:19:17,635
+one from our model,
+
+292
+00:19:17,635 --> 00:19:18,760
+one from stable diffusion,
+
+293
+00:19:18,760 --> 00:19:20,580
+which of them matches the prompt better.
+
+294
+00:19:21,520 --> 00:19:24,920
+So the raters preferred our model 70% of the time,
+
+295
+00:19:25,960 --> 00:19:29,060
+compared to 25% of the time for stable diffusion,
+
+296
+00:19:29,320 --> 00:19:34,170
+and for the remaining few percent they were indifferent,
+
+297
+00:19:34,170 --> 00:19:36,290
+so we removed those from this plot.
+
+298
+00:19:39,020 --> 00:19:42,880
+We also did some qualitative eval on various properties of the model,
+
+299
+00:19:42,880 --> 00:19:45,420
+how well does it respect things like cardinality.
+
+300
+00:19:45,960 --> 00:19:48,860
+So, so here it's about, you know, counting,
+
+301
+00:19:49,120 --> 00:19:51,770
+so we have three elephants standing on top of each other,
+
+302
+00:19:52,210 --> 00:19:53,210
+we get three elephants,
+
+303
+00:19:54,670 --> 00:19:57,200
+four wine bottles, one, two, three, four,
+
+304
+00:19:57,940 --> 00:20:01,250
+a tiny football in front of three yellow tennis balls,
+
+305
+00:20:01,510 --> 00:20:04,060
+so, seems to respect all of those,
+
+306
+00:20:05,010 --> 00:20:09,040
+however, when the count goes up beyond six or seven,
+
+307
+00:20:09,480 --> 00:20:11,620
+the model tends to start making mistakes.
+
+308
+00:20:13,860 --> 00:20:16,150
+Here we are looking at different styles,
+
+309
+00:20:16,500 --> 00:20:19,265
+so here's a portrait of a well-dressed raccoon,
+
+310
+00:20:19,265 --> 00:20:21,070
+oil painting in the style of Rembrandt,
+
+311
+00:20:22,390 --> 00:20:26,840
+pop art style and a Chinese ink and wash painting style.
+
+312
+00:20:30,320 --> 00:20:33,990
+Other evals are about composition, geometric composition,
+
+313
+00:20:34,430 --> 00:20:37,920
+three small yellow boxes on a large blue box,
+
+314
+00:20:39,200 --> 00:20:43,660
+and a large present with a red ribbon to the left of a Christmas tree,
+
+315
+00:20:44,040 --> 00:20:44,620
+etc.
+
+316
+00:20:46,130 --> 00:20:47,130
+We find that it,
+
+317
+00:20:47,210 --> 00:20:50,160
+if you have want to render text,
+
+318
+00:20:50,690 --> 00:20:51,910
+then it does a reasonable job,
+
+319
+00:20:51,910 --> 00:20:55,830
+if there is not too many words in the text of one word or two words,
+
+320
+00:20:56,780 --> 00:20:58,500
+the model is able to render them well.
+
+321
+00:20:59,840 --> 00:21:06,900
+And we are also able to provide very long, detailed prompts,
+
+322
+00:21:07,700 --> 00:21:09,220
+so here's an example,
+
+323
+00:21:09,220 --> 00:21:11,640
+an art gallery displaying monet paintings,
+
+324
+00:21:11,660 --> 00:21:13,110
+the art gallery is flooded,
+
+325
+00:21:13,310 --> 00:21:16,260
+robots are going around the art gallery using paddle boards.
+
+326
+00:21:16,310 --> 00:21:20,700
+So a lot of this power comes from the language model itself,
+
+327
+00:21:20,930 --> 00:21:22,530
+which is really, really powerful
+
+328
+00:21:23,090 --> 00:21:28,530
+and able to represent each of those concepts in the embedding space,
+
+329
+00:21:29,000 --> 00:21:32,220
+and what we are able to do is to map that to pixels.
+
+330
+00:21:34,150 --> 00:21:35,115
+It's still mind blowing,
+
+331
+00:21:35,115 --> 00:21:36,015
+though it's still amazing,
+
+332
+00:21:36,015 --> 00:21:39,590
+that we can get these kinds of outputs from text prompts.
+
+333
+00:21:40,860 --> 00:21:43,060
+Here are some failure cases, like I mentioned,
+
+334
+00:21:45,670 --> 00:21:49,710
+here we asked the model to render a long number of words
+
+335
+00:21:49,710 --> 00:21:51,980
+and it did not do such a good job,
+
+336
+00:21:53,740 --> 00:21:58,410
+ten wine bottles and it stopped at one, two, three, four, five, six, seven,
+
+337
+00:21:59,370 --> 00:22:00,100
+and so on.
+
+338
+00:22:04,250 --> 00:22:08,010
+Here's a subjective comparison to other state of the art models,
+
+339
+00:22:08,990 --> 00:22:11,340
+so one thing to say is that,
+
+340
+00:22:12,340 --> 00:22:16,190
+in this case, the evaluations are, in my opinion, not very robust,
+
+341
+00:22:17,260 --> 00:22:18,740
+because by definition,
+
+342
+00:22:18,880 --> 00:22:23,355
+often the text prompts and the styles we ask for are not natural,
+
+343
+00:22:23,355 --> 00:22:25,700
+we want various mix and match of styles,
+
+344
+00:22:26,350 --> 00:22:29,925
+and so an important open research question in my mind is,
+
+345
+00:22:29,925 --> 00:22:32,910
+how do you evaluate that model a is better than model b,
+
+346
+00:22:32,910 --> 00:22:35,270
+other than just looking at some results,
+
+347
+00:22:36,190 --> 00:22:41,340
+I think that, that's a very interesting and open question.
+
+348
+00:22:42,200 --> 00:22:42,720
+So here,
+
+349
+00:22:43,070 --> 00:22:48,000
+so here I'll just point out a couple of things with the example at the bottom,
+
+350
+00:22:48,410 --> 00:22:50,220
+which is a rainbow colored penguin,
+
+351
+00:22:50,360 --> 00:22:52,885
+and DALL-E 2 is generating penguins,
+
+352
+00:22:52,885 --> 00:22:55,080
+but doesn't do such a good job with the colors,
+
+353
+00:22:56,270 --> 00:23:01,380
+whereas the Imagen and MUSE models seem to be able to respect []
+
+354
+00:23:01,940 --> 00:23:04,140
+and we think this is probably because the,
+
+355
+00:23:05,210 --> 00:23:08,460
+DALL-E 2 model is relying on a CLIP embedding,
+
+356
+00:23:08,570 --> 00:23:10,440
+which might lose some of these details.
+
+357
+00:23:17,120 --> 00:23:20,020
+We did some quantitative eval on the metrics that we have,
+
+358
+00:23:20,020 --> 00:23:21,390
+which is FID and CLIP,
+
+359
+00:23:21,800 --> 00:23:24,330
+on a dataset called CC3M,
+
+360
+00:23:25,100 --> 00:23:27,870
+and compared to a number of other models,
+
+361
+00:23:28,340 --> 00:23:31,140
+both in diffusion and autoregressive type models.
+
+362
+00:23:32,100 --> 00:23:35,290
+Here for FID, score lower is better
+
+363
+00:23:35,670 --> 00:23:37,300
+and for CLIP, higher is better.
+
+364
+00:23:38,260 --> 00:23:38,780
+So, overall,
+
+365
+00:23:40,050 --> 00:23:44,650
+we seem to be scoring the best on both of these metrics.
+
+366
+00:23:47,420 --> 00:23:49,705
+And here's the eval on COCO,
+
+367
+00:23:49,705 --> 00:23:52,480
+comparing to many of the state of the art models,
+
+368
+00:23:52,480 --> 00:23:55,530
+like DALL-E, DALL-E 2, Imagen Parti,
+
+369
+00:23:58,160 --> 00:24:03,160
+we are almost as good as the Parti-20B model,
+
+370
+00:24:05,550 --> 00:24:08,440
+just slightly worse in FID score,
+
+371
+00:24:09,060 --> 00:24:11,680
+but doing significantly better on CLIP score,
+
+372
+00:24:13,500 --> 00:24:15,410
+so, so that's good,
+
+373
+00:24:16,090 --> 00:24:20,120
+which means that we are able to respect the semantics of the text prompt,
+
+374
+00:24:20,170 --> 00:24:21,600
+better than those models,
+
+375
+00:24:21,600 --> 00:24:23,660
+if one was to believe the CLIP's code.
+
+376
+00:24:25,930 --> 00:24:30,770
+And finally, runtime on TPU-v4 hardware,
+
+377
+00:24:31,450 --> 00:24:33,830
+where here's the model,
+
+378
+00:24:34,450 --> 00:24:38,720
+the resolution that is generated and the time, clock time, that it took,
+
+379
+00:24:39,070 --> 00:24:42,980
+so most of the compute goes into the super resolution,
+
+380
+00:24:43,720 --> 00:24:45,770
+the base model takes 0.5 seconds
+
+381
+00:24:46,390 --> 00:24:49,520
+and then it takes another 0.8 seconds to do the super resolution
+
+382
+00:24:49,750 --> 00:24:51,830
+for a total of 1.3 seconds.
+
+383
+00:24:54,750 --> 00:25:00,370
+So now here are some examples of the editing that enabled by the model,
+
+384
+00:25:01,350 --> 00:25:03,130
+on the left is a real input image,
+
+385
+00:25:03,570 --> 00:25:07,030
+and we've drawn a mask over one part of the image
+
+386
+00:25:07,620 --> 00:25:10,780
+and then ask the model to fill that in with a text guided prompt,
+
+387
+00:25:11,310 --> 00:25:13,510
+so a funny big inflatable yellow duck,
+
+388
+00:25:15,030 --> 00:25:15,970
+hot air balloons
+
+389
+00:25:17,550 --> 00:25:21,100
+and futuristic, streamlined modern building.
+
+390
+00:25:22,760 --> 00:25:24,660
+So all that came just zero-shot,
+
+391
+00:25:24,800 --> 00:25:26,610
+we didn't do any fine tuning of the model,
+
+392
+00:25:27,110 --> 00:25:30,220
+but the fact that we trained with variable masking
+
+393
+00:25:30,220 --> 00:25:33,210
+allows it to do this out of the box.
+
+394
+00:25:35,900 --> 00:25:39,720
+So another example where we do outpainting,
+
+395
+00:25:39,950 --> 00:25:42,660
+so the mask here is the rest,
+
+396
+00:25:43,250 --> 00:25:46,860
+we only want to keep the, this person
+
+397
+00:25:46,970 --> 00:25:50,250
+and replace the rest of the image,
+
+398
+00:25:50,980 --> 00:25:56,190
+and the text guided prompt was provided to fill in the rest of the region,
+
+399
+00:25:56,420 --> 00:25:57,750
+so the London skyline,
+
+400
+00:25:58,540 --> 00:26:01,370
+a wildflower bloom at Mountain Rainier,
+
+401
+00:26:01,840 --> 00:26:03,140
+on the ring of Saturn.
+
+402
+00:26:06,180 --> 00:26:09,790
+We can also do other kinds of editing,
+
+403
+00:26:09,810 --> 00:26:13,600
+where we took a real image with,
+
+404
+00:26:14,280 --> 00:26:15,530
+there was a negative prompt use,
+
+405
+00:26:15,530 --> 00:26:16,930
+a man wearing a t-shirt
+
+406
+00:26:17,220 --> 00:26:19,060
+and then these were the positive prompts,
+
+407
+00:26:19,140 --> 00:26:22,420
+to, to do various kinds of style transfer,
+
+408
+00:26:23,550 --> 00:26:25,810
+on the, on the, on the t-shirt.
+
+409
+00:26:31,050 --> 00:26:33,860
+And here are some examples of mask-free editing,
+
+410
+00:26:33,860 --> 00:26:36,880
+where on the top row are input images,
+
+411
+00:26:37,620 --> 00:26:40,450
+and on the bottom, the transformed outputs,
+
+412
+00:26:40,860 --> 00:26:45,160
+where it just relies on the text and attention between the text and images
+
+413
+00:26:45,330 --> 00:26:46,450
+to make various changes.
+
+414
+00:26:47,420 --> 00:26:50,710
+So for, for example here,
+
+415
+00:26:50,790 --> 00:26:53,060
+we say a Shiba Inu
+
+416
+00:26:53,060 --> 00:26:57,940
+and that, the model converts the cat to a Shiba Inu dog,
+
+417
+00:26:59,300 --> 00:27:01,290
+a dog holding a football in his mouth,
+
+418
+00:27:01,730 --> 00:27:03,420
+so here the dog itself changes,
+
+419
+00:27:03,830 --> 00:27:07,080
+and then this ball changes to a football,
+
+420
+00:27:07,820 --> 00:27:09,150
+a basket of oranges,
+
+421
+00:27:09,590 --> 00:27:13,405
+where the model is able to keep the general composition of the scene
+
+422
+00:27:13,405 --> 00:27:16,110
+and just change the apples to oranges,
+
+423
+00:27:16,760 --> 00:27:19,260
+the basket texture has also changed a little bit,
+
+424
+00:27:19,370 --> 00:27:21,990
+but mostly the composition is kept similar.
+
+425
+00:27:23,840 --> 00:27:26,010
+Here, it's able to change this,
+
+426
+00:27:26,060 --> 00:27:31,500
+just make the cat yawning without changing the composition of the scene.
+
+427
+00:27:32,330 --> 00:27:33,910
+And one of the things we are exploring is
+
+428
+00:27:33,910 --> 00:27:36,570
+how we can have further control of the model,
+
+429
+00:27:37,070 --> 00:27:42,600
+you know, really be able to adjust specific parts of the image without affecting the rest.
+
+430
+00:27:45,530 --> 00:27:49,920
+Yeah, and here's an example of iterative editing,
+
+431
+00:27:50,450 --> 00:27:56,610
+where the, the image at the top was provided and the top right,
+
+432
+00:27:56,660 --> 00:27:58,770
+and then on the bottom right is the output
+
+433
+00:27:59,930 --> 00:28:03,510
+for a croissant next to a latte with a flower latte art.
+
+434
+00:28:04,160 --> 00:28:05,380
+And these are,
+
+435
+00:28:06,540 --> 00:28:08,830
+we, we ran the editing for a hundred steps,
+
+436
+00:28:09,720 --> 00:28:12,130
+progressively adjusting the tokens,
+
+437
+00:28:12,390 --> 00:28:17,320
+and these are the results of the different iterations of, of train of inference,
+
+438
+00:28:18,300 --> 00:28:19,205
+so you can see that,
+
+439
+00:28:19,205 --> 00:28:20,675
+it starts with the cake and the latte
+
+440
+00:28:20,675 --> 00:28:25,960
+and then progressively transforms the cake to something that looks in between the cake and the croissant,
+
+441
+00:28:26,040 --> 00:28:28,420
+and then finally, it looks like the croissant,
+
+442
+00:28:28,920 --> 00:28:33,250
+and similarly, the latte art changes from a heart to a flower,
+
+443
+00:28:34,380 --> 00:28:40,280
+you know, kind of some kind of an interpolation in some latent space.
+
+444
+00:28:43,150 --> 00:28:45,170
+So because of the speed of the model,
+
+445
+00:28:45,580 --> 00:28:48,290
+there's some possibility of interactive editing,
+
+446
+00:28:48,430 --> 00:28:50,220
+so I'll just play this short clip,
+
+447
+00:28:50,220 --> 00:28:55,640
+which shows how we might be able to do interactive work with the model.
+
+448
+00:29:25,040 --> 00:29:26,310
+So that's a real time,
+
+449
+00:29:26,570 --> 00:29:29,250
+as in it's not sped up or slowed down,
+
+450
+00:29:39,275 --> 00:29:41,950
+it's not perfect, but you can see the idea.
+
+451
+00:29:51,750 --> 00:29:56,180
+So, next steps for us are improving the resolution quality,
+
+452
+00:29:56,500 --> 00:29:58,670
+handling of details such as rendered text,
+
+453
+00:30:00,280 --> 00:30:04,160
+probing the cross attention between text and images to enable more control,
+
+454
+00:30:04,750 --> 00:30:05,720
+exploring applications.
+
+455
+00:30:06,850 --> 00:30:11,980
+So, yeah, the paper and webpage are listed here
+
+456
+00:30:12,060 --> 00:30:13,900
+and I'm happy to take questions.
+
+457
+00:30:21,570 --> 00:30:22,690
+Excellent, thank you so much,
+
+458
+00:30:22,920 --> 00:30:25,150
+maybe I have one question just to get things started,
+
+459
+00:30:25,680 --> 00:30:30,250
+I'm curious in your opinion, what are the most important contributions that MUSE made,
+
+460
+00:30:30,900 --> 00:30:33,430
+specifically to achieve the very impressive speed up results,
+
+461
+00:30:33,930 --> 00:30:35,795
+because in comparison to the past methods,
+
+462
+00:30:35,795 --> 00:30:37,175
+it's really like a huge gap,
+
+463
+00:30:37,175 --> 00:30:37,715
+so I'm curious,
+
+464
+00:30:37,715 --> 00:30:41,680
+what like what across the many contributions like to that in your opinion.
+
+465
+00:30:41,850 --> 00:30:44,320
+Yeah, it was primarily the parallel decoding,
+
+466
+00:30:44,430 --> 00:30:45,970
+so in autoregress models,
+
+467
+00:30:46,780 --> 00:30:49,850
+by definition, you decode one token at a time,
+
+468
+00:30:50,200 --> 00:30:50,895
+so you have to go,
+
+469
+00:30:50,895 --> 00:30:54,390
+let's say the image consists of 196 tokens,
+
+470
+00:30:54,390 --> 00:30:56,270
+then you're doing 196 steps,
+
+471
+00:30:56,830 --> 00:30:58,440
+because you unmask one token,
+
+472
+00:30:58,440 --> 00:31:01,280
+pass it back in number two, and so on,
+
+473
+00:31:01,630 --> 00:31:05,985
+in diffusion models, what you have to do is to denoising step by step,
+
+474
+00:31:05,985 --> 00:31:07,910
+yeah, you start with pure noise,
+
+475
+00:31:08,620 --> 00:31:10,820
+pass it through the network, get something out,
+
+476
+00:31:10,930 --> 00:31:12,920
+then pass it back in and repeat this process,
+
+477
+00:31:14,020 --> 00:31:16,790
+and that process needs to be fairly slow,
+
+478
+00:31:17,610 --> 00:31:19,480
+otherwise, it breaks down,
+
+479
+00:31:20,280 --> 00:31:22,670
+and a lot of the research is about how to speed that up,
+
+480
+00:31:23,340 --> 00:31:24,665
+so that takes thousands of steps,
+
+481
+00:31:24,665 --> 00:31:25,930
+so if you have a comparable model,
+
+482
+00:31:26,580 --> 00:31:29,650
+there's just a fundamental number of forward props that need to be done,
+
+483
+00:31:29,910 --> 00:31:32,830
+so what we did instead was to go for parallel decoding,
+
+484
+00:31:33,300 --> 00:31:35,700
+and the one token at a time,
+
+485
+00:31:35,700 --> 00:31:38,090
+you just do n tokens at a time
+
+486
+00:31:38,260 --> 00:31:39,970
+and then if it's fixed
+
+487
+00:31:39,970 --> 00:31:42,480
+and you just need 196 by n steps,
+
+488
+00:31:44,300 --> 00:31:45,420
+the idea is that,
+
+489
+00:31:46,080 --> 00:31:47,520
+if you use high confidence tokens,
+
+490
+00:31:47,520 --> 00:31:51,380
+then they are potentially conditionally independent of each other at each step,
+
+491
+00:31:52,000 --> 00:31:56,090
+and we can each of them can be predicted without affecting the other,
+
+492
+00:31:56,720 --> 00:31:57,840
+so that seems to hold up.
+
+493
+00:32:00,430 --> 00:32:00,830
+Interesting.
+
+494
+00:32:09,900 --> 00:32:15,760
+So the prompt is allowing you to navigate the latent space of the image itself,
+
+495
+00:32:16,140 --> 00:32:19,240
+have you done any analysis or looked at
+
+496
+00:32:19,530 --> 00:32:22,990
+what is the relationship between the prompting and the directions
+
+497
+00:32:23,910 --> 00:32:26,350
+or velocity or any other sort of metric,
+
+498
+00:32:26,370 --> 00:32:31,360
+that you can look at in that latent representation exploration.
+
+499
+00:32:32,400 --> 00:32:33,365
+Yeah, it's a good question,
+
+500
+00:32:33,365 --> 00:32:35,920
+we haven't yet done a very thorough investigation,
+
+501
+00:32:37,050 --> 00:32:38,080
+what we looked at was,
+
+502
+00:32:38,700 --> 00:32:39,770
+and I don't have it here,
+
+503
+00:32:39,770 --> 00:32:42,070
+but we looked at some cross attention maps
+
+504
+00:32:42,900 --> 00:32:47,990
+between the text embeddings and the and the image, the generated image,
+
+505
+00:32:48,010 --> 00:32:49,700
+and what you can see is that,
+
+506
+00:32:50,140 --> 00:32:54,600
+you know, the, it does what you might expect,
+
+507
+00:32:54,600 --> 00:32:59,270
+which is that there's cross-attension between the different nouns and the objects in the image,
+
+508
+00:32:59,740 --> 00:33:02,535
+when you have a verb that connects two objects,
+
+509
+00:33:02,535 --> 00:33:05,120
+it seems to then highlight both those objects,
+
+510
+00:33:05,620 --> 00:33:07,190
+sort of paying attention to that,
+
+511
+00:33:08,120 --> 00:33:10,920
+so that's one level of exploration,
+
+512
+00:33:11,300 --> 00:33:14,190
+but I think we need to do more about,
+
+513
+00:33:14,800 --> 00:33:18,600
+like as we walk around in latent space, what's the resulting image,
+
+514
+00:33:18,740 --> 00:33:21,660
+if we move between two text prompts, what happens,
+
+515
+00:33:21,950 --> 00:33:23,335
+we don't know yet,
+
+516
+00:33:23,335 --> 00:33:26,490
+the latent space smooth or it has abrupt jumps,
+
+517
+00:33:27,880 --> 00:33:31,560
+the editing suggests some smoothness here,
+
+518
+00:33:32,240 --> 00:33:32,980
+as you iterate,
+
+519
+00:33:33,510 --> 00:33:34,760
+but this is with a fixed prompt,
+
+520
+00:33:34,760 --> 00:33:35,980
+not with the changing prompt,
+
+521
+00:33:37,350 --> 00:33:38,590
+so I think we need to do more.
+
+522
+00:33:42,230 --> 00:33:43,020
+Any other questions?
+
+523
+00:33:56,490 --> 00:34:00,910
+Yeah, I had a question about like the cardinality portion of the results,
+
+524
+00:34:01,050 --> 00:34:02,885
+like one of the failure cases show that,
+
+525
+00:34:02,885 --> 00:34:04,205
+like the model can't really handle,
+
+526
+00:34:04,205 --> 00:34:06,620
+if you give it more than like six or seven of the same item,
+
+527
+00:34:06,620 --> 00:34:09,140
+but sometimes when you don't specify anything in the prompt,
+
+528
+00:34:09,140 --> 00:34:12,970
+it automatically generates like more than that of the number of items,
+
+529
+00:34:12,990 --> 00:34:14,420
+do you know why it breaks down,
+
+530
+00:34:14,420 --> 00:34:17,000
+when you give it like six or seven or eight.
+
+531
+00:34:17,500 --> 00:34:19,130
+I think, it's my feeling,
+
+532
+00:34:19,270 --> 00:34:21,120
+and again, we haven't analyzed this is that,
+
+533
+00:34:21,120 --> 00:34:25,310
+it's just that fewer small numbers are more common in the data.
+
+534
+00:34:25,450 --> 00:34:26,330
+Ah, gotcha.
+
+535
+00:34:27,010 --> 00:34:30,230
+You know, most images would just have a few, two, three, four,
+
+536
+00:34:30,940 --> 00:34:35,510
+and then the model has just never seen ten or twenty,
+
+537
+00:34:36,040 --> 00:34:39,000
+and then there's also not the way we train it,
+
+538
+00:34:39,000 --> 00:34:42,140
+there's not this concept of graceful degradation from ten to many,
+
+539
+00:34:43,000 --> 00:34:44,870
+where might just say, okay, a crowd of people
+
+540
+00:34:45,040 --> 00:34:48,700
+and then you generate what looks like thirty people,
+
+541
+00:34:50,400 --> 00:34:51,370
+I think we need more,
+
+542
+00:34:51,570 --> 00:34:54,130
+there have been papers that are trying to overcome this problem,
+
+543
+00:34:55,350 --> 00:34:58,210
+I think explicitly through just enriching the data,
+
+544
+00:34:59,040 --> 00:35:01,130
+I think more clever solutions are needed.
+
+545
+00:35:06,380 --> 00:35:11,880
+When you do not specify a background of a request,
+
+546
+00:35:13,110 --> 00:35:15,010
+how does it happen that,
+
+547
+00:35:15,210 --> 00:35:20,770
+is there a limited amount of backgrounds that it has to choose from randomly,
+
+548
+00:35:21,380 --> 00:35:24,330
+or is there some sort of a generator,
+
+549
+00:35:24,710 --> 00:35:27,010
+that just how does it work,
+
+550
+00:35:27,010 --> 00:35:29,820
+when you do not specify the background, for example, at all.
+
+551
+00:35:30,020 --> 00:35:31,020
+Yeah, it's a great question,
+
+552
+00:35:31,310 --> 00:35:32,320
+so one thing we did was
+
+553
+00:35:32,320 --> 00:35:34,360
+just type in nonsense into the text prompt
+
+554
+00:35:34,360 --> 00:35:35,190
+and see what happens,
+
+555
+00:35:35,630 --> 00:35:37,890
+and it seems to generate just random scenes,
+
+556
+00:35:38,700 --> 00:35:42,705
+like of of, you know, mountains and the beach and so on,
+
+557
+00:35:42,705 --> 00:35:44,060
+it doesn't generate nonsense,
+
+558
+00:35:44,440 --> 00:35:48,980
+so we think that the code book in the latent space is dominated by these kinds of backgrounds,
+
+559
+00:35:49,520 --> 00:35:54,670
+and somehow that what gets fed in, when you go through the decoder,
+
+560
+00:35:55,360 --> 00:35:59,360
+so, yeah, I don't have a better answer than that.
+
+561
+00:36:02,910 --> 00:36:04,150
+Hi, thanks for the talk,
+
+562
+00:36:05,370 --> 00:36:08,410
+I kind of the mask-free in painting super interesting,
+
+563
+00:36:09,270 --> 00:36:11,050
+a lot of the prompts you showed had,
+
+564
+00:36:12,070 --> 00:36:15,255
+like the the correction was a small change from,
+
+565
+00:36:15,255 --> 00:36:15,960
+maybe the next slide,
+
+566
+00:36:15,960 --> 00:36:18,780
+I think one more, sorry,
+
+567
+00:36:18,780 --> 00:36:20,780
+I'm looking for the one with the dog with the football in his mouth.
+
+568
+00:36:21,770 --> 00:36:25,135
+Yeah, many of these are kind of small changes from what's in there, right,
+
+569
+00:36:25,135 --> 00:36:28,030
+you're going like give it the input as a basket with apples in it
+
+570
+00:36:28,030 --> 00:36:28,840
+and you're saying oranges,
+
+571
+00:36:28,840 --> 00:36:29,520
+have you tried,
+
+572
+00:36:30,020 --> 00:36:33,900
+if the like editing text is completely different,
+
+573
+00:36:33,920 --> 00:36:37,480
+like you go from dog with a basketball to a cat bowling
+
+574
+00:36:37,480 --> 00:36:38,200
+or something like that?
+
+575
+00:36:38,200 --> 00:36:39,640
+Yep, there even something crazy,
+
+576
+00:36:39,640 --> 00:36:40,470
+like a city.
+
+577
+00:36:41,330 --> 00:36:42,120
+That doesn't work,
+
+578
+00:36:42,560 --> 00:36:43,440
+so we've tried that,
+
+579
+00:36:43,730 --> 00:36:44,850
+it doesn't,
+
+580
+00:36:45,560 --> 00:36:48,090
+so I think something like the instruct [pickics] to pickics,
+
+581
+00:36:48,560 --> 00:36:50,370
+that it works for that,
+
+582
+00:36:50,480 --> 00:36:53,820
+because they explicitly train it with large edits,
+
+583
+00:36:54,950 --> 00:36:57,205
+part of the problem could be the way we do the editing,
+
+584
+00:36:57,205 --> 00:36:59,160
+which is based on these small backdrop steps,
+
+585
+00:36:59,450 --> 00:37:01,170
+which just allow you to do local changes,
+
+586
+00:37:01,970 --> 00:37:05,670
+so we don't know if it's a limitation of the model
+
+587
+00:37:05,900 --> 00:37:08,070
+or a limitation of the gradient,
+
+588
+00:37:08,390 --> 00:37:12,175
+the SGD steps we do when we're doing the editing,
+
+589
+00:37:12,175 --> 00:37:14,970
+so what happens with the editing is start with the original image,
+
+590
+00:37:15,470 --> 00:37:16,495
+then take the text prompt
+
+591
+00:37:16,495 --> 00:37:17,760
+and just keep back propping
+
+592
+00:37:17,960 --> 00:37:20,720
+till you know, it settles down converges,
+
+593
+00:37:23,440 --> 00:37:24,440
+say hundred steps,
+
+594
+00:37:25,060 --> 00:37:29,390
+and so each of those steps like I showed here is small changes,
+
+595
+00:37:30,160 --> 00:37:31,920
+and if you want something like what you describe,
+
+596
+00:37:31,920 --> 00:37:36,390
+you need to have the ability to kind of jump faster through hundred steps,
+
+597
+00:37:36,390 --> 00:37:38,010
+maybe if you did it for a million steps,
+
+598
+00:37:38,010 --> 00:37:39,050
+you could have that change,
+
+599
+00:37:39,100 --> 00:37:40,610
+we haven't yet looked at that.
+
+600
+00:37:40,990 --> 00:37:44,610
+Yeah, it's almost hard to imagine even what that middle ground would look like.
+
+601
+00:37:44,610 --> 00:37:49,040
+Yes, like do you have to pass through some valley of unrealistic images
+
+602
+00:37:49,120 --> 00:37:50,630
+to get to this very large change,
+
+603
+00:37:51,010 --> 00:37:54,020
+here, each of those sub steps look like believable things,
+
+604
+00:37:55,510 --> 00:37:57,830
+so it could be an optimization problem.
+
+605
+00:37:58,150 --> 00:37:58,700
+Thank you.
+
+606
+00:38:00,660 --> 00:38:02,290
+Maybe extension on that same question,
+
+607
+00:38:02,340 --> 00:38:04,295
+I'm curious for the case,
+
+608
+00:38:04,295 --> 00:38:06,410
+where the not the entire image is changing,
+
+609
+00:38:06,410 --> 00:38:10,480
+but maybe at the image level you're changing, like the style, for example,
+
+610
+00:38:11,100 --> 00:38:13,000
+like the main content is maintained,
+
+611
+00:38:13,140 --> 00:38:15,790
+but the style is being changed and modified,
+
+612
+00:38:15,810 --> 00:38:18,190
+is that, have you tried these type of things before?
+
+613
+00:38:21,830 --> 00:38:23,605
+Ah, yes, I think so,
+
+614
+00:38:23,605 --> 00:38:25,110
+like, I don't have example,
+
+615
+00:38:25,160 --> 00:38:26,400
+maybe something like this,
+
+616
+00:38:27,910 --> 00:38:29,060
+maybe something like this,
+
+617
+00:38:31,120 --> 00:38:37,210
+I think, it seems much harder to do realistic pause changes like the kinds,
+
+618
+00:38:39,020 --> 00:38:42,240
+he was asking about compared to these global style changes,
+
+619
+00:38:42,380 --> 00:38:43,510
+because I think the global style
+
+620
+00:38:43,510 --> 00:38:48,480
+is controlled by maybe one or two elements of the code book or something like that,
+
+621
+00:38:49,300 --> 00:38:53,780
+whereas to to change pose or make drastic,
+
+622
+00:38:54,280 --> 00:38:58,010
+geometry changes might require much more interaction among the different tokens.
+
+623
+00:39:08,710 --> 00:39:10,190
+Hi, thank you for that great talk,
+
+624
+00:39:10,840 --> 00:39:16,320
+I was wondering, how does the model determine which picture is more accurate to the description
+
+625
+00:39:16,430 --> 00:39:19,740
+or which is which has a better resolution,
+
+626
+00:39:20,990 --> 00:39:22,500
+part of the model determines that,
+
+627
+00:39:22,940 --> 00:39:26,790
+without needing to, needing the human oversight.
+
+628
+00:39:28,370 --> 00:39:30,450
+So it doesn't, in practice,
+
+629
+00:39:31,310 --> 00:39:33,870
+well, are you talking about training or inference?
+
+630
+00:39:35,330 --> 00:39:36,360
+Ah, with the inference.
+
+631
+00:39:36,800 --> 00:39:41,160
+So we what we do is just use random seeds and generate a whole bunch of images
+
+632
+00:39:41,720 --> 00:39:43,500
+and then we just pick out the one we like,
+
+633
+00:39:43,670 --> 00:39:45,160
+so often what happens is that,
+
+634
+00:39:45,160 --> 00:39:46,680
+if you have 8 images or 16,
+
+635
+00:39:47,360 --> 00:39:48,870
+3 or 4 of them would be really nice
+
+636
+00:39:49,070 --> 00:39:50,760
+and then a few of them would look really bad,
+
+637
+00:39:51,330 --> 00:39:55,850
+and we still don't have a self correcting way or automated way
+
+638
+00:39:55,850 --> 00:39:58,090
+to say this image matches the prompt better.
+
+639
+00:40:00,940 --> 00:40:02,870
+So, yeah, so so,
+
+640
+00:40:04,190 --> 00:40:05,700
+so in general, the hope is that,
+
+641
+00:40:05,780 --> 00:40:08,545
+the latent space has been trained in a sensible way,
+
+642
+00:40:08,545 --> 00:40:10,500
+so that it will generate plausible images,
+
+643
+00:40:12,230 --> 00:40:17,280
+but, for example, you might generate a cat with, you know, the legs all in the wrong position
+
+644
+00:40:17,750 --> 00:40:20,935
+and then it's still using the right elements of the code book,
+
+645
+00:40:20,935 --> 00:40:22,290
+but it arranged them wrongly,
+
+646
+00:40:22,370 --> 00:40:24,480
+so we do see those kinds of mistakes.
+
+647
+00:40:24,950 --> 00:40:28,500
+Okay, so for your next step in improving the resolution, you imagine,
+
+648
+00:40:29,090 --> 00:40:30,300
+you'd go about it the same way?
+
+649
+00:40:30,530 --> 00:40:34,690
+Yeah, yeah, we'd have to somehow fix those issues.
+
+650
+00:40:36,630 --> 00:40:37,600
+Okay, one more question.
+
+651
+00:40:46,480 --> 00:40:48,650
+So I kind of have two questions in one,
+
+652
+00:40:48,760 --> 00:40:50,210
+so my first question is,
+
+653
+00:40:50,890 --> 00:40:58,340
+I'm not sure what are the limitations on the size of the corpus for the text and for the images,
+
+654
+00:41:00,010 --> 00:41:05,445
+but say, there's like a new or just that hasn't come out yet
+
+655
+00:41:05,445 --> 00:41:07,220
+or like will in the next two months,
+
+656
+00:41:08,380 --> 00:41:11,570
+if I were to ask in the prompt say,
+
+657
+00:41:11,740 --> 00:41:16,400
+I want you to draw this in the style of this thing that isn't invented yet,
+
+658
+00:41:16,810 --> 00:41:19,130
+how would the model react to that change,
+
+659
+00:41:19,330 --> 00:41:22,190
+and a separate question is,
+
+660
+00:41:22,450 --> 00:41:27,140
+with these, especially the example with the masked images,
+
+661
+00:41:27,850 --> 00:41:31,390
+the top row in the bottom row,
+
+662
+00:41:31,620 --> 00:41:38,470
+how much new information are we actually getting from these images that the model spits out.
+
+663
+00:41:40,290 --> 00:41:43,720
+So it's, it's a great, great question,
+
+664
+00:41:43,980 --> 00:41:45,400
+so for the, for the data,
+
+665
+00:41:46,260 --> 00:41:49,850
+clearly the data is biased towards famous artists
+
+666
+00:41:50,170 --> 00:41:54,420
+and that's why we can say things like, you know, in the style of Rembrandt or Monet,
+
+667
+00:41:54,420 --> 00:41:56,270
+and it has seen many examples of those,
+
+668
+00:41:56,560 --> 00:41:58,700
+because this is data scraped from the web,
+
+669
+00:41:59,880 --> 00:42:03,930
+if you had a new, the style of a new artist,
+
+670
+00:42:04,130 --> 00:42:06,805
+the only current way to do it would be through fine tuning,
+
+671
+00:42:06,805 --> 00:42:11,360
+where we take those images of the person pair it with some text
+
+672
+00:42:11,710 --> 00:42:13,940
+and then kind of train the model to generate that,
+
+673
+00:42:14,350 --> 00:42:17,720
+this is kind of what the Dreambooth approach tries to do,
+
+674
+00:42:17,830 --> 00:42:22,460
+although that's specific to, you know, objects rather than the style,
+
+675
+00:42:22,630 --> 00:42:24,900
+but you could imagine using something like this
+
+676
+00:42:24,900 --> 00:42:26,900
+for the style of a new artist.
+
+677
+00:42:29,320 --> 00:42:30,615
+It's not yet zero shot,
+
+678
+00:42:30,615 --> 00:42:32,925
+where you just present these examples and say,
+
+679
+00:42:32,925 --> 00:42:36,320
+can you generate something based on this text prompt, but in that style,
+
+680
+00:42:37,610 --> 00:42:39,270
+so that's something we would like to work towards.
+
+681
+00:42:40,800 --> 00:42:43,420
+Regarding the masking, I didn't fully follow the question,
+
+682
+00:42:43,800 --> 00:42:46,300
+so you said something about the top and bottom rows.
+
+683
+00:42:48,370 --> 00:42:52,430
+Yeah, I think it was one of the slides way past this one,
+
+684
+00:42:53,020 --> 00:42:54,860
+but it was a pretty general question,
+
+685
+00:42:55,690 --> 00:43:02,030
+it was, how much new information are we actually gaining from these,
+
+686
+00:43:02,590 --> 00:43:07,060
+I guess pictures that haven't, like no one has seen before,
+
+687
+00:43:07,320 --> 00:43:08,740
+like with the bear on the bicycle.
+
+688
+00:43:09,660 --> 00:43:16,115
+Oh, you mean are you talking about memorization versus like, is it actually is,
+
+689
+00:43:16,115 --> 00:43:19,390
+do you mean, if this is already in the dataset, the training dataset?
+
+690
+00:43:21,110 --> 00:43:22,170
+Um, yeah.
+
+691
+00:43:23,250 --> 00:43:25,640
+Yeah, so this is actually a great question,
+
+692
+00:43:25,640 --> 00:43:29,020
+and I think, I don't think we still have very good answers to this,
+
+693
+00:43:31,620 --> 00:43:34,145
+you know, is it is a large language model,
+
+694
+00:43:34,145 --> 00:43:36,290
+just hallucinating something seen before,
+
+695
+00:43:36,290 --> 00:43:37,210
+just mix and match,
+
+696
+00:43:38,520 --> 00:43:42,245
+probably, it's probably this is also doing something like that,
+
+697
+00:43:42,245 --> 00:43:45,185
+where it's seen bears before and bikes
+
+698
+00:43:45,185 --> 00:43:48,560
+and has been able to put them together in a plausible way,
+
+699
+00:43:49,120 --> 00:43:52,160
+it's unlikely that the exact same image was in the dataset,
+
+700
+00:43:52,270 --> 00:43:57,710
+but again, we don't have really good tools yet to go,
+
+701
+00:43:57,850 --> 00:44:01,910
+like, like we could try to search based on some kind of embedding CLIP embedding or something
+
+702
+00:44:02,350 --> 00:44:04,280
+to look for similar images,
+
+703
+00:44:05,050 --> 00:44:08,840
+but at the scale at which we are training hundreds of millions of images,
+
+704
+00:44:09,160 --> 00:44:11,300
+we haven't actually gone in and look
+
+705
+00:44:11,770 --> 00:44:13,520
+to see how much his memorization was,
+
+706
+00:44:15,290 --> 00:44:18,445
+new combination of concepts,
+
+707
+00:44:18,445 --> 00:44:19,530
+I do think it's the latter,
+
+708
+00:44:19,610 --> 00:44:21,270
+because it seems unlikely that,
+
+709
+00:44:21,820 --> 00:44:25,430
+you know, these kinds of images would be in the training dataset.
+
+710
+00:44:27,530 --> 00:44:28,260
+Okay, thank you.
+
+711
+00:44:29,570 --> 00:44:30,310
+Thank you very much.
+
+712
+00:44:30,310 --> 00:44:32,070
+Let's give Dilip one more round of applause.
+
