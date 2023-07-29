@@ -39,3 +39,4 @@ policy function 策略函数
 
 # Lecture 7
 mode collapse 模式崩溃
+Projected Gradient Descent 投影梯度下降

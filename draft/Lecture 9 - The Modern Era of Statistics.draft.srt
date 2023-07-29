@@ -2633,8 +2633,8 @@ me focus on the robustness.|
 463
 00:13:04,840 --> 00:13:06,860
 0,290 290,470 470,760 870,1270 1620,2020
-This is from, ah, this
-这是来自，啊，这种图表来自麻省理工学院亚历山大·马德里小组，他们在那里研究神经网络的稳健性。
+This is from, {} this
+这个图表来自 MIT Alexander Madry 小组，
 
 464
 00:13:07,360 --> 00:13:08,570
@@ -2644,24 +2644,25 @@ kind of graph is from
 465
 00:13:08,890 --> 00:13:11,540
 0,335 335,910 1590,1990 2070,2360 2360,2650
-Alexander Madrid group from here,
+Alexander Madry group from here,
 
 466
 00:13:11,680 --> 00:13:13,520
 0,400 420,820 1080,1310 1310,1490 1490,1840
-MIT, where they are studying
+MIT,| where they are studying
+|他们研究神经网络的稳健性，
 
 467
 00:13:14,020 --> 00:13:15,780
 0,590 590,800 800,1010 1010,1270
-robustness in neural network.|
+robustness in neural network,|
 |
 
 468
 00:13:16,390 --> 00:13:18,165
 0,260 260,410 410,700 1260,1535 1535,1775
-What they do, I mean,
-他们的所作所为，我的意思是，不管是什么，这三行是什么，他们做了什么，他们试图攻击输入图像。
+what they do,| I mean,
+他们的所做的，|我的意思是，不管这三条线是什么，
 
 469
 00:13:18,165 --> 00:13:19,215
@@ -2671,7 +2672,8 @@ it doesn't matter what, what
 470
 00:13:19,215 --> 00:13:20,460
 0,165 165,315 315,525 525,875 985,1245
-the three lines are, what
+the three lines are,| what
+|他们所做的，他们试图攻击输入图像，
 
 471
 00:13:20,460 --> 00:13:21,195
@@ -2681,36 +2683,37 @@ they do, they try to
 472
 00:13:21,195 --> 00:13:22,940
 0,255 255,480 480,645 645,905
-attack the input images.|
+attack the input images,|
 |
 
 473
 00:13:23,460 --> 00:13:25,400
 0,275 275,550 1020,1445 1445,1640 1640,1940
-And then compute the accuracy
-然后计算模型的精度。
+and then compute the accuracy
+然后计算模型的精度，
 
 474
 00:13:25,400 --> 00:13:27,060
 0,105 105,380
-of models.|
+of models,|
 |
 
 475
 00:13:27,070 --> 00:13:28,320
 0,320 320,575 575,890 890,1130 1130,1250
-As we scale again on
-当我们在X轴上再次缩放时，我们会看到开始增加网络容量时的规模和精度。
+as we scale, again on
+再次，我们在 x 轴上看到规模和精度，
 
 476
 00:13:28,320 --> 00:13:29,160
 0,105 105,240 240,585 585,720 720,840
-the X axis, we see
+the x axis, we see
 
 477
 00:13:29,160 --> 00:13:30,885
 0,165 165,360 360,615 615,1190 1390,1725
-the scale and accuracy as
+the scale and accuracy| as
+|随着我们增加网络容量，
 
 478
 00:13:30,885 --> 00:13:33,165
@@ -2720,24 +2723,26 @@ we start increasing the capacity
 479
 00:13:33,165 --> 00:13:34,640
 0,225 225,345 345,605
-of the networks.|
+of the networks,|
 |
 
 480
 00:13:34,640 --> 00:13:36,550
 0,165 165,360 360,945 945,1290 1290,1910
-In image classification and classification
-在图像分类和分类中，我们看到了健壮性的跃升，这意味着他们正在进行的攻击或通过称为攻击的东西干扰输入图像的攻击被称为投影宏大和下降。
+in image classification and classification
+在这里图像分类中，
 
 481
 00:13:36,570 --> 00:13:38,390
 0,400 1110,1385 1385,1505 1505,1610 1610,1820
-here we see that there's
+here,| we see that there's
+|我们看到了健壮性的跃升，
 
 482
 00:13:38,390 --> 00:13:40,535
 0,135 135,440 790,1140 1140,1790 1870,2145
-a jump in robustness that
+a jump in robustness,| that
+|这意味着他们进行的攻击或干扰输入图像，
 
 483
 00:13:40,535 --> 00:13:41,705
@@ -2752,34 +2757,37 @@ were doing or perturbing the
 485
 00:13:43,520 --> 00:13:45,455
 0,210 210,470 1090,1380 1380,1635 1635,1935
-input images with something called
+input images| with something called
+|使用被称为投影梯度下降的攻击，
 
 486
 00:13:45,455 --> 00:13:46,760
 0,255 255,465 465,630 630,870 870,1305
-an attack is called projected
+an attack is called Projected
 
 487
 00:13:46,760 --> 00:13:47,960
 0,150 150,270 270,680
-grand and descent.|
+{Gradient -} Descent,|
 |
 
 488
 00:13:48,030 --> 00:13:49,535
 0,290 290,580 600,1000 1020,1310 1310,1505
-It was basically like you.
-基本上就像你一样。当你实际将网络的规模增加到一定程度后，你就会得到非常好的精确度，然后就会有一个转变，一个转变。
+it was basically, like you,|
+这就像你，|
 
 489
 00:13:49,535 --> 00:13:50,600
 0,180 180,345 345,555 555,780 780,1065
-You got into a really
+you got into a really
+你就会得到非常好的精确度，
 
 490
 00:13:50,600 --> 00:13:52,940
 0,380 760,1260 1260,1550 1840,2130 2130,2340
-good accuracy after you actually
+good accuracy| after you actually
+|当你将网络的规模增加到一定程度后，
 
 491
 00:13:52,940 --> 00:13:53,660
@@ -2794,24 +2802,24 @@ network up to a certain
 493
 00:13:54,845 --> 00:13:56,075
 0,335 445,720 720,855 855,1005 1005,1230
-point and there was this
+point| and there was this
+|然后就会有一个性能的转变，
 
 494
 00:13:56,075 --> 00:13:57,640
 0,335 715,960 960,1080 1080,1260 1260,1565
-transition, there was a shift.|
-|
+transition, there was a shift
 
 495
 00:13:58,980 --> 00:14:01,325
 0,400 840,1240 1620,1910 1910,2090 2090,2345
-Ah, ah, in, in, in
-啊，啊，在表演中。正如我所说的，这一点已经通过实验得到了证实，我们说好了，那就扩大规模。这些结果的结论是，规模提高了稳健性。
+{ -} in, in, in
 
 496
 00:14:01,325 --> 00:14:02,870
 0,365 715,990 990,1140 1140,1290 1290,1545
-performance. And that has been
+performance,| and that has been
+|正如我所说的，这一点已经通过实验得到了证实，
 
 497
 00:14:02,870 --> 00:14:04,010
@@ -2821,12 +2829,14 @@ confirmed, as I said, by
 498
 00:14:04,010 --> 00:14:06,185
 0,380 970,1245 1245,1410 1410,1700 1870,2175
-experiments and we said alright,
+experiments| and we said, alright,
+|我们说，好的，
 
 499
 00:14:06,185 --> 00:14:07,730
 0,305 385,705 705,885 885,1380 1380,1545
-so scale. The conclusions of
+so scale,| the conclusions of
+|这些结果的结论是，规模提高了稳健性。
 
 500
 00:14:07,730 --> 00:14:08,720
@@ -2843,22 +2853,24 @@ that scale improves robustness.|
 00:14:11,970 --> 00:14:14,585
 0,275 275,550 960,1360 2190,2450 2450,2615
 But then, and the best
-但后来，在神经信息处理系统RI2021会议上获得最佳论文奖的人说，规模是稳健性的法则。
+但是后来，获得最佳论文奖的，
 
 503
 00:14:14,585 --> 00:14:16,835
 0,285 285,555 555,705 705,965 1975,2250
-paper award at the the
+paper award| at the the
+|在神经信息处理系统 2021 会议上，
 
 504
 00:14:16,835 --> 00:14:18,430
 0,270 270,555 555,945 945,1260 1260,1595
-conference on neural information processing
+Conference on Neural Information Processing
 
 505
 00:14:18,450 --> 00:14:21,485
 0,400 420,820 1440,2320 2490,2810 2810,3035
-system ri 2021 came and
+{Systems -} 2021,| came and
+|出来说，规模是稳健性的法则。
 
 506
 00:14:21,485 --> 00:14:22,780
@@ -2874,13 +2886,14 @@ of robustness.|
 508
 00:14:24,320 --> 00:14:25,550
 0,270 270,420 420,555 555,830 970,1230
-Okay, what that means, okay,
-好的，这意味着，好的，这意味着，让我们来阐明规模是如何从根本上促进稳健性的。
+Okay, what that means,| okay,
+好的，这意味着什么，|好的，这意味着，
 
 509
 00:14:25,550 --> 00:14:26,890
 0,135 135,270 270,420 420,720 720,1340
-that means like, let's formulate
+that means like,| let's formulate
+|让我们来阐明，规模是如何从根本上促进稳健性的。
 
 510
 00:14:27,060 --> 00:14:29,435
@@ -2896,14 +2909,13 @@ to robustness.|
 512
 00:14:32,020 --> 00:14:33,220
 0,400
-So.|
-所以。|
+So,
+所以，关于这件事，我会讲一些更技术性的东西，
 
 513
 00:14:33,220 --> 00:14:33,985
 0,195 195,315 315,510 510,645 645,765
 I'm gonna talk a little
-关于这件事，我会讲一些更技术性的东西。希望你们能，你们都能跟上，但你们可以问问题。即使是现在，如果你有问题，让我先说完，然后我们再回答一些问题。所以我们假设修正任何合理的，合理的函数。什么是合理的函数，基本上是一个函数，具有。
 
 514
 00:14:33,985 --> 00:14:36,115
@@ -2913,17 +2925,20 @@ bit more technical about this
 515
 00:14:36,115 --> 00:14:37,750
 0,305 355,690 690,900 900,1175 1375,1635
-thing. Hopefully you can, you
+thing,| hopefully you can, you
+|希望你们都能跟上，
 
 516
 00:14:37,750 --> 00:14:38,560
 0,105 105,255 255,480 480,660 660,810
-can all follow, but you
+can all follow,| but you
+|但你们可以问问题，
 
 517
 00:14:38,560 --> 00:14:39,505
 0,150 150,255 255,420 420,705 705,945
-you can ask questions. Like
+you can ask questions,| Like
+|即使是现在，如果你有问题，
 
 518
 00:14:39,505 --> 00:14:41,350
@@ -2933,7 +2948,8 @@ even now, if you have
 519
 00:14:41,350 --> 00:14:42,385
 0,285 285,540 540,660 660,810 810,1035
-questions, let me just finish
+questions,| let me just finish
+|让我先说完这个，然后我们再回答一些问题。
 
 520
 00:14:42,385 --> 00:14:44,605
@@ -2943,7 +2959,8 @@ this one and then we'll
 521
 00:14:44,605 --> 00:14:46,495
 0,120 120,270 270,495 495,845 1585,1890
-take some questions. So let's
+take some questions.| So let's
+|所以我们假设修正任何合理的函数，
 
 522
 00:14:46,495 --> 00:14:48,960
@@ -2953,39 +2970,43 @@ say fix any reasonable, reasonable
 523
 00:14:49,040 --> 00:14:50,130
 0,305 305,455 455,545 545,740 740,1090
-function. What is a reasonable
+function,| what is a reasonable
+|什么是合理的函数，
 
 524
 00:14:50,210 --> 00:14:51,985
 0,400 810,1085 1085,1325 1325,1550 1550,1775
-function is basically a function
+function,| is basically a function
+|基本上是一个具有平滑的函数，
 
 525
 00:14:51,985 --> 00:14:53,220
 0,255 255,545
-that has.|
-|
+that has
 
 526
 00:14:53,220 --> 00:14:54,495
 0,165 165,405 405,740 850,1140 1140,1275
-A smooth behavior, like, like
-一个光滑的行为，就像一个Sigmoid函数，好吗？这是一个非常合理的函数，好吗？一个疯狂的函数就像你有一个像不同模式的跳跃，你知道，就像你有一个合理的函数，好吗？
+a smooth behavior,| like, like
+|比如一个 sigmoid 函数，
 
 527
 00:14:54,495 --> 00:14:55,815
 0,105 105,405 405,695 865,1110 1110,1320
-a sigmoid function, OK? That's
+a sigmoid function, okay,| that's
+|这是一个非常合理的函数，
 
 528
 00:14:55,815 --> 00:14:57,195
 0,135 135,330 330,635 685,1085 1105,1380
-a very reasonable function, OK?
+a very reasonable function, okay,|
+|
 
 529
 00:14:57,195 --> 00:14:58,460
 0,210 210,480 480,765 765,990 990,1265
-A crazy function would be
+a crazy function would be
+一个疯狂的函数就像你有一个像不同模式的跳跃，
 
 530
 00:14:58,480 --> 00:14:59,510
@@ -2995,45 +3016,50 @@ like if you have like
 531
 00:14:59,710 --> 00:15:01,830
 0,610 690,995 995,1190 1190,1480 1680,2120
-jumps across like different modes,
+jumps across like different modes,|
+|
 
 532
 00:15:01,830 --> 00:15:02,475
 0,120 120,240 240,375 375,510 510,645
 you know, like you have
+你有一个合理的函数，
 
 533
 00:15:02,475 --> 00:15:04,560
 0,150 150,425 565,965 1225,1625
-a reasonable function, okay?|
+a reasonable function, okay,|
 |
 
 534
 00:15:04,630 --> 00:15:07,100
 0,335 335,605 605,880
-And it basically.|
-基本上就是。|
+and it basically,
+它是参数化的，
 
 535
 00:15:07,330 --> 00:15:09,075
 0,275 275,515 515,830 830,1420 1470,1745
-It has, it's parameterized okay,
-它有，它是参数化的，就像一个符号模式函数，你可以对它进行参数化，然后它被多极化，就像它在参数中也有合理的大小一样，它不是COMGRID类型的网络。那是什么意思。
+it has, it's parameterized, okay,|
+|
 
 536
 00:15:09,075 --> 00:15:09,855
 0,135 135,255 255,390 390,525 525,780
-like a sig mode function
+like a sigmoid function,|
+就像一个 sigmoid 函数，|
 
 537
 00:15:09,855 --> 00:15:11,000
 0,195 195,285 285,420 420,840 840,1145
-that you can parameterize it
+that you can parameterize it|
+你可以对它进行参数化，|
 
 538
 00:15:11,350 --> 00:15:13,080
 0,305 305,610 810,1160 1160,1565 1565,1730
 and then it's polyized like
+然后它被多极化，就像它在参数中也有合理的大小一样，
 
 539
 00:15:13,080 --> 00:15:14,205
@@ -3043,29 +3069,32 @@ it has also reasonable size
 540
 00:15:14,205 --> 00:15:16,095
 0,195 195,665 1075,1335 1335,1620 1620,1890
-in parameters, and it's not
+in parameters,| and it's not
+|它不是 Kolmogorov-Arnold 类型的网络，
 
 541
 00:15:16,095 --> 00:15:17,760
 0,300 300,780 780,1170 1170,1380 1380,1665
-a comograph rld type network.
+a {Kolmogorov-Arnold -} type network,|
+|
 
 542
 00:15:17,760 --> 00:15:19,305
 0,240 240,375 375,555 555,860 1240,1545
-What does that mean that
+what does that mean,| that
+那是什么意思，|它的意思是，
 
 543
 00:15:19,305 --> 00:15:21,160
 0,305
-means.|
+means,|
 |
 
 544
 00:15:21,650 --> 00:15:23,430
 0,335 335,500 500,820 870,1115 1115,1780
 I'm showing you a representation
-我给你看的是阿诺德和卡洛格·格罗发现的一幅画作。这表明，我们看到的这种分解可以逼近任何连续函数，多元连续函数。
+我给你看的是 Arnold 和 Kolmogorov 发现的描述，
 
 545
 00:15:23,480 --> 00:15:25,615
@@ -3075,17 +3104,20 @@ that was discovered by Arnold
 546
 00:15:25,615 --> 00:15:26,910
 0,165 165,360 360,630 630,1020 1020,1295
-and, and, and karog gro.
+and, and, and {Kolmogorov -},|
+|
 
 547
 00:15:27,170 --> 00:15:28,105
 0,290 290,470 470,635 635,785 785,935
-That shows that there are
+that shows that, there are,|
+这表明，|
 
 548
 00:15:28,105 --> 00:15:30,550
 0,275 715,1115 1375,2130 2130,2295 2295,2445
 this, this decomposition that we
+我们看到的这种分解可以逼近任何连续函数，多元连续函数。
 
 549
 00:15:30,550 --> 00:15:32,845
