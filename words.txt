@@ -41,3 +41,4 @@ policy function 策略函数
 mode collapse 模式崩溃
 Projected Gradient Descent 投影梯度下降
 Neural Tangent Kernel 神经正切核
+Residual Network 残差网络

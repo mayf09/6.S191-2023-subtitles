@@ -4599,7 +4599,7 @@ to robustly fit the MNIST
 00:22:55,790 --> 00:22:56,815
 0,275 275,550 630,860 860,935 935,1025
 But then there are a
-但还有几个音符是我们想要的。理论论文中的稳健性概念与我们在中展示的稳健性和Le Sheetness的概念略有不同。
+但是还有几个点是我们想要的，
 
 810
 00:22:56,815 --> 00:22:57,610
@@ -4609,17 +4609,19 @@ couple of notes that we
 811
 00:22:57,610 --> 00:22:59,350
 0,135 135,255 255,500 1240,1515 1515,1740
-want to have. The notion
+want to have,| the notion
+|理论论文中的稳健性概念
 
 812
 00:22:59,350 --> 00:23:00,990
 0,285 285,765 765,945 945,1220 1240,1640
-of robustness in the, um,
+of robustness in the {}
 
 813
 00:23:02,090 --> 00:23:03,160
 0,260 260,395 395,590 590,845 845,1070
-in the theory paper was
+in the theory paper| was
+|与 Lipschitz 中的概念略有不同，
 
 814
 00:23:03,160 --> 00:23:04,000
@@ -4629,44 +4631,47 @@ a little bit different than
 815
 00:23:04,000 --> 00:23:05,110
 0,120 120,315 315,585 585,960 960,1110
-the notion of robustness and
+the notion of robustness at
 
 816
 00:23:05,110 --> 00:23:06,745
 0,195 195,630 630,980 1030,1380 1380,1635
-Le sheetness that we showed
+{Lipschitz -},| that we showed
+|那个我们在健壮性法则中展示的，
 
 817
 00:23:06,745 --> 00:23:08,700
 0,165 165,425
-in the.|
-|
+in the,
 
 818
 00:23:08,700 --> 00:23:09,780
 0,255 255,450 450,660 660,840 840,1080
-In the theory of law,
-在法律理论中，稳健性，然后另一点是，法律似乎是矛盾的，因为如果你乘法，我们刚才说的法律就像你知道的和d乘以d，对吗？就像这是你所能得到的最小样本数，你就有了过渡。所以，如果你这样做，10乘以10的幂，5乘以10的次方，3的次方往往是8的次方，它比前面观察到的6的次方要大得多。
+in the theory of law
 
 819
 00:23:09,780 --> 00:23:11,880
 0,560 940,1230 1230,1520 1540,1875 1875,2100
-robustness, and then another point
+robustness,| and then another point
+|然后另一点是，
 
 820
 00:23:11,880 --> 00:23:13,140
 0,195 195,500 610,885 885,1065 1065,1260
-is that the law seems
+is that,| the law seems
+|法则似乎是矛盾的，
 
 821
 00:23:13,140 --> 00:23:14,925
 0,120 120,240 240,860 1000,1400 1510,1785
-to be contradicted because if
+to be contradicted,| because if
+|因为如果你乘以，
 
 822
 00:23:14,925 --> 00:23:16,070
 0,135 135,555 555,705 705,855 855,1145
-you multiply we just said
+you multiply,| we just said
+|我们刚才说的法则就是 n 乘以 d ，
 
 823
 00:23:16,090 --> 00:23:17,475
@@ -4676,12 +4681,14 @@ the law is like you
 824
 00:23:17,475 --> 00:23:19,200
 0,245 565,900 900,1170 1170,1425 1425,1725
-know and times d right?
+know n times d, right,|
+|
 
 825
 00:23:19,200 --> 00:23:20,205
 0,255 255,450 450,540 540,750 750,1005
-Like that's the minimum number
+like that's the minimum number
+这是你所能得到的最小样本数，你可以转换，
 
 826
 00:23:20,205 --> 00:23:21,435
@@ -4691,7 +4698,8 @@ of samples that you can,
 827
 00:23:21,435 --> 00:23:22,890
 0,120 120,240 240,390 390,665 1195,1455
-you have the transition. So
+you have the transition,| so,
+|但是，如果你做 10 乘以，
 
 828
 00:23:22,890 --> 00:23:23,805
@@ -4701,56 +4709,56 @@ but here if you do
 829
 00:23:23,805 --> 00:23:26,040
 0,275 505,795 795,1085 1855,2115 2115,2235
-that ten times ten to
+that 10 times,| 10 to
+|10 的 5 次方乘以 10 的 3 次方是 10 的 8 次方，
 
 830
 00:23:26,040 --> 00:23:27,615
 0,210 210,560 940,1245 1245,1425 1425,1575
-power five times ten to
+power 5 times 10 to
 
 831
 00:23:27,615 --> 00:23:29,235
 0,255 255,635 1015,1305 1305,1470 1470,1620
-power three is tend to
+power 3 is 10 to
 
 832
 00:23:29,235 --> 00:23:31,005
 0,275 325,690 690,1055 1195,1440 1440,1770
-power ah eight and it's
+power {} 8| and it's
+|这比在现实中观察到的 10 的 6 次方要大得多。
 
 833
 00:23:31,005 --> 00:23:32,535
 0,300 300,615 615,855 855,1115 1285,1530
-much larger than that than
+much larger than that 10
 
 834
 00:23:32,535 --> 00:23:33,975
 0,90 90,300 300,665 925,1200 1200,1440
-to power six that was
+to power 6 that was
 
 835
 00:23:33,975 --> 00:23:34,960
 0,255 255,545
-observed in.|
-|
+observed in
 
 836
 00:23:34,970 --> 00:23:37,260
 0,400 990,1390
-Ah, reality.|
-啊，现实。|
+{} reality.|
+|
 
 837
 00:23:37,390 --> 00:23:38,820
 0,400
-But.|
-但。|
+But,
+但是，你还必须注意的一件事是，
 
 838
 00:23:39,230 --> 00:23:40,030
 0,260 260,380 380,500 500,650 650,800
-One of the things that
-你还必须注意的一件事是，关于数据集，有一种东西被称为有效维度。有效维度意味着，当我向你们展示一幅图像时，图像的主要组成部分。那么，找出图像的主要成分，即图像有多小，信息是什么？该信息与像素本身的大小不同。信息要小得多。
+one of the things that
 
 839
 00:23:40,030 --> 00:23:40,855
@@ -4760,32 +4768,37 @@ you have to also notice
 840
 00:23:40,855 --> 00:23:42,115
 0,270 270,435 435,675 675,935 955,1260
-is that there's something about
+is that,| there's something about
+|关于数据集，有一种东西被称为有效维度，
 
 841
 00:23:42,115 --> 00:23:43,810
 0,285 285,665 775,1080 1080,1350 1350,1695
-data sets is called effective
+{datasets -} is called effective
 
 842
 00:23:43,810 --> 00:23:46,810
 0,950 1210,1530 1530,1845 1845,2790 2790,3000
-dimensionality. And effective dimensionality means
+dimensionality,| and effective dimensionality means
+|有效维度意味着，
 
 843
 00:23:46,810 --> 00:23:48,295
 0,320 640,945 945,1170 1170,1365 1365,1485
-that when I show you
+that,| when I show you
+|当我向你们展示一幅图像时，
 
 844
 00:23:48,295 --> 00:23:49,500
 0,120 120,395 595,825 825,930 930,1205
-an image, there are principal
+an image,| there are principal
+|图像的主要组成部分，
 
 845
 00:23:49,760 --> 00:23:51,445
 0,400 420,695 695,845 845,1120 1380,1685
-components of an image. So
+components of an image,| so
+|所以，找出图像的主要成分，
 
 846
 00:23:51,445 --> 00:23:53,080
@@ -4795,17 +4808,20 @@ finding the principal components of
 847
 00:23:53,080 --> 00:23:54,780
 0,135 135,410 670,975 975,1280 1300,1700
-an image that how small
+an image,| that how small
+|即图像有多小，信息是什么，
 
 848
 00:23:54,950 --> 00:23:56,605
 0,290 290,580 720,1070 1070,1330 1350,1655
-that image, what's the information?
+that image, what's the information,|
+|
 
 849
 00:23:56,605 --> 00:23:57,780
 0,255 255,525 525,720 720,885 885,1175
-The information is not the
+the information is not the
+信息与像素本身的大小不同，
 
 850
 00:23:57,860 --> 00:23:59,320
@@ -4815,24 +4831,26 @@ same size as the pixel
 851
 00:23:59,320 --> 00:24:00,925
 0,320 400,750 750,1035 1035,1290 1290,1605
-itself. The information is much
+itself,| the information is much
+|信息要小得多，
 
 852
 00:24:00,925 --> 00:24:01,820
 0,395
-smaller.|
+smaller,|
 |
 
 853
 00:24:01,970 --> 00:24:03,570
 0,245 245,380 380,650 650,1370 1370,1600
-So the effective dimensionality of,
-因此，很难确定给定数据集的有效维度是多少，但对于数据集，它仍然是。
+so the effective dimensionality of,|
+所以，有效维度是，|
 
 854
 00:24:03,620 --> 00:24:05,035
 0,380 380,560 560,800 800,1085 1085,1415
 it's hard to actually determine
+很难确定给定数据集的有效维度是多少，
 
 855
 00:24:05,035 --> 00:24:06,520
@@ -4842,34 +4860,38 @@ what's the effective dimensionality of
 856
 00:24:06,520 --> 00:24:07,870
 0,120 120,300 300,570 570,920 1030,1350
-a given data set, but
+a given {dataset -},| but
+|但对于 MNIST 数据集，
 
 857
 00:24:07,870 --> 00:24:09,025
 0,210 210,345 345,585 585,915 915,1155
-still, for the data set,
+still, for the {MNIST,dataset -},|
+|
 
 858
 00:24:09,025 --> 00:24:09,940
 0,395
-it's.|
-|
+it's
+它是 10 的 1 次方，
 
 859
 00:24:09,940 --> 00:24:10,860
 0,240 240,330 330,405 405,585 585,920
-Tend to the power one
-趋向于幂1，现在我们有10到5次方，如果有效维度基本上趋向于幂1，那么你会得到基本相同的结果。你可以用实验来证实用稳健性定律观察到的理论结果。现在，正如我所说的，嘈杂的标签基本上是学习训练中困难的部分。
+10 to the power 1|
+|
 
 860
 00:24:10,910 --> 00:24:11,755
 0,260 260,395 395,530 530,680 680,845
-and now we have ten
+and now we have 10
+现在我们有 10 的 5 次方，
 
 861
 00:24:11,755 --> 00:24:13,300
 0,135 135,345 345,660 660,1025 1255,1545
-to power five in and
+to power 5 in| and
+|如果有效维度基本上是 10 的 1 次方，
 
 862
 00:24:13,300 --> 00:24:14,995
@@ -4879,17 +4901,20 @@ if the effective dimensionality is
 863
 00:24:14,995 --> 00:24:17,100
 0,305 1225,1485 1485,1605 1605,1785 1785,2105
-basically tend to power one,
+basically 10 to power 1,|
+|
 
 864
 00:24:17,210 --> 00:24:18,300
 0,260 260,380 380,515 515,740 740,1090
 then you would have basically
+那么你会得到相同的，
 
 865
 00:24:18,500 --> 00:24:19,900
 0,305 305,590 590,845 845,1115 1115,1400
-the same. You can confirm
+the same,| you can confirm
+|你可以用实验来证实用稳健性法则观察到的理论结果。
 
 866
 00:24:19,900 --> 00:24:22,140
@@ -4904,34 +4929,37 @@ that was observed with the
 868
 00:24:24,280 --> 00:24:26,365
 0,120 120,285 285,830 1300,1700 1810,2085
-law of robustness. Now the
+law of robustness.| Now the
+|现在，噪音标签，正如我所说的，
 
 869
 00:24:26,365 --> 00:24:27,685
 0,360 360,750 750,975 975,1125 1125,1320
-noisy labels, as I said,
+noisy labels, as I said,|
+|
 
 870
 00:24:27,685 --> 00:24:29,260
 0,330 330,660 660,1005 1005,1320 1320,1575
 it's basically learning the difficult
+它是学习训练中困难的部分，
 
 871
 00:24:29,260 --> 00:24:30,480
 0,135 135,240 240,375 375,650
-part of the training.|
+part of the training,|
 |
 
 872
 00:24:30,570 --> 00:24:33,020
 0,275 275,550 1440,1745 1745,2050 2160,2450
-And then, ah, in regard
-然后啊，关于图像网络的预测基本上是表现出稳健性的规律，因为我们还没有训练出超大型的网络。到目前为止，我们培训的网络似乎都很小。你知道，我们仍然像真正的大型神经网络一样进行训练。但你知道，它们必须是十的数量级才能为12的次方，或者10的次方为10的次方。
+and then, {} in regard
+然后，关于 ImageNet 的预测表现出稳健性的法则，
 
 873
 00:24:33,020 --> 00:24:34,540
 0,150 150,375 375,740 970,1245 1245,1520
-to image net is basically
+to {ImageNet -} is basically
 
 874
 00:24:34,590 --> 00:24:35,990
@@ -4941,12 +4969,14 @@ shows the law of robustness
 875
 00:24:35,990 --> 00:24:37,565
 0,320 490,780 780,960 960,1305 1305,1575
-predict because we haven't yet
+predict,| because we haven't yet
+|因为我们还没有训练超大型的网络，
 
 876
 00:24:37,565 --> 00:24:40,385
 0,365 835,1170 1170,1505 1555,1955 2515,2820
-trained super large networks. It
+trained super large networks,| it
+|到目前为止，我们训练的网络似乎都很小，
 
 877
 00:24:40,385 --> 00:24:41,600
@@ -4961,44 +4991,47 @@ we have trained so far,
 879
 00:24:43,020 --> 00:24:44,405
 0,230 230,380 380,665 665,1030 1140,1385
-they are actually small. You
+they are actually small,| you
+|我们仍然没有训练真正的大型神经网络，
 
 880
 00:24:44,405 --> 00:24:45,220
 0,90 90,180 180,315 315,510 510,815
-know, we have trained like
+know, we haven't trained like
 
 881
 00:24:45,270 --> 00:24:47,195
 0,335 335,670 840,1190 1190,1450 1530,1925
-really large neural networks still.
+really large neural networks still,|
+|
 
 882
 00:24:47,195 --> 00:24:48,160
 0,240 240,360 360,540 540,705 705,965
-But they have to be
+but they have to be
+但是它们必须是 10 的 12 次方或 10 的 10 次方数量级，
 
 883
 00:24:48,210 --> 00:24:50,360
 0,275 275,410 410,635 635,1000 1890,2150
-on the order of ten
+on the order of 10
 
 884
 00:24:50,360 --> 00:24:51,440
 0,120 120,330 330,660 660,930 930,1080
-to power twelve or ten
+to power 12 or 10
 
 885
 00:24:51,440 --> 00:24:52,600
 0,105 105,285 285,620 640,900 900,1160
-to power ten, you know.|
+to power 10, you know,|
 |
 
 886
 00:24:53,040 --> 00:24:53,975
 0,305 305,500 500,650 650,785 785,935
-And this is like the
-这就像是对稳健性定律的预测。
+and this is like the
+这就是对稳健性法则的预测。
 
 887
 00:24:53,975 --> 00:24:55,420
@@ -5014,19 +5047,20 @@ robustness.|
 889
 00:24:57,220 --> 00:24:59,900
 0,400 480,725 725,970 1775,2020
-Okay, so now let's.|
-好了，现在让我们。|
+Okay, so now let's
+好的，现在让我们回到这张图片上，
 
 890
 00:24:59,900 --> 00:25:00,740
 0,195 195,360 360,495 495,615 615,840
-Get back to this image.
-回到这张图片上。所以我所说的所有这些网络和稳健性定律，基本上在那个制度下，在那个制度下，我向你展示了我们有很好的普遍性。
+get back to this image,|
+|
 
 891
 00:25:00,740 --> 00:25:02,090
 0,210 210,375 375,680 730,1110 1110,1350
-So all these networks that
+so all these networks that
+所以我所说的所有这些网络和稳健性法则，
 
 892
 00:25:02,090 --> 00:25:03,130
@@ -5036,12 +5070,14 @@ I was talking about and
 893
 00:25:03,210 --> 00:25:05,915
 0,320 320,635 635,1300 1740,2140 2430,2705
-law of robustness, basically in
+law of robustness,| basically in
+|基本上在那个机制下，
 
 894
 00:25:05,915 --> 00:25:07,940
 0,270 270,665 1075,1365 1365,1650 1650,2025
-that regime, in that regime,
+that regime,| in that regime,
+|在那个机制下，我向你展示了我们有很好的普遍性，
 
 895
 00:25:07,940 --> 00:25:08,855
@@ -5051,19 +5087,20 @@ I showed you that we
 896
 00:25:08,855 --> 00:25:10,740
 0,180 180,420 420,1085
-have great generalization.|
+have great generalization,|
 |
 
 897
 00:25:11,050 --> 00:25:12,960
 0,260 260,440 440,760 990,1390 1560,1910
-We get more, probably more
-我们得到了更多，可能更强大。啊，然后推理我们还有一个问题，那就是如何实现它，然后是偏见和公平，这是非常重要的，能源消耗和模型的问责。
+we get {more,robust}, probably more
+我们得到更多的健壮性，可能更多的健壮性，
 
 898
 00:25:12,960 --> 00:25:16,100
 0,620 790,1190 1360,1635 1635,1910 2410,3140
-robustness. Ah, and then reasoning
+robustness,| {} and then reasoning
+|然后推理我们还有一个问题，那就是如何实现它，
 
 899
 00:25:16,150 --> 00:25:17,835
@@ -5073,7 +5110,8 @@ still we have questions about
 900
 00:25:17,835 --> 00:25:19,140
 0,165 165,360 360,540 540,815 1045,1305
-how to achieve it and
+how to achieve it| and
+|然后是偏见和公平，这是非常重要的，
 
 901
 00:25:19,140 --> 00:25:20,460
@@ -5083,7 +5121,8 @@ then bias and fairness, which
 902
 00:25:20,460 --> 00:25:22,490
 0,135 135,345 345,680 1330,1680 1680,2030
-is very important, energy consumption
+is very important,| energy consumption
+|能源消耗和模型的责任。
 
 903
 00:25:22,540 --> 00:25:24,470
@@ -5094,8 +5133,8 @@ and accountability of the models.|
 904
 00:25:26,180 --> 00:25:27,730
 0,305 305,610 690,965 965,1240 1290,1550
-There is a way, and
-有一种方法，这是我们在丹妮拉·鲁斯的实验室与亚历山大和我们的其他几名研究生一起进行的研究的重点。
+There is a way,| and
+有一种方法，|这是研究的重点，
 
 905
 00:25:27,730 --> 00:25:28,930
@@ -5105,17 +5144,19 @@ that has been the focus
 906
 00:25:28,930 --> 00:25:30,220
 0,225 225,525 525,915 915,1185 1185,1290
-of the research that we
+of the research| that we
+|我们在 Daniela Rus 的实验室所做的，
 
 907
 00:25:30,220 --> 00:25:31,120
 0,90 90,225 225,375 375,525 525,900
-have been doing at daniela
+have been doing at Daniela
 
 908
 00:25:31,120 --> 00:25:33,475
 0,285 285,560 940,1340 1390,1790 2050,2355
-rus' lab with Alexander and
+Rus's lab| with Alexander and
+|与 Alexander 和我们的其他几名研究生一起，
 
 909
 00:25:33,475 --> 00:25:35,160
@@ -5125,14 +5166,14 @@ a couple of other graduate
 910
 00:25:35,270 --> 00:25:37,560
 0,400 600,875 875,1150
-students of ours.|
+students of ours,|
 |
 
 911
 00:25:37,720 --> 00:25:39,135
 0,260 260,395 395,590 590,910 1110,1415
-Is to find out how
-就是找出我们如何在解决所有这些社会技术挑战的同时摆脱这种压倒一切的制度。
+is to find out how
+就是找出我们如何在解决超参数机制，
 
 912
 00:25:39,135 --> 00:25:39,960
@@ -5142,36 +5183,38 @@ can we get out of
 913
 00:25:39,960 --> 00:25:43,260
 0,165 165,680 1090,1490 2170,2570 2830,3300
-that overpower regime while addressing
+that overparameterization regime,| while addressing
+|解决所有这些[社会技术]挑战。
 
 914
 00:25:43,260 --> 00:25:46,190
 0,150 150,440 1840,2175 2175,2510 2530,2930
-all these social technical challenges.|
+all these [social technical] challenges.|
 |
 
 915
 00:25:47,370 --> 00:25:49,000
 0,400 750,1040 1040,1190 1190,1340 1340,1630
-And how we did that,
-以及我们是如何做到这一点的，我们回到了源头。
+And how we did that,|
+我们是如何做到这一点的，|
 
 916
 00:25:49,350 --> 00:25:50,500
 0,275 275,455 455,680 680,875 875,1150
-we went back to source.|
-|
+we went back to source,|
+我们回到了源头，|
 
 917
 00:25:52,270 --> 00:25:54,230
 0,400 1050,1310 1310,1445 1445,1640 1640,1960
-Basically, we looked into brains,
-基本上，我们调查了大脑，好吗？我们研究了如何从大脑中获得灵感，以改进我们在神经网络中的架构偏见，以打破健壮性定律。
+basically, we looked into brains,
+我们调查了大脑，
 
 918
 00:25:54,670 --> 00:25:56,270
 0,400 570,830 830,980 980,1235 1235,1600
-okay? We looked into how
+okay,| we looked into how
+|我们研究了如何从大脑中获得灵感，
 
 919
 00:25:56,350 --> 00:25:57,675
@@ -5181,7 +5224,8 @@ we can get inspiration from
 920
 00:25:57,675 --> 00:26:01,320
 0,305 1195,1595 1735,2055 2055,2375 2785,3645
-brains to improve over architectural
+brains| to improve over architectural
+|以改进我们在神经网络中的架构偏见，
 
 921
 00:26:01,320 --> 00:26:02,840
@@ -5191,7 +5235,8 @@ biases that we have in
 922
 00:26:03,370 --> 00:26:05,280
 0,380 380,640 1170,1445 1445,1670 1670,1910
-neural networks in order to
+neural networks| in order to
+|以打破健壮性法则。
 
 923
 00:26:05,280 --> 00:26:06,440
@@ -5203,22 +5248,23 @@ break the law of robustness.|
 00:26:08,430 --> 00:26:10,070
 0,335 335,545 545,820 1050,1400 1400,1640
 Now and then we we
-时不时地，我们发明了一种叫做液体神经网络的东西，它的直接灵感来自于，啊，神经元和突触在大脑中相互作用的方式。好的，这就是，啊，啊，我们，我们开始我们的焦点，在我演讲的后半部分，我只想谈谈液体神经网络及其在现代统计学领域的意义。
+然后我们发明了一种叫做液态神经网络的东西，
 
 925
 00:26:10,070 --> 00:26:11,705
 0,255 255,570 570,920 1000,1350 1350,1635
-invented something called liquid neural
+invented something called Liquid Neural
 
 926
 00:26:11,705 --> 00:26:14,150
 0,275 295,675 675,1055 1525,2160 2160,2445
-networks, the direct inspiration from
+Networks,| the direct inspiration from
+|它的直接灵感来自于神经元和突触在大脑中相互作用的方式，
 
 927
 00:26:14,150 --> 00:26:16,150
 0,290 550,870 870,1200 1200,1410 1410,2000
-how, ah, neurons and synapses
+how {} neurons and synapses
 
 928
 00:26:16,170 --> 00:26:17,090
@@ -5228,32 +5274,35 @@ interact with each other in
 929
 00:26:17,090 --> 00:26:18,850
 0,120 120,380 640,1040 1150,1515 1515,1760
-the brain. Okay, that's how,
+the brain, okay,| that's how,
+|这就是我们开始我们的重点，
 
 930
 00:26:18,900 --> 00:26:20,945
 0,305 305,610 960,1360 1470,1775 1775,2045
-ah, ah, we, we started
+{ -} we, we started
 
 931
 00:26:20,945 --> 00:26:22,670
 0,365 625,975 975,1185 1185,1425 1425,1725
-our focus and the second
+our focus| and the second
+|在我演讲的后半部分，
 
 932
 00:26:22,670 --> 00:26:23,645
 0,195 195,345 345,525 525,735 735,975
-half of my talk, I'm
+half of my talk,| I'm
+|我只想谈谈液态神经网络及其在现代统计学领域的意义。
 
 933
 00:26:23,645 --> 00:26:24,920
 0,120 120,300 300,525 525,845 955,1275
-just gonna talk about liquid
+just gonna talk about Liquid
 
 934
 00:26:24,920 --> 00:26:26,350
 0,270 270,480 480,690 690,825 825,1430
-neural networks and their implications
+Neural Networks and their implications
 
 935
 00:26:26,640 --> 00:26:28,295
@@ -5270,30 +5319,30 @@ era of statistics.|
 00:26:30,780 --> 00:26:31,910
 0,380 380,620 620,770 770,950 950,1130
 So, as I said, we
-所以，就像我说的，我们从神经系统开始。
+所以，就像我说的，我们从神经系统开始，
 
 938
 00:26:31,910 --> 00:26:34,520
 0,225 225,560 610,960 960,1310
-started with nervous systems.|
+started with nervous systems,|
 |
 
 939
 00:26:35,010 --> 00:26:36,180
 0,400
-Then.|
-然后。|
+then,
+然后，为了了解他们的帮助，
 
 940
 00:26:36,190 --> 00:26:37,230
 0,245 245,380 380,620 620,845 845,1040
-In order to understand their
-为了了解他们的帮助，你想要下去，你可以研究神经回路。没有电路是由神经元组成的电路。然后他们可以获得感觉输入，并产生一些，某种类型的输出，运动输出。
+in order to understand their
 
 941
 00:26:37,230 --> 00:26:38,490
 0,285 285,510 510,660 660,950 970,1260
-assistance, you want to go
+assistance,| you want to go
+|你想要下去，你可以研究神经回路，
 
 942
 00:26:38,490 --> 00:26:39,645
@@ -5303,7 +5352,8 @@ down and you you can
 943
 00:26:39,645 --> 00:26:41,550
 0,105 105,345 345,705 705,1175 1615,1905
-look into neural circuits. No
+look into neural circuits,| neural
+|神经回路是由神经元组成的回路，
 
 944
 00:26:41,550 --> 00:26:43,020
@@ -5313,7 +5363,8 @@ circuits are circuits that are
 945
 00:26:43,020 --> 00:26:44,400
 0,330 330,510 510,920 1000,1260 1260,1380
-composed of neurons. Then they
+composed of neurons,| then they
+|然后它们可以获得感觉输入并生成一些类型的输出，
 
 946
 00:26:44,400 --> 00:26:45,975
@@ -5328,19 +5379,20 @@ generate some, some sort of
 948
 00:26:49,600 --> 00:26:51,340
 0,395 395,700 810,1300
-outputs, motor outputs.|
+outputs, [motor] outputs,|
 |
 
 949
 00:26:51,430 --> 00:26:52,305
 0,245 245,365 365,515 515,665 665,875
-And then we went even
-然后我们进行了更深入的研究，我们研究了神经元，单个神经元，是如何相互交流，接收彼此之间的信息的。然后我们得出了一个方程，也就是神经元和突触相互作用的公式，它足够抽象，这样我们就可以进行计算，高效的计算，但同时也有更多关于实际计算如何在大脑中发生的细节。
+and then we went even
+然后我们进行了更深入的研究，
 
 950
 00:26:52,305 --> 00:26:53,280
 0,300 300,525 525,705 705,870 870,975
-deeper than that and we
+deeper than that| and we
+|我们研究了单个神经元，是如何相互交流，
 
 951
 00:26:53,280 --> 00:26:54,855
@@ -5355,32 +5407,37 @@ neurons, communicate with each other
 953
 00:26:56,950 --> 00:26:59,210
 0,290 290,580 870,1270 1380,1780 1860,2260
-to cells, receiving information between
+to cells,| receiving information between
+|接收彼此之间的信息的，
 
 954
 00:26:59,380 --> 00:27:01,080
 0,305 305,610 1110,1385 1385,1535 1535,1700
-each other. And then we
+each other,| and then we
+|然后我们得出了一个方程或公式，
 
 955
 00:27:01,080 --> 00:27:03,255
 0,240 240,510 510,830 940,1340 1840,2175
-arrived at an equation that,
+arrived at an equation that
 
 956
 00:27:03,255 --> 00:27:05,060
 0,225 225,435 435,1115 1225,1515 1515,1805
-or a formulation for the
+or a formulation| for the
+|对于神经元和突触相互作用，
 
 957
 00:27:05,110 --> 00:27:06,770
 0,365 365,605 605,875 875,1055 1055,1660
-interaction of neurons and synapses
+interaction of neurons and synapses,|
+|
 
 958
 00:27:06,940 --> 00:27:08,985
 0,275 275,550 750,1150 1170,1570 1770,2045
-that is abstract enough so
+that is abstract enough, so
+它足够抽象，这样我们就可以进行计算，高效的计算，
 
 959
 00:27:08,985 --> 00:27:10,350
@@ -5390,7 +5447,8 @@ that we can perform computation,
 960
 00:27:10,350 --> 00:27:12,090
 0,330 330,920 1210,1470 1470,1590 1590,1740
-efficient computation, but at the
+efficient computation,| but at the
+|但同时也有更多关于计算如何在大脑中发生的细节，
 
 961
 00:27:12,090 --> 00:27:14,060
@@ -5405,29 +5463,30 @@ of how the actual computation
 963
 00:27:15,780 --> 00:27:17,870
 0,320 580,915 915,1250 1450,1770 1770,2090
-happens in, in, in brains.|
+happens in, in, in brains,|
 |
 
 964
 00:27:18,500 --> 00:27:19,840
 0,290 290,500 500,725 725,905 905,1340
-And not just the threshold
-而不仅仅是门槛或激活。很，啊，啊，我们看到的那种作用。因此，让我们更深入地了解这一点。
+and not just the threshold
+而不仅仅是门槛或激活，我们看到的那种函数。
 
 965
 00:27:19,840 --> 00:27:21,870
 0,285 285,705 705,1040 1240,1635 1635,2030
-or activate. Very, ah, ah,
+or activate, very { -}
 
 966
-00:27:22,130 --> 00:27:23,530
+00:27:22,130 --> 00:27:23,430
 0,260 260,410 410,700 810,1175 1175,1400
 kind of the function that
 
 967
 00:27:23,530 --> 00:27:25,080
 0,260 280,680 790,1035 1035,1275 1275,1550
-we see. So let's get
+we see.| So let's get
+|所以，让我们更深入地了解这个。
 
 968
 00:27:25,250 --> 00:27:27,120
@@ -5438,8 +5497,8 @@ more deeper into that.|
 969
 00:27:27,120 --> 00:27:28,275
 0,225 225,375 375,555 555,860 880,1155
-And we showed that if
-我们展示了，如果你真的对神经网络进行了更多生物学上可信的表示，你就可以获得更多的表现力，你可以用一种更自然的方式来处理记忆。
+And we showed that,| if
+我们展示了，|如果你真的对神经网络进行了更多生物学上可信的表示，
 
 970
 00:27:28,275 --> 00:27:29,900
@@ -5454,12 +5513,14 @@ biologically plausible representation of neural
 972
 00:27:33,120 --> 00:27:34,425
 0,260 490,735 735,855 855,1035 1035,1305
-networks, you can gain more
+networks,| you can gain more
+|你就可以获得更多的表现力，
 
 973
 00:27:34,425 --> 00:27:36,920
 0,545 1165,1440 1440,1715 1735,2115 2115,2495
-expressivity you can handle memory
+expressivity,| you can handle memory
+|你可以用一种更自然的方式来处理记忆，
 
 974
 00:27:36,940 --> 00:27:40,530
@@ -5469,19 +5530,20 @@ in a much more natural
 975
 00:27:40,530 --> 00:27:41,440
 0,290
-way.|
+way,|
 |
 
 976
 00:27:41,750 --> 00:27:43,570
 0,400 540,890 890,1145 1145,1450 1560,1820
-You gain some properties, such
-你得到了一些性质，比如因果关系，这基本上是我们没有讨论过的，任务的因果关系是什么？我们真的能学到这些吗？
+you gain some properties, such
+你得到了一些性质，比如因果关系，
 
 977
 00:27:43,570 --> 00:27:45,505
 0,165 165,920 1090,1425 1425,1665 1665,1935
-as causality and which was
+as causality| and which was
+|这是我们没有讨论过的，
 
 978
 00:27:45,505 --> 00:27:46,825
@@ -5491,64 +5553,74 @@ basically something that we haven't
 979
 00:27:46,825 --> 00:27:48,550
 0,365 745,1110 1110,1455 1455,1575 1575,1725
-discussed and what's the cause
+discussed| and what's the cause
+|任务的因果关系是什么，
 
 980
 00:27:48,550 --> 00:27:49,885
 0,195 195,390 390,600 600,920 1060,1335
-and effect of task? Can
+and effect of task,| can
+|我们真的能学到这些吗，
 
 981
 00:27:49,885 --> 00:27:51,420
 0,210 210,435 435,630 630,935
-we actually learn that?|
+we actually learn that,|
 |
 
 982
 00:27:51,460 --> 00:27:53,300
 0,275 275,545 545,890 890,1190 1190,1840
-You can get to robustness
-你可以达到健壮性，你不需要像大号一样疯狂。在那个体制之外，你可以执行一个生成性的建模，这是啊，我之前描述的啊，你甚至可以进行推断。这意味着你可以，你甚至可以超越你所接受过训练的那种数据。这意味着你可以，你可以退出分销。我们不能做的事情，就像，我们关注的领域是机器人。现实世界，你知道，就像我们所说的混合视野决策，意思是如果你有一个机器人在一个真实的环境中交互，现在如何将这种网络带入啊现实世界。这也是我们研究的重点。
+you can get to robustness|
+你可以达到健壮性，|
 
 983
 00:27:53,590 --> 00:27:54,465
 0,275 275,410 410,620 620,740 740,875
 and you don't need to
+你不需要像大的一样疯狂，
 
 984
 00:27:54,465 --> 00:27:56,910
 0,150 150,455 655,1055 1375,1775 2185,2445
-be crazy like large. The
+be crazy like large,| the
+|在那个机制之外，
 
 985
 00:27:56,910 --> 00:27:58,365
 0,135 135,285 285,560 760,1125 1125,1455
-out of the that regime
+out of the that regime,|
+|
 
 986
 00:27:58,365 --> 00:27:59,805
 0,225 225,435 435,720 720,990 990,1440
 you can perform a generative
+你可以执行一个生成性模型，
 
 987
 00:27:59,805 --> 00:28:02,175
 0,485 685,1020 1020,1290 1290,1625 2125,2370
-modeling which was ah, what
+modeling,| which was, {} what
+|这是我之前描述的，
 
 988
 00:28:02,175 --> 00:28:04,515
 0,210 210,575 715,1115 1135,1535 2095,2340
-I described ah before and
+I described as before| and
+|你甚至可以进行推断，
 
 989
 00:28:04,515 --> 00:28:06,050
 0,120 120,255 255,450 450,675 675,1535
-you can even do extrapolation.
+you can even do extrapolation,|
+|
 
 990
 00:28:06,430 --> 00:28:07,380
 0,275 275,425 425,575 575,770 770,950
-That means you can, you
+that means you can,| you
+这意味着你可以，|你甚至可以超越你所接受过训练的那种数据，
 
 991
 00:28:07,380 --> 00:28:08,790
@@ -5563,27 +5635,32 @@ the kind of data that
 993
 00:28:09,840 --> 00:28:10,760
 0,120 120,240 240,420 420,630 630,920
-you have been trained on.
+you have been trained on,|
+|
 
 994
 00:28:10,870 --> 00:28:11,610
 0,245 245,350 350,455 455,590 590,740
-That means you can, you
+that means you can, you
+这意味着你可以跳出分布，
 
 995
 00:28:11,610 --> 00:28:12,890
 0,120 120,285 285,540 540,885 885,1280
-can go out of distribution.
+can go out of distribution,|
+|
 
 996
 00:28:13,360 --> 00:28:14,630
 0,320 320,575 575,770 770,905 905,1270
-That something that we couldn't
+that something that we couldn't
+我们之前不能做的事情，
 
 997
 00:28:14,770 --> 00:28:16,680
 0,400 420,820 1020,1325 1325,1630 1650,1910
-do and like the, the
+do| and like the, the
+|我们关注的领域是机器人，现实世界，
 
 998
 00:28:16,680 --> 00:28:17,820
@@ -5593,22 +5670,26 @@ area that we were focused
 999
 00:28:17,820 --> 00:28:19,670
 0,380 490,855 855,1260 1260,1515 1515,1850
-on was robotics. Real world,
+on was robotics, real world,|
+|
 
 1000
 00:28:19,690 --> 00:28:20,910
 0,260 260,520 570,875 875,1055 1055,1220
 you know like we call
+比如我们所说的混合视野决策，
 
 1001
 00:28:20,910 --> 00:28:22,610
 0,195 195,500 520,920 1030,1365 1365,1700
-it mixed horizon decision making
+it mixed horizon decision making|
+|
 
 1002
 00:28:22,840 --> 00:28:23,520
 0,245 245,350 350,470 470,575 575,680
 and means if you have
+意思是如果你有一个机器人在一个真实的环境中交互，
 
 1003
 00:28:23,520 --> 00:28:24,975
@@ -5618,22 +5699,25 @@ a robot interacting in the
 1004
 00:28:24,975 --> 00:28:26,300
 0,305 415,660 660,765 765,975 975,1325
-environment in a real setting
+environment in a real setting,|
+|
 
 1005
 00:28:26,530 --> 00:28:27,600
 0,290 290,500 500,695 695,875 875,1070
 now how to bring this
+现在如何将这种网络带入现实世界，
 
 1006
 00:28:27,600 --> 00:28:29,810
 0,150 150,300 300,590 1450,1830 1830,2210
-kind of networks inside ah
+kind of networks inside {
 
 1007
 00:28:30,190 --> 00:28:31,935
 0,400 750,1040 1040,1280 1280,1490 1490,1745
-ah real world. And that's
+-} real world,| and that's
+|这也是我们研究的重点。
 
 1008
 00:28:31,935 --> 00:28:34,070
@@ -5644,20 +5728,17 @@ the focus of our research.|
 1009
 00:28:35,450 --> 00:28:37,120
 0,400
-Um.|
-恩。|
 
 1010
 00:28:37,610 --> 00:28:39,420
 0,320 320,640
-Yeah, so.|
-是啊，所以。|
+Yeah, so,
+是的，所以，这种类型的神经网络的基础是什么，
 
 1011
 00:28:39,490 --> 00:28:40,845
 0,260 260,365 365,610 660,1040 1040,1355
-What are the building blocks
-这种类型的神经网络的基础是什么？我说的基本构件是两个神经元或两个细胞之间的相互作用。对这一过程的一些观察之一。第一个观察是，大脑中两个神经元之间的相互作用是一个连续的时间过程。
+what are the building blocks
 
 1012
 00:28:40,845 --> 00:28:41,880
@@ -5667,7 +5748,8 @@ of this type of neural
 1013
 00:28:41,880 --> 00:28:43,245
 0,260 280,585 585,870 870,1125 1125,1365
-networks? I said the building
+networks,| I said the building
+|我说的基础是两个神经元或两个细胞之间的相互作用，
 
 1014
 00:28:43,245 --> 00:28:44,745
@@ -5682,22 +5764,26 @@ two neurons or two cells
 1016
 00:28:46,050 --> 00:28:47,600
 0,240 240,360 360,620 1060,1305 1305,1550
-with each other. One of
+with each other,| one of
+|对这一过程的一些观察。
 
 1017
 00:28:47,770 --> 00:28:49,250
 0,335 335,670 750,1025 1025,1190 1190,1480
-some observation about this process.
+some observation about this process.|
+|
 
 1018
 00:28:49,720 --> 00:28:50,985
-0,245 245,455 455,800 800,1040 1040,1265
-The first observation is that
+0,245 245,455 455,800 800,1040 1040,1265T
+The first observation is that,|
+第一个观察是，|
 
 1019
 00:28:50,985 --> 00:28:53,000
 0,365 715,960 960,1155 1155,1505 1615,2015
 the kind of interaction between
+大脑中两个神经元之间的相互作用是一个连续的时间过程，
 
 1020
 00:28:53,140 --> 00:28:54,120
@@ -5707,19 +5793,20 @@ two neurons in the brain
 1021
 00:28:54,120 --> 00:28:55,700
 0,180 180,405 405,750 750,1130 1180,1580
-is a continuous time process.|
+is a continuous time process,|
 |
 
 1022
 00:28:56,620 --> 00:28:58,560
 0,400 600,1145 1145,1490 1490,1730 1730,1940
-So that's something to account
-所以这是需要解释的，所以我们不是在谈论离散过程。
+so that's something to account
+所以这是需要解释的，
 
 1023
 00:28:58,560 --> 00:28:59,940
 0,285 285,495 495,1080 1080,1185 1185,1380
-for, so we're not talking
+for,| so we're not talking
+|所以我们不是在谈论离散过程。
 
 1024
 00:28:59,940 --> 00:29:01,780
@@ -5731,22 +5818,25 @@ about discrete processes.|
 00:29:01,880 --> 00:29:03,355
 0,320 320,485 485,620 620,860 860,1475
 Another thing is that synaptic
-另一件事是现在神经网络中的突触释放，当你相互连接节点时，你用标量权重将它们连接起来，对吗？
+另一件事是突触释放，
 
 1026
 00:29:03,355 --> 00:29:04,600
 0,365 475,765 765,915 915,1035 1035,1245
-release right now in neural
+release,| right now in neural
+|现在在神经网络种，
 
 1027
 00:29:04,600 --> 00:29:05,620
 0,240 240,465 465,630 630,855 855,1020
-networks, when you connect to
+networks,| when you connect to
+|当你相互连接节点时，
 
 1028
 00:29:05,620 --> 00:29:06,745
 0,480 480,585 585,705 705,900 900,1125
-nodes with each other, you
+nodes with each other,| you
+|你用标量权重将它们连接起来，
 
 1029
 00:29:06,745 --> 00:29:07,660
@@ -5756,19 +5846,20 @@ connect them with a scalar
 1030
 00:29:07,660 --> 00:29:09,140
 0,290 460,860
-weight, right?|
+weight, right,|
 |
 
 1031
 00:29:09,140 --> 00:29:10,655
 0,290 940,1185 1185,1275 1275,1380 1380,1515
-Now, what if I tell
-现在，如果我告诉你，当你，当两个神经元相互作用时，它不仅是一个标量速率，而且实际上是一个概率分布，一个细胞产生的多少种神经递质将结合到另一个细胞的通道上，以及它如何真正激活另一个细胞？因此，节点之间的通信是非常复杂的，这是智能的基本构建块之一，我们实际上已经在人工神经网络中抽象出等待、缩放的方式。
+now, what if I tell
+现在，如果我告诉你，
 
 1032
 00:29:10,655 --> 00:29:11,525
 0,120 120,255 255,420 420,630 630,870
-you that when you, when
+you that,| when you, when
+|当两个神经元相互作用时，
 
 1033
 00:29:11,525 --> 00:29:12,530
@@ -5778,17 +5869,20 @@ two neurons interact with each
 1034
 00:29:12,530 --> 00:29:14,020
 0,290 490,825 825,945 945,1155 1155,1490
-other, it's not only a
+other,| it's not only a
+|它不是一个标量权重，
 
 1035
 00:29:14,040 --> 00:29:15,545
 0,455 455,730 960,1220 1220,1325 1325,1505
-scalar rate, but there is
+scalar weight,| but there is
+|而是一个概率分布，
 
 1036
 00:29:15,545 --> 00:29:17,615
 0,180 180,330 330,875 955,1355 1735,2070
-actually a probability distribution that
+actually a probability distribution,| that
+|一个细胞产生的多少种神经递质
 
 1037
 00:29:17,615 --> 00:29:20,120
@@ -5798,7 +5892,8 @@ how many kind of neurotransmitters
 1038
 00:29:20,120 --> 00:29:22,070
 0,290 400,795 795,1110 1110,1430 1660,1950
-generated from one cell is
+generated from one cell| is
+|将结合到另一个细胞的通道上，
 
 1039
 00:29:22,070 --> 00:29:23,320
@@ -5808,17 +5903,20 @@ going to bind to the
 1040
 00:29:23,490 --> 00:29:24,850
 0,380 380,650 650,785 785,995 995,1360
-channels of the other cell
+channels of the other cell|
+|
 
 1041
 00:29:24,900 --> 00:29:26,105
 0,290 290,485 485,665 665,875 875,1205
 and how it can actually
+以及它如何真正激活另一个细胞，
 
 1042
 00:29:26,105 --> 00:29:28,160
 0,515 1165,1410 1410,1605 1605,1860 1860,2055
-activate the other cell? So
+activate the other cell,| so
+|所以，节点之间的通信是非常复杂的，
 
 1043
 00:29:28,160 --> 00:29:29,720
@@ -5828,7 +5926,8 @@ the communication between the nodes
 1044
 00:29:29,720 --> 00:29:31,175
 0,270 270,480 480,1110 1110,1275 1275,1455
-is very sophisticated and it's
+is very sophisticated| and it's
+|这是智能的基本构建块之一，
 
 1045
 00:29:31,175 --> 00:29:32,270
@@ -5838,7 +5937,8 @@ one of the fundamental building
 1046
 00:29:32,270 --> 00:29:34,940
 0,350 520,870 870,1220 1720,2120 2410,2670
-blocks of intelligence which we
+blocks of intelligence,| which we
+|我们已经在人工神经网络中抽象出标量权重的方式。
 
 1047
 00:29:34,940 --> 00:29:36,640
@@ -5848,24 +5948,25 @@ have actually abstracted way in
 1048
 00:29:37,290 --> 00:29:38,765
 0,320 320,560 560,800 800,1085 1085,1475
-artificial neural network to await,
+artificial neural network to {a,weight},
 
 1049
 00:29:38,765 --> 00:29:40,040
 0,315 315,570 570,905
-to scale rate.|
+to scale weight.|
 |
 
 1050
 00:29:40,540 --> 00:29:42,870
 0,400 1020,1420 1470,1870 1920,2195 2195,2330
-Now, another ah point is
-现在，另一个啊点是，我们在大脑中有大量的并行化和大量的重复、反馈、记忆和稀疏的那种，啊，啊，结构。而这正是我们所缺失的。
+Now, another {} point is
+现在，另一个点是，
 
 1051
 00:29:42,870 --> 00:29:45,180
 0,135 135,255 255,450 450,800 1570,2310
-that we have massive parallelization
+that,| we have massive parallelization
+|我们在大脑中有大量的并行化和大量的重复、反馈、记忆和稀疏的那种结构，
 
 1052
 00:29:45,180 --> 00:29:47,150
@@ -5880,24 +5981,25 @@ and memory and sparsity kind
 1054
 00:29:49,290 --> 00:29:50,930
 0,165 165,390 390,710 730,1130 1240,1640
-of, ah, ah ah, structures
+of { - -} structures
 
 1055
 00:29:51,250 --> 00:29:52,740
 0,305 305,610 870,1130 1130,1325 1325,1490
-in brains. And that's something
+in brains,| and that's something
+|而这正是我们所缺失的，
 
 1056
 00:29:52,740 --> 00:29:55,080
 0,165 165,300 300,570 570,950
-that is missing from.|
+that is missing from,|
 |
 
 1057
 00:29:55,530 --> 00:29:57,700
 0,400 960,1295 1295,1595 1595,1865 1865,2170
-Ah, not entirely but but
-啊，不是完全的，但不知何故，它从人工网络中消失了。我们有一点偏离了。现在我想说的是，如果我们整合所有这些构件，我们可能会得到更好的表示，学习更灵活的模型和健壮的，同时能够解释这些结果和这一点，因为第一个原因，整个过程是建立在连续时间过程之上的，让我们进入连续时间过程，就神经网络而言，连续时间过程。
+{} not entirely, but, but
+不是完全的，但一些从人工网络中消失了，
 
 1058
 00:29:57,780 --> 00:29:59,045
@@ -5907,37 +6009,44 @@ somehow it's missing from the
 1059
 00:29:59,045 --> 00:30:00,650
 0,335 355,755 775,1050 1050,1440 1440,1605
-artificial network. We deviated a
+artificial network,| we deviated a
+|我们有一点偏离了。
 
 1060
 00:30:00,650 --> 00:30:02,210
 0,135 135,410 610,1010 1210,1455 1455,1560
-little bit. Now what I
+little bit.| Now what I
+|现在我想说的是，
 
 1061
 00:30:02,210 --> 00:30:03,245
 0,135 135,345 345,555 555,735 735,1035
-want to argue is that
+want to argue is that,|
+|
 
 1062
 00:30:03,245 --> 00:30:04,595
 0,270 270,495 495,945 945,1140 1140,1350
 if we incorporate all these
+如果我们整合所有这些构件，
 
 1063
 00:30:04,595 --> 00:30:06,605
 0,300 300,695 1075,1365 1365,1655 1705,2010
-building blocks we might get
+building blocks,| we might get
+|我们可能会得到更好的表示，
 
 1064
 00:30:06,605 --> 00:30:08,510
 0,305 325,660 660,1290 1290,1605 1605,1905
-into better representation, learning more
+into better representation,| learning more
+|学习更灵活的模型和健壮性，
 
 1065
 00:30:08,510 --> 00:30:10,400
 0,320 370,705 705,990 990,1340 1630,1890
-flexible models and robust and
+flexible models and robust| and
+|同时能够解释这些结果，
 
 1066
 00:30:10,400 --> 00:30:11,015
@@ -5947,22 +6056,25 @@ at the same time be
 1067
 00:30:11,015 --> 00:30:12,490
 0,165 165,420 420,750 750,1110 1110,1475
-able to interpret those results
+able to interpret those results|
+|
 
 1068
 00:30:12,750 --> 00:30:14,530
 0,305 305,610 930,1235 1235,1460 1460,1780
-and this ah and for
+and this {} and for
+因为第一个原因，
 
 1069
 00:30:14,730 --> 00:30:15,950
 0,305 305,470 470,665 665,980 980,1220
-because the first reason that
+because the first reason,| that
+|整个过程是建立在连续时间过程之上的，
 
 1070
 00:30:15,950 --> 00:30:17,590
 0,105 105,285 285,615 615,1010 1240,1640
-the whole process was ah,
+the whole process was {}
 
 1071
 00:30:17,790 --> 00:30:18,950
@@ -5972,17 +6084,20 @@ build on top of continuous
 1072
 00:30:18,950 --> 00:30:20,450
 0,225 225,530 610,990 990,1230 1230,1500
-time processes, let's get get
+time processes,| let's get get
+|让我们进入连续时间过程，
 
 1073
 00:30:20,450 --> 00:30:21,790
 0,210 210,510 510,825 825,1050 1050,1340
-into this continuous time processes
+into this continuous time processes,|
+|
 
 1074
 00:30:22,200 --> 00:30:23,300
 0,305 305,485 485,710 710,935 935,1100
 where we are in terms
+就神经网络而言，连续时间过程。
 
 1075
 00:30:23,300 --> 00:30:25,295
@@ -5999,17 +6114,19 @@ processes.|
 00:30:26,360 --> 00:30:28,585
 0,400 1140,1540 1650,1955 1955,2090 2090,2225
 So here I'm showing you
-这里我给你们展示一个方程式，所以f是一个神经网络。它可以是一个五层网络，六层神经网络，完全相连。
+这里我给你们展示一个方程式，
 
 1078
 00:30:28,585 --> 00:30:30,580
 0,165 165,485 925,1215 1215,1505 1735,1995
-an equation, so f is
+an equation,| so f is
+|所以 f 是一个神经网络，
 
 1079
 00:30:30,580 --> 00:30:31,840
 0,120 120,315 315,590 850,1125 1125,1260
-a neural network. It could
+a neural network,| it could
+|它可以是一个五层，六层神经网络，完全相连，
 
 1080
 00:30:31,840 --> 00:30:33,100
@@ -6024,19 +6141,19 @@ six layer neural network, fully
 1082
 00:30:34,900 --> 00:30:35,940
 0,350
-connected.|
+connected,|
 |
 
 1083
 00:30:35,940 --> 00:30:38,610
 0,150 150,345 345,680 1330,1730 2350,2670
-But this f that has
-但是这个f有n层，有k，然后它有一定的激活函数。
+but this f that has
+但是这个 f 有 n 层，宽度 k ，然后它有一个激活函数，
 
 1084
 00:30:38,610 --> 00:30:40,910
 0,225 225,680 1000,1380 1380,1760 1900,2300
-n layers and with k,
+n layers and width k,
 
 1085
 00:30:41,350 --> 00:30:42,480
@@ -6046,19 +6163,20 @@ and then it has a
 1086
 00:30:42,480 --> 00:30:44,340
 0,260 280,720 720,1070
-certain activation function.|
+certain activation function,|
 |
 
 1087
 00:30:44,350 --> 00:30:46,005
 0,275 275,550 990,1340 1340,1460 1460,1655
-It has it a function
-它有一个接收输入的功能。它接收来自其他细胞的循环连接。
+it has, it's a function
+它是一个接收输入的函数，
 
 1088
 00:30:46,005 --> 00:30:47,840
 0,315 315,840 840,1185 1185,1425 1425,1835
-that receives input. It receives
+that receives input,| it receives
+|它接收来自其他细胞的循环连接，
 
 1089
 00:30:48,010 --> 00:30:49,545
@@ -6068,31 +6186,32 @@ recurrent connections from the other
 1090
 00:30:49,545 --> 00:30:51,560
 0,365
-cells.|
+cells,|
 |
 
 1091
 00:30:51,560 --> 00:30:53,495
 0,165 165,590 730,1560 1560,1800 1800,1935
-It receives exogenous input as
-它也接受外部输入，比如i，并且它是由TETA参数化的。
+it receives exogenous input as
+它也接受外部输入，比如这个 I ，
 
 1092
 00:30:53,495 --> 00:30:55,280
 0,275 295,600 600,810 810,1115 1525,1785
-well, like this I, and
+well, like this I,| and
+|并且它是由 θ 参数化的，
 
 1093
 00:30:55,280 --> 00:30:57,130
 0,105 105,255 255,795 795,1130 1270,1850
-it is parameterized by teta.|
+it is parameterized by θ,|
 |
 
 1094
 00:30:57,780 --> 00:30:59,975
 0,260 260,485 485,830 830,1090 1860,2195
-Now this neural network is
-现在，这个神经网络正在将隐藏状态的导数参数化，而不是隐藏状态本身。
+now this neural network is
+这个神经网络将隐藏状态的导数参数化，而不是隐藏状态本身，
 
 1095
 00:30:59,975 --> 00:31:02,270
@@ -6107,29 +6226,32 @@ hidden state and not hidden
 1097
 00:31:03,815 --> 00:31:05,160
 0,375 375,755
-state itself.|
+state itself,|
 |
 
 1098
 00:31:05,170 --> 00:31:07,080
 0,350 350,890 890,1250 1250,1610 1610,1910
-That builds a continuous time
-这建立了一个连续时间的神经网络。现在，如果你有一个连续的时间过程，这意味着就像神经网络的更新或输出一样，实际上是生成隐藏状态的导数的更新，而不是隐藏状态本身。哪种类型的神经网络可以产生我们以前从未探索过的连续时间动力学？
+that builds a continuous time
+这建立了一个连续时间的神经网络，
 
 1099
 00:31:07,080 --> 00:31:09,045
 0,240 240,500 1570,1815 1815,1890 1890,1965
-neural network. Now, if you
+neural network,| now, if you
+|现在，如果你有一个连续的时间过程，
 
 1100
 00:31:09,045 --> 00:31:10,520
 0,135 135,375 375,675 675,1025 1075,1475
-have a continuous time process,
+have a continuous time process,|
+|
 
 1101
 00:31:10,690 --> 00:31:12,420
 0,260 260,395 395,670 1110,1445 1445,1730
 that means like the updates
+这意味着神经网络的更新或输出，
 
 1102
 00:31:12,420 --> 00:31:13,260
@@ -6139,7 +6261,8 @@ or the output of a
 1103
 00:31:13,260 --> 00:31:14,910
 0,180 180,440 700,1065 1065,1305 1305,1650
-neural network is actually generating
+neural network| is actually generating
+|是生成隐藏状态的导数的更新，而不是隐藏状态本身，
 
 1104
 00:31:14,910 --> 00:31:17,235
@@ -6154,7 +6277,8 @@ of the hidden state and
 1106
 00:31:18,045 --> 00:31:19,815
 0,165 165,420 420,765 765,1145 1495,1770
-not hidden state itself. What
+not hidden state itself,| what
+|你可以给出[连续时间动态]，
 
 1107
 00:31:19,815 --> 00:31:21,150
@@ -6164,24 +6288,26 @@ kind of you can give
 1108
 00:31:21,150 --> 00:31:22,710
 0,195 195,420 420,690 690,1005 1005,1560
-rise to continuous time dynamics
+rise to continuous time dynamics|
+|
 
 1109
 00:31:22,710 --> 00:31:23,670
 0,210 210,420 420,630 630,840 840,960
 with neural networks that we
+对于我们以前从未探索过的神经网络。
 
 1110
 00:31:23,670 --> 00:31:25,160
 0,345 345,615 615,920
-haven't explored before?|
+haven't explored before.|
 |
 
 1111
 00:31:25,160 --> 00:31:26,510
 0,300 300,510 510,770 820,1140 1140,1350
 Now, what does this mean
-那么，就像神经网络一样，这意味着什么呢？我们来看看这张，这张图片。你们当中有多少人听说过剩余网络？
+那么，对于神经网络，这意味着什么，
 
 1112
 00:31:26,510 --> 00:31:27,905
@@ -6191,22 +6317,24 @@ in terms of like neural
 1113
 00:31:27,905 --> 00:31:29,530
 0,275 775,1125 1125,1245 1245,1365 1365,1625
-networks? Let's look at this,
+networks,| let's look at this,
+|我们来看看这张图片，
 
 1114
 00:31:30,540 --> 00:31:32,435
 0,290 290,580 1200,1460 1460,1655 1655,1895
-this image. How many of
+this image,| how many of
+|你们当中有多少人听说过残差网络？
 
 1115
 00:31:32,435 --> 00:31:33,605
 0,165 165,300 300,495 495,705 705,1170
-you have heard about residual
+you have heard about Residual
 
 1116
 00:31:33,605 --> 00:31:35,200
 0,275
-networks?|
+Networks?|
 |
 
 1117
