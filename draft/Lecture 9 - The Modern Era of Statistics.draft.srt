@@ -6340,8 +6340,8 @@ Networks?|
 1117
 00:31:38,220 --> 00:31:39,905
 0,275 275,680 680,935 935,1330 1380,1685
-Okay, residual networks are deep
-好的，残差网络是深度神经网络，有一种SK连接，好吗？就像从一层到另一层，你基本上是SK连接，SK连接的模型是这样的，H T加1等于H T加f，随便什么。
+Okay, Residual Networks are deep
+好的，残差网络是深度神经网络有一种跳过连接，
 
 1118
 00:31:39,905 --> 00:31:41,285
@@ -6351,22 +6351,25 @@ neural networks that have a
 1119
 00:31:41,285 --> 00:31:43,120
 0,135 135,330 330,615 615,965 1435,1835
-kind of sk connections, okay?
+kind of skip connections, okay,|
+|
 
 1120
 00:31:43,140 --> 00:31:44,225
 0,275 275,455 455,650 650,890 890,1085
-Like from one layer to
+like from one layer to
+比如从一层到另一层，你可以跳过连接，
 
 1121
 00:31:44,225 --> 00:31:45,430
 0,150 150,360 360,660 660,930 930,1205
-the other one you basically
+the other one, you basically
 
 1122
 00:31:45,540 --> 00:31:47,210
 0,335 335,670 990,1235 1235,1415 1415,1670
-sk connections and that sk
+skip connections| and that skip
+|跳过连接的模型是这样的，
 
 1123
 00:31:47,210 --> 00:31:48,340
@@ -6376,24 +6379,25 @@ connection is model by this
 1124
 00:31:48,540 --> 00:31:49,925
 0,395 395,710 710,920 920,1130 1130,1385
-equation, H T plus one
+equation,| {ht+1 - - -}
+|ht+1 等于 ht 加上 f 什么，
 
 1125
 00:31:49,925 --> 00:31:51,035
 0,270 270,450 450,630 630,870 870,1110
-equal to H T plus
+equal to {ht -} plus
 
 1126
 00:31:51,035 --> 00:31:52,900
 0,225 225,515 955,1355
-f of whatever.|
+f of whatever,|
 |
 
 1127
 00:31:52,910 --> 00:31:56,215
 0,290 290,820 1140,1415 1415,1690 2610,3305
-That HP is basically resembling
-惠普基本上类似于一种跳过连接。
+that ht is basically resembling
+ht 类似于一种跳过连接。
 
 1128
 00:31:56,215 --> 00:31:58,820
@@ -6405,12 +6409,13 @@ basically a skip connection.|
 00:31:58,820 --> 00:32:00,490
 0,105 105,350 610,1010 1120,1395 1395,1670
 And now here on the
-现在在y轴上，我们看到的是神经网络的深度，每个点，这里的每个黑点，显示了系统中发生的计算。所以当你有一个神经网络是层级的，让我们称之为层级，因为照片实际上显示了垂直轴上的层。所以，如果你看着垂直轴，你会看到计算发生在每一层。
+现在在 y 轴上，
 
 1130
 00:32:00,510 --> 00:32:02,200
 0,305 305,880 900,1205 1205,1400 1400,1690
-y axis, what we see,
+y axis,| what we see,
+|我们看到的是神经网络的深度，
 
 1131
 00:32:02,250 --> 00:32:03,155
@@ -6420,12 +6425,14 @@ we see the depth of
 1132
 00:32:03,155 --> 00:32:04,810
 0,225 225,485 745,1020 1020,1275 1275,1655
-neural network and each dot,
+neural network| and each dot,
+|这里的每个黑点，
 
 1133
 00:32:05,220 --> 00:32:09,050
 0,400 1860,2180 2180,2480 2480,2860 3480,3830
-each black dot here, shows
+each black dot here,| shows
+|显示了系统中发生的计算，
 
 1134
 00:32:09,050 --> 00:32:11,015
@@ -6435,7 +6442,8 @@ a computation that happened in
 1135
 00:32:11,015 --> 00:32:12,290
 0,120 120,360 360,725 865,1140 1140,1275
-the system. So when you
+the system,| so when you
+|所以当你有一个神经网络是层级的，
 
 1136
 00:32:12,290 --> 00:32:13,205
@@ -6445,12 +6453,14 @@ have a neural network that
 1137
 00:32:13,205 --> 00:32:14,585
 0,225 225,540 540,825 825,1050 1050,1380
-is layer wise, like let's
+is layer wise,| like let's
+|我们称之为层级，
 
 1138
 00:32:14,585 --> 00:32:15,755
 0,195 195,345 345,570 570,885 885,1170
-call it layer wise, because
+call it layer wise,| because
+|因为图片显示了垂直轴上的层，
 
 1139
 00:32:15,755 --> 00:32:17,255
@@ -6460,17 +6470,20 @@ the photos actually showing the
 1140
 00:32:17,255 --> 00:32:19,120
 0,395 475,750 750,960 960,1260 1260,1865
-layers in the vertical axis.
+layers in the vertical axis,|
+|
 
 1141
 00:32:19,470 --> 00:32:20,225
 0,230 230,305 305,470 470,650 650,755
-So if you look at
+so if you look at
+所以，如果你查看垂直轴，
 
 1142
 00:32:20,225 --> 00:32:21,380
 0,105 105,345 345,825 825,990 990,1155
-the vertical axis, you see
+the vertical axis,| you see
+|你会看到计算发生在每一层，
 
 1143
 00:32:21,380 --> 00:32:22,910
@@ -6480,14 +6493,14 @@ that computation happen at each
 1144
 00:32:22,910 --> 00:32:23,700
 0,320
-layer.|
+layer,|
 |
 
 1145
 00:32:24,500 --> 00:32:25,780
 0,335 335,605 605,875 875,1055 1055,1280
-Because as the input is
-因为输入是从第一层到第二层，然后是下一层，下一层，但是如果你有一个连续的过程，连续的过程等价于这个过程，你有能力在矢量场中的任意点计算。所以如果你，如果你知道什么是微分方程和am，怎么，怎么，他们基本上把整个空间变成一个矢量场，你怎么基本上去，啊，你知道，你，你可以做自适应计算，对吗？这是连续时间过程的巨大好处之一。
+because as the input is
+因为输入是从第一层到第二层，
 
 1146
 00:32:25,780 --> 00:32:27,160
@@ -6497,7 +6510,8 @@ computed from the first layer
 1147
 00:32:27,160 --> 00:32:28,120
 0,150 150,255 255,465 465,750 750,960
-to the second one and
+to the second one| and
+|然后是下一层，下一层，
 
 1148
 00:32:28,120 --> 00:32:29,380
@@ -6507,17 +6521,20 @@ then the next one, next
 1149
 00:32:29,380 --> 00:32:30,685
 0,320 670,915 915,1020 1020,1140 1140,1305
-one, but if you have
+one,| but if you have
+|但是如果你有一个连续的过程，
 
 1150
 00:32:30,685 --> 00:32:32,850
 0,305 325,725 745,1145 1465,1815 1815,2165
-a continuous process, continuous process
+a continuous process,| continuous process
+|连续的过程等于这个过程，
 
 1151
 00:32:32,960 --> 00:32:34,735
 0,400 450,695 695,830 830,1120 1500,1775
-equivalent to this process, you
+equivalent to this process,| you
+|你有能力在矢量场中的任意点计算，
 
 1152
 00:32:34,735 --> 00:32:36,565
@@ -6532,7 +6549,8 @@ at an arbitrary point in
 1154
 00:32:38,860 --> 00:32:40,195
 0,150 150,435 435,800 1000,1245 1245,1335
-a vector field. So if
+a vector field,| so if
+|所以如果你知道什么是微分方程，
 
 1155
 00:32:40,195 --> 00:32:40,945
@@ -6542,7 +6560,8 @@ you, if you know what
 1156
 00:32:40,945 --> 00:32:43,260
 0,210 210,780 780,1115 1555,1935 1935,2315
-are differential equations and am,
+are differential equations| and {}
+|他们如何把整个空间变成一个矢量场，
 
 1157
 00:32:43,430 --> 00:32:44,520
@@ -6557,12 +6576,14 @@ change the entire space into
 1159
 00:32:46,435 --> 00:32:48,535
 0,335 595,990 990,1355 1645,1935 1935,2100
-a vector field, how can
+a vector field,| how can
+|你怎么去，
 
 1160
 00:32:48,535 --> 00:32:50,500
 0,120 120,365 475,875 985,1385 1705,1965
-you basically go, ah, you
+you basically go,| {} you
+|你可以做自适应计算，
 
 1161
 00:32:50,500 --> 00:32:51,580
@@ -6572,7 +6593,8 @@ know, you, you can do
 1162
 00:32:51,580 --> 00:32:53,830
 0,390 390,950 1270,1670 1750,2025 2025,2250
-adaptive computation, okay? And that's
+adaptive computation, okay,| and that's
+|这是连续时间过程的巨大好处之一。
 
 1163
 00:32:53,830 --> 00:32:55,105
@@ -6589,29 +6611,31 @@ of continuous time processes.|
 00:32:57,320 --> 00:32:58,720
 0,400 660,935 935,1085 1085,1235 1235,1400
 Now, in terms of things
-现在，就你们以前见过的东西来说，标准的递归神经网络。
+现在，就你们以前见过的东西来说，
 
 1166
 00:32:58,720 --> 00:32:59,610
 0,150 150,240 240,375 375,585 585,890
-that you have seen before,
+that you have seen before,|
+|
 
 1167
 00:32:59,720 --> 00:33:02,180
 0,335 335,785 785,950 950,1240
-standard recurring neural networks.|
-|
+standard recurring neural networks,|
+标准的递归神经网络，|
 
 1168
 00:33:02,420 --> 00:33:03,940
 0,290 290,580 660,920 920,1175 1175,1520
-You had the lecture here,
-你在这里讲过，所以神经网络f，基本上是计算隐藏状态的下一步。因此，这是UPD下一步的一种信徒式的过程。
+you had the lecture here,|
+你在这里上过课，|
 
 1169
 00:33:03,940 --> 00:33:05,430
 0,350 460,720 720,945 945,1155 1155,1490
 so a neural network f
+所以神经网络 f 计算隐藏状态的下一步，
 
 1170
 00:33:05,930 --> 00:33:07,315
@@ -6621,29 +6645,31 @@ is basically computes the next
 1171
 00:33:07,315 --> 00:33:08,965
 0,395 655,945 945,1095 1095,1320 1320,1650
-step of the hidden state.
+step of the hidden state,|
+|
 
 1172
 00:33:08,965 --> 00:33:10,315
 0,195 195,330 330,420 420,1110 1110,1350
-So it's a discized kind
+so, it's a [] kind
+所以，它是[]下一步的一种[]过程，
 
 1173
 00:33:10,315 --> 00:33:11,950
 0,180 180,485 745,1125 1125,1440 1440,1635
-of process of upd the
+of process of [] the
 
 1174
 00:33:11,950 --> 00:33:13,160
 0,240 240,620
-next step.|
+next step,|
 |
 
 1175
 00:33:13,160 --> 00:33:14,555
 0,120 120,390 390,800 880,1185 1185,1395
-A neural ode updates the
-神经颂歌通过这样的神经网络来更新状态。
+and neural ODE updates the
+神经 ODE 通过这样的神经网络来更新状态，
 
 1176
 00:33:14,555 --> 00:33:15,520
@@ -6653,19 +6679,20 @@ state with a neural network
 1177
 00:33:15,540 --> 00:33:16,900
 0,290 290,580
-like that.|
+like that,|
 |
 
 1178
 00:33:16,900 --> 00:33:18,400
 0,380 640,885 885,1050 1050,1290 1290,1500
-Eh, in a continuous time
-呃，以连续时间的方式。然后这个微分方程有一个更好，更稳定的版本，叫做连续时间或C，T，R，N，N循环网络，在连续时间循环网络中，它们有一个衰减因子。所以这个微分是一个线性的O，D或微分方程，基本上描述了空气的动力学.
+{} in a continuous time
+以连续时间的方式，
 
 1179
 00:33:18,400 --> 00:33:19,735
 0,290 670,945 945,1095 1095,1215 1215,1335
-fashion. And then there is
+fashion,| and then there is
+|然后这个微分方程有一个更好，更稳定的版本，
 
 1180
 00:33:19,735 --> 00:33:22,840
@@ -6675,7 +6702,8 @@ a better, more stable version
 1181
 00:33:22,840 --> 00:33:24,565
 0,225 225,405 405,990 990,1310 1480,1725
-of this differential equation that
+of this differential equation,| that
+|叫做连续时间或 CTRNN 循环网络，
 
 1182
 00:33:24,565 --> 00:33:26,260
@@ -6685,54 +6713,58 @@ is called continuous time or
 1183
 00:33:26,260 --> 00:33:27,190
 0,225 225,390 390,555 555,690 690,930
-C T R N N
+{CTRNN - - - -}
 
 1184
 00:33:27,190 --> 00:33:29,155
 0,495 495,890 1120,1485 1485,1770 1770,1965
-recur networks there continuous time
+[recur] networks,| there continuous time
+|在连续时间循环网络中，
 
 1185
 00:33:29,155 --> 00:33:30,850
 0,360 360,725 805,1205 1315,1575 1575,1695
-recur networks where they have
+recur networks where,| they have
+|它们有一个衰减因子，
 
 1186
 00:33:30,850 --> 00:33:32,200
 0,120 120,585 585,890 940,1200 1200,1350
-a damping factor. So that
+a damping factor,| so that
+|所以这个微分是一个线性的 ODE 或微分方程，
 
 1187
 00:33:32,200 --> 00:33:34,530
 0,570 570,840 840,1310 1720,2025 2025,2330
-differential a linear O D
+differential a linear {ODE -}
 
 1188
 00:33:34,790 --> 00:33:37,330
 0,350 350,890 890,1210 1620,2000 2000,2540
-or differential equation that describes
+or differential equation,| that describes
+|描述了神经网络的动态性，
 
 1189
 00:33:37,330 --> 00:33:38,730
 0,360 360,600 600,990 990,1140 1140,1400
-basically the dynamics of air.|
-|
+basically the dynamics of them,
 
 1190
 00:33:39,260 --> 00:33:40,340
 0,330 330,600 600,765 765,885 885,1080
-Ah, ah, of a neural
-啊，啊，一个神经网络的，隐藏状态的神经网络。那么在什么样的，什么样的，啊，福利方面呢？让我们看看上图，这些是结构图。
+{ -} of a neural
 
 1191
 00:33:40,340 --> 00:33:42,470
 0,260 1090,1470 1470,1725 1725,1905 1905,2130
-network, hidden state of neural
+network,| hidden state of neural
+|神经网络的隐藏状态。
 
 1192
 00:33:42,470 --> 00:33:44,080
 0,260 610,945 945,1170 1170,1335 1335,1610
-network. Now, in terms of
+network.| Now, in terms of
+|现在，在你会获得什么样的好处方面，
 
 1193
 00:33:44,100 --> 00:33:45,275
@@ -6747,44 +6779,48 @@ of, ah, benefits will you
 1195
 00:33:46,520 --> 00:33:47,825
 0,290 610,945 945,1050 1050,1155 1155,1305
-get? Let's look at the
+get,| let's look at the
+|让我们看看最上面的图，
 
 1196
 00:33:47,825 --> 00:33:49,510
 0,210 210,515 565,825 825,960 960,1685
-top one, these are thestruction
+top one,| these are thestruction
+|这些是从对应于螺旋动力学的数据数据结构图，
 
 1197
 00:33:49,620 --> 00:33:50,660
 0,430
-plots.|
-|
+plots
 
 1198
 00:33:50,660 --> 00:33:53,630
 0,290 670,1070 1300,1700 1840,2220 2220,2970
-From ah data data corresponding
-从对应于螺旋动力学的数据数据，如果你有一个二维神经网络，这种螺旋动力学能够，你知道，它，你有一种前卫的插补。
+from {} data data corresponding
 
 1199
 00:33:53,630 --> 00:33:55,360
 0,345 345,555 555,705 705,1125 1125,1730
-on to a spiral dynamics,
+on to a spiral dynamics,|
+|
 
 1200
 00:33:55,710 --> 00:33:56,920
 0,260 260,380 380,485 485,590 590,1210
 if you have a disized
+如果你有一个二维神经网络，
 
 1201
 00:33:57,150 --> 00:33:59,480
 0,350 350,610 1020,1385 1385,1805 1805,2330
-neural network, this spiral dynamics
+neural network,| this spiral dynamics
+|这种螺旋动力学能够，
 
 1202
 00:33:59,480 --> 00:34:00,755
 0,255 255,435 435,660 660,1010 1030,1275
-is being able to, you
+is being able to,| you
+|你有一种[前卫的插补]，
 
 1203
 00:34:00,755 --> 00:34:02,075
@@ -6799,24 +6835,26 @@ kind of interpolation that you
 1205
 00:34:03,065 --> 00:34:04,600
 0,180 180,360 360,480 480,935
-have kind of edgy.|
+have kind of [edgy],|
 |
 
 1206
 00:34:04,600 --> 00:34:05,320
 0,225 225,330 330,435 435,525 525,720
-But if you have a
-但如果你有一个连续的时间过程，它实际上可以非常顺利地计算，甚至可以推广到这个看不见的区域，这是这个的红色部分。正如我们在这里看到的，正常的需求网络错过了这种螺旋式的动态。所以在连续的时间过程中，相信你只能得到越来越好的表现。
+but if you have a
+但是如果你有一个连续的时间过程，
 
 1207
 00:34:05,320 --> 00:34:07,195
 0,300 300,555 555,860 1270,1635 1635,1875
-continuous time process, it actually
+continuous time process,| it actually
+|它可以非常顺利地计算，
 
 1208
 00:34:07,195 --> 00:34:08,905
 0,150 150,510 510,810 810,1350 1350,1710
-can compute very smoothly and
+can compute very smoothly| and
+|甚至可以推广到这个看不见的区域，
 
 1209
 00:34:08,905 --> 00:34:10,255
@@ -6831,17 +6869,20 @@ to the unseen area of
 1211
 00:34:11,695 --> 00:34:12,550
 0,180 180,315 315,450 450,615 615,855
-this, which is the red
+this,| which is the red
+|这个的红色部分，
 
 1212
 00:34:12,550 --> 00:34:13,870
 0,225 225,375 375,650 880,1155 1155,1320
-part of this. As we
+part of this,| as we
+|正如我们在这里看到的，
 
 1213
 00:34:13,870 --> 00:34:15,535
 0,210 210,530 790,1035 1035,1280 1300,1665
-see here, the normal require
+see here,| the normal require
+|正常的需求网络错过了这种螺旋式的动态，
 
 1214
 00:34:15,535 --> 00:34:17,815
@@ -6851,17 +6892,20 @@ network misses out on on
 1215
 00:34:17,815 --> 00:34:19,230
 0,165 165,315 315,510 510,885 885,1415
-this kind of spiral dynamics.
+this kind of spiral dynamics,|
+|
 
 1216
 00:34:19,400 --> 00:34:20,730
 0,290 290,515 515,785 785,1025 1025,1330
-So the continuous time process
+so the continuous time process,|
+所以在连续的时间过程中，|
 
 1217
 00:34:21,140 --> 00:34:22,975
 0,275 275,550 1050,1430 1430,1685 1685,1835
 it is believe that you
+它只能相信你能得到越来越好的表现，
 
 1218
 00:34:22,975 --> 00:34:24,300
@@ -6871,46 +6915,48 @@ can get better and better
 1219
 00:34:24,620 --> 00:34:26,080
 0,755 755,1090
-representation only.|
+representation only,|
 |
 
 1220
 00:34:26,360 --> 00:34:28,255
 0,275 275,550 1140,1415 1415,1655 1655,1895
-But then the problem here
-但这里的问题是，如果你。
+but then the problem here
+但这里的问题是，
 
 1221
 00:34:28,255 --> 00:34:32,200
 0,150 150,425 2155,2460 2460,2765
-is that if you.|
-|
+is that,| if you,
+|如果你真的把这个模型带到实践中，
 
 1222
 00:34:32,450 --> 00:34:33,475
 0,305 305,500 500,635 635,800 800,1025
-If, if, if you actually
-如果，如果，如果你真的把这个模型带到实践中，一个简单的L S的T-M网络比这种类型的网络工作得更好。基本上，到目前为止，你可以超越我们在lsdm网络上展示的所有东西。那么，基本上创建如此复杂的架构和东西有什么意义呢？
+if, if, if you actually
 
 1223
 00:34:33,475 --> 00:34:34,770
 0,210 210,420 420,720 720,1005 1005,1295
-bring this models in practice,
+bring this models in practice,|
+|
 
 1224
 00:34:35,030 --> 00:34:36,070
 0,290 290,530 530,740 740,905 905,1040
-a simple L S T
+a simple {LST - -
+一个简单的 LSTM 网络比这种类型的网络工作得更好，
 
 1225
 00:34:36,070 --> 00:34:38,515
 0,230 430,830 1030,1430 1900,2235 2235,2445
-M network works better than
+-} {networks -} better than
 
 1226
 00:34:38,515 --> 00:34:40,195
 0,275 295,585 585,875 1105,1470 1470,1680
-this type of network. So
+this type of network,| so
+|所以，到目前为止，你可以使用 LSTM 网络超越我们在这里展示的所有东西，
 
 1227
 00:34:40,195 --> 00:34:41,665
@@ -6925,12 +6971,13 @@ outperform everything that we showed
 1229
 00:34:43,120 --> 00:34:45,355
 0,320 520,840 840,1460 1600,1980 1980,2235
-here with lsdm network so
+here with LSTM network, so
 
 1230
 00:34:45,355 --> 00:34:46,405
 0,275 385,630 630,780 780,900 900,1050
-far. So what's the point
+far,| so what's the point
+|那么，创建如此复杂的架构和东西有什么意义？
 
 1231
 00:34:46,405 --> 00:34:48,805
@@ -6947,7 +6994,7 @@ architectures and stuff?|
 00:34:50,120 --> 00:34:50,915
 0,105 105,240 240,405 405,570 570,795
 So this was the place
-这就是我们认为我们从大自然带来的连续时间过程实际上可以帮助我们建立更好的归纳偏见的地方。
+这就是我们认为我们从大自然带来的连续时间过程，
 
 1234
 00:34:50,915 --> 00:34:52,955
@@ -6962,7 +7009,8 @@ continuous time processes that we
 1236
 00:34:54,065 --> 00:34:56,200
 0,195 195,515 745,1145 1405,1770 1770,2135
-bring from nature can actually
+bring from nature| can actually
+|可以帮助我们建立更好的归纳偏见的地方。
 
 1237
 00:34:56,400 --> 00:34:58,430
@@ -6979,29 +7027,30 @@ biases.|
 00:34:59,560 --> 00:35:01,320
 0,400 810,1160 1160,1415 1415,1580 1580,1760
 So we introduced a neural
-因此，我们引入了一种名为液体时间常数网络的神经网络。
+所以，我们引入了一种名为液态时间常数网络的神经网络，简称 LTC ，
 
 1240
 00:35:01,320 --> 00:35:02,720
 0,210 210,495 495,795 795,1080 1080,1400
-network called liquid time constant
+network called Liquid {Time-Constant -}
 
 1241
 00:35:02,950 --> 00:35:05,160
 0,400 450,755 755,980 980,1750
-networks on short ltcs.|
+networks, on short LTCs,|
 |
 
 1242
 00:35:05,200 --> 00:35:07,410
 0,320 320,530 530,820 1230,1630 1740,2210
-L T C are constructed
-L三叉神经节由神经元和突触构成。因此，神经元模型就是这样一个连续的过程。这是一个微分方程，一个接受突触输入的线性微分方程，S。
+{LTCs - -} are constructed
+LTC 由神经元和突触构成，
 
 1243
 00:35:07,410 --> 00:35:08,835
 0,225 225,540 540,735 735,1245 1245,1425
-by neurons and synapses. So
+by neurons and synapses,| so
+|神经元模型就是这样一个连续的过程，
 
 1244
 00:35:08,835 --> 00:35:11,510
@@ -7011,7 +7060,8 @@ a neuron model is a
 1245
 00:35:11,710 --> 00:35:13,020
 0,350 350,665 665,935 935,1130 1130,1310
-continuous process like that. It's
+continuous process,| like that, it's
+|这是一个线性微分方程，
 
 1246
 00:35:13,020 --> 00:35:14,475
@@ -7021,40 +7071,43 @@ a differential equation, a linear
 1247
 00:35:14,475 --> 00:35:16,830
 0,600 600,905 1405,1695 1695,2130 2130,2355
-differential equation that receives the
+differential equation,| that receives the
+|它接受突触输入 S ，
 
 1248
 00:35:16,830 --> 00:35:18,760
 0,585 585,870 870,1160
-synaptic input s.|
+synaptic input S,|
 |
 
 1249
 00:35:19,300 --> 00:35:20,910
 0,75 75,195 195,650 670,1305 1305,1610
-It's a linear differential equation.|
-这是一个线性微分方程式。|
+it's a linear differential equation,|
+这是一个线性微分方程，|
 
 1250
 00:35:23,520 --> 00:35:25,355
 0,485 485,755 755,1390 1470,1730 1730,1835
-Neurons and synapses now we
-神经元和突触现在我们有一个突触模型，S的函数是一个神经网络乘以一个叫做势差的术语。
+neurons and synapses,| now we
+神经元和突触，|现在我们有一个突触模型 S(t) 是一个函数，
 
 1251
 00:35:25,355 --> 00:35:26,630
 0,120 120,285 285,630 630,965 985,1275
-have a synapse model s
+have a synapse model {S(t)
 
 1252
 00:35:26,630 --> 00:35:27,940
 0,195 195,500 640,900 900,1035 1035,1310
-of t is a function
+- -} is a function,|
+|
 
 1253
 00:35:28,530 --> 00:35:29,590
 0,260 260,380 380,515 515,785 785,1060
 that has a neural network
+它有一个神经网络乘以一个叫做势差的术语，
 
 1254
 00:35:29,850 --> 00:35:31,775
@@ -7064,19 +7117,19 @@ multiplied by a term called
 1255
 00:35:31,775 --> 00:35:33,460
 0,150 150,360 360,615 615,935
-a difference of potential.|
+a difference of potential,|
 |
 
 1256
 00:35:34,260 --> 00:35:36,920
 0,320 320,530 530,1300 1680,2435 2435,2660
-That non linearity resembles the
-这种非线性类似于真实神经元中突触之间的非线性行为，如果你有突触连接，它们基本上是由非线性设计的，因为这实际上是事实。
+that {non-linearity -} resembles the
+这种非线性类似于真实神经元中突触之间的非线性行为，
 
 1257
 00:35:36,920 --> 00:35:38,825
 0,150 150,590 820,1220 1450,1725 1725,1905
-non linear behavior between the
+{non-linear -} behavior between the
 
 1258
 00:35:38,825 --> 00:35:40,640
@@ -7086,7 +7139,8 @@ synapses in real kind of
 1259
 00:35:40,640 --> 00:35:42,590
 0,380 640,900 900,1005 1005,1250 1360,1950
-neurons if you have synaptic
+neurons,| if you have synaptic
+|如果你有突触连接，它们是由非线性设计的，
 
 1260
 00:35:42,590 --> 00:35:44,140
@@ -7096,7 +7150,8 @@ connections and they are basically
 1261
 00:35:45,720 --> 00:35:47,375
 0,275 275,410 410,1130 1130,1295 1295,1655
-designed by nonlinearity because that's
+designed by non-linearity,| because that's
+|因为这是事实。
 
 1262
 00:35:47,375 --> 00:35:48,845
@@ -7113,17 +7168,18 @@ thing.|
 00:35:49,640 --> 00:35:50,300
 0,150 150,255 255,360 360,510 510,660
 And then if you, if
-然后，如果你，如果你把这个S代入这个线性方程，你会得到一个看起来很复杂的微分方程。但你会看到这个微分方程式的含义。它有一个神经网络，作为t的X的系数，这就是这里的X。
+然后，如果你把这个 S 代入这个线性方程，
 
 1265
 00:35:50,300 --> 00:35:51,340
 0,165 165,375 375,540 540,720 720,1040
-you plug in this s
+you plug in this S
 
 1266
 00:35:51,990 --> 00:35:54,200
 0,290 290,485 485,845 845,1180 1950,2210
-inside this linear equation, you
+inside this linear equation,| you
+|你会得到一个看起来很复杂的微分方程，
 
 1267
 00:35:54,200 --> 00:35:55,205
@@ -7138,7 +7194,8 @@ differential equation which is looking
 1269
 00:35:56,855 --> 00:35:58,205
 0,270 270,885 885,1080 1080,1200 1200,1350
-very sophisticated. But you will
+very sophisticated,| but you will
+|但你会看到这个微分方程式的含义，
 
 1270
 00:35:58,205 --> 00:35:59,885
@@ -7148,7 +7205,8 @@ see the implications of this
 1271
 00:35:59,885 --> 00:36:02,585
 0,480 480,785 1195,1485 1485,1775 2425,2700
-differential equation. It has a
+differential equation,| it has a
+|它有一个神经网络作为 x(t) 的系数，
 
 1272
 00:36:02,585 --> 00:36:04,625
@@ -7158,29 +7216,31 @@ neural network as a coefficient
 1273
 00:36:04,625 --> 00:36:05,945
 0,210 210,435 435,675 675,995 1045,1320
-of X of t, which
+of {x(t) - -},| which
+|就是这里的 x(t) ，
 
 1274
 00:36:05,945 --> 00:36:06,830
 0,150 150,315 315,510 510,690 690,885
-is this X of t
+is this {x(t) - -}
 
 1275
 00:36:06,830 --> 00:36:08,200
 0,320
-here.|
+here,|
 |
 
 1276
 00:36:09,030 --> 00:36:10,430
 0,305 305,590 590,785 785,1085 1085,1400
-That neural network is input
-该神经网络依赖于输入。这意味着神经网络的输入定义了这个微分方程式的行为。所以它设定了微分方程的行为，当你在船上部署这个系统时，它可以，啊，适应输入。所以这个神经网络，这个系统，如果你在实践中有它，它依赖于输入。
+that neural network is input
+这个神经网络是输入依赖的，
 
 1277
 00:36:10,430 --> 00:36:12,590
 0,350 940,1215 1215,1470 1470,1830 1830,2160
-dependent. That means the inputs
+dependent,| That means the inputs
+|这意味着神经网络的输入定义了这个微分方程式的行为，
 
 1278
 00:36:12,590 --> 00:36:14,440
@@ -7200,17 +7260,20 @@ differential equation is going to
 1281
 00:36:18,140 --> 00:36:19,415
 0,260 340,570 570,735 735,1020 1020,1275
-be. So it sets the
+be,| so it sets the
+|所以它设定了微分方程的行为，
 
 1282
 00:36:19,415 --> 00:36:20,710
 0,240 240,435 435,540 540,990 990,1295
-behavior of the differential equation
+behavior of the differential equation,|
+|
 
 1283
 00:36:20,970 --> 00:36:22,475
 0,260 260,380 380,640 840,1235 1235,1505
 in a way that when
+当你在部署这个系统时，
 
 1284
 00:36:22,475 --> 00:36:23,750
@@ -7220,17 +7283,20 @@ you're deploying this system on
 1285
 00:36:23,750 --> 00:36:25,480
 0,290 550,855 855,1050 1050,1335 1335,1730
-board, it can be, ah,
+board,| it can be {}
+|它可以适应输入，
 
 1286
 00:36:26,190 --> 00:36:28,025
 0,620 620,845 845,1270 1380,1655 1655,1835
-adaptable to inputs. So this
+adaptable to inputs,| so this
+|所以这个神经网络，这个系统，
 
 1287
 00:36:28,025 --> 00:36:29,885
 0,285 285,545 835,1155 1155,1475 1585,1860
-neural network, this system, if
+neural network, this system,| if
+|如果你在实践中有它，它是输入依赖的，
 
 1288
 00:36:29,885 --> 00:36:31,090
@@ -7240,14 +7306,14 @@ you have it in practice,
 1289
 00:36:31,410 --> 00:36:33,060
 0,440 440,710 710,1030
-it's input dependent.|
+it's input dependent,|
 |
 
 1290
 00:36:33,060 --> 00:36:34,335
 0,225 225,465 465,705 705,960 960,1275
-And as you change the
-当你改变作为输入结果的输入时，这个微分方程式的行为也会改变。
+and as you change the
+当你改变作为输入结果的输入时，
 
 1291
 00:36:34,335 --> 00:36:36,015
@@ -7257,7 +7323,8 @@ input as the result of
 1292
 00:36:36,015 --> 00:36:37,650
 0,455 625,960 960,1245 1245,1470 1470,1635
-inputs, the behavior of this
+inputs,| the behavior of this
+|这个微分方程式的行为也会改变。
 
 1293
 00:36:37,650 --> 00:36:39,940
@@ -7269,12 +7336,13 @@ differential equation changes.|
 00:36:40,780 --> 00:36:42,350
 0,395 395,650 650,800 800,1025 1025,1570
 Now, in terms of connectivity
-现在，在连接结构方面，它有，啊，如果你看看你在标准世界网络中可能有的连接结构的范围，你会有，啊，Sigmoid基本激活功能。你可能有两个音符之间的相互连接，你可能有外部输入，你可能有一个标准神经网络的循环连接。现在让我们来看看液体神经网络。相反，系统中的每个节点都是一个微分方程式。
+现在，在连接结构方面，
 
 1295
 00:36:42,370 --> 00:36:44,625
 0,400 900,1190 1190,1480 1500,1900 1980,2255
-structures, it has, ah, if
+structures, it has {},| if
+|如果你看看可能有的连接结构的范围，
 
 1296
 00:36:44,625 --> 00:36:45,585
@@ -7284,7 +7352,8 @@ you look at the range
 1297
 00:36:45,585 --> 00:36:47,445
 0,255 255,605 775,1305 1305,1650 1650,1860
-of possible connectivity structures that
+of possible connectivity structures,| that
+|你在标准世界网络中有的，
 
 1298
 00:36:47,445 --> 00:36:48,285
@@ -7294,27 +7363,32 @@ you have in a standard
 1299
 00:36:48,285 --> 00:36:50,030
 0,285 285,575 1075,1335 1335,1470 1470,1745
-world network, you would have,
+world network,| you would have
+|你会有 sigmoid ，激活函数，
 
 1300
 00:36:50,050 --> 00:36:53,600
 0,400 960,1510 2130,2530 2760,3200 3200,3550
-ah, sigmoid basically activation functions.
+{} sigmoid basically activation functions,|
+|
 
 1301
 00:36:54,070 --> 00:36:55,640
 0,275 275,455 455,650 650,1250 1250,1570
-You might have reciprocal connections
+you might have reciprocal connections
+你可能有两个节点之间的相互连接，
 
 1302
 00:36:55,690 --> 00:36:57,090
 0,305 305,470 470,730 1020,1265 1265,1400
-between two notes, you might
+between two notes,| you might
+|你可能有外部输入，
 
 1303
 00:36:57,090 --> 00:36:58,800
 0,290 610,1010 1090,1455 1455,1590 1590,1710
-have external inputs and you
+have external inputs| and you
+|你可能有一个标准神经网络的循环连接。
 
 1304
 00:36:58,800 --> 00:37:00,260
@@ -7324,17 +7398,20 @@ might have a recurrent connections
 1305
 00:37:00,670 --> 00:37:01,970
 0,245 245,470 470,800 800,1055 1055,1300
-for a standard neural network.
+for a standard neural network.|
+|
 
 1306
 00:37:02,260 --> 00:37:03,240
 0,275 275,380 380,470 470,680 680,980
-Now for a liquid neural
+Now, for a Liquid neural
+现在，对于液态神经网络，
 
 1307
 00:37:03,240 --> 00:37:05,235
 0,260 520,920 1030,1425 1425,1845 1845,1995
-network. Instead, each node in
+network,| instead, each node in
+|相反，系统中的每个节点都是一个微分方程，
 
 1308
 00:37:05,235 --> 00:37:06,645
@@ -7344,58 +7421,60 @@ the system is a differential
 1309
 00:37:06,645 --> 00:37:07,600
 0,305
-equation.|
+equation,|
 |
 
 1310
 00:37:07,600 --> 00:37:09,355
 0,350 940,1275 1275,1485 1485,1605 1605,1755
-X X J and X
-X X J和X I。
+{} {xj -} and {xi
+xj 和 xi ，它们有动态，
 
 1311
 00:37:09,355 --> 00:37:10,600
 0,305
-I.|
-|
+-},
 
 1312
 00:37:11,290 --> 00:37:12,930
 0,245 245,380 380,910 1200,1490 1490,1640
-They have dynamics, and then
-它们有动力，然后它们通过突触联系在一起，然后是控制突触相互作用的过程非线性过程。
+they have dynamics,| and then
+|然后它们通过突触联系在一起，
 
 1313
 00:37:12,930 --> 00:37:14,930
 0,90 90,240 240,555 555,950 1300,2000
-they are connected by synapses,
+they are connected by synapses,|
+|
 
 1314
 00:37:15,460 --> 00:37:16,730
 0,275 275,545 545,785 785,950 950,1270
-and then there are process
+and then there are process,
+然后有非线性过程控制突触相互作用，
 
 1315
 00:37:16,780 --> 00:37:19,190
 0,695 695,1030 1170,1570 1680,2045 2045,2410
-nonlinear processes that controls the
+non-linear processes that controls the
 
 1316
 00:37:19,240 --> 00:37:21,000
 0,395 395,680 680,1270
-interaction of synapses.|
+interaction of synapses,|
 |
 
 1317
 00:37:21,000 --> 00:37:22,520
 0,165 165,410 610,915 915,1170 1170,1520
-So now in some sense,
-所以现在在某种意义上，你可以认为液体神经网络是突触系统的非线性过程，而不是神经元。
+so now in some sense,|
+所以现在在某种意义上，|
 
 1318
 00:37:22,540 --> 00:37:23,730
 0,275 275,470 470,725 725,950 950,1190
 you can think about liquid
+你可以认为液态神经网络是过程，
 
 1319
 00:37:23,730 --> 00:37:27,090
@@ -7405,7 +7484,8 @@ neural networks as being being
 1320
 00:37:27,090 --> 00:37:31,440
 0,350 490,780 780,1070 3580,3870 3870,4350
-processes that have non linearity
+processes,| that have {non-linearity -}
+|有着突触系统的非线性过程，而不是神经元。
 
 1321
 00:37:31,440 --> 00:37:32,660
@@ -7421,28 +7501,30 @@ instead of the neurons.|
 1323
 00:37:34,870 --> 00:37:35,985
 0,305 305,470 470,695 695,920 920,1115
-So in neural networks we
-所以在神经网络中，我们有激活函数，它们是系统的非线性。现在你可以考虑系统的非线性作用在突触上，或者系统的重量。
+So in neural networks,| we
+所以在神经网络中，|我们有激活函数，
 
 1324
 00:37:35,985 --> 00:37:37,365
 0,135 135,390 390,795 795,1125 1125,1380
-have the activation functions which
+have the activation functions,| which
+|它们是系统的非线性，
 
 1325
 00:37:37,365 --> 00:37:38,310
 0,135 135,240 240,750 750,825 825,945
-are the nonlinearity of the
+are the non-linearity of the
 
 1326
 00:37:38,310 --> 00:37:39,495
 0,260 520,780 780,885 885,1005 1005,1185
-system. Now you can think
+system,| now you can think
+|现在你可以认为系统的非线性作用在突触上，或者系统的权重。
 
 1327
 00:37:39,495 --> 00:37:40,350
 0,180 180,315 315,645 645,735 735,855
-about non linearity of the
+about {non-linearity -} of the
 
 1328
 00:37:40,350 --> 00:37:41,520
@@ -7463,38 +7545,44 @@ system.|
 1331
 00:37:43,040 --> 00:37:44,020
 0,225 225,330 330,465 465,660 660,980
-Now, in terms of practice,
-现在，就实践而言，让我们来看看这个应用程序。我们训练一个人工神经网络，它可以控制一辆可以在这种环境下驾驶汽车的汽车，以及我们在这张中间图像的两侧所显示的内容。
+Now, in terms of practice,|
+现在，就实践而言，|
 
 1332
 00:37:44,610 --> 00:37:45,880
 0,350 350,440 440,560 560,820 870,1270
-let's look at this application
+let's look at this application,|
+让我们来看看这个应用程序，|
 
 1333
 00:37:46,260 --> 00:37:47,600
 0,350 350,590 590,770 770,1040 1040,1340
-here. We train an artificial
+here, we train an artificial
+我们训练一个人工神经网络，
 
 1334
 00:37:47,600 --> 00:37:49,130
 0,270 270,530 700,990 990,1260 1260,1530
-neural network that can control
+neural network,| that can control
+|它可以控制一辆车，
 
 1335
 00:37:49,130 --> 00:37:50,690
 0,195 195,500 910,1170 1170,1335 1335,1560
-a car that can drive
+a car,| that can drive
+|它可以在这种环境下驾驶汽车，
 
 1336
 00:37:50,690 --> 00:37:51,940
 0,195 195,450 450,705 705,915 915,1250
-the car in this environment
+the car in this environment|
+|
 
 1337
 00:37:52,620 --> 00:37:53,555
 0,290 290,470 470,590 590,710 710,935
 and what we are showing
+我们在这张中间图像的两侧所显示的内容，
 
 1338
 00:37:53,555 --> 00:37:55,030
@@ -7504,19 +7592,20 @@ on the sides of this
 1339
 00:37:55,110 --> 00:37:56,500
 0,320 320,640
-middle image.|
+middle image,|
 |
 
 1340
 00:37:56,500 --> 00:37:58,105
 0,255 255,600 600,945 945,1290 1290,1605
-Is the activity of two
-是两个神经元的活动，分别是标准神经网络和液体神经网络在X轴上的活动，我们看到的是时间常数或敏感的行为输出行为，基本上控制着车辆的转向角度。
+is the activity of two
+是两个神经元的活动，
 
 1341
 00:37:58,105 --> 00:38:00,090
 0,515 895,1170 1170,1410 1410,1680 1680,1985
-neurons that are inside the
+neurons,| that are inside the
+|分别是标准神经网络和液态神经网络，
 
 1342
 00:38:00,140 --> 00:38:01,810
@@ -7526,12 +7615,13 @@ standard neural network and a
 1343
 00:38:01,810 --> 00:38:03,340
 0,225 225,510 510,770 1120,1395 1395,1530
-liquid neural network on the
+Liquid neural network,| on the
+|在 x 轴上，我们看到的是时间常数或敏感的输出行为，
 
 1344
 00:38:03,340 --> 00:38:05,575
 0,210 210,830 1210,1530 1530,1850 1870,2235
-X axis, we see the
+x axis, we see the
 
 1345
 00:38:05,575 --> 00:38:08,365
@@ -7546,44 +7636,49 @@ the behavior of the output
 1347
 00:38:10,040 --> 00:38:11,970
 0,400 480,880 1080,1535 1535,1670 1670,1930
-behavior, basically controlling the vehicles
+behavior,| basically controlling the vehicles
+|控制着车辆的转向角度，
 
 1348
 00:38:12,740 --> 00:38:14,180
 0,500 500,820
-steering angle.|
+steering angle,|
 |
 
 1349
 00:38:14,280 --> 00:38:15,890
 0,290 290,845 845,1070 1070,1355 1355,1610
-The sensitivity of that control
-控制的灵敏度，在X轴和ah轴上，我们可以看到转向角。颜色还表示转向角和神经网络输出之间的映射输出。好的，现在我们看到，我们添加了液体神经网络，我们有一个额外的自由度，这些网络可以设置它的自由度。
+the sensitivity of that control
+x 轴上控制的灵敏度，
 
 1350
 00:38:15,890 --> 00:38:17,975
 0,120 120,225 225,405 405,950 1780,2085
-on the X axis and
+on the x axis| and
+|在 y 轴上，我们可以看到转向角，
 
 1351
 00:38:17,975 --> 00:38:20,050
 0,180 180,450 450,845 1225,1545 1545,2075
-on the ah y axis
+on the {} y axis,
 
 1352
 00:38:20,160 --> 00:38:21,850
 0,320 320,640 720,1055 1055,1415 1415,1690
-we see the steering angle.
+we see the steering angle,|
+|
 
 1353
 00:38:22,080 --> 00:38:24,050
 0,320 320,640 690,935 935,1180 1590,1970
-The color also represents the
+the color also represents the
+颜色还表示输出，
 
 1354
 00:38:24,050 --> 00:38:25,790
 0,285 285,480 480,770 940,1500 1500,1740
-output which is mapping between
+output,| which is mapping between
+|转向角和神经网络输出之间的映射输出。
 
 1355
 00:38:25,790 --> 00:38:28,475
@@ -7593,27 +7688,32 @@ the steering angle and the
 1356
 00:38:28,475 --> 00:38:29,350
 0,195 195,315 315,435 435,630 630,875
-output of the neural network.
+output of the neural network.|
+|
 
 1357
 00:38:29,670 --> 00:38:30,995
 0,400 600,830 830,935 935,1115 1115,1325
 Okay, so now as we
+好的，现在我们看到，
 
 1358
 00:38:30,995 --> 00:38:32,855
 0,305 625,915 915,1205 1345,1635 1635,1860
-see, we added with liquid
+see,| we added with liquid
+|我们添加了液态神经网络，
 
 1359
 00:38:32,855 --> 00:38:33,875
 0,255 255,465 465,675 675,795 795,1020
-neural network we have an
+neural network,| we have an
+|我们有一个额外的自由度，
 
 1360
 00:38:33,875 --> 00:38:36,070
 0,365 625,930 930,1170 1170,1505 1795,2195
-additional degree of freedom that
+additional degree of freedom,| that
+|这些网络可以设置它的敏感度，
 
 1361
 00:38:36,150 --> 00:38:37,790
@@ -7623,56 +7723,60 @@ that these networks can set
 1362
 00:38:37,790 --> 00:38:38,760
 0,380
-its.|
-|
+its
 
 1363
 00:38:38,760 --> 00:38:40,770
 0,230 310,1130 1270,1530 1530,1740 1740,2010
-A sensitivity? A liquid neural
-敏感？一个流动的神经网络。
+{} sensitivity,| a liquid neural
+|一个液态神经网络，
 
 1364
 00:38:40,770 --> 00:38:41,840
 0,260
-network.|
+network,|
 |
 
 1365
 00:38:41,910 --> 00:38:43,570
 0,350 350,665 665,965 965,1340 1340,1660
-Depending on whether we're turning,
-要看我们是不是转弯，是不是直走，你是不是直走啊，时间不变，你轮流的时候要比较谨慎，对不对。所以你的神经网络，你想，你想要更快，以便能够在你实际转向的那种啊那种事件中进行实际控制。这就是你可以添加的程度，甚至在神经元层面上也可以解释这些系统。
+depending on whether we're turning,
+取决于我们是不是转弯，是不是直走，
 
 1366
 00:38:44,010 --> 00:38:45,370
 0,335 335,500 500,635 635,940 960,1360
-whether we are going straight,
+whether we are going straight,|
+|
 
 1367
 00:38:45,540 --> 00:38:47,345
 0,275 275,485 485,710 710,1090 1440,1805
-if you're going straight the
+if you're going straight, the,
+如果你是直走，时间常数要比较谨慎，
 
 1368
 00:38:47,345 --> 00:38:48,995
 0,365 445,735 735,930 930,1235 1285,1650
-ah, the time constant, you
+{} the time constant, you
 
 1369
 00:38:48,995 --> 00:38:50,210
 0,255 255,390 390,495 495,720 720,1215
-want to be more cautious
+want to be more cautious,|
+|
 
 1370
 00:38:50,210 --> 00:38:51,640
 0,180 180,420 420,690 690,1050 1050,1430
-when you taking turns, right.
+when you taking turns, right,|
+当你转弯的时候，|
 
 1371
 00:38:51,840 --> 00:38:52,880
 0,245 245,365 365,590 590,815 815,1040
-So your neural network, you
+so your neural network,| you
+所以你的神经网络，|你想要更快，
 
 1372
 00:38:52,880 --> 00:38:53,860
@@ -7682,7 +7786,8 @@ want to, you want to
 1373
 00:38:53,940 --> 00:38:55,025
 0,230 230,335 335,610 750,980 980,1085
-to be faster to be
+to be faster| to be
+|以便能够在那种事件中进行实际控制，
 
 1374
 00:38:55,025 --> 00:38:56,660
@@ -7692,17 +7797,19 @@ able to actually control during
 1375
 00:38:56,660 --> 00:38:58,220
 0,255 255,450 450,615 615,920 1330,1560
-those kind of ah kind
+those kind of, {} kind
 
 1376
 00:38:58,220 --> 00:38:59,390
 0,180 180,480 480,705 705,975 975,1170
-of events where you're actually
+of events,| where you're actually
+|当你转弯的时候，
 
 1377
 00:38:59,390 --> 00:39:00,845
 0,290 670,930 930,1200 1200,1320 1320,1455
-turning. So that's the kind
+turning,| so that's the kind
+|这就是你可以添加的程度，
 
 1378
 00:39:00,845 --> 00:39:01,835
@@ -7712,7 +7819,8 @@ of degree that you can
 1379
 00:39:01,835 --> 00:39:02,915
 0,180 180,390 390,555 555,675 675,1080
-add even at the neuronal
+add,| even at the neuronal
+|甚至在神经元层面上也可以解释这些系统。
 
 1380
 00:39:02,915 --> 00:39:04,570
@@ -7723,8 +7831,8 @@ level for interpreting these systems.|
 1381
 00:39:05,640 --> 00:39:06,440
 0,245 245,350 350,485 485,620 620,800
-Now let's look at the
-现在让我们来看看液体神经网络的案例研究。
+Now, let's look at the
+现在，让我们来看看液态神经网络的案例研究，
 
 1382
 00:39:06,440 --> 00:39:08,690
@@ -7734,14 +7842,14 @@ case study of liquid neural
 1383
 00:39:08,690 --> 00:39:09,840
 0,260
-networks.|
+networks,|
 |
 
 1384
 00:39:10,130 --> 00:39:11,620
 0,290 290,580 930,1205 1205,1355 1355,1490
-So usually you saw a
-因此，通常情况下，你会看到自动驾驶应用程序的深度神经网络。
+so usually you saw a
+通常情况下，你会看到自动驾驶应用程序的深度神经网络，
 
 1385
 00:39:11,620 --> 00:39:12,805
@@ -7751,24 +7859,26 @@ deep neural network for an
 1386
 00:39:12,805 --> 00:39:15,500
 0,665 865,1265 1465,1865
-autonomous driving application.|
+autonomous driving application,|
 |
 
 1387
 00:39:15,750 --> 00:39:17,440
 0,260 260,500 500,880 1140,1415 1415,1690
-We have, ah, a conv
-我们在网络上有一个卷积堆栈。它们接收摄像头的输入，并在输出端输出一种转向角。
+we have {} a conv,
+我们在网络上有一个卷积堆栈，
 
 1388
 00:39:17,550 --> 00:39:19,010
 0,275 275,455 455,860 860,1130 1130,1460
-stack of convolution on networks.
+stack of convolution on networks,|
+|
 
 1389
 00:39:19,010 --> 00:39:20,900
 0,330 330,660 660,1040 1120,1635 1635,1890
-They receive camera inputs and
+they receive camera inputs| and
+它们接收摄像头的输入，|并在输出端输出一种转向角。
 
 1390
 00:39:20,900 --> 00:39:23,435
@@ -7789,18 +7899,20 @@ at its output.|
 1393
 00:39:26,680 --> 00:39:28,790
 0,290 290,440 440,700 1530,1850 1850,2110
-This kind of neural network,
-这种神经网络，我们可以做的事情之一，首先，他们在这个系统中有很多参数。
+This kind of neural network,|
+这种神经网络，|
 
 1394
 00:39:28,870 --> 00:39:29,610
 0,260 260,380 380,485 485,605 605,740
 one of the things that
+我们可以做的事情之一，
 
 1395
 00:39:29,610 --> 00:39:30,315
 0,120 120,240 240,405 405,585 585,705
-we can do, first of
+we can do,| first of
+|首先，它们在这个系统中有很多参数，
 
 1396
 00:39:30,315 --> 00:39:31,155
@@ -7815,19 +7927,20 @@ lot of parameters in this
 1398
 00:39:32,430 --> 00:39:33,420
 0,290
-system.|
+system,|
 |
 
 1399
 00:39:33,420 --> 00:39:34,185
 0,210 210,330 330,465 465,600 600,765
-What we want to do,
-我们要做的是，去掉这个神经网络的完全连通层，用递归神经网络过程来代替它，递归神经网络过程是我们用来取代它的递归过程之一，它的Eh液体神经网络，L和L，S，T，M和正常的连续时间神经网络。
+what we want to do,|
+我们要做的是，|
 
 1400
 00:39:34,185 --> 00:39:35,970
 0,165 165,330 330,635 1255,1545 1545,1785
 we want to take out
+我们想去掉这个神经网络的完全连通层，
 
 1401
 00:39:35,970 --> 00:39:37,590
@@ -7837,7 +7950,8 @@ the fully connected layers of
 1402
 00:39:37,590 --> 00:39:39,210
 0,180 180,390 390,650 880,1280 1300,1620
-this neural network and replace
+this neural network| and replace
+|用递归神经网络过程来代替它，
 
 1403
 00:39:39,210 --> 00:39:40,530
@@ -7847,27 +7961,30 @@ it with recurrent neural network
 1404
 00:39:40,530 --> 00:39:42,540
 0,380 760,1020 1020,1170 1170,1460 1480,2010
-processes, one of those recurrent
+processes,| one of those recurrent
+|我们想取代它的一种递归神经网络过程，
 
 1405
 00:39:42,540 --> 00:39:44,055
 0,285 285,555 555,830 1030,1335 1335,1515
-processes that we replace it
+processes that we replace it|
+|
 
 1406
 00:39:44,055 --> 00:39:45,990
 0,150 150,360 360,695 1345,1680 1680,1935
-with, its eh liquid neural
+with { -} liquid neural
+使用液态神经网络， LSTM 和正常的连续时间神经网络。
 
 1407
 00:39:45,990 --> 00:39:47,340
 0,225 225,450 450,555 555,800 1030,1350
-network and the l and
+network and the { -}
 
 1408
 00:39:47,340 --> 00:39:48,315
 0,180 180,360 360,510 510,720 720,975
-L S T M and
+{LSTM - - -} and
 
 1409
 00:39:48,315 --> 00:39:50,010
@@ -7883,65 +8000,71 @@ networks.|
 1411
 00:39:50,870 --> 00:39:52,530
 0,400 480,755 755,995 995,1310 1310,1660
-Now, if I replace this,
-现在，如果我替换这个，我最终会有四个不同的变体。
+Now, if I replace this,|
+现在，如果我替换这个，|
 
 1412
 00:39:52,640 --> 00:39:53,650
 0,275 275,440 440,620 620,785 785,1010
 I would end up having
+我最终会有四个不同的变体，
 
 1413
 00:39:53,650 --> 00:39:56,540
 0,285 285,570 570,920 940,1610
-like four different variants.|
+like four different variants,|
 |
 
 1414
 00:39:56,610 --> 00:39:58,055
 0,320 320,515 515,1030 1080,1325 1325,1445
-This four variants, one of
-这四种变体之一被称为N-C-P，这是一种具有四层架构的神经电路策略。这个系统的每个音符都是由一个LTC神经元定义的，这个神经元是我刚才展示给你们的方程，它与网络的其他部分稀疏地连接在一起。
+this four variants,| one of
+这四种变体，|其中之一被称为 NCP ，
 
 1415
 00:39:58,055 --> 00:39:58,925
 0,150 150,315 315,480 480,645 645,870
-them is called an N
+them is called an {NCP
 
 1416
 00:39:58,925 --> 00:39:59,945
 0,210 210,480 480,750 750,885 885,1020
-C P, which is a
+- -},| which is a
+|这是神经回路策略，具有一个四层架构，
 
 1417
 00:39:59,945 --> 00:40:02,255
 0,345 345,780 780,1115 1795,2100 2100,2310
-neural circuit policy that has
+neural circuit policy, that has
 
 1418
 00:40:02,255 --> 00:40:04,025
 0,225 225,465 465,720 720,1055 1375,1770
-a four layer architecture. Each
+a four layer architecture,| each
+|这个系统的每个节点都是由一个 LTC 神经元定义的，
 
 1419
 00:40:04,025 --> 00:40:05,840
 0,330 330,570 570,780 780,1085 1435,1815
-note of this system is
+node of this system is
 
 1420
 00:40:05,840 --> 00:40:07,990
 0,300 300,495 495,770 1090,1755 1755,2150
-defined by an ltc neuron
+defined by an LTC neuron,|
+|
 
 1421
 00:40:08,370 --> 00:40:09,605
 0,380 380,770 770,980 980,1100 1100,1235
 that equations that I was
+我刚才展示给你们的方程，
 
 1422
 00:40:09,605 --> 00:40:10,790
 0,195 195,515 595,855 855,960 960,1185
-showing you, and it is
+showing you,| and it is
+|它与网络的其他部分稀疏地连接在一起。
 
 1423
 00:40:10,790 --> 00:40:12,305
@@ -7958,54 +8081,60 @@ parts of the network.|
 00:40:13,660 --> 00:40:14,500
 0,165 165,255 255,360 360,510 510,840
 So we have a sparse
-所以我们这里有一个稀疏的神经网络结构。然后我们有一个神经网络，它以LSDM作为控制信号。它在网络上通过卷积接收感知。
+所以我们这里有一个稀疏的神经网络结构，
 
 1426
 00:40:14,500 --> 00:40:16,330
 0,210 210,390 390,710 910,1310 1570,1830
-neural network architecture here. We
+neural network architecture here,| we
+|然后我们有一个神经网络，
 
 1427
 00:40:16,330 --> 00:40:17,395
 0,150 150,405 405,660 660,870 870,1065
-have then one neural network
+have then one neural network,|
+|
 
 1428
 00:40:17,395 --> 00:40:18,580
 0,165 165,300 300,840 840,960 960,1185
-that has lsdm as the
+that has LSTM as the
+它以 LSDM 作为控制信号，
 
 1429
 00:40:18,580 --> 00:40:19,750
 0,255 255,495 495,705 705,1020 1020,1170
-control signal. It receives the
+control signal,| it receives the
+|它通过卷积神经网络接收感知。
 
 1430
 00:40:19,750 --> 00:40:21,450
 0,375 375,740 760,1275 1275,1440 1440,1700
-perception with convolution on networks.|
+perception with convolution neural networks.|
 |
 
 1431
 00:40:22,280 --> 00:40:23,135
 0,210 210,315 315,420 420,630 630,855
-And then we have c
-然后我们有c，ttr和n，我们在ne网络上有一个卷积。现在我想向你展示这些不同类型的网络的驱动性能，以及这些EH系统增加了什么样的特征。首先让我们来看看这些仪表板，在那里我向你展示了神经网络的卷积，然后是完全连接的层，一个正常的、非常标准的深度学习系统，它接收摄像头输入并已经学会了控制这辆车。好的，这些摄像头的输入和输出决定基本上是驱动决定的。
+And then we have {CT-RNNs
+然后我们有 CT-RNN ，
 
 1432
 00:40:23,135 --> 00:40:23,885
 0,225 225,330 330,480 480,645 645,750
-ttr and n and we
+- - -}| and we
+|我们有一个卷积神经网络，
 
 1433
 00:40:23,885 --> 00:40:25,055
 0,195 195,450 450,870 870,1035 1035,1170
-have a convolution on ne
+have a {convolutional -} neural
 
 1434
 00:40:25,055 --> 00:40:25,985
 0,255 255,525 525,660 660,780 780,930
-networks. Now I want to
+networks,| now I want to
+|现在我想向你展示这些不同类型的网络的驾驶性能，
 
 1435
 00:40:25,985 --> 00:40:27,340
@@ -8020,7 +8149,8 @@ of these different types of
 1437
 00:40:28,820 --> 00:40:30,280
 0,290 580,855 855,1020 1020,1185 1185,1460
-networks and what kind of
+networks| and what kind of
+|以及这些系统增加了什么样的特征。
 
 1438
 00:40:30,420 --> 00:40:32,170
@@ -8030,7 +8160,8 @@ characteristics is added to these
 1439
 00:40:32,370 --> 00:40:34,955
 0,400 780,1180 1590,1865 1865,2140 2250,2585
-eh systems. So first let's
+{} systems.| So first let's
+|首先让我们来看看这些仪表板，在那里我向你展示了神经网络的卷积，然后是完全连接的层，一个正常的、非常标准的深度学习系统，它接收摄像头输入并已经学会了控制这辆车。好的，这些摄像头的输入和输出决定基本上是驱动决定的。
 
 1440
 00:40:34,955 --> 00:40:36,785
