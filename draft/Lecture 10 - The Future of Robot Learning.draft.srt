@@ -2,7 +2,7 @@
 00:00:09,160 --> 00:00:10,755
 0,470 470,635 635,800 800,1090 1230,1595
 Robotics is a really cool
-机器人学是未来一个非常酷和重要的方向。嗯，我，我真的相信，我们正在走向一个这样一个世界，在这个世界里，很多日常工作都从你的盘子里消失了。新鲜的农产品出现在你的门口，由无人机运送。垃圾桶会自己倒出来，是吗？智能基础设施确保垃圾被清除。机器人帮助回收、搁置和清洁窗户。
+机器人学是未来一个非常酷和重要的方向，
 
 2
 00:00:10,755 --> 00:00:12,450
@@ -12,7 +12,8 @@ and important direction for the
 3
 00:00:12,450 --> 00:00:14,660
 0,290 640,1040 1210,1605 1605,1905 1905,2210
-future. EM, I I really
+future,| {} I I really
+|我相信我们正在走向一个这样一个世界，
 
 4
 00:00:14,770 --> 00:00:16,520
@@ -22,7 +23,8 @@ believe that we are moving
 5
 00:00:17,110 --> 00:00:19,110
 0,400 510,815 815,1120 1230,1630 1680,2000
-towards a world where so
+towards a world,| where so
+|很多日常工作都从你的盘子里消失，
 
 6
 00:00:19,110 --> 00:00:20,895
@@ -32,7 +34,8 @@ many routine tasks are taken
 7
 00:00:20,895 --> 00:00:23,325
 0,330 330,570 570,875 1525,1925 2065,2430
-off your plate. Fresh produce
+off your plate,| fresh produce
+|新鲜的农产品出现在你的门口，由无人机运送，
 
 8
 00:00:23,325 --> 00:00:24,780
@@ -42,22 +45,26 @@ turn turns up at your
 9
 00:00:24,780 --> 00:00:27,735
 0,780 780,1110 1110,1440 1440,1820 2380,2955
-doorsteps delivered by drones. Garbage
+doorsteps delivered by drones,| garbage
+|垃圾桶会自己倒出来，
 
 10
 00:00:27,735 --> 00:00:30,020
 0,330 330,695 745,1065 1065,1385 1885,2285
-bins take themselves out, eh?
+bins take themselves out, {}|
+|
 
 11
 00:00:30,160 --> 00:00:32,715
 0,400 690,1090 1470,2135 2135,2405 2405,2555
-Smart infrastructure ensures that the
+smart infrastructure ensures that the
+智能基础设施确保垃圾被清除，
 
 12
 00:00:32,715 --> 00:00:35,985
 0,465 465,785 1165,1565 2095,2735 2905,3270
-garbage gets removed. Robots help
+garbage gets removed,| robots help
+|机器人帮助回收、搁置和清洁窗户，
 
 13
 00:00:35,985 --> 00:00:38,655
@@ -67,24 +74,26 @@ with recycling, with shelving, with
 14
 00:00:38,655 --> 00:00:41,080
 0,315 315,695
-cleaning Windows.|
+cleaning windows,|
 |
 
 15
 00:00:41,770 --> 00:00:43,260
 0,575 575,830 830,1025 1025,1235 1235,1490
-Robots can do so many
-机器人可以为我们做这么多身体上的事情。顺便问一下，你能数一下这里面有多少个机器人吗？在这张图片中，有人想猜猜吗？在这张图中，我有多少个机器人？
+robots can do so many
+机器人可以为我们做很多物理上的事情，
 
 16
 00:00:43,260 --> 00:00:44,595
 0,350 430,795 795,1005 1005,1155 1155,1335
-physical things for us. And
+physical things for us.| And
+|顺便问一下，
 
 17
 00:00:44,595 --> 00:00:45,810
 0,165 165,315 315,575 715,1005 1005,1215
-by the way, can you
+by the way,| can you
+|你能数一下在这张图片中有多少个机器人吗，
 
 18
 00:00:45,810 --> 00:00:47,415
@@ -94,17 +103,19 @@ count how many robots there
 19
 00:00:47,415 --> 00:00:48,855
 0,240 240,495 495,785 955,1230 1230,1440
-are in this? In this
+are in this, in this
 
 20
 00:00:48,855 --> 00:00:51,135
 0,335 895,1295 1705,1995 1995,2145 2145,2280
-image, anybody want to take
+image,| anybody want to take
+|有人想猜一下吗，
 
 21
 00:00:51,135 --> 00:00:53,385
 0,135 135,395 1375,1635 1635,1800 1800,2250
-a guess? How many robots
+a guess,| how many robots
+|在这张图中，我有多少个机器人？
 
 22
 00:00:53,385 --> 00:00:54,180
@@ -120,98 +131,116 @@ image?|
 24
 00:00:59,690 --> 00:01:00,880
 0,290 290,530 530,635 635,920 920,1190
-Okay, that. So that's, that's
-好的，就是那个。所以，这真的很接近了。结果是19岁。所有的机器人都在这里。我们有会飞的机器人，我们有汽车，我们有购物车机器人，我们有搬运的机器人。我们在那个架子上有机器人。我们有清洁机器人。因此，我真的相信，在未来，我们将有人工智能的帮助，无论它们是否体现，作为我们的守护天使提供建议，以确保我们最大化和优化我们的生活，生活得好和工作有效。这些代理将帮助我们进行认知和体力工作。因此，今天我们可以说，有了人工智能，我们将看到如此广泛的应用。例如，这些技术有可能减少和消除车祸。他们有可能更好地诊断。
+Okay, that, so that's, that's
+好的，这很接近了，
 
 25
 00:01:00,880 --> 00:01:02,455
 0,240 240,620 820,1110 1110,1335 1335,1575
-really close it. It turns
+really close,| it, it turns
+|结果是 19 个，
 
 26
 00:01:02,455 --> 00:01:04,030
 0,270 270,600 600,875 1165,1440 1440,1575
-out it's nineteen. So here
+out it's 19,| so here
+|所有的机器人都在这里，
 
 27
 00:01:04,030 --> 00:01:05,035
 0,120 120,270 270,420 420,780 780,1005
-are all the robots. We
+are all the robots,| we
+|我们有会飞的机器人，
 
 28
 00:01:05,035 --> 00:01:07,350
 0,275 715,1080 1080,1625 1735,2025 2025,2315
-have flying robots, we have
+have flying robots,| we have
+|我们有汽车，
 
 29
 00:01:07,370 --> 00:01:09,205
 0,400 510,785 785,1055 1055,1450 1470,1835
-cars, we have shopping cart
+cars,| we have shopping cart
+|我们有购物车机器人，
 
 30
 00:01:09,205 --> 00:01:11,245
 0,525 525,765 765,945 945,1415 1705,2040
-robots, we have robots that
+robots,| we have robots that
+|我们有搬运的机器人，
 
 31
 00:01:11,245 --> 00:01:12,745
 0,330 330,600 600,780 780,1200 1200,1500
-carry. We have robots that
+carry,| we have robots that
+|我们在那个架子上有机器人，
 
 32
 00:01:12,745 --> 00:01:15,010
 0,365 385,660 660,900 900,1445 1885,2265
-shelf. We have robots that
+shelf,| we have robots that
+|我们有清洁机器人。
 
 33
 00:01:15,010 --> 00:01:16,590
 0,380 730,990 990,1110 1110,1275 1275,1580
-clean. And so I really
+clean.| And so I really
+|所以，我真的相信，
 
 34
 00:01:16,670 --> 00:01:18,120
 0,395 395,725 725,980 980,1175 1175,1450
-believe that in the future
+believe,| that in the future
+|在未来，我们将有人工智能的帮助，
 
 35
 00:01:18,710 --> 00:01:20,940
 0,275 275,455 455,760 840,1240 1830,2230
-we will have AI assistance,
+we will have AI assistance,|
+|
 
 36
 00:01:21,200 --> 00:01:23,590
 0,400 540,800 800,965 965,1720 2070,2390
 whether they are embodied or
+无论它们是否体现，
 
 37
 00:01:23,590 --> 00:01:25,750
 0,320 1030,1320 1320,1610 1630,1935 1935,2160
-not, to act as our
+not,| to act as our
+|作为我们的守护天使，
 
 38
 00:01:25,750 --> 00:01:28,860
 0,570 570,1130 1780,2145 2145,2510 2710,3110
-guardian angels to provide advice
+guardian angels| to provide advice
+|提供建议，以确保，
 
 39
 00:01:28,910 --> 00:01:31,380
 0,400 420,820 870,1235 1235,1600 1620,2470
-to ensure that we maximize
+to ensure that,| we maximize
+|我们最大化和优化我们的生活，
 
 40
 00:01:31,430 --> 00:01:33,310
 0,400 420,905 905,1190 1190,1510 1620,1880
-and optimize our lives, to
+and optimize our lives,| to
+|生活得好和工作有效。
 
 41
 00:01:33,310 --> 00:01:34,950
 0,180 180,500 520,840 840,1160 1240,1640
-live well and work effectively.
+live well and work effectively.|
+|
 
 42
 00:01:35,360 --> 00:01:36,670
 0,275 275,440 440,730 840,1115 1115,1310
 And these agents will help
+这些代理将帮助我们进行认知和体力工作。
 
 43
 00:01:36,670 --> 00:01:38,940
@@ -221,12 +250,14 @@ us with cognitive and physical
 44
 00:01:39,590 --> 00:01:43,480
 0,400 1500,1865 1865,2230 2640,3040 3600,3890
-work. And so today we
+work.| And so today, we
+|所以，今天我们可以说，
 
 45
 00:01:43,480 --> 00:01:46,140
 0,225 225,525 525,890 1630,2030 2260,2660
-can say that with AI
+can say that,| with AI
+|有了人工智能，我们将看到如此广泛的应用，
 
 46
 00:01:47,030 --> 00:01:49,045
@@ -236,7 +267,8 @@ we will see such a
 47
 00:01:49,045 --> 00:01:51,420
 0,305 655,1110 1110,1385 1465,1865 1975,2375
-wide breadth of applications. For
+wide breadth of applications,| for
+|例如，这些技术有可能减少和消除车祸，
 
 48
 00:01:51,440 --> 00:01:54,475
@@ -251,19 +283,19 @@ potential to reduce and eliminate
 50
 00:01:56,485 --> 00:01:58,210
 0,330 330,935 955,1245 1245,1455 1455,1725
-car accidents. They have the
+car accidents,| they have the
+|它们有可能更好地诊断监测和治疗疾病，
 
 51
 00:01:58,210 --> 00:01:59,920
 0,350 430,705 705,960 960,1670
-potential to better diagnose.|
-|
+potential to better diagnose
 
 52
 00:01:59,920 --> 00:02:01,795
 0,260 610,930 930,1250 1270,1620 1620,1875
-Monitor and treat disease as
-监测和治疗疾病正如你在之前的一些讲座中看到的那样，我们这些技术有可能保持你的信息隐私和安全，更有效、更快、更便宜地运输人员和货物，通过提供即时翻译来真正使全球沟通变得更容易，为每个人发展教育，让人类工作人员专注于宏大的任务，让机器承担日常任务。因此，这一未来实际上是由三个相互关联的领域实现的，一方面我们有机器人，现在是机器人。我喜欢把机器人看作是一台机器，它让计算机运转起来，让我们在世界上的机器具有导航和操纵世界的能力。我们有人工智能，它能让机器看到东西。
+monitor and treat disease| as
+|正如你在之前的一些讲座中看到的那样，
 
 53
 00:02:01,795 --> 00:02:02,800
@@ -273,22 +305,26 @@ you have seen in some
 54
 00:02:02,800 --> 00:02:05,340
 0,195 195,390 390,680 1420,2090 2140,2540
-of the previous lectures, we
+of the previous lectures,| we,
+|这些技术有可能，
 
 55
 00:02:05,630 --> 00:02:07,500
 0,305 305,610 930,1250 1250,1520 1520,1870
-these technologies have the potential
+these technologies have the potential|
+|
 
 56
 00:02:07,910 --> 00:02:09,670
 0,290 290,470 470,760 870,1270 1380,1760
 to keep your information private
+保持你的信息隐私和安全，
 
 57
 00:02:09,670 --> 00:02:12,130
 0,330 330,680 1210,1530 1530,1850 2140,2460
-and safe, to transport people
+and safe,| to transport people
+|更有效、更快、更便宜地运输人员和货物，
 
 58
 00:02:12,130 --> 00:02:15,090
@@ -298,7 +334,8 @@ and goods more effectively and
 59
 00:02:15,530 --> 00:02:17,425
 0,400 480,800 800,1120 1440,1700 1700,1895
-faster and cheaper, to really
+faster and cheaper,| to really
+|通过提供即时翻译来真正使全球沟通变得更容易，
 
 60
 00:02:17,425 --> 00:02:18,960
@@ -308,17 +345,20 @@ make it easier to communicate
 61
 00:02:19,280 --> 00:02:22,620
 0,635 635,940 960,1355 1355,2440 2640,3340
-globally by providing instantaneous translations
+globally by providing instantaneous translations|
+|
 
 62
 00:02:23,240 --> 00:02:25,375
 0,400 420,755 755,1025 1025,1360 1740,2135
 to, to develop education to
+为每个人发展教育，
 
 63
 00:02:25,375 --> 00:02:27,240
 0,300 300,510 510,810 810,1205 1465,1865
-everyone, to allow human workers
+everyone,| to allow human workers
+|让人类工作人员专注于宏大的任务，
 
 64
 00:02:27,830 --> 00:02:29,520
@@ -328,12 +368,14 @@ to focus on big picture
 65
 00:02:29,660 --> 00:02:32,070
 0,400 840,1235 1235,1625 1625,2015 2015,2410
-tasks with machines taking on
+tasks| with machines taking on
+|让机器承担日常任务。
 
 66
 00:02:32,120 --> 00:02:34,015
 0,275 275,550 600,1000 1500,1775 1775,1895
-the routine tasks. And so
+the routine tasks.| And so
+|所以，这一未来是由三个相互关联的领域实现的，
 
 67
 00:02:34,015 --> 00:02:35,580
@@ -343,7 +385,8 @@ this future is really enabled
 68
 00:02:35,690 --> 00:02:38,575
 0,400 450,755 755,1715 1715,2020 2640,2885
-by three interconnected fields and
+by three interconnected fields| and
+|一方面我们有机器人，
 
 69
 00:02:38,575 --> 00:02:39,550
@@ -353,7 +396,8 @@ on one hand we have
 70
 00:02:39,550 --> 00:02:41,365
 0,530 550,840 840,1340 1360,1635 1635,1815
-robots, now robots. I like
+robots,| now robots, I like
+|我喜欢把机器人看作是一台机器，
 
 71
 00:02:41,365 --> 00:02:42,660
@@ -363,12 +407,14 @@ to think of robots as
 72
 00:02:43,130 --> 00:02:44,910
 0,365 365,730 750,1130 1130,1445 1445,1780
-as the machines that put
+as the machines,| that put
+|它让计算运转起来，
 
 73
 00:02:44,990 --> 00:02:47,310
 0,580 690,980 980,1270 1680,2000 2000,2320
-computing in motion and give
+computing in motion| and give
+|让我们在世界上的机器具有导航和操纵世界的能力，
 
 74
 00:02:48,020 --> 00:02:49,990
@@ -388,19 +434,19 @@ navigate and to manipulate the
 77
 00:02:54,700 --> 00:02:56,940
 0,260 760,1035 1035,1310 1450,1845 1845,2240
-world. We have artificial intelligence
+world,| we have artificial intelligence,|
+|我们有人工智能，|
 
 78
 00:02:57,980 --> 00:02:59,920
 0,320 320,760 990,1390 1410,1730 1730,1940
-which enables machines to see.|
-|
+which enables machines to see
+它能让机器像人一样看到、听到、交流和做出决定，
 
 79
 00:03:00,090 --> 00:03:01,930
 0,290 290,580 870,1235 1235,1520 1520,1840
 To hear and to communicate
-像人类一样倾听、交流和做出决定。然后我们有了机器学习。
 
 80
 00:03:02,010 --> 00:03:03,725
@@ -410,34 +456,37 @@ and to make decisions like
 81
 00:03:03,725 --> 00:03:05,255
 0,335 775,1035 1035,1170 1170,1290 1290,1530
-humans. And then we have
+humans,| and then we have
+|然后我们有机器学习，
 
 82
 00:03:05,255 --> 00:03:06,720
 0,270 270,545
-machine learning.|
+machine learning,|
 |
 
 83
 00:03:06,720 --> 00:03:07,940
 0,270 270,450 450,690 690,945 945,1220
-And to me, machine learning
-对我来说，机器学习是关于，呃，从数据中学习并做出预测。而机器学习的这种，这种应用是广泛的。它，它适用于认知任务，它适用于物理任务。但不管任务是什么，我们都可以用数据来回答描述性、预测性或说明性的问题，从而描述机器学习是如何作为EM工作的。所以你可以查看数据，看看发生了什么，或者这是什么。你可以查看数据，看看未来会发生什么，未来世界可能是什么样子。或者你可以用数据来问我应该去哪里，我应该做什么。
+and to me, machine learning
+对我来说，机器学习是关于从数据中学习并做出预测，
 
 84
 00:03:07,990 --> 00:03:10,410
 0,350 350,700 1110,1510 1560,1960 2070,2420
-is about, eh, learning from
+is about {} learning from
 
 85
 00:03:10,410 --> 00:03:12,740
 0,240 240,530 550,1340 1360,1760 1930,2330
-and making predictions on data.
+and making predictions on data,|
+|
 
 86
 00:03:13,330 --> 00:03:15,470
 0,400 570,970 1290,1610 1610,1835 1835,2140
-And this, this kind of
+and this, this kind of
+机器学习的这种应用是广泛的，
 
 87
 00:03:16,030 --> 00:03:17,595
@@ -447,22 +496,26 @@ application of machine learning is
 88
 00:03:17,595 --> 00:03:19,755
 0,335 445,845 1165,1515 1515,1890 1890,2160
-broad. It, it applies to
+broad,| it, it applies to
+|它适用于认知任务，
 
 89
 00:03:19,755 --> 00:03:21,945
 0,540 540,845 895,1230 1230,1625 1915,2190
-cognitive tasks, it applies to
+cognitive tasks,| it applies to
+|它适用于物理任务，
 
 90
 00:03:21,945 --> 00:03:24,390
 0,275 415,815 1285,1685 1735,2135 2185,2445
-physical tasks. But regardless of
+physical tasks,| but regardless of
+|但不管任务是什么，
 
 91
 00:03:24,390 --> 00:03:26,720
 0,165 165,470 850,1155 1155,1440 1440,2330
-the tasks, we can characterize
+the tasks,| we can characterize
+|我们可以描述机器学习如何使用数据工作，
 
 92
 00:03:27,010 --> 00:03:29,030
@@ -472,7 +525,8 @@ how machine learning works as
 93
 00:03:29,140 --> 00:03:32,060
 0,400 840,1235 1235,1630 2400,2660 2660,2920
-EM, using data to answer
+{} using data| to answer
+|来回答描述性、预测性或说明性的问题，
 
 94
 00:03:32,140 --> 00:03:34,550
@@ -482,12 +536,14 @@ questions that are either descriptive,
 95
 00:03:34,780 --> 00:03:37,785
 0,785 785,1175 1175,2020 2400,2765 2765,3005
-predictive or prescriptive. So you
+predictive or prescriptive,| so you
+|所以你可以查看数据，
 
 96
 00:03:37,785 --> 00:03:39,000
 0,135 135,255 255,420 420,725 895,1215
-can look at data to
+can look at data| to
+|看看发生了什么，或者这是什么，
 
 97
 00:03:39,000 --> 00:03:40,650
@@ -497,12 +553,14 @@ see what happened or to
 98
 00:03:40,650 --> 00:03:42,360
 0,210 210,390 390,555 555,860 1450,1710
-see what is this. You
+see what is this,| you
+|你可以查看数据，
 
 99
 00:03:42,360 --> 00:03:43,710
 0,135 135,285 285,465 465,770 1030,1350
-can look at data to
+can look at data| to
+|看看未来会发生什么，
 
 100
 00:03:43,710 --> 00:03:44,925
@@ -512,7 +570,8 @@ see what will happen in
 101
 00:03:44,925 --> 00:03:46,425
 0,165 165,455 835,1125 1125,1320 1320,1500
-the future and what the
+the future| and what the
+|未来世界可能是什么样子，
 
 102
 00:03:46,425 --> 00:03:47,535
@@ -522,7 +581,8 @@ world might look like in
 103
 00:03:47,535 --> 00:03:49,455
 0,150 150,425 1165,1515 1515,1755 1755,1920
-the future. Or you can
+the future,| or you can
+|或者你可以用数据来问我应该去哪里，我应该做什么。
 
 104
 00:03:49,455 --> 00:03:52,070
@@ -543,14 +603,12 @@ I do.|
 107
 00:03:55,300 --> 00:03:56,460
 0,200
-Yeah.|
-嗯。|
 
 108
 00:03:56,550 --> 00:03:58,580
 0,320 320,640 900,1250 1250,1600 1680,2030
 And so when we think
-因此，当我们在机器人的背景下思考这些问题时，我们必须，我们必须在机器人是什么的问题上达成一致。因此，可以把机器人想象成一个可编程的机械设备，它通过传感器接受输入，对输入进行推理，然后在物理世界中产生一个动作。机器人是由身体和大脑组成的。
+所以，当我们在机器人的背景下思考这些问题时，
 
 109
 00:03:58,580 --> 00:04:00,140
@@ -560,7 +618,8 @@ about these questions in the
 110
 00:04:00,140 --> 00:04:02,480
 0,290 490,795 795,1100 1300,1700 2080,2340
-context of a robot, we
+context of a robot,| we
+|我们必须在机器人是什么的问题上达成一致。
 
 111
 00:04:02,480 --> 00:04:03,680
@@ -580,7 +639,8 @@ same page about what a
 114
 00:04:06,140 --> 00:04:08,140
 0,270 270,540 540,890 1300,1650 1650,2000
-robot is. And, and so
+robot is.| And, and so
+|所以，可以把机器人想象成一个可编程的机械设备，
 
 115
 00:04:08,310 --> 00:04:09,560
@@ -590,17 +650,20 @@ think of a robot as
 116
 00:04:09,560 --> 00:04:12,620
 0,210 210,945 945,1605 1605,1970 2740,3060
-a programmable mechanical device that
+a programmable mechanical device,| that
+|它通过传感器接受输入，
 
 117
 00:04:12,620 --> 00:04:15,460
 0,320 520,920 1600,1920 1920,2175 2175,2840
-takes input with its sensors,
+takes input with its sensors,|
+|
 
 118
 00:04:15,840 --> 00:04:17,735
 0,400 570,890 890,1210 1260,1640 1640,1895
-reasons about this input, and
+reasons about this input,| and
+对输入进行推理，|然后在物理世界中产生一个动作。
 
 119
 00:04:17,735 --> 00:04:19,775
@@ -610,7 +673,8 @@ then generates an action in
 120
 00:04:19,775 --> 00:04:22,880
 0,150 150,425 565,965 2335,2640 2640,3105
-the physical world. And robots
+the physical world.| And robots
+|机器人是由身体和大脑组成的，
 
 121
 00:04:22,880 --> 00:04:24,070
@@ -620,19 +684,20 @@ are made of a body
 122
 00:04:24,240 --> 00:04:25,660
 0,275 275,425 425,700
-and the brain.|
+and the brain,|
 |
 
 123
 00:04:25,830 --> 00:04:28,720
 0,260 260,520 1530,2000 2000,2150 2150,2890
-The body consisting of actuators
-由执行器和传感器组成的身体决定了机器人可以完成的任务范围，因此机器人只能做它的身体能够做的事情。嗯，嗯？轮子上的机器人将不能完成爬楼梯的任务，所以我们必须考虑那个身体。我们有at t细胞。我们有很多基于机器学习的研究，使我们能够研究如何为特定任务优化设计机器人本体。
+the body consisting of actuators
+身体由执行器和传感器组成，
 
 124
 00:04:28,740 --> 00:04:31,690
 0,335 335,970 1800,2200 2370,2660 2660,2950
-and sensors determine the range
+and sensors| determine the range
+|决定了机器人可以完成的任务范围，
 
 125
 00:04:31,740 --> 00:04:33,250
@@ -642,7 +707,8 @@ of tasks that the robot
 126
 00:04:33,870 --> 00:04:35,345
 0,305 305,560 560,905 905,1235 1235,1475
-can do, so the robot
+can do,| so the robot
+|机器人只能做它的身体能够做的事情，
 
 127
 00:04:35,345 --> 00:04:36,350
@@ -652,12 +718,14 @@ can only do what its
 128
 00:04:36,350 --> 00:04:37,690
 0,240 240,465 465,765 765,1050 1050,1340
-body is capable of doing.
+body is capable of doing,|
+|
 
 129
 00:04:38,100 --> 00:04:40,100
 0,400 570,970 1140,1445 1445,1640 1640,2000
-Eh eh? Robot on wheels
+{ -} robot on wheels
+轮子上的机器人不能完成爬楼梯的任务，
 
 130
 00:04:40,100 --> 00:04:41,150
@@ -672,27 +740,32 @@ do the task of climbing
 132
 00:04:42,455 --> 00:04:43,850
 0,335 745,990 990,1080 1080,1230 1230,1395
-stairs, so we have to
+stairs,| so we have to
+|所以我们必须考虑那个身体，
 
 133
 00:04:43,850 --> 00:04:45,680
 0,180 180,390 390,570 570,860 1450,1830
-think about that body. And
+think about that body,| and
+|我们有[]，
 
 134
 00:04:45,680 --> 00:04:46,865
 0,270 270,540 540,810 810,990 990,1185
-we have at t cell.
+we have at { -},|
+|
 
 135
 00:04:46,865 --> 00:04:48,280
 0,195 195,485 565,855 855,1080 1080,1415
-We have a lot of
+we have a lot of
+我们有很多基于机器学习的研究，
 
 136
 00:04:48,660 --> 00:04:51,305
 0,365 365,730 810,1210 1260,1660 2280,2645
-machine learning based research that
+machine learning based research,| that
+|使我们能够研究，
 
 137
 00:04:51,305 --> 00:04:53,560
@@ -702,7 +775,8 @@ allows us to that that
 138
 00:04:53,910 --> 00:04:57,350
 0,640 1020,1400 1400,1730 1730,2080 2880,3440
-examines how to design optimally
+examines,| how to design optimally
+|如何为特定任务优化设计机器人身体。
 
 139
 00:04:57,350 --> 00:04:58,535
@@ -719,7 +793,7 @@ particular task.|
 00:05:00,360 --> 00:05:01,865
 0,365 365,590 590,845 845,1235 1235,1505
 Now, in order for the
-现在，为了让身体做它应该做的事情，我们需要大脑，我们需要机器学习，需要推理和决策引擎，这就是我们今天要谈论的。
+现在，为了让身体做它应该做的事情，
 
 142
 00:05:01,865 --> 00:05:02,870
@@ -729,12 +803,14 @@ body to do what it's
 143
 00:05:02,870 --> 00:05:04,100
 0,165 165,345 345,620 820,1080 1080,1230
-meant to do, we need
+meant to do,| we need
+|我们需要大脑，
 
 144
 00:05:04,100 --> 00:05:05,075
 0,165 165,390 390,600 600,735 735,975
-the brain, we need the
+the brain,| we need the
+|我们需要机器学习，需要推理和决策引擎，
 
 145
 00:05:05,075 --> 00:05:06,370
@@ -744,12 +820,14 @@ machine learning and the reason
 146
 00:05:06,450 --> 00:05:07,870
 0,275 275,485 485,755 755,1055 1055,1420
-and the decision making engine,
+and the decision making engine,|
+|
 
 147
 00:05:08,250 --> 00:05:09,800
 0,305 305,500 500,770 770,1150 1290,1550
 and this is what we
+这就是我们今天要谈论的。
 
 148
 00:05:09,800 --> 00:05:10,960
@@ -9424,4 +9502,3 @@ you very much and come
 0,290 290,440 440,700
 work with us.|
 |
-
