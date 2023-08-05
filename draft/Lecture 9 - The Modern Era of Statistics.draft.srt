@@ -3046,7 +3046,7 @@ it has, it's parameterized, okay,|
 536
 00:15:09,075 --> 00:15:09,855
 0,135 135,255 255,390 390,525 525,780
-like a sigmoid function,|
+like a {sigmoid -} function,|
 就像一个 sigmoid 函数，|
 
 537
@@ -3291,7 +3291,7 @@ truly high dimensional,| but let's
 579
 00:16:23,095 --> 00:16:24,670
 0,90 90,300 300,525 525,705 855,1575
-say {ImageNet -} is {256x256x3 -
+say {ImageNet -} is {256x256x3
 
 580
 00:16:24,670 --> 00:16:27,210
@@ -3416,7 +3416,7 @@ labels are random,| the problem
 00:16:57,165 --> 00:16:58,635
 0,195 195,485 535,840 840,1145 1195,1470
 is really complex, right,| so
-|所以，你想添加一点随机噪声。|
+|所以，你想添加一点随机噪声。
 
 602
 00:16:58,635 --> 00:16:59,415
@@ -5775,7 +5775,7 @@ some observation about this process.|
 
 1018
 00:28:49,720 --> 00:28:50,985
-0,245 245,455 455,800 800,1040 1040,1265T
+0,245 245,455 455,800 800,1040 1040,1265
 The first observation is that,|
 第一个观察是，|
 
