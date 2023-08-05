@@ -1,0 +1,3828 @@
+1
+00:00:09,270 --> 00:00:10,780
+Thank you, hi everyone,
+
+2
+00:00:11,040 --> 00:00:12,550
+thanks Alexander for the introduction.
+
+3
+00:00:13,630 --> 00:00:18,200
+Alright, very excited to talk about this modern era of statistics,
+
+4
+00:00:18,820 --> 00:00:20,900
+you, you've heard throughout the lectures,
+
+5
+00:00:21,250 --> 00:00:26,110
+probably a lot about the, you know, deep learning and the technology that enables this,
+
+6
+00:00:26,430 --> 00:00:27,820
+but what I want to talk about,
+
+7
+00:00:27,930 --> 00:00:30,310
+I want to say why works, okay,
+
+8
+00:00:30,540 --> 00:00:31,895
+so and give you some intuitions
+
+9
+00:00:31,895 --> 00:00:36,520
+about where we are standing in terms of the theoretical analysis of this system,
+
+10
+00:00:37,200 --> 00:00:40,390
+because a lot of people think that machine learning is an ad hoc field
+
+11
+00:00:40,710 --> 00:00:43,010
+and deep learning is extremely ad hoc,
+
+12
+00:00:43,010 --> 00:00:45,940
+this change a couple of hyper parameters and everything starts working,
+
+13
+00:00:46,350 --> 00:00:47,525
+but that's not actually the case,
+
+14
+00:00:47,525 --> 00:00:49,460
+so we have some cues,
+
+15
+00:00:49,460 --> 00:00:51,880
+like what's, what's the whole thing is about, okay.
+
+16
+00:00:53,100 --> 00:00:55,660
+Alright, so to motivate,
+
+17
+00:00:56,370 --> 00:00:58,630
+I want to tell you about this,
+
+18
+00:00:59,400 --> 00:01:02,150
+I think it's a very common photo these days,
+
+19
+00:01:02,290 --> 00:01:07,910
+that you can see that the more doubling law got broken after 2012
+
+20
+00:01:08,260 --> 00:01:12,170
+and we got into kind of a new type of models,
+
+21
+00:01:12,640 --> 00:01:16,960
+that as we growth in size on the y axis here,
+
+22
+00:01:16,960 --> 00:01:19,290
+what you see is that,
+
+23
+00:01:19,430 --> 00:01:22,375
+energy consumption of this models, it could be even accuracy,
+
+24
+00:01:22,375 --> 00:01:27,210
+you know, the accuracy of this models or generalization ability of these models goes higher and higher
+
+25
+00:01:27,590 --> 00:01:29,830
+as we scale them, okay,
+
+26
+00:01:29,830 --> 00:01:32,190
+and that's the kind of observation that we had so far.
+
+27
+00:01:32,800 --> 00:01:35,060
+And that's what I mean by modern era,
+
+28
+00:01:35,140 --> 00:01:38,450
+because we exhaustively increasing their size,
+
+29
+00:01:39,250 --> 00:01:42,970
+as these photo can show you
+
+30
+00:01:42,970 --> 00:01:46,560
+like some scale of this large language models, that are out there,
+
+31
+00:01:46,970 --> 00:01:51,360
+you can see that we have models up to 540 billion parameters,
+
+32
+00:01:51,980 --> 00:01:56,280
+where, you know, it's beyond our understanding how these models perform representation learning.
+
+33
+00:01:56,920 --> 00:02:00,175
+And, it's not only in the realm of language modeling,
+
+34
+00:02:00,175 --> 00:02:02,320
+but it's also across like different fields,
+
+35
+00:02:02,320 --> 00:02:07,560
+for example, in time series modeling, in medical diagnosis, in financial time series,
+
+36
+00:02:07,820 --> 00:02:11,280
+we have new technologies that are getting better and better with size
+
+37
+00:02:11,720 --> 00:02:14,340
+and this seems to be the case,
+
+38
+00:02:15,080 --> 00:02:16,710
+across different data modalities
+
+39
+00:02:16,910 --> 00:02:22,860
+and perhaps the one that was present before generative modeling we went from in 2014,
+
+40
+00:02:23,880 --> 00:02:29,090
+generative models like that to generative models like this, right,
+
+41
+00:02:29,230 --> 00:02:31,470
+so the quality drastically improve,
+
+42
+00:02:31,470 --> 00:02:32,720
+not only because of the size,
+
+43
+00:02:33,010 --> 00:02:40,030
+but also the underlying structures that enabled us to scale this neural networks,
+
+44
+00:02:40,410 --> 00:02:41,735
+because we already knew that,
+
+45
+00:02:41,735 --> 00:02:45,400
+if you have to stack two layers of neural networks next to each other,
+
+46
+00:02:45,720 --> 00:02:47,920
+you have a universal approximator, right,
+
+47
+00:02:48,240 --> 00:02:51,430
+so then why couldn't we scale it now,
+
+48
+00:02:51,630 --> 00:02:54,555
+we had to find the right structure in order to do that,
+
+49
+00:02:54,555 --> 00:02:58,160
+for example, diffusion was one of those structures that actually presented.
+
+50
+00:02:58,940 --> 00:03:01,350
+So it seems like bigger seems better,
+
+51
+00:03:01,760 --> 00:03:02,640
+but why,
+
+52
+00:03:02,870 --> 00:03:04,950
+okay, let's find out the reason.
+
+53
+00:03:06,610 --> 00:03:08,090
+So you all,
+
+54
+00:03:08,410 --> 00:03:11,160
+I assume that you would all know how to solve these two equations,
+
+55
+00:03:11,160 --> 00:03:14,150
+so n equations requires n unknown, right,
+
+56
+00:03:14,470 --> 00:03:15,350
+so how many of you,
+
+57
+00:03:15,430 --> 00:03:17,570
+you know, still how to solve this kind of thing?
+
+58
+00:03:20,050 --> 00:03:22,820
+Yeah, I think it's pretty,
+
+59
+00:03:23,050 --> 00:03:25,370
+but then the crazy thing about deep learning is that,
+
+60
+00:03:25,810 --> 00:03:26,990
+it comes says that,
+
+61
+00:03:27,160 --> 00:03:31,580
+yeah, make the number of these X and y larger and larger,
+
+62
+00:03:31,720 --> 00:03:33,110
+excessively, for these two equations
+
+63
+00:03:33,670 --> 00:03:37,055
+and things, things would start, working even better,
+
+64
+00:03:37,055 --> 00:03:38,440
+and what does it mean even better,
+
+65
+00:03:38,940 --> 00:03:42,520
+when you have two equations and you have a lot of unknowns,
+
+66
+00:03:43,270 --> 00:03:45,060
+how does that even make sense.
+
+67
+00:03:45,060 --> 00:03:48,980
+You know, let's do an analysis and numerical analysis of the dataset,
+
+68
+00:03:49,360 --> 00:03:52,155
+you, you all seen this dataset before,
+
+69
+00:03:52,155 --> 00:03:54,650
+it's a handed, handed digit
+
+70
+00:03:55,150 --> 00:03:57,410
+and as you like, it has 60k points,
+
+71
+00:03:57,880 --> 00:04:01,160
+it has them of 28x28 great scale images,
+
+72
+00:04:02,000 --> 00:04:03,160
+and in today's models,
+
+73
+00:04:03,540 --> 00:04:07,780
+they have millions of parameters to model 60k images,
+
+74
+00:04:08,580 --> 00:04:13,060
+so the performance on this dataset actually keeps improving
+
+75
+00:04:13,590 --> 00:04:15,970
+as we scale the neural networks,
+
+76
+00:04:16,770 --> 00:04:19,145
+and how does this make sense,
+
+77
+00:04:19,145 --> 00:04:24,610
+like there is the information basically that you're learning from 60 image 60k images
+
+78
+00:04:24,960 --> 00:04:27,610
+with millions of data parameters,
+
+79
+00:04:28,680 --> 00:04:29,470
+what are we learning?
+
+80
+00:04:30,590 --> 00:04:36,000
+Now, we know that generalization error or test error has this kind of proportion from the theory,
+
+81
+00:04:36,320 --> 00:04:39,210
+that, it's proportional to the number of parameters of the system
+
+82
+00:04:39,350 --> 00:04:43,980
+over the square root of number of parameters of the system over the dataset size,
+
+83
+00:04:44,120 --> 00:04:46,770
+that means if I increase the number of parameters of the system,
+
+84
+00:04:47,390 --> 00:04:51,720
+then I would expect at some point that generalization or the error was high,
+
+85
+00:04:53,010 --> 00:04:56,860
+then why is it that we make them larger and larger, but they work?
+
+86
+00:04:58,530 --> 00:05:01,360
+In case of ImageNet and other large scale dataset,
+
+87
+00:05:01,560 --> 00:05:02,890
+a very common machine learning,
+
+88
+00:05:02,940 --> 00:05:05,290
+we have like 1.4M images,
+
+89
+00:05:06,160 --> 00:05:08,460
+of 256x256x3,
+
+90
+00:05:08,720 --> 00:05:12,270
+and then you have models with hundreds of millions of parameters,
+
+91
+00:05:12,560 --> 00:05:15,090
+that you fit this 1.4M images.
+
+92
+00:05:16,520 --> 00:05:18,060
+In NLP, as we showed before,
+
+93
+00:05:18,110 --> 00:05:20,695
+we have datapoints of few billions
+
+94
+00:05:20,695 --> 00:05:22,440
+and then models with hundred billions.
+
+95
+00:05:23,780 --> 00:05:28,105
+And then, perhaps like the best, my favorite kind of illustration
+
+96
+00:05:28,105 --> 00:05:31,080
+of this size improving performance in this generative AI,
+
+97
+00:05:31,660 --> 00:05:32,665
+when you have a prompt,
+
+98
+00:05:32,665 --> 00:05:36,270
+this is like a generative AI that receives text input and generates output images,
+
+99
+00:05:37,140 --> 00:05:39,260
+so the prompt or the input to this system was
+
+100
+00:05:39,520 --> 00:05:41,145
+a portrait photo of a kangaroo
+
+101
+00:05:41,145 --> 00:05:44,810
+wearing an orange hoodie and blue sunglasses,
+
+102
+00:05:45,040 --> 00:05:47,600
+standing on the grass in front of the Sydney Opera House,
+
+103
+00:05:47,920 --> 00:05:50,630
+holding a sign on the chest, that says welcome friends.
+
+104
+00:05:51,550 --> 00:05:52,400
+And as we see,
+
+105
+00:05:52,510 --> 00:05:54,240
+that on the top of each image,
+
+106
+00:05:54,240 --> 00:05:56,210
+we have the size of the model,
+
+107
+00:05:56,860 --> 00:06:00,200
+and as we improve the quality of the, the size of the models,
+
+108
+00:06:00,310 --> 00:06:01,460
+the quality improves,
+
+109
+00:06:01,510 --> 00:06:05,060
+and we're getting closer and closer to that description that we provided,
+
+110
+00:06:08,440 --> 00:06:10,100
+as an input to the system, right,
+
+111
+00:06:10,940 --> 00:06:12,835
+like the first image actually 350,
+
+112
+00:06:12,835 --> 00:06:15,390
+it's still like, has all the components of that input,
+
+113
+00:06:15,560 --> 00:06:17,460
+but it's not as good as the last one, right,
+
+114
+00:06:18,370 --> 00:06:20,270
+it misses on a couple of things.
+
+115
+00:06:22,010 --> 00:06:24,960
+Alright, so this happens,
+
+116
+00:06:25,010 --> 00:06:29,070
+and let's now figure out a way to explain this.
+
+117
+00:06:29,300 --> 00:06:33,690
+Okay, how many of you have heard about a phenomenon called double descent?
+
+118
+00:06:37,360 --> 00:06:39,490
+One, two.
+
+119
+00:06:41,950 --> 00:06:42,680
+All right, so,
+
+120
+00:06:43,770 --> 00:06:47,500
+all right, so this is not a learning curve first,
+
+121
+00:06:48,160 --> 00:06:50,040
+x axis shows the model size,
+
+122
+00:06:51,460 --> 00:06:55,280
+you have an image classification problem CIFAR-10, you know,
+
+123
+00:06:55,900 --> 00:07:00,110
+and these are ten classes, you want to classify these images
+
+124
+00:07:00,190 --> 00:07:01,640
+and now on the x axis,
+
+125
+00:07:01,930 --> 00:07:04,010
+you are increasing the size of the networks,
+
+126
+00:07:05,740 --> 00:07:08,630
+and on the y axis, we see the test error.
+
+127
+00:07:09,160 --> 00:07:11,450
+Okay, let's just concentrate on the,
+
+128
+00:07:13,550 --> 00:07:17,170
+on the purple side of the basically process,
+
+129
+00:07:17,170 --> 00:07:18,990
+because that's at the end of the training process,
+
+130
+00:07:19,220 --> 00:07:21,420
+if you're looking at the test error at the end of the process.
+
+131
+00:07:22,080 --> 00:07:24,770
+So classical statistics was telling us that,
+
+132
+00:07:24,770 --> 00:07:29,590
+as you improve, as you increase the size of neural networks up to a certain point,
+
+133
+00:07:29,670 --> 00:07:30,940
+you find a nominal point,
+
+134
+00:07:31,260 --> 00:07:36,140
+where the performance of model the generalization that you have is optimal,
+
+135
+00:07:36,900 --> 00:07:38,085
+and from that moment on,
+
+136
+00:07:38,085 --> 00:07:40,430
+if you increase the size of the network, you're overfitting,
+
+137
+00:07:40,870 --> 00:07:41,505
+what that means,
+
+138
+00:07:41,505 --> 00:07:43,380
+that means like the the kind of accuracy,
+
+139
+00:07:43,380 --> 00:07:47,390
+basically that bell, the first bell shape that starts going up,
+
+140
+00:07:47,500 --> 00:07:50,210
+as you see, that part was going
+
+141
+00:07:50,560 --> 00:07:54,315
+and, and the project, they projected that that thing is going to go up
+
+142
+00:07:54,315 --> 00:07:55,580
+as we actually scale the models,
+
+143
+00:07:56,190 --> 00:07:58,775
+but then the phenomenon that we observed is that,
+
+144
+00:07:58,775 --> 00:08:02,710
+there is a second descent as we scale the size,
+
+145
+00:08:02,940 --> 00:08:04,790
+so this is called a double descent phenomenon,
+
+146
+00:08:04,790 --> 00:08:07,150
+so first descent we knew already,
+
+147
+00:08:07,590 --> 00:08:09,680
+in the modern era, we figured out that,
+
+148
+00:08:09,680 --> 00:08:12,220
+as we scale this neural networks, the size of the models
+
+149
+00:08:12,840 --> 00:08:16,210
+and this is this has been observed across many different architectures,
+
+150
+00:08:16,350 --> 00:08:20,200
+okay, so as we scale, it could be a resonate architecture,
+
+151
+00:08:20,310 --> 00:08:21,910
+it could be a convolution on neural network,
+
+152
+00:08:22,320 --> 00:08:25,690
+it could be an LSTM or multiay perceptor or whatever they do,
+
+153
+00:08:26,330 --> 00:08:28,350
+you know, but as we increase the size,
+
+154
+00:08:28,430 --> 00:08:30,060
+that's the kind of phenomena that we see.
+
+155
+00:08:31,060 --> 00:08:36,810
+Now, let me make it a little bit easy, easier to understand,
+
+156
+00:08:37,420 --> 00:08:40,080
+this was classical statistics in terms of accuracy, now,
+
+157
+00:08:41,280 --> 00:08:42,890
+in the previous one, we were seeing errors,
+
+158
+00:08:43,600 --> 00:08:44,780
+now we see accuracy,
+
+159
+00:08:45,240 --> 00:08:47,180
+we go high up to a certain point
+
+160
+00:08:47,470 --> 00:08:49,220
+and then as we increase the size of the models,
+
+161
+00:08:49,780 --> 00:08:51,050
+we start overfing,
+
+162
+00:08:52,270 --> 00:08:53,810
+now, up to a certain point,
+
+163
+00:08:54,280 --> 00:08:55,010
+now, if you have,
+
+164
+00:08:56,840 --> 00:08:59,440
+the new kind of experimental results showed that,
+
+165
+00:08:59,550 --> 00:09:00,580
+that's actually the case,
+
+166
+00:09:01,230 --> 00:09:04,810
+where up to a certain point, we go up
+
+167
+00:09:04,890 --> 00:09:07,600
+and then again there is an improvement in performance,
+
+168
+00:09:09,100 --> 00:09:11,790
+this regime is called all over parameterization regime,
+
+169
+00:09:11,790 --> 00:09:13,070
+I'll tell you more,
+
+170
+00:09:13,210 --> 00:09:15,470
+and I give you more substance,
+
+171
+00:09:15,820 --> 00:09:19,040
+why we call them overparameterized, overparameterization regime,
+
+172
+00:09:19,090 --> 00:09:20,070
+should be pretty obvious,
+
+173
+00:09:20,070 --> 00:09:26,400
+but, I put it in the theoretical and the technical kind of language of machine learning.
+
+174
+00:09:27,310 --> 00:09:30,740
+Alright, so one of the things that we can observe from this image is that,
+
+175
+00:09:30,850 --> 00:09:34,425
+the accuracy at the very end of this overparametriization regime is see that,
+
+176
+00:09:34,425 --> 00:09:40,485
+it's slightly better than the first accuracy that you get from a model that is reasonably sized, okay,
+
+177
+00:09:40,485 --> 00:09:42,500
+it's not that much better the accuracy,
+
+178
+00:09:43,040 --> 00:09:45,230
+but then the discovery of deep learning was that,
+
+179
+00:09:45,230 --> 00:09:47,170
+when we're in the overparameterization regime,
+
+180
+00:09:47,580 --> 00:09:51,160
+we get a new type of behavior starts emerging,
+
+181
+00:09:51,780 --> 00:09:52,640
+what kind of behavior,
+
+182
+00:09:53,200 --> 00:09:56,520
+the characteristics that emerge in that overparameterization regime
+
+183
+00:09:56,520 --> 00:09:59,030
+is something that I'm going to talk about next.
+
+184
+00:09:59,620 --> 00:10:01,050
+So one of the things is,
+
+185
+00:10:04,350 --> 00:10:07,240
+as we go larger and larger in networks sizes,
+
+186
+00:10:07,590 --> 00:10:11,500
+they learn concepts that they can pass on to different tasks,
+
+187
+00:10:11,640 --> 00:10:13,930
+that means they can generalize across different tasks,
+
+188
+00:10:14,430 --> 00:10:16,090
+that means those concepts that they learn,
+
+189
+00:10:16,380 --> 00:10:19,430
+they can be transferred to actually perform more tasks,
+
+190
+00:10:19,430 --> 00:10:21,880
+not even a single task that they have been trained on.
+
+191
+00:10:22,440 --> 00:10:23,560
+Okay, so,
+
+192
+00:10:24,220 --> 00:10:26,650
+it seems like you're giving them more ability to generalize
+
+193
+00:10:26,650 --> 00:10:30,900
+and getting closer to those kind of kind of general representation of AI,
+
+194
+00:10:31,560 --> 00:10:33,560
+I'm afraid to say AI yet, okay,
+
+195
+00:10:33,560 --> 00:10:36,790
+but yeah, but that's the kind of thing that we observe,
+
+196
+00:10:36,990 --> 00:10:38,410
+the kind of concepts that they learn,
+
+197
+00:10:38,790 --> 00:10:43,360
+they are being able to perform across different tasks, across different domains,
+
+198
+00:10:43,590 --> 00:10:44,620
+they get better and better.
+
+199
+00:10:45,710 --> 00:10:47,470
+Another observation that we had is that,
+
+200
+00:10:47,470 --> 00:10:49,110
+the scale improves robustness,
+
+201
+00:10:49,220 --> 00:10:53,040
+What does it mean for a deep learning model to be robust,
+
+202
+00:10:53,660 --> 00:10:56,410
+that means if I change the input a little bit,
+
+203
+00:10:56,700 --> 00:10:57,760
+[per] bit with noise,
+
+204
+00:10:58,230 --> 00:11:00,940
+on the output, it doesn't completely go crash,
+
+205
+00:11:01,230 --> 00:11:03,940
+so the change of the input is proportional to the output changes,
+
+206
+00:11:04,560 --> 00:11:05,550
+so robust means that,
+
+207
+00:11:05,550 --> 00:11:08,300
+you are being being able to control the error and the output,
+
+208
+00:11:08,530 --> 00:11:11,720
+if you have a little bit of error or deviation of the input.
+
+209
+00:11:12,040 --> 00:11:14,180
+So this curve actually shows that,
+
+210
+00:11:14,650 --> 00:11:16,490
+has been scaled these neural networks,
+
+211
+00:11:17,350 --> 00:11:20,450
+we see that the size of, the, the robust actually improve.
+
+212
+00:11:20,770 --> 00:11:23,720
+Okay, I'm gonna talk about this in much more detail in,
+
+213
+00:11:24,370 --> 00:11:26,450
+because that's the part where we have the theory for,
+
+214
+00:11:26,920 --> 00:11:28,070
+from the deep learning perspective.
+
+215
+00:11:28,800 --> 00:11:35,500
+Now, not everything improves by, by growing in size,
+
+216
+00:11:35,700 --> 00:11:39,370
+for example, the problems of bias and accountability
+
+217
+00:11:39,420 --> 00:11:42,700
+and and minor accuracy on minor minority samples,
+
+218
+00:11:42,870 --> 00:11:45,040
+as we scale, they get worsen.
+
+219
+00:11:45,330 --> 00:11:49,150
+So that's we have evidence for those kind of cases as well,
+
+220
+00:11:49,440 --> 00:11:50,410
+so you need to be careful,
+
+221
+00:11:50,730 --> 00:11:52,420
+when you are deploying this in our society.
+
+222
+00:11:53,250 --> 00:11:56,270
+Now, another very important part of intelligence, which is reasoning,
+
+223
+00:11:56,270 --> 00:12:01,870
+the ability to logically talk about kind of different phenomena is basically reasoning
+
+224
+00:12:02,070 --> 00:12:05,210
+and, and reasoning is basically stays unchanged,
+
+225
+00:12:05,210 --> 00:12:06,700
+if you just scale a model,
+
+226
+00:12:07,630 --> 00:12:11,270
+unless you provide the system with a simulation engine,
+
+227
+00:12:11,470 --> 00:12:13,190
+let's say you want to do physical reasoning,
+
+228
+00:12:13,420 --> 00:12:14,570
+say there are two cubes,
+
+229
+00:12:14,800 --> 00:12:17,690
+they're both moving in x, on x axis,
+
+230
+00:12:17,740 --> 00:12:19,430
+one of them is faster than the other one,
+
+231
+00:12:19,840 --> 00:12:23,450
+so one thing that you have as a human being in your head is a simulation engine,
+
+232
+00:12:23,830 --> 00:12:26,030
+that you can basically simulate that kind of reality,
+
+233
+00:12:26,560 --> 00:12:29,360
+so if you provide that kind of reality to a language model,
+
+234
+00:12:30,930 --> 00:12:33,040
+the results of that simulation to language model,
+
+235
+00:12:33,150 --> 00:12:35,500
+you, you would see again increasing reasoning,
+
+236
+00:12:35,640 --> 00:12:38,350
+so that part is also extremely important.
+
+237
+00:12:38,960 --> 00:12:41,020
+Now, the part that we are,
+
+238
+00:12:41,310 --> 00:12:43,180
+like all these results that I'm showing here,
+
+239
+00:12:43,350 --> 00:12:44,890
+they are very experimental,
+
+240
+00:12:45,000 --> 00:12:48,470
+so there has been like a large corporations involved
+
+241
+00:12:48,470 --> 00:12:50,200
+to actually perform this kind of analysis
+
+242
+00:12:50,820 --> 00:12:53,290
+to actually to see the behavior of this large models,
+
+243
+00:12:53,400 --> 00:12:55,330
+but do we have an actual theory,
+
+244
+00:12:55,500 --> 00:13:00,310
+that fundamentally is true about this models or this behavior that we see,
+
+245
+00:13:00,720 --> 00:13:02,860
+let me focus on the robustness.
+
+246
+00:13:04,840 --> 00:13:12,080
+This is from, this kind of graph is from Alexander Madry group from here, MIT,
+
+247
+00:13:12,100 --> 00:13:15,290
+where they are studying robustness in neural network,
+
+248
+00:13:16,390 --> 00:13:17,090
+what they do,
+
+249
+00:13:17,650 --> 00:13:20,090
+I mean, it doesn't matter what, what the three lines are,
+
+250
+00:13:20,200 --> 00:13:22,100
+what they do, they try to attack the input images,
+
+251
+00:13:23,460 --> 00:13:25,780
+and then compute the accuracy of models,
+
+252
+00:13:27,070 --> 00:13:30,350
+as we scale, again on the x axis, we see the scale and accuracy
+
+253
+00:13:30,550 --> 00:13:33,770
+as we start increasing the capacity of the networks,
+
+254
+00:13:34,640 --> 00:13:36,970
+in image classification and classification here,
+
+255
+00:13:37,680 --> 00:13:40,180
+we see that there's a jump in robustness,
+
+256
+00:13:40,260 --> 00:13:43,990
+that means the attacks that they were doing or perturbing the input images
+
+257
+00:13:44,610 --> 00:13:47,440
+with something called an attack is called Projected Gradient Descent,
+
+258
+00:13:48,030 --> 00:13:49,535
+it was basically, like you,
+
+259
+00:13:49,535 --> 00:13:51,860
+you got into a really good accuracy
+
+260
+00:13:51,860 --> 00:13:55,180
+after you actually increase the size of the network up to a certain point
+
+261
+00:13:55,290 --> 00:14:01,690
+and there was this transition, there was a shift in, in, in performance,
+
+262
+00:14:02,040 --> 00:14:04,390
+and that has been confirmed, as I said, by experiments
+
+263
+00:14:04,980 --> 00:14:06,890
+and we said, alright, so scale,
+
+264
+00:14:06,890 --> 00:14:10,780
+the conclusions of those kind of results was that scale improves robustness.
+
+265
+00:14:11,970 --> 00:14:15,140
+But then, and the best paper award
+
+266
+00:14:15,140 --> 00:14:20,770
+at the the Conference on Neural Information Processing Systems 2021,
+
+267
+00:14:20,940 --> 00:14:23,830
+came and said scale is a law of robustness.
+
+268
+00:14:24,320 --> 00:14:25,150
+Okay, what that means,
+
+269
+00:14:25,290 --> 00:14:25,970
+okay, that means like,
+
+270
+00:14:25,970 --> 00:14:30,220
+let's formulate how scale is basically contributing to robustness.
+
+271
+00:14:32,020 --> 00:14:36,420
+So, I'm gonna talk a little bit more technical about this thing,
+
+272
+00:14:36,470 --> 00:14:38,230
+hopefully you can, you can all follow,
+
+273
+00:14:38,230 --> 00:14:39,265
+but you you can ask questions,
+
+274
+00:14:39,265 --> 00:14:41,635
+Like even now, if you have questions,
+
+275
+00:14:41,635 --> 00:14:45,100
+let me just finish this one and then we'll take some questions.
+
+276
+00:14:45,100 --> 00:14:49,345
+So let's say fix any reasonable, reasonable function,
+
+277
+00:14:49,345 --> 00:14:50,610
+what is a reasonable function,
+
+278
+00:14:51,020 --> 00:14:53,960
+is basically a function that has a smooth behavior,
+
+279
+00:14:54,070 --> 00:14:55,605
+like, like a sigmoid function, okay,
+
+280
+00:14:55,605 --> 00:14:57,195
+that's a very reasonable function, okay,
+
+281
+00:14:57,195 --> 00:15:01,830
+a crazy function would be like if you have like jumps across like different modes,
+
+282
+00:15:01,830 --> 00:15:04,100
+you know, like you have a reasonable function, okay,
+
+283
+00:15:04,630 --> 00:15:09,075
+and it basically, it has, it's parameterized, okay,
+
+284
+00:15:09,075 --> 00:15:09,855
+like a sigmoid function,
+
+285
+00:15:09,855 --> 00:15:11,000
+that you can parameterize it
+
+286
+00:15:11,350 --> 00:15:14,870
+and then it's polyized like it has also reasonable size in parameters,
+
+287
+00:15:15,280 --> 00:15:17,760
+and it's not a Kolmogorov-Arnold type network,
+
+288
+00:15:17,760 --> 00:15:18,620
+what does that mean,
+
+289
+00:15:19,000 --> 00:15:19,610
+that means,
+
+290
+00:15:21,650 --> 00:15:26,910
+I'm showing you a representation that was discovered by Arnold and, and, and Kolmogorov,
+
+291
+00:15:27,170 --> 00:15:28,105
+that shows that, there are,
+
+292
+00:15:28,105 --> 00:15:34,920
+this, this decomposition that we see can approximate any continuous function, multivariate continuous function.
+
+293
+00:15:35,820 --> 00:15:37,840
+Okay, so these are basically two non linearities
+
+294
+00:15:38,520 --> 00:15:44,110
+and the sum operator is basically applying, joining the, the, the inner kind of processes,
+
+295
+00:15:44,460 --> 00:15:47,660
+but one problem with this kind of functions is that,
+
+296
+00:15:47,660 --> 00:15:52,690
+they are not as smooth and as [] actually mention,
+
+297
+00:15:53,340 --> 00:15:54,430
+they show wild behavior,
+
+298
+00:15:54,450 --> 00:15:55,565
+they could be anything,
+
+299
+00:15:55,565 --> 00:15:57,700
+the function in inner function could be anything,
+
+300
+00:15:57,810 --> 00:16:01,860
+so let's, let's rule out those kind of functions,
+
+301
+00:16:02,060 --> 00:16:03,510
+let's talk about only neural networks,
+
+302
+00:16:04,070 --> 00:16:07,080
+okay, like very reasonable functions and really function as well.
+
+303
+00:16:07,850 --> 00:16:11,280
+Now let's sample n data points for the case of m data set,
+
+304
+00:16:11,300 --> 00:16:14,620
+you have 60k data points, truly high dimensional,
+
+305
+00:16:14,620 --> 00:16:17,995
+I mean m is like 28x28x1,
+
+306
+00:16:17,995 --> 00:16:19,650
+so it's like 728 right,
+
+307
+00:16:19,790 --> 00:16:22,750
+so it's not that truly high dimensional,
+
+308
+00:16:22,750 --> 00:16:26,580
+but let's say ImageNet is 256x256x3,
+
+309
+00:16:26,810 --> 00:16:28,710
+so truly high dimensional,
+
+310
+00:16:30,440 --> 00:16:33,440
+and then add label noise,
+
+311
+00:16:33,460 --> 00:16:35,475
+why, Why do we want to add noise to the labels,
+
+312
+00:16:35,475 --> 00:16:36,410
+what does that mean it,
+
+313
+00:16:36,910 --> 00:16:39,560
+that means we want to make the problem harder for the neural network,
+
+314
+00:16:39,910 --> 00:16:44,150
+that means it should not be the mapping between the input, high dimensional input than the output classes,
+
+315
+00:16:44,440 --> 00:16:46,220
+should not be trivial, okay,
+
+316
+00:16:46,300 --> 00:16:48,470
+so we add noise, a little bit of label noise
+
+317
+00:16:48,940 --> 00:16:52,790
+to basically create this, you know, a complex problem,
+
+318
+00:16:52,960 --> 00:16:56,420
+okay, so that means like if you have all, all your labels are random,
+
+319
+00:16:56,740 --> 00:16:58,310
+the problem is really complex, right,
+
+320
+00:16:58,360 --> 00:17:00,710
+so you want to add a little bit of random noise as well.
+
+321
+00:17:01,660 --> 00:17:05,420
+And then then, to memorize this dataset,
+
+322
+00:17:05,530 --> 00:17:06,980
+what does memorization mean,
+
+323
+00:17:07,240 --> 00:17:08,630
+that means, if I have a function
+
+324
+00:17:08,680 --> 00:17:10,500
+and I'm fitting a parametric model,
+
+325
+00:17:10,500 --> 00:17:11,720
+like a neural network to it,
+
+326
+00:17:12,040 --> 00:17:16,785
+I want to be completely fitting every single data point, okay, during training,
+
+327
+00:17:16,785 --> 00:17:21,830
+that means I want to achieve a zero loss on my training set, okay,
+
+328
+00:17:22,280 --> 00:17:23,395
+that means like memorizing,
+
+329
+00:17:23,395 --> 00:17:25,410
+so definition of memorization during learning.
+
+330
+00:17:27,580 --> 00:17:31,650
+Now optimize the training error below the noise level
+
+331
+00:17:31,650 --> 00:17:33,600
+and below the noise level, what does that mean,
+
+332
+00:17:33,600 --> 00:17:37,130
+again, that's like another definition that you guys have to know is,
+
+333
+00:17:37,150 --> 00:17:40,220
+as I said, we want to complicate the process,
+
+334
+00:17:40,600 --> 00:17:42,680
+so that it's not a trivial mapping,
+
+335
+00:17:42,880 --> 00:17:43,940
+so you add that noise
+
+336
+00:17:44,050 --> 00:17:48,260
+and then when your accuracy is a little bit higher than the amount of noise that you injected,
+
+337
+00:17:48,520 --> 00:17:52,790
+for example, for the m, basically the hard part of the training of the m dataset,
+
+338
+00:17:52,840 --> 00:17:53,750
+let's say if you,
+
+339
+00:17:53,860 --> 00:17:59,300
+all kind of machine learning models can get up to 92% 91% accuracy on the m dataset,
+
+340
+00:17:59,580 --> 00:18:00,950
+but then, what's the hard part,
+
+341
+00:18:01,150 --> 00:18:05,810
+the hard part of it is the last 2%-5% to reach the hundred percent,
+
+342
+00:18:06,410 --> 00:18:07,510
+so that's the hard part,
+
+343
+00:18:07,510 --> 00:18:10,830
+that's what we call below the noise level, okay,
+
+344
+00:18:11,360 --> 00:18:16,140
+that means if we can learn this process really like with really good accuracy.
+
+345
+00:18:17,460 --> 00:18:22,520
+Now, and to do this robustly in the sense of Lipschitz,
+
+346
+00:18:23,970 --> 00:18:25,690
+who knows what is the Lipschitz function,
+
+347
+00:18:29,580 --> 00:18:30,830
+five, six, okay,
+
+348
+00:18:31,780 --> 00:18:33,440
+alright, so Lipschitz,
+
+349
+00:18:34,630 --> 00:18:36,930
+so good, that I put this in here,
+
+350
+00:18:36,930 --> 00:18:38,940
+so, so as I said,
+
+351
+00:18:38,940 --> 00:18:41,750
+look, so your moving your, your input ε,
+
+352
+00:18:42,100 --> 00:18:45,230
+okay, a little bit of perturbation at the input of a function,
+
+353
+00:18:45,920 --> 00:18:48,460
+then, if the output is also moving with ε
+
+354
+00:18:49,080 --> 00:18:52,150
+or proportional linearly proportional to that ε,
+
+355
+00:18:52,650 --> 00:18:54,040
+that means this function is Lipschitz,
+
+356
+00:18:54,270 --> 00:18:56,260
+so you have a controlled kind of process,
+
+357
+00:18:56,880 --> 00:19:01,660
+changing the input do not dramatically change the output of a function,
+
+358
+00:19:02,320 --> 00:19:03,540
+that's called the Lipschitz function.
+
+359
+00:19:06,360 --> 00:19:10,940
+Now, yeah, so you memorize the data,
+
+360
+00:19:11,850 --> 00:19:14,350
+and you want to do this memorization robustly,
+
+361
+00:19:14,820 --> 00:19:16,340
+so if you want to do that,
+
+362
+00:19:16,870 --> 00:19:24,790
+it is necessary is absolutely necessary to parameterize your neural network at least equal to n,
+
+363
+00:19:25,020 --> 00:19:27,640
+n is basically the dimensionality of your dataset,
+
+364
+00:19:27,690 --> 00:19:30,160
+which is 60k times d,
+
+365
+00:19:30,210 --> 00:19:34,260
+d is the dimensionality of your of every input sample,
+
+366
+00:19:34,760 --> 00:19:36,960
+let's say if your input is m dataset,
+
+367
+00:19:37,160 --> 00:19:39,880
+I mean I'm gonna give you an example later on,
+
+368
+00:19:39,880 --> 00:19:44,820
+but, let's say the input is 728, in the order of [10 to the power 3],
+
+369
+00:19:45,450 --> 00:19:48,130
+and the number of dataset is 60k, right,
+
+370
+00:19:48,540 --> 00:19:52,600
+then the minimum size of m dataset has to be [10 to the power 8],
+
+371
+00:19:53,610 --> 00:19:57,520
+that would be the size of the neural network model [10 to the power 9],
+
+372
+00:19:57,960 --> 00:20:01,360
+to robustly learn m dataset,
+
+373
+00:20:01,740 --> 00:20:03,340
+that's a huge neural network,
+
+374
+00:20:03,910 --> 00:20:07,220
+but this is one of the fundamental explanations, very recent,
+
+375
+00:20:07,510 --> 00:20:09,890
+that we have about the theory of deep learning
+
+376
+00:20:10,690 --> 00:20:14,090
+and why is it called dramatic overparamatization,
+
+377
+00:20:14,710 --> 00:20:17,690
+because intuitively, as we showed before,
+
+378
+00:20:18,040 --> 00:20:21,470
+memorizing n data points would require n parameters
+
+379
+00:20:21,760 --> 00:20:25,280
+and we had [] and [],
+
+380
+00:20:25,450 --> 00:20:29,520
+they were showing that two, two layer neural network with threshold activation function,
+
+381
+00:20:29,520 --> 00:20:30,950
+they showed it in 1988,
+
+382
+00:20:31,300 --> 00:20:34,190
+that you would need p the number of parameters you would need
+
+383
+00:20:34,510 --> 00:20:38,210
+almost equivalent order of number of dataset, data points that you have,
+
+384
+00:20:38,380 --> 00:20:41,270
+that would actually would be enough theoretically,
+
+385
+00:20:41,710 --> 00:20:44,780
+and then they showed it recently for the radio networks,
+
+386
+00:20:45,700 --> 00:20:48,990
+and we even have that in the Neural Tangent Kernels,
+
+387
+00:20:49,430 --> 00:20:52,650
+so how many of you are familiar with Neural Tangent Kernels,
+
+388
+00:20:56,750 --> 00:21:01,470
+three out of three, at one, two.
+
+389
+00:21:01,980 --> 00:21:03,800
+Yeah, so Neural Tangent Kernels is that,
+
+390
+00:21:04,540 --> 00:21:10,810
+so, imagine the process of training and neural network with gradium descent,
+
+391
+00:21:11,820 --> 00:21:17,320
+the whole process from beginning of training to the end of training is a dynamical process,
+
+392
+00:21:17,790 --> 00:21:21,610
+that means you're updating the weights of the system as you go further,
+
+393
+00:21:22,140 --> 00:21:27,040
+given a dataset, given a neural network, and given the parameters of your optimizer,
+
+394
+00:21:27,930 --> 00:21:31,585
+you can this learning dynamics can be converge,
+
+395
+00:21:31,585 --> 00:21:35,910
+if I can actually be modeled by a dynamical process,
+
+396
+00:21:36,830 --> 00:21:41,670
+my differential equation that explains how the updates of gradient descent of a neural network would work.
+
+397
+00:21:42,120 --> 00:21:47,700
+Now, if I increase the size of the neural network to infinite width,
+
+398
+00:21:48,980 --> 00:21:51,360
+I increase the size of the neural network to infinite width,
+
+399
+00:21:51,950 --> 00:21:56,460
+then this dynamic of learning has a close form solution,
+
+400
+00:21:56,900 --> 00:21:58,440
+that means it has actually a solution,
+
+401
+00:21:59,360 --> 00:22:00,370
+which is a kernel method,
+
+402
+00:22:00,370 --> 00:22:02,310
+so basically you will end up having a kernel,
+
+403
+00:22:02,880 --> 00:22:08,270
+and that kernel explains the entire behavior and dynamics of your learning process in the infinite way,
+
+404
+00:22:08,470 --> 00:22:10,370
+this is called the Neural Tangent Kernel theory
+
+405
+00:22:10,780 --> 00:22:15,360
+and we have a PHD student, actually sitting over there,
+
+406
+00:22:15,920 --> 00:22:18,360
+Noel Loo, that is focusing on that,
+
+407
+00:22:18,470 --> 00:22:24,580
+and this is actually his PHD topic that he's working on in Daniela lab.
+
+408
+00:22:26,470 --> 00:22:30,830
+Okay, so now let's let's move from this ah theory
+
+409
+00:22:31,180 --> 00:22:32,600
+and let's, let's give an example,
+
+410
+00:22:32,830 --> 00:22:34,280
+so we have the MNIST dataset,
+
+411
+00:22:34,390 --> 00:22:38,120
+it has around 10 to the power 5 number of parameters,
+
+412
+00:22:38,620 --> 00:22:42,410
+the dimensionality of each data point is 10 to power 3,
+
+413
+00:22:42,520 --> 00:22:44,330
+728 just the scale,
+
+414
+00:22:45,010 --> 00:22:48,990
+and then we saw the transition in the kind of robustness,
+
+415
+00:22:48,990 --> 00:22:52,490
+that is like, at least you need to have 10 to power 6 parameters
+
+416
+00:22:52,600 --> 00:22:54,800
+to robustly fit the MNIST dataset.
+
+417
+00:22:55,790 --> 00:22:58,110
+But then there are a couple of notes that we want to have,
+
+418
+00:22:58,850 --> 00:23:02,935
+the notion of robustness in the in the theory paper
+
+419
+00:23:02,935 --> 00:23:05,740
+was a little bit different than the notion of robustness at Lipschitz,
+
+420
+00:23:05,740 --> 00:23:10,340
+that we showed in the, in the theory of law robustness,
+
+421
+00:23:10,720 --> 00:23:12,380
+and then another point is that,
+
+422
+00:23:12,490 --> 00:23:14,000
+the law seems to be contradicted,
+
+423
+00:23:14,140 --> 00:23:15,480
+because if you multiply,
+
+424
+00:23:15,480 --> 00:23:19,200
+we just said the law is like you know n times d, right,
+
+425
+00:23:19,200 --> 00:23:22,100
+like that's the minimum number of samples that you can, you have the transition,
+
+426
+00:23:22,630 --> 00:23:24,890
+so, but here if you do that 10 times,
+
+427
+00:23:25,660 --> 00:23:30,290
+10 to power 5 times 10 to power 3 is 10 to power 8
+
+428
+00:23:30,430 --> 00:23:36,360
+and it's much larger than that 10 to power 6 that was observed in reality.
+
+429
+00:23:37,390 --> 00:23:41,290
+But, one of the things that you have to also notice is that,
+
+430
+00:23:41,290 --> 00:23:44,760
+there's something about datasets is called effective dimensionality,
+
+431
+00:23:45,020 --> 00:23:47,130
+and effective dimensionality means that,
+
+432
+00:23:47,450 --> 00:23:48,690
+when I show you an image,
+
+433
+00:23:48,890 --> 00:23:50,880
+there are principal components of an image,
+
+434
+00:23:51,140 --> 00:23:53,490
+so finding the principal components of an image,
+
+435
+00:23:53,750 --> 00:23:56,605
+that how small that image, what's the information,
+
+436
+00:23:56,605 --> 00:23:59,640
+the information is not the same size as the pixel itself,
+
+437
+00:23:59,720 --> 00:24:01,320
+the information is much smaller,
+
+438
+00:24:01,970 --> 00:24:03,570
+so the effective dimensionality of,
+
+439
+00:24:03,620 --> 00:24:07,440
+it's hard to actually determine what's the effective dimensionality of a given dataset,
+
+440
+00:24:07,550 --> 00:24:09,025
+but still, for the MNIST dataset,
+
+441
+00:24:09,025 --> 00:24:10,860
+it's 10 to the power 1
+
+442
+00:24:10,910 --> 00:24:12,780
+and now we have 10 to power 5 in
+
+443
+00:24:13,010 --> 00:24:17,100
+and if the effective dimensionality is basically 10 to power 1,
+
+444
+00:24:17,210 --> 00:24:19,090
+then you would have basically the same,
+
+445
+00:24:19,090 --> 00:24:25,110
+you can confirm with experiments the theoretical results that was observed with the law of robustness.
+
+446
+00:24:25,580 --> 00:24:27,685
+Now the noisy labels, as I said,
+
+447
+00:24:27,685 --> 00:24:29,910
+it's basically learning the difficult part of the training,
+
+448
+00:24:30,570 --> 00:24:36,310
+and then, in regard to ImageNet is basically shows the law of robustness predict,
+
+449
+00:24:36,480 --> 00:24:39,520
+because we haven't yet trained super large networks,
+
+450
+00:24:40,080 --> 00:24:44,050
+it seems like the networks that we have trained so far, they are actually small,
+
+451
+00:24:44,160 --> 00:24:47,195
+you know, we haven't trained like really large neural networks still,
+
+452
+00:24:47,195 --> 00:24:52,600
+but they have to be on the order of 10 to power 12 or 10 to power 10, you know,
+
+453
+00:24:53,040 --> 00:24:56,560
+and this is like the prediction of the law of robustness.
+
+454
+00:24:57,220 --> 00:25:00,740
+Okay, so now let's get back to this image,
+
+455
+00:25:00,740 --> 00:25:04,510
+so all these networks that I was talking about and law of robustness,
+
+456
+00:25:04,950 --> 00:25:06,580
+basically in that regime,
+
+457
+00:25:06,990 --> 00:25:09,940
+in that regime, I showed you that we have great generalization,
+
+458
+00:25:11,050 --> 00:25:13,580
+we get more robust, probably more robustness,
+
+459
+00:25:13,750 --> 00:25:18,650
+and then reasoning still we have questions about how to achieve it
+
+460
+00:25:18,880 --> 00:25:21,140
+and then bias and fairness, which is very important,
+
+461
+00:25:21,790 --> 00:25:24,470
+energy consumption and accountability of the models.
+
+462
+00:25:26,180 --> 00:25:27,420
+There is a way,
+
+463
+00:25:27,470 --> 00:25:29,845
+and that has been the focus of the research
+
+464
+00:25:29,845 --> 00:25:31,680
+that we have been doing at Daniela Rus's lab
+
+465
+00:25:32,060 --> 00:25:36,420
+with Alexander and a couple of other graduate students of ours,
+
+466
+00:25:37,720 --> 00:25:41,450
+is to find out how can we get out of that overparameterization regime,
+
+467
+00:25:42,130 --> 00:25:46,190
+while addressing all these [social technical] challenges.
+
+468
+00:25:47,370 --> 00:25:49,000
+And how we did that,
+
+469
+00:25:49,350 --> 00:25:50,500
+we went back to source,
+
+470
+00:25:52,270 --> 00:25:55,070
+basically, we looked into brains, okay,
+
+471
+00:25:55,240 --> 00:25:57,980
+we looked into how we can get inspiration from brains
+
+472
+00:25:58,870 --> 00:26:04,010
+to improve over architectural biases that we have in neural networks
+
+473
+00:26:04,540 --> 00:26:06,440
+in order to break the law of robustness.
+
+474
+00:26:08,430 --> 00:26:11,980
+Now and then we we invented something called Liquid Neural Networks,
+
+475
+00:26:12,000 --> 00:26:18,130
+the direct inspiration from how neurons and synapses interact with each other in the brain, okay,
+
+476
+00:26:18,240 --> 00:26:21,920
+that's how, we, we started our focus
+
+477
+00:26:21,920 --> 00:26:23,405
+and the second half of my talk,
+
+478
+00:26:23,405 --> 00:26:29,050
+I'm just gonna talk about Liquid Neural Networks and their implications in this realm of modern era of statistics.
+
+479
+00:26:30,780 --> 00:26:33,220
+So, as I said, we started with nervous systems,
+
+480
+00:26:35,010 --> 00:26:37,515
+then, in order to understand their assistance,
+
+481
+00:26:37,515 --> 00:26:40,820
+you want to go down and you you can look into neural circuits,
+
+482
+00:26:41,260 --> 00:26:43,940
+neural circuits are circuits that are composed of neurons,
+
+483
+00:26:44,020 --> 00:26:50,900
+then they can get sensory inputs and generate some, some sort of outputs, [motor] outputs,
+
+484
+00:26:51,430 --> 00:26:53,010
+and then we went even deeper than that
+
+485
+00:26:53,010 --> 00:26:57,530
+and we looked into how neurons, individual neurons, communicate with each other to cells,
+
+486
+00:26:57,820 --> 00:26:59,990
+receiving information between each other,
+
+487
+00:27:00,490 --> 00:27:04,370
+and then we arrived at an equation that or a formulation
+
+488
+00:27:04,480 --> 00:27:06,770
+for the interaction of neurons and synapses,
+
+489
+00:27:06,940 --> 00:27:11,270
+that is abstract enough, so that we can perform computation, efficient computation,
+
+490
+00:27:11,560 --> 00:27:17,870
+but at the same time has more details of how the actual computation happens in, in, in brains,
+
+491
+00:27:18,500 --> 00:27:24,210
+and not just the threshold or activate, very kind of the function that we see.
+
+492
+00:27:24,320 --> 00:27:26,610
+So let's get more deeper into that.
+
+493
+00:27:27,120 --> 00:27:27,980
+And we showed that,
+
+494
+00:27:28,000 --> 00:27:33,380
+if you really get into more biologically plausible representation of neural networks,
+
+495
+00:27:33,610 --> 00:27:34,970
+you can gain more expressivity,
+
+496
+00:27:35,590 --> 00:27:40,820
+you can handle memory in a much more natural way,
+
+497
+00:27:41,750 --> 00:27:44,490
+you gain some properties, such as causality
+
+498
+00:27:44,660 --> 00:27:47,190
+and which was basically something that we haven't discussed
+
+499
+00:27:47,570 --> 00:27:49,470
+and what's the cause and effect of task,
+
+500
+00:27:49,610 --> 00:27:50,820
+can we actually learn that,
+
+501
+00:27:51,460 --> 00:27:53,300
+you can get to robustness
+
+502
+00:27:53,590 --> 00:27:56,240
+and you don't need to be crazy like large,
+
+503
+00:27:56,650 --> 00:27:58,365
+the out of the that regime,
+
+504
+00:27:58,365 --> 00:28:00,290
+you can perform a generative modeling,
+
+505
+00:28:00,490 --> 00:28:03,710
+which was, what I described as before
+
+506
+00:28:04,270 --> 00:28:06,050
+and you can even do extrapolation,
+
+507
+00:28:06,430 --> 00:28:07,200
+that means you can,
+
+508
+00:28:07,200 --> 00:28:10,760
+you can even go beyond the the kind of data that you have been trained on,
+
+509
+00:28:10,870 --> 00:28:12,890
+that means you can, you can go out of distribution,
+
+510
+00:28:13,360 --> 00:28:15,170
+that something that we couldn't do
+
+511
+00:28:15,190 --> 00:28:19,670
+and like the, the area that we were focused on was robotics, real world,
+
+512
+00:28:19,690 --> 00:28:22,610
+you know like we call it mixed horizon decision making
+
+513
+00:28:22,840 --> 00:28:26,300
+and means if you have a robot interacting in the environment in a real setting,
+
+514
+00:28:26,530 --> 00:28:31,470
+now how to bring this kind of networks inside real world,
+
+515
+00:28:31,470 --> 00:28:34,070
+and that's the focus of our research.
+
+516
+00:28:37,610 --> 00:28:42,140
+Yeah, so, what are the building blocks of this type of neural networks,
+
+517
+00:28:42,160 --> 00:28:46,670
+I said the building blocks are basically interaction of two neurons or two cells with each other,
+
+518
+00:28:47,110 --> 00:28:49,250
+one of some observation about this process.
+
+519
+00:28:49,720 --> 00:28:50,985
+The first observation is that,
+
+520
+00:28:50,985 --> 00:28:55,700
+the kind of interaction between two neurons in the brain is a continuous time process,
+
+521
+00:28:56,620 --> 00:28:58,845
+so that's something to account for,
+
+522
+00:28:58,845 --> 00:29:00,890
+so we're not talking about discrete processes.
+
+523
+00:29:01,880 --> 00:29:03,720
+Another thing is that synaptic release,
+
+524
+00:29:03,830 --> 00:29:04,840
+right now in neural networks,
+
+525
+00:29:04,840 --> 00:29:06,520
+when you connect to nodes with each other,
+
+526
+00:29:06,520 --> 00:29:08,520
+you connect them with a scalar weight, right,
+
+527
+00:29:09,140 --> 00:29:10,910
+now, what if I tell you that,
+
+528
+00:29:10,910 --> 00:29:12,820
+when you, when two neurons interact with each other,
+
+529
+00:29:13,020 --> 00:29:14,770
+it's not only a scalar weight,
+
+530
+00:29:15,000 --> 00:29:16,900
+but there is actually a probability distribution,
+
+531
+00:29:17,280 --> 00:29:21,550
+that how many kind of neurotransmitters generated from one cell
+
+532
+00:29:21,780 --> 00:29:24,850
+is going to bind to the channels of the other cell
+
+533
+00:29:24,900 --> 00:29:27,965
+and how it can actually activate the other cell,
+
+534
+00:29:27,965 --> 00:29:30,830
+so the communication between the nodes is very sophisticated
+
+535
+00:29:30,830 --> 00:29:33,490
+and it's one of the fundamental building blocks of intelligence,
+
+536
+00:29:33,990 --> 00:29:39,670
+which we have actually abstracted way in artificial neural network to a weight, to scale weight.
+
+537
+00:29:40,540 --> 00:29:43,005
+Now, another point is that,
+
+538
+00:29:43,005 --> 00:29:51,860
+we have massive parallelization and massive recurrence and feedback and memory and sparsity kind of structures in brains,
+
+539
+00:29:52,120 --> 00:29:53,690
+and that's something that is missing from,
+
+540
+00:29:55,530 --> 00:29:59,800
+not entirely, but, but somehow it's missing from the artificial network,
+
+541
+00:29:59,820 --> 00:30:01,060
+we deviated a little bit.
+
+542
+00:30:01,260 --> 00:30:03,245
+Now what I want to argue is that,
+
+543
+00:30:03,245 --> 00:30:05,290
+if we incorporate all these building blocks,
+
+544
+00:30:05,670 --> 00:30:07,895
+we might get into better representation,
+
+545
+00:30:07,895 --> 00:30:09,850
+learning more flexible models and robust
+
+546
+00:30:10,140 --> 00:30:12,490
+and at the same time be able to interpret those results
+
+547
+00:30:12,750 --> 00:30:15,710
+and this and for because the first reason,
+
+548
+00:30:15,710 --> 00:30:19,480
+that the whole process was build on top of continuous time processes,
+
+549
+00:30:19,560 --> 00:30:21,790
+let's get get into this continuous time processes,
+
+550
+00:30:22,200 --> 00:30:25,570
+where we are in terms of neurural networks, continuous time processes.
+
+551
+00:30:26,360 --> 00:30:29,070
+So here I'm showing you an equation,
+
+552
+00:30:29,510 --> 00:30:31,170
+so f is a neural network,
+
+553
+00:30:31,430 --> 00:30:35,250
+it could be a five layer network, six layer neural network, fully connected,
+
+554
+00:30:35,940 --> 00:30:43,550
+but this f that has n layers and width k, and then it has a certain activation function,
+
+555
+00:30:44,350 --> 00:30:47,190
+it has, it's a function that receives input,
+
+556
+00:30:47,190 --> 00:30:49,910
+it receives recurrent connections from the other cells,
+
+557
+00:30:51,560 --> 00:30:54,610
+it receives exogenous input as well, like this I,
+
+558
+00:30:55,020 --> 00:30:57,130
+and it is parameterized by θ,
+
+559
+00:30:57,780 --> 00:31:04,570
+now this neural network is parameterizing the derivatives of the hidden state and not hidden state itself,
+
+560
+00:31:05,170 --> 00:31:07,580
+that builds a continuous time neural network,
+
+561
+00:31:08,650 --> 00:31:10,520
+now, if you have a continuous time process,
+
+562
+00:31:10,690 --> 00:31:13,700
+that means like the updates or the output of a neural network
+
+563
+00:31:13,960 --> 00:31:19,190
+is actually generating the updates of your derivative of the hidden state and not hidden state itself,
+
+564
+00:31:19,540 --> 00:31:22,710
+what kind of you can give rise to continuous time dynamics
+
+565
+00:31:22,710 --> 00:31:24,590
+with neural networks that we haven't explored before.
+
+566
+00:31:25,160 --> 00:31:28,180
+Now, what does this mean in terms of like neural networks,
+
+567
+00:31:28,680 --> 00:31:31,120
+let's look at this, this image,
+
+568
+00:31:31,740 --> 00:31:33,880
+how many of you have heard about Residual Networks?
+
+569
+00:31:38,220 --> 00:31:43,120
+Okay, Residual Networks are deep neural networks that have a kind of skip connections, okay,
+
+570
+00:31:43,140 --> 00:31:46,210
+like from one layer to the other one, you basically skip connections
+
+571
+00:31:46,530 --> 00:31:48,935
+and that skip connection is model by this equation,
+
+572
+00:31:48,935 --> 00:31:52,390
+ht+1 equal to ht plus f of whatever,
+
+573
+00:31:52,910 --> 00:31:58,200
+that ht is basically resembling basically a skip connection.
+
+574
+00:31:58,820 --> 00:32:01,390
+And now here on the y axis,
+
+575
+00:32:01,410 --> 00:32:03,640
+what we see, we see the depth of neural network
+
+576
+00:32:03,900 --> 00:32:08,080
+and each dot, each black dot here,
+
+577
+00:32:08,700 --> 00:32:11,375
+shows a computation that happened in the system,
+
+578
+00:32:11,375 --> 00:32:14,030
+so when you have a neural network that is layer wise,
+
+579
+00:32:14,030 --> 00:32:15,470
+like let's call it layer wise,
+
+580
+00:32:15,470 --> 00:32:19,120
+because the photos actually showing the layers in the vertical axis,
+
+581
+00:32:19,470 --> 00:32:21,050
+so if you look at the vertical axis,
+
+582
+00:32:21,050 --> 00:32:23,230
+you see that computation happen at each layer,
+
+583
+00:32:24,500 --> 00:32:27,910
+because as the input is computed from the first layer to the second one
+
+584
+00:32:27,910 --> 00:32:29,700
+and then the next one, next one,
+
+585
+00:32:30,050 --> 00:32:31,830
+but if you have a continuous process,
+
+586
+00:32:32,150 --> 00:32:34,080
+continuous process equivalent to this process,
+
+587
+00:32:34,460 --> 00:32:39,660
+you have the ability to compute at an arbitrary point in a vector field,
+
+588
+00:32:39,860 --> 00:32:42,060
+so if you, if you know what are differential equations
+
+589
+00:32:42,500 --> 00:32:47,790
+and how, how do they basically change the entire space into a vector field,
+
+590
+00:32:48,080 --> 00:32:49,410
+how can you basically go,
+
+591
+00:32:49,520 --> 00:32:53,250
+you know, you, you can do adaptive computation, okay,
+
+592
+00:32:53,330 --> 00:32:56,700
+and that's one of the massive benefits of continuous time processes.
+
+593
+00:32:57,320 --> 00:32:59,610
+Now, in terms of things that you have seen before,
+
+594
+00:32:59,720 --> 00:33:00,960
+standard recurring neural networks,
+
+595
+00:33:02,420 --> 00:33:03,940
+you had the lecture here,
+
+596
+00:33:03,940 --> 00:33:08,965
+so a neural network f is basically computes the next step of the hidden state,
+
+597
+00:33:08,965 --> 00:33:12,570
+so, it's a [] kind of process of [] the next step,
+
+598
+00:33:13,160 --> 00:33:16,120
+and neural ODE updates the state with a neural network like that,
+
+599
+00:33:16,900 --> 00:33:18,690
+in a continuous time fashion,
+
+600
+00:33:19,070 --> 00:33:24,150
+and then there is a better, more stable version of this differential equation,
+
+601
+00:33:24,320 --> 00:33:28,080
+that is called continuous time or CTRNN [recur] networks,
+
+602
+00:33:28,310 --> 00:33:30,360
+there continuous time recur networks where,
+
+603
+00:33:30,470 --> 00:33:31,740
+they have a damping factor,
+
+604
+00:33:31,790 --> 00:33:36,000
+so that differential a linear ODE or differential equation,
+
+605
+00:33:36,410 --> 00:33:40,600
+that describes basically the dynamics of them, of a neural network,
+
+606
+00:33:41,430 --> 00:33:42,730
+hidden state of neural network.
+
+607
+00:33:43,080 --> 00:33:46,810
+Now, in terms of what kind of, what kind of, ah, benefits will you get,
+
+608
+00:33:47,130 --> 00:33:48,340
+let's look at the top one,
+
+609
+00:33:48,390 --> 00:33:55,360
+these are thestruction plots from data data corresponding on to a spiral dynamics,
+
+610
+00:33:55,710 --> 00:33:57,760
+if you have a disized neural network,
+
+611
+00:33:58,170 --> 00:34:00,490
+this spiral dynamics is being able to,
+
+612
+00:34:00,510 --> 00:34:04,000
+you know, it the, the, the kind of interpolation that you have kind of [edgy],
+
+613
+00:34:04,600 --> 00:34:06,180
+but if you have a continuous time process,
+
+614
+00:34:06,590 --> 00:34:08,545
+it actually can compute very smoothly
+
+615
+00:34:08,545 --> 00:34:11,875
+and also it can even generalize to the unseen area of this,
+
+616
+00:34:11,875 --> 00:34:13,200
+which is the red part of this,
+
+617
+00:34:13,430 --> 00:34:14,400
+as we see here,
+
+618
+00:34:14,660 --> 00:34:19,230
+the normal require network misses out on on this kind of spiral dynamics,
+
+619
+00:34:19,400 --> 00:34:20,730
+so the continuous time process,
+
+620
+00:34:21,140 --> 00:34:25,710
+it is believe that you can get better and better representation only,
+
+621
+00:34:26,360 --> 00:34:28,680
+but then the problem here is that,
+
+622
+00:34:30,410 --> 00:34:34,770
+if you, if, if, if you actually bring this models in practice,
+
+623
+00:34:35,030 --> 00:34:39,985
+a simple LST networks better than this type of network,
+
+624
+00:34:39,985 --> 00:34:45,630
+so basically you, you can actually outperform everything that we showed here with LSTM network, so far,
+
+625
+00:34:45,740 --> 00:34:49,830
+so what's the point of basically creating such complex architectures and stuff?
+
+626
+00:34:50,120 --> 00:34:55,210
+So this was the place where we thought that the continuous time processes that we bring from nature
+
+627
+00:34:55,470 --> 00:34:58,960
+can actually help us build better inductive biases.
+
+628
+00:34:59,560 --> 00:35:04,700
+So we introduced a neural network called Liquid Time-Constant networks, on short LTCs,
+
+629
+00:35:05,200 --> 00:35:08,655
+LTCs are constructed by neurons and synapses,
+
+630
+00:35:08,655 --> 00:35:12,375
+so a neuron model is a continuous process,
+
+631
+00:35:12,375 --> 00:35:15,380
+like that, it's a differential equation, a linear differential equation,
+
+632
+00:35:15,880 --> 00:35:17,990
+that receives the synaptic input S,
+
+633
+00:35:19,300 --> 00:35:20,910
+it's a linear differential equation,
+
+634
+00:35:23,520 --> 00:35:24,910
+neurons and synapses,
+
+635
+00:35:24,990 --> 00:35:27,940
+now we have a synapse model S(t) is a function,
+
+636
+00:35:28,530 --> 00:35:32,710
+that has a neural network multiplied by a term called a difference of potential,
+
+637
+00:35:34,260 --> 00:35:41,020
+that non-linearity resembles the non-linear behavior between the synapses in real kind of neurons,
+
+638
+00:35:41,280 --> 00:35:46,850
+if you have synaptic connections and they are basically designed by non-linearity,
+
+639
+00:35:46,850 --> 00:35:49,120
+because that's actually the reality of the thing.
+
+640
+00:35:49,640 --> 00:35:53,170
+And then if you, if you plug in this S inside this linear equation,
+
+641
+00:35:53,940 --> 00:35:57,740
+you will end up having a differential equation which is looking very sophisticated,
+
+642
+00:35:57,740 --> 00:36:00,670
+but you will see the implications of this differential equation,
+
+643
+00:36:01,080 --> 00:36:05,620
+it has a neural network as a coefficient of x(t),
+
+644
+00:36:05,670 --> 00:36:07,150
+which is this x(t) here,
+
+645
+00:36:09,030 --> 00:36:10,780
+that neural network is input dependent,
+
+646
+00:36:11,370 --> 00:36:18,400
+That means the inputs to the neural network defines how the behavior of this differential equation is going to be,
+
+647
+00:36:18,480 --> 00:36:20,710
+so it sets the behavior of the differential equation,
+
+648
+00:36:20,970 --> 00:36:24,040
+in a way that when you're deploying this system on board,
+
+649
+00:36:24,300 --> 00:36:27,460
+it can be adaptable to inputs,
+
+650
+00:36:27,570 --> 00:36:29,500
+so this neural network, this system,
+
+651
+00:36:29,610 --> 00:36:32,440
+if you have it in practice, it's input dependent,
+
+652
+00:36:33,060 --> 00:36:36,470
+and as you change the input as the result of inputs,
+
+653
+00:36:36,640 --> 00:36:38,840
+the behavior of this differential equation changes.
+
+654
+00:36:40,780 --> 00:36:44,270
+Now, in terms of connectivity structures, it has,
+
+655
+00:36:44,350 --> 00:36:47,235
+if you look at the range of possible connectivity structures,
+
+656
+00:36:47,235 --> 00:36:48,860
+that you have in a standard world network,
+
+657
+00:36:49,360 --> 00:36:53,600
+you would have sigmoid basically activation functions,
+
+658
+00:36:54,070 --> 00:36:56,420
+you might have reciprocal connections between two notes,
+
+659
+00:36:56,710 --> 00:36:58,545
+you might have external inputs
+
+660
+00:36:58,545 --> 00:37:01,970
+and you might have a recurrent connections for a standard neural network.
+
+661
+00:37:02,260 --> 00:37:03,500
+Now, for a Liquid neural network,
+
+662
+00:37:03,760 --> 00:37:06,950
+instead, each node in the system is a differential equation,
+
+663
+00:37:07,600 --> 00:37:12,200
+xj and xi, they have dynamics,
+
+664
+00:37:12,490 --> 00:37:14,930
+and then they are connected by synapses,
+
+665
+00:37:15,460 --> 00:37:20,510
+and then there are process, non-linear processes that controls the interaction of synapses,
+
+666
+00:37:21,000 --> 00:37:22,520
+so now in some sense,
+
+667
+00:37:22,540 --> 00:37:27,440
+you can think about liquid neural networks as being being processes,
+
+668
+00:37:27,580 --> 00:37:33,920
+that have non-linearity of the system of synapses instead of the neurons.
+
+669
+00:37:34,870 --> 00:37:35,790
+So in neural networks,
+
+670
+00:37:35,790 --> 00:37:37,110
+we have the activation functions,
+
+671
+00:37:37,110 --> 00:37:38,570
+which are the non-linearity of the system,
+
+672
+00:37:38,830 --> 00:37:42,410
+now you can think about non-linearity of the system being on the synapses or the weight of the system.
+
+673
+00:37:43,040 --> 00:37:44,020
+Now, in terms of practice,
+
+674
+00:37:44,610 --> 00:37:45,880
+let's look at this application,
+
+675
+00:37:46,260 --> 00:37:48,130
+here, we train an artificial neural network,
+
+676
+00:37:48,300 --> 00:37:49,630
+that can control a car,
+
+677
+00:37:50,040 --> 00:37:51,940
+that can drive the car in this environment
+
+678
+00:37:52,620 --> 00:37:55,750
+and what we are showing on the sides of this middle image,
+
+679
+00:37:56,500 --> 00:37:58,620
+is the activity of two neurons,
+
+680
+00:37:59,000 --> 00:38:02,580
+that are inside the standard neural network and a Liquid neural network,
+
+681
+00:38:02,930 --> 00:38:10,440
+on the x axis, we see the time constant or sensitivity of the behavior of the output behavior,
+
+682
+00:38:10,520 --> 00:38:13,560
+basically controlling the vehicles steering angle,
+
+683
+00:38:14,280 --> 00:38:16,840
+the sensitivity of that control on the x axis
+
+684
+00:38:17,670 --> 00:38:21,850
+and on the y axis, we see the steering angle,
+
+685
+00:38:22,080 --> 00:38:24,335
+the color also represents the output,
+
+686
+00:38:24,335 --> 00:38:29,350
+which is mapping between the steering angle and the output of the neural network.
+
+687
+00:38:29,670 --> 00:38:31,300
+Okay, so now as we see,
+
+688
+00:38:31,620 --> 00:38:33,320
+we added with liquid neural network,
+
+689
+00:38:33,320 --> 00:38:35,380
+we have an additional degree of freedom,
+
+690
+00:38:35,670 --> 00:38:39,890
+that that these networks can set its sensitivity,
+
+691
+00:38:40,030 --> 00:38:41,030
+a liquid neural network,
+
+692
+00:38:41,910 --> 00:38:45,370
+depending on whether we're turning, whether we are going straight,
+
+693
+00:38:45,540 --> 00:38:50,210
+if you're going straight, the, the time constant, you want to be more cautious,
+
+694
+00:38:50,210 --> 00:38:51,640
+when you taking turns, right,
+
+695
+00:38:51,840 --> 00:38:52,655
+so your neural network,
+
+696
+00:38:52,655 --> 00:38:54,550
+you want to, you want to to be faster
+
+697
+00:38:54,690 --> 00:38:58,700
+to be able to actually control during those kind of, kind of events,
+
+698
+00:38:58,700 --> 00:38:59,680
+where you're actually turning,
+
+699
+00:39:00,060 --> 00:39:02,015
+so that's the kind of degree that you can add,
+
+700
+00:39:02,015 --> 00:39:04,570
+even at the neuronal level for interpreting these systems.
+
+701
+00:39:05,640 --> 00:39:08,950
+Now, let's look at the case study of liquid neural networks,
+
+702
+00:39:10,130 --> 00:39:14,670
+so usually you saw a deep neural network for an autonomous driving application,
+
+703
+00:39:15,750 --> 00:39:19,010
+we have a conv, stack of convolution on networks,
+
+704
+00:39:19,010 --> 00:39:20,645
+they receive camera inputs
+
+705
+00:39:20,645 --> 00:39:25,600
+and they can output the a kind of a steering angle at its output.
+
+706
+00:39:26,680 --> 00:39:28,790
+This kind of neural network,
+
+707
+00:39:28,870 --> 00:39:30,015
+one of the things that we can do,
+
+708
+00:39:30,015 --> 00:39:32,720
+first of all, they have like a lot of parameters in this system,
+
+709
+00:39:33,420 --> 00:39:34,185
+what we want to do,
+
+710
+00:39:34,185 --> 00:39:38,240
+we want to take out the fully connected layers of this neural network
+
+711
+00:39:38,470 --> 00:39:40,910
+and replace it with recurrent neural network processes,
+
+712
+00:39:41,290 --> 00:39:44,055
+one of those recurrent processes that we replace it
+
+713
+00:39:44,055 --> 00:39:50,270
+with liquid neural network and the LSTM and the normal continuous time neural networks.
+
+714
+00:39:50,870 --> 00:39:52,530
+Now, if I replace this,
+
+715
+00:39:52,640 --> 00:39:55,260
+I would end up having like four different variants,
+
+716
+00:39:56,610 --> 00:39:57,640
+this four variants,
+
+717
+00:39:57,690 --> 00:39:59,405
+one of them is called an NCP,
+
+718
+00:39:59,405 --> 00:40:03,310
+which is a neural circuit policy, that has a four layer architecture,
+
+719
+00:40:03,630 --> 00:40:07,990
+each node of this system is defined by an LTC neuron,
+
+720
+00:40:08,370 --> 00:40:10,120
+that equations that I was showing you,
+
+721
+00:40:10,200 --> 00:40:13,090
+and it is sparsely connected to the other parts of the network.
+
+722
+00:40:13,660 --> 00:40:15,810
+So we have a sparse neural network architecture here,
+
+723
+00:40:16,070 --> 00:40:17,395
+we have then one neural network,
+
+724
+00:40:17,395 --> 00:40:19,075
+that has LSTM as the control signal,
+
+725
+00:40:19,075 --> 00:40:21,450
+it receives the perception with convolution neural networks.
+
+726
+00:40:22,280 --> 00:40:23,615
+And then we have CT-RNNs
+
+727
+00:40:23,615 --> 00:40:25,310
+and we have a convolutional neural networks,
+
+728
+00:40:25,310 --> 00:40:29,110
+now I want to show you the driving performance of these different types of networks
+
+729
+00:40:29,400 --> 00:40:33,550
+and what kind of characteristics is added to these systems.
+
+730
+00:40:33,960 --> 00:40:36,280
+So first let's look at these dashboard,
+
+731
+00:40:36,450 --> 00:40:38,680
+where, where I'm showing you a convolution on neural network,
+
+732
+00:40:38,790 --> 00:40:40,840
+followed by fully connected layers,
+
+733
+00:40:40,890 --> 00:40:43,820
+a normal, very standard deep learning system,
+
+734
+00:40:43,820 --> 00:40:47,650
+that receives those camera inputs and has learned to control this car,
+
+735
+00:40:47,970 --> 00:40:52,450
+okay, so those camera inputs comes in and the output decisions are basically driving decisions.
+
+736
+00:40:52,990 --> 00:40:55,610
+Now, on the bottom left, what we see,
+
+737
+00:40:56,880 --> 00:40:59,465
+we see the decision making process of this system,
+
+738
+00:40:59,465 --> 00:41:02,800
+the inputs, if you realize the input has a little bit of noise on top of them,
+
+739
+00:41:02,940 --> 00:41:05,405
+so I added some noise at the input,
+
+740
+00:41:05,405 --> 00:41:08,770
+so, so that we can see the robustness in decision making of this process.
+
+741
+00:41:09,090 --> 00:41:09,940
+And as we see,
+
+742
+00:41:10,530 --> 00:41:14,500
+actually there is the, the kind of decision making the brighter regions here
+
+743
+00:41:14,700 --> 00:41:16,870
+is where the neural network is paying attention,
+
+744
+00:41:17,895 --> 00:41:19,550
+when it's taking a driving decision.
+
+745
+00:41:20,180 --> 00:41:24,550
+And we see that, the attention is basically scattered with a little bit of noise on top of the system.
+
+746
+00:41:25,380 --> 00:41:28,090
+Now, if you do the same thing and add noise,
+
+747
+00:41:28,320 --> 00:41:35,930
+we then replace that fully connected layer of neural network with 19 liquid neurons,
+
+748
+00:41:36,880 --> 00:41:41,210
+you can actually get to a performance of lane keeping on the same environment,
+
+749
+00:41:41,440 --> 00:41:46,970
+while having the attention of the system being basically focus on the road horizon,
+
+750
+00:41:47,200 --> 00:41:49,370
+like the way that we actually drive, right,
+
+751
+00:41:49,750 --> 00:41:51,470
+so, and the fact that,
+
+752
+00:41:52,280 --> 00:41:54,700
+the parameters that are needed for performing this task,
+
+753
+00:41:55,480 --> 00:42:00,630
+basically, 19 neurons with a very small convolution on neural network as perception modelule,
+
+754
+00:42:01,100 --> 00:42:02,365
+that's the fascinating part,
+
+755
+00:42:02,365 --> 00:42:06,780
+that you get from that inductive bias that we put inside neural networks from brains, okay.
+
+756
+00:42:07,040 --> 00:42:08,125
+So if you model that,
+
+757
+00:42:08,125 --> 00:42:11,155
+so you, you have like a set of neurons,
+
+758
+00:42:11,155 --> 00:42:13,225
+that you can really go through their dynamics,
+
+759
+00:42:13,225 --> 00:42:14,050
+you can analyze them,
+
+760
+00:42:14,050 --> 00:42:15,900
+you can understand that process of that system.
+
+761
+00:42:16,530 --> 00:42:18,290
+And you get benefits like real world benefits,
+
+762
+00:42:18,290 --> 00:42:20,225
+for example, if on the x axis,
+
+763
+00:42:20,225 --> 00:42:21,610
+as I increase the noise,
+
+764
+00:42:22,320 --> 00:42:23,435
+I increase the noise,
+
+765
+00:42:23,435 --> 00:42:25,450
+the amount of noise that I add the input,
+
+766
+00:42:25,890 --> 00:42:28,510
+and on the y axis, I compute the output,
+
+767
+00:42:28,830 --> 00:42:31,900
+crashes, number of crashes, that actually happens when the drive,
+
+768
+00:42:31,950 --> 00:42:34,630
+when the network wants to drive the car outside,
+
+769
+00:42:34,920 --> 00:42:37,120
+we see that these are the other networks,
+
+770
+00:42:37,140 --> 00:42:40,600
+and here we see liquid neural network,
+
+771
+00:42:40,890 --> 00:42:43,780
+where actually keeps the level extremely low, LTCs.
+
+772
+00:42:44,070 --> 00:42:49,120
+If you look into the attention map of different, those four different network variants,
+
+773
+00:42:49,410 --> 00:42:53,230
+how do they make driving decisions when they are deployed in the environment,
+
+774
+00:42:53,670 --> 00:42:58,450
+we see that the consistency of attention is different across different networks,
+
+775
+00:42:58,920 --> 00:43:02,590
+while we have a liquid neural network actually maintains its focus,
+
+776
+00:43:03,260 --> 00:43:05,780
+and that's one of the nice thing about this,
+
+777
+00:43:05,780 --> 00:43:06,910
+but then we ask why,
+
+778
+00:43:07,290 --> 00:43:12,520
+why is it that the liquid neural network can focus on the actual task,
+
+779
+00:43:12,690 --> 00:43:14,015
+which is lane keeping here,
+
+780
+00:43:14,015 --> 00:43:17,390
+there is no driving and just a simple driving example where you have,
+
+781
+00:43:17,390 --> 00:43:20,980
+just, you know, like a road and you want to stay in the road, right.
+
+782
+00:43:22,310 --> 00:43:22,710
+Then,
+
+783
+00:43:25,080 --> 00:43:26,090
+now what, as I said,
+
+784
+00:43:26,090 --> 00:43:30,430
+like the representation that learned by a liquid neural network is much more causal,
+
+785
+00:43:30,960 --> 00:43:32,165
+so that means they can,
+
+786
+00:43:32,165 --> 00:43:35,200
+they can really focus and find out the essence of the task.
+
+787
+00:43:35,900 --> 00:43:38,670
+And then if you look into the machine learning modeling,
+
+788
+00:43:38,900 --> 00:43:42,190
+statistical modeling is like the least form of causal modeling
+
+789
+00:43:42,190 --> 00:43:43,890
+is basically you just extract,
+
+790
+00:43:44,450 --> 00:43:47,010
+these are like, these are the taxonomies of the causal models,
+
+791
+00:43:47,420 --> 00:43:49,060
+you have on the bottom of this axis,
+
+792
+00:43:49,060 --> 00:43:51,780
+you have the statistical models that they can learn from data,
+
+793
+00:43:51,950 --> 00:43:56,970
+but they cannot actually establish the causal relationship between the input and outputs.
+
+794
+00:43:57,340 --> 00:44:00,085
+The best type of models that we could have is physical models,
+
+795
+00:44:00,085 --> 00:44:02,400
+that describes the exact dynamics of a process
+
+796
+00:44:02,600 --> 00:44:04,500
+than you have basically a causal models,
+
+797
+00:44:04,700 --> 00:44:08,070
+and in the middle, you have a kind of a spectrum of different types of causal models,
+
+798
+00:44:08,450 --> 00:44:10,500
+so one thing that we realize is,
+
+799
+00:44:10,520 --> 00:44:16,410
+basically liquid neural networks are something that is called dynamic causal models,
+
+800
+00:44:17,780 --> 00:44:22,770
+dynamic causal models are models that can adapt their dynamics to,
+
+801
+00:44:23,920 --> 00:44:27,770
+so that they can extract the, the, the essence of a task
+
+802
+00:44:27,940 --> 00:44:33,080
+and, and really find out the, the, the, the relationship of an input output relationship of a task,
+
+803
+00:44:33,370 --> 00:44:38,240
+based on a mechanism that is ruled out by this differential equation here.
+
+804
+00:44:38,410 --> 00:44:40,670
+So it has parameters A B and C,
+
+805
+00:44:40,960 --> 00:44:44,205
+that they account for internal interventions to the system,
+
+806
+00:44:44,205 --> 00:44:46,490
+that if I change something in the middle of the system,
+
+807
+00:44:46,810 --> 00:44:49,070
+there mechanism that can control that processes,
+
+808
+00:44:49,510 --> 00:44:53,960
+if if something that comes from outside and intervention inside the process of the system,
+
+809
+00:44:54,250 --> 00:44:56,390
+then you would actually get into,
+
+810
+00:44:56,620 --> 00:44:59,570
+you can, you can control those kind of processes with the dynamic causal model.
+
+811
+00:45:00,730 --> 00:45:02,665
+Now, a little bit,
+
+812
+00:45:02,665 --> 00:45:08,970
+I wanted to go through the causal modeling process of neural network,
+
+813
+00:45:09,110 --> 00:45:12,570
+basically a differential equation can form a causal structure,
+
+814
+00:45:13,360 --> 00:45:14,425
+what, what does that mean,
+
+815
+00:45:14,425 --> 00:45:17,485
+that means it can predict from the current situation,
+
+816
+00:45:17,485 --> 00:45:21,040
+we can predict the future one, one step in the future of a process,
+
+817
+00:45:21,040 --> 00:45:22,230
+that temporal causation.
+
+818
+00:45:22,580 --> 00:45:23,725
+And another thing is that,
+
+819
+00:45:23,725 --> 00:45:26,130
+if I change something or intervene in a system,
+
+820
+00:45:26,600 --> 00:45:29,830
+how can I, can I actually control that intervention,
+
+821
+00:45:29,830 --> 00:45:33,150
+so or, or can I account for that intervention that I had in the system,
+
+822
+00:45:33,320 --> 00:45:35,070
+so this would construct this two points,
+
+823
+00:45:35,390 --> 00:45:40,260
+being able to account for future evolution of a system and interventions,
+
+824
+00:45:40,600 --> 00:45:42,670
+and being able to account for interventions in the system.
+
+825
+00:45:42,670 --> 00:45:43,860
+So if you have these two models,
+
+826
+00:45:44,060 --> 00:45:45,840
+then you have a causal structure.
+
+827
+00:45:47,570 --> 00:45:51,610
+So for that, I'm just skipping over over this part,
+
+828
+00:45:51,610 --> 00:45:52,920
+I just wanted to tell you that,
+
+829
+00:45:53,060 --> 00:45:54,870
+I mean I wanted to show you like more about,
+
+830
+00:45:55,190 --> 00:46:00,720
+how you're driving this connection between liquid networks and causal models,
+
+831
+00:46:01,010 --> 00:46:01,945
+but I share this slide,
+
+832
+00:46:01,945 --> 00:46:02,620
+so you can see
+
+833
+00:46:02,620 --> 00:46:06,210
+and also a professor tomorrow is going to give a lecture on the topic,
+
+834
+00:46:06,230 --> 00:46:10,350
+that hopefully she can cover these parts.
+
+835
+00:46:11,980 --> 00:46:17,985
+And just a couple of remarks on, on, on the performance of the network
+
+836
+00:46:17,985 --> 00:46:20,030
+and what's the implication of having a causal model.
+
+837
+00:46:20,380 --> 00:46:21,540
+Now, let's look at this environment,
+
+838
+00:46:21,540 --> 00:46:22,820
+we trained some neural networks,
+
+839
+00:46:23,830 --> 00:46:29,450
+these neural networks are basically learned to fly towards a target in an unstructured environment,
+
+840
+00:46:30,220 --> 00:46:31,910
+so we collected some data,
+
+841
+00:46:32,140 --> 00:46:34,100
+we trained neural networks instances,
+
+842
+00:46:34,450 --> 00:46:35,790
+and then we tested this,
+
+843
+00:46:35,790 --> 00:46:38,415
+then then we take this neural networks that we train
+
+844
+00:46:38,415 --> 00:46:43,280
+by moving towards, like basically these are scenes that are drone is inside the forest
+
+845
+00:46:43,630 --> 00:46:46,430
+and the drone is navigating towards a target, okay.
+
+846
+00:46:46,480 --> 00:46:50,240
+Now, we collect this data from a couple of traces that we simulate,
+
+847
+00:46:50,500 --> 00:46:53,120
+then we take this data,
+
+848
+00:46:53,410 --> 00:46:54,380
+we train neural networks,
+
+849
+00:46:54,850 --> 00:46:56,625
+we bring the neural networks back on the drone
+
+850
+00:46:56,625 --> 00:46:58,680
+and we test them on the drone,
+
+851
+00:46:58,680 --> 00:47:02,780
+to see, to see whether they can learn to navigate this task
+
+852
+00:47:03,100 --> 00:47:07,280
+without even programming what is the objective of the task,
+
+853
+00:47:07,820 --> 00:47:11,560
+basically, the objective of the task has to be distilled from the data itself,
+
+854
+00:47:11,820 --> 00:47:13,580
+and as we saw here on the right,
+
+855
+00:47:13,580 --> 00:47:15,610
+we see the decision making process of these networks,
+
+856
+00:47:16,080 --> 00:47:19,570
+that liquid networks learned to pay attention to the target,
+
+857
+00:47:19,920 --> 00:47:21,365
+as the target becomes visible,
+
+858
+00:47:21,365 --> 00:47:24,910
+that means it actually figured out the most important part of this process
+
+859
+00:47:25,140 --> 00:47:26,630
+was really focusing on the target,
+
+860
+00:47:26,630 --> 00:47:32,600
+even if there is an unstructured kind of kind of input data to the system,
+
+861
+00:47:33,100 --> 00:47:37,640
+now if we compare the attention map of this neural circuit policies,
+
+862
+00:47:37,720 --> 00:47:42,440
+which is the first, the second column compared to the other attention maps,
+
+863
+00:47:42,880 --> 00:47:46,430
+we see that, the only network type of network that learn from this data
+
+864
+00:47:46,630 --> 00:47:49,460
+to pay attention to this target is liquid neural networks,
+
+865
+00:47:50,060 --> 00:47:52,040
+and that's the kind of implication that you have,
+
+866
+00:47:52,040 --> 00:47:56,230
+so you learn the cause and effect of a task using a liquid neural network,
+
+867
+00:47:56,940 --> 00:48:02,590
+that has dramatically less number of parameters compared to other types of neural networks.
+
+868
+00:48:03,000 --> 00:48:04,445
+Now, as I told you,
+
+869
+00:48:04,445 --> 00:48:07,180
+the relation between two neurons,
+
+870
+00:48:07,900 --> 00:48:11,670
+can be defined by a differential equation by neuron equation and synapse equation,
+
+871
+00:48:12,020 --> 00:48:15,870
+we recently have solved this differential equation, also in closed-form,
+
+872
+00:48:16,560 --> 00:48:19,100
+and then this gave rise to a new type of neural networks,
+
+873
+00:48:19,810 --> 00:48:21,380
+which is again a close-form,
+
+874
+00:48:21,610 --> 00:48:25,790
+continuous time neural networks, you call them CFC,
+
+875
+00:48:25,900 --> 00:48:27,500
+these are the close form liquid networks,
+
+876
+00:48:27,670 --> 00:48:29,180
+they have the same behavior,
+
+877
+00:48:29,500 --> 00:48:32,360
+but they are basically defining close-form.
+
+878
+00:48:32,900 --> 00:48:34,765
+Now, what does that mean,
+
+879
+00:48:34,765 --> 00:48:36,540
+that means if I have a differential equation,
+
+880
+00:48:36,740 --> 00:48:38,185
+you see the ODE on the top,
+
+881
+00:48:38,185 --> 00:48:40,290
+if I simulate this ODE, okay,
+
+882
+00:48:40,580 --> 00:48:46,980
+the close-form solution would actually give you the very same behavior of the differential equation itself,
+
+883
+00:48:47,210 --> 00:48:50,550
+but it does not require any numerical solvers,
+
+884
+00:48:50,990 --> 00:48:54,840
+so it does not require any kind of, you know, complex numerical solvers,
+
+885
+00:48:54,890 --> 00:49:00,385
+so as a result, you could scale liquid neural networks much larger to much larger instances,
+
+886
+00:49:00,385 --> 00:49:04,650
+if you want to scale the networks in terms of performance in modeling dynamics.
+
+887
+00:49:05,290 --> 00:49:10,520
+Liquid neural networks, we see here a series of different types of advanced recurrent networks
+
+888
+00:49:10,870 --> 00:49:16,640
+and we see variants of close-form liquid neural networks and LTC themselves,
+
+889
+00:49:16,840 --> 00:49:21,830
+that are performing remarkably better than the other systems in modeling physical dynamics.
+
+890
+00:49:22,970 --> 00:49:24,960
+And the last thing I want to show is
+
+891
+00:49:25,100 --> 00:49:31,110
+the difference between this understanding causality and understanding the cause and effect of a task
+
+892
+00:49:31,130 --> 00:49:33,000
+and not being able to understand that.
+
+893
+00:49:33,140 --> 00:49:35,020
+Now here you see a drone,
+
+894
+00:49:35,020 --> 00:49:37,710
+which is an agent that wants to navigate towards a target,
+
+895
+00:49:38,060 --> 00:49:39,270
+there's a target in the environment,
+
+896
+00:49:39,560 --> 00:49:44,070
+now we collected traces of a drone navigating towards this target in this forest,
+
+897
+00:49:45,020 --> 00:49:47,790
+then what we did, we collected this data,
+
+898
+00:49:48,020 --> 00:49:49,770
+then we train neural networks,
+
+899
+00:49:49,970 --> 00:49:52,710
+and now we brought back this neural networks on the drone
+
+900
+00:49:52,820 --> 00:49:56,040
+to see whether they learned to navigate towards that target or not.
+
+901
+00:49:56,210 --> 00:49:59,220
+Now here I'm showing the performance of an LSTM neural network,
+
+902
+00:50:01,080 --> 00:50:02,020
+so, as we see,
+
+903
+00:50:04,120 --> 00:50:07,140
+the LSTM is basically completely like looking around
+
+904
+00:50:07,140 --> 00:50:09,650
+and it cannot really control the drone,
+
+905
+00:50:09,820 --> 00:50:11,870
+actually, if you look at the attention map of the system
+
+906
+00:50:12,250 --> 00:50:14,760
+actually looks all around the the place,
+
+907
+00:50:14,760 --> 00:50:18,770
+it did not really realize what's the objective of the task from data,
+
+908
+00:50:18,820 --> 00:50:21,110
+so it could not really associate anything
+
+909
+00:50:21,130 --> 00:50:23,000
+or learn something meaningful from the data.
+
+910
+00:50:24,080 --> 00:50:26,965
+And then here is in liquid neural network on the same task,
+
+911
+00:50:26,965 --> 00:50:28,560
+look at the attention map here,
+
+912
+00:50:28,730 --> 00:50:32,280
+as the drone is going towards that target,
+
+913
+00:50:33,260 --> 00:50:36,750
+and that's the kind of flexibility,
+
+914
+00:50:36,950 --> 00:50:42,720
+that you can learn the actual cause and effect of a task from neural networks.
+
+915
+00:50:43,510 --> 00:50:45,650
+Now, okay, so I'm going to conclude now,
+
+916
+00:50:46,580 --> 00:50:47,700
+I showed you these plots,
+
+917
+00:50:47,750 --> 00:50:49,980
+I showed you that there is overparameterization regime
+
+918
+00:50:50,000 --> 00:50:55,485
+and we have an idea about what kind of benefits you would get in that regime,
+
+919
+00:50:55,485 --> 00:51:00,920
+and what kind of intuitive understand, theoretical understanding do we have for neural networks,
+
+920
+00:51:01,420 --> 00:51:04,365
+and then I showed you that there are neural networks like liquid neural networks,
+
+921
+00:51:04,365 --> 00:51:06,110
+that have inductive biases from brains,
+
+922
+00:51:06,550 --> 00:51:10,340
+that can actually resolve a couple of problems,
+
+923
+00:51:10,360 --> 00:51:14,990
+for example, the robustness while being significantly smaller than overparamize networks,
+
+924
+00:51:15,310 --> 00:51:18,860
+so it is not that you always have to dramatically overparamize neural networks,
+
+925
+00:51:19,270 --> 00:51:24,050
+but you can have inductive biases to actually gain good performance.
+
+926
+00:51:24,580 --> 00:51:25,170
+To sum up,
+
+927
+00:51:25,880 --> 00:51:27,245
+the law of robustness is real,
+
+928
+00:51:27,245 --> 00:51:32,470
+so that's something that is came out of a theory is number of parameters,
+
+929
+00:51:32,670 --> 00:51:37,100
+it's, it's necessarily has to be large if you want to have with effective dimensionality,
+
+930
+00:51:37,100 --> 00:51:39,010
+so one of the ideas that we have,
+
+931
+00:51:39,120 --> 00:51:41,080
+I'll talk about effective dimensionality here,
+
+932
+00:51:41,400 --> 00:51:44,945
+the overparamatization definitely improves generalization and robustness,
+
+933
+00:51:44,945 --> 00:51:47,230
+but it has some sociotechnical challenges,
+
+934
+00:51:48,260 --> 00:51:51,325
+so inductive biases or architectural [],
+
+935
+00:51:51,325 --> 00:51:53,215
+why do we have different types of architectures
+
+936
+00:51:53,215 --> 00:51:55,680
+and why studying the brain is actually a good thing
+
+937
+00:51:55,820 --> 00:51:59,635
+is because we can actually get smarter in design neural networks
+
+938
+00:51:59,635 --> 00:52:03,360
+and not just blindly overparameters overparamizing them,
+
+939
+00:52:03,410 --> 00:52:08,350
+so we can really put incorporating some of some ideas to really get what's going on
+
+940
+00:52:08,350 --> 00:52:13,830
+and liquid neural networks, they can enable robust representation learning outside of overparamization regime,
+
+941
+00:52:14,330 --> 00:52:16,680
+because of their cause of mechanisms,
+
+942
+00:52:17,000 --> 00:52:19,765
+they reduce networks [],
+
+943
+00:52:19,765 --> 00:52:21,475
+so that's speculation that I have,
+
+944
+00:52:21,475 --> 00:52:24,970
+I have to, we have to actually think about the theoretical implication here,
+
+945
+00:52:24,970 --> 00:52:26,340
+but I, what I think is that,
+
+946
+00:52:26,780 --> 00:52:32,670
+the reason why liquid neural networks can pass or break the, the universal law of robustness,
+
+947
+00:52:33,220 --> 00:52:39,540
+is because they can extract a better or more minimum kind of effective dimensionality out of data,
+
+948
+00:52:39,740 --> 00:52:40,860
+so you have datasets,
+
+949
+00:52:41,000 --> 00:52:45,630
+so if the, if the effective dimensionality get reduced by a paramitized neural network,
+
+950
+00:52:46,070 --> 00:52:48,360
+then the law robust still holds, okay,
+
+951
+00:52:48,710 --> 00:52:49,740
+given the number of data.
+
+952
+00:52:49,970 --> 00:52:51,390
+And that's the end of my presentation,
+
+953
+00:52:51,710 --> 00:52:54,485
+I'm just putting here at the end a couple of resources,
+
+954
+00:52:54,485 --> 00:52:56,530
+if you want to get hands on with liquid neural networks,
+
+955
+00:52:56,970 --> 00:52:59,345
+we have put together like really good documentations
+
+956
+00:52:59,345 --> 00:53:03,790
+and I think you would enjoy to play around with these systems for your own applications.
+
+957
+00:53:04,220 --> 00:53:05,130
+Thank you for your attention.
+
